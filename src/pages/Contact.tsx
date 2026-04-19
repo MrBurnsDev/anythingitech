@@ -94,7 +94,7 @@ const Contact = () => {
                     <Mail className="h-5 w-5 text-accent mt-0.5 shrink-0" strokeWidth={1.5} />
                     <div>
                       <div className="text-xs uppercase tracking-[0.18em] text-primary-foreground/50 mb-1">Email</div>
-                      <a href="mailto:hello@anythingitechmv.com" className="text-[15px] link-underline">hello@anythingitechmv.com</a>
+                      <a href="mailto:louis@anythingitechmv.com" className="text-[15px] link-underline">louis@anythingitechmv.com</a>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">

@@ -33,8 +33,8 @@ export const CTASection = ({
                 Request a Visit <ArrowUpRight className="h-4 w-4" />
               </Link>
             </Button>
-            <a href="mailto:hello@anythingitechmv.com" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors link-underline">
-              hello@anythingitechmv.com
+            <a href="mailto:louis@anythingitechmv.com" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors link-underline">
+              louis@anythingitechmv.com
             </a>
           </div>
         </div>
