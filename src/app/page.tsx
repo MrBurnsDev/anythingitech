@@ -1,65 +1,178 @@
-import Image from "next/image";
+import Link from 'next/link';
+import HeroSlider from '@/components/HeroSlider';
+import CTASection from '@/components/CTASection';
 
-export default function Home() {
+const trustBadges = [
+  {
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    ),
+    text: 'Certified Technicians',
+  },
+  {
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <circle cx="12" cy="12" r="10"/>
+        <polyline points="12 6 12 12 16 14"/>
+      </svg>
+    ),
+    text: 'Same-Day Service',
+  },
+  {
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+        <path d="M2 17l10 5 10-5"/>
+        <path d="M2 12l10 5 10-5"/>
+      </svg>
+    ),
+    text: '15+ Years Experience',
+  },
+  {
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </svg>
+    ),
+    text: "Martha's Vineyard Local",
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="content-wrapper">
+      {/* Hero Slider */}
+      <HeroSlider />
+
+      {/* Trust Badges */}
+      <section className="trust-badges">
+        {trustBadges.map((badge, index) => (
+          <div key={index} className="trust-badge">
+            <div className="trust-badge__icon">{badge.icon}</div>
+            <span className="trust-badge__text">{badge.text}</span>
+          </div>
+        ))}
+      </section>
+
+      {/* Intro Section */}
+      <div className="postwrap">
+        <div className="hentry">
+          <div className="copy">
+            <div className="textcontent text-center">
+              <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '16px' }}>
+                &ldquo;We make your Emergency, Ours.&rdquo;
+              </h2>
+              <p style={{ fontSize: '14px', maxWidth: '600px', margin: '0 auto' }}>
+                Using technology shouldn&apos;t be a struggle! Let us help you maximize your efficiency and take command of your digital life.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </div>
+
+      {/* Services Overview */}
+      <div className="postwrap">
+        <div className="hentry">
+          <div className="copy">
+            <div className="textcontent">
+              <h2 style={{ textAlign: 'center', marginBottom: '24px' }}>Our Services</h2>
+              <p style={{ textAlign: 'center', marginBottom: '32px' }}>
+                Full service, support and maintenance solutions for all your Apple and PC needs.
+              </p>
+
+              <div className="services-grid">
+                <div className="service-card">
+                  <h3 className="service-card__title">Device Repairs</h3>
+                  <ul className="service-list">
+                    <li>Apple iPhone Glass Repairs</li>
+                    <li>Mac and PC Laptop Screen Replacements</li>
+                    <li>Keyboard Replacements</li>
+                    <li>Memory Upgrades</li>
+                    <li>Hard Drive Installations</li>
+                  </ul>
+                </div>
+
+                <div className="service-card">
+                  <h3 className="service-card__title">Support Services</h3>
+                  <ul className="service-list">
+                    <li>Hard Drive Data Backups</li>
+                    <li>Mac OS Upgrades</li>
+                    <li>Wireless Network Support</li>
+                    <li>Network Security</li>
+                    <li>Virus &amp; Malware Removal</li>
+                  </ul>
+                </div>
+
+                <div className="service-card">
+                  <h3 className="service-card__title">Setup &amp; Training</h3>
+                  <ul className="service-list">
+                    <li>Mac and PC Setup / Installation</li>
+                    <li>Mac and PC Training / Tutoring</li>
+                    <li>Remote Screen Sharing</li>
+                    <li>Telephone Tech Support</li>
+                  </ul>
+                </div>
+              </div>
+
+              <p style={{ textAlign: 'center', marginTop: '32px', fontWeight: 'bold' }}>
+                Although we provide services for anything Apple or PC, our specialty is Home Network Installation!
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
+      </div>
+
+      {/* MV Business Directory Promo */}
+      <div className="postwrap">
+        <div className="hentry">
+          <div className="copy">
+            <div className="textcontent">
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
+                <div>
+                  <span style={{ color: '#b82286', fontWeight: 'bold', fontSize: '12px' }}>NEW</span>
+                  <h2 style={{ marginTop: '8px', marginBottom: '16px' }}>
+                    Martha&apos;s Vineyard Business Directory
+                  </h2>
+                  <p>
+                    Discover local businesses across the Vineyard. Browse by town, search by category,
+                    and connect with the island&apos;s best shops, restaurants, and services.
+                  </p>
+                  <Link href="/marthas-vineyard-business-directory" className="btn btn--primary">
+                    Explore the Directory
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style={{ marginLeft: '6px' }}>
+                      <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                  </Link>
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', textAlign: 'center' }}>
+                  <div style={{ background: '#f5f5f5', borderRadius: '8px', padding: '16px' }}>
+                    <p style={{ fontSize: '24px', fontWeight: 'bold', color: '#0088CC', margin: 0 }}>6</p>
+                    <p style={{ fontSize: '12px', color: '#888', margin: 0 }}>Towns</p>
+                  </div>
+                  <div style={{ background: '#f5f5f5', borderRadius: '8px', padding: '16px' }}>
+                    <p style={{ fontSize: '24px', fontWeight: 'bold', color: '#0088CC', margin: 0 }}>100+</p>
+                    <p style={{ fontSize: '12px', color: '#888', margin: 0 }}>Businesses</p>
+                  </div>
+                  <div style={{ background: '#f5f5f5', borderRadius: '8px', padding: '16px' }}>
+                    <p style={{ fontSize: '24px', fontWeight: 'bold', color: '#0088CC', margin: 0 }}>20+</p>
+                    <p style={{ fontSize: '12px', color: '#888', margin: 0 }}>Categories</p>
+                  </div>
+                  <div style={{ background: '#f5f5f5', borderRadius: '8px', padding: '16px' }}>
+                    <p style={{ fontSize: '24px', fontWeight: 'bold', color: '#0088CC', margin: 0 }}>Free</p>
+                    <p style={{ fontSize: '12px', color: '#888', margin: 0 }}>To Browse</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <CTASection />
     </div>
   );
 }
