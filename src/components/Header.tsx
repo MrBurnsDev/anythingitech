@@ -10,12 +10,19 @@ const navigation = [
     name: 'Services',
     href: '#',
     children: [
-      { name: 'iPhone Repair', href: '/iphone-repair' },
-      { name: 'Mac Repair', href: '/mac-repair-services' },
+      { name: 'iPhone Repair Services', href: '/iphone-repair' },
+      { name: 'Mac Repair and Services', href: '/mac-repair-services' },
       { name: 'Network Services', href: '/network-services-2' },
     ]
   },
-  { name: 'The Team', href: '/about-us' },
+  {
+    name: 'The Team',
+    href: '#',
+    children: [
+      { name: 'About Us', href: '/about-us' },
+      { name: 'Happy Clients', href: '/happy-clients' },
+    ]
+  },
   { name: 'Remote Support', href: '/mac-repair-services' },
   { name: 'Tech Tips', href: '/network-services-2' },
   { name: 'Contact', href: '/contact' },
