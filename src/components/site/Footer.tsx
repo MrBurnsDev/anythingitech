@@ -55,7 +55,7 @@ export const Footer = () => {
             <div className="mt-8 space-y-1.5 text-sm text-primary-foreground/70">
               <p>Martha's Vineyard, MA</p>
               <p>By appointment · Year-round service</p>
-              <p className="text-primary-foreground">louis@anythingitechmv.com</p>
+              <a href="mailto:louis@anythingitechmv.com" className="text-primary-foreground hover:underline">louis@anythingitechmv.com</a>
             </div>
           </div>
 
