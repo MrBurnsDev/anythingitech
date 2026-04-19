@@ -7,9 +7,6 @@ import { Label } from "@/components/ui/label";
 import { Mail, MapPin, Clock, ArrowRight, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 
-// Formspree form ID - set in Vercel environment variables as VITE_FORMSPREE_ID
-const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID || "xwpovvdj";
-
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -20,12 +17,15 @@ const Contact = () => {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
+    // Convert FormData to JSON
+    const data = Object.fromEntries(formData.entries());
+
     try {
-      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      const response = await fetch("/api/contact", {
         method: "POST",
-        body: formData,
+        body: JSON.stringify(data),
         headers: {
-          Accept: "application/json",
+          "Content-Type": "application/json",
         },
       });
 
