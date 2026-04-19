@@ -5,8 +5,16 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Services', href: '/iphone-repair' },
+  { name: 'Home', href: '/', isHome: true },
+  {
+    name: 'Services',
+    href: '#',
+    children: [
+      { name: 'iPhone Repair', href: '/iphone-repair' },
+      { name: 'Mac Repair', href: '/mac-repair-services' },
+      { name: 'Network Services', href: '/network-services-2' },
+    ]
+  },
   { name: 'The Team', href: '/about-us' },
   { name: 'Remote Support', href: '/mac-repair-services' },
   { name: 'Tech Tips', href: '/network-services-2' },
@@ -15,6 +23,7 @@ const navigation = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
     <header className="site-header">
@@ -78,16 +87,40 @@ export default function Header() {
         <div className="site-nav__inner">
           {/* Desktop Navigation */}
           <ul className="nav-menu">
-            <li className="nav-menu__item">
-              <Link href="/" className="nav-menu__link nav-menu__link--home">
-                <span className="sr-only">Home</span>
-              </Link>
-            </li>
-            {navigation.slice(1).map((item) => (
-              <li key={item.name} className="nav-menu__item">
-                <Link href={item.href} className="nav-menu__link">
-                  {item.name}
-                </Link>
+            {navigation.map((item) => (
+              <li
+                key={item.name}
+                className={`nav-menu__item ${item.children ? 'has-dropdown' : ''}`}
+                onMouseEnter={() => item.children && setOpenDropdown(item.name)}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
+                {item.isHome ? (
+                  <Link href={item.href} className="nav-menu__link nav-menu__link--home">
+                    <span className="sr-only">Home</span>
+                  </Link>
+                ) : item.children ? (
+                  <>
+                    <span className="nav-menu__link nav-menu__link--dropdown">
+                      {item.name}
+                      <svg className="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="currentColor">
+                        <path d="M5 6L0 0h10L5 6z"/>
+                      </svg>
+                    </span>
+                    <ul className={`nav-dropdown ${openDropdown === item.name ? 'is-open' : ''}`}>
+                      {item.children.map((child) => (
+                        <li key={child.name} className="nav-dropdown__item">
+                          <Link href={child.href} className="nav-dropdown__link">
+                            {child.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <Link href={item.href} className="nav-menu__link">
+                    {item.name}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
@@ -122,14 +155,30 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="mobile-nav">
           {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="mobile-nav__link"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {item.name}
-            </Link>
+            item.children ? (
+              <div key={item.name} className="mobile-nav__group">
+                <span className="mobile-nav__label">{item.name}</span>
+                {item.children.map((child) => (
+                  <Link
+                    key={child.name}
+                    href={child.href}
+                    className="mobile-nav__link mobile-nav__link--sub"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {child.name}
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="mobile-nav__link"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            )
           ))}
           <div className="mobile-nav__contact">
             <a href="tel:508-560-3510" className="btn btn--primary">
