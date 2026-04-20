@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "restaurants",
+    "name": "Restaurants",
+    "icon": "utensils",
+    "description": "From waterfront seafood shacks to fine dining, discover where to eat on Martha's Vineyard.",
+    "businessCount": 43,
+    "byTown": {
+      "Aquinnah": 2,
+      "Chilmark": 4,
+      "Edgartown": 11,
+      "Oak Bluffs": 12,
+      "Vineyard Haven": 14
+    }
+  },
+  {
+    "slug": "lodging",
+    "name": "Lodging",
+    "icon": "bed",
+    "description": "Historic inns, boutique hotels, and vacation rentals across the island.",
+    "businessCount": 8,
+    "byTown": {
+      "Aquinnah": 1,
+      "Edgartown": 1,
+      "Vineyard Haven": 5,
+      "West Tisbury": 1
+    }
+  },
+  {
+    "slug": "shopping",
+    "name": "Shopping & Retail",
+    "icon": "shopping-bag",
+    "description": "Local boutiques, galleries, and shops featuring island-made goods and curated collections.",
+    "businessCount": 13,
+    "byTown": {
+      "Aquinnah": 2,
+      "Edgartown": 1,
+      "Oak Bluffs": 1,
+      "Vineyard Haven": 9
+    }
+  }
+]

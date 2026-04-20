@@ -1,0 +1,116 @@
+[
+  {
+    "slug": "vineyard-haven",
+    "name": "Vineyard Haven",
+    "region": "down-island",
+    "description": "The commercial heart of Martha's Vineyard, home to the ferry terminal and a vibrant Main Street with local shops, restaurants, and services.",
+    "businessCount": 52,
+    "businessTypes": {
+      "restaurants": 14,
+      "lodging": 5,
+      "shopping": 10,
+      "health-wellness": 4,
+      "contractors": 6,
+      "professional-services": 2,
+      "community": 2
+    },
+    "categories": [
+      "Building & Construction",
+      "Camp",
+      "Community & Government",
+      "Gallery",
+      "House & Garden",
+      "Inn",
+      "Lodging",
+      "Lodging & Tourism",
+      "Medical",
+      "Other",
+      "Professional Services",
+      "Restaurant",
+      "Retail",
+      "Shopping & Retail"
+    ]
+  },
+  {
+    "slug": "edgartown",
+    "name": "Edgartown",
+    "region": "down-island",
+    "description": "Historic whaling captain homes, upscale boutiques, waterfront dining, and professional services define this elegant village.",
+    "businessCount": 14,
+    "businessTypes": {
+      "restaurants": 11,
+      "lodging": 1,
+      "shopping": 1,
+      "contractors": 1
+    },
+    "categories": [
+      "Building & Construction",
+      "Hotel",
+      "Restaurant",
+      "Shopping & Retail"
+    ]
+  },
+  {
+    "slug": "oak-bluffs",
+    "name": "Oak Bluffs",
+    "region": "down-island",
+    "description": "Colorful gingerbread cottages, the Flying Horses carousel, and a lively harbor scene with diverse local businesses.",
+    "businessCount": 14,
+    "businessTypes": {
+      "restaurants": 12,
+      "shopping": 1,
+      "contractors": 1
+    },
+    "categories": [
+      "Building & Construction",
+      "Restaurant",
+      "Shopping & Retail"
+    ]
+  },
+  {
+    "slug": "west-tisbury",
+    "name": "West Tisbury",
+    "region": "up-island",
+    "description": "Rolling farmland, the beloved Farmers Market, artisan shops, and a quintessential New England town center.",
+    "businessCount": 2,
+    "businessTypes": {
+      "lodging": 1,
+      "community": 1
+    },
+    "categories": [
+      "Community & Government",
+      "Lodging & Tourism"
+    ]
+  },
+  {
+    "slug": "chilmark",
+    "name": "Chilmark",
+    "region": "up-island",
+    "description": "Quiet country roads, Lucy Vincent Beach, farm stands, and the iconic fishing village of Menemsha.",
+    "businessCount": 5,
+    "businessTypes": {
+      "restaurants": 4
+    },
+    "categories": [
+      "Other",
+      "Restaurant"
+    ]
+  },
+  {
+    "slug": "aquinnah",
+    "name": "Aquinnah",
+    "region": "up-island",
+    "description": "Home to the Gay Head Cliffs, the Wampanoag Tribe, artisan shops, and dramatic ocean views.",
+    "businessCount": 5,
+    "businessTypes": {
+      "restaurants": 2,
+      "lodging": 1,
+      "shopping": 2
+    },
+    "categories": [
+      "Inn",
+      "Restaurant",
+      "Shopping & Retail"
+    ]
+  }
+]

@@ -1,0 +1,2578 @@
+[
+  {
+    "id": 10,
+    "name": "Aquinnah Shop",
+    "slug": "aquinnah-shop-aquinnah",
+    "category": "Inn",
+    "businessType": "lodging",
+    "description": "Gift shop near the Clay Cliffs featuring Wampanoag crafts",
+    "town": "Aquinnah",
+    "townSlug": "aquinnah",
+    "address": "27 Aquinnah Circle, Aquinnah, MA 02535",
+    "phone": "(508) 645-3867",
+    "email": null,
+    "website": "https://www.tripadvisor.com/Restaurant_Review-g499462-d790513-Reviews-Aquinnah_Shop-Aquinnah_Martha_s_Vineyard_Massachusetts.html",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3469574,
+      "lng": -70.8370378
+    },
+    "status": "active",
+    "confidence": 0.8,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g499462-d790513-Reviews-Aquinnah_Shop-Aquinnah_Martha_s_Vineyard_Massachusetts.html"
+    }
+  },
+  {
+    "id": 487,
+    "name": "Claudia.Jewelry",
+    "slug": "claudiajewelry-vineyard-haven",
+    "category": "Other",
+    "businessType": "other",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": null,
+    "phone": "(508) 627-8306",
+    "email": null,
+    "website": "http://claudia.jewelry/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.8,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 148,
+    "name": "Farmneck.Net/Cafe",
+    "slug": "farmnecknetcafe-oak-bluffs",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Oak Bluffs",
+    "townSlug": "oak-bluffs",
+    "address": "Oak Bluffs, MA 02557",
+    "phone": "(508) 693-3560",
+    "email": null,
+    "website": "http://farmneck.net/cafe",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4536222,
+      "lng": -70.5684337
+    },
+    "status": "active",
+    "confidence": 0.8,
+    "social": {
+      "facebook": "https://www.farmneck.net/default.aspx?p=TrackHyperlink&URL=https%3a%2f%2fwww.facebook.com%2fFarmNeckCafe%2f&ssid=112387064644&fid=14169679039",
+      "instagram": "https://www.farmneck.net/default.aspx?p=TrackHyperlink&URL=https%3a%2f%2fwww.instagram.com%2ffarmneckgolfclub1979%2f&ssid=112363584634&fid=14169679039",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 152,
+    "name": "Fishbones",
+    "slug": "fishbones-oak-bluffs",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Oak Bluffs",
+    "townSlug": "oak-bluffs",
+    "address": "8227 \n\n 12 Circuit Avenue Extension, Oak Bluffs, MA 02557",
+    "phone": "(508) 696-8227",
+    "email": null,
+    "website": "http://fishbones-mv.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.454,
+      "lng": -70.562
+    },
+    "status": "active",
+    "confidence": 0.8,
+    "social": {
+      "facebook": "https://www.facebook.com/fishbones-mv",
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": "http://www.tripadvisor.com/Restaurant_Review-g41750-d422509-Reviews-Fishbones-Oak_Bluffs_Martha_s_Vineyard_Massachusetts.html"
+    }
+  },
+  {
+    "id": 156,
+    "name": "Igimv.Org/About-Island-Food-Pantry",
+    "slug": "igimvorgabout-island-food-pantry-oak-bluffs",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Oak Bluffs",
+    "townSlug": "oak-bluffs",
+    "address": "114 Dukes County Ave, Oak Bluffs, MA 02557",
+    "phone": "(508) 296-8384",
+    "email": "office@igimv.org",
+    "website": "http://igimv.org/about-island-food-pantry",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4500768,
+      "lng": -70.5635299
+    },
+    "status": "active",
+    "confidence": 0.8,
+    "social": {
+      "facebook": "https://www.facebook.com/Island-Grown-38569332917/",
+      "instagram": "https://www.instagram.com/islandgrowninitiative/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 32,
+    "name": "Island Weddings",
+    "slug": "island-weddings-vineyard-haven",
+    "category": "Other",
+    "businessType": "other",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "Box 66Edgartown, MA 02539",
+    "phone": "(508) 627-4311",
+    "email": null,
+    "website": "https://mvislandweddings.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.8,
+    "social": {
+      "facebook": null,
+      "instagram": "https://www.instagram.com/mvislandweddings/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 31,
+    "name": "Martha'S Vineyard Magazine",
+    "slug": "marthas-vineyard-magazine-vineyard-haven",
+    "category": "Other",
+    "businessType": "other",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": "http://www.mvmagazine.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.8,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 514,
+    "name": "Mass.Gov/Locations/Dukes-County-Superior-Court",
+    "slug": "massgovlocationsdukes-county-superior-court-vineyard-haven",
+    "category": "Other",
+    "businessType": "other",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "Box 1267, Edgartown, MA 02539",
+    "phone": "(508) 627-4668",
+    "email": "dukes.clerksoffice@jud.state.ma.us",
+    "website": "http://mass.gov/locations/dukes-county-superior-court",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.8,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 340,
+    "name": "Massaudubon.Org/Felixneck",
+    "slug": "massaudubonorgfelixneck-vineyard-haven",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "Box 494\r\nVineyard Haven, MA 02568",
+    "phone": "(508) 627-4850",
+    "email": null,
+    "website": "http://massaudubon.org/felixneck",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.8,
+    "social": {
+      "facebook": "https://www.facebook.com/MassAudubonFelixNeck",
+      "instagram": "https://www.instagram.com/MassAudubonFelixNeck/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 318,
+    "name": "Strandtheatre",
+    "slug": "strandtheatre-vineyard-haven",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "s Vineyard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n        Skip to Content\n      \n\n\n\n\n\n\n\n\n\n\n\nOpen Menu\nClose Menu\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n        Home\n      \n\n\n\n        Movies\n      \n\n\n\n        Comedy\n      \n\n\n\n        Music\n      \n\n\n\n        Dance\n      \n\n\n\n        Plays\n      \n\n\n\n        Workshops\n      \n\n\n\n        Special Events\n      \n\n\n\n        Host Your Event With Us\n      \n\n\n\n        About\n      \n\n\n\n        Contact\n      \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOpen Menu\nClose Menu\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n        Home\n      \n\n\n\n        Movies\n      \n\n\n\n        Comedy\n      \n\n\n\n        Music\n      \n\n\n\n        Dance\n      \n\n\n\n        Plays\n      \n\n\n\n        Workshops\n      \n\n\n\n        Special Events\n      \n\n\n\n        Host Your Event With Us\n      \n\n\n\n        About\n      \n\n\n\n        Contact\n      \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n                  Home\n                \n\n\n\n\n\n                  Movies\n                \n\n\n\n\n\n                  Comedy\n                \n\n\n\n\n\n                  Music\n                \n\n\n\n\n\n                  Dance\n                \n\n\n\n\n\n                  Plays\n                \n\n\n\n\n\n                  Workshops\n                \n\n\n\n\n\n                  Special Events\n                \n\n\n\n\n\n                  Host Your Event With Us\n                \n\n\n\n\n\n                  About\n                \n\n\n\n\n\n                  Contact\n                \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStrand Theatre MV11 Oak Bluffs AveOak Bluffs, MA 02557",
+    "phone": "(312) 576-4890",
+    "email": "info@strandtheatremv.com",
+    "website": "http://strandtheatre-marthasvineyard.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.8,
+    "social": {
+      "facebook": "http://facebook.com/StrandTheatreMV.com",
+      "instagram": "http://instagram.com/StrandTheatreMV",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 29,
+    "name": "Subscribe",
+    "slug": "subscribe-vineyard-haven",
+    "category": "Other",
+    "businessType": "other",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "125.\n\n$100.00 - Friend Subscribe / Renew / Gift (auto renew)$250.00 - Supporter Subscribe / Renew / Gift (auto renew)$50.00 - Friend Subscribe / Renew / Gift (auto renew)\n\n\n\n\n$100.00\n\n\n                            View Details\n                        \n\n\n                        Add To Cart\n                    \n\n\n\n\n\n\n\n\n\nMartha's Vineyard magazine - Annual Subscription\n\nBring the Island home with you! Featuring award-winning photography and narrative storytelling, Martha's Vineyard ma",
+    "phone": "(508) 627-4311",
+    "email": "circulation@vineyardgazette.com",
+    "website": "https://vineyardgazettestore.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.8,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 435,
+    "name": "Vacasa.Com/Usa/The-Island-Inn",
+    "slug": "vacasacomusathe-island-inn-vineyard-haven",
+    "category": "Inn",
+    "businessType": "lodging",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "850 NW 13th Ave",
+    "phone": "(800) 544-0300",
+    "email": null,
+    "website": "http://vacasa.com/usa/The-Island-Inn-MA",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 45.5289923,
+      "lng": -122.6841226
+    },
+    "status": "active",
+    "confidence": 0.8,
+    "social": {
+      "facebook": "https://www.facebook.com/vacasa",
+      "instagram": "https://www.instagram.com/vacasa/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 448,
+    "name": "Vineyardharbormotel.Us",
+    "slug": "vineyardharbormotelus-vineyard-haven",
+    "category": "Other",
+    "businessType": "other",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "us\n 60 Beach Road, Vineyard Haven MA 02568",
+    "phone": "(508) 693-3334",
+    "email": "info@vineyardharbormotel.us",
+    "website": "http://vineyardharbormotel.us/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.8,
+    "social": {
+      "facebook": "https://web.facebook.com/VineyardHarborMotelofficial/",
+      "instagram": "https://www.instagram.com/vineyardharbormotel/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 30,
+    "name": "Visit Martha'S Vineyard",
+    "slug": "visit-marthas-vineyard-vineyard-haven",
+    "category": "Other",
+    "businessType": "other",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "Box 66\nEdgartown, MA 02539",
+    "phone": "(508) 627-4311",
+    "email": null,
+    "website": "http://mvol.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3894198,
+      "lng": -70.5129682
+    },
+    "status": "active",
+    "confidence": 0.8,
+    "social": {
+      "facebook": "https://www.facebook.com/marthasvineyardonline/",
+      "instagram": "https://www.instagram.com/welcometomarthasvineyard",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 706,
+    "name": "19 Raw Oyster Bar",
+    "slug": "19-raw-oyster-bar-edgartown",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Edgartown",
+    "townSlug": "edgartown",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3886,
+      "lng": -70.5131
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 702,
+    "name": "9 Craft Kitchen And Bar",
+    "slug": "9-craft-kitchen-and-bar-vineyard-haven",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 724,
+    "name": "Alchemy",
+    "slug": "alchemy-edgartown",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Edgartown",
+    "townSlug": "edgartown",
+    "address": "Reservations\n    \n\n\n\n      Reservations\n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n71 Main StreetEdgartown, MA 02539",
+    "phone": "(508) 627-9999",
+    "email": null,
+    "website": "https://www.alchemyedgartown.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3886,
+      "lng": -70.5131
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/AlchemyMV",
+      "instagram": "https://www.instagram.com/alchemymv/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 720,
+    "name": "Art Cliff Diner",
+    "slug": "art-cliff-diner-vineyard-haven",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": "http://artcliffdiner.com",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 712,
+    "name": "Atria",
+    "slug": "atria-edgartown",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Edgartown",
+    "townSlug": "edgartown",
+    "address": "s Party\n\n\n\n\n\n137 Main St, Edgartown, MA 02539",
+    "phone": "(508) 627-5850",
+    "email": null,
+    "website": "https://www.atriamv.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3886,
+      "lng": -70.5131
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/AtriaMV/",
+      "instagram": "https://www.instagram.com/atriamv/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 674,
+    "name": "Barnes Moving & Storage",
+    "slug": "barnes-moving-storage-vineyard-haven",
+    "category": "Professional Services",
+    "businessType": "professional-services",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "\n475 Edgartown Rd, Vineyard Haven, MA 02568",
+    "phone": "\n(508) 693-1937",
+    "email": "info@barnesmoversmv.com",
+    "website": "http://www.barnesmoversmv.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4379585,
+      "lng": -70.6082244
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/barnesmoversmv/",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 697,
+    "name": "Beach House",
+    "slug": "beach-house-vineyard-haven",
+    "category": "Shopping & Retail",
+    "businessType": "shopping",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "\n30 Main St, Vineyard Haven, MA 02568",
+    "phone": "\n(508) 693-6091",
+    "email": "thebeachhouseofmv@gmail.com",
+    "website": "https://thebeachhouseofmv.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4543725,
+      "lng": -70.6031875
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "http://www.facebook.com/sharer.php?u=https%3a%2f%2fbusiness.mvy.com%2fmemberdirectory%2fDetails%2fthe-beach-house-gift-shop-2286604",
+      "instagram": "https://www.instagram.com/the_beach_house/?hl=en",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 704,
+    "name": "Beach Road",
+    "slug": "beach-road-vineyard-haven",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 718,
+    "name": "Beetlebung Farm",
+    "slug": "beetlebung-farm-chilmark",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Chilmark",
+    "townSlug": "chilmark",
+    "address": "0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n        Skip to Content\n      \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n        The Farm\n      \n\n\n\n\n        ABOUT\n      \n\n\n\n\n\n                  Hours and Location\n                \n\n\n\n\n\n                  Join Our Team\n                \n\n\n\n\n\n\n\n        Special Orders\n      \n\n\n\n\n\n                  Saturday Suppers\n                \n\n\n\n\n\n                  Bakery Preorders\n                \n\n\n\n\n\n                  Down Island Bread Pick-Up\n                \n\n\n\n\n\n\n        Programs\n      \n\n\n\n        Gallery\n      \n\n\n\n        Media\n      \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOpen Menu\nClose Menu\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n        The Farm\n      \n\n\n\n\n        ABOUT\n      \n\n\n\n\n\n                  Hours and Location\n                \n\n\n\n\n\n                  Join Our Team\n                \n\n\n\n\n\n\n\n        Special Orders\n      \n\n\n\n\n\n                  Saturday Suppers\n                \n\n\n\n\n\n                  Bakery Preorders\n                \n\n\n\n\n\n                  Down Island Bread Pick-Up\n                \n\n\n\n\n\n\n        Programs\n      \n\n\n\n        Gallery\n      \n\n\n\n        Media\n      \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOpen Menu\nClose Menu\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n                  The Farm\n                \n\n\n\n\n\nFolder:\nABOUT\n\n\n\n\n\n\n\nBack\n\n\n\n\n\n                        Hours and Location\n                      \n\n\n\n\n\n                        Join Our Team\n                      \n\n\n\n\n\n\n\nFolder:\nSpecial Orders\n\n\n\n\n\n\n\nBack\n\n\n\n\n\n                        Saturday Suppers\n                      \n\n\n\n\n\n                        Bakery Preorders\n                      \n\n\n\n\n\n                        Down Island Bread Pick-Up\n                      \n\n\n\n\n\n\n\n                  Programs\n                \n\n\n\n\n\n                  Gallery\n                \n\n\n\n\n\n                  Media\n                \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA regenerative farm in the heart of Chilmark, Martha's Vineyard,",
+    "phone": null,
+    "email": "info@beetlebungfarm.org",
+    "website": "https://www.beetlebungfarm.org/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3449,
+      "lng": -70.7455
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 705,
+    "name": "Behind The Bookstore",
+    "slug": "behind-the-bookstore-edgartown",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Edgartown",
+    "townSlug": "edgartown",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3886,
+      "lng": -70.5131
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 710,
+    "name": "Biscuits",
+    "slug": "biscuits-oak-bluffs",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Oak Bluffs",
+    "townSlug": "oak-bluffs",
+    "address": "2033Contact26 Lake Ave Oak Bluffs, MA 02557",
+    "phone": "(508) 693-2033",
+    "email": "biscuitsmv@gmail.com",
+    "website": "https://www.mvbiscuits.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.454,
+      "lng": -70.562
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/wix",
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 709,
+    "name": "Black Joy Kitchen",
+    "slug": "black-joy-kitchen-oak-bluffs",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Oak Bluffs",
+    "townSlug": "oak-bluffs",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.454,
+      "lng": -70.562
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 678,
+    "name": "Brewer Insect & Animal Spraying",
+    "slug": "brewer-insect-animal-spraying-vineyard-haven",
+    "category": "House & Garden",
+    "businessType": "contractors",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "3963 Edgartown, MA 02539",
+    "phone": "\n(508) 579-3963",
+    "email": "matt@brewerspraying.com",
+    "website": "https://www.brewerspraying.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3894198,
+      "lng": -70.5129682
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/brewerspraying",
+      "instagram": "https://www.instagram.com/brewerspraying",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 6,
+    "name": "Bunch of Grapes Bookstore",
+    "slug": "bunch-of-grapes-bookstore-vineyard-haven",
+    "category": "Retail",
+    "businessType": "shopping",
+    "description": "Independent bookstore serving the island since 1964",
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "23 Main Street, Vineyard Haven, MA 02568",
+    "phone": "(508) 693-2291",
+    "email": "molly4books@gmail.com",
+    "website": "https://www.bunchofgrapes.com",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4554104,
+      "lng": -70.6029553
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/bunchofgrapesbookstore",
+      "instagram": "https://www.instagram.com/bunchofgrapes",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 695,
+    "name": "C'Est La Vie",
+    "slug": "cest-la-vie-vineyard-haven",
+    "category": "Shopping & Retail",
+    "businessType": "shopping",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "208, Vineyard Haven MA 02568",
+    "phone": "\n(508) 693-6181",
+    "email": null,
+    "website": "https://gomarthasvineyard.com",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4263302,
+      "lng": -70.6083783
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/gomarthasvineyard/",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 675,
+    "name": "Carroll'S Martha'S Vineyard Rapid Transit, Inc.",
+    "slug": "carrolls-marthas-vineyard-rapid-transit-inc-vineyard-haven",
+    "category": "Professional Services",
+    "businessType": "professional-services",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "\n475 Edgartown Rd, Vineyard Haven, MA 02568",
+    "phone": "\n(508) 693-0348",
+    "email": null,
+    "website": "http://www.carrollsmv.com/?y_source=1_ODE3NjQ4LTcxNS1sb2NhdGlvbi53ZWJzaXRl",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4379585,
+      "lng": -70.6082244
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/movingmvnow/",
+      "instagram": "https://www.instagram.com/carrollsmv/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 700,
+    "name": "Chilmark Tavern",
+    "slug": "chilmark-tavern-chilmark",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Chilmark",
+    "townSlug": "chilmark",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3449,
+      "lng": -70.7455
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 676,
+    "name": "Coastal Events Mv",
+    "slug": "coastal-events-mv-west-tisbury",
+    "category": "Community & Government",
+    "businessType": "community",
+    "description": null,
+    "town": "West Tisbury",
+    "townSlug": "west-tisbury",
+    "address": "974 State Rd, West Tisbury, MA 02575",
+    "phone": "\n(774) 563-0737",
+    "email": "info@coastaleventsmv.com",
+    "website": "https://www.coastaleventsmv.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3862796,
+      "lng": -70.6732581
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/coastaleventsmv",
+      "instagram": "https://www.instagram.com/coastaleventsmv",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 703,
+    "name": "Détente",
+    "slug": "dtente-edgartown",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Edgartown",
+    "townSlug": "edgartown",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3886,
+      "lng": -70.5131
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 722,
+    "name": "Edgartown Diner",
+    "slug": "edgartown-diner-edgartown",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Edgartown",
+    "townSlug": "edgartown",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": "https://edgartowndiner.com",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3886,
+      "lng": -70.5131
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 721,
+    "name": "Edgartown Pizza",
+    "slug": "edgartown-pizza-edgartown",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Edgartown",
+    "townSlug": "edgartown",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": "http://edgartownpizza.com",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3886,
+      "lng": -70.5131
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 667,
+    "name": "Erica Wilson INC",
+    "slug": "erica-wilson-inc-edgartown",
+    "category": "Building & Construction",
+    "businessType": "contractors",
+    "description": null,
+    "town": "Edgartown",
+    "townSlug": "edgartown",
+    "address": "\n21 Kelly St, Edgartown, MA 02539",
+    "phone": "\n(774) 549-9488",
+    "email": "228-9881customerservice@ericawilson.com",
+    "website": "https://ericawilson.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3886,
+      "lng": -70.5131
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/Erica-Wilson-Nantucket-298543643561/",
+      "instagram": "https://www.instagram.com/ericawilsonnantucket/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 7,
+    "name": "Granary Gallery",
+    "slug": "granary-gallery-vineyard-haven",
+    "category": "Gallery",
+    "businessType": "shopping",
+    "description": "Art gallery featuring local and regional artists",
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "636 Old County Road, West Tisbury, MA 02575",
+    "phone": "(508) 693-0455",
+    "email": "info@granarygallery.com",
+    "website": "https://www.granarygallery.com",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3890796,
+      "lng": -70.6697412
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/GranaryGallery/",
+      "instagram": "https://www.instagram.com/thegranarygallery/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 715,
+    "name": "Grey Barn",
+    "slug": "grey-barn-chilmark",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Chilmark",
+    "townSlug": "chilmark",
+    "address": "The Grey Barn and Farm\n22 South Road,\nChilmark, MA 02535",
+    "phone": "(508) 645-4854",
+    "email": "farmer@thegreybarnandfarm.com",
+    "website": "https://www.thegreybarnandfarm.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3449,
+      "lng": -70.7455
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/thegreybarnchilmark",
+      "instagram": "https://www.instagram.com/thegreybarnchilmark/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 4,
+    "name": "Harbor View Hotel",
+    "slug": "harbor-view-hotel-edgartown",
+    "category": "Hotel",
+    "businessType": "lodging",
+    "description": "Historic grand hotel overlooking Edgartown Harbor",
+    "town": "Edgartown",
+    "townSlug": "edgartown",
+    "address": "131 North Water Street, Edgartown, MA 02539",
+    "phone": "(508) 627-7000",
+    "email": null,
+    "website": "https://www.harbor-view.com",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.391648,
+      "lng": -70.5077681
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/HarborViewHotel/",
+      "instagram": "https://www.instagram.com/harborviewhotel/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 688,
+    "name": "Hatmarcha Gifts",
+    "slug": "hatmarcha-gifts-aquinnah",
+    "category": "Shopping & Retail",
+    "businessType": "shopping",
+    "description": null,
+    "town": "Aquinnah",
+    "townSlug": "aquinnah",
+    "address": "\n19 Aquinnah Cir, Aquinnah, MA 02535",
+    "phone": "\n(508) 645-3704",
+    "email": null,
+    "website": "https://www.hatmarchagifts.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3468082,
+      "lng": -70.8349851
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/HatmarchaGifts/",
+      "instagram": "https://www.instagram.com/hatmarchagifts/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 683,
+    "name": "Hutker Architects INC",
+    "slug": "hutker-architects-inc-vineyard-haven",
+    "category": "Medical",
+    "businessType": "health-wellness",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "\n79 Beach Rd, Vineyard Haven, MA 02568",
+    "phone": "\n(508) 693-3344",
+    "email": null,
+    "website": "http://www.hutkerarchitects.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4519459,
+      "lng": -70.5987481
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/Hutker-Architects-Inc-161580377196470",
+      "instagram": "https://instagram.com/hutkerarchitects/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 726,
+    "name": "John's Fish Market",
+    "slug": "johns-fish-market-vineyard-haven",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "7 Closed Sundays\n\n\n5 Martin Rd, Vineyard Haven, MA 02568",
+    "phone": "(508) 693-1220",
+    "email": "693-1220glenn@johnsfishmarket.com",
+    "website": "https://johnsfishmarket.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://facebook.com/johnsfishmarketmv",
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 728,
+    "name": "La Strada",
+    "slug": "la-strada-vineyard-haven",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 671,
+    "name": "Lani Beach Club",
+    "slug": "lani-beach-club-vineyard-haven",
+    "category": "Building & Construction",
+    "businessType": "contractors",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "\n25 Main St, Vineyard Haven, MA 02568",
+    "phone": "\n(508) 687-9436",
+    "email": null,
+    "website": "http://www.lanibeachclub.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4543225,
+      "lng": -70.6027635
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "http://www.facebook.com/sharer.php?u=https%3a%2f%2fbusiness.mvy.com%2fmemberdirectory%2fDetails%2flani-beach-club-2351831",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 707,
+    "name": "Larsen's Fish Market",
+    "slug": "larsens-fish-market-chilmark",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Chilmark",
+    "townSlug": "chilmark",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3449,
+      "lng": -70.7455
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 680,
+    "name": "Lowe Energy Design",
+    "slug": "lowe-energy-design-west-tisbury",
+    "category": "Lodging & Tourism",
+    "businessType": "lodging",
+    "description": null,
+    "town": "West Tisbury",
+    "townSlug": "west-tisbury",
+    "address": "250 Oak Lane\n,\nWest Tisbury\n,\nMA\n,\n02575",
+    "phone": "\n(508) 693-1298",
+    "email": "info@loweenergydesign.com",
+    "website": "https://www.loweenergydesign.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4106855,
+      "lng": -70.6294469
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://facebook.com/loweenergy/",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": "https://yelp.com/biz/lowe-energy-design-vineyard-haven-2",
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 696,
+    "name": "Mardells Gifts & Jewelry",
+    "slug": "mardells-gifts-jewelry-vineyard-haven",
+    "category": "Shopping & Retail",
+    "businessType": "shopping",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "Box 1698\nVineyard Haven, MA 02568",
+    "phone": "\n(508) 693-0049",
+    "email": "info@mvy.com",
+    "website": "https://business.mvy.com/memberdirectory/Details/mardell-s-gifts-jewelry-2286091",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "http://www.facebook.com/sharer.php?u=https%3a%2f%2fbusiness.mvy.com%2fmemberdirectory%2fDetails%2fmardell-s-gifts-jewelry-2286091",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 8,
+    "name": "Martha'S Vineyard Film Festival",
+    "slug": "marthas-vineyard-film-festival-vineyard-haven",
+    "category": "Other",
+    "businessType": "other",
+    "description": "Annual film festival and year-round film programming",
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "Vineyard Haven, MA 02568",
+    "phone": null,
+    "email": null,
+    "website": "https://www.mvfilmsociety.com",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4542914,
+      "lng": -70.6038026
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/pages/Marthas-Vineyard-Film-Society/136334769594?ref=ts",
+      "instagram": "https://www.instagram.com/mvfilmsociety/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 719,
+    "name": "Martha's Vineyard Pizza",
+    "slug": "marthas-vineyard-pizza-vineyard-haven",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": "http://marthasvineyardpizza.com",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 713,
+    "name": "Mo's Lunch",
+    "slug": "mos-lunch-oak-bluffs",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Oak Bluffs",
+    "townSlug": "oak-bluffs",
+    "address": "9744137 Vineyard AveOak Bluffs, MA 02557",
+    "phone": "(508) 687-9744",
+    "email": "info@moslunch.com",
+    "website": "https://www.moslunch.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.454,
+      "lng": -70.562
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": "https://www.instagram.com/p/DV3dWX9jkZE/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 693,
+    "name": "Neptune'S Sea Chest",
+    "slug": "neptunes-sea-chest-vineyard-haven",
+    "category": "Shopping & Retail",
+    "businessType": "shopping",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "Box 1698\nVineyard Haven, MA 02568",
+    "phone": "\n(508) 693-0316",
+    "email": "info@mvy.com",
+    "website": "https://business.mvy.com/memberdirectory/Details/the-sea-chest-2286577",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "http://www.facebook.com/sharer.php?u=https%3a%2f%2fbusiness.mvy.com%2fmemberdirectory%2fDetails%2fthe-sea-chest-2286577",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 708,
+    "name": "Nomans",
+    "slug": "nomans-edgartown",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Edgartown",
+    "townSlug": "edgartown",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3886,
+      "lng": -70.5131
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 694,
+    "name": "Off Main",
+    "slug": "off-main-vineyard-haven",
+    "category": "Shopping & Retail",
+    "businessType": "shopping",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "Add Your Business\nContact Us\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOff Main  0No votes yet\n 76 Main St, Vineyard Haven, MA 02568",
+    "phone": "\n(508) 696-5354",
+    "email": null,
+    "website": "https://gomarthasvineyard.com/directory/main",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/gomarthasvineyard/",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 691,
+    "name": "Olive Branch Fair Trade",
+    "slug": "olive-branch-fair-trade-vineyard-haven",
+    "category": "Shopping & Retail",
+    "businessType": "shopping",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "\n43a Main St, Vineyard Haven, MA 02568",
+    "phone": "\n(774) 563-3083",
+    "email": "olivebranchfairtrade@gmail.com",
+    "website": "http://www.olivebranchfairtrade.org/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4543865,
+      "lng": -70.6029417
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "http://www.facebook.com/sharer.php?u=https%3a%2f%2fbusiness.mvy.com%2fmemberdirectory%2fDetails%2folive-branch-fair-trade-inc-4312824",
+      "instagram": "https://www.instagram.com/olivebranchfairtrade",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 672,
+    "name": "Rainy Day",
+    "slug": "rainy-day-vineyard-haven",
+    "category": "Building & Construction",
+    "businessType": "contractors",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "\n66 Main St, Vineyard Haven, MA 02568",
+    "phone": "\n(508) 693-1830",
+    "email": "rainyday@vineyard.net",
+    "website": "http://rainydaymv.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4528747,
+      "lng": -70.6067099
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/pages/Rainy-Day/109596339081590",
+      "instagram": "http://instagram.com/rainydaymv",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 711,
+    "name": "Red Cat Kitchen",
+    "slug": "red-cat-kitchen-oak-bluffs",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Oak Bluffs",
+    "townSlug": "oak-bluffs",
+    "address": "Oak Bluffs, MA 02557",
+    "phone": "(508) 696-6040",
+    "email": null,
+    "website": "https://www.redcatkitchen.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4536222,
+      "lng": -70.5684337
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/RedCatKitchenMV/",
+      "instagram": "https://www.instagram.com/theredcatkitchenmv/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 723,
+    "name": "Rosie's Frozen Yogurt",
+    "slug": "rosies-frozen-yogurt-vineyard-haven",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": "https://rosiesfrozenyogurt.com",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 727,
+    "name": "Sandy's Fish & Chips",
+    "slug": "sandys-fish-chips-vineyard-haven",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "7 Closed Sundays\n\n\n5 Martin Rd, Vineyard Haven, MA 02568",
+    "phone": "(508) 693-1220",
+    "email": "693-1220glenn@johnsfishmarket.com",
+    "website": "https://johnsfishmarket.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://facebook.com/johnsfishmarketmv",
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 689,
+    "name": "Stony Creek Gifts",
+    "slug": "stony-creek-gifts-aquinnah",
+    "category": "Shopping & Retail",
+    "businessType": "shopping",
+    "description": null,
+    "town": "Aquinnah",
+    "townSlug": "aquinnah",
+    "address": "Owned Business DirectoryONLINE STOREHot DealsMV HistoryMV Signed Language Heritage Auto TourTick AwarenessFAQPoints of InterestJob PostingsHousing RentalsIn the News Stony Creek Gifts \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBack to Search\n\n\n\n\n\n\n\n\nStony Creek Gifts\n\n\n\n\nCategories\n\nGift Shops\n\n\n\n \n\n\n\n\n\n\n\n\n\n\r\n\r\n        27 Aquinnah Circle Cultural District\r\n    \n,\nAquinnah\n,\nMA\n,\n02535",
+    "phone": "\n(508) 645-3595",
+    "email": "info@mvy.com",
+    "website": "https://business.mvy.com/memberdirectory/Details/stony-creek-gifts-2228705",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3303,
+      "lng": -70.8119
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "http://www.facebook.com/sharer.php?u=https%3a%2f%2fbusiness.mvy.com%2fmemberdirectory%2fDetails%2fstony-creek-gifts-2228705",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 686,
+    "name": "Tending Joy Artisan Shop",
+    "slug": "tending-joy-artisan-shop-vineyard-haven",
+    "category": "Shopping & Retail",
+    "businessType": "shopping",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "21 Marion's Way, Chilmark, Ma",
+    "phone": "5085601613",
+    "email": "ingrid@ingridgoffmaidoff.com",
+    "website": "https://www.tendingjoy.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3716089,
+      "lng": -70.7173751
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "http://www.facebook.com/sharer.php?u=https%3a%2f%2fbusiness.mvy.com%2fmemberdirectory%2fDetails%2ftending-joy-artisan-shop-4625574",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 730,
+    "name": "The Attic",
+    "slug": "the-attic-edgartown",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Edgartown",
+    "townSlug": "edgartown",
+    "address": "944882 Main Street Floor 2, Vineyard Haven, MA 02568",
+    "phone": "(508) 687-9448",
+    "email": "roy@theatticmv.com",
+    "website": "https://www.theatticmv.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3886,
+      "lng": -70.5131
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/theatticmvy/",
+      "instagram": "https://www.instagram.com/theatticmvy/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 701,
+    "name": "The Barn Bowl And Bistro",
+    "slug": "the-barn-bowl-and-bistro-oak-bluffs",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Oak Bluffs",
+    "townSlug": "oak-bluffs",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.454,
+      "lng": -70.562
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 729,
+    "name": "The Model Deli",
+    "slug": "the-model-deli-vineyard-haven",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": "https://www.mvtimes.com/2024/10/16/model-deli-model-deliciousness/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/mvtimes/",
+      "instagram": "https://www.instagram.com/marthasvineyardtimes/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 725,
+    "name": "The Outermost Inn",
+    "slug": "the-outermost-inn-aquinnah",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Aquinnah",
+    "townSlug": "aquinnah",
+    "address": null,
+    "phone": "(508) 645-3511",
+    "email": "info@outermostinn.com",
+    "website": "https://outermostinn.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3303,
+      "lng": -70.8119
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": "https://www.instagram.com/outermostinn/?hl=en",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 714,
+    "name": "The Pawnee House",
+    "slug": "the-pawnee-house-oak-bluffs",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Oak Bluffs",
+    "townSlug": "oak-bluffs",
+    "address": "277020 Kennebec Ave HOak Bluffs, MA 02557",
+    "phone": "(508) 338-2770",
+    "email": "02557thepawneemv@gmail.com",
+    "website": "https://www.thepawneehousemv.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.454,
+      "lng": -70.562
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/ThePawneeHouseMV",
+      "instagram": "https://www.instagram.com/the_pawnee_house_mv/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 716,
+    "name": "The Pelican Club",
+    "slug": "the-pelican-club-edgartown",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Edgartown",
+    "townSlug": "edgartown",
+    "address": "23 Kelly St, Edgartown, MA 02539",
+    "phone": "(508) 627-6336",
+    "email": "hello@farawayhotels.com",
+    "website": "https://www.farawaymarthasvineyard.com/pelican-club",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3886,
+      "lng": -70.5131
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/farawayhotel/",
+      "instagram": "https://www.instagram.com/pelicanclubmvy",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 699,
+    "name": "The Sweet Life Cafe",
+    "slug": "the-sweet-life-cafe-oak-bluffs",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Oak Bluffs",
+    "townSlug": "oak-bluffs",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.454,
+      "lng": -70.562
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 717,
+    "name": "Tigerhawk Sandwich",
+    "slug": "tigerhawk-sandwich-oak-bluffs",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Oak Bluffs",
+    "townSlug": "oak-bluffs",
+    "address": "7306\n12B Circuit Ave, \nOak Bluffs, MA 02568",
+    "phone": "(508) 338-7306",
+    "email": "info@ontimemv.com",
+    "website": "https://www.tigerhawkmv.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.454,
+      "lng": -70.562
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "https://www.facebook.com/TigerhawkMV",
+      "instagram": "https://www.instagram.com/tigerhawkmv/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 682,
+    "name": "Tracker Home Decor",
+    "slug": "tracker-home-decor-vineyard-haven",
+    "category": "Medical",
+    "businessType": "health-wellness",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "\n89 Peases Point Way S, Edgartown, MA 02539",
+    "phone": "\n(508) 627-8725",
+    "email": null,
+    "website": "http://www.trackerhomedecor.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.386409,
+      "lng": -70.5191329
+    },
+    "status": "active",
+    "confidence": 0.7,
+    "social": {
+      "facebook": "http://www.facebook.com/sharer.php?u=https%3a%2f%2fbusiness.mvy.com%2fmemberdirectory%2fDetails%2ftracker-home-decor-4487278",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 698,
+    "name": "Directory",
+    "slug": "directory-vineyard-haven",
+    "category": "Lodging",
+    "businessType": "lodging",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "Box 1698\nVineyard Haven, MA 02568",
+    "phone": "(508) 693-0085",
+    "email": "info@mvy.com",
+    "website": "https://business.mvy.com/memberdirectory#:~:text=Martha's%20Vineyard%20has%20many%20businesses%2C%20including:%20*,Retail**%20Antiques%20dealers%2C%20art%20supplies%2C%20and%20more",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.65,
+    "social": {
+      "facebook": "https://www.facebook.com/visitmv/",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 679,
+    "name": "A P Fortes Plumbing & Heating",
+    "slug": "a-p-fortes-plumbing-heating-vineyard-haven",
+    "category": "Lodging & Tourism",
+    "businessType": "lodging",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "Fortes Plumbing and Heating  0No votes yet\n 155 Spring St, Vineyard Haven, MA 02568",
+    "phone": "\n(508) 693-2394",
+    "email": null,
+    "website": "https://gomarthasvineyard.com/directory/p-fortes-plumbing-and-heating",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.6,
+    "social": {
+      "facebook": "https://www.facebook.com/gomarthasvineyard/",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 677,
+    "name": "Brissette Electric Inc.",
+    "slug": "brissette-electric-inc-vineyard-haven",
+    "category": "Community & Government",
+    "businessType": "community",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "\n1 Lagoon Pond Rd, Vineyard Haven, MA 02568",
+    "phone": "\n(508) 693-0764",
+    "email": "jarret@briselectric.com",
+    "website": "http://briselectric.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.453035,
+      "lng": -70.601195
+    },
+    "status": "active",
+    "confidence": 0.6,
+    "social": {
+      "facebook": "http://www.facebook.com/sharer.php?u=https%3a%2f%2fbusiness.mvy.com%2fmemberdirectory%2fDetails%2fbrissette-electric-inc-2228522",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 681,
+    "name": "Callahan Plumbing & Heating INC",
+    "slug": "callahan-plumbing-heating-inc-vineyard-haven",
+    "category": "Lodging & Tourism",
+    "businessType": "lodging",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "Add Your Business\nContact Us\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCallahan Plumbing and Heating, Inc  0No votes yet\n 44 Webaqua St, Vineyard Haven, MA 02568",
+    "phone": "\n(508) 696-6088",
+    "email": null,
+    "website": "https://gomarthasvineyard.com/directory/callahan-plumbing-and-heating-inc",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.6,
+    "social": {
+      "facebook": "https://www.facebook.com/gomarthasvineyard/",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 670,
+    "name": "Charleston Shoe Co.",
+    "slug": "charleston-shoe-co-vineyard-haven",
+    "category": "Building & Construction",
+    "businessType": "contractors",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "\n65 Main St, Edgartown, MA 02539",
+    "phone": "\n(508) 859-1511",
+    "email": "customerservice@charlestonshoeco.com",
+    "website": "https://charlestonshoeco.com/pages/marthas-vineyard-ma",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3901855,
+      "lng": -70.5142004
+    },
+    "status": "active",
+    "confidence": 0.6,
+    "social": {
+      "facebook": "https://www.facebook.com/CharlestonShoeCompany",
+      "instagram": "https://instagram.com/charlestonshoeco",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 282,
+    "name": "Entertainmentcinemas.Com/Locations/Edgartown",
+    "slug": "entertainmentcinemascomlocationsedgartown-vineyard-haven",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": "http://entertainmentcinemas.com/locations/edgartown",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "unknown",
+    "confidence": 0.6,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 34,
+    "name": "Facebook.Com/Cliffhangersaq",
+    "slug": "facebookcomcliffhangersaq-aquinnah",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Aquinnah",
+    "townSlug": "aquinnah",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": "https://facebook.com",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3303,
+      "lng": -70.8119
+    },
+    "status": "unknown",
+    "confidence": 0.6,
+    "social": {
+      "facebook": "https://www.facebook.com/reg/",
+      "instagram": "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F&h=AT4O5KGZB8MrAXDMd5dRwZ4G9bi-Gp72ERlv4ijJSIQUmTaGPl_X-6UjRiPzIZMuzIoCVbrjeUwsOpjCjAUqm41qDE0JBnc0BTusPXJCv6bR3_-fX7Gwp2VdREnkIOWJ7F3iCfO5Na-SrxQoB7rQrskXT-JVndfWgvt-g4r2XpI",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 690,
+    "name": "Handworks",
+    "slug": "handworks-oak-bluffs",
+    "category": "Shopping & Retail",
+    "businessType": "shopping",
+    "description": null,
+    "town": "Oak Bluffs",
+    "townSlug": "oak-bluffs",
+    "address": "\n12 Circuit Avenue Extension, Oak Bluffs, MA 02557",
+    "phone": "\n(508) 627-8402",
+    "email": "handworksmv%3chandwork@vineyard.net%3e",
+    "website": "https://www.handworksgifts.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4581623,
+      "lng": -70.5583792
+    },
+    "status": "active",
+    "confidence": 0.6,
+    "social": {
+      "facebook": "http://www.facebook.com/sharer.php?u=https%3a%2f%2fbusiness.mvy.com%2fmemberdirectory%2fDetails%2fhandworks-christmas-cottage-2228345",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 692,
+    "name": "Harbor Craft Shop",
+    "slug": "harbor-craft-shop-vineyard-haven",
+    "category": "Shopping & Retail",
+    "businessType": "shopping",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "Box 1698\nVineyard Haven, MA 02568",
+    "phone": "\n(508) 645-2929",
+    "email": "info@mvy.com",
+    "website": "https://business.mvy.com/memberdirectory/Details/harbor-craft-shop-2286320",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "active",
+    "confidence": 0.6,
+    "social": {
+      "facebook": "http://www.facebook.com/sharer.php?u=https%3a%2f%2fbusiness.mvy.com%2fmemberdirectory%2fDetails%2fharbor-craft-shop-2286320",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 328,
+    "name": "Instagram.Com/Theworkshopmv",
+    "slug": "instagramcomtheworkshopmv-vineyard-haven",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": "https://instagram.com",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "unknown",
+    "confidence": 0.6,
+    "social": {
+      "facebook": "https://developers.facebook.com/docs/instagram",
+      "instagram": "https://about.instagram.com/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 685,
+    "name": "Interiors Studio Martha'S",
+    "slug": "interiors-studio-marthas-vineyard-haven",
+    "category": "Medical",
+    "businessType": "health-wellness",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "\n7 Beach St, Vineyard Haven, MA 02568",
+    "phone": "\n(508) 693-1955",
+    "email": "office@interiorsstudiomv.com",
+    "website": "http://www.interiorsstudiomv.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4539006,
+      "lng": -70.6009547
+    },
+    "status": "active",
+    "confidence": 0.6,
+    "social": {
+      "facebook": "http://www.facebook.com/sharer.php?u=https%3a%2f%2fbusiness.mvy.com%2fmemberdirectory%2fDetails%2fmartha-s-vineyard-interior-design-2228206",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 668,
+    "name": "Island Outfitters Oak Bluffs",
+    "slug": "island-outfitters-oak-bluffs-oak-bluffs",
+    "category": "Building & Construction",
+    "businessType": "contractors",
+    "description": null,
+    "town": "Oak Bluffs",
+    "townSlug": "oak-bluffs",
+    "address": "\n1 post office square 1 post office square, Oak Bluffs, MA 02557",
+    "phone": "5086930085",
+    "email": "iooakbluffs@gmail.comemail",
+    "website": "http://islandoutfittersmv.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.454,
+      "lng": -70.562
+    },
+    "status": "active",
+    "confidence": 0.6,
+    "social": {
+      "facebook": "https://www.facebook.com/ISLANDOUTFITTERSMV/",
+      "instagram": "https://www.instagram.com/islandoutfittersmv/?hl=en",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 687,
+    "name": "Kin",
+    "slug": "kin-edgartown",
+    "category": "Shopping & Retail",
+    "businessType": "shopping",
+    "description": null,
+    "town": "Edgartown",
+    "townSlug": "edgartown",
+    "address": "\n12A N Water St, Edgartown, MA 02539",
+    "phone": "\n(508) 939-4291",
+    "email": "kinfaitmv@gmail.com",
+    "website": "http://kinmv.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3886,
+      "lng": -70.5131
+    },
+    "status": "active",
+    "confidence": 0.6,
+    "social": {
+      "facebook": "http://www.facebook.com/sharer.php?u=https%3a%2f%2fbusiness.mvy.com%2fmemberdirectory%2fDetails%2fkin-3964524",
+      "instagram": "http://instagram.com/kin.mv",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 673,
+    "name": "Lilly Pulitzer",
+    "slug": "lilly-pulitzer-vineyard-haven",
+    "category": "Building & Construction",
+    "businessType": "contractors",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "\n33 Main St, Edgartown, MA 02539",
+    "phone": "\n(508) 627-1209",
+    "email": "edgartown@lillypulitzer.com",
+    "website": "https://www.lillypulitzer.com/store/details/?storeId=80228-289&city=edgartown&utm_source=gmb&utm_medium=organic",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3896517,
+      "lng": -70.513169
+    },
+    "status": "active",
+    "confidence": 0.6,
+    "social": {
+      "facebook": "https://www.facebook.com/lillypulitzer",
+      "instagram": "https://www.instagram.com/lillypulitzer/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 684,
+    "name": "Rentschler Interiors",
+    "slug": "rentschler-interiors-vineyard-haven",
+    "category": "Medical",
+    "businessType": "health-wellness",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "\n39 Lake St, Vineyard Haven, MA 02568",
+    "phone": "\n(508) 693-2058",
+    "email": null,
+    "website": "https://www.rentschlerinteriors.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4563258,
+      "lng": -70.6102567
+    },
+    "status": "active",
+    "confidence": 0.6,
+    "social": {
+      "facebook": "http://www.facebook.com/sharer.php?u=https%3a%2f%2fbusiness.mvy.com%2fmemberdirectory%2fDetails%2flake-street-studio-rentschler-company-interiors-2228302",
+      "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 489,
+    "name": "Secure.Myvanco.Com/Ygss/Campaign/C-Yjgr",
+    "slug": "securemyvancocomygsscampaignc-yjgr-vineyard-haven",
+    "category": "Camp",
+    "businessType": "community",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": "https://secure.myvanco.com/YGSS/campaign/C-YJGR",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "unknown",
+    "confidence": 0.6,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 669,
+    "name": "The Great Put on - Luxury Clothing Store in Edgartown, Ma",
+    "slug": "the-great-put-on-luxury-clothing-store-in-edgartown-ma-vineyard-haven",
+    "category": "Building & Construction",
+    "businessType": "contractors",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "\n1 Dock St, Edgartown, MA 02539",
+    "phone": "\n(508) 627-5495",
+    "email": "627-5495thegreatputonmv@gmail.com",
+    "website": "http://thegreatputonmv.com/",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3893,
+      "lng": -70.511047
+    },
+    "status": "active",
+    "confidence": 0.6,
+    "social": {
+      "facebook": "https://www.facebook.com/thegreatputonmv/",
+      "instagram": "https://www.instagram.com/thegreatputonmv/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 646,
+    "name": "Tisburyma.Gov/Council-Aging",
+    "slug": "tisburymagovcouncil-aging-vineyard-haven",
+    "category": "Other",
+    "businessType": "other",
+    "description": null,
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "website": "http://tisburyma.gov/council-aging",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4534,
+      "lng": -70.6031
+    },
+    "status": "unknown",
+    "confidence": 0.6,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 2,
+    "name": "Atria Restaurant",
+    "slug": "atria-restaurant-edgartown",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": "Upscale American cuisine in historic Edgartown",
+    "town": "Edgartown",
+    "townSlug": "edgartown",
+    "address": "137 Main Street, Edgartown, MA 02539",
+    "phone": "(508) 627-5850",
+    "email": "440-4377info@atriarestaurant.com",
+    "website": "https://www.atriarestaurant.com",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3914947,
+      "lng": -70.5185198
+    },
+    "status": "unknown",
+    "confidence": 0.5,
+    "social": {
+      "facebook": "https://www.facebook.com/atriarestaurant/",
+      "instagram": "https://www.instagram.com/atriarestaurant/",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 9,
+    "name": "Menemsha Fish Market",
+    "slug": "menemsha-fish-market-chilmark",
+    "category": "Other",
+    "businessType": "other",
+    "description": "Fresh seafood from Menemsha fishing village",
+    "town": "Chilmark",
+    "townSlug": "chilmark",
+    "address": "54 Basin Road, Chilmark, MA 02535",
+    "phone": "(508) 645-2282",
+    "email": null,
+    "website": "https://www.menemshamarket.net",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.3536487,
+      "lng": -70.7655637
+    },
+    "status": "unknown",
+    "confidence": 0.5,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 1,
+    "name": "The Black Dog Tavern",
+    "slug": "the-black-dog-tavern-vineyard-haven",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": "Iconic waterfront restaurant known for nautical merchandise and New England seafood",
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "21 Beach Street Extension, Vineyard Haven, MA 02568",
+    "phone": "(508) 693-9223",
+    "email": "customerservice@theblackdog.com",
+    "website": "https://www.theblackdog.com",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4539394,
+      "lng": -70.6008234
+    },
+    "status": "unknown",
+    "confidence": 0.5,
+    "social": {
+      "facebook": "https://www.facebook.com/TheBlackDogMV/",
+      "instagram": "https://www.instagram.com/TheBlackDogMV",
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 3,
+    "name": "The Lookout Tavern",
+    "slug": "the-lookout-tavern-oak-bluffs",
+    "category": "Restaurant",
+    "businessType": "restaurants",
+    "description": "Casual waterfront dining with harbor views",
+    "town": "Oak Bluffs",
+    "townSlug": "oak-bluffs",
+    "address": "8 Seaview Avenue, Oak Bluffs, MA 02557",
+    "phone": "(508) 696-9844",
+    "email": null,
+    "website": "https://www.lookouttavernmv.com",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.454,
+      "lng": -70.562
+    },
+    "status": "unknown",
+    "confidence": 0.5,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  },
+  {
+    "id": 5,
+    "name": "The Mansion House",
+    "slug": "the-mansion-house-vineyard-haven",
+    "category": "Inn",
+    "businessType": "lodging",
+    "description": "Full-service inn in the heart of Vineyard Haven",
+    "town": "Vineyard Haven",
+    "townSlug": "vineyard-haven",
+    "address": "9 Main Street, Vineyard Haven, MA 02568",
+    "phone": "(508) 693-2200",
+    "email": null,
+    "website": "https://www.mvmansionhouse.com",
+    "hours": null,
+    "seasonal": null,
+    "coordinates": {
+      "lat": 41.4538084,
+      "lng": -70.6029314
+    },
+    "status": "unknown",
+    "confidence": 0.5,
+    "social": {
+      "facebook": null,
+      "instagram": null,
+      "yelp": null,
+      "tripadvisor": null
+    }
+  }
+]

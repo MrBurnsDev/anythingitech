@@ -1,0 +1,24 @@
+{
+  "exportedAt": "2026-04-20T09:33:45.544Z",
+  "totalBusinesses": 92,
+  "byTown": {
+    "vineyard-haven": 52,
+    "edgartown": 14,
+    "oak-bluffs": 14,
+    "west-tisbury": 2,
+    "chilmark": 5,
+    "aquinnah": 5
+  },
+  "byType": {
+    "restaurants": 43,
+    "lodging": 8,
+    "shopping": 14,
+    "health-wellness": 4,
+    "contractors": 8,
+    "professional-services": 2,
+    "community": 3
+  },
+  "skippedTypes": [
+    "bars-nightlife"
+  ]
+}

@@ -20,13 +20,13 @@ const cols = [
     ],
   },
   {
-    title: "Service Area",
+    title: "Island Directory",
     links: [
-      { to: "#", label: "Edgartown" },
-      { to: "#", label: "Vineyard Haven" },
-      { to: "#", label: "Oak Bluffs" },
-      { to: "#", label: "Chilmark & Aquinnah" },
-      { to: "#", label: "West Tisbury" },
+      { to: "/marthas-vineyard", label: "Business Directory" },
+      { to: "/marthas-vineyard/vineyard-haven", label: "Vineyard Haven" },
+      { to: "/marthas-vineyard/edgartown", label: "Edgartown" },
+      { to: "/marthas-vineyard/oak-bluffs", label: "Oak Bluffs" },
+      { to: "/marthas-vineyard/submit", label: "Submit a Business" },
     ],
   },
 ];

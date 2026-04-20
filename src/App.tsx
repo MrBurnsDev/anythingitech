@@ -14,6 +14,14 @@ import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
+// Directory pages
+import DirectoryIndex from "./pages/directory/DirectoryIndex.tsx";
+import TownPage from "./pages/directory/TownPage.tsx";
+import BusinessTypePage from "./pages/directory/BusinessTypePage.tsx";
+import TownBusinessTypePage from "./pages/directory/TownBusinessTypePage.tsx";
+import BusinessPage from "./pages/directory/BusinessPage.tsx";
+import SubmitBusiness from "./pages/directory/SubmitBusiness.tsx";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -32,6 +40,23 @@ const App = () => (
           <Route path="/business-it" element={<BusinessIT />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+
+          {/* Martha's Vineyard Business Directory */}
+          <Route path="/marthas-vineyard" element={<DirectoryIndex />} />
+          <Route path="/marthas-vineyard/submit" element={<SubmitBusiness />} />
+          {/* Island-wide business type pages */}
+          <Route path="/marthas-vineyard/restaurants" element={<BusinessTypePage />} />
+          <Route path="/marthas-vineyard/lodging" element={<BusinessTypePage />} />
+          <Route path="/marthas-vineyard/shopping" element={<BusinessTypePage />} />
+          <Route path="/marthas-vineyard/health-wellness" element={<BusinessTypePage />} />
+          <Route path="/marthas-vineyard/contractors" element={<BusinessTypePage />} />
+          <Route path="/marthas-vineyard/professional-services" element={<BusinessTypePage />} />
+          <Route path="/marthas-vineyard/community" element={<BusinessTypePage />} />
+          {/* Town pages */}
+          <Route path="/marthas-vineyard/:townSlug" element={<TownPage />} />
+          <Route path="/marthas-vineyard/:townSlug/:typeSlug" element={<TownBusinessTypePage />} />
+          <Route path="/marthas-vineyard/:townSlug/:typeSlug/:businessSlug" element={<BusinessPage />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
