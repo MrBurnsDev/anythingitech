@@ -1,0 +1,730 @@
+{
+  "timestamp": "2026-04-21T13:56:44.035Z",
+  "mode": "applied",
+  "stats": {
+    "total": 344,
+    "duplicates_found": 23,
+    "duplicates_marked": 23,
+    "names_cleaned": 8,
+    "names_invalidated": 24,
+    "tier_a": 229,
+    "tier_b": 66,
+    "tier_c": 25,
+    "unpublishable": 24,
+    "outreach_ready": 255
+  },
+  "duplicate_clusters": [
+    {
+      "canonical_id": 187,
+      "duplicate_ids": [
+        193
+      ],
+      "match_reason": "same_phone:5086938582",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 255,
+      "duplicate_ids": [
+        9
+      ],
+      "match_reason": "same_phone:5086452282",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 326,
+      "duplicate_ids": [
+        302
+      ],
+      "match_reason": "same_phone:5086966300",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 410,
+      "duplicate_ids": [
+        421
+      ],
+      "match_reason": "same_phone:5086452521",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 668,
+      "duplicate_ids": [
+        698
+      ],
+      "match_reason": "same_phone:5086930085",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 672,
+      "duplicate_ids": [
+        595
+      ],
+      "match_reason": "same_phone:5086931830",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 691,
+      "duplicate_ids": [
+        586
+      ],
+      "match_reason": "same_phone:7745633083",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 710,
+      "duplicate_ids": [
+        138
+      ],
+      "match_reason": "same_phone:5086932033",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 726,
+      "duplicate_ids": [
+        727
+      ],
+      "match_reason": "same_phone:5086931220",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 6,
+      "duplicate_ids": [
+        474
+      ],
+      "match_reason": "same_phone:5086932291",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 38,
+      "duplicate_ids": [
+        725
+      ],
+      "match_reason": "same_phone:5086453511",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 49,
+      "duplicate_ids": [
+        51
+      ],
+      "match_reason": "same_phone:7742240550",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 162,
+      "duplicate_ids": [
+        3
+      ],
+      "match_reason": "same_phone:5086969844",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 711,
+      "duplicate_ids": [
+        170
+      ],
+      "match_reason": "same_phone:5086966040",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 712,
+      "duplicate_ids": [
+        58,
+        2
+      ],
+      "match_reason": "same_phone:5086275850",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 724,
+      "duplicate_ids": [
+        52
+      ],
+      "match_reason": "same_phone:5086279999",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 30,
+      "duplicate_ids": [
+        29,
+        32
+      ],
+      "match_reason": "same_phone:5086274311",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 446,
+      "duplicate_ids": [
+        429
+      ],
+      "match_reason": "same_phone:9789928710",
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": 686,
+      "duplicate_ids": [
+        636
+      ],
+      "match_reason": "same_domain:tendingjoy.com",
+      "confidence": 0.9
+    },
+    {
+      "canonical_id": 715,
+      "duplicate_ids": [
+        235
+      ],
+      "match_reason": "same_domain:thegreybarnandfarm.com",
+      "confidence": 0.9
+    },
+    {
+      "canonical_id": 716,
+      "duplicate_ids": [
+        102
+      ],
+      "match_reason": "same_domain:farawaymarthasvineyard.com",
+      "confidence": 0.9
+    }
+  ],
+  "problem_records": [
+    {
+      "id": 30,
+      "name": "Martha's Vineyard Island, Massachusetts",
+      "cleaned_name": "Martha's Vineyard Island",
+      "name_quality": 0,
+      "completeness": 65,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Martha's Vineyard Magazine",
+      "cleaned_name": "Martha's Vineyard Magazine",
+      "name_quality": 0,
+      "completeness": 30,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Aquilamv.square",
+      "cleaned_name": "Aquilamv.square",
+      "name_quality": 0,
+      "completeness": 40,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Facebook",
+      "cleaned_name": "Facebook",
+      "name_quality": 0,
+      "completeness": 40,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Chilmarktavern.Com",
+      "cleaned_name": "Chilmarktavern.Com",
+      "name_quality": 0,
+      "completeness": 75,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 62,
+      "name": "Btbmv.Com",
+      "cleaned_name": "Btbmv.Com",
+      "name_quality": 0,
+      "completeness": 75,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 79,
+      "name": "Dock Street Coffee Shop.square",
+      "cleaned_name": "Dock Street Coffee Shop.square",
+      "name_quality": 0,
+      "completeness": 40,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 81,
+      "name": "Edgartowndiner.Com",
+      "cleaned_name": "Edgartowndiner.Com",
+      "name_quality": 0,
+      "completeness": 65,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 85,
+      "name": "Edgartownpizza.Com",
+      "cleaned_name": "Edgartownpizza.Com",
+      "name_quality": 0,
+      "completeness": 65,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 123,
+      "name": "Edgartown, Ma Bars",
+      "cleaned_name": "Edgartown, Ma Bars",
+      "name_quality": 0,
+      "completeness": 60,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 227,
+      "name": "Menu",
+      "cleaned_name": "Menu",
+      "name_quality": 0,
+      "completeness": 65,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 300,
+      "name": "Home",
+      "cleaned_name": "Home",
+      "name_quality": 0,
+      "completeness": 85,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 310,
+      "name": "Mvcma.Org",
+      "cleaned_name": "Mvcma.Org",
+      "name_quality": 0,
+      "completeness": 75,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 328,
+      "name": "Instagram",
+      "cleaned_name": "Instagram",
+      "name_quality": 0,
+      "completeness": 40,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 377,
+      "name": "Martha's Vineyard",
+      "cleaned_name": "Martha's Vineyard",
+      "name_quality": 0,
+      "completeness": 75,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 397,
+      "name": "Hobknob.Com",
+      "cleaned_name": "Hobknob.Com",
+      "name_quality": 0,
+      "completeness": 55,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 405,
+      "name": "Lambertscoveinn.Com",
+      "cleaned_name": "Lambertscoveinn.Com",
+      "name_quality": 0,
+      "completeness": 75,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 408,
+      "name": "Campmv.Com",
+      "cleaned_name": "Campmv.Com",
+      "name_quality": 0,
+      "completeness": 65,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 466,
+      "name": "Binks Auto.business",
+      "cleaned_name": "Binks Auto.business",
+      "name_quality": 0,
+      "completeness": 40,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 507,
+      "name": "Eastchopsleepshop.Com",
+      "cleaned_name": "Eastchopsleepshop.Com",
+      "name_quality": 0,
+      "completeness": 75,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 544,
+      "name": "Welcome",
+      "cleaned_name": "Welcome",
+      "name_quality": 0,
+      "completeness": 75,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 567,
+      "name": "Mvshipyard.Com",
+      "cleaned_name": "Mvshipyard.Com",
+      "name_quality": 0,
+      "completeness": 65,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 571,
+      "name": "Mvcenter4Living.Org",
+      "cleaned_name": "Mvcenter4Living.Org",
+      "name_quality": 0,
+      "completeness": 65,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    },
+    {
+      "id": 640,
+      "name": "V2",
+      "cleaned_name": "V2",
+      "name_quality": 0,
+      "completeness": 75,
+      "tier": "unpublishable",
+      "outreach_ready": false,
+      "issues": [
+        "invalid_name"
+      ]
+    }
+  ],
+  "tier_c_records": [
+    {
+      "id": 459,
+      "name": "Altheadesigns",
+      "cleaned_name": "Altheadesigns",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 461,
+      "name": "Basicsandeastaway.company",
+      "cleaned_name": "Basicsandeastaway.company",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 463,
+      "name": "Bellezzamvsalon",
+      "cleaned_name": "Bellezzamvsalon",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 472,
+      "name": "Brunos",
+      "cleaned_name": "Brunos",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 483,
+      "name": "Chickenalley",
+      "cleaned_name": "Chickenalley",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 536,
+      "name": "Islandmusic",
+      "cleaned_name": "Islandmusic",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 577,
+      "name": "Menemshablues",
+      "cleaned_name": "Menemshablues",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 591,
+      "name": "Phillips Hardware Closed",
+      "cleaned_name": "Phillips Hardware Closed",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 593,
+      "name": "Marthasvineyardescaperoom",
+      "cleaned_name": "Marthasvineyardescaperoom",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 618,
+      "name": "Slip 77",
+      "cleaned_name": "Slip 77",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 623,
+      "name": "Sole",
+      "cleaned_name": "Sole",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 646,
+      "name": "Tisburyma.Gov/Council-Aging",
+      "cleaned_name": "Tisburyma.Gov/Council-Aging",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 663,
+      "name": "Wheelhappybicycles",
+      "cleaned_name": "Wheelhappybicycles",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 699,
+      "name": "The Sweet Life Cafe",
+      "cleaned_name": "The Sweet Life Cafe",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 700,
+      "name": "Chilmark Tavern",
+      "cleaned_name": "Chilmark Tavern",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 701,
+      "name": "The Barn Bowl And Bistro",
+      "cleaned_name": "The Barn Bowl And Bistro",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 702,
+      "name": "9 Craft Kitchen And Bar",
+      "cleaned_name": "9 Craft Kitchen And Bar",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 703,
+      "name": "Détente",
+      "cleaned_name": "Détente",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 704,
+      "name": "Beach Road",
+      "cleaned_name": "Beach Road",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 705,
+      "name": "Behind The Bookstore",
+      "cleaned_name": "Behind The Bookstore",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 706,
+      "name": "19 Raw Oyster Bar",
+      "cleaned_name": "19 Raw Oyster Bar",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 707,
+      "name": "Larsen's Fish Market",
+      "cleaned_name": "Larsen's Fish Market",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 708,
+      "name": "Nomans",
+      "cleaned_name": "Nomans",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 709,
+      "name": "Black Joy Kitchen",
+      "cleaned_name": "Black Joy Kitchen",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    },
+    {
+      "id": 728,
+      "name": "La Strada",
+      "cleaned_name": "La Strada",
+      "name_quality": 100,
+      "completeness": 45,
+      "tier": "C",
+      "outreach_ready": false,
+      "issues": []
+    }
+  ]
+}

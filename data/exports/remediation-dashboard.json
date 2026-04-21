@@ -1,0 +1,22 @@
+{
+  "total_suppressed": 66,
+  "recoverable_records": 66,
+  "records_fixed": 0,
+  "records_removed": 0,
+  "records_pending": 66,
+  "records_reviewed": 0,
+  "records_rejected": 0,
+  "by_fix_type": {
+    "name_correction": 19,
+    "category_correction": 0,
+    "address_correction": 17,
+    "duplicate_merge": 0,
+    "remove_record": 0,
+    "manual_review_required": 30
+  },
+  "by_source": {
+    "infatuation": 12,
+    "mvy_chamber": 1,
+    "vineyard_gazette": 53
+  }
+}

@@ -33,6 +33,13 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
+          {/* Service pages under /services/ for SEO */}
+          <Route path="/services/apple-repair" element={<AppleRepair />} />
+          <Route path="/services/wifi-network" element={<WifiNetwork />} />
+          <Route path="/services/smart-home" element={<SmartHome />} />
+          <Route path="/services/tv-audio" element={<TVAudio />} />
+          <Route path="/services/business-it" element={<BusinessIT />} />
+          {/* Legacy routes - redirect via vercel.json */}
           <Route path="/apple-repair" element={<AppleRepair />} />
           <Route path="/wifi-network" element={<WifiNetwork />} />
           <Route path="/smart-home" element={<SmartHome />} />

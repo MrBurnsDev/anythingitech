@@ -1,0 +1,577 @@
+{
+  "timestamp": "2026-04-21T14:21:33.985Z",
+  "summary": {
+    "totalRecords": 344,
+    "activeRecords": 283,
+    "suppressedRecords": 61,
+    "permanentSuppress": 0,
+    "recoverableManual": 55,
+    "recoverableExtraction": 6,
+    "nameDomainMismatches": 18
+  },
+  "sourceStats": [
+    {
+      "source": "infatuation",
+      "total": 30,
+      "suppressed": 12,
+      "emailContamination": 1,
+      "addressContamination": 0,
+      "nameContamination": 0,
+      "suppressionRate": 40
+    },
+    {
+      "source": "vineyard_gazette",
+      "total": 276,
+      "suppressed": 49,
+      "emailContamination": 4,
+      "addressContamination": 10,
+      "nameContamination": 21,
+      "suppressionRate": 17.753623188405797
+    },
+    {
+      "source": "manual_import",
+      "total": 7,
+      "suppressed": 0,
+      "emailContamination": 0,
+      "addressContamination": 0,
+      "nameContamination": 0,
+      "suppressionRate": 0
+    },
+    {
+      "source": "mvy_chamber",
+      "total": 31,
+      "suppressed": 0,
+      "emailContamination": 3,
+      "addressContamination": 0,
+      "nameContamination": 0,
+      "suppressionRate": 0
+    }
+  ],
+  "classifications": [
+    {
+      "id": 30,
+      "name": "Martha's Vineyard Island",
+      "website": "http://mvol.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 31,
+      "name": "Martha's Vineyard Magazine",
+      "website": "http://www.mvmagazine.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 33,
+      "name": "Aquilamv.square",
+      "website": "https://aquilamv.square.site/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 34,
+      "name": "Facebook",
+      "website": "https://facebook.com",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 43,
+      "name": "Chilmarktavern.Com",
+      "website": "http://chilmarktavern.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 62,
+      "name": "Btbmv.Com",
+      "website": "http://btbmv.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 64,
+      "name": "Iconic Martha's Vineyard Hotel",
+      "website": "http://harborviewhotel.com/",
+      "classification": "recoverable_extraction",
+      "reason": "Decorative/promotional text used as name",
+      "suggestedFix": "Extract actual business name from harborviewhotel.com"
+    },
+    {
+      "id": 79,
+      "name": "Dock Street Coffee Shop.square",
+      "website": "https://dock-street-coffee-shop.square.site/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 81,
+      "name": "Edgartowndiner.Com",
+      "website": "http://edgartowndiner.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 85,
+      "name": "Edgartownpizza.Com",
+      "website": "http://edgartownpizza.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 119,
+      "name": "Martha's Vineyard Hotels",
+      "website": "http://winnetu.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 123,
+      "name": "Edgartown, Ma Bars",
+      "website": "http://townbarmv.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 227,
+      "name": "Menu",
+      "website": "http://woodlandvarietyandgrill.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 249,
+      "name": "Organic Products in Martha's Vineyard!",
+      "website": "http://vineyardgrocer.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 297,
+      "name": "Artisanal Glass Blowing Studio & Shop",
+      "website": "http://mvglassworks.com/",
+      "classification": "recoverable_extraction",
+      "reason": "Descriptive tagline used as name",
+      "suggestedFix": "Extract actual business name from mvglassworks.com"
+    },
+    {
+      "id": 300,
+      "name": "Home",
+      "website": "http://mvmuseum.org/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 310,
+      "name": "Mvcma.Org",
+      "website": "http://mvcma.org/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 314,
+      "name": "Pathwaysarts",
+      "website": "http://pathwaysmv.org/",
+      "classification": "recoverable_extraction",
+      "reason": "URL-style name - entity exists but name extracted incorrectly",
+      "suggestedFix": "Extract proper name from pathwaysmv.org"
+    },
+    {
+      "id": 328,
+      "name": "Instagram",
+      "website": "https://instagram.com",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 368,
+      "name": "Redirecting...",
+      "website": "http://vineyardgynecology.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 377,
+      "name": "Martha's Vineyard",
+      "website": "http://ashleyinn.net/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 385,
+      "name": "Martha's Vineyard Hotel",
+      "website": "http://edgarhotelmv.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 395,
+      "name": "Theharborsideinn",
+      "website": "http://theharborsideinn.com/",
+      "classification": "recoverable_extraction",
+      "reason": "URL-style name - entity exists but name extracted incorrectly",
+      "suggestedFix": "Extract proper name from theharborsideinn.com"
+    },
+    {
+      "id": 397,
+      "name": "Hobknob.Com",
+      "website": "http://hobknob.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 405,
+      "name": "Lambertscoveinn.Com",
+      "website": "http://lambertscoveinn.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 408,
+      "name": "Campmv.Com",
+      "website": "http://campmv.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 427,
+      "name": "A Glimpse of the Grounds..",
+      "website": "http://thecharlotteinn.com/",
+      "classification": "recoverable_extraction",
+      "reason": "Decorative/promotional text used as name",
+      "suggestedFix": "Extract actual business name from thecharlotteinn.com"
+    },
+    {
+      "id": 433,
+      "name": "Larkhotels",
+      "website": "https://www.larkhotels.com/hotels/the-edgartown-collection",
+      "classification": "recoverable_extraction",
+      "reason": "URL-style name - entity exists but name extracted incorrectly",
+      "suggestedFix": "Extract proper name from larkhotels.com"
+    },
+    {
+      "id": 439,
+      "name": "Boutique Hotels",
+      "website": "http://morganhotelmv.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 453,
+      "name": "Find Your Island Ride",
+      "website": "http://mvautorental.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 459,
+      "name": "Altheadesigns",
+      "website": "http://altheadesigns.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 461,
+      "name": "Basicsandeastaway.company",
+      "website": "http://basicsandeastaway.company.site/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 463,
+      "name": "Bellezzamvsalon",
+      "website": "http://bellezzamvsalon.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 466,
+      "name": "Binks Auto.business",
+      "website": "http://binks-auto.business.site/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 472,
+      "name": "Brunos",
+      "website": "http://brunosmv.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 483,
+      "name": "Chickenalley",
+      "website": "http://chickenalley.org/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 507,
+      "name": "Eastchopsleepshop.Com",
+      "website": "http://eastchopsleepshop.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 536,
+      "name": "Islandmusic",
+      "website": "http://islandmusicmv.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 544,
+      "name": "Welcome",
+      "website": "http://kingsbarbershopmv.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 567,
+      "name": "Mvshipyard.Com",
+      "website": "http://mvshipyard.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 571,
+      "name": "Mvcenter4Living.Org",
+      "website": "http://mvcenter4living.org/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 577,
+      "name": "Menemshablues",
+      "website": "http://menemshablues.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 591,
+      "name": "Phillips Hardware Closed",
+      "website": "http://phillipshardwaremv.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 593,
+      "name": "Marthasvineyardescaperoom",
+      "website": "https://www.marthasvineyardescaperoom.com/escape-room-pirates-puzzle",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 618,
+      "name": "Slip 77",
+      "website": "http://slip77.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 623,
+      "name": "Sole",
+      "website": "http://solemv.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 640,
+      "name": "V2",
+      "website": "http://greenroommv.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 646,
+      "name": "Tisburyma.Gov/Council-Aging",
+      "website": "http://tisburyma.gov/council-aging",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 663,
+      "name": "Wheelhappybicycles",
+      "website": "http://wheelhappybicycles.com/",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 699,
+      "name": "The Sweet Life Cafe",
+      "website": "",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 700,
+      "name": "Chilmark Tavern",
+      "website": "",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 701,
+      "name": "The Barn Bowl And Bistro",
+      "website": "",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 702,
+      "name": "9 Craft Kitchen And Bar",
+      "website": "",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 703,
+      "name": "Détente",
+      "website": "",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 704,
+      "name": "Beach Road",
+      "website": "",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 705,
+      "name": "Behind The Bookstore",
+      "website": "",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 706,
+      "name": "19 Raw Oyster Bar",
+      "website": "",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 707,
+      "name": "Larsen's Fish Market",
+      "website": "",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 708,
+      "name": "Nomans",
+      "website": "",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 709,
+      "name": "Black Joy Kitchen",
+      "website": "",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    },
+    {
+      "id": 728,
+      "name": "La Strada",
+      "website": "",
+      "classification": "recoverable_manual",
+      "reason": "Unclear issue - needs manual review"
+    }
+  ],
+  "mismatches": [
+    {
+      "id": 56,
+      "name": "Martha's Vineyard Seafood & Steak Restaurant",
+      "domain": "atlanticmv.com",
+      "title": "Martha's Vineyard Seafood &amp; Steak Restaurant | Edgartown, MV"
+    },
+    {
+      "id": 154,
+      "name": "Giordano's Restaurant, INC",
+      "domain": "giosmv.com",
+      "title": "Giordano&#039;s Restaurant, Inc&nbsp;|&nbsp;Serving the Vineyard Since 1930"
+    },
+    {
+      "id": 162,
+      "name": "Waterfront Dining",
+      "domain": "lookoutmv.com",
+      "title": "Home - Waterfront Dining | Lookout Tavern | Martha&#039;s Vineyard"
+    },
+    {
+      "id": 200,
+      "name": "The Best Bakery on Martha's Vineyard!",
+      "domain": "deliciousmv.com",
+      "title": "The Best Bakery on Martha&#039;s Vineyard! - deliciousmv.com"
+    },
+    {
+      "id": 204,
+      "name": "The La Choza Difference: Flavor Without the Fuss.",
+      "domain": "lachozamv.com",
+      "title": "The La Choza Difference: Flavor Without the Fuss. | La Choza MV"
+    },
+    {
+      "id": 257,
+      "name": "The Net Result",
+      "domain": "mvseafood.com",
+      "title": "Home - The Net Result"
+    },
+    {
+      "id": 347,
+      "name": "The Martha's Vineyard Groups of Alcoholics Anonymous",
+      "domain": "aaonmv.org",
+      "title": "The Martha&#039;s Vineyard Groups of Alcoholics Anonymous"
+    },
+    {
+      "id": 374,
+      "name": "Ymca of Martha's Vineyard",
+      "domain": "ymcamv.org",
+      "title": "Home - YMCA of Martha&#039;s Vineyard"
+    },
+    {
+      "id": 383,
+      "name": "Private Ocean View 2-3 Bed Beach Studios Inkwell Beach",
+      "domain": "dunmerehouse.com",
+      "title": "DunmereHouse"
+    },
+    {
+      "id": 444,
+      "name": "Martha’s Vineyard Surfside Hotel: Martha’s Vineyard Hotels",
+      "domain": "mvsurfside.com",
+      "title": "Martha’s Vineyard Surfside Hotel: Martha’s Vineyard Hotels"
+    },
+    {
+      "id": 551,
+      "name": "Entering Leisure Time",
+      "domain": "lazyfrogmv.com",
+      "title": "Entering leisure time"
+    },
+    {
+      "id": 569,
+      "name": "Martha's Vineyard Tile Company Inc.",
+      "domain": "mvtileco.com",
+      "title": "Martha&#39;s Vineyard Tile Company Inc."
+    },
+    {
+      "id": 665,
+      "name": "Sail Surf and Paddle on Martha's Vineyard",
+      "domain": "windsupmv.com",
+      "title": "Home - Sail Surf and Paddle on Martha&#039;s Vineyard | Wind&#039;s Up"
+    },
+    {
+      "id": 669,
+      "name": "Luxury Clothing Designer Store in Marth Vineyard & Edgartown",
+      "domain": "thegreatputonmv.com",
+      "title": "Luxury Clothing Designer Store in Marth Vineyard &amp; Edgartown"
+    },
+    {
+      "id": 675,
+      "name": "Carroll's Martha's Vineyard Rapid Transit, Inc.",
+      "domain": "carrollsmv.com",
+      "title": ""
+    }
+  ]
+}

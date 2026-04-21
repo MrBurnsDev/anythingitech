@@ -1,0 +1,1322 @@
+[
+  {
+    "record_id": 699,
+    "extracted_name": "The Sweet Life Cafe",
+    "domain": null,
+    "source": "infatuation",
+    "town": "Oak Bluffs",
+    "category": "Restaurant",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": null,
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": null,
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": null
+    },
+    "confidence": 0,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 700,
+    "extracted_name": "Chilmark Tavern",
+    "domain": null,
+    "source": "infatuation",
+    "town": "Chilmark",
+    "category": "Restaurant",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": null,
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": null,
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": null
+    },
+    "confidence": 0,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 701,
+    "extracted_name": "The Barn Bowl And Bistro",
+    "domain": null,
+    "source": "infatuation",
+    "town": "Oak Bluffs",
+    "category": "Restaurant",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": null,
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": null,
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": null
+    },
+    "confidence": 0,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 702,
+    "extracted_name": "9 Craft Kitchen And Bar",
+    "domain": null,
+    "source": "infatuation",
+    "town": "Vineyard Haven",
+    "category": "Restaurant",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": null,
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": null,
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": null
+    },
+    "confidence": 0,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 703,
+    "extracted_name": "Détente",
+    "domain": null,
+    "source": "infatuation",
+    "town": "Edgartown",
+    "category": "Restaurant",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": null,
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": null,
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": null
+    },
+    "confidence": 0,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 704,
+    "extracted_name": "Beach Road",
+    "domain": null,
+    "source": "infatuation",
+    "town": "Vineyard Haven",
+    "category": "Restaurant",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": null,
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": null,
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": null
+    },
+    "confidence": 0,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 705,
+    "extracted_name": "Behind The Bookstore",
+    "domain": null,
+    "source": "infatuation",
+    "town": "Edgartown",
+    "category": "Restaurant",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": null,
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": null,
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": null
+    },
+    "confidence": 0,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 706,
+    "extracted_name": "19 Raw Oyster Bar",
+    "domain": null,
+    "source": "infatuation",
+    "town": "Edgartown",
+    "category": "Restaurant",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": null,
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": null,
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": null
+    },
+    "confidence": 0,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 707,
+    "extracted_name": "Larsen's Fish Market",
+    "domain": null,
+    "source": "infatuation",
+    "town": "Chilmark",
+    "category": "Restaurant",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": null,
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": null,
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": null
+    },
+    "confidence": 0,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 708,
+    "extracted_name": "Nomans",
+    "domain": null,
+    "source": "infatuation",
+    "town": "Edgartown",
+    "category": "Restaurant",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": null,
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": null,
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": null
+    },
+    "confidence": 0,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 709,
+    "extracted_name": "Black Joy Kitchen",
+    "domain": null,
+    "source": "infatuation",
+    "town": "Oak Bluffs",
+    "category": "Restaurant",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": null,
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": null,
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": null
+    },
+    "confidence": 0,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 728,
+    "extracted_name": "La Strada",
+    "domain": null,
+    "source": "infatuation",
+    "town": "Vineyard Haven",
+    "category": "Restaurant",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": null,
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": null,
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": null
+    },
+    "confidence": 0,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 669,
+    "extracted_name": "Luxury Clothing Designer Store in Marth Vineyard & Edgartown",
+    "domain": "thegreatputonmv.com",
+    "source": "mvy_chamber",
+    "town": "Vineyard Haven",
+    "category": "Building & Construction",
+    "suppression_reason": "Extracted name is a descriptive phrase, not business name",
+    "suggested_correct_name": "The Great Put On",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "The Great Put On",
+      "category": "Building & Construction",
+      "address": "1 Dock St, Edgartown, MA 02539",
+      "phone": "(508) 627-5495",
+      "website": "http://thegreatputonmv.com/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"The Great Put On\""
+  },
+  {
+    "record_id": 30,
+    "extracted_name": "Martha's Vineyard Island",
+    "domain": "mvol.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "Address contains invalid data",
+    "suggested_correct_name": "Mvol",
+    "suggested_fix_type": "address_correction",
+    "suggestions": {
+      "business_name": "Mvol",
+      "category": "Other",
+      "address": "Box 66\nEdgartown, MA 02539",
+      "phone": "(508) 627-4311",
+      "website": "http://mvol.com/"
+    },
+    "confidence": 70,
+    "action_required": "Extract clean address from website"
+  },
+  {
+    "record_id": 31,
+    "extracted_name": "Martha's Vineyard Magazine",
+    "domain": "mvmagazine.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "Requires manual review",
+    "suggested_correct_name": "Mvmagazine",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Mvmagazine",
+      "category": "Other",
+      "address": null,
+      "phone": null,
+      "website": "http://www.mvmagazine.com/"
+    },
+    "confidence": 40,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 33,
+    "extracted_name": "Aquilamv.square",
+    "domain": "aquilamv.square.site",
+    "source": "vineyard_gazette",
+    "town": "Aquinnah",
+    "category": "Restaurant",
+    "suppression_reason": "Requires manual review",
+    "suggested_correct_name": "Aquilamv.square.site",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Aquilamv.square.site",
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": "https://aquilamv.square.site/"
+    },
+    "confidence": 20,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 34,
+    "extracted_name": "Facebook",
+    "domain": "facebook.com",
+    "source": "vineyard_gazette",
+    "town": "Aquinnah",
+    "category": "Restaurant",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": "Facebook",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Facebook",
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": "https://facebook.com"
+    },
+    "confidence": 40,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 43,
+    "extracted_name": "Chilmarktavern.Com",
+    "domain": "chilmarktavern.com",
+    "source": "vineyard_gazette",
+    "town": "Chilmark",
+    "category": "Restaurant",
+    "suppression_reason": "Address contains invalid data",
+    "suggested_correct_name": "Chilmark Tavern",
+    "suggested_fix_type": "address_correction",
+    "suggestions": {
+      "business_name": "Chilmark Tavern",
+      "category": "Restaurant",
+      "address": "LOCATION9 State RoadChilmark, MA 02535",
+      "phone": "(508) 645-9400",
+      "website": "http://chilmarktavern.com/"
+    },
+    "confidence": 70,
+    "action_required": "Extract clean address from website"
+  },
+  {
+    "record_id": 62,
+    "extracted_name": "Btbmv.Com",
+    "domain": "btbmv.com",
+    "source": "vineyard_gazette",
+    "town": "Edgartown",
+    "category": "Restaurant",
+    "suppression_reason": "Address contains invalid data",
+    "suggested_correct_name": "Behind the Bookstore",
+    "suggested_fix_type": "address_correction",
+    "suggestions": {
+      "business_name": "Behind the Bookstore",
+      "category": "Restaurant",
+      "address": "behindthebookstore\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntro Image\n\n\n\nIntroduction\n\n\n\nOfferings\n\n\n\nInstagram\n\n\n\n\n\n\n\n\n\n\nLocation46 Main StEdgartown, MA 02539",
+      "phone": "(774) 549-9123",
+      "website": "http://btbmv.com/"
+    },
+    "confidence": 70,
+    "action_required": "Extract clean address from website"
+  },
+  {
+    "record_id": 64,
+    "extracted_name": "Iconic Martha's Vineyard Hotel",
+    "domain": "harborviewhotel.com",
+    "source": "vineyard_gazette",
+    "town": "Edgartown",
+    "category": "Restaurant",
+    "suppression_reason": "Name matches invalid pattern (marketing text)",
+    "suggested_correct_name": "Harbor View Hotel",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "Harbor View Hotel",
+      "category": "Restaurant",
+      "address": "Media\nCareers\nTravel Advisors\nAccessibility\nGift Cards\nHospitality with Heart\n \n\nFind Us\n131 North Water Street\nEdgartown, MA 02539",
+      "phone": "(844) 248-1167",
+      "website": "http://harborviewhotel.com/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"Harbor View Hotel\""
+  },
+  {
+    "record_id": 79,
+    "extracted_name": "Dock Street Coffee Shop.square",
+    "domain": "dock-street-coffee-shop.square.site",
+    "source": "vineyard_gazette",
+    "town": "Edgartown",
+    "category": "Restaurant",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": "Dock-street-coffee-shop.square.site",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Dock-street-coffee-shop.square.site",
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": "https://dock-street-coffee-shop.square.site/"
+    },
+    "confidence": 20,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 81,
+    "extracted_name": "Edgartowndiner.Com",
+    "domain": "edgartowndiner.com",
+    "source": "vineyard_gazette",
+    "town": "Edgartown",
+    "category": "Restaurant",
+    "suppression_reason": "Address contains invalid data",
+    "suggested_correct_name": "Edgartown Diner",
+    "suggested_fix_type": "address_correction",
+    "suggestions": {
+      "business_name": "Edgartown Diner",
+      "category": "Restaurant",
+      "address": "Adjust Your Order\n\n65 Main Street \nEdgartown MA 02539",
+      "phone": "(508) 627-9337",
+      "website": "http://edgartowndiner.com/"
+    },
+    "confidence": 70,
+    "action_required": "Extract clean address from website"
+  },
+  {
+    "record_id": 85,
+    "extracted_name": "Edgartownpizza.Com",
+    "domain": "edgartownpizza.com",
+    "source": "vineyard_gazette",
+    "town": "Edgartown",
+    "category": "Restaurant",
+    "suppression_reason": "Address contains invalid data",
+    "suggested_correct_name": "Edgartown Pizza",
+    "suggested_fix_type": "address_correction",
+    "suggestions": {
+      "business_name": "Edgartown Pizza",
+      "category": "Restaurant",
+      "address": "9pm\n\n224 Edgartown Road \nEdgartown MA 02539",
+      "phone": "(508) 627-7770",
+      "website": "http://edgartownpizza.com/"
+    },
+    "confidence": 70,
+    "action_required": "Extract clean address from website"
+  },
+  {
+    "record_id": 119,
+    "extracted_name": "Martha's Vineyard Hotels",
+    "domain": "winnetu.com",
+    "source": "vineyard_gazette",
+    "town": "Edgartown",
+    "category": "Restaurant",
+    "suppression_reason": "Name matches invalid pattern (marketing text)",
+    "suggested_correct_name": "Winnetu",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "Winnetu",
+      "category": "Restaurant",
+      "address": "Facebook\n \n\n\n\nInstagram\n \n\n\n\n\n\n\n\n\nADDRESS31 Dunes Rd, Edgartown, MA 02539",
+      "phone": "(866) 335-1133",
+      "website": "http://winnetu.com/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"Winnetu\""
+  },
+  {
+    "record_id": 123,
+    "extracted_name": "Edgartown, Ma Bars",
+    "domain": "townbarmv.com",
+    "source": "vineyard_gazette",
+    "town": "Edgartown",
+    "category": "Restaurant",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": "Town Bar",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Town Bar",
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": "http://townbarmv.com/"
+    },
+    "confidence": 40,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 162,
+    "extracted_name": "Waterfront Dining",
+    "domain": "lookoutmv.com",
+    "source": "vineyard_gazette",
+    "town": "Oak Bluffs",
+    "category": "Restaurant",
+    "suppression_reason": "Extracted name is a descriptive phrase, not business name",
+    "suggested_correct_name": "Lookout Tavern",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "Lookout Tavern",
+      "category": "Restaurant",
+      "address": "8 Seaview Ave, Oak Bluffs, MA 02557",
+      "phone": "(508) 696-9844",
+      "website": "http://lookoutmv.com/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"Lookout Tavern\""
+  },
+  {
+    "record_id": 200,
+    "extracted_name": "The Best Bakery on Martha's Vineyard!",
+    "domain": "deliciousmv.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Restaurant",
+    "suppression_reason": "Extracted name is a descriptive phrase, not business name",
+    "suggested_correct_name": "Delicious MV",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "Delicious MV",
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": "http://deliciousmv.com/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"Delicious MV\""
+  },
+  {
+    "record_id": 227,
+    "extracted_name": "Menu",
+    "domain": "woodlandvarietyandgrill.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Restaurant",
+    "suppression_reason": "Address contains invalid data",
+    "suggested_correct_name": "Woodlandvarietyandgrill",
+    "suggested_fix_type": "address_correction",
+    "suggestions": {
+      "business_name": "Woodlandvarietyandgrill",
+      "category": "Restaurant",
+      "address": "Grill455 State Rd Unit 4 Vineyard Haven MA 02568",
+      "phone": "(508) 693-6795",
+      "website": "http://woodlandvarietyandgrill.com/"
+    },
+    "confidence": 70,
+    "action_required": "Extract clean address from website"
+  },
+  {
+    "record_id": 249,
+    "extracted_name": "Organic Products in Martha's Vineyard!",
+    "domain": "vineyardgrocer.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Restaurant",
+    "suppression_reason": "Name matches invalid pattern (marketing text)",
+    "suggested_correct_name": "Vineyardgrocer",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "Vineyardgrocer",
+      "category": "Restaurant",
+      "address": "Instagram \n\n\n\n\n\n\nFollow us\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFacebook \n\n\n\n\n\n\nFollow us\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n294 State Rd, Vineyard Haven, MA 02568",
+      "phone": "(508) 693-2000",
+      "website": "http://vineyardgrocer.com/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"Vineyardgrocer\""
+  },
+  {
+    "record_id": 297,
+    "extracted_name": "Artisanal Glass Blowing Studio & Shop",
+    "domain": "mvglassworks.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Restaurant",
+    "suppression_reason": "Name matches invalid pattern (marketing text)",
+    "suggested_correct_name": "MV Glassworks",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "MV Glassworks",
+      "category": "Restaurant",
+      "address": "com683 State Road, West Tisbury, MA 02575",
+      "phone": "(508) 693-6026",
+      "website": "http://mvglassworks.com/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"MV Glassworks\""
+  },
+  {
+    "record_id": 300,
+    "extracted_name": "Home",
+    "domain": "mvmuseum.org",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Restaurant",
+    "suppression_reason": "Address contains invalid data",
+    "suggested_correct_name": "Mvmuseum",
+    "suggested_fix_type": "address_correction",
+    "suggestions": {
+      "business_name": "Mvmuseum",
+      "category": "Restaurant",
+      "address": "SUNDAY\n151 LAGOON POND ROADVINEYARD HAVEN MA 02568",
+      "phone": "(508) 627-4441",
+      "website": "http://mvmuseum.org/"
+    },
+    "confidence": 70,
+    "action_required": "Extract clean address from website"
+  },
+  {
+    "record_id": 310,
+    "extracted_name": "Mvcma.Org",
+    "domain": "mvcma.org",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Restaurant",
+    "suppression_reason": "Address contains invalid data",
+    "suggested_correct_name": "Martha's Vineyard Camp Meeting Association",
+    "suggested_fix_type": "address_correction",
+    "suggestions": {
+      "business_name": "Martha's Vineyard Camp Meeting Association",
+      "category": "Restaurant",
+      "address": "CONTACT USOFFICE HOURSASSOCIATION OFFICE\n80 Trinity Park Oak Bluffs, MA 02557",
+      "phone": "(508) 693-0525",
+      "website": "http://mvcma.org/"
+    },
+    "confidence": 70,
+    "action_required": "Extract clean address from website"
+  },
+  {
+    "record_id": 314,
+    "extracted_name": "Pathwaysarts",
+    "domain": "pathwaysmv.org",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Restaurant",
+    "suppression_reason": "Name looks like concatenated domain",
+    "suggested_correct_name": "Pathways Arts",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "Pathways Arts",
+      "category": "Restaurant",
+      "address": "9 State Road, Chilmark, MA 02535",
+      "phone": "(508) 645-9098",
+      "website": "http://pathwaysmv.org/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"Pathways Arts\""
+  },
+  {
+    "record_id": 328,
+    "extracted_name": "Instagram",
+    "domain": "instagram.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Restaurant",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": "Instagram",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Instagram",
+      "category": "Restaurant",
+      "address": null,
+      "phone": null,
+      "website": "https://instagram.com"
+    },
+    "confidence": 40,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 368,
+    "extracted_name": "Redirecting...",
+    "domain": "vineyardgynecology.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Wellness",
+    "suppression_reason": "Name matches invalid pattern (marketing text)",
+    "suggested_correct_name": "Vineyardgynecology",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "Vineyardgynecology",
+      "category": "Wellness",
+      "address": null,
+      "phone": null,
+      "website": "http://vineyardgynecology.com/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"Vineyardgynecology\""
+  },
+  {
+    "record_id": 377,
+    "extracted_name": "Martha's Vineyard",
+    "domain": "ashleyinn.net",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Inn",
+    "suppression_reason": "Address contains invalid data",
+    "suggested_correct_name": "Ashley Inn",
+    "suggested_fix_type": "address_correction",
+    "suggestions": {
+      "business_name": "Ashley Inn",
+      "category": "Inn",
+      "address": "Edgartown, MA 02539",
+      "phone": "(508) 627-9655",
+      "website": "http://ashleyinn.net/"
+    },
+    "confidence": 70,
+    "action_required": "Extract clean address from website"
+  },
+  {
+    "record_id": 383,
+    "extracted_name": "Private Ocean View 2-3 Bed Beach Studios Inkwell Beach",
+    "domain": "dunmerehouse.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Inn",
+    "suppression_reason": "Extracted name is a descriptive phrase, not business name",
+    "suggested_correct_name": "Dunmere House",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "Dunmere House",
+      "category": "Inn",
+      "address": "7 Pennacook Ave, Vineyard Haven, MA 02557",
+      "phone": "(508) 693-3627",
+      "website": "http://dunmerehouse.com/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"Dunmere House\""
+  },
+  {
+    "record_id": 385,
+    "extracted_name": "Martha's Vineyard Hotel",
+    "domain": "edgarhotelmv.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Hotel",
+    "suppression_reason": "Name matches invalid pattern (marketing text)",
+    "suggested_correct_name": "Edgar Hotel",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "Edgar Hotel",
+      "category": "Hotel",
+      "address": "Edgartown, MA 02539",
+      "phone": "(508) 627-5161",
+      "website": "http://edgarhotelmv.com/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"Edgar Hotel\""
+  },
+  {
+    "record_id": 395,
+    "extracted_name": "Theharborsideinn",
+    "domain": "theharborsideinn.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Inn",
+    "suppression_reason": "Name looks like concatenated domain",
+    "suggested_correct_name": "The Harborside Inn",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "The Harborside Inn",
+      "category": "Inn",
+      "address": "twitter\n \n\n\n\nInstagram\n \n\n\n\n\n\n\n\n\nContact Us \n\n\n\n\t\t\t\t\t\t\t\t\tThe Harborside Inn\n3 South Water Street\nPO Box 67\nEdgartown, MA 02539",
+      "phone": "(508) 627-4321",
+      "website": "http://theharborsideinn.com/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"The Harborside Inn\""
+  },
+  {
+    "record_id": 397,
+    "extracted_name": "Hobknob.Com",
+    "domain": "hobknob.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "Address contains invalid data",
+    "suggested_correct_name": "Hobknob",
+    "suggested_fix_type": "address_correction",
+    "suggestions": {
+      "business_name": "Hobknob",
+      "category": "Other",
+      "address": "2723\n\n\n\n\n\n\n\n\n\n128 Main Street Edgartown, MA 02539",
+      "phone": "(508) 627-9510",
+      "website": "http://hobknob.com/"
+    },
+    "confidence": 70,
+    "action_required": "Extract clean address from website"
+  },
+  {
+    "record_id": 405,
+    "extracted_name": "Lambertscoveinn.Com",
+    "domain": "lambertscoveinn.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Inn",
+    "suppression_reason": "Address contains invalid data",
+    "suggested_correct_name": "Lambertscove Inn",
+    "suggested_fix_type": "address_correction",
+    "suggestions": {
+      "business_name": "Lambertscove Inn",
+      "category": "Inn",
+      "address": "RESORT\n90 Manaquayak Road\nWest Tisbury, MA 02568",
+      "phone": "(508) 422-8051",
+      "website": "http://lambertscoveinn.com/"
+    },
+    "confidence": 70,
+    "action_required": "Extract clean address from website"
+  },
+  {
+    "record_id": 408,
+    "extracted_name": "Campmv.Com",
+    "domain": "campmv.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Camp",
+    "suppression_reason": "Address contains invalid data",
+    "suggested_correct_name": "Camp MV",
+    "suggested_fix_type": "address_correction",
+    "suggestions": {
+      "business_name": "Camp MV",
+      "category": "Camp",
+      "address": "Closing Day October 1\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nClose\n\n\n\n\n\n\n\n\n\n\nContact Us \n\n\n\n569 Edgartown Road\nPO Box 1557\nVineyard Haven, MA 02568",
+      "phone": "(508) 693-3772",
+      "website": "http://campmv.com/"
+    },
+    "confidence": 70,
+    "action_required": "Extract clean address from website"
+  },
+  {
+    "record_id": 427,
+    "extracted_name": "A Glimpse of the Grounds..",
+    "domain": "thecharlotteinn.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Inn",
+    "suppression_reason": "Name matches invalid pattern (marketing text)",
+    "suggested_correct_name": "The Charlotte Inn",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "The Charlotte Inn",
+      "category": "Inn",
+      "address": "com\nInstagram\nFacebook\nLinkedIn\n27 South Summer Street Edgartown, MA 02539",
+      "phone": "(508) 627-4751",
+      "website": "http://thecharlotteinn.com/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"The Charlotte Inn\""
+  },
+  {
+    "record_id": 433,
+    "extracted_name": "Larkhotels",
+    "domain": "larkhotels.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Hotel",
+    "suppression_reason": "Name looks like concatenated domain",
+    "suggested_correct_name": "Lark Hotels",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "Lark Hotels",
+      "category": "Hotel",
+      "address": null,
+      "phone": null,
+      "website": "https://www.larkhotels.com/hotels/the-edgartown-collection"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"Lark Hotels\""
+  },
+  {
+    "record_id": 439,
+    "extracted_name": "Boutique Hotels",
+    "domain": "morganhotelmv.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Hotel",
+    "suppression_reason": "Name matches invalid pattern (marketing text)",
+    "suggested_correct_name": "Morgan Hotel",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "Morgan Hotel",
+      "category": "Hotel",
+      "address": "Massachusetts, 02557",
+      "phone": "(508) 338-2804",
+      "website": "http://morganhotelmv.com/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"Morgan Hotel\""
+  },
+  {
+    "record_id": 453,
+    "extracted_name": "Find Your Island Ride",
+    "domain": "mvautorental.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Vacation Rental",
+    "suppression_reason": "Name matches invalid pattern (marketing text)",
+    "suggested_correct_name": "Mvautorental",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "Mvautorental",
+      "category": "Vacation Rental",
+      "address": "4 Water Street, Vineyard Haven, MA 02568\n\n\nEdgartown\n196 Upper Main Street, Edgartown, MA 02539\n\n\n\n\n\n\nAirport Pickup Service\n71 Airport Rd,West Tisbury, MA 02575",
+      "phone": "(508) 696-5300",
+      "website": "http://mvautorental.com/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"Mvautorental\""
+  },
+  {
+    "record_id": 459,
+    "extracted_name": "Altheadesigns",
+    "domain": "altheadesigns.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "Name ends with .com (URL used as name)",
+    "suggested_correct_name": "Altheadesigns",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "Altheadesigns",
+      "category": "Other",
+      "address": null,
+      "phone": null,
+      "website": "http://altheadesigns.com/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"Altheadesigns\""
+  },
+  {
+    "record_id": 461,
+    "extracted_name": "Basicsandeastaway.company",
+    "domain": "basicsandeastaway.company.site",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "Requires manual review",
+    "suggested_correct_name": "Basicsandeastaway.company.site",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Basicsandeastaway.company.site",
+      "category": "Other",
+      "address": null,
+      "phone": null,
+      "website": "http://basicsandeastaway.company.site/"
+    },
+    "confidence": 40,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 463,
+    "extracted_name": "Bellezzamvsalon",
+    "domain": "bellezzamvsalon.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "Name ends with .com (URL used as name)",
+    "suggested_correct_name": "Bellezzamvsalon",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "Bellezzamvsalon",
+      "category": "Other",
+      "address": null,
+      "phone": null,
+      "website": "http://bellezzamvsalon.com/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"Bellezzamvsalon\""
+  },
+  {
+    "record_id": 466,
+    "extracted_name": "Binks Auto.business",
+    "domain": "binks-auto.business.site",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Auto",
+    "suppression_reason": "Requires manual review",
+    "suggested_correct_name": "Binks-auto.business.site",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Binks-auto.business.site",
+      "category": "Auto",
+      "address": null,
+      "phone": null,
+      "website": "http://binks-auto.business.site/"
+    },
+    "confidence": 40,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 472,
+    "extracted_name": "Brunos",
+    "domain": "brunosmv.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": "Brunos",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Brunos",
+      "category": "Other",
+      "address": null,
+      "phone": null,
+      "website": "http://brunosmv.com/"
+    },
+    "confidence": 40,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 483,
+    "extracted_name": "Chickenalley",
+    "domain": "chickenalley.org",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": "Chickenalley",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Chickenalley",
+      "category": "Other",
+      "address": null,
+      "phone": null,
+      "website": "http://chickenalley.org/"
+    },
+    "confidence": 40,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 507,
+    "extracted_name": "Eastchopsleepshop.Com",
+    "domain": "eastchopsleepshop.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Retail",
+    "suppression_reason": "Address contains invalid data",
+    "suggested_correct_name": "Eastchopsleep Shop",
+    "suggested_fix_type": "address_correction",
+    "suggestions": {
+      "business_name": "Eastchopsleep Shop",
+      "category": "Retail",
+      "address": "Click Image Above To Learn More\n\n\n\n\n\n\n\n\n\n\nAddress \nEast Chop Sleep Shop 395 State Road Vineyard Haven, MA 02568",
+      "phone": "(508) 693-5911",
+      "website": "http://eastchopsleepshop.com/"
+    },
+    "confidence": 70,
+    "action_required": "Extract clean address from website"
+  },
+  {
+    "record_id": 536,
+    "extracted_name": "Islandmusic",
+    "domain": "islandmusicmv.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": "Islandmusic",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Islandmusic",
+      "category": "Other",
+      "address": null,
+      "phone": null,
+      "website": "http://islandmusicmv.com/"
+    },
+    "confidence": 40,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 544,
+    "extracted_name": "Welcome",
+    "domain": "kingsbarbershopmv.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Bar",
+    "suppression_reason": "Address contains invalid data",
+    "suggested_correct_name": "Kingsbarber Shop",
+    "suggested_fix_type": "address_correction",
+    "suggestions": {
+      "business_name": "Kingsbarber Shop",
+      "category": "Bar",
+      "address": "395 State Road, Tisbury, MA 02568",
+      "phone": "(508) 687-9209",
+      "website": "http://kingsbarbershopmv.com/"
+    },
+    "confidence": 70,
+    "action_required": "Extract clean address from website"
+  },
+  {
+    "record_id": 551,
+    "extracted_name": "Entering Leisure Time",
+    "domain": "lazyfrogmv.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Retail",
+    "suppression_reason": "Extracted name is a descriptive phrase, not business name",
+    "suggested_correct_name": "Lazy Frog",
+    "suggested_fix_type": "name_correction",
+    "suggestions": {
+      "business_name": "Lazy Frog",
+      "category": "Retail",
+      "address": "42 Circuit Ave, Oak Bluffs, MA 02557",
+      "phone": "(508) 696-4679",
+      "website": "http://lazyfrogmv.com/"
+    },
+    "confidence": 70,
+    "action_required": "Verify and apply suggested name: \"Lazy Frog\""
+  },
+  {
+    "record_id": 567,
+    "extracted_name": "Mvshipyard.Com",
+    "domain": "mvshipyard.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "Address contains invalid data",
+    "suggested_correct_name": "Mvshipyard",
+    "suggested_fix_type": "address_correction",
+    "suggestions": {
+      "business_name": "Mvshipyard",
+      "category": "Other",
+      "address": "Box 1119\nVineyard Haven, MA 02568\n\n \n\nShipping Address 164 Beach Road\nVineyard Haven, MA 02568",
+      "phone": "(508) 693-0400",
+      "website": "http://mvshipyard.com/"
+    },
+    "confidence": 70,
+    "action_required": "Extract clean address from website"
+  },
+  {
+    "record_id": 571,
+    "extracted_name": "Mvcenter4Living.Org",
+    "domain": "mvcenter4living.org",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "Address contains invalid data",
+    "suggested_correct_name": "Mvcenter4living",
+    "suggested_fix_type": "address_correction",
+    "suggestions": {
+      "business_name": "Mvcenter4living",
+      "category": "Other",
+      "address": "00AM\n\n\n\n \nNomans to Jaws Bridge\n\n\n\n\n\n\nRegister HEre \n\n\n\n\n\n\n\n\n\nThank You to Our Sponsors \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nGet in Touch \n\n\n\n\n\n\n \n\n\n\nAddress\n29 Breakdown Lane, PO Box 1729Vineyard Haven, MA 02568",
+      "phone": "(508) 939-9440",
+      "website": "http://mvcenter4living.org/"
+    },
+    "confidence": 70,
+    "action_required": "Extract clean address from website"
+  },
+  {
+    "record_id": 577,
+    "extracted_name": "Menemshablues",
+    "domain": "menemshablues.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": "Menemshablues",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Menemshablues",
+      "category": "Other",
+      "address": null,
+      "phone": null,
+      "website": "http://menemshablues.com/"
+    },
+    "confidence": 40,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 591,
+    "extracted_name": "Phillips Hardware Closed",
+    "domain": "phillipshardwaremv.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": "Phillipshardware",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Phillipshardware",
+      "category": "Other",
+      "address": null,
+      "phone": null,
+      "website": "http://phillipshardwaremv.com/"
+    },
+    "confidence": 40,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 593,
+    "extracted_name": "Marthasvineyardescaperoom",
+    "domain": "marthasvineyardescaperoom.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "Requires manual review",
+    "suggested_correct_name": "Marthasvineyardescaperoom",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Marthasvineyardescaperoom",
+      "category": "Other",
+      "address": null,
+      "phone": null,
+      "website": "https://www.marthasvineyardescaperoom.com/escape-room-pirates-puzzle"
+    },
+    "confidence": 40,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 618,
+    "extracted_name": "Slip 77",
+    "domain": "slip77.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "Requires manual review",
+    "suggested_correct_name": "Slip77",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Slip77",
+      "category": "Other",
+      "address": null,
+      "phone": null,
+      "website": "http://slip77.com/"
+    },
+    "confidence": 40,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 623,
+    "extracted_name": "Sole",
+    "domain": "solemv.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "Requires manual review",
+    "suggested_correct_name": "Sole",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Sole",
+      "category": "Other",
+      "address": null,
+      "phone": null,
+      "website": "http://solemv.com/"
+    },
+    "confidence": 40,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 640,
+    "extracted_name": "V2",
+    "domain": "greenroommv.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Retail",
+    "suppression_reason": "Address contains invalid data",
+    "suggested_correct_name": "Greenroom",
+    "suggested_fix_type": "address_correction",
+    "suggestions": {
+      "business_name": "Greenroom",
+      "category": "Retail",
+      "address": "The Green Room\n71 Main Street\nVineyard Haven, MA 02568",
+      "phone": "(508) 693-6888",
+      "website": "http://greenroommv.com/"
+    },
+    "confidence": 70,
+    "action_required": "Extract clean address from website"
+  },
+  {
+    "record_id": 646,
+    "extracted_name": "Tisburyma.Gov/Council-Aging",
+    "domain": "tisburyma.gov",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "Requires manual review",
+    "suggested_correct_name": "Tisburyma.gov",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Tisburyma.gov",
+      "category": "Other",
+      "address": null,
+      "phone": null,
+      "website": "http://tisburyma.gov/council-aging"
+    },
+    "confidence": 40,
+    "action_required": "Manually review record and determine appropriate action"
+  },
+  {
+    "record_id": 663,
+    "extracted_name": "Wheelhappybicycles",
+    "domain": "wheelhappybicycles.com",
+    "source": "vineyard_gazette",
+    "town": "Vineyard Haven",
+    "category": "Other",
+    "suppression_reason": "unknown",
+    "suggested_correct_name": "Wheelhappybicycles",
+    "suggested_fix_type": "manual_review_required",
+    "suggestions": {
+      "business_name": "Wheelhappybicycles",
+      "category": "Other",
+      "address": null,
+      "phone": null,
+      "website": "http://wheelhappybicycles.com/"
+    },
+    "confidence": 40,
+    "action_required": "Manually review record and determine appropriate action"
+  }
+]

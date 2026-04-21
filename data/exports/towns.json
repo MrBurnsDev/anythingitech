@@ -4,26 +4,29 @@
     "name": "Vineyard Haven",
     "region": "down-island",
     "description": "The commercial heart of Martha's Vineyard, home to the ferry terminal and a vibrant Main Street with local shops, restaurants, and services.",
-    "businessCount": 234,
+    "businessCount": 210,
     "businessTypes": {
-      "restaurants": 78,
-      "lodging": 29,
-      "shopping": 30,
-      "health-wellness": 24,
-      "contractors": 6,
-      "bars-nightlife": 2,
-      "professional-services": 2,
-      "community": 1
+      "restaurants": 70,
+      "lodging": 27,
+      "shopping": 28,
+      "health-wellness": 23,
+      "contractors": 5,
+      "bars-nightlife": 1,
+      "professional-services": 3,
+      "community": 2
     },
     "categories": [
       "Accounting",
-      "Auto",
       "Bar",
       "Boutique",
       "Building & Construction",
+      "Camp",
+      "Community",
       "Community & Government",
       "Contractor",
       "Financial",
+      "Gallery",
+      "Health & Wellness",
       "Hotel",
       "House & Garden",
       "Inn",
@@ -35,6 +38,7 @@
       "Professional Services",
       "Restaurant",
       "Retail",
+      "Shopping",
       "Shopping & Retail",
       "Vacation Rental",
       "Wellness"
@@ -45,16 +49,17 @@
     "name": "Edgartown",
     "region": "down-island",
     "description": "Historic whaling captain homes, upscale boutiques, waterfront dining, and professional services define this elegant village.",
-    "businessCount": 41,
+    "businessCount": 39,
     "businessTypes": {
-      "restaurants": 38,
-      "lodging": 1,
+      "restaurants": 35,
+      "lodging": 2,
       "shopping": 1,
       "contractors": 1
     },
     "categories": [
       "Building & Construction",
       "Hotel",
+      "Lodging",
       "Restaurant",
       "Shopping & Retail"
     ]
@@ -64,9 +69,9 @@
     "name": "Oak Bluffs",
     "region": "down-island",
     "description": "Colorful gingerbread cottages, the Flying Horses carousel, and a lively harbor scene with diverse local businesses.",
-    "businessCount": 29,
+    "businessCount": 31,
     "businessTypes": {
-      "restaurants": 27,
+      "restaurants": 29,
       "shopping": 1,
       "contractors": 1
     },
@@ -100,12 +105,10 @@
     "description": "Quiet country roads, Lucy Vincent Beach, farm stands, and the iconic fishing village of Menemsha.",
     "businessCount": 6,
     "businessTypes": {
-      "restaurants": 5,
-      "shopping": 1
+      "restaurants": 6
     },
     "categories": [
-      "Restaurant",
-      "Retail"
+      "Restaurant"
     ]
   },
   {
@@ -113,9 +116,9 @@
     "name": "Aquinnah",
     "region": "up-island",
     "description": "Home to the Gay Head Cliffs, the Wampanoag Tribe, artisan shops, and dramatic ocean views.",
-    "businessCount": 8,
+    "businessCount": 5,
     "businessTypes": {
-      "restaurants": 5,
+      "restaurants": 2,
       "lodging": 1,
       "shopping": 2
     },

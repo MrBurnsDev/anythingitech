@@ -13,7 +13,16 @@
     "export-directory": "node scripts/export-directory-data.js",
     "registry:migrate": "npx tsx scripts/registry/migrate-schema.ts",
     "registry:remediate": "npx tsx scripts/registry/remediate.ts",
-    "registry:remediate:apply": "npx tsx scripts/registry/remediate.ts --apply"
+    "registry:remediate:apply": "npx tsx scripts/registry/remediate.ts --apply",
+    "registry:migrate-phase2": "npx tsx scripts/registry/migrate-phase2.ts",
+    "registry:harden": "npx tsx scripts/registry/phase2-harden.ts",
+    "registry:harden:apply": "npx tsx scripts/registry/phase2-harden.ts --apply",
+    "registry:validate": "npx tsx scripts/registry/phase3-validate.ts",
+    "registry:validate:apply": "npx tsx scripts/registry/phase3-validate.ts --apply",
+    "registry:export": "npm run registry:validate:apply && npm run export-directory",
+    "registry:audit": "npx tsx scripts/registry/audit-sources.ts",
+    "registry:remediation": "npx tsx scripts/registry/phase4-remediation.ts",
+    "registry:remediation:migrate": "npx tsx scripts/registry/phase4-remediation.ts --migrate"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

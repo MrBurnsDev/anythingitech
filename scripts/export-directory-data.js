@@ -119,6 +119,82 @@ function cleanString(str) {
   return str.trim().replace(/^\n+|\n+$/g, '');
 }
 
+// Clean and validate address - remove social media contamination
+function cleanAddress(str) {
+  if (!str) return null;
+
+  // Remove common contamination
+  let cleaned = str
+    .replace(/^(twitter|instagram|facebook|linkedin|youtube)\s*/gi, '')
+    .replace(/\s*(twitter|instagram|facebook|linkedin|youtube)\s*/gi, ' ')
+    .replace(/follow us\s*/gi, '')
+    .replace(/contact us\s*/gi, '')
+    .replace(/^com\s*/i, '')
+    .replace(/\n+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  // Try to extract just the address portion
+  // Look for patterns like "123 Street Name, Town, MA 02XXX"
+  const addressMatch = cleaned.match(/(\d+\s+[A-Za-z\s]+(?:Street|St|Road|Rd|Avenue|Ave|Drive|Dr|Lane|Ln|Way|Place|Pl|Court|Ct|Circle|Cir)?),?\s*([A-Za-z\s]+),?\s*(?:MA|Massachusetts)\s*(\d{5})?/i);
+
+  if (addressMatch) {
+    const street = addressMatch[1].trim();
+    let city = addressMatch[2].trim();
+    const zip = addressMatch[3] || '';
+
+    // Clean city name
+    city = city.replace(/\s+(ma|massachusetts).*$/i, '').trim();
+
+    // Verify it's not contaminated
+    if (!/instagram|facebook|twitter|linkedin|youtube|contact|follow/i.test(city)) {
+      return `${street}, ${city}, MA${zip ? ' ' + zip : ''}`.trim();
+    }
+  }
+
+  // If contaminated and can't extract clean address, return null
+  if (/instagram|facebook|twitter|linkedin|youtube|contact us|follow us/i.test(cleaned)) {
+    return null;
+  }
+
+  return cleaned || null;
+}
+
+// Clean and validate email
+function cleanEmail(str) {
+  if (!str) return null;
+
+  // Extract email from potentially contaminated string
+  const emailMatch = str.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
+  if (emailMatch) {
+    const email = emailMatch[0].toLowerCase();
+    // Validate it's a real email
+    if (/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+      return email;
+    }
+  }
+
+  return null;
+}
+
+// Clean and validate phone
+function cleanPhone(str) {
+  if (!str) return null;
+
+  // Extract digits
+  const digits = str.replace(/\D/g, '');
+
+  // Format as (XXX) XXX-XXXX
+  if (digits.length === 10) {
+    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+  }
+  if (digits.length === 11 && digits.startsWith('1')) {
+    return `(${digits.slice(1, 4)}) ${digits.slice(4, 7)}-${digits.slice(7)}`;
+  }
+
+  return null;
+}
+
 // Check if business name is valid (not a URL)
 function isValidBusinessName(name) {
   if (!name) return false;
@@ -148,7 +224,7 @@ function toBusinessTypeSlug(category) {
 }
 
 // Query active, publishable businesses
-// Uses publish_tier if available, otherwise falls back to confidence_score + name validation
+// Phase 2: Stricter filtering - only Tier A and B are public, respect suppress flag
 const businessesQuery = `
   SELECT
     b.id,
@@ -169,27 +245,31 @@ const businessesQuery = `
     b.longitude,
     b.business_status,
     b.confidence_score,
+    b.completeness_score,
     b.publish_tier,
     b.name_quality,
+    b.map_ready,
     b.facebook_url,
     b.instagram_url,
     b.yelp_url,
     b.tripadvisor_url
   FROM businesses b
   WHERE b.is_duplicate = 0
+    AND COALESCE(b.suppress_from_directory, 0) = 0
     AND b.business_status IN ('active', 'uncertain', 'unknown')
     AND (
-      -- Use publish_tier if set (A, B, C are publishable)
-      (b.publish_tier IS NOT NULL AND b.publish_tier IN ('A', 'B', 'C'))
+      -- Phase 2: Only Tier A and B are publicly visible
+      (b.publish_tier IS NOT NULL AND b.publish_tier IN ('A', 'B'))
       OR
-      -- Fallback: good name quality + reasonable confidence
-      (b.publish_tier IS NULL AND b.name_quality = 'good' AND b.confidence_score >= 30)
+      -- Fallback for records not yet scored by Phase 2
+      (b.publish_tier IS NULL AND b.name_quality IN ('good', 'acceptable') AND b.confidence_score >= 50)
       OR
-      -- Legacy fallback: no tier system columns yet
-      (b.publish_tier IS NULL AND b.name_quality IS NULL AND b.confidence_score >= 0.5)
+      -- Legacy fallback before any tier system
+      (b.publish_tier IS NULL AND b.name_quality IS NULL AND b.confidence_score >= 0.6)
     )
   ORDER BY
-    CASE b.publish_tier WHEN 'A' THEN 1 WHEN 'B' THEN 2 WHEN 'C' THEN 3 ELSE 4 END,
+    CASE b.publish_tier WHEN 'A' THEN 1 WHEN 'B' THEN 2 ELSE 3 END,
+    b.completeness_score DESC,
     b.confidence_score DESC,
     b.business_name
 `;
@@ -215,15 +295,17 @@ const processedBusinesses = rawBusinesses
     description: cleanString(b.short_description),
     town: b.town,
     townSlug: toSlug(b.town),
-    address: cleanString(b.street_address || b.full_address),
-    phone: cleanString(b.phone),
-    email: cleanString(b.email),
+    address: cleanAddress(b.street_address) || cleanAddress(b.full_address),
+    phone: cleanPhone(b.phone),
+    email: cleanEmail(b.email),
     website: cleanString(b.website),
     hours: cleanString(b.hours),
     seasonal: cleanString(b.seasonal_indicator),
-    coordinates: (b.latitude && b.longitude) ? { lat: b.latitude, lng: b.longitude } : null,
+    coordinates: (b.latitude && b.longitude && b.map_ready) ? { lat: b.latitude, lng: b.longitude } : null,
+    mapReady: b.map_ready === 1,
     status: b.business_status,
     confidence: b.confidence_score,
+    completeness: b.completeness_score,
     tier: b.publish_tier || null,
     social: {
       facebook: cleanString(b.facebook_url),

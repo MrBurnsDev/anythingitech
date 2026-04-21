@@ -1,0 +1,2192 @@
+{
+  "timestamp": "2026-04-21T14:23:22.067Z",
+  "mode": "applied",
+  "stats": {
+    "total": 344,
+    "alreadySuppressed": 61,
+    "newlyInvalid": 5,
+    "stillValid": 278,
+    "nameFailures": 0,
+    "nameDomainMismatches": 45,
+    "nameDomainSuppressed": 5,
+    "emailContamination": 6,
+    "addressContamination": 64,
+    "phoneContamination": 0,
+    "fieldsCleaned": 243
+  },
+  "invalidRecords": [
+    {
+      "id": 162,
+      "name": "Waterfront Dining",
+      "website": "http://lookoutmv.com/",
+      "domain": "lookoutmv.com",
+      "reasons": [
+        "entity_mismatch: descriptive_phrase_not_business_name: \"Waterfront Dining\" vs domain \"lookoutmv.com\""
+      ],
+      "nameConfidence": 100,
+      "mismatchScore": 90,
+      "domainName": "lookout"
+    },
+    {
+      "id": 200,
+      "name": "The Best Bakery on Martha's Vineyard!",
+      "website": "http://deliciousmv.com/",
+      "domain": "deliciousmv.com",
+      "reasons": [
+        "entity_mismatch: descriptive_phrase_not_business_name: \"The Best Bakery on Martha's Vineyard!\" vs domain \"deliciousmv.com\""
+      ],
+      "nameConfidence": 100,
+      "mismatchScore": 90,
+      "domainName": "delicious"
+    },
+    {
+      "id": 383,
+      "name": "Private Ocean View 2-3 Bed Beach Studios Inkwell Beach",
+      "website": "http://dunmerehouse.com/",
+      "domain": "dunmerehouse.com",
+      "reasons": [
+        "entity_mismatch: descriptive_phrase_not_business_name: \"Private Ocean View 2-3 Bed Beach Studios Inkwell Beach\" vs domain \"dunmerehouse.com\""
+      ],
+      "nameConfidence": 100,
+      "mismatchScore": 90,
+      "domainName": "dunmere house"
+    },
+    {
+      "id": 551,
+      "name": "Entering Leisure Time",
+      "website": "http://lazyfrogmv.com/",
+      "domain": "lazyfrogmv.com",
+      "reasons": [
+        "entity_mismatch: descriptive_phrase_not_business_name: \"Entering Leisure Time\" vs domain \"lazyfrogmv.com\""
+      ],
+      "nameConfidence": 100,
+      "mismatchScore": 90,
+      "domainName": "lazyfrog"
+    },
+    {
+      "id": 669,
+      "name": "Luxury Clothing Designer Store in Marth Vineyard & Edgartown",
+      "website": "http://thegreatputonmv.com/",
+      "domain": "thegreatputonmv.com",
+      "reasons": [
+        "entity_mismatch: descriptive_phrase_not_business_name: \"Luxury Clothing Designer Store in Marth Vineyard & Edgartown\" vs domain \"thegreatputonmv.com\""
+      ],
+      "nameConfidence": 100,
+      "mismatchScore": 90,
+      "domainName": "greatputon"
+    }
+  ],
+  "cleanedRecords": [
+    {
+      "id": 1,
+      "name": "The Black Dog Tavern Company",
+      "cleanedFields": {
+        "email": "customerservice@theblackdog.com",
+        "phone": "(508) 693-9223",
+        "street_address": "21 Beach Street Extension",
+        "full_address": "21 Beach Street Extension, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Harbor View Hotel",
+      "cleanedFields": {
+        "phone": "(508) 627-7000",
+        "street_address": "131 North Water Street",
+        "full_address": "131 North Water Street, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 5,
+      "name": "The Mansion House",
+      "cleanedFields": {
+        "phone": "(508) 693-2200",
+        "street_address": "9 Main Street",
+        "full_address": "9 Main Street, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Bunch of Grapes Bookstore",
+      "cleanedFields": {
+        "email": "molly4books@gmail.com",
+        "phone": "(508) 693-2291",
+        "street_address": "23 Main Street",
+        "full_address": "23 Main Street, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Granary Gallery",
+      "cleanedFields": {
+        "email": "info@granarygallery.com",
+        "phone": "(508) 693-0455",
+        "street_address": "636 Old County Road",
+        "full_address": "636 Old County Road, West Tisbury, MA 02575"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Aquinnah Shop",
+      "cleanedFields": {
+        "phone": "(508) 645-3867",
+        "street_address": "27 Aquinnah Circle",
+        "full_address": "27 Aquinnah Circle, Aquinnah, MA 02535"
+      }
+    },
+    {
+      "id": 36,
+      "name": "Orange Peel Bakery",
+      "cleanedFields": {
+        "email": "julivanderhoop@gmail.com",
+        "phone": "(508) 645-2025",
+        "street_address": "22 State Rd",
+        "full_address": "22 State Rd, Aquinnah, MA"
+      }
+    },
+    {
+      "id": 38,
+      "name": "Outermost Inn",
+      "cleanedFields": {
+        "email": "info@outermostinn.com",
+        "phone": "(508) 645-3511"
+      }
+    },
+    {
+      "id": 41,
+      "name": "Chilmark General Store",
+      "cleanedFields": {
+        "email": "info@chilmarkgeneralstore.com",
+        "street_address": "7 State Road",
+        "full_address": "7 State Road, Chilmark, MA 02535"
+      }
+    },
+    {
+      "id": 47,
+      "name": "The Homeport",
+      "cleanedFields": {
+        "phone": "(508) 645-2679",
+        "street_address": "512 N Rd",
+        "full_address": "512 N Rd, Menemsha, MA 02535"
+      }
+    },
+    {
+      "id": 49,
+      "name": "19 Prime Steak House",
+      "cleanedFields": {
+        "phone": "(774) 224-0550",
+        "street_address": "19 Church St",
+        "full_address": "19 Church St, Edgartown, MA"
+      }
+    },
+    {
+      "id": 54,
+      "name": "Among the Flowers",
+      "cleanedFields": {
+        "phone": "(508) 627-3233"
+      }
+    },
+    {
+      "id": 56,
+      "name": "Martha's Vineyard Seafood & Steak Restaurant",
+      "cleanedFields": {
+        "phone": "(508) 627-7001",
+        "street_address": "2 Main StREET",
+        "full_address": "2 Main StREET, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 60,
+      "name": "Bad Martha Beer",
+      "cleanedFields": {
+        "phone": "(508) 939-4415",
+        "street_address": "270 Upper Main St",
+        "full_address": "270 Upper Main St, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 66,
+      "name": "Prepared Food",
+      "cleanedFields": {
+        "email": "info@blacksheeponmv.com",
+        "phone": "(508) 338-7770",
+        "street_address": "17 Airport Road",
+        "full_address": "17 Airport Road, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 68,
+      "name": "Blackbird Cafe",
+      "cleanedFields": {
+        "email": "filler@godaddy.comordersmy",
+        "phone": "(978) 272-1175",
+        "street_address": "19 North Water Street",
+        "full_address": "19 North Water Street, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 70,
+      "name": "Chesca",
+      "cleanedFields": {
+        "phone": "(508) 627-1234",
+        "street_address": "38 N Water St",
+        "full_address": "38 N Water St, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 72,
+      "name": "China House｜online Order｜edgartown｜wa",
+      "cleanedFields": {
+        "phone": "(508) 627-7272"
+      }
+    },
+    {
+      "id": 74,
+      "name": "Cozy Corner Cafe",
+      "cleanedFields": {
+        "email": "cozycornermv@gmail.com",
+        "phone": "(508) 939-3988"
+      }
+    },
+    {
+      "id": 83,
+      "name": "Edgartown Meatandfish",
+      "cleanedFields": {
+        "phone": "(508) 627-6200"
+      }
+    },
+    {
+      "id": 89,
+      "name": "Great Harbor Market",
+      "cleanedFields": {
+        "phone": "(508) 694-6888",
+        "street_address": "199 Upper Main St",
+        "full_address": "199 Upper Main St, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 91,
+      "name": "Kgs 2",
+      "cleanedFields": {
+        "email": "hello@katamageneral.com",
+        "phone": "(508) 627-5071",
+        "street_address": "170 Katama Rd",
+        "full_address": "170 Katama Rd, Edgartown, MA"
+      }
+    },
+    {
+      "id": 93,
+      "name": "Katama Kitchen",
+      "cleanedFields": {
+        "email": "filler@godaddy.comordersmy",
+        "phone": "(774) 549-5345",
+        "street_address": "12 Mattakesett Way",
+        "full_address": "12 Mattakesett Way, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 95,
+      "name": "L'etoile",
+      "cleanedFields": {
+        "email": "inquiriesletoile411@gmail.comemployment",
+        "phone": "(508) 627-5187",
+        "street_address": "22 North water Street",
+        "full_address": "22 North water Street, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 97,
+      "name": "Lucky Hank's",
+      "cleanedFields": {
+        "phone": "(508) 939-4082",
+        "street_address": "218 Upper Main St",
+        "full_address": "218 Upper Main St, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 100,
+      "name": "Morning Glory Farm",
+      "cleanedFields": {
+        "email": "hello@morninggloryfarm.com",
+        "phone": "(508) 627-9003"
+      }
+    },
+    {
+      "id": 105,
+      "name": "Rockfishedgartown",
+      "cleanedFields": {
+        "phone": "(508) 627-9967"
+      }
+    },
+    {
+      "id": 107,
+      "name": "Rosewater",
+      "cleanedFields": {
+        "phone": "(508) 627-1270",
+        "street_address": "127020 South Summer St",
+        "full_address": "127020 South Summer St, Edgartown, MA"
+      }
+    },
+    {
+      "id": 109,
+      "name": "Theseafoodshanty",
+      "cleanedFields": {
+        "email": "theseafoodshanty@gmail.com",
+        "phone": "(508) 627-8622"
+      }
+    },
+    {
+      "id": 112,
+      "name": "Soigne",
+      "cleanedFields": {
+        "email": "soignemv@gmail.com",
+        "phone": "(508) 627-8489",
+        "street_address": "190 Upper Main St",
+        "full_address": "190 Upper Main St, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 117,
+      "name": "The Covington Restaurant and Bar",
+      "cleanedFields": {
+        "email": "thecovingtonrestaurant@gmail.com",
+        "phone": "(508) 627-7678",
+        "street_address": "52 Main Street",
+        "full_address": "52 Main Street, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 125,
+      "name": "The Wharf Pub Edgartown",
+      "cleanedFields": {
+        "email": "info@wharfpubmv.com",
+        "phone": "(508) 627-9966",
+        "street_address": "3 Main Street",
+        "full_address": "3 Main Street, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 127,
+      "name": "Wolf's Den Pizzeria",
+      "cleanedFields": {
+        "phone": "(508) 684-2203",
+        "street_address": "249 Vineyard Haven Rd",
+        "full_address": "249 Vineyard Haven Rd, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 131,
+      "name": "Back Door Donuts",
+      "cleanedFields": {
+        "email": "accounts@backdoordonuts.com",
+        "phone": "(508) 693-3688"
+      }
+    },
+    {
+      "id": 133,
+      "name": "Bangkok Cuisine",
+      "cleanedFields": {
+        "phone": "(508) 771-1338"
+      }
+    },
+    {
+      "id": 135,
+      "name": "Benandbills",
+      "cleanedFields": {
+        "email": "chocolate@benandbillsmv.com",
+        "phone": "(508) 696-0008"
+      }
+    },
+    {
+      "id": 143,
+      "name": "Dos Mas MV",
+      "cleanedFields": {
+        "phone": "(508) 687-9271",
+        "street_address": "50 Circuit Ave",
+        "full_address": "50 Circuit Ave, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 145,
+      "name": "Eleven Circuit",
+      "cleanedFields": {
+        "email": "elevencircuitmv@gmail.com",
+        "phone": "(508) 687-9283"
+      }
+    },
+    {
+      "id": 148,
+      "name": "Farmneck.net/cafe",
+      "cleanedFields": {
+        "phone": "(508) 693-3560"
+      }
+    },
+    {
+      "id": 152,
+      "name": "Fishbones Bar & Grille",
+      "cleanedFields": {
+        "phone": "(508) 696-8227",
+        "street_address": "12 Circuit Avenue Extension",
+        "full_address": "12 Circuit Avenue Extension, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 154,
+      "name": "Giordano's Restaurant, INC",
+      "cleanedFields": {
+        "email": "giosmv@gmail.com",
+        "phone": "(508) 693-0184"
+      }
+    },
+    {
+      "id": 156,
+      "name": "Igimv.org/about-island-food-pantry",
+      "cleanedFields": {
+        "email": "office@igimv.org",
+        "phone": "(508) 296-8384",
+        "street_address": "114 Dukes County Ave",
+        "full_address": "114 Dukes County Ave, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 158,
+      "name": "Jimmy Seas Loon Mountain",
+      "cleanedFields": {
+        "phone": "(508) 687-9804"
+      }
+    },
+    {
+      "id": 164,
+      "name": "MV Chowder Co",
+      "cleanedFields": {
+        "phone": "(508) 696-3000"
+      }
+    },
+    {
+      "id": 168,
+      "name": "Offshore Ale Company",
+      "cleanedFields": {
+        "phone": "(508) 693-2626",
+        "street_address": "30 Kennebec Avenue",
+        "full_address": "30 Kennebec Avenue, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 172,
+      "name": "Sharky's Oak Bluffs",
+      "cleanedFields": {
+        "phone": "(508) 693-7501",
+        "street_address": "31 Circuit Ave",
+        "full_address": "31 Circuit Ave, Oak Bluffs, MA"
+      }
+    },
+    {
+      "id": 174,
+      "name": "The Barn Bowl & Bistro",
+      "cleanedFields": {
+        "email": "info@thebarnmv.com",
+        "phone": "(508) 696-9800",
+        "street_address": "13 Uncas Avenue",
+        "full_address": "13 Uncas Avenue, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 177,
+      "name": "The Ritz Cafe",
+      "cleanedFields": {
+        "phone": "(508) 296-8159",
+        "street_address": "4 Circuit Ave",
+        "full_address": "4 Circuit Ave, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 179,
+      "name": "The Sweet Life MV",
+      "cleanedFields": {
+        "email": "erin@sweetlifemv.com",
+        "phone": "(508) 696-0200"
+      }
+    },
+    {
+      "id": 181,
+      "name": "Tony's Market",
+      "cleanedFields": {
+        "email": "tonys.market@comcast.net",
+        "phone": "(508) 693-4799",
+        "street_address": "119 Dukes County Avenue",
+        "full_address": "119 Dukes County Avenue, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 183,
+      "name": "Winston",
+      "cleanedFields": {
+        "email": "winstonskitchen20@yahoo.com",
+        "phone": "(508) 687-9572",
+        "street_address": "1 East Chop Drive",
+        "full_address": "1 East Chop Drive, Oak Bluffs, MA 02568"
+      }
+    },
+    {
+      "id": 185,
+      "name": "7a Foods Martha's Vineyard",
+      "cleanedFields": {
+        "email": "7afoods@gmail.com",
+        "phone": "(508) 693-4636",
+        "street_address": "1045 State Road West",
+        "full_address": "1045 State Road West, Tisbury, MA 02575"
+      }
+    },
+    {
+      "id": 187,
+      "name": "State Road Restaurant",
+      "cleanedFields": {
+        "email": "info@stateroadmv.com",
+        "phone": "(508) 693-8582"
+      }
+    },
+    {
+      "id": 189,
+      "name": "Vineyard Take Out",
+      "cleanedFields": {
+        "phone": "(508) 693-6924",
+        "street_address": "479 State Rd",
+        "full_address": "479 State Rd, West Tisbury, MA 02575"
+      }
+    },
+    {
+      "id": 191,
+      "name": "Artcliff Diner",
+      "cleanedFields": {
+        "phone": "(508) 693-1224"
+      }
+    },
+    {
+      "id": 196,
+      "name": "Bobbybs",
+      "cleanedFields": {
+        "phone": "(508) 693-8266"
+      }
+    },
+    {
+      "id": 198,
+      "name": "Catboat Coffee Co.",
+      "cleanedFields": {
+        "email": "hello@catboatcoffee.com",
+        "phone": "(774) 563-5296",
+        "street_address": "79 Beach Road",
+        "full_address": "79 Beach Road, Vineyard Haven, MA"
+      }
+    },
+    {
+      "id": 202,
+      "name": "Island Fresh Pizza",
+      "cleanedFields": {
+        "email": "islandfreshpizzasubs@gmail.com",
+        "phone": "(508) 338-2764",
+        "street_address": "395 State Rd",
+        "full_address": "395 State Rd, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 208,
+      "name": "About Motts",
+      "cleanedFields": {
+        "email": "mochamotts@gmail.com",
+        "phone": "(508) 693-3155"
+      }
+    },
+    {
+      "id": 210,
+      "name": "Nook",
+      "cleanedFields": {
+        "phone": "(508) 338-2340",
+        "street_address": "238 Main St",
+        "full_address": "238 Main St, Vineyard Haven, MA"
+      }
+    },
+    {
+      "id": 213,
+      "name": "Porto Pizza Martha's Vineyard",
+      "cleanedFields": {
+        "phone": "(508) 693-6200",
+        "street_address": "36 Water St",
+        "full_address": "36 Water St, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 215,
+      "name": "Rocco's Pizza Menu",
+      "cleanedFields": {
+        "phone": "(508) 693-1125"
+      }
+    },
+    {
+      "id": 217,
+      "name": "Authentic Italian Food",
+      "cleanedFields": {
+        "phone": "(508) 687-9457",
+        "street_address": "20 Union Street",
+        "full_address": "20 Union Street, Vineyard Haven, MA"
+      }
+    },
+    {
+      "id": 219,
+      "name": "Scottish Bakehouse",
+      "cleanedFields": {
+        "email": "info@scottishbakehousemv.com"
+      }
+    },
+    {
+      "id": 221,
+      "name": "Sweet Bites",
+      "cleanedFields": {
+        "email": "info@sweetbitesmv.com",
+        "phone": "(598) 684-8257",
+        "street_address": "32 Beach Street",
+        "full_address": "32 Beach Street, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 225,
+      "name": "Waterside Market",
+      "cleanedFields": {
+        "email": "justonebiterestaurants@gmail.com",
+        "phone": "(508) 693-8899",
+        "street_address": "82 Main Street",
+        "full_address": "82 Main Street, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 229,
+      "name": "Allen Farm Sheep & Wool Company",
+      "cleanedFields": {
+        "email": "allenfarmmv@gmail.com",
+        "phone": "(508) 645-9064",
+        "street_address": "421 S Rd",
+        "full_address": "421 S Rd, Chilmark, MA 02535"
+      }
+    },
+    {
+      "id": 231,
+      "name": "Native Earth Teaching Farm",
+      "cleanedFields": {
+        "phone": "(302) 208-9250"
+      }
+    },
+    {
+      "id": 233,
+      "name": "North Tabor Farm",
+      "cleanedFields": {
+        "email": "northtaborfarmmv@gmail.com",
+        "phone": "(508) 645-3311",
+        "street_address": "4 North Tabor Farm Road",
+        "full_address": "4 North Tabor Farm Road, Chilmark, MA 02535"
+      }
+    },
+    {
+      "id": 239,
+      "name": "Cronigs Market",
+      "cleanedFields": {
+        "email": "schristopher@cronigsmarket.com",
+        "phone": "(508) 693-4457",
+        "street_address": "357 State Road",
+        "full_address": "357 State Road, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 244,
+      "name": "The Reliable Market",
+      "cleanedFields": {
+        "phone": "(508) 693-1102"
+      }
+    },
+    {
+      "id": 251,
+      "name": "Edgartown Seafood Fish Market",
+      "cleanedFields": {
+        "email": "info@edgartownseafood.com",
+        "phone": "(508) 627-3791",
+        "street_address": "138 Cooke Street",
+        "full_address": "138 Cooke Street, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 253,
+      "name": "Larsen",
+      "cleanedFields": {
+        "email": "info@larsensfishmarket.com",
+        "phone": "(508) 645-2680"
+      }
+    },
+    {
+      "id": 255,
+      "name": "Menemsha Fish Market",
+      "cleanedFields": {
+        "email": "menemshafishmarket@yahoo.com",
+        "phone": "(508) 645-2282"
+      }
+    },
+    {
+      "id": 257,
+      "name": "The Net Result",
+      "cleanedFields": {
+        "email": "mvseafood@vineyard.net",
+        "phone": "(508) 693-6071",
+        "street_address": "79 Beach Rd",
+        "full_address": "79 Beach Rd, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 260,
+      "name": "Jim's Package Store",
+      "cleanedFields": {
+        "phone": "(508) 693-0236"
+      }
+    },
+    {
+      "id": 262,
+      "name": "Mvwine Store",
+      "cleanedFields": {
+        "phone": "(508) 627-7557"
+      }
+    },
+    {
+      "id": 266,
+      "name": "Vintage MV Wine & Spirits",
+      "cleanedFields": {
+        "phone": "(774) 549-9287",
+        "street_address": "29 Winter Street",
+        "full_address": "29 Winter Street, Nevin SqaureEdgartown, MA 02539"
+      }
+    },
+    {
+      "id": 270,
+      "name": "Conroy Apothecary",
+      "cleanedFields": {
+        "email": "emailconroyapothecary@yahoo.comconnect",
+        "phone": "(508) 693-7070",
+        "street_address": "459 State Road West",
+        "full_address": "459 State Road West, Tisbury, MA"
+      }
+    },
+    {
+      "id": 276,
+      "name": "51art Gallery Located at the Shoppe With the Red Door",
+      "cleanedFields": {
+        "street_address": "4 Union Street",
+        "full_address": "4 Union Street, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 278,
+      "name": "Sue",
+      "cleanedFields": {
+        "email": "claire@alisonshaw.com",
+        "phone": "(508) 693-4429"
+      }
+    },
+    {
+      "id": 284,
+      "name": "Edgartown Firemen's Association",
+      "cleanedFields": {
+        "email": "information@edgartownfiremensassociation.org",
+        "phone": "(508) 627-5167"
+      }
+    },
+    {
+      "id": 288,
+      "name": "Featherstone Center for the Arts",
+      "cleanedFields": {
+        "phone": "(508) 693-1850"
+      }
+    },
+    {
+      "id": 290,
+      "name": "Field Gallery",
+      "cleanedFields": {
+        "email": "info@fieldgallery.com",
+        "phone": "(508) 693-5595",
+        "street_address": "1050 State Road                West",
+        "full_address": "1050 State Road                West, Tisbury, MA 02575"
+      }
+    },
+    {
+      "id": 293,
+      "name": "Island Folk Pottery",
+      "cleanedFields": {
+        "email": "heathergoffpottery@gmail.com",
+        "phone": "(508) 955-9944"
+      }
+    },
+    {
+      "id": 304,
+      "name": "Merry Farm Pottery",
+      "cleanedFields": {
+        "email": "micahthanhauser@gmail.com",
+        "phone": "(774) 836-4349"
+      }
+    },
+    {
+      "id": 306,
+      "name": "Michaeljimage",
+      "cleanedFields": {
+        "email": "mj@michaeljimage.com",
+        "phone": "(415) 238-7572"
+      }
+    },
+    {
+      "id": 308,
+      "name": "Moore Family Gallery",
+      "cleanedFields": {
+        "phone": "(508) 693-8548"
+      }
+    },
+    {
+      "id": 312,
+      "name": "North Water Gallery",
+      "cleanedFields": {
+        "email": "info@northwatergallery.com",
+        "phone": "(508) 627-6002",
+        "street_address": "1050 State Road                West",
+        "full_address": "1050 State Road                West, Tisbury, MA 02575"
+      }
+    },
+    {
+      "id": 316,
+      "name": "Seastone Papers",
+      "cleanedFields": {
+        "email": "sandy@seastonepapers.com",
+        "phone": "(508) 693-5786"
+      }
+    },
+    {
+      "id": 318,
+      "name": "Strand Theatre MV",
+      "cleanedFields": {
+        "email": "info@strandtheatremv.com",
+        "phone": "(312) 576-4890",
+        "street_address": "11 Oak Bluffs Ave",
+        "full_address": "11 Oak Bluffs Ave, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 320,
+      "name": "Vineyard Preservation Trust",
+      "cleanedFields": {
+        "email": "nevette@mvpreservation.org",
+        "phone": "(774) 549-9107"
+      }
+    },
+    {
+      "id": 322,
+      "name": "The Christina Gallery",
+      "cleanedFields": {
+        "phone": "(508) 627-8794",
+        "street_address": "5 Winter Street",
+        "full_address": "5 Winter Street, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 324,
+      "name": "Peter Simon Photography",
+      "cleanedFields": {
+        "email": "02535508-325-2242ronnisimondesigns@gmail.com",
+        "street_address": "14 Wisteria Road",
+        "full_address": "14 Wisteria Road, Chilmark, MA 02535"
+      }
+    },
+    {
+      "id": 326,
+      "name": "The Vineyard's Drive",
+      "cleanedFields": {
+        "email": "boxoffice@circuitarts.org",
+        "phone": "(508) 696-6300"
+      }
+    },
+    {
+      "id": 329,
+      "name": "The Yard",
+      "cleanedFields": {
+        "email": "info@dancetheyard.org",
+        "phone": "(508) 645-9662",
+        "street_address": "1 The Yard",
+        "full_address": "1 The Yard, Chilmark, MA"
+      }
+    },
+    {
+      "id": 331,
+      "name": "Tuck & Holand Metal Sculptors",
+      "cleanedFields": {
+        "email": "aeholand@tuckandholand.com",
+        "phone": "(508) 693-3914",
+        "street_address": "275 State Road",
+        "full_address": "275 State Road, Tisbury, MA"
+      }
+    },
+    {
+      "id": 333,
+      "name": "Vineyard Arts Project",
+      "cleanedFields": {
+        "email": "rentalssam@vineyardarts.org",
+        "phone": "(508) 413-2104",
+        "street_address": "215 Upper Main Street",
+        "full_address": "215 Upper Main Street, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 335,
+      "name": "Washington Ledesma",
+      "cleanedFields": {
+        "email": "ajolmv@gmail.com",
+        "phone": "(508) 693-1823",
+        "street_address": "58 Dock Street",
+        "full_address": "58 Dock Street, Edgartown, MA"
+      }
+    },
+    {
+      "id": 337,
+      "name": "Winter Street Gallery",
+      "cleanedFields": {
+        "email": "info@winterstreetgallery.com",
+        "phone": "(401) 602-1702",
+        "street_address": "22 Winter Street",
+        "full_address": "22 Winter Street, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 339,
+      "name": "Edgartown Golf Club Martha's Vineyard",
+      "cleanedFields": {
+        "email": "mhegc1926@verizon.net",
+        "phone": "(508) 627-5343"
+      }
+    },
+    {
+      "id": 340,
+      "name": "Felix Neck Wildlife Sanctuary",
+      "cleanedFields": {
+        "phone": "(508) 627-4850"
+      }
+    },
+    {
+      "id": 342,
+      "name": "Mink Meadows Golf Club",
+      "cleanedFields": {
+        "phone": "(508) 693-0600",
+        "street_address": "320 Golf Club Road",
+        "full_address": "320 Golf Club Road, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 343,
+      "name": "The Polly Hill Arboretum",
+      "cleanedFields": {
+        "phone": "(508) 693-9426",
+        "street_address": "809 State Road West",
+        "full_address": "809 State Road West, Tisbury, MA 02575"
+      }
+    },
+    {
+      "id": 345,
+      "name": "Royal Chappy Golf",
+      "cleanedFields": {
+        "email": "staff@royalchappy.com",
+        "phone": "(508) 939-4055"
+      }
+    },
+    {
+      "id": 346,
+      "name": "Vineyard Golf Club",
+      "cleanedFields": {
+        "phone": "(508) 627-8930"
+      }
+    },
+    {
+      "id": 347,
+      "name": "The Martha's Vineyard Groups of Alcoholics Anonymous",
+      "cleanedFields": {
+        "phone": "(508) 627-7084",
+        "street_address": "45 South Summer Street",
+        "full_address": "45 South Summer Street, Edgartown, MA"
+      }
+    },
+    {
+      "id": 348,
+      "name": "Mvana",
+      "cleanedFields": {
+        "phone": "(866) 686-2669"
+      }
+    },
+    {
+      "id": 349,
+      "name": "Refuge Recovery World Services",
+      "cleanedFields": {
+        "email": "admin@refugerecovery.org",
+        "phone": "(323) 592-9502"
+      }
+    },
+    {
+      "id": 350,
+      "name": "Smart Recovery",
+      "cleanedFields": {
+        "phone": "(440) 951-5357"
+      }
+    },
+    {
+      "id": 351,
+      "name": "Airportfitness",
+      "cleanedFields": {
+        "email": "info@airportfitnessmv.com",
+        "phone": "(508) 696-8000"
+      }
+    },
+    {
+      "id": 353,
+      "name": "B Strong",
+      "cleanedFields": {
+        "phone": "(508) 685-8888",
+        "street_address": "29 Kennebec Ave.",
+        "full_address": "29 Kennebec Ave., Oak Bluffs, MA"
+      }
+    },
+    {
+      "id": 357,
+      "name": "Optometrist in Harvard Square",
+      "cleanedFields": {
+        "email": "office@hseyecare.com",
+        "phone": "(617) 366-1549"
+      }
+    },
+    {
+      "id": 359,
+      "name": "Hot Yoga MV",
+      "cleanedFields": {
+        "email": "hotyogamv@gmail.com",
+        "phone": "(774) 327-1287",
+        "street_address": "497 State Road",
+        "full_address": "497 State Road, West Tisbury, MA"
+      }
+    },
+    {
+      "id": 361,
+      "name": "Allyson Cook Metell, Lmt & Associates",
+      "cleanedFields": {
+        "phone": "(508) 696-1863"
+      }
+    },
+    {
+      "id": 364,
+      "name": "Megan Grennan Yoga",
+      "cleanedFields": {
+        "email": "megangrennanyoga@gmail.com"
+      }
+    },
+    {
+      "id": 365,
+      "name": "Peakedhillstudio",
+      "cleanedFields": {
+        "email": "valerie@peakedhillstudio.com",
+        "phone": "(774) 563-8282"
+      }
+    },
+    {
+      "id": 367,
+      "name": "Vcmpt",
+      "cleanedFields": {
+        "email": "info@vcmpt.com",
+        "phone": "(508) 693-3800"
+      }
+    },
+    {
+      "id": 370,
+      "name": "Vineyard Medical Care",
+      "cleanedFields": {
+        "phone": "(508) 693-4400",
+        "street_address": "364 State Road",
+        "full_address": "364 State Road, Vineyard Haven, MA"
+      }
+    },
+    {
+      "id": 374,
+      "name": "Ymca of Martha's Vineyard",
+      "cleanedFields": {
+        "phone": "(508) 696-7171"
+      }
+    },
+    {
+      "id": 375,
+      "name": "Marthas Vineyard Yoga Barn",
+      "cleanedFields": {
+        "email": "helpdesk@mvyogabarn.com",
+        "street_address": "1 RED BARN ROAD",
+        "full_address": "1 RED BARN ROAD, WEST TISBURY, MA 02575"
+      }
+    },
+    {
+      "id": 376,
+      "name": "Edgartown Martha's Vineyard Hot Yoga Studio/yoga on the Vine",
+      "cleanedFields": {
+        "email": "yogaonthevinemv@gmail.com"
+      }
+    },
+    {
+      "id": 379,
+      "name": "Charles & Charles",
+      "cleanedFields": {
+        "email": "charlesandcharlesmv@icloud.com",
+        "phone": "(508) 338-2351",
+        "street_address": "85 Summer Street",
+        "full_address": "85 Summer Street, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 381,
+      "name": "Dockside Inn",
+      "cleanedFields": {
+        "phone": "(800) 245-5979",
+        "street_address": "9 Circuit Avenue",
+        "full_address": "9 Circuit Avenue, Extension Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 387,
+      "name": "Instagram Icon",
+      "cleanedFields": {
+        "phone": "(508) 627-4671"
+      }
+    },
+    {
+      "id": 390,
+      "name": "Luxury Boutique Hotel Edgartown",
+      "cleanedFields": {
+        "email": "frontdesk@franklinhotelmv.com",
+        "phone": "(508) 379-2100",
+        "street_address": "222 Upper Main Street",
+        "full_address": "222 Upper Main Street, Edgartown, MA"
+      }
+    },
+    {
+      "id": 392,
+      "name": "Greenwood House",
+      "cleanedFields": {
+        "phone": "(508) 693-6150"
+      }
+    },
+    {
+      "id": 401,
+      "name": "Inkwell Beach House",
+      "cleanedFields": {
+        "email": "manager@inkwellhome.com",
+        "phone": "(838) 245-8830",
+        "street_address": "83 Sea View Ave",
+        "full_address": "83 Sea View Ave, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 403,
+      "name": "Kkon",
+      "cleanedFields": {
+        "email": "knrealest@yahoo.com",
+        "phone": "(508) 863-2734",
+        "street_address": "59 Naushon Ave",
+        "full_address": "59 Naushon Ave, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 406,
+      "name": "Madisoninn",
+      "cleanedFields": {
+        "email": "reservations@madisoninnmv.com",
+        "phone": "(508) 693-2760",
+        "street_address": "18 Kennebec Avenue",
+        "full_address": "18 Kennebec Avenue, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 410,
+      "name": "Menemsha Inn & Cottages: Martha's Vineyard Vacation Rentals",
+      "cleanedFields": {
+        "email": "guestservices@innsatmenemsha.com",
+        "phone": "(508) 645-2521",
+        "street_address": "457 North Road",
+        "full_address": "457 North Road, Menemsha, MA 02552"
+      }
+    },
+    {
+      "id": 412,
+      "name": "Narragansett House",
+      "cleanedFields": {
+        "email": "manager@inkwellhaven.com",
+        "phone": "(518) 577-2938",
+        "street_address": "46 Narragansett Ave",
+        "full_address": "46 Narragansett Ave, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 413,
+      "name": "Nobnocket",
+      "cleanedFields": {
+        "email": "lux@nobnocket.com",
+        "phone": "(508) 696-0859"
+      }
+    },
+    {
+      "id": 415,
+      "name": "Martha’s Vineyard Hotels",
+      "cleanedFields": {
+        "email": "reservations@pequothotel.com",
+        "phone": "(508) 693-5087",
+        "street_address": "19 Pequot Avenue",
+        "full_address": "19 Pequot Avenue, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 419,
+      "name": "Oak Bluffs Hotel",
+      "cleanedFields": {
+        "email": "hello@attleborohousemv.com",
+        "phone": "(508) 693-4346",
+        "street_address": "42 Lake Avenue",
+        "full_address": "42 Lake Avenue, Oak Bluffs, MA 02539"
+      }
+    },
+    {
+      "id": 423,
+      "name": "The Beach Front Inn of Martha's Vineyard",
+      "cleanedFields": {
+        "email": "beachfrontinnmv@comcast.net",
+        "phone": "(508) 693-5148"
+      }
+    },
+    {
+      "id": 425,
+      "name": "Captain Flanders Inn",
+      "cleanedFields": {
+        "email": "mail@captainflandersinn.com",
+        "phone": "(508) 645-3123"
+      }
+    },
+    {
+      "id": 431,
+      "name": "Duckinnon",
+      "cleanedFields": {
+        "phone": "(715) 386-9450"
+      }
+    },
+    {
+      "id": 435,
+      "name": "Vacasa.com/usa/the-island-inn",
+      "cleanedFields": {
+        "phone": "(800) 544-0300"
+      }
+    },
+    {
+      "id": 437,
+      "name": "Lightkeepers Inn",
+      "cleanedFields": {
+        "phone": "(508) 627-4600",
+        "street_address": "25 Simpsons Ln",
+        "full_address": "25 Simpsons Ln, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 441,
+      "name": "Oak Bluffs Inn",
+      "cleanedFields": {
+        "email": "info@oakbluffsinn.com",
+        "phone": "(508) 693-7171",
+        "street_address": "64 Circuit Ave",
+        "full_address": "64 Circuit Ave, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 444,
+      "name": "Martha’s Vineyard Surfside Hotel: Martha’s Vineyard Hotels",
+      "cleanedFields": {
+        "email": "reservations@mvsurfside.com",
+        "phone": "(508) 693-2500",
+        "street_address": "7 Oak Bluffs Avenue",
+        "full_address": "7 Oak Bluffs Avenue, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 446,
+      "name": "The Edgartown Collection",
+      "cleanedFields": {
+        "phone": "(978) 992-8710",
+        "street_address": "56 North Water Street",
+        "full_address": "56 North Water Street, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 448,
+      "name": "Vineyard Harbor Motel",
+      "cleanedFields": {
+        "email": "info@vineyardharbormotel.us",
+        "phone": "(508) 693-3334",
+        "street_address": "60 Beach Road",
+        "full_address": "60 Beach Road, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 450,
+      "name": "Vineyard Square Hotel & Suites",
+      "cleanedFields": {
+        "email": "stay@vineyardsquarehotel.com",
+        "phone": "(508) 627-4711",
+        "street_address": "38 North Water Street",
+        "full_address": "38 North Water Street, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 470,
+      "name": "Brickman",
+      "cleanedFields": {
+        "email": "info@brickmans.com",
+        "phone": "(508) 693-0047"
+      }
+    },
+    {
+      "id": 476,
+      "name": "Cape Cod 5",
+      "cleanedFields": {
+        "phone": "(888) 225-4636"
+      }
+    },
+    {
+      "id": 478,
+      "name": "Cb Stark Jewelers",
+      "cleanedFields": {
+        "phone": "(888) 227-8275"
+      }
+    },
+    {
+      "id": 481,
+      "name": "Center for New Learning MV",
+      "cleanedFields": {
+        "email": "info@cnlmv.org",
+        "phone": "(920) 410-4577",
+        "street_address": "20 Surveyors Lane",
+        "full_address": "20 Surveyors Lane, Tisbury, MA"
+      }
+    },
+    {
+      "id": 485,
+      "name": "Account Suspended",
+      "cleanedFields": {
+        "email": "webmaster@circuitstylesalon.com"
+      }
+    },
+    {
+      "id": 487,
+      "name": "Claudia Jewelry",
+      "cleanedFields": {
+        "phone": "(508) 627-8306"
+      }
+    },
+    {
+      "id": 491,
+      "name": "Conrado®",
+      "cleanedFields": {
+        "email": "info@shopconrado.com",
+        "street_address": "2 Union Street",
+        "full_address": "2 Union Street, Vineyard Haven, MA"
+      }
+    },
+    {
+      "id": 493,
+      "name": "Crane Appliance",
+      "cleanedFields": {
+        "phone": "(508) 548-8179",
+        "street_address": "529 State Road",
+        "full_address": "529 State Road, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 496,
+      "name": "Darosa's",
+      "cleanedFields": {
+        "email": "agdarosa@gmail.com",
+        "phone": "(508) 693-0110"
+      }
+    },
+    {
+      "id": 497,
+      "name": "Debettencourt's Service Station",
+      "cleanedFields": {
+        "phone": "(508) 693-0751",
+        "street_address": "83 New York Avenue",
+        "full_address": "83 New York Avenue, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 499,
+      "name": "Divine Beauty + Wellness",
+      "cleanedFields": {
+        "phone": "(508) 905-5983"
+      }
+    },
+    {
+      "id": 501,
+      "name": "Donaroma's Martha's Vineyard",
+      "cleanedFields": {
+        "email": "info@donaromas.com",
+        "phone": "(508) 627-3036",
+        "street_address": "270 Upper Main Street",
+        "full_address": "270 Upper Main Street, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 503,
+      "name": "E. C. Cottle, Inc.",
+      "cleanedFields": {
+        "phone": "(508) 627-4381"
+      }
+    },
+    {
+      "id": 510,
+      "name": "Edgartown Books",
+      "cleanedFields": {
+        "email": "info@edgartownbooks.com",
+        "phone": "(508) 627-8463",
+        "street_address": "44 Main Street",
+        "full_address": "44 Main Street, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 512,
+      "name": "The Edgartown Council on Aging",
+      "cleanedFields": {
+        "email": "mkeating@edgartown-ma.us",
+        "phone": "(508) 627-4368"
+      }
+    },
+    {
+      "id": 514,
+      "name": "Mass.gov/locations/dukes-county-superior-court",
+      "cleanedFields": {
+        "email": "dukes.clerksoffice@jud.state.ma.us",
+        "phone": "(508) 627-4668"
+      }
+    },
+    {
+      "id": 515,
+      "name": "Edgartown Hardware",
+      "cleanedFields": {
+        "phone": "(508) 627-4338",
+        "street_address": "61 West Tisbury Road",
+        "full_address": "61 West Tisbury Road, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 523,
+      "name": "Good Dog Goods",
+      "cleanedFields": {
+        "phone": "(508) 696-7100"
+      }
+    },
+    {
+      "id": 525,
+      "name": "Granite Five & Ten",
+      "cleanedFields": {
+        "phone": "(508) 627-3232",
+        "street_address": "242 Vineyard Haven Rd",
+        "full_address": "242 Vineyard Haven Rd, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 532,
+      "name": "Island Aesthetics",
+      "cleanedFields": {
+        "email": "info@ia-mv.com",
+        "phone": "(774) 563-5708",
+        "street_address": "8 Union St",
+        "full_address": "8 Union St, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 534,
+      "name": "Islandalpaca",
+      "cleanedFields": {
+        "email": "info@islandalpaca.com",
+        "phone": "(508) 693-5554"
+      }
+    },
+    {
+      "id": 540,
+      "name": "Jardin Mahoney",
+      "cleanedFields": {
+        "email": "info@jardinmahoneymv.com",
+        "phone": "(508) 693-3511"
+      }
+    },
+    {
+      "id": 542,
+      "name": "Johnkeene",
+      "cleanedFields": {
+        "phone": "(508) 693-5975",
+        "street_address": "25 Old Stage Road",
+        "full_address": "25 Old Stage Road, West Tisbury, MA 02568"
+      }
+    },
+    {
+      "id": 546,
+      "name": "Kismet Outfitters",
+      "cleanedFields": {
+        "email": "info@kismetoutfitters.com",
+        "phone": "(774) 549-5921"
+      }
+    },
+    {
+      "id": 549,
+      "name": "Larry",
+      "cleanedFields": {
+        "email": "peter@larrystackle.com",
+        "phone": "(508) 627-5088"
+      }
+    },
+    {
+      "id": 553,
+      "name": "Leroux Kitchen",
+      "cleanedFields": {
+        "email": "customerservice@lerouxkitchen.com",
+        "phone": "(207) 553-7665",
+        "street_address": "62 Main St",
+        "full_address": "62 Main St, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 555,
+      "name": "Technical Apparel + Athletic Shoes",
+      "cleanedFields": {
+        "phone": "(877) 263-9300"
+      }
+    },
+    {
+      "id": 557,
+      "name": "Maggie's Salon",
+      "cleanedFields": {
+        "phone": "(508) 693-2875"
+      }
+    },
+    {
+      "id": 561,
+      "name": "Martha's Bike",
+      "cleanedFields": {
+        "email": "vineyardbikerental@gmail.com",
+        "phone": "(833) 362-7842",
+        "street_address": "4 Lagoon Pond Rd",
+        "full_address": "4 Lagoon Pond Rd, Vineyard Haven, MA"
+      }
+    },
+    {
+      "id": 563,
+      "name": "Martha",
+      "cleanedFields": {
+        "phone": "(508) 627-4266"
+      }
+    },
+    {
+      "id": 565,
+      "name": "Martha's Vineyard Made",
+      "cleanedFields": {
+        "email": "help@marthasvineyardmade.com",
+        "phone": "(508) 338-2598"
+      }
+    },
+    {
+      "id": 569,
+      "name": "Martha's Vineyard Tile Company Inc.",
+      "cleanedFields": {
+        "email": "greyson@mvtileco.com",
+        "phone": "(508) 693-9707"
+      }
+    },
+    {
+      "id": 574,
+      "name": "Mccurdymotorcars",
+      "cleanedFields": {
+        "email": "tom@mccurdymotorcars.com",
+        "phone": "(508) 693-5532"
+      }
+    },
+    {
+      "id": 581,
+      "name": "Mosher Photo",
+      "cleanedFields": {
+        "email": "cell5086273200@gmail.com",
+        "phone": "(508) 693-9430"
+      }
+    },
+    {
+      "id": 583,
+      "name": "North Line Shell",
+      "cleanedFields": {
+        "phone": "(508) 338-7884",
+        "street_address": "3 N Line Road",
+        "full_address": "3 N Line Road, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 588,
+      "name": "Salon",
+      "cleanedFields": {
+        "email": "panachesaloninc@gmail.com",
+        "street_address": "5 Cournoyer Road",
+        "full_address": "5 Cournoyer Road, West Tisbury, MA"
+      }
+    },
+    {
+      "id": 599,
+      "name": "Personal & Business Banking",
+      "cleanedFields": {
+        "phone": "(508) 732-7072"
+      }
+    },
+    {
+      "id": 603,
+      "name": "Sanctuary Martha's Vineyard",
+      "cleanedFields": {
+        "street_address": "42 Circuit Avenue",
+        "full_address": "42 Circuit Avenue, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 606,
+      "name": "Sea Bags",
+      "cleanedFields": {
+        "email": "customerservice@seabags.com",
+        "phone": "(888) 210-4244"
+      }
+    },
+    {
+      "id": 610,
+      "name": "Sea Spasalon",
+      "cleanedFields": {
+        "phone": "(508) 627-8953"
+      }
+    },
+    {
+      "id": 614,
+      "name": "Shirt Tales MV",
+      "cleanedFields": {
+        "email": "shirttalesmv@gmail.com",
+        "phone": "(508) 627-3766",
+        "street_address": "61 Main Street",
+        "full_address": "61 Main Street, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 616,
+      "name": "Slate",
+      "cleanedFields": {
+        "email": "shop@slatemv.com",
+        "phone": "(508) 939-1908",
+        "street_address": "11 North Summer Street",
+        "full_address": "11 North Summer Street, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 620,
+      "name": "Soft As a Grape",
+      "cleanedFields": {
+        "email": "info@softasagrape.com",
+        "phone": "(508) 295-9900"
+      }
+    },
+    {
+      "id": 625,
+      "name": "Spa L'eau MV",
+      "cleanedFields": {
+        "phone": "(508) 292-1235"
+      }
+    },
+    {
+      "id": 626,
+      "name": "Stefanie Wolf Designs Artisan Jewelry From Martha's Vineyard",
+      "cleanedFields": {
+        "phone": "(774) 549-9526",
+        "street_address": "37 Circuit Avenue",
+        "full_address": "37 Circuit Avenue, Oak Bluffs, MA"
+      }
+    },
+    {
+      "id": 631,
+      "name": "Talita Destefani Beauty Lounge",
+      "cleanedFields": {
+        "email": "filler@godaddy.combookingsmy",
+        "phone": "(508) 560-0058",
+        "street_address": "7 Beach Street",
+        "full_address": "7 Beach Street, Vineyard Haven, MA"
+      }
+    },
+    {
+      "id": 633,
+      "name": "Tashmoo Insurance Agency",
+      "cleanedFields": {
+        "email": "inform@tashmooinsurance.com",
+        "phone": "(508) 693-4000",
+        "street_address": "517 State Road",
+        "full_address": "517 State Road, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 642,
+      "name": "Trust",
+      "cleanedFields": {
+        "email": "hello@theshoptrust.com",
+        "phone": "(508) 693-4445",
+        "street_address": "9 Main Street",
+        "full_address": "9 Main Street, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 644,
+      "name": "Third World Trading Co.",
+      "cleanedFields": {
+        "email": "thirdworld5550@yahoo.com",
+        "phone": "(508) 693-5550"
+      }
+    },
+    {
+      "id": 648,
+      "name": "Tisbury Toy Box",
+      "cleanedFields": {
+        "email": "tisburytoybox@gmail.com",
+        "phone": "(508) 693-8182",
+        "street_address": "79 Beach Road",
+        "full_address": "79 Beach Road, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 652,
+      "name": "Martha’s Vineyard Home Décor",
+      "cleanedFields": {
+        "phone": "(508) 693-9197"
+      }
+    },
+    {
+      "id": 654,
+      "name": "Vineyard Family Tennis",
+      "cleanedFields": {
+        "phone": "(508) 693-7762",
+        "street_address": "618 Barnes Road",
+        "full_address": "618 Barnes Road, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 656,
+      "name": "Vineyard Hearth Patio & Spa",
+      "cleanedFields": {
+        "phone": "(508) 693-5520"
+      }
+    },
+    {
+      "id": 658,
+      "name": "M&b Remodeling",
+      "cleanedFields": {
+        "phone": "(508) 693-3227",
+        "street_address": "454 State Road",
+        "full_address": "454 State Road, Vineyard Haven, MA"
+      }
+    },
+    {
+      "id": 660,
+      "name": "Vineyard Vines",
+      "cleanedFields": {
+        "email": "tieguys@vineyardvines.com",
+        "phone": "(800) 892-4982"
+      }
+    },
+    {
+      "id": 665,
+      "name": "Sail Surf and Paddle on Martha's Vineyard",
+      "cleanedFields": {
+        "email": "webmaster@windsupmv.com"
+      }
+    },
+    {
+      "id": 667,
+      "name": "Erica Wilson INC",
+      "cleanedFields": {
+        "email": "228-9881customerservice@ericawilson.com",
+        "phone": "(774) 549-9488",
+        "street_address": "21 Kelly St",
+        "full_address": "21 Kelly St, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 668,
+      "name": "Island Outfitters Oak Bluffs",
+      "cleanedFields": {
+        "email": "iooakbluffs@gmail.comemail",
+        "phone": "(508) 693-0085",
+        "street_address": "1 post office square",
+        "full_address": "1 post office square, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 670,
+      "name": "Martha's Vineyard, Ma Store Location",
+      "cleanedFields": {
+        "email": "customerservice@charlestonshoeco.com",
+        "phone": "(508) 859-1511",
+        "street_address": "65 Main St",
+        "full_address": "65 Main St, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 671,
+      "name": "Lani Beach Club",
+      "cleanedFields": {
+        "phone": "(508) 687-9436",
+        "street_address": "25 Main St",
+        "full_address": "25 Main St, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 672,
+      "name": "Rainy Day",
+      "cleanedFields": {
+        "email": "rainyday@vineyard.net",
+        "phone": "(508) 693-1830",
+        "street_address": "66 Main St",
+        "full_address": "66 Main St, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 673,
+      "name": "Lilly Pulitzer",
+      "cleanedFields": {
+        "email": "edgartown@lillypulitzer.com",
+        "phone": "(508) 627-1209",
+        "street_address": "33 Main St",
+        "full_address": "33 Main St, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 674,
+      "name": "Barnes Moving & Storage",
+      "cleanedFields": {
+        "email": "info@barnesmoversmv.com",
+        "phone": "(508) 693-1937",
+        "street_address": "475 Edgartown Rd",
+        "full_address": "475 Edgartown Rd, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 675,
+      "name": "Carroll's Martha's Vineyard Rapid Transit, Inc.",
+      "cleanedFields": {
+        "phone": "(508) 693-0348",
+        "street_address": "475 Edgartown Rd",
+        "full_address": "475 Edgartown Rd, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 676,
+      "name": "Coastal Events MV",
+      "cleanedFields": {
+        "email": "info@coastaleventsmv.com",
+        "phone": "(774) 563-0737",
+        "street_address": "974 State Rd",
+        "full_address": "974 State Rd, West Tisbury, MA 02575"
+      }
+    },
+    {
+      "id": 677,
+      "name": "Brissette Electric Inc.",
+      "cleanedFields": {
+        "email": "jarret@briselectric.com",
+        "phone": "(508) 693-0764",
+        "street_address": "1 Lagoon Pond Rd",
+        "full_address": "1 Lagoon Pond Rd, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 678,
+      "name": "Brewer Insect & Animal Spraying",
+      "cleanedFields": {
+        "email": "matt@brewerspraying.com",
+        "phone": "(508) 579-3963"
+      }
+    },
+    {
+      "id": 679,
+      "name": "A. P. Fortes Plumbing and Heating",
+      "cleanedFields": {
+        "phone": "(508) 693-2394",
+        "street_address": "155 Spring St",
+        "full_address": "155 Spring St, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 680,
+      "name": "Lowe Energy Design Inc.",
+      "cleanedFields": {
+        "email": "info@loweenergydesign.com",
+        "phone": "(508) 693-1298",
+        "street_address": "250 Oak Lane",
+        "full_address": "250 Oak Lane, West Tisbury, MA"
+      }
+    },
+    {
+      "id": 681,
+      "name": "Callahan Plumbing and Heating, INC",
+      "cleanedFields": {
+        "phone": "(508) 696-6088",
+        "street_address": "44 Webaqua St",
+        "full_address": "44 Webaqua St, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 682,
+      "name": "Tracker Home Decor",
+      "cleanedFields": {
+        "phone": "(508) 627-8725",
+        "street_address": "89 Peases Point Way S",
+        "full_address": "89 Peases Point Way S, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 683,
+      "name": "Hutker Architects INC",
+      "cleanedFields": {
+        "phone": "(508) 693-3344",
+        "street_address": "79 Beach Rd",
+        "full_address": "79 Beach Rd, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 684,
+      "name": "Rentschler & Company Interiors on Martha's Vineyard",
+      "cleanedFields": {
+        "phone": "(508) 693-2058",
+        "street_address": "39 Lake St",
+        "full_address": "39 Lake St, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 685,
+      "name": "Interiors Studio Martha's Vineyard",
+      "cleanedFields": {
+        "email": "office@interiorsstudiomv.com",
+        "phone": "(508) 693-1955",
+        "street_address": "7 Beach St",
+        "full_address": "7 Beach St, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 686,
+      "name": "Tending Joy Artisan Shop",
+      "cleanedFields": {
+        "email": "ingrid@ingridgoffmaidoff.com",
+        "phone": "(508) 560-1613"
+      }
+    },
+    {
+      "id": 687,
+      "name": "Kin MV",
+      "cleanedFields": {
+        "email": "kinfaitmv@gmail.com",
+        "phone": "(508) 939-4291"
+      }
+    },
+    {
+      "id": 688,
+      "name": "Hatmarcha Gifts",
+      "cleanedFields": {
+        "phone": "(508) 645-3704",
+        "street_address": "19 Aquinnah Cir",
+        "full_address": "19 Aquinnah Cir, Aquinnah, MA 02535"
+      }
+    },
+    {
+      "id": 689,
+      "name": "Stony Creek Gifts",
+      "cleanedFields": {
+        "email": "info@mvy.com",
+        "phone": "(508) 645-3595",
+        "street_address": "27 Aquinnah Circle Cultural District",
+        "full_address": "27 Aquinnah Circle Cultural District, Aquinnah, MA"
+      }
+    },
+    {
+      "id": 690,
+      "name": "Handworks",
+      "cleanedFields": {
+        "email": "handworksmv%3chandwork@vineyard.net",
+        "phone": "(508) 627-8402",
+        "street_address": "12 Circuit Avenue Extension",
+        "full_address": "12 Circuit Avenue Extension, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 691,
+      "name": "Olive Branch Fair Trade",
+      "cleanedFields": {
+        "email": "olivebranchfairtrade@gmail.com",
+        "phone": "(774) 563-3083"
+      }
+    },
+    {
+      "id": 692,
+      "name": "Harbor Craft Shop",
+      "cleanedFields": {
+        "email": "info@mvy.com",
+        "phone": "(508) 645-2929"
+      }
+    },
+    {
+      "id": 693,
+      "name": "Neptune's Sea Chest",
+      "cleanedFields": {
+        "email": "info@mvy.com",
+        "phone": "(508) 693-0316"
+      }
+    },
+    {
+      "id": 694,
+      "name": "Off Main",
+      "cleanedFields": {
+        "phone": "(508) 696-5354",
+        "street_address": "76 Main St",
+        "full_address": "76 Main St, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 695,
+      "name": "C'est La Vie",
+      "cleanedFields": {
+        "phone": "(508) 693-6181"
+      }
+    },
+    {
+      "id": 696,
+      "name": "Mardell's Gifts & Jewelry",
+      "cleanedFields": {
+        "email": "info@mvy.com",
+        "phone": "(508) 693-0049"
+      }
+    },
+    {
+      "id": 697,
+      "name": "The Beach House of MV",
+      "cleanedFields": {
+        "email": "thebeachhouseofmv@gmail.com",
+        "phone": "(508) 693-6091",
+        "street_address": "30 Main St",
+        "full_address": "30 Main St, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 710,
+      "name": "Biscuits",
+      "cleanedFields": {
+        "email": "biscuitsmv@gmail.com",
+        "phone": "(508) 693-2033",
+        "street_address": "26 Lake Ave",
+        "full_address": "26 Lake Ave, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 711,
+      "name": "Red Cat Kitchen",
+      "cleanedFields": {
+        "phone": "(508) 696-6040"
+      }
+    },
+    {
+      "id": 712,
+      "name": "Atria",
+      "cleanedFields": {
+        "phone": "(508) 627-5850",
+        "street_address": "137 Main St",
+        "full_address": "137 Main St, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 713,
+      "name": "Mo's Lunch",
+      "cleanedFields": {
+        "email": "info@moslunch.com",
+        "phone": "(508) 687-9744",
+        "street_address": "9744137 Vineyard Ave",
+        "full_address": "9744137 Vineyard Ave, Oak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 714,
+      "name": "The Pawnee House",
+      "cleanedFields": {
+        "email": "02557thepawneemv@gmail.com",
+        "phone": "(508) 338-2770",
+        "street_address": "277020 Kennebec Ave",
+        "full_address": "277020 Kennebec Ave, HOak Bluffs, MA 02557"
+      }
+    },
+    {
+      "id": 715,
+      "name": "The Grey Barn & Farm",
+      "cleanedFields": {
+        "email": "farmer@thegreybarnandfarm.com",
+        "phone": "(508) 645-4854",
+        "street_address": "22 South Road",
+        "full_address": "22 South Road, Chilmark, MA 02535"
+      }
+    },
+    {
+      "id": 716,
+      "name": "The Pelican Club",
+      "cleanedFields": {
+        "email": "hello@farawayhotels.com",
+        "phone": "(508) 627-6336",
+        "street_address": "23 Kelly St",
+        "full_address": "23 Kelly St, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 717,
+      "name": "Tigerhawk Sandwich Co.",
+      "cleanedFields": {
+        "email": "info@ontimemv.com",
+        "phone": "(508) 338-7306"
+      }
+    },
+    {
+      "id": 718,
+      "name": "Beetlebung Farm",
+      "cleanedFields": {
+        "email": "info@beetlebungfarm.org"
+      }
+    },
+    {
+      "id": 724,
+      "name": "Alchemy",
+      "cleanedFields": {
+        "phone": "(508) 627-9999",
+        "street_address": "71 Main Street",
+        "full_address": "71 Main Street, Edgartown, MA 02539"
+      }
+    },
+    {
+      "id": 726,
+      "name": "John's Fish Market",
+      "cleanedFields": {
+        "email": "693-1220glenn@johnsfishmarket.com",
+        "phone": "(508) 693-1220",
+        "street_address": "5 Martin Rd",
+        "full_address": "5 Martin Rd, Vineyard Haven, MA 02568"
+      }
+    },
+    {
+      "id": 730,
+      "name": "The Attic",
+      "cleanedFields": {
+        "email": "roy@theatticmv.com",
+        "phone": "(508) 687-9448"
+      }
+    }
+  ]
+}
