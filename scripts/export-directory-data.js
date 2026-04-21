@@ -147,7 +147,8 @@ function toBusinessTypeSlug(category) {
   return 'other';
 }
 
-// Query active businesses
+// Query active, publishable businesses
+// Uses publish_tier if available, otherwise falls back to confidence_score + name validation
 const businessesQuery = `
   SELECT
     b.id,
@@ -168,6 +169,8 @@ const businessesQuery = `
     b.longitude,
     b.business_status,
     b.confidence_score,
+    b.publish_tier,
+    b.name_quality,
     b.facebook_url,
     b.instagram_url,
     b.yelp_url,
@@ -175,15 +178,34 @@ const businessesQuery = `
   FROM businesses b
   WHERE b.is_duplicate = 0
     AND b.business_status IN ('active', 'uncertain', 'unknown')
-    AND b.confidence_score >= 0.5
-  ORDER BY b.confidence_score DESC, b.business_name
+    AND (
+      -- Use publish_tier if set (A, B, C are publishable)
+      (b.publish_tier IS NOT NULL AND b.publish_tier IN ('A', 'B', 'C'))
+      OR
+      -- Fallback: good name quality + reasonable confidence
+      (b.publish_tier IS NULL AND b.name_quality = 'good' AND b.confidence_score >= 30)
+      OR
+      -- Legacy fallback: no tier system columns yet
+      (b.publish_tier IS NULL AND b.name_quality IS NULL AND b.confidence_score >= 0.5)
+    )
+  ORDER BY
+    CASE b.publish_tier WHEN 'A' THEN 1 WHEN 'B' THEN 2 WHEN 'C' THEN 3 ELSE 4 END,
+    b.confidence_score DESC,
+    b.business_name
 `;
 
 const rawBusinesses = db.prepare(businessesQuery).all();
 
 // Process businesses
 const processedBusinesses = rawBusinesses
-  .filter(b => isValidBusinessName(b.business_name))
+  .filter(b => {
+    // If publish_tier is set, trust it (already validated)
+    if (b.publish_tier && ['A', 'B', 'C'].includes(b.publish_tier)) {
+      return true;
+    }
+    // Otherwise, validate the name
+    return isValidBusinessName(b.business_name);
+  })
   .map(b => ({
     id: b.id,
     name: cleanString(b.business_name),
@@ -202,6 +224,7 @@ const processedBusinesses = rawBusinesses
     coordinates: (b.latitude && b.longitude) ? { lat: b.latitude, lng: b.longitude } : null,
     status: b.business_status,
     confidence: b.confidence_score,
+    tier: b.publish_tier || null,
     social: {
       facebook: cleanString(b.facebook_url),
       instagram: cleanString(b.instagram_url),

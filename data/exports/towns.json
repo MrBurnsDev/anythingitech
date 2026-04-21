@@ -4,23 +4,30 @@
     "name": "Vineyard Haven",
     "region": "down-island",
     "description": "The commercial heart of Martha's Vineyard, home to the ferry terminal and a vibrant Main Street with local shops, restaurants, and services.",
-    "businessCount": 52,
+    "businessCount": 234,
     "businessTypes": {
-      "restaurants": 14,
-      "lodging": 5,
-      "shopping": 10,
-      "health-wellness": 4,
+      "restaurants": 78,
+      "lodging": 29,
+      "shopping": 30,
+      "health-wellness": 24,
       "contractors": 6,
+      "bars-nightlife": 2,
       "professional-services": 2,
-      "community": 2
+      "community": 1
     },
     "categories": [
+      "Accounting",
+      "Auto",
+      "Bar",
+      "Boutique",
       "Building & Construction",
-      "Camp",
       "Community & Government",
-      "Gallery",
+      "Contractor",
+      "Financial",
+      "Hotel",
       "House & Garden",
       "Inn",
+      "Insurance",
       "Lodging",
       "Lodging & Tourism",
       "Medical",
@@ -28,7 +35,9 @@
       "Professional Services",
       "Restaurant",
       "Retail",
-      "Shopping & Retail"
+      "Shopping & Retail",
+      "Vacation Rental",
+      "Wellness"
     ]
   },
   {
@@ -36,9 +45,9 @@
     "name": "Edgartown",
     "region": "down-island",
     "description": "Historic whaling captain homes, upscale boutiques, waterfront dining, and professional services define this elegant village.",
-    "businessCount": 14,
+    "businessCount": 41,
     "businessTypes": {
-      "restaurants": 11,
+      "restaurants": 38,
       "lodging": 1,
       "shopping": 1,
       "contractors": 1
@@ -55,9 +64,9 @@
     "name": "Oak Bluffs",
     "region": "down-island",
     "description": "Colorful gingerbread cottages, the Flying Horses carousel, and a lively harbor scene with diverse local businesses.",
-    "businessCount": 14,
+    "businessCount": 29,
     "businessTypes": {
-      "restaurants": 12,
+      "restaurants": 27,
       "shopping": 1,
       "contractors": 1
     },
@@ -72,14 +81,16 @@
     "name": "West Tisbury",
     "region": "up-island",
     "description": "Rolling farmland, the beloved Farmers Market, artisan shops, and a quintessential New England town center.",
-    "businessCount": 2,
+    "businessCount": 5,
     "businessTypes": {
+      "restaurants": 3,
       "lodging": 1,
       "community": 1
     },
     "categories": [
       "Community & Government",
-      "Lodging & Tourism"
+      "Lodging & Tourism",
+      "Restaurant"
     ]
   },
   {
@@ -87,13 +98,14 @@
     "name": "Chilmark",
     "region": "up-island",
     "description": "Quiet country roads, Lucy Vincent Beach, farm stands, and the iconic fishing village of Menemsha.",
-    "businessCount": 5,
+    "businessCount": 6,
     "businessTypes": {
-      "restaurants": 4
+      "restaurants": 5,
+      "shopping": 1
     },
     "categories": [
-      "Other",
-      "Restaurant"
+      "Restaurant",
+      "Retail"
     ]
   },
   {
@@ -101,9 +113,9 @@
     "name": "Aquinnah",
     "region": "up-island",
     "description": "Home to the Gay Head Cliffs, the Wampanoag Tribe, artisan shops, and dramatic ocean views.",
-    "businessCount": 5,
+    "businessCount": 8,
     "businessTypes": {
-      "restaurants": 2,
+      "restaurants": 5,
       "lodging": 1,
       "shopping": 2
     },

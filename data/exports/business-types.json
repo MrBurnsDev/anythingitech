@@ -7,13 +7,14 @@
     "description": "From waterfront seafood shacks to fine dining establishments, Martha's Vineyard offers exceptional dining for every taste and occasion.",
     "shortDescription": "Local restaurants and dining establishments",
     "seoDescription": "Find restaurants on Martha's Vineyard. Browse local dining options from casual seafood to fine dining across all island towns.",
-    "businessCount": 43,
+    "businessCount": 156,
     "byTown": {
-      "vineyard-haven": 14,
-      "edgartown": 11,
-      "oak-bluffs": 12,
-      "chilmark": 4,
-      "aquinnah": 2
+      "vineyard-haven": 78,
+      "edgartown": 38,
+      "oak-bluffs": 27,
+      "west-tisbury": 3,
+      "chilmark": 5,
+      "aquinnah": 5
     }
   },
   {
@@ -24,9 +25,9 @@
     "description": "Historic inns, boutique hotels, and vacation rentals provide comfortable accommodations for visitors to Martha's Vineyard year-round.",
     "shortDescription": "Hotels, inns, and vacation rentals",
     "seoDescription": "Find lodging on Martha's Vineyard. Browse hotels, inns, bed & breakfasts, and vacation rentals across all island towns.",
-    "businessCount": 8,
+    "businessCount": 32,
     "byTown": {
-      "vineyard-haven": 5,
+      "vineyard-haven": 29,
       "edgartown": 1,
       "west-tisbury": 1,
       "aquinnah": 1
@@ -40,11 +41,12 @@
     "description": "Local boutiques, galleries, and specialty shops offer island-made goods, curated collections, and unique finds throughout Martha's Vineyard.",
     "shortDescription": "Boutiques, galleries, and retail shops",
     "seoDescription": "Find shopping on Martha's Vineyard. Browse local boutiques, galleries, gift shops, and retail stores across all island towns.",
-    "businessCount": 14,
+    "businessCount": 35,
     "byTown": {
-      "vineyard-haven": 10,
+      "vineyard-haven": 30,
       "edgartown": 1,
       "oak-bluffs": 1,
+      "chilmark": 1,
       "aquinnah": 2
     }
   },
@@ -56,9 +58,9 @@
     "description": "Medical providers, wellness centers, spas, and health services supporting the Martha's Vineyard community year-round.",
     "shortDescription": "Medical, wellness, and health services",
     "seoDescription": "Find health and wellness services on Martha's Vineyard. Browse medical providers, spas, and wellness centers across all island towns.",
-    "businessCount": 4,
+    "businessCount": 24,
     "byTown": {
-      "vineyard-haven": 4
+      "vineyard-haven": 24
     }
   },
   {
@@ -74,6 +76,19 @@
       "vineyard-haven": 6,
       "edgartown": 1,
       "oak-bluffs": 1
+    }
+  },
+  {
+    "slug": "bars-nightlife",
+    "name": "Bars & Nightlife",
+    "pluralName": "Bars & Nightlife",
+    "icon": "wine",
+    "description": "Bars, pubs, and nightlife venues offering drinks and entertainment on Martha's Vineyard.",
+    "shortDescription": "Bars, pubs, and nightlife",
+    "seoDescription": "Find bars and nightlife on Martha's Vineyard. Browse local bars, pubs, and entertainment venues across all island towns.",
+    "businessCount": 2,
+    "byTown": {
+      "vineyard-haven": 2
     }
   },
   {
@@ -97,9 +112,9 @@
     "description": "Community organizations, government services, and nonprofits serving the Martha's Vineyard community.",
     "shortDescription": "Community organizations and services",
     "seoDescription": "Find community organizations on Martha's Vineyard. Browse nonprofits, government services, and community resources across all island towns.",
-    "businessCount": 3,
+    "businessCount": 2,
     "byTown": {
-      "vineyard-haven": 2,
+      "vineyard-haven": 1,
       "west-tisbury": 1
     }
   }
