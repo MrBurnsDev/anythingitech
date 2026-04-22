@@ -7,10 +7,10 @@
     "description": "From waterfront seafood shacks to fine dining establishments, Martha's Vineyard offers exceptional dining for every taste and occasion.",
     "shortDescription": "Local restaurants and dining establishments",
     "seoDescription": "Find restaurants on Martha's Vineyard. Browse local dining options from casual seafood to fine dining across all island towns.",
-    "businessCount": 145,
+    "businessCount": 146,
     "byTown": {
       "vineyard-haven": 70,
-      "edgartown": 35,
+      "edgartown": 36,
       "oak-bluffs": 29,
       "west-tisbury": 3,
       "chilmark": 6,
@@ -25,10 +25,10 @@
     "description": "Historic inns, boutique hotels, and vacation rentals provide comfortable accommodations for visitors to Martha's Vineyard year-round.",
     "shortDescription": "Hotels, inns, and vacation rentals",
     "seoDescription": "Find lodging on Martha's Vineyard. Browse hotels, inns, bed & breakfasts, and vacation rentals across all island towns.",
-    "businessCount": 31,
+    "businessCount": 35,
     "byTown": {
-      "vineyard-haven": 27,
-      "edgartown": 2,
+      "vineyard-haven": 30,
+      "edgartown": 3,
       "west-tisbury": 1,
       "aquinnah": 1
     }

@@ -1,0 +1,257 @@
+{
+  "towns": [
+    {
+      "slug": "vineyard-haven",
+      "name": "Vineyard Haven",
+      "businessCount": 243,
+      "categories": [
+        "Accounting",
+        "Auto",
+        "Bar",
+        "Boutique",
+        "Building & Construction",
+        "Camp",
+        "Community",
+        "Community & Government",
+        "Contractor",
+        "Financial",
+        "Gallery",
+        "Health & Wellness",
+        "Hotel",
+        "House & Garden",
+        "Inn",
+        "Insurance",
+        "Lodging",
+        "Lodging & Tourism",
+        "Medical",
+        "Other",
+        "Professional Services",
+        "Recreation",
+        "Restaurant",
+        "Retail",
+        "Shopping",
+        "Shopping & Retail",
+        "Vacation Rental",
+        "Wellness"
+      ]
+    },
+    {
+      "slug": "edgartown",
+      "name": "Edgartown",
+      "businessCount": 43,
+      "categories": [
+        "Building & Construction",
+        "Hotel",
+        "Lodging",
+        "Restaurant",
+        "Shopping & Retail"
+      ]
+    },
+    {
+      "slug": "oak-bluffs",
+      "name": "Oak Bluffs",
+      "businessCount": 34,
+      "categories": [
+        "Building & Construction",
+        "Restaurant",
+        "Shopping & Retail"
+      ]
+    },
+    {
+      "slug": "aquinnah",
+      "name": "Aquinnah",
+      "businessCount": 7,
+      "categories": [
+        "Inn",
+        "Restaurant",
+        "Shopping & Retail"
+      ]
+    },
+    {
+      "slug": "chilmark",
+      "name": "Chilmark",
+      "businessCount": 7,
+      "categories": [
+        "Restaurant"
+      ]
+    },
+    {
+      "slug": "west-tisbury",
+      "name": "West Tisbury",
+      "businessCount": 5,
+      "categories": [
+        "Community & Government",
+        "Lodging & Tourism",
+        "Restaurant"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "slug": "restaurants",
+      "name": "Restaurant",
+      "pluralName": "Restaurants",
+      "businessCount": 160,
+      "byTown": {
+        "aquinnah": 4,
+        "chilmark": 7,
+        "edgartown": 39,
+        "oak-bluffs": 32,
+        "vineyard-haven": 75,
+        "west-tisbury": 3
+      }
+    },
+    {
+      "slug": "other",
+      "name": "Other",
+      "pluralName": "Other",
+      "businessCount": 113,
+      "byTown": {
+        "vineyard-haven": 105,
+        "edgartown": 2,
+        "oak-bluffs": 2,
+        "west-tisbury": 2,
+        "aquinnah": 2
+      }
+    },
+    {
+      "slug": "lodging",
+      "name": "Lodging",
+      "pluralName": "Lodging",
+      "businessCount": 30,
+      "byTown": {
+        "edgartown": 2,
+        "vineyard-haven": 27,
+        "aquinnah": 1
+      }
+    },
+    {
+      "slug": "health-wellness",
+      "name": "Health & Wellness",
+      "pluralName": "Health & Wellness",
+      "businessCount": 18,
+      "byTown": {
+        "vineyard-haven": 18
+      }
+    },
+    {
+      "slug": "shopping",
+      "name": "Shopping",
+      "pluralName": "Shopping",
+      "businessCount": 13,
+      "byTown": {
+        "vineyard-haven": 13
+      }
+    },
+    {
+      "slug": "community",
+      "name": "Community",
+      "pluralName": "Community",
+      "businessCount": 4,
+      "byTown": {
+        "vineyard-haven": 4
+      }
+    },
+    {
+      "slug": "contractors",
+      "name": "Contractor",
+      "pluralName": "Contractors",
+      "businessCount": 1,
+      "byTown": {
+        "vineyard-haven": 1
+      }
+    }
+  ],
+  "combinations": [
+    {
+      "town": "vineyard-haven",
+      "category": "restaurants",
+      "count": 75
+    },
+    {
+      "town": "vineyard-haven",
+      "category": "other",
+      "count": 105
+    },
+    {
+      "town": "vineyard-haven",
+      "category": "lodging",
+      "count": 27
+    },
+    {
+      "town": "vineyard-haven",
+      "category": "health-wellness",
+      "count": 18
+    },
+    {
+      "town": "vineyard-haven",
+      "category": "shopping",
+      "count": 13
+    },
+    {
+      "town": "vineyard-haven",
+      "category": "community",
+      "count": 4
+    },
+    {
+      "town": "vineyard-haven",
+      "category": "contractors",
+      "count": 1
+    },
+    {
+      "town": "edgartown",
+      "category": "restaurants",
+      "count": 39
+    },
+    {
+      "town": "edgartown",
+      "category": "other",
+      "count": 2
+    },
+    {
+      "town": "edgartown",
+      "category": "lodging",
+      "count": 2
+    },
+    {
+      "town": "oak-bluffs",
+      "category": "restaurants",
+      "count": 32
+    },
+    {
+      "town": "oak-bluffs",
+      "category": "other",
+      "count": 2
+    },
+    {
+      "town": "aquinnah",
+      "category": "restaurants",
+      "count": 4
+    },
+    {
+      "town": "aquinnah",
+      "category": "other",
+      "count": 2
+    },
+    {
+      "town": "aquinnah",
+      "category": "lodging",
+      "count": 1
+    },
+    {
+      "town": "chilmark",
+      "category": "restaurants",
+      "count": 7
+    },
+    {
+      "town": "west-tisbury",
+      "category": "restaurants",
+      "count": 3
+    },
+    {
+      "town": "west-tisbury",
+      "category": "other",
+      "count": 2
+    }
+  ]
+}

@@ -1,14 +1,11 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
+
+Sitemap: https://anythingitechmv.com/sitemap.xml
+
+# Block duplicate/historical slugs (handled by redirects)
+Disallow: /marthas-vineyard/*/*/behind-the-bookstore-edgartown
+Disallow: /marthas-vineyard/*/*/chilmark-tavern-chilmark
+Disallow: /marthas-vineyard/*/*/edgartowndinercom-edgartown
+Disallow: /marthas-vineyard/*/*/edgartownpizzacom-edgartown
+Disallow: /marthas-vineyard/*/*/iconic-marthas-vineyard-hotel-edgartown

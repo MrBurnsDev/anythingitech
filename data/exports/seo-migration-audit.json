@@ -1,0 +1,243 @@
+{
+  "audit_date": "2026-04-21",
+  "auditor": "Claude Code",
+  "summary": {
+    "total_old_urls": 17,
+    "currently_broken": 15,
+    "need_redirect_update": 15,
+    "service_pages_verified": 5,
+    "critical_issues": 1
+  },
+  "critical_issues": [
+    {
+      "issue": "All blog redirects point to non-existent /blog/* paths",
+      "affected_urls": 15,
+      "impact": "HIGH - Users hitting old blog URLs get 404",
+      "recommendation": "Redirect to relevant service pages instead"
+    }
+  ],
+  "old_blog_urls": [
+    {
+      "old_url": "/tech-tips",
+      "current_redirect": "/blog",
+      "old_topic": "Blog index / tech tips collection",
+      "seo_value": "MEDIUM - aggregate blog landing page",
+      "recommended_destination": "/services",
+      "action": "redirect_to_service",
+      "reasoning": "General tech tips should land on services overview"
+    },
+    {
+      "old_url": "/wi-fi-coverage-for-large-properties",
+      "current_redirect": "/blog/wi-fi-coverage-for-large-properties",
+      "old_topic": "Wi-Fi coverage for large properties/estates",
+      "seo_value": "HIGH - specific service keyword",
+      "recommended_destination": "/services/wifi-network",
+      "action": "redirect_to_service",
+      "reasoning": "Direct match to Wi-Fi network service page"
+    },
+    {
+      "old_url": "/office-wireless-network-installation",
+      "current_redirect": "/blog/office-wireless-network-installation",
+      "old_topic": "Office wireless network setup",
+      "seo_value": "HIGH - business keyword",
+      "recommended_destination": "/services/business-it",
+      "action": "redirect_to_service",
+      "reasoning": "Business network = Business IT page"
+    },
+    {
+      "old_url": "/professional-wireless-network-installation",
+      "current_redirect": "/blog/professional-wireless-network-installation",
+      "old_topic": "Professional wireless network installation",
+      "seo_value": "HIGH - service keyword",
+      "recommended_destination": "/services/wifi-network",
+      "action": "redirect_to_service",
+      "reasoning": "Professional network install = Wi-Fi service"
+    },
+    {
+      "old_url": "/future-proof-luxury-wireless-network-marthas-vineyard",
+      "current_redirect": "/blog/future-proof-luxury-wireless-network-marthas-vineyard",
+      "old_topic": "Luxury home Wi-Fi on Martha's Vineyard",
+      "seo_value": "HIGH - location + luxury keyword",
+      "recommended_destination": "/services/wifi-network",
+      "action": "redirect_to_service",
+      "reasoning": "Luxury wireless = Wi-Fi service page"
+    },
+    {
+      "old_url": "/luxury-home-wireless-network-marthas-vineyard",
+      "current_redirect": "/blog/luxury-home-wireless-network-marthas-vineyard",
+      "old_topic": "Luxury home wireless network MV",
+      "seo_value": "HIGH - location + luxury keyword",
+      "recommended_destination": "/services/wifi-network",
+      "action": "redirect_to_service",
+      "reasoning": "Luxury home wireless = Wi-Fi service page"
+    },
+    {
+      "old_url": "/marthas-vineyard-network-installations",
+      "current_redirect": "/blog/marthas-vineyard-network-installations",
+      "old_topic": "Network installations on Martha's Vineyard",
+      "seo_value": "HIGH - location keyword",
+      "recommended_destination": "/services/wifi-network",
+      "action": "redirect_to_service",
+      "reasoning": "MV network installations = Wi-Fi service"
+    },
+    {
+      "old_url": "/common-quick-fixes",
+      "current_redirect": "/blog/common-quick-fixes",
+      "old_topic": "Common tech quick fixes / tips",
+      "seo_value": "LOW - generic content",
+      "recommended_destination": "/services/apple-repair",
+      "action": "redirect_to_service",
+      "reasoning": "Quick fixes usually Apple device related"
+    },
+    {
+      "old_url": "/something-broken-iphone-ya-gonna-call-louis-hall",
+      "current_redirect": "/blog/something-broken-iphone-ya-gonna-call-louis-hall",
+      "old_topic": "iPhone repair / Louis Hall intro",
+      "seo_value": "MEDIUM - brand/personal + iPhone keyword",
+      "recommended_destination": "/services/apple-repair",
+      "action": "redirect_to_service",
+      "reasoning": "iPhone repair = Apple Repair page"
+    },
+    {
+      "old_url": "/malicious-ios-popups",
+      "current_redirect": "/blog/malicious-ios-popups",
+      "old_topic": "iOS security / malicious popups",
+      "seo_value": "LOW - specific security topic",
+      "recommended_destination": "/services/apple-repair",
+      "action": "redirect_to_service",
+      "reasoning": "iOS troubleshooting = Apple Repair"
+    },
+    {
+      "old_url": "/anything-apple-jingle",
+      "current_redirect": "/blog/anything-apple-jingle",
+      "old_topic": "Brand/marketing content - jingle",
+      "seo_value": "LOW - brand content",
+      "recommended_destination": "/about",
+      "action": "redirect_to_service",
+      "reasoning": "Brand content belongs on About"
+    },
+    {
+      "old_url": "/weekly-tip-start-taking-advantage-cloud",
+      "current_redirect": "/blog/weekly-tip-start-taking-advantage-cloud",
+      "old_topic": "Cloud/iCloud tips",
+      "seo_value": "LOW - generic cloud tip",
+      "recommended_destination": "/services/apple-repair",
+      "action": "redirect_to_service",
+      "reasoning": "iCloud tips = Apple ecosystem support"
+    },
+    {
+      "old_url": "/year-louis-hall-anything-apple-marthas-vineyard",
+      "current_redirect": "/blog/year-louis-hall-anything-apple-marthas-vineyard",
+      "old_topic": "Year in review / company history",
+      "seo_value": "LOW - dated content",
+      "recommended_destination": "/about",
+      "action": "redirect_to_service",
+      "reasoning": "Company history = About page"
+    },
+    {
+      "old_url": "/the-end-of-an-era",
+      "current_redirect": "/blog/the-end-of-an-era",
+      "old_topic": "Company transition announcement",
+      "seo_value": "LOW - dated announcement",
+      "recommended_destination": "/about",
+      "action": "redirect_to_service",
+      "reasoning": "Company news = About page"
+    },
+    {
+      "old_url": "/why-i-built-is-the-ferry-running",
+      "current_redirect": "/blog/why-i-built-is-the-ferry-running",
+      "old_topic": "Side project - Is The Ferry Running app",
+      "seo_value": "LOW - unrelated side project",
+      "recommended_destination": "/about",
+      "action": "redirect_to_service",
+      "reasoning": "Personal project story = About page"
+    }
+  ],
+  "service_pages_verification": {
+    "/services": {
+      "exists": true,
+      "content_quality": "GOOD - 9 service cards with descriptions",
+      "word_count_estimate": 200
+    },
+    "/services/apple-repair": {
+      "exists": true,
+      "content_quality": "EXCELLENT - full service page with problems, included, ideal, why us",
+      "word_count_estimate": 400
+    },
+    "/services/wifi-network": {
+      "exists": true,
+      "content_quality": "EXCELLENT - full service page with problems, included, ideal, why us",
+      "word_count_estimate": 400
+    },
+    "/services/smart-home": {
+      "exists": true,
+      "content_quality": "EXCELLENT - full service page with problems, included, ideal, why us",
+      "word_count_estimate": 400
+    },
+    "/services/tv-audio": {
+      "exists": true,
+      "content_quality": "EXCELLENT - full service page with problems, included, ideal, why us",
+      "word_count_estimate": 400
+    },
+    "/services/business-it": {
+      "exists": true,
+      "content_quality": "EXCELLENT - full service page with problems, included, ideal, why us",
+      "word_count_estimate": 400
+    },
+    "/about": {
+      "exists": true,
+      "content_quality": "EXCELLENT - story, values, stats, CTA",
+      "word_count_estimate": 350
+    },
+    "/contact": {
+      "exists": true,
+      "content_quality": "GOOD - contact form and info"
+    }
+  },
+  "weak_redirect_destinations": [
+    {
+      "destination": "/blog",
+      "sources": ["/tech-tips", "/tech-tips/"],
+      "issue": "/blog does not exist",
+      "fix": "Redirect to /services instead"
+    },
+    {
+      "destination": "/blog/*",
+      "sources": 13,
+      "issue": "No blog pages exist",
+      "fix": "Redirect each to appropriate service page"
+    }
+  ],
+  "recommended_redirect_updates": [
+    { "source": "/tech-tips", "from": "/blog", "to": "/services" },
+    { "source": "/tech-tips/", "from": "/blog", "to": "/services" },
+    { "source": "/wi-fi-coverage-for-large-properties", "from": "/blog/wi-fi-coverage-for-large-properties", "to": "/services/wifi-network" },
+    { "source": "/wi-fi-coverage-for-large-properties/", "from": "/blog/wi-fi-coverage-for-large-properties", "to": "/services/wifi-network" },
+    { "source": "/office-wireless-network-installation", "from": "/blog/office-wireless-network-installation", "to": "/services/business-it" },
+    { "source": "/office-wireless-network-installation/", "from": "/blog/office-wireless-network-installation", "to": "/services/business-it" },
+    { "source": "/professional-wireless-network-installation", "from": "/blog/professional-wireless-network-installation", "to": "/services/wifi-network" },
+    { "source": "/professional-wireless-network-installation/", "from": "/blog/professional-wireless-network-installation", "to": "/services/wifi-network" },
+    { "source": "/future-proof-luxury-wireless-network-marthas-vineyard", "from": "/blog/future-proof-luxury-wireless-network-marthas-vineyard", "to": "/services/wifi-network" },
+    { "source": "/future-proof-luxury-wireless-network-marthas-vineyard/", "from": "/blog/future-proof-luxury-wireless-network-marthas-vineyard", "to": "/services/wifi-network" },
+    { "source": "/luxury-home-wireless-network-marthas-vineyard", "from": "/blog/luxury-home-wireless-network-marthas-vineyard", "to": "/services/wifi-network" },
+    { "source": "/luxury-home-wireless-network-marthas-vineyard/", "from": "/blog/luxury-home-wireless-network-marthas-vineyard", "to": "/services/wifi-network" },
+    { "source": "/marthas-vineyard-network-installations", "from": "/blog/marthas-vineyard-network-installations", "to": "/services/wifi-network" },
+    { "source": "/marthas-vineyard-network-installations/", "from": "/blog/marthas-vineyard-network-installations", "to": "/services/wifi-network" },
+    { "source": "/common-quick-fixes", "from": "/blog/common-quick-fixes", "to": "/services/apple-repair" },
+    { "source": "/common-quick-fixes/", "from": "/blog/common-quick-fixes", "to": "/services/apple-repair" },
+    { "source": "/something-broken-iphone-ya-gonna-call-louis-hall", "from": "/blog/something-broken-iphone-ya-gonna-call-louis-hall", "to": "/services/apple-repair" },
+    { "source": "/something-broken-iphone-ya-gonna-call-louis-hall/", "from": "/blog/something-broken-iphone-ya-gonna-call-louis-hall", "to": "/services/apple-repair" },
+    { "source": "/malicious-ios-popups", "from": "/blog/malicious-ios-popups", "to": "/services/apple-repair" },
+    { "source": "/malicious-ios-popups/", "from": "/blog/malicious-ios-popups", "to": "/services/apple-repair" },
+    { "source": "/anything-apple-jingle", "from": "/blog/anything-apple-jingle", "to": "/about" },
+    { "source": "/anything-apple-jingle/", "from": "/blog/anything-apple-jingle", "to": "/about" },
+    { "source": "/weekly-tip-start-taking-advantage-cloud", "from": "/blog/weekly-tip-start-taking-advantage-cloud", "to": "/services/apple-repair" },
+    { "source": "/weekly-tip-start-taking-advantage-cloud/", "from": "/blog/weekly-tip-start-taking-advantage-cloud", "to": "/services/apple-repair" },
+    { "source": "/year-louis-hall-anything-apple-marthas-vineyard", "from": "/blog/year-louis-hall-anything-apple-marthas-vineyard", "to": "/about" },
+    { "source": "/year-louis-hall-anything-apple-marthas-vineyard/", "from": "/blog/year-louis-hall-anything-apple-marthas-vineyard", "to": "/about" },
+    { "source": "/the-end-of-an-era", "from": "/blog/the-end-of-an-era", "to": "/about" },
+    { "source": "/the-end-of-an-era/", "from": "/blog/the-end-of-an-era", "to": "/about" },
+    { "source": "/why-i-built-is-the-ferry-running", "from": "/blog/why-i-built-is-the-ferry-running", "to": "/about" },
+    { "source": "/why-i-built-is-the-ferry-running/", "from": "/blog/why-i-built-is-the-ferry-running", "to": "/about" }
+  ]
+}

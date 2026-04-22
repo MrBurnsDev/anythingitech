@@ -1,0 +1,392 @@
+[
+  {
+    "source": "/services/",
+    "destination": "/services",
+    "permanent": true
+  },
+  {
+    "source": "/iphone-repair",
+    "destination": "/services/apple-repair",
+    "permanent": true
+  },
+  {
+    "source": "/iphone-repair/",
+    "destination": "/services/apple-repair",
+    "permanent": true
+  },
+  {
+    "source": "/mac-repair-services",
+    "destination": "/services/apple-repair",
+    "permanent": true
+  },
+  {
+    "source": "/mac-repair-services/",
+    "destination": "/services/apple-repair",
+    "permanent": true
+  },
+  {
+    "source": "/network-services-2",
+    "destination": "/services/wifi-network",
+    "permanent": true
+  },
+  {
+    "source": "/network-services-2/",
+    "destination": "/services/wifi-network",
+    "permanent": true
+  },
+  {
+    "source": "/remote-support",
+    "destination": "/services/apple-repair",
+    "permanent": true
+  },
+  {
+    "source": "/remote-support/",
+    "destination": "/services/apple-repair",
+    "permanent": true
+  },
+  {
+    "source": "/about-us",
+    "destination": "/about",
+    "permanent": true
+  },
+  {
+    "source": "/about-us/",
+    "destination": "/about",
+    "permanent": true
+  },
+  {
+    "source": "/network-services",
+    "destination": "/about",
+    "permanent": true
+  },
+  {
+    "source": "/network-services/",
+    "destination": "/about",
+    "permanent": true
+  },
+  {
+    "source": "/happy-clients",
+    "destination": "/about",
+    "permanent": true
+  },
+  {
+    "source": "/happy-clients/",
+    "destination": "/about",
+    "permanent": true
+  },
+  {
+    "source": "/contact/",
+    "destination": "/contact",
+    "permanent": true
+  },
+  {
+    "source": "/tech-tips",
+    "destination": "/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tech-tips/",
+    "destination": "/blog",
+    "permanent": true
+  },
+  {
+    "source": "/why-i-built-is-the-ferry-running",
+    "destination": "/blog/why-i-built-is-the-ferry-running",
+    "permanent": true
+  },
+  {
+    "source": "/why-i-built-is-the-ferry-running/",
+    "destination": "/blog/why-i-built-is-the-ferry-running",
+    "permanent": true
+  },
+  {
+    "source": "/wi-fi-coverage-for-large-properties",
+    "destination": "/blog/wi-fi-coverage-for-large-properties",
+    "permanent": true
+  },
+  {
+    "source": "/wi-fi-coverage-for-large-properties/",
+    "destination": "/blog/wi-fi-coverage-for-large-properties",
+    "permanent": true
+  },
+  {
+    "source": "/office-wireless-network-installation",
+    "destination": "/blog/office-wireless-network-installation",
+    "permanent": true
+  },
+  {
+    "source": "/office-wireless-network-installation/",
+    "destination": "/blog/office-wireless-network-installation",
+    "permanent": true
+  },
+  {
+    "source": "/professional-wireless-network-installation",
+    "destination": "/blog/professional-wireless-network-installation",
+    "permanent": true
+  },
+  {
+    "source": "/professional-wireless-network-installation/",
+    "destination": "/blog/professional-wireless-network-installation",
+    "permanent": true
+  },
+  {
+    "source": "/future-proof-luxury-wireless-network-marthas-vineyard",
+    "destination": "/blog/future-proof-luxury-wireless-network-marthas-vineyard",
+    "permanent": true
+  },
+  {
+    "source": "/future-proof-luxury-wireless-network-marthas-vineyard/",
+    "destination": "/blog/future-proof-luxury-wireless-network-marthas-vineyard",
+    "permanent": true
+  },
+  {
+    "source": "/luxury-home-wireless-network-marthas-vineyard",
+    "destination": "/blog/luxury-home-wireless-network-marthas-vineyard",
+    "permanent": true
+  },
+  {
+    "source": "/luxury-home-wireless-network-marthas-vineyard/",
+    "destination": "/blog/luxury-home-wireless-network-marthas-vineyard",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard-network-installations",
+    "destination": "/blog/marthas-vineyard-network-installations",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard-network-installations/",
+    "destination": "/blog/marthas-vineyard-network-installations",
+    "permanent": true
+  },
+  {
+    "source": "/common-quick-fixes",
+    "destination": "/blog/common-quick-fixes",
+    "permanent": true
+  },
+  {
+    "source": "/common-quick-fixes/",
+    "destination": "/blog/common-quick-fixes",
+    "permanent": true
+  },
+  {
+    "source": "/something-broken-iphone-ya-gonna-call-louis-hall",
+    "destination": "/blog/something-broken-iphone-ya-gonna-call-louis-hall",
+    "permanent": true
+  },
+  {
+    "source": "/something-broken-iphone-ya-gonna-call-louis-hall/",
+    "destination": "/blog/something-broken-iphone-ya-gonna-call-louis-hall",
+    "permanent": true
+  },
+  {
+    "source": "/malicious-ios-popups",
+    "destination": "/blog/malicious-ios-popups",
+    "permanent": true
+  },
+  {
+    "source": "/malicious-ios-popups/",
+    "destination": "/blog/malicious-ios-popups",
+    "permanent": true
+  },
+  {
+    "source": "/anything-apple-jingle",
+    "destination": "/blog/anything-apple-jingle",
+    "permanent": true
+  },
+  {
+    "source": "/anything-apple-jingle/",
+    "destination": "/blog/anything-apple-jingle",
+    "permanent": true
+  },
+  {
+    "source": "/weekly-tip-start-taking-advantage-cloud",
+    "destination": "/blog/weekly-tip-start-taking-advantage-cloud",
+    "permanent": true
+  },
+  {
+    "source": "/weekly-tip-start-taking-advantage-cloud/",
+    "destination": "/blog/weekly-tip-start-taking-advantage-cloud",
+    "permanent": true
+  },
+  {
+    "source": "/year-louis-hall-anything-apple-marthas-vineyard",
+    "destination": "/blog/year-louis-hall-anything-apple-marthas-vineyard",
+    "permanent": true
+  },
+  {
+    "source": "/year-louis-hall-anything-apple-marthas-vineyard/",
+    "destination": "/blog/year-louis-hall-anything-apple-marthas-vineyard",
+    "permanent": true
+  },
+  {
+    "source": "/the-end-of-an-era",
+    "destination": "/blog/the-end-of-an-era",
+    "permanent": true
+  },
+  {
+    "source": "/the-end-of-an-era/",
+    "destination": "/blog/the-end-of-an-era",
+    "permanent": true
+  },
+  {
+    "source": "/feed",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/feed/",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/edgartown/restaurants/atria-restaurant-edgartown",
+    "destination": "/marthas-vineyard/edgartown/restaurants/atria-edgartown",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/oak-bluffs/restaurants/the-lookout-tavern-oak-bluffs",
+    "destination": "/marthas-vineyard/oak-bluffs/restaurants/waterfront-dining-oak-bluffs",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/chilmark/shopping/menemsha-fish-market-chilmark",
+    "destination": "/marthas-vineyard/vineyard-haven/restaurants/menemsha-fish-market-vineyard-haven",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/vineyard-haven/shopping/subscribe-vineyard-haven",
+    "destination": "/marthas-vineyard/vineyard-haven/shopping/marthas-vineyard-island-massachusetts-vineyard-haven",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/vineyard-haven/shopping/island-weddings-vineyard-haven",
+    "destination": "/marthas-vineyard/vineyard-haven/shopping/marthas-vineyard-island-massachusetts-vineyard-haven",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/edgartown/restaurants/19rawoysterbarcom-edgartown",
+    "destination": "/marthas-vineyard/edgartown/restaurants/19-prime-steak-house-edgartown",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/edgartown/restaurants/alchemyedgartowncom-edgartown",
+    "destination": "/marthas-vineyard/edgartown/restaurants/alchemy-edgartown",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/edgartown/restaurants/atriamvcom-edgartown",
+    "destination": "/marthas-vineyard/edgartown/restaurants/atria-edgartown",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/edgartown/lodging/iconic-marthas-vineyard-hotel-edgartown",
+    "destination": "/marthas-vineyard/edgartown/lodging/harbor-view-hotel-edgartown",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/edgartown/restaurants/edgartowndinercom-edgartown",
+    "destination": "/marthas-vineyard/edgartown/restaurants/edgartown-diner-edgartown",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/edgartown/restaurants/edgartownpizzacom-edgartown",
+    "destination": "/marthas-vineyard/edgartown/restaurants/edgartown-pizza-edgartown",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/edgartown/restaurants/farawaymarthas-edgartown",
+    "destination": "/marthas-vineyard/edgartown/restaurants/the-pelican-club-edgartown",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/oak-bluffs/restaurants/mvbiscuitscom-oak-bluffs",
+    "destination": "/marthas-vineyard/oak-bluffs/restaurants/biscuits-oak-bluffs",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/oak-bluffs/restaurants/redcatkitchencom-oak-bluffs",
+    "destination": "/marthas-vineyard/oak-bluffs/restaurants/red-cat-kitchen-oak-bluffs",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/vineyard-haven/restaurants/beach-road-restaurant-vineyard-haven",
+    "destination": "/marthas-vineyard/west-tisbury/restaurants/state-road-restaurant-west-tisbury",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/vineyard-haven/restaurants/the-grey-barn-farm-vineyard-haven",
+    "destination": "/marthas-vineyard/chilmark/restaurants/the-grey-barn-farm-chilmark",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/vineyard-haven/restaurants/mvplayhouseorg-vineyard-haven",
+    "destination": "/marthas-vineyard/vineyard-haven/restaurants/the-vineyards-drive-vineyard-haven",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/vineyard-haven/lodging/beach-pluminn-vineyard-haven",
+    "destination": "/marthas-vineyard/vineyard-haven/lodging/menemsha-inn-cottages-marthas-vineyard-vacation-rentals-vineyard-haven",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/vineyard-haven/shopping/the-christopher-vineyard-haven",
+    "destination": "/marthas-vineyard/vineyard-haven/shopping/the-edgartown-collection-vineyard-haven",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/vineyard-haven/shopping/home-page-vineyard-haven",
+    "destination": "/marthas-vineyard/vineyard-haven/shopping/bunch-of-grapes-bookstore-vineyard-haven",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/vineyard-haven/shopping/olivebranchfairtradeorg-vineyard-haven",
+    "destination": "/marthas-vineyard/vineyard-haven/shopping/olive-branch-fair-trade-vineyard-haven",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/vineyard-haven/shopping/rainydaymvcom-vineyard-haven",
+    "destination": "/marthas-vineyard/vineyard-haven/shopping/rainy-day-vineyard-haven",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/vineyard-haven/shopping/ingrid-goff-vineyard-haven",
+    "destination": "/marthas-vineyard/vineyard-haven/shopping/tending-joy-artisan-shop-vineyard-haven",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/vineyard-haven/lodging/directories-vineyard-haven",
+    "destination": "/marthas-vineyard/oak-bluffs/shopping/island-outfitters-oak-bluffs-marthas-vineyard-oak-bluffs",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/chilmark/restaurants/chilmark-tavern-chilmark",
+    "destination": "/marthas-vineyard/chilmark/restaurants/chilmarktaverncom-chilmark",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/edgartown/restaurants/behind-the-bookstore-edgartown",
+    "destination": "/marthas-vineyard/edgartown/restaurants/btbmvcom-edgartown",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/aquinnah/restaurants/the-outermost-inn-aquinnah",
+    "destination": "/marthas-vineyard/aquinnah/restaurants/outermost-inn-aquinnah",
+    "permanent": true
+  },
+  {
+    "source": "/marthas-vineyard/vineyard-haven/restaurants/sandys-fish-chips-vineyard-haven",
+    "destination": "/marthas-vineyard/vineyard-haven/restaurants/johns-fish-market-vineyard-haven",
+    "permanent": true
+  },
+  {
+    "source": "/home",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/index.php",
+    "destination": "/",
+    "permanent": true
+  }
+]

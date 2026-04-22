@@ -22,7 +22,13 @@
     "registry:export": "npm run registry:validate:apply && npm run export-directory",
     "registry:audit": "npx tsx scripts/registry/audit-sources.ts",
     "registry:remediation": "npx tsx scripts/registry/phase4-remediation.ts",
-    "registry:remediation:migrate": "npx tsx scripts/registry/phase4-remediation.ts --migrate"
+    "registry:remediation:migrate": "npx tsx scripts/registry/phase4-remediation.ts --migrate",
+    "registry:duplicates": "npx tsx scripts/registry/duplicate-resolver.ts",
+    "registry:duplicates:apply": "npx tsx scripts/registry/duplicate-resolver.ts --apply",
+    "registry:slugs": "npx tsx scripts/registry/slug-uniqueness.ts",
+    "registry:slugs:apply": "npx tsx scripts/registry/slug-uniqueness.ts --apply",
+    "registry:slugs:report": "npx tsx scripts/registry/slug-uniqueness.ts --report",
+    "registry:seo": "npx tsx scripts/registry/seo-setup.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

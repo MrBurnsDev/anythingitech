@@ -1,0 +1,32 @@
+[
+  {
+    "old_slug": "behind-the-bookstore-edgartown",
+    "canonical_slug": "btbmvcom-edgartown",
+    "redirect_type": "permanent",
+    "created_at": "2026-04-21T16:52:39.503Z"
+  },
+  {
+    "old_slug": "chilmark-tavern-chilmark",
+    "canonical_slug": "chilmarktaverncom-chilmark",
+    "redirect_type": "permanent",
+    "created_at": "2026-04-21T16:52:39.505Z"
+  },
+  {
+    "old_slug": "edgartowndinercom-edgartown",
+    "canonical_slug": "edgartown-diner-edgartown",
+    "redirect_type": "permanent",
+    "created_at": "2026-04-21T16:52:39.505Z"
+  },
+  {
+    "old_slug": "edgartownpizzacom-edgartown",
+    "canonical_slug": "edgartown-pizza-edgartown",
+    "redirect_type": "permanent",
+    "created_at": "2026-04-21T16:52:39.506Z"
+  },
+  {
+    "old_slug": "iconic-marthas-vineyard-hotel-edgartown",
+    "canonical_slug": "harbor-view-hotel-edgartown",
+    "redirect_type": "permanent",
+    "created_at": "2026-04-21T16:52:39.507Z"
+  }
+]

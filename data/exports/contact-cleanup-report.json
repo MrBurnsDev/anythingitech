@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-04-21T14:59:05.877Z",
+  "processed": 11,
+  "cleaned": 10,
+  "restored": [
+    {
+      "id": 62,
+      "name": "Behind the Bookstore"
+    },
+    {
+      "id": 119,
+      "name": "Winnetu Oceanside Resort"
+    },
+    {
+      "id": 249,
+      "name": "Vineyard Grocer"
+    },
+    {
+      "id": 297,
+      "name": "MV Glassworks"
+    },
+    {
+      "id": 310,
+      "name": "MV Camp Meeting Association"
+    },
+    {
+      "id": 395,
+      "name": "The Harborside Inn"
+    },
+    {
+      "id": 397,
+      "name": "Hob Knob"
+    },
+    {
+      "id": 408,
+      "name": "Camp MV"
+    },
+    {
+      "id": 427,
+      "name": "The Charlotte Inn"
+    },
+    {
+      "id": 507,
+      "name": "East Chop Sleep Shop"
+    },
+    {
+      "id": 669,
+      "name": "The Great Put On"
+    }
+  ],
+  "stillBlocked": []
+}

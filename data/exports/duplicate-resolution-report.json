@@ -1,0 +1,323 @@
+{
+  "timestamp": "2026-04-21T16:52:39.507Z",
+  "duplicate_groups_found": 5,
+  "records_merged": 5,
+  "records_marked_duplicate": 5,
+  "redirects_created": 5,
+  "records_needing_manual_review": 0,
+  "groups": [
+    {
+      "normalized_name": "behind the bookstore",
+      "records": [
+        {
+          "id": 62,
+          "business_name": "Behind the Bookstore",
+          "normalized_name": "behind the bookstore",
+          "slug": "btbmvcom-edgartown",
+          "town": "Edgartown",
+          "category": "Restaurant",
+          "full_address": "46 Main St, Edgartown, MA 02539",
+          "street_address": "46 Main St",
+          "phone": "(774) 549-9123",
+          "email": "btb@btbmv.com",
+          "website": "http://btbmv.com/",
+          "confidence_score": 0.8,
+          "primary_source": "vineyard_gazette",
+          "website_works": 1,
+          "short_description": "Behind the Bookstore is a restaurant in Edgartown, Martha's Vineyard, known for quality cuisine and welcoming locals and visitors year-round.",
+          "is_duplicate": 0,
+          "duplicate_of_id": null
+        },
+        {
+          "id": 705,
+          "business_name": "Behind The Bookstore",
+          "normalized_name": "behind the bookstore",
+          "slug": "behind-the-bookstore-edgartown",
+          "town": "Edgartown",
+          "category": "Restaurant",
+          "full_address": null,
+          "street_address": null,
+          "phone": null,
+          "email": null,
+          "website": null,
+          "confidence_score": 0.7,
+          "primary_source": "infatuation",
+          "website_works": null,
+          "short_description": null,
+          "is_duplicate": 0,
+          "duplicate_of_id": null
+        }
+      ],
+      "duplicate_type": "true_duplicate",
+      "canonical_id": 62,
+      "merge_candidates": [
+        705
+      ],
+      "analysis": {
+        "name_match": "exact",
+        "location_match": "same",
+        "category_match": "same",
+        "has_conflicting_data": false,
+        "confidence_delta": 0.10000000000000009,
+        "recommendation": "merge"
+      }
+    },
+    {
+      "normalized_name": "chilmark tavern",
+      "records": [
+        {
+          "id": 43,
+          "business_name": "Chilmark Tavern",
+          "normalized_name": "chilmark tavern",
+          "slug": "chilmarktaverncom-chilmark",
+          "town": "Chilmark",
+          "category": "Restaurant",
+          "full_address": "LOCATION9 State RoadChilmark, MA 02535",
+          "street_address": null,
+          "phone": "(508) 645-9400",
+          "email": "jenna@chilmarktavern.com",
+          "website": "http://chilmarktavern.com/",
+          "confidence_score": 0.8,
+          "primary_source": "vineyard_gazette",
+          "website_works": 1,
+          "short_description": "Chilmark Tavern offers dining in Chilmark, Martha's Vineyard, serving fresh meals in a relaxed island setting.",
+          "is_duplicate": 0,
+          "duplicate_of_id": null
+        },
+        {
+          "id": 700,
+          "business_name": "Chilmark Tavern",
+          "normalized_name": "chilmark tavern",
+          "slug": "chilmark-tavern-chilmark",
+          "town": "Chilmark",
+          "category": "Restaurant",
+          "full_address": null,
+          "street_address": null,
+          "phone": null,
+          "email": null,
+          "website": null,
+          "confidence_score": 0.7,
+          "primary_source": "infatuation",
+          "website_works": null,
+          "short_description": null,
+          "is_duplicate": 0,
+          "duplicate_of_id": null
+        }
+      ],
+      "duplicate_type": "true_duplicate",
+      "canonical_id": 43,
+      "merge_candidates": [
+        700
+      ],
+      "analysis": {
+        "name_match": "exact",
+        "location_match": "same",
+        "category_match": "same",
+        "has_conflicting_data": false,
+        "confidence_delta": 0.10000000000000009,
+        "recommendation": "merge"
+      }
+    },
+    {
+      "normalized_name": "edgartown diner",
+      "records": [
+        {
+          "id": 722,
+          "business_name": "Edgartown Diner 🍨",
+          "normalized_name": "edgartown diner",
+          "slug": "edgartown-diner-edgartown",
+          "town": "Edgartown",
+          "category": "Restaurant",
+          "full_address": null,
+          "street_address": null,
+          "phone": null,
+          "email": null,
+          "website": "https://edgartowndiner.com",
+          "confidence_score": 60,
+          "primary_source": "infatuation",
+          "website_works": 1,
+          "short_description": "Located in Edgartown, Edgartown Diner 🍨 serves the Martha's Vineyard community with flavorful dishes and warm hospitality.",
+          "is_duplicate": 0,
+          "duplicate_of_id": null
+        },
+        {
+          "id": 81,
+          "business_name": "Edgartown Diner",
+          "normalized_name": "edgartown diner",
+          "slug": "edgartowndinercom-edgartown",
+          "town": "Edgartown",
+          "category": "Restaurant",
+          "full_address": "Adjust Your Order\n\n65 Main Street \nEdgartown MA 02539",
+          "street_address": null,
+          "phone": "(508) 627-9337",
+          "email": null,
+          "website": "http://edgartowndiner.com/",
+          "confidence_score": 0.8,
+          "primary_source": "vineyard_gazette",
+          "website_works": 1,
+          "short_description": "Edgartown Diner is a restaurant in Edgartown, Martha's Vineyard, known for quality cuisine and welcoming locals and visitors year-round.",
+          "is_duplicate": 0,
+          "duplicate_of_id": null
+        }
+      ],
+      "duplicate_type": "true_duplicate",
+      "canonical_id": 722,
+      "merge_candidates": [
+        81
+      ],
+      "analysis": {
+        "name_match": "variation",
+        "location_match": "same",
+        "category_match": "same",
+        "has_conflicting_data": false,
+        "confidence_delta": 59.2,
+        "recommendation": "merge"
+      }
+    },
+    {
+      "normalized_name": "edgartown pizza",
+      "records": [
+        {
+          "id": 721,
+          "business_name": "Edgartown Pizza 🍕",
+          "normalized_name": "edgartown pizza",
+          "slug": "edgartown-pizza-edgartown",
+          "town": "Edgartown",
+          "category": "Restaurant",
+          "full_address": null,
+          "street_address": null,
+          "phone": null,
+          "email": null,
+          "website": "http://edgartownpizza.com",
+          "confidence_score": 60,
+          "primary_source": "infatuation",
+          "website_works": 1,
+          "short_description": "Edgartown Pizza 🍕 is a restaurant in Edgartown, Martha's Vineyard, known for quality cuisine and welcoming locals and visitors year-round.",
+          "is_duplicate": 0,
+          "duplicate_of_id": null
+        },
+        {
+          "id": 85,
+          "business_name": "Edgartown Pizza",
+          "normalized_name": "edgartown pizza",
+          "slug": "edgartownpizzacom-edgartown",
+          "town": "Edgartown",
+          "category": "Restaurant",
+          "full_address": "9pm\n\n224 Edgartown Road \nEdgartown MA 02539",
+          "street_address": null,
+          "phone": "(508) 627-7770",
+          "email": null,
+          "website": "http://edgartownpizza.com/",
+          "confidence_score": 0.8,
+          "primary_source": "vineyard_gazette",
+          "website_works": 1,
+          "short_description": "Edgartown Pizza offers dining in Edgartown, Martha's Vineyard, serving fresh meals in a relaxed island setting.",
+          "is_duplicate": 0,
+          "duplicate_of_id": null
+        }
+      ],
+      "duplicate_type": "true_duplicate",
+      "canonical_id": 721,
+      "merge_candidates": [
+        85
+      ],
+      "analysis": {
+        "name_match": "variation",
+        "location_match": "same",
+        "category_match": "same",
+        "has_conflicting_data": false,
+        "confidence_delta": 59.2,
+        "recommendation": "merge"
+      }
+    },
+    {
+      "normalized_name": "harbor view hotel",
+      "records": [
+        {
+          "id": 64,
+          "business_name": "Harbor View Hotel",
+          "normalized_name": "harbor view hotel",
+          "slug": "iconic-marthas-vineyard-hotel-edgartown",
+          "town": "Edgartown",
+          "category": "Lodging",
+          "full_address": "Media\nCareers\nTravel Advisors\nAccessibility\nGift Cards\nHospitality with Heart\n \n\nFind Us\n131 North Water Street\nEdgartown, MA 02539",
+          "street_address": null,
+          "phone": "(844) 248-1167",
+          "email": null,
+          "website": "http://harborviewhotel.com/",
+          "confidence_score": 70,
+          "primary_source": "vineyard_gazette",
+          "website_works": 1,
+          "short_description": "Visit and stay at Harbor View Hotel, Martha's Vineyard's iconic vacation destination for over 100 years. Experience everything the island has to offer!",
+          "is_duplicate": 0,
+          "duplicate_of_id": null
+        },
+        {
+          "id": 4,
+          "business_name": "Harbor View Hotel",
+          "normalized_name": "harbor view hotel",
+          "slug": "harbor-view-hotel-edgartown",
+          "town": "Edgartown",
+          "category": "Hotel",
+          "full_address": "131 North Water Street, Edgartown, MA 02539",
+          "street_address": "131 North Water Street",
+          "phone": "(508) 627-7000",
+          "email": null,
+          "website": "https://www.harbor-view.com",
+          "confidence_score": 65,
+          "primary_source": "manual_import",
+          "website_works": 0,
+          "short_description": "Historic grand hotel overlooking Edgartown Harbor...",
+          "is_duplicate": 0,
+          "duplicate_of_id": null
+        }
+      ],
+      "duplicate_type": "category_variation",
+      "canonical_id": 4,
+      "merge_candidates": [
+        64
+      ],
+      "analysis": {
+        "name_match": "exact",
+        "location_match": "same",
+        "category_match": "different",
+        "has_conflicting_data": false,
+        "confidence_delta": 5,
+        "recommendation": "merge"
+      }
+    }
+  ],
+  "redirects": [
+    {
+      "old_slug": "behind-the-bookstore-edgartown",
+      "canonical_slug": "btbmvcom-edgartown",
+      "redirect_type": "permanent",
+      "created_at": "2026-04-21T16:52:39.503Z"
+    },
+    {
+      "old_slug": "chilmark-tavern-chilmark",
+      "canonical_slug": "chilmarktaverncom-chilmark",
+      "redirect_type": "permanent",
+      "created_at": "2026-04-21T16:52:39.505Z"
+    },
+    {
+      "old_slug": "edgartowndinercom-edgartown",
+      "canonical_slug": "edgartown-diner-edgartown",
+      "redirect_type": "permanent",
+      "created_at": "2026-04-21T16:52:39.505Z"
+    },
+    {
+      "old_slug": "edgartownpizzacom-edgartown",
+      "canonical_slug": "edgartown-pizza-edgartown",
+      "redirect_type": "permanent",
+      "created_at": "2026-04-21T16:52:39.506Z"
+    },
+    {
+      "old_slug": "iconic-marthas-vineyard-hotel-edgartown",
+      "canonical_slug": "harbor-view-hotel-edgartown",
+      "redirect_type": "permanent",
+      "created_at": "2026-04-21T16:52:39.507Z"
+    }
+  ],
+  "manual_review_needed": []
+}
