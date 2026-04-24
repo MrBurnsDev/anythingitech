@@ -9,6 +9,56 @@
       "permanent": true
     },
     {
+      "source": "/apple-repair",
+      "destination": "/services/apple-repair",
+      "permanent": true
+    },
+    {
+      "source": "/apple-repair/",
+      "destination": "/services/apple-repair",
+      "permanent": true
+    },
+    {
+      "source": "/wifi-network",
+      "destination": "/services/wifi-network",
+      "permanent": true
+    },
+    {
+      "source": "/wifi-network/",
+      "destination": "/services/wifi-network",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home",
+      "destination": "/services/smart-home",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home/",
+      "destination": "/services/smart-home",
+      "permanent": true
+    },
+    {
+      "source": "/tv-audio",
+      "destination": "/services/tv-audio",
+      "permanent": true
+    },
+    {
+      "source": "/tv-audio/",
+      "destination": "/services/tv-audio",
+      "permanent": true
+    },
+    {
+      "source": "/business-it",
+      "destination": "/services/business-it",
+      "permanent": true
+    },
+    {
+      "source": "/business-it/",
+      "destination": "/services/business-it",
+      "permanent": true
+    },
+    {
       "source": "/iphone-repair",
       "destination": "/services/apple-repair",
       "permanent": true

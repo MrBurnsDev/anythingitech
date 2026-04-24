@@ -288,7 +288,7 @@ export default function BusinessPage() {
                 </div>
               </div>
               <Button asChild variant="outline" className="rounded-full shrink-0">
-                <Link to="/business-it">
+                <Link to="/services/business-it">
                   Learn More <ArrowUpRight className="h-4 w-4 ml-1" />
                 </Link>
               </Button>

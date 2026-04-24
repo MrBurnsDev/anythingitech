@@ -157,7 +157,7 @@ export default function BusinessTypePage() {
                   </p>
                 </div>
                 <Button asChild size="lg" variant="secondary" className="rounded-full shrink-0">
-                  <Link to="/business-it">
+                  <Link to="/services/business-it">
                     <Wifi className="h-4 w-4 mr-2" />
                     Business IT Services
                   </Link>

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, MapPin, Clock, ArrowRight, Loader2 } from "lucide-react";
+import { Mail, MapPin, Clock, ArrowRight, Loader2, Phone } from "lucide-react";
 import { toast } from "sonner";
 
 const Contact = () => {
@@ -51,11 +51,11 @@ const Contact = () => {
           <p className="eyebrow mb-6">Contact</p>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
             <h1 className="lg:col-span-8 display-xl text-balance animate-fade-up">
-              Let's plan your project.
+              Get in touch.
             </h1>
             <p className="lg:col-span-4 text-base text-muted-foreground leading-relaxed animate-fade-up-delay-1">
-              Tell us about your home or business. We'll respond within one business day with a
-              clear path forward — no obligation.
+              Call (508) 560-3510 or send us a message. Service by appointment.
+              We'll respond within one business day.
             </p>
           </div>
         </div>
@@ -126,8 +126,15 @@ const Contact = () => {
                 <p className="eyebrow text-primary-foreground/60 mb-4">
                   <span className="text-primary-foreground/60">Direct</span>
                 </p>
-                <h3 className="font-display text-2xl mb-6">Prefer to reach us directly?</h3>
+                <h3 className="font-display text-2xl mb-6">Contact us directly</h3>
                 <ul className="space-y-5">
+                  <li className="flex items-start gap-3">
+                    <Phone className="h-5 w-5 text-accent mt-0.5 shrink-0" strokeWidth={1.5} />
+                    <div>
+                      <div className="text-xs uppercase tracking-[0.18em] text-primary-foreground/50 mb-1">Phone</div>
+                      <a href="tel:+15085603510" className="text-[15px] link-underline">(508) 560-3510</a>
+                    </div>
+                  </li>
                   <li className="flex items-start gap-3">
                     <Mail className="h-5 w-5 text-accent mt-0.5 shrink-0" strokeWidth={1.5} />
                     <div>

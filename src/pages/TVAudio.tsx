@@ -7,8 +7,8 @@ const TVAudio = () => (
   <SiteLayout>
     <ServicePageContent
       eyebrow="TV, Audio & Home Tech"
-      title="TV and audio installations that look — and sound — flawless."
-      overview="From a single bedroom television to a multi-room media system, we install with the care you'd expect from a fine carpenter. Concealed wiring, perfectly level mounts, and audio that fills the room without dominating it."
+      title="TV mounting, soundbar setup, and home audio."
+      overview="TV wall mounting with concealed wiring. Soundbar and receiver setup. Streaming device configuration. We install and configure your home entertainment system so it works reliably."
       image={heroImg}
       problems={[
         "Wires hanging visibly from a wall-mounted television",
@@ -38,12 +38,12 @@ const TVAudio = () => (
         "Renovations requiring pre-wire planning",
       ]}
       whyUs={[
-        { title: "Architectural-quality install", body: "We treat wires like trim — hidden, intentional, and in line with the design of the room." },
-        { title: "Calibrated picture and sound", body: "We don't just hang the TV. We tune the picture mode, balance the speakers, and verify it actually sounds right." },
-        { title: "One simple way to use it", body: "We program controls so anyone in the house — guests included — can turn it on and watch without instruction." },
+        { title: "Clean installation", body: "Wires concealed in the wall, level mounting, and proper cable management." },
+        { title: "Configured correctly", body: "We set up picture modes, balance speakers, and configure your streaming devices so everything works." },
+        { title: "Easy to use", body: "We set up remotes and apps so anyone in the house can turn it on and watch without confusion." },
       ]}
     />
-    <CTASection title="Planning a media install?" description="Ideal to involve us during renovations — but we work beautifully with finished spaces too." />
+    <CTASection title="Need a TV mounted?" description="Call (508) 560-3510 or email louis@anythingitechmv.com. Service by appointment." />
   </SiteLayout>
 );
 

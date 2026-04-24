@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink as RouterNavLink, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const nav = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
-  { to: "/apple-repair", label: "Apple Repair" },
-  { to: "/wifi-network", label: "Wi-Fi & Network" },
-  { to: "/smart-home", label: "Smart Home" },
-  { to: "/tv-audio", label: "TV & Audio" },
-  { to: "/business-it", label: "Business IT" },
+  { to: "/services/apple-repair", label: "Apple Repair" },
+  { to: "/services/wifi-network", label: "Wi-Fi & Network" },
+  { to: "/services/smart-home", label: "Smart Home" },
+  { to: "/services/tv-audio", label: "TV & Audio" },
+  { to: "/services/business-it", label: "Business IT" },
   { to: "/about", label: "About" },
 ];
 
@@ -69,7 +69,11 @@ export const Header = () => {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex items-center gap-4">
+          <a href="tel:+15085603510" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Phone className="h-4 w-4" />
+            <span>(508) 560-3510</span>
+          </a>
           <Button asChild variant="default" size="default" className="rounded-full px-5">
             <Link to="/contact">Request a Visit</Link>
           </Button>
@@ -108,7 +112,11 @@ export const Header = () => {
               {item.label}
             </RouterNavLink>
           ))}
-          <Button asChild className="mt-5 rounded-full">
+          <a href="tel:+15085603510" className="mt-4 flex items-center justify-center gap-2 py-3 text-base text-muted-foreground">
+            <Phone className="h-4 w-4" />
+            <span>(508) 560-3510</span>
+          </a>
+          <Button asChild className="mt-2 rounded-full">
             <Link to="/contact">Request a Visit</Link>
           </Button>
         </div>

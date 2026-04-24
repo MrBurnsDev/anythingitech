@@ -15,19 +15,19 @@ import vineyardImg from "@/assets/marthas-vineyard.jpg";
 import officeImg from "@/assets/business-office.jpg";
 
 const services = [
-  { icon: Apple, title: "Apple Repair & Support", description: "Mac troubleshooting, macOS tuning, hardware repair, migrations, and ongoing care.", to: "/apple-repair" },
-  { icon: Wifi, title: "Wi-Fi & Networking", description: "Designed networks for full-coverage homes and reliable, business-grade offices.", to: "/wifi-network" },
-  { icon: HomeIcon, title: "Smart Home", description: "Lighting, climate, shades, security, and access — set up to simply work.", to: "/smart-home" },
-  { icon: Music, title: "Sonos & Audio", description: "Whole-home audio that disappears into the architecture and sounds extraordinary.", to: "/smart-home" },
-  { icon: Tv, title: "TV Installations", description: "Concealed wiring, perfectly level mounts, calibrated picture and sound.", to: "/tv-audio" },
-  { icon: Building2, title: "Business IT Support", description: "Networks, workstations, printers, and ongoing IT for island businesses.", to: "/business-it" },
+  { icon: Apple, title: "Apple Repair & Support", description: "iPhone screen repair, Mac troubleshooting, system cleanup, data migration, Time Machine backup setup.", to: "/services/apple-repair" },
+  { icon: Wifi, title: "Wi-Fi & Network Installation", description: "Ubiquiti enterprise equipment, full-coverage wireless, structured cabling, network troubleshooting.", to: "/services/wifi-network" },
+  { icon: HomeIcon, title: "Smart Home Setup", description: "Lighting, climate, locks, cameras, and smart device integration for your home.", to: "/services/smart-home" },
+  { icon: Music, title: "Sonos & Audio", description: "Sonos installation, whole-home audio setup, speaker troubleshooting and configuration.", to: "/services/smart-home" },
+  { icon: Tv, title: "TV Mounting & Setup", description: "TV wall mounting, concealed wiring, soundbar setup, streaming device configuration.", to: "/services/tv-audio" },
+  { icon: Building2, title: "Business IT Support", description: "Office networks, workstations, printers, server maintenance, and ongoing IT support.", to: "/services/business-it" },
 ];
 
 const process = [
-  { n: "01", icon: Compass, title: "Assess", body: "We listen, walk the property, and understand how you actually live or work." },
-  { n: "02", icon: ClipboardCheck, title: "Recommend", body: "A clear plan, transparent pricing, and equipment chosen for your home, not ours." },
-  { n: "03", icon: Wrench, title: "Install / Repair", body: "Tidy, careful, on-time work — done right the first time." },
-  { n: "04", icon: LifeBuoy, title: "Support", body: "We stay available. Quick answers, scheduled visits, calm year-round care." },
+  { n: "01", icon: Compass, title: "Assess", body: "We listen, look at your setup, and understand what you need fixed or installed." },
+  { n: "02", icon: ClipboardCheck, title: "Recommend", body: "A clear plan with transparent pricing. We recommend what works, not what's most expensive." },
+  { n: "03", icon: Wrench, title: "Install / Repair", body: "On-site service, done right the first time. We come to you by appointment." },
+  { n: "04", icon: LifeBuoy, title: "Support", body: "We stay available year-round. Call or email when you need help." },
 ];
 
 const testimonials = [
@@ -50,12 +50,12 @@ const Index = () => {
             <span className="text-primary-foreground/70">Martha's Vineyard · Est. on the island</span>
           </p>
           <h1 className="display-xl text-balance max-w-5xl animate-fade-up-delay-1">
-            Quietly exceptional<br />
-            <span className="italic font-normal">technology service</span> for the island.
+            We make your emergency, ours.<br />
+            <span className="italic font-normal">Technology service</span> for Martha's Vineyard.
           </h1>
           <p className="mt-7 text-lg md:text-xl text-primary-foreground/80 max-w-2xl leading-relaxed text-pretty animate-fade-up-delay-2">
-            Apple expertise, designed Wi-Fi networks, smart home integration, and white-glove
-            IT support for the homes and businesses of Martha's Vineyard.
+            iPhone and Mac repair, Wi-Fi network installation, smart home setup, and IT support
+            for homes and businesses across Martha's Vineyard. By appointment.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 animate-fade-up-delay-3">
             <Button asChild size="xl" variant="hero" className="rounded-full">
@@ -69,10 +69,10 @@ const Index = () => {
           {/* Stats strip */}
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-primary-foreground/15 border border-primary-foreground/15 rounded-xl overflow-hidden backdrop-blur-sm animate-fade-up-delay-3">
             {[
-              { k: "12+", v: "Years on the island" },
+              { k: "Since 2008", v: "On the island" },
               { k: "1,400+", v: "Devices serviced" },
-              { k: "350+", v: "Networks designed" },
-              { k: "Year-round", v: "Local availability" },
+              { k: "350+", v: "Networks installed" },
+              { k: "(508) 560-3510", v: "By appointment" },
             ].map((s) => (
               <div key={s.v} className="bg-primary/60 px-6 py-7">
                 <div className="font-display text-3xl md:text-4xl font-light">{s.k}</div>
@@ -87,18 +87,17 @@ const Index = () => {
       <section className="py-24 md:py-32 border-b border-border">
         <div className="container-editorial grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
-            <p className="eyebrow mb-5">A different kind of tech help</p>
-            <h2 className="display-lg text-balance">White-glove tech, made for island living.</h2>
+            <p className="eyebrow mb-5">Using technology shouldn't be a struggle</p>
+            <h2 className="display-lg text-balance">Local tech support, year-round.</h2>
           </div>
           <div className="lg:col-span-7 lg:col-start-6 self-end">
             <p className="text-lg leading-relaxed text-pretty text-muted-foreground">
-              We are a small, deliberate team that treats your home and business with care.
-              From the first walkthrough to the final cable, we plan thoughtfully, install
-              cleanly, and stay reachable. No call centers, no upsells — just calm,
-              capable technology service that simply works.
+              iPhone screen repairs, Mac troubleshooting, Wi-Fi network installation,
+              smart home setup, and ongoing IT support. We come to you, work by appointment,
+              and stay available year-round. No call centers, no waiting weeks for off-island service.
             </p>
             <div className="mt-10 flex flex-wrap gap-x-10 gap-y-4 text-sm">
-              {["Apple Certified Approach", "Discreet & On-Time", "Clean Cable Management", "Year-Round Local Support"].map((t) => (
+              {["Apple Certified Technician", "By Appointment", "On-Site Service", "Year-Round Availability"].map((t) => (
                 <div key={t} className="flex items-center gap-2.5">
                   <span className="h-1.5 w-1.5 rounded-full bg-accent" />
                   <span>{t}</span>
@@ -115,7 +114,7 @@ const Index = () => {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div className="max-w-2xl">
               <p className="eyebrow mb-5">Services</p>
-              <h2 className="display-lg text-balance">Everything technology, considered.</h2>
+              <h2 className="display-lg text-balance">What we do.</h2>
             </div>
             <Link to="/services" className="link-underline text-sm font-medium inline-flex items-center gap-1.5">
               View all services <ArrowUpRight className="h-4 w-4" />
@@ -182,7 +181,7 @@ const Index = () => {
                   Networks, workstations, printers, and the proactive IT care your team needs to focus
                   on the work — not the technology.
                 </p>
-                <Link to="/business-it" className="inline-flex items-center gap-2 link-underline text-sm font-medium w-fit">
+                <Link to="/services/business-it" className="inline-flex items-center gap-2 link-underline text-sm font-medium w-fit">
                   Business services <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>
@@ -197,11 +196,11 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
             <div className="lg:col-span-5">
               <p className="eyebrow mb-5">How we work</p>
-              <h2 className="display-lg text-balance">A measured, methodical process.</h2>
+              <h2 className="display-lg text-balance">How we work.</h2>
             </div>
             <p className="lg:col-span-6 lg:col-start-7 self-end text-muted-foreground leading-relaxed text-pretty text-[17px]">
-              Every project — from a single Mac tune-up to a whole-home network — moves
-              through the same careful sequence. So you always know exactly where things stand.
+              Every project — from a 15-minute iPhone screen repair to a whole-home network
+              installation — follows a straightforward process so you know what to expect.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border rounded-xl overflow-hidden">

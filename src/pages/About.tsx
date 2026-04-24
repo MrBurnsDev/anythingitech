@@ -19,8 +19,8 @@ const About = () => (
       <div className="container-editorial relative">
         <p className="eyebrow mb-6">About</p>
         <h1 className="display-xl text-balance max-w-4xl animate-fade-up">
-          A small island team,<br />
-          <span className="italic font-normal">built on quiet trust.</span>
+          Local tech support<br />
+          <span className="italic font-normal">since 2008.</span>
         </h1>
       </div>
     </section>
@@ -35,20 +35,21 @@ const About = () => (
         </div>
         <div className="lg:col-span-6 lg:col-start-7 space-y-6 text-[17px] leading-relaxed text-pretty">
           <p className="eyebrow">Our story</p>
-          <h2 className="display-lg text-balance">Premium technology service, made for the way the island lives.</h2>
+          <h2 className="display-lg text-balance">Martha's Vineyard technology service since 2008.</h2>
           <p className="text-muted-foreground">
-            Anything Itech MV was founded out of a simple observation: the homes and businesses
-            of Martha's Vineyard deserve the same caliber of technology service available in
-            Boston or New York — without the wait, the call centers, or the upsells.
+            Anything Itech MV was started in 2008 by Louis Hall, after 7 years doing in-home
+            Apple support and repair for a national company. Louis earned his Apple Certified
+            Macintosh Technician (ACMT) certification in 2012 and has serviced corporate clients
+            with over 200 iOS devices.
           </p>
           <p className="text-muted-foreground">
-            We built a small, careful practice focused on Apple expertise, properly designed
-            networks, and integrated home systems. Today we serve homeowners, family offices,
-            inns, and small businesses across all six island towns — year-round.
+            What started as "Anything Apple" expanded to "Anything Itech MV" in 2017 to cover
+            all technology services — including Wi-Fi network installation, smart home setup,
+            TV mounting, and business IT support across Martha's Vineyard.
           </p>
           <p className="text-muted-foreground">
-            Our work is intentionally quiet. The best compliment we receive is when a client
-            says they'd forgotten the technology was there at all — because everything simply works.
+            Today we serve homeowners and businesses across all six island towns, year-round.
+            Service is by appointment. Call (508) 560-3510 or email louis@anythingitechmv.com.
           </p>
         </div>
       </div>
@@ -80,11 +81,11 @@ const About = () => (
       <div className="container-editorial grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
         <div className="lg:col-span-5">
           <p className="eyebrow mb-5">By the numbers</p>
-          <h2 className="display-lg text-balance">Quietly trusted across the island.</h2>
+          <h2 className="display-lg text-balance">Trusted across the island.</h2>
         </div>
         <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-4 gap-px bg-border rounded-xl overflow-hidden">
           {[
-            { k: "12+", v: "Years on MV" },
+            { k: "Since 2008", v: "On the island" },
             { k: "1,400+", v: "Devices" },
             { k: "350+", v: "Networks" },
             { k: "98%", v: "Repeat clients" },

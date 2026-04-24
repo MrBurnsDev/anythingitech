@@ -7,8 +7,8 @@ const WifiNetwork = () => (
   <SiteLayout>
     <ServicePageContent
       eyebrow="Wi-Fi & Network Installation"
-      title="Networks designed to disappear — and never let you down."
-      overview="Whether you need full coverage in a sprawling shingled estate or rock-solid reliability in a busy office, we design and install networks engineered for the way you actually live and work."
+      title="Wi-Fi network installation and troubleshooting."
+      overview="Full-coverage wireless networks using Ubiquiti enterprise-grade equipment. We install, configure, and maintain networks for homes and businesses across Martha's Vineyard. Server maintenance, printer setup, and gaming networks included."
       image={networkImg}
       problems={[
         "Wi-Fi dead zones in upstairs bedrooms or guest houses",
@@ -22,14 +22,14 @@ const WifiNetwork = () => (
       ]}
       included={[
         "On-site Wi-Fi survey and signal mapping",
-        "Custom network design and equipment recommendation",
-        "Premium Ubiquiti, Eero Pro, or business-grade gear",
+        "Ubiquiti enterprise equipment installation",
         "Mesh and access-point systems for full coverage",
         "Structured Ethernet cabling and wall plates",
-        "Secure guest networks and IoT segmentation",
-        "Concealed installation and clean cable management",
-        "Cloud-managed monitoring and ongoing support",
-        "Documentation of your network for future reference",
+        "Business server maintenance and setup",
+        "Printer and scanner network configuration",
+        "Guest network setup for rentals and visitors",
+        "Gaming network optimization",
+        "Network troubleshooting and ongoing support",
       ]}
       ideal={[
         "Larger homes with multiple stories or out-buildings",
@@ -38,12 +38,12 @@ const WifiNetwork = () => (
         "Businesses requiring secure, multi-user networks",
       ]}
       whyUs={[
-        { title: "Designed, not improvised", body: "Every network we install is planned with a survey, a diagram, and intention — not a router from the hardware store." },
-        { title: "Premium equipment, properly managed", body: "We standardize on a small set of business-grade systems we trust, monitor remotely, and update proactively." },
-        { title: "Cabling that's hidden, but accessible", body: "Clean conduit, labeled lines, and rack work that other technicians can actually maintain in the future." },
+        { title: "Ubiquiti enterprise equipment", body: "We use Ubiquiti enterprise-grade equipment — the same hardware used by professional network installers worldwide." },
+        { title: "Full coverage, properly installed", body: "Every network is planned with a site survey and installed for complete coverage, including guest houses and outdoor areas." },
+        { title: "Ongoing support", body: "We troubleshoot network issues, maintain business servers, and provide ongoing support when you need it." },
       ]}
     />
-    <CTASection title="Coverage problems? Let's solve them properly." description="A site visit is the fastest way to a Wi-Fi network you stop thinking about." />
+    <CTASection title="Need a network installed or fixed?" description="Call (508) 560-3510 or email louis@anythingitechmv.com. Service by appointment." />
   </SiteLayout>
 );
 

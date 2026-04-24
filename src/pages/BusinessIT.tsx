@@ -38,12 +38,12 @@ const BusinessIT = () => (
         "Any island business without an in-house IT team",
       ]}
       whyUs={[
-        { title: "Local, year-round availability", body: "Your IT support is on the island — not on hold. Same-day response during the busy season is the norm." },
-        { title: "Apple and Windows fluent", body: "Mixed environments, mixed devices, no problem. We support whatever your team actually uses." },
-        { title: "Quiet, proactive care", body: "We monitor the things that matter and fix small problems before they become outages or lost revenue." },
+        { title: "Local, year-round availability", body: "Your IT support is on the island — not on hold. Same-day response during the busy season when possible." },
+        { title: "Mac and Windows support", body: "Mixed environments, mixed devices, no problem. We support whatever your business actually uses." },
+        { title: "Proactive support", body: "We handle the ongoing IT so you can focus on your business, not troubleshooting technology." },
       ]}
     />
-    <CTASection title="Let's audit your business technology." description="A free, no-obligation walkthrough to identify quick wins and long-term improvements." />
+    <CTASection title="Need business IT support?" description="Call (508) 560-3510 or email louis@anythingitechmv.com. Service by appointment." />
   </SiteLayout>
 );
 

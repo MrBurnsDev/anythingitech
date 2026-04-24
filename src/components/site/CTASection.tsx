@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 
 export const CTASection = ({
-  title = "Let's plan your project.",
-  description = "Tell us about your home or business. We'll respond within one business day with a clear path forward.",
+  title = "Need help with your technology?",
+  description = "Call (508) 560-3510 or email louis@anythingitechmv.com. Service by appointment.",
 }: {
   title?: string;
   description?: string;
@@ -30,11 +30,11 @@ export const CTASection = ({
           <div className="lg:col-span-4 flex flex-col gap-3 lg:items-end">
             <Button asChild size="xl" variant="hero-outline" className="rounded-full w-full lg:w-auto">
               <Link to="/contact">
-                Request a Visit <ArrowUpRight className="h-4 w-4" />
+                Contact Us <ArrowUpRight className="h-4 w-4" />
               </Link>
             </Button>
-            <a href="mailto:louis@anythingitechmv.com" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors link-underline">
-              louis@anythingitechmv.com
+            <a href="tel:+15085603510" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors link-underline">
+              (508) 560-3510
             </a>
           </div>
         </div>

@@ -47,10 +47,10 @@ export const ServicePageContent = ({
         <div className="container-editorial grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5 lg:sticky lg:top-28 self-start">
             <p className="eyebrow mb-5">Common needs</p>
-            <h2 className="display-md text-balance">Problems we quietly resolve.</h2>
+            <h2 className="display-md text-balance">Problems we solve.</h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Whether it's a single device or an entire estate, we approach every project with the
-              same calm precision and clear communication.
+              Whether it's a single device or a complete network installation, we handle it.
+              On-site service by appointment across Martha's Vineyard.
             </p>
           </div>
           <ul className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-x-8">

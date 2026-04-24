@@ -8,7 +8,7 @@ const SmartHome = () => (
     <ServicePageContent
       eyebrow="Smart Home & Sonos"
       title="A smart home that feels effortless — never complicated."
-      overview="The best smart home is one you barely notice. We design, install, and quietly maintain integrated systems for lighting, audio, climate, and access — all controlled simply, from one app or a single tap."
+      overview="Smart home setup and integration — lighting, audio, climate, locks, and cameras. We install, configure, and maintain your smart devices so they work reliably. Sonos installation and troubleshooting included."
       image={sonosImg}
       problems={[
         "Sonos speakers dropping out or refusing to group",
@@ -38,12 +38,12 @@ const SmartHome = () => (
         "Anyone tired of juggling four different apps",
       ]}
       whyUs={[
-        { title: "Restraint over gadgetry", body: "We recommend the fewest, most reliable products to do the job — never an excess of devices for their own sake." },
-        { title: "Sonos and audio specialists", body: "Years of dedicated Sonos work means we know how to design, deploy, and quietly fix any wireless audio system." },
-        { title: "One source of support", body: "When something acts up, you call one number. We diagnose across the entire ecosystem so you don't have to." },
+        { title: "Practical recommendations", body: "We recommend reliable products that work well together — not the most expensive or complicated options." },
+        { title: "Sonos specialists", body: "Years of Sonos installation and troubleshooting experience. We set up whole-home audio that actually works." },
+        { title: "One call for support", body: "When something stops working, call us. We troubleshoot across your entire system." },
       ]}
     />
-    <CTASection title="Plan your smart home, calmly." description="From a single Sonos zone to a fully integrated home — we'd love to help." />
+    <CTASection title="Need smart home help?" description="Call (508) 560-3510 or email louis@anythingitechmv.com. Service by appointment." />
   </SiteLayout>
 );
 

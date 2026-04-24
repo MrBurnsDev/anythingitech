@@ -244,7 +244,7 @@ export default function DirectoryIndex() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 lg:justify-end">
                 <Button asChild size="lg" variant="secondary" className="rounded-full">
-                  <Link to="/business-it">
+                  <Link to="/services/business-it">
                     <Wifi className="h-4 w-4 mr-2" />
                     Business IT Services
                   </Link>

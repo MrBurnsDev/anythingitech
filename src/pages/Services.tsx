@@ -6,15 +6,15 @@ import { ArrowUpRight, Apple, Wifi, Home, Music, Tv, Building2, Printer, Monitor
 import appleImg from "@/assets/apple-desk.jpg";
 
 const all = [
-  { icon: Apple, title: "Apple Repair & Support", description: "Mac troubleshooting, screen and battery service, macOS optimization, data migrations, and proactive device care.", to: "/apple-repair" },
-  { icon: Wifi, title: "Wi-Fi & Network Installation", description: "Designed wireless networks, mesh and access-point systems, structured cabling, and business-grade reliability.", to: "/wifi-network" },
-  { icon: Home, title: "Smart Home Setup", description: "Lighting, climate, shades, locks, cameras, and unified control — quietly integrated into your home.", to: "/smart-home" },
-  { icon: Music, title: "Sonos & Whole-Home Audio", description: "Sonos installation, troubleshooting, and architectural audio that disappears into the room.", to: "/smart-home" },
-  { icon: Tv, title: "TV Mounting & Media", description: "Concealed wiring, perfectly level mounts, soundbars, AV receivers, and fully calibrated picture.", to: "/tv-audio" },
-  { icon: Building2, title: "Business IT Support", description: "Networks, workstations, printers, file sharing, and ongoing managed IT for island businesses.", to: "/business-it" },
-  { icon: Printer, title: "Printer & Device Setup", description: "Wireless printers, scanners, peripherals — set up properly and connected reliably to every device.", to: "/services" },
-  { icon: MonitorSmartphone, title: "Home Office Optimization", description: "Beautiful, productive home offices with reliable Wi-Fi, video conferencing, and Apple ecosystem tuning.", to: "/services" },
-  { icon: ShieldCheck, title: "General IT & On-Site Help", description: "On-call island technician for the small things and the urgent things, from passwords to outages.", to: "/services" },
+  { icon: Apple, title: "Apple Repair & Support", description: "iPhone screen repair, Mac troubleshooting, system cleanup, data migration, Time Machine backup, iCloud setup.", to: "/services/apple-repair" },
+  { icon: Wifi, title: "Wi-Fi & Network Installation", description: "Ubiquiti enterprise equipment, full-coverage wireless, structured cabling, server maintenance.", to: "/services/wifi-network" },
+  { icon: Home, title: "Smart Home Setup", description: "Lighting, climate, locks, cameras, and smart device integration. Setup and troubleshooting.", to: "/services/smart-home" },
+  { icon: Music, title: "Sonos & Whole-Home Audio", description: "Sonos installation, configuration, and troubleshooting. Whole-home audio setup.", to: "/services/smart-home" },
+  { icon: Tv, title: "TV Mounting & Setup", description: "TV wall mounting, concealed wiring, soundbar setup, streaming device configuration.", to: "/services/tv-audio" },
+  { icon: Building2, title: "Business IT Support", description: "Office networks, workstations, printers, server maintenance, and ongoing IT support.", to: "/services/business-it" },
+  { icon: Printer, title: "Printer & Device Setup", description: "Wireless printer setup, scanner configuration, peripheral troubleshooting.", to: "/services" },
+  { icon: MonitorSmartphone, title: "Home Office Setup", description: "Home office setup with reliable Wi-Fi, video conferencing, and Apple device configuration.", to: "/services" },
+  { icon: ShieldCheck, title: "General IT Support", description: "On-site tech support for homes and businesses. Troubleshooting, repairs, and setup.", to: "/services" },
 ];
 
 const Services = () => {
@@ -22,8 +22,8 @@ const Services = () => {
     <SiteLayout>
       <PageHeader
         eyebrow="Services"
-        title="Comprehensive technology service, considered in every detail."
-        description="Residential and business technology — from a single device to a fully integrated home or office. One trusted local team, available year-round."
+        title="Technology services for Martha's Vineyard."
+        description="iPhone and Mac repair, Wi-Fi network installation, smart home setup, TV mounting, and business IT support. Local service, by appointment."
         image={appleImg}
       />
 

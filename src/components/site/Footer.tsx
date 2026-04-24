@@ -4,11 +4,11 @@ const cols = [
   {
     title: "Services",
     links: [
-      { to: "/apple-repair", label: "Apple Repair & Support" },
-      { to: "/wifi-network", label: "Wi-Fi & Network Installation" },
-      { to: "/smart-home", label: "Smart Home & Sonos" },
-      { to: "/tv-audio", label: "TV, Audio & Home Tech" },
-      { to: "/business-it", label: "Business IT Support" },
+      { to: "/services/apple-repair", label: "Apple Repair & Support" },
+      { to: "/services/wifi-network", label: "Wi-Fi & Network Installation" },
+      { to: "/services/smart-home", label: "Smart Home & Sonos" },
+      { to: "/services/tv-audio", label: "TV, Audio & Home Tech" },
+      { to: "/services/business-it", label: "Business IT Support" },
     ],
   },
   {
@@ -49,12 +49,14 @@ export const Footer = () => {
               </div>
             </div>
             <p className="mt-6 text-[15px] leading-relaxed text-primary-foreground/70 max-w-sm">
-              White-glove technology service for the homes and businesses of Martha's Vineyard.
-              Apple expertise, designed networks, and quietly reliable support.
+              Technology service for the homes and businesses of Martha's Vineyard since 2008.
+              iPhone and Mac repair, Wi-Fi networks, smart home, and IT support.
             </p>
             <div className="mt-8 space-y-1.5 text-sm text-primary-foreground/70">
               <p>Martha's Vineyard, MA</p>
               <p>By appointment · Year-round service</p>
+              <a href="tel:+15085603510" className="text-primary-foreground hover:underline">(508) 560-3510</a>
+              <span className="mx-2">·</span>
               <a href="mailto:louis@anythingitechmv.com" className="text-primary-foreground hover:underline">louis@anythingitechmv.com</a>
             </div>
           </div>
