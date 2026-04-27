@@ -1,39 +1,13 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import jwt from "jsonwebtoken";
-import Database from "better-sqlite3";
-import path from "path";
-import fs from "fs";
+import { supabase, Business } from "../lib/supabase";
 
-const DB_PATH = path.join(process.cwd(), "data", "mv_registry.db");
-const EXPORTS_PATH = path.join(process.cwd(), "data", "exports");
 const JWT_SECRET = process.env.JWT_SECRET || process.env.ADMIN_JWT_SECRET;
 
 interface JWTPayload {
   userId: number;
   username: string;
   role: string;
-}
-
-interface Business {
-  id: number;
-  business_name: string;
-  slug: string;
-  town: string;
-  category: string;
-  subcategory: string | null;
-  short_description: string | null;
-  full_address: string | null;
-  street_address: string | null;
-  phone: string | null;
-  email: string | null;
-  website: string | null;
-  facebook_url: string | null;
-  instagram_url: string | null;
-  yelp_url: string | null;
-  tripadvisor_url: string | null;
-  business_status: string;
-  latitude: number | null;
-  longitude: number | null;
 }
 
 function verifyToken(token: string): JWTPayload | null {
@@ -64,24 +38,20 @@ function authenticate(req: VercelRequest): JWTPayload | null {
   return verifyToken(token);
 }
 
-function logAudit(
-  db: Database.Database,
+async function logAudit(
   entityType: string,
   entityId: number | null,
   action: string,
   performedBy: string,
   changes?: Record<string, unknown>
 ) {
-  db.prepare(`
-    INSERT INTO audit_log (entity_type, entity_id, action, changes, performed_by)
-    VALUES (?, ?, ?, ?, ?)
-  `).run(
-    entityType,
-    entityId,
+  await supabase.from("audit_log").insert({
+    entity_type: entityType,
+    entity_id: entityId,
     action,
-    changes ? JSON.stringify(changes) : null,
-    performedBy
-  );
+    changes: changes || null,
+    performed_by: performedBy,
+  });
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -105,68 +75,24 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(401).json({ error: "Unauthorized" });
   }
 
-  const db = new Database(DB_PATH, { readonly: true });
-
   try {
     // Get all active, non-duplicate businesses
-    const businesses = db
-      .prepare(
-        `
-        SELECT
-          id, business_name, slug, town, category, subcategory,
-          short_description, full_address, street_address,
-          phone, email, website,
-          facebook_url, instagram_url, yelp_url, tripadvisor_url,
-          business_status, latitude, longitude
-        FROM businesses
-        WHERE is_duplicate = 0
-          AND business_status = 'active'
-          AND (needs_manual_review IS NULL OR needs_manual_review = 0)
-        ORDER BY business_name ASC
-      `
-      )
-      .all() as Business[];
+    const { data: businesses, error } = await supabase
+      .from("businesses")
+      .select("*")
+      .eq("is_duplicate", false)
+      .eq("business_status", "active")
+      .eq("needs_manual_review", false)
+      .order("business_name", { ascending: true });
 
-    // Format for public export
-    const publicBusinesses = businesses.map((b) => ({
-      id: b.id,
-      name: b.business_name,
-      slug: b.slug,
-      town: b.town,
-      category: b.category,
-      subcategory: b.subcategory || undefined,
-      description: b.short_description || undefined,
-      address: b.full_address || b.street_address || undefined,
-      phone: b.phone || undefined,
-      email: b.email || undefined,
-      website: b.website || undefined,
-      social: {
-        facebook: b.facebook_url || undefined,
-        instagram: b.instagram_url || undefined,
-        yelp: b.yelp_url || undefined,
-        tripadvisor: b.tripadvisor_url || undefined,
-      },
-      coordinates:
-        b.latitude && b.longitude
-          ? { lat: b.latitude, lng: b.longitude }
-          : undefined,
-    }));
-
-    // Remove empty social objects
-    publicBusinesses.forEach((b) => {
-      if (
-        !b.social.facebook &&
-        !b.social.instagram &&
-        !b.social.yelp &&
-        !b.social.tripadvisor
-      ) {
-        delete (b as Record<string, unknown>).social;
-      }
-    });
+    if (error) {
+      console.error("Export query error:", error);
+      return res.status(500).json({ error: "Failed to fetch businesses" });
+    }
 
     // Compute town stats
     const townCounts: Record<string, number> = {};
-    businesses.forEach((b) => {
+    businesses?.forEach((b) => {
       townCounts[b.town] = (townCounts[b.town] || 0) + 1;
     });
 
@@ -184,7 +110,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     // Compute category stats
     const categoryCounts: Record<string, number> = {};
-    businesses.forEach((b) => {
+    businesses?.forEach((b) => {
       categoryCounts[b.category] = (categoryCounts[b.category] || 0) + 1;
     });
 
@@ -208,47 +134,42 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }))
       .sort((a, b) => b.businessCount - a.businessCount);
 
-    // Ensure exports directory exists
-    if (!fs.existsSync(EXPORTS_PATH)) {
-      fs.mkdirSync(EXPORTS_PATH, { recursive: true });
-    }
-
-    // Write files
-    fs.writeFileSync(
-      path.join(EXPORTS_PATH, "businesses.json"),
-      JSON.stringify(publicBusinesses, null, 2)
-    );
-
-    fs.writeFileSync(
-      path.join(EXPORTS_PATH, "towns.json"),
-      JSON.stringify(towns, null, 2)
-    );
-
-    fs.writeFileSync(
-      path.join(EXPORTS_PATH, "business-types.json"),
-      JSON.stringify(businessTypes, null, 2)
-    );
-
     // Log the export
-    logAudit(db, "system", null, "export", user.username, {
-      businessCount: businesses.length,
+    await logAudit("system", null, "export", user.username, {
+      businessCount: businesses?.length || 0,
       townCount: towns.length,
       categoryCount: businessTypes.length,
     });
 
+    // Return the data (in production, you'd write to files or a CDN)
     return res.status(200).json({
       success: true,
       exported: {
-        businesses: businesses.length,
+        businesses: businesses?.length || 0,
         towns: towns.length,
         categories: businessTypes.length,
+      },
+      data: {
+        businesses: businesses?.map((b) => ({
+          id: b.id,
+          name: b.business_name,
+          slug: b.slug,
+          town: b.town,
+          category: b.category,
+          subcategory: b.subcategory || undefined,
+          description: b.short_description || undefined,
+          address: b.full_address || b.street_address || undefined,
+          phone: b.phone || undefined,
+          email: b.email || undefined,
+          website: b.website || undefined,
+        })),
+        towns,
+        businessTypes,
       },
       timestamp: new Date().toISOString(),
     });
   } catch (error) {
     console.error("Export error:", error);
     return res.status(500).json({ error: "Export failed" });
-  } finally {
-    db.close();
   }
 }

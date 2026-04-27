@@ -1,24 +1,12 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import Database from "better-sqlite3";
-import path from "path";
+import { supabase, AdminUser } from "../lib/supabase";
 
-const DB_PATH = path.join(process.cwd(), "data", "mv_registry.db");
 const JWT_SECRET = process.env.JWT_SECRET || process.env.ADMIN_JWT_SECRET;
 
 if (!JWT_SECRET) {
   console.error("Warning: JWT_SECRET not set in environment variables");
-}
-
-interface AdminUser {
-  id: number;
-  username: string;
-  password_hash: string;
-  display_name: string;
-  email: string;
-  role: string;
-  is_active: number;
 }
 
 interface JWTPayload {
@@ -41,13 +29,11 @@ export function verifyToken(token: string): JWTPayload | null {
 
 // Extract token from Authorization header or cookie
 function getTokenFromRequest(req: VercelRequest): string | null {
-  // Check Authorization header
   const authHeader = req.headers.authorization;
   if (authHeader?.startsWith("Bearer ")) {
     return authHeader.slice(7);
   }
 
-  // Check cookie
   const cookies = req.headers.cookie;
   if (cookies) {
     const match = cookies.match(/admin_token=([^;]+)/);
@@ -60,8 +46,7 @@ function getTokenFromRequest(req: VercelRequest): string | null {
 }
 
 // Log audit event
-function logAudit(
-  db: Database.Database,
+async function logAudit(
   entityType: string,
   entityId: number | null,
   action: string,
@@ -69,17 +54,14 @@ function logAudit(
   changes?: Record<string, unknown>,
   previousValues?: Record<string, unknown>
 ) {
-  db.prepare(`
-    INSERT INTO audit_log (entity_type, entity_id, action, changes, previous_values, performed_by)
-    VALUES (?, ?, ?, ?, ?, ?)
-  `).run(
-    entityType,
-    entityId,
+  await supabase.from("audit_log").insert({
+    entity_type: entityType,
+    entity_id: entityId,
     action,
-    changes ? JSON.stringify(changes) : null,
-    previousValues ? JSON.stringify(previousValues) : null,
-    performedBy
-  );
+    changes: changes || null,
+    previous_values: previousValues || null,
+    performed_by: performedBy,
+  });
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -97,8 +79,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(500).json({ error: "Server configuration error" });
   }
 
-  const db = new Database(DB_PATH, { readonly: false });
-
   try {
     // POST /api/admin/auth - Login
     if (req.method === "POST") {
@@ -110,7 +90,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         if (token) {
           const payload = verifyToken(token);
           if (payload) {
-            logAudit(db, "user", payload.userId, "logout", payload.username);
+            await logAudit("user", payload.userId, "logout", payload.username);
           }
         }
 
@@ -127,13 +107,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }
 
       // Find user
-      const user = db
-        .prepare("SELECT * FROM admin_users WHERE username = ? AND is_active = 1")
-        .get(username) as AdminUser | undefined;
+      const { data: user, error } = await supabase
+        .from("admin_users")
+        .select("*")
+        .eq("username", username)
+        .eq("is_active", true)
+        .single();
 
-      if (!user) {
-        // Log failed attempt
-        logAudit(db, "user", null, "login_failed", username, {
+      if (error || !user) {
+        await logAudit("user", null, "login_failed", username, {
           reason: "user_not_found",
         });
         return res.status(401).json({ error: "Invalid credentials" });
@@ -142,7 +124,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       // Check password
       const valid = await bcrypt.compare(password, user.password_hash);
       if (!valid) {
-        logAudit(db, "user", user.id, "login_failed", username, {
+        await logAudit("user", user.id, "login_failed", username, {
           reason: "invalid_password",
         });
         return res.status(401).json({ error: "Invalid credentials" });
@@ -160,12 +142,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       );
 
       // Update last login
-      db.prepare(
-        "UPDATE admin_users SET last_login_at = CURRENT_TIMESTAMP WHERE id = ?"
-      ).run(user.id);
+      await supabase
+        .from("admin_users")
+        .update({ last_login_at: new Date().toISOString() })
+        .eq("id", user.id);
 
       // Log successful login
-      logAudit(db, "user", user.id, "login", username);
+      await logAudit("user", user.id, "login", username);
 
       // Set cookie
       res.setHeader(
@@ -199,11 +182,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }
 
       // Get user info
-      const user = db
-        .prepare("SELECT id, username, display_name, email, role FROM admin_users WHERE id = ? AND is_active = 1")
-        .get(payload.userId) as Omit<AdminUser, "password_hash" | "is_active"> | undefined;
+      const { data: user, error } = await supabase
+        .from("admin_users")
+        .select("id, username, display_name, email, role")
+        .eq("id", payload.userId)
+        .eq("is_active", true)
+        .single();
 
-      if (!user) {
+      if (error || !user) {
         return res.status(401).json({ error: "User not found" });
       }
 
@@ -223,7 +209,5 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   } catch (error) {
     console.error("Auth error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  } finally {
-    db.close();
   }
 }

@@ -1,9 +1,7 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import jwt from "jsonwebtoken";
-import Database from "better-sqlite3";
-import path from "path";
+import { supabase, Business } from "../lib/supabase";
 
-const DB_PATH = path.join(process.cwd(), "data", "mv_registry.db");
 const JWT_SECRET = process.env.JWT_SECRET || process.env.ADMIN_JWT_SECRET;
 
 interface JWTPayload {
@@ -44,8 +42,7 @@ function authenticate(req: VercelRequest): JWTPayload | null {
 }
 
 // Log audit event
-function logAudit(
-  db: Database.Database,
+async function logAudit(
   entityType: string,
   entityId: number | null,
   action: string,
@@ -53,17 +50,14 @@ function logAudit(
   changes?: Record<string, unknown>,
   previousValues?: Record<string, unknown>
 ) {
-  db.prepare(`
-    INSERT INTO audit_log (entity_type, entity_id, action, changes, previous_values, performed_by)
-    VALUES (?, ?, ?, ?, ?, ?)
-  `).run(
-    entityType,
-    entityId,
+  await supabase.from("audit_log").insert({
+    entity_type: entityType,
+    entity_id: entityId,
     action,
-    changes ? JSON.stringify(changes) : null,
-    previousValues ? JSON.stringify(previousValues) : null,
-    performedBy
-  );
+    changes: changes || null,
+    previous_values: previousValues || null,
+    performed_by: performedBy,
+  });
 }
 
 // Generate slug from name and town
@@ -106,8 +100,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(401).json({ error: "Unauthorized" });
   }
 
-  const db = new Database(DB_PATH, { readonly: false });
-
   try {
     // GET /api/admin/businesses - List businesses or get single by ID
     if (req.method === "GET") {
@@ -115,13 +107,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
       // Get single business by ID
       if (id) {
-        const business = db
-          .prepare(
-            `SELECT * FROM businesses WHERE id = ? AND is_duplicate = 0`
-          )
-          .get(parseInt(id as string, 10));
+        const { data: business, error } = await supabase
+          .from("businesses")
+          .select("*")
+          .eq("id", parseInt(id as string, 10))
+          .eq("is_duplicate", false)
+          .single();
 
-        if (!business) {
+        if (error || !business) {
           return res.status(404).json({ error: "Business not found" });
         }
 
@@ -145,48 +138,43 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       const limitNum = Math.min(100, Math.max(1, parseInt(limit as string, 10)));
       const offset = (pageNum - 1) * limitNum;
 
-      // Build WHERE clause
-      const conditions: string[] = ["is_duplicate = 0"];
-      const params: (string | number)[] = [];
+      // Build query
+      let query = supabase
+        .from("businesses")
+        .select("*", { count: "exact" })
+        .eq("is_duplicate", false);
 
       if (search) {
-        conditions.push(
-          "(business_name LIKE ? OR slug LIKE ? OR website LIKE ? OR phone LIKE ?)"
+        query = query.or(
+          `business_name.ilike.%${search}%,slug.ilike.%${search}%,website.ilike.%${search}%,phone.ilike.%${search}%`
         );
-        const searchPattern = `%${search}%`;
-        params.push(searchPattern, searchPattern, searchPattern, searchPattern);
       }
 
       if (town && town !== "all") {
-        conditions.push("town = ?");
-        params.push(town as string);
+        query = query.eq("town", town);
       }
 
       if (category && category !== "all") {
-        conditions.push("category = ?");
-        params.push(category as string);
+        query = query.eq("category", category);
       }
 
       if (status && status !== "all") {
         if (status === "active") {
-          conditions.push("business_status = 'active'");
-          conditions.push("(needs_manual_review IS NULL OR needs_manual_review = 0)");
+          query = query.eq("business_status", "active").eq("needs_manual_review", false);
         } else if (status === "inactive") {
-          conditions.push("business_status != 'active'");
+          query = query.neq("business_status", "active");
         } else if (status === "needs_review") {
-          conditions.push("needs_manual_review = 1");
+          query = query.eq("needs_manual_review", true);
         }
       }
 
       if (needs_review === "true") {
-        conditions.push("needs_manual_review = 1");
+        query = query.eq("needs_manual_review", true);
       } else if (needs_review === "false") {
-        conditions.push("(needs_manual_review IS NULL OR needs_manual_review = 0)");
+        query = query.eq("needs_manual_review", false);
       }
 
-      const whereClause = conditions.length > 0 ? `WHERE ${conditions.join(" AND ")}` : "";
-
-      // Validate sort column
+      // Sort
       const validSorts = [
         "id",
         "business_name",
@@ -197,40 +185,25 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         "created_at",
         "confidence_score",
       ];
-      const sortCol = validSorts.includes(sort as string) ? sort : "updated_at";
-      const sortOrder = order === "asc" ? "ASC" : "DESC";
+      const sortCol = validSorts.includes(sort as string) ? (sort as string) : "updated_at";
+      const ascending = order === "asc";
 
-      // Get total count
-      const countResult = db
-        .prepare(`SELECT COUNT(*) as count FROM businesses ${whereClause}`)
-        .get(...params) as { count: number };
+      query = query.order(sortCol, { ascending }).range(offset, offset + limitNum - 1);
 
-      // Get businesses
-      const businesses = db
-        .prepare(
-          `
-          SELECT
-            id, business_name, slug, town, category, subcategory,
-            short_description, full_address, phone, email, website,
-            business_status, confidence_score, needs_manual_review, review_reason,
-            notes, created_at, updated_at,
-            facebook_url, instagram_url, yelp_url, tripadvisor_url,
-            latitude, longitude
-          FROM businesses
-          ${whereClause}
-          ORDER BY ${sortCol} ${sortOrder}
-          LIMIT ? OFFSET ?
-        `
-        )
-        .all(...params, limitNum, offset);
+      const { data: businesses, count, error } = await query;
+
+      if (error) {
+        console.error("Query error:", error);
+        return res.status(500).json({ error: "Failed to fetch businesses" });
+      }
 
       return res.status(200).json({
-        businesses,
+        businesses: businesses || [],
         pagination: {
           page: pageNum,
           limit: limitNum,
-          total: countResult.count,
-          totalPages: Math.ceil(countResult.count / limitNum),
+          total: count || 0,
+          totalPages: Math.ceil((count || 0) / limitNum),
         },
       });
     }
@@ -247,53 +220,55 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       const slug = data.slug || generateSlug(data.business_name, data.town);
 
       // Check for duplicate slug
-      const existing = db
-        .prepare("SELECT id FROM businesses WHERE slug = ?")
-        .get(slug);
+      const { data: existing } = await supabase
+        .from("businesses")
+        .select("id")
+        .eq("slug", slug)
+        .single();
+
       if (existing) {
         return res.status(400).json({ error: "A business with this slug already exists" });
       }
 
-      const result = db.prepare(`
-        INSERT INTO businesses (
-          business_name, slug, town, category, subcategory,
-          short_description, full_address, street_address,
-          phone, email, website,
-          facebook_url, instagram_url, yelp_url, tripadvisor_url,
-          business_status, confidence_score, needs_manual_review, review_reason,
-          notes, latitude, longitude,
-          created_at, updated_at
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
-      `).run(
-        sanitize(data.business_name),
-        slug,
-        sanitize(data.town),
-        sanitize(data.category),
-        sanitize(data.subcategory),
-        sanitize(data.short_description),
-        sanitize(data.full_address),
-        sanitize(data.street_address),
-        sanitize(data.phone),
-        sanitize(data.email),
-        sanitize(data.website),
-        sanitize(data.facebook_url),
-        sanitize(data.instagram_url),
-        sanitize(data.yelp_url),
-        sanitize(data.tripadvisor_url),
-        sanitize(data.business_status) || "active",
-        data.confidence_score || 50,
-        data.needs_manual_review ? 1 : 0,
-        sanitize(data.review_reason),
-        sanitize(data.notes),
-        data.latitude || null,
-        data.longitude || null
-      );
+      const { data: newBusiness, error } = await supabase
+        .from("businesses")
+        .insert({
+          business_name: sanitize(data.business_name),
+          slug,
+          town: sanitize(data.town),
+          category: sanitize(data.category),
+          subcategory: sanitize(data.subcategory),
+          short_description: sanitize(data.short_description),
+          full_address: sanitize(data.full_address),
+          street_address: sanitize(data.street_address),
+          phone: sanitize(data.phone),
+          email: sanitize(data.email),
+          website: sanitize(data.website),
+          facebook_url: sanitize(data.facebook_url),
+          instagram_url: sanitize(data.instagram_url),
+          yelp_url: sanitize(data.yelp_url),
+          tripadvisor_url: sanitize(data.tripadvisor_url),
+          business_status: sanitize(data.business_status) || "active",
+          confidence_score: data.confidence_score || 50,
+          needs_manual_review: data.needs_manual_review || false,
+          review_reason: sanitize(data.review_reason),
+          notes: sanitize(data.notes),
+          latitude: data.latitude || null,
+          longitude: data.longitude || null,
+        })
+        .select("id")
+        .single();
 
-      logAudit(db, "business", result.lastInsertRowid as number, "create", user.username, data);
+      if (error) {
+        console.error("Insert error:", error);
+        return res.status(500).json({ error: "Failed to create business" });
+      }
+
+      await logAudit("business", newBusiness.id, "create", user.username, data);
 
       return res.status(201).json({
         success: true,
-        id: result.lastInsertRowid,
+        id: newBusiness.id,
         slug,
       });
     }
@@ -308,18 +283,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }
 
       // Get existing business for audit
-      const existing = db
-        .prepare("SELECT * FROM businesses WHERE id = ?")
-        .get(id) as Record<string, unknown> | undefined;
+      const { data: existing, error: fetchError } = await supabase
+        .from("businesses")
+        .select("*")
+        .eq("id", id)
+        .single();
 
-      if (!existing) {
+      if (fetchError || !existing) {
         return res.status(404).json({ error: "Business not found" });
       }
 
-      // Build update query
-      const updates: string[] = [];
-      const values: (string | number | null)[] = [];
-
+      // Build update object
+      const updates: Record<string, unknown> = {};
       const fields = [
         "business_name",
         "slug",
@@ -347,27 +322,29 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
       for (const field of fields) {
         if (field in data) {
-          updates.push(`${field} = ?`);
           if (field === "needs_manual_review") {
-            values.push(data[field] ? 1 : 0);
+            updates[field] = !!data[field];
           } else if (field === "confidence_score" || field === "latitude" || field === "longitude") {
-            values.push(data[field] ?? null);
+            updates[field] = data[field] ?? null;
           } else {
-            values.push(sanitize(data[field]));
+            updates[field] = sanitize(data[field]);
           }
         }
       }
 
-      if (updates.length === 0) {
+      if (Object.keys(updates).length === 0) {
         return res.status(400).json({ error: "No fields to update" });
       }
 
-      updates.push("updated_at = CURRENT_TIMESTAMP");
-      values.push(id);
+      const { error: updateError } = await supabase
+        .from("businesses")
+        .update(updates)
+        .eq("id", id);
 
-      db.prepare(`UPDATE businesses SET ${updates.join(", ")} WHERE id = ?`).run(
-        ...values
-      );
+      if (updateError) {
+        console.error("Update error:", updateError);
+        return res.status(500).json({ error: "Failed to update business" });
+      }
 
       // Log changes
       const changes: Record<string, unknown> = {};
@@ -380,7 +357,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }
 
       if (Object.keys(changes).length > 0) {
-        logAudit(db, "business", id, "update", user.username, changes, previousValues);
+        await logAudit("business", id, "update", user.username, changes, previousValues);
       }
 
       return res.status(200).json({ success: true });
@@ -397,25 +374,32 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       const businessId = parseInt(id as string, 10);
 
       // Get existing for audit
-      const existing = db
-        .prepare("SELECT business_name FROM businesses WHERE id = ?")
-        .get(businessId) as { business_name: string } | undefined;
+      const { data: existing, error: fetchError } = await supabase
+        .from("businesses")
+        .select("business_name")
+        .eq("id", businessId)
+        .single();
 
-      if (!existing) {
+      if (fetchError || !existing) {
         return res.status(404).json({ error: "Business not found" });
       }
 
       // Soft delete by marking as duplicate/archived
-      db.prepare(`
-        UPDATE businesses
-        SET is_duplicate = 1,
-            needs_manual_review = 1,
-            review_reason = 'archived_by_admin',
-            updated_at = CURRENT_TIMESTAMP
-        WHERE id = ?
-      `).run(businessId);
+      const { error: updateError } = await supabase
+        .from("businesses")
+        .update({
+          is_duplicate: true,
+          needs_manual_review: true,
+          review_reason: "archived_by_admin",
+        })
+        .eq("id", businessId);
 
-      logAudit(db, "business", businessId, "archive", user.username, {
+      if (updateError) {
+        console.error("Delete error:", updateError);
+        return res.status(500).json({ error: "Failed to archive business" });
+      }
+
+      await logAudit("business", businessId, "archive", user.username, {
         business_name: existing.business_name,
       });
 
@@ -426,7 +410,5 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   } catch (error) {
     console.error("Business API error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  } finally {
-    db.close();
   }
 }
