@@ -22,15 +22,24 @@ import TownBusinessTypePage from "./pages/directory/TownBusinessTypePage.tsx";
 import BusinessPage from "./pages/directory/BusinessPage.tsx";
 import SubmitBusiness from "./pages/directory/SubmitBusiness.tsx";
 
+// Admin pages
+import { AdminAuthProvider } from "./contexts/AdminAuthContext.tsx";
+import { ProtectedRoute } from "./components/admin/ProtectedRoute.tsx";
+import AdminLogin from "./pages/admin/AdminLogin.tsx";
+import AdminDashboard from "./pages/admin/AdminDashboard.tsx";
+import AdminBusinessList from "./pages/admin/AdminBusinessList.tsx";
+import AdminBusinessEdit from "./pages/admin/AdminBusinessEdit.tsx";
+
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
+    <AdminAuthProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
           {/* Service pages under /services/ for SEO */}
@@ -64,11 +73,47 @@ const App = () => (
           <Route path="/marthas-vineyard/:townSlug/:typeSlug" element={<TownBusinessTypePage />} />
           <Route path="/marthas-vineyard/:townSlug/:typeSlug/:businessSlug" element={<BusinessPage />} />
 
+          {/* Admin routes */}
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute>
+                <AdminDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/businesses"
+            element={
+              <ProtectedRoute>
+                <AdminBusinessList />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/businesses/new"
+            element={
+              <ProtectedRoute>
+                <AdminBusinessEdit />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/businesses/:id/edit"
+            element={
+              <ProtectedRoute>
+                <AdminBusinessEdit />
+              </ProtectedRoute>
+            }
+          />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+        </BrowserRouter>
+      </TooltipProvider>
+    </AdminAuthProvider>
   </QueryClientProvider>
 );
 
