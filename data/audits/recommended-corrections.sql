@@ -1,0 +1,173 @@
+-- Recommended Corrections SQL
+-- Generated: 2026-04-25T12:10:39.173Z
+-- WARNING: DO NOT APPLY WITHOUT MANUAL REVIEW
+
+-- These are suggested fixes based on automated analysis.
+-- Each should be verified against Google Places or other sources.
+
+-- Mark records for manual review
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Invalid name pattern: appears to be a URL or social media platform; Missing address for Aquinnah assignment' WHERE id = 33;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "inn" but category is "Inn"; Possible category mismatch: name contains "shop" but category is "Inn"' WHERE id = 10;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Invalid name pattern: appears to be a URL or social media platform; Missing address for Aquinnah assignment; Business name appears to be scraped from domain name' WHERE id = 34;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Aquinnah assignment; Possible category mismatch: name contains "inn" but category is "Restaurant"' WHERE id = 38;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "store" but category is "Restaurant"' WHERE id = 41;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Low confidence score: 0.8' WHERE id = 43;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Chilmark assignment; Low confidence score: 0.7' WHERE id = 707;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Chilmark assignment; Possible category mismatch: name contains "gallery" but category is "Restaurant"' WHERE id = 45;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Edgartown assignment; Low confidence score: 0.7' WHERE id = 706;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Low confidence score: 0.8; Possible category mismatch: name contains "store" but category is "Restaurant"' WHERE id = 62;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Invalid name pattern: appears to be a URL or social media platform; Missing address for Edgartown assignment; Possible category mismatch: name contains "shop" but category is "Restaurant"' WHERE id = 79;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Edgartown assignment; Low confidence score: 0.7' WHERE id = 703;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Edgartown assignment' WHERE id = 722;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Edgartown assignment' WHERE id = 83;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Edgartown assignment' WHERE id = 721;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Edgartown assignment' WHERE id = 123;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Edgartown assignment' WHERE id = 87;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "hotel" but category is "Hotel"' WHERE id = 4;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Edgartown assignment; Low confidence score: 0.7' WHERE id = 708;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Business name appears to be scraped from domain name' WHERE id = 105;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Edgartown assignment; Business name appears to be scraped from domain name' WHERE id = 114;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Edgartown assignment' WHERE id = 121;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Edgartown assignment; Business name appears to be scraped from domain name' WHERE id = 109;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Oak Bluffs assignment' WHERE id = 129;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Oak Bluffs assignment' WHERE id = 131;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Oak Bluffs assignment' WHERE id = 133;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Oak Bluffs assignment; Low confidence score: 0.7' WHERE id = 709;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Oak Bluffs assignment' WHERE id = 141;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Oak Bluffs assignment' WHERE id = 145;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Oak Bluffs assignment' WHERE id = 150;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Oak Bluffs assignment' WHERE id = 160;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Oak Bluffs assignment' WHERE id = 166;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Oak Bluffs assignment; Low confidence score: 0.7' WHERE id = 701;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Oak Bluffs assignment; Low confidence score: 0.7' WHERE id = 699;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "shop" but category is "Restaurant"' WHERE id = 276;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Low confidence score: 0.7; Vineyard Haven assignment without address - may be default assignment' WHERE id = 702;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 208;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 485;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 351;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Low confidence score: 45; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name' WHERE id = 459;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 720;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 191;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Low confidence score: 45; Vineyard Haven assignment without address - may be default assignment' WHERE id = 461;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Low confidence score: 0.7; Vineyard Haven assignment without address - may be default assignment' WHERE id = 704;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Low confidence score: 45; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains "salon" but category is "Other"; Business name appears to be scraped from domain name' WHERE id = 463;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 466;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 280;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 196;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 637;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 399;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 470;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 472;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "store" but category is "Retail"' WHERE id = 6;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Low confidence score: 0.8' WHERE id = 408;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 476;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains "inn" but category is "Inn"' WHERE id = 425;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 478;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name' WHERE id = 483;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 487;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 355;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 496;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 200;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "inn" but category is "Inn"' WHERE id = 381;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains "inn" but category is "Inn"' WHERE id = 431;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 503;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Low confidence score: 0.8; Possible category mismatch: name contains "shop" but category is "Shopping"' WHERE id = 507;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains "shop" but category is "Retail"; Business name appears to be scraped from domain name' WHERE id = 518;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "gallery" but category is "Restaurant"' WHERE id = 286;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Low confidence score: 0.6; Vineyard Haven assignment without address - may be default assignment' WHERE id = 282;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "gallery" but category is "Restaurant"' WHERE id = 290;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 520;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 523;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Low confidence score: 0.7; Possible category mismatch: name contains "gallery" but category is "Gallery"' WHERE id = 7;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Low confidence score: 0.8' WHERE id = 397;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Invalid name pattern: appears to be a URL or social media platform; Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name' WHERE id = 328;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Business name appears to be scraped from domain name' WHERE id = 534;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 536;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 540;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "store" but category is "Restaurant"' WHERE id = 260;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Business name appears to be scraped from domain name' WHERE id = 542;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "shop" but category is "Health & Wellness"' WHERE id = 544;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Low confidence score: 0.7; Vineyard Haven assignment without address - may be default assignment' WHERE id = 728;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Low confidence score: 0.8' WHERE id = 405;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 433;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 549;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 253;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "inn" but category is "Inn"' WHERE id = 437;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 295;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "hotel" but category is "Hotel"' WHERE id = 390;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Low confidence score: 0.8' WHERE id = 310;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Low confidence score: 0.8' WHERE id = 567;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "inn" but category is "Inn"' WHERE id = 406;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "salon" but category is "Other"' WHERE id = 557;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 565;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 31;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 719;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "store" but category is "Building & Construction"' WHERE id = 670;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Low confidence score: 45; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name' WHERE id = 593;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 652;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "hotel" but category is "Hotel"' WHERE id = 415;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "hotel" but category is "Hotel"' WHERE id = 444;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Business name appears to be scraped from domain name' WHERE id = 574;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 255;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "inn" but category is "Inn"' WHERE id = 410;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name' WHERE id = 577;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Invalid name pattern: appears to be a URL or social media platform' WHERE id = 227;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 304;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name' WHERE id = 306;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 206;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 729;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "gallery" but category is "Restaurant"' WHERE id = 308;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name' WHERE id = 348;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Invalid name pattern: appears to be a URL or social media platform; Low confidence score: 0.8; Business name appears to be scraped from domain name' WHERE id = 571;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains "store" but category is "Restaurant"' WHERE id = 262;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 231;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Business name appears to be scraped from domain name' WHERE id = 413;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "gallery" but category is "Restaurant"' WHERE id = 312;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "hotel" but category is "Inn"' WHERE id = 419;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "inn" but category is "Inn"' WHERE id = 441;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Business name appears to be scraped from domain name' WHERE id = 365;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 599;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 591;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 368;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 349;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains "spa" but category is "Boutique"' WHERE id = 597;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 723;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 665;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "salon" but category is "Other"' WHERE id = 588;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 219;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 606;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 608;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains "spa" but category is "Wellness"' WHERE id = 610;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 489;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Low confidence score: 45; Vineyard Haven assignment without address - may be default assignment' WHERE id = 618;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 350;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 620;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Low confidence score: 45; Vineyard Haven assignment without address - may be default assignment' WHERE id = 623;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "spa" but category is "Wellness"' WHERE id = 625;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains "hotel" but category is "Hotel"' WHERE id = 417;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name' WHERE id = 629;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "inn" but category is "Inn"' WHERE id = 423;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "gallery" but category is "Restaurant"' WHERE id = 322;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 512;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 204;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Low confidence score: 0.5' WHERE id = 5;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 326;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Low confidence score: 0.6; Vineyard Haven assignment without address - may be default assignment' WHERE id = 646;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "inn" but category is "Inn"' WHERE id = 435;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Business name appears to be scraped from domain name' WHERE id = 367;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains "spa" but category is "Wellness"' WHERE id = 656;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 273;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "hotel" but category is "Hotel"' WHERE id = 450;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 660;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment' WHERE id = 372;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for Vineyard Haven assignment; Low confidence score: 45; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name' WHERE id = 663;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Possible category mismatch: name contains "gallery" but category is "Restaurant"' WHERE id = 337;
+UPDATE businesses SET needs_manual_review = 1, review_reason = 'Missing address for West Tisbury assignment' WHERE id = 187;
+
+-- Delete clearly invalid records (social media platform names, etc.)
+-- DELETE FROM businesses WHERE id = 33; -- "Aquilamv.square"
+-- DELETE FROM businesses WHERE id = 34; -- "Facebook"
+-- DELETE FROM businesses WHERE id = 79; -- "Dock Street Coffee Shop.square"
+-- DELETE FROM businesses WHERE id = 328; -- "Instagram"
+-- DELETE FROM businesses WHERE id = 227; -- "Menu"
+-- DELETE FROM businesses WHERE id = 571; -- "Mvcenter4Living.Org"

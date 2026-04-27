@@ -1,0 +1,986 @@
+id,business_name,town,full_address,category,website,phone,confidence_score,primary_source,has_issues,suspected_issues
+33,"Aquilamv.square","Aquinnah","","Restaurant","https://aquilamv.square.site/","",55,"vineyard_gazette",TRUE,"Invalid name pattern: appears to be a URL or social media platform; Missing address for Aquinnah assignment"
+10,"Aquinnah Shop","Aquinnah","27 Aquinnah Circle, Aquinnah, MA 02535","Inn","https://www.tripadvisor.com/Restaurant_Review-g499462-d790513-Reviews-Aquinnah_Shop-Aquinnah_Martha_s_Vineyard_Massachusetts.html","(508) 645-3867",65,"manual_import",TRUE,"Possible category mismatch: name contains ""inn"" but category is ""Inn""; Possible category mismatch: name contains ""shop"" but category is ""Inn"""
+34,"Facebook","Aquinnah","","Restaurant","https://facebook.com","",55,"vineyard_gazette",TRUE,"Invalid name pattern: appears to be a URL or social media platform; Missing address for Aquinnah assignment; Business name appears to be scraped from domain name"
+688,"Hatmarcha Gifts","Aquinnah","19 Aquinnah Cir, Aquinnah, MA 02535","Shopping & Retail","https://www.hatmarchagifts.com/","(508) 645-3704",70,"mvy_chamber",FALSE,""
+36,"Orange Peel Bakery","Aquinnah","22 State Rd, Aquinnah, MA","Restaurant","http://orangepeelbakery.squarespace.com/","(508) 645-2025",80,"vineyard_gazette",FALSE,""
+38,"Outermost Inn","Aquinnah","","Restaurant","http://outermostinn.com/","(508) 645-3511",75,"vineyard_gazette",TRUE,"Missing address for Aquinnah assignment; Possible category mismatch: name contains ""inn"" but category is ""Restaurant"""
+689,"Stony Creek Gifts","Aquinnah","27 Aquinnah Circle Cultural District, Aquinnah, MA","Shopping & Retail","https://business.mvy.com/memberdirectory/Details/stony-creek-gifts-2228705","(508) 645-3595",80,"mvy_chamber",FALSE,""
+718,"Beetlebung Farm","Chilmark","0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        Skip to Content
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        The Farm
+      
+
+
+
+
+        ABOUT
+      
+
+
+
+
+
+                  Hours and Location
+                
+
+
+
+
+
+                  Join Our Team
+                
+
+
+
+
+
+
+
+        Special Orders
+      
+
+
+
+
+
+                  Saturday Suppers
+                
+
+
+
+
+
+                  Bakery Preorders
+                
+
+
+
+
+
+                  Down Island Bread Pick-Up
+                
+
+
+
+
+
+
+        Programs
+      
+
+
+
+        Gallery
+      
+
+
+
+        Media
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Open Menu
+Close Menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        The Farm
+      
+
+
+
+
+        ABOUT
+      
+
+
+
+
+
+                  Hours and Location
+                
+
+
+
+
+
+                  Join Our Team
+                
+
+
+
+
+
+
+
+        Special Orders
+      
+
+
+
+
+
+                  Saturday Suppers
+                
+
+
+
+
+
+                  Bakery Preorders
+                
+
+
+
+
+
+                  Down Island Bread Pick-Up
+                
+
+
+
+
+
+
+        Programs
+      
+
+
+
+        Gallery
+      
+
+
+
+        Media
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Open Menu
+Close Menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  The Farm
+                
+
+
+
+
+
+Folder:
+ABOUT
+
+
+
+
+
+
+
+Back
+
+
+
+
+
+                        Hours and Location
+                      
+
+
+
+
+
+                        Join Our Team
+                      
+
+
+
+
+
+
+
+Folder:
+Special Orders
+
+
+
+
+
+
+
+Back
+
+
+
+
+
+                        Saturday Suppers
+                      
+
+
+
+
+
+                        Bakery Preorders
+                      
+
+
+
+
+
+                        Down Island Bread Pick-Up
+                      
+
+
+
+
+
+
+
+                  Programs
+                
+
+
+
+
+
+                  Gallery
+                
+
+
+
+
+
+                  Media
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A regenerative farm in the heart of Chilmark, Martha's Vineyard,","Restaurant","https://www.beetlebungfarm.org/","",70,"infatuation",FALSE,""
+41,"Chilmark General Store","Chilmark","7 State Road, Chilmark, MA 02535","Restaurant","http://chilmarkgeneralstore.com/","",70,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""store"" but category is ""Restaurant"""
+43,"Chilmark Tavern","Chilmark","LOCATION9 State RoadChilmark, MA 02535","Restaurant","http://chilmarktavern.com/","(508) 645-9400",0.8,"vineyard_gazette",TRUE,"Low confidence score: 0.8"
+707,"Larsen's Fish Market","Chilmark","","Restaurant","","",0.7,"infatuation",TRUE,"Missing address for Chilmark assignment; Low confidence score: 0.7"
+45,"Menemsha Gallery","Chilmark","","Restaurant","http://menemshagallery.com/","",55,"vineyard_gazette",TRUE,"Missing address for Chilmark assignment; Possible category mismatch: name contains ""gallery"" but category is ""Restaurant"""
+715,"The Grey Barn & Farm","Chilmark","22 South Road, Chilmark, MA 02535","Restaurant","https://www.thegreybarnandfarm.com/","(508) 645-4854",80,"infatuation",FALSE,""
+47,"The Homeport","Chilmark","512 N Rd, Menemsha, MA 02535","Restaurant","http://thehomeportmv.com/","(508) 645-2679",70,"vineyard_gazette",FALSE,""
+49,"19 Prime Steak House","Edgartown","19 Church St, Edgartown, MA","Restaurant","http://19primesteak.com/","(774) 224-0550",70,"vineyard_gazette",FALSE,""
+706,"19 Raw Oyster Bar","Edgartown","","Restaurant","","",0.7,"infatuation",TRUE,"Missing address for Edgartown assignment; Low confidence score: 0.7"
+724,"Alchemy","Edgartown","71 Main Street, Edgartown, MA 02539","Restaurant","https://www.alchemyedgartown.com/","(508) 627-9999",70,"infatuation",FALSE,""
+54,"Among the Flowers","Edgartown","Edgartown, ma 02539","Restaurant","http://amongtheflowersmv.com/","(508) 627-3233",70,"vineyard_gazette",FALSE,""
+712,"Atria","Edgartown","137 Main St, Edgartown, MA 02539","Restaurant","https://www.atriamv.com/","(508) 627-5850",70,"infatuation",FALSE,""
+60,"Bad Martha Beer","Edgartown","270 Upper Main St, Edgartown, MA 02539","Restaurant","http://badmarthabeer.com/","(508) 939-4415",70,"vineyard_gazette",FALSE,""
+62,"Behind the Bookstore","Edgartown","46 Main St, Edgartown, MA 02539","Restaurant","http://btbmv.com/","(774) 549-9123",0.8,"vineyard_gazette",TRUE,"Low confidence score: 0.8; Possible category mismatch: name contains ""store"" but category is ""Restaurant"""
+68,"Blackbird Cafe","Edgartown","19 North Water Street, Edgartown, MA 02539","Restaurant","http://myblackbirdcafe.com/","(978) 272-1175",80,"vineyard_gazette",FALSE,""
+70,"Chesca","Edgartown","38 N Water St, Edgartown, MA 02539","Restaurant","http://chescasmv.com/","(508) 627-1234",70,"vineyard_gazette",FALSE,""
+72,"China House｜online Order｜edgartown｜wa","Edgartown","Edgartown, MA 02539","Restaurant","http://mvchinahouse.com/","(508) 627-7272",70,"vineyard_gazette",FALSE,""
+74,"Cozy Corner Cafe","Edgartown","Vineyard Haven Rd, Edgartown, MA 02539","Restaurant","https://cozycornermv.com/","(508) 939-3988",80,"vineyard_gazette",FALSE,""
+79,"Dock Street Coffee Shop.square","Edgartown","","Restaurant","https://dock-street-coffee-shop.square.site/","",60,"vineyard_gazette",TRUE,"Invalid name pattern: appears to be a URL or social media platform; Missing address for Edgartown assignment; Possible category mismatch: name contains ""shop"" but category is ""Restaurant"""
+76,"Détente","Edgartown","Edgartown, MA 02539","Restaurant","http://detentemv.com/","",60,"vineyard_gazette",FALSE,""
+703,"Détente","Edgartown","","Restaurant","","",0.7,"infatuation",TRUE,"Missing address for Edgartown assignment; Low confidence score: 0.7"
+722,"Edgartown Diner 🍨","Edgartown","","Restaurant","https://edgartowndiner.com","(508) 627-9337",60,"infatuation",TRUE,"Missing address for Edgartown assignment"
+83,"Edgartown Meatandfish","Edgartown","","Restaurant","http://edgartownmeatandfish.com/","(508) 627-6200",65,"vineyard_gazette",TRUE,"Missing address for Edgartown assignment"
+721,"Edgartown Pizza 🍕","Edgartown","","Restaurant","http://edgartownpizza.com","(508) 627-7770",60,"infatuation",TRUE,"Missing address for Edgartown assignment"
+123,"Edgartown, Ma Bars","Edgartown","","Restaurant","http://townbarmv.com/","",70,"vineyard_gazette",TRUE,"Missing address for Edgartown assignment"
+667,"Erica Wilson INC","Edgartown","21 Kelly St, Edgartown, MA 02539","Building & Construction","https://ericawilson.com/","(774) 549-9488",80,"mvy_chamber",FALSE,""
+87,"Espresso Love","Edgartown","","Restaurant","http://espressolove.com/","",60,"vineyard_gazette",TRUE,"Missing address for Edgartown assignment"
+89,"Great Harbor Market","Edgartown","199 Upper Main St, Edgartown, MA 02539","Restaurant","http://greatharbormarket.com/","(508) 694-6888",70,"vineyard_gazette",FALSE,""
+4,"Harbor View Hotel","Edgartown","131 North Water Street, Edgartown, MA 02539","Hotel","https://www.harbor-view.com","(508) 627-7000",65,"manual_import",TRUE,"Possible category mismatch: name contains ""hotel"" but category is ""Hotel"""
+93,"Katama Kitchen","Edgartown","12 Mattakesett Way, Edgartown, MA 02539","Restaurant","http://katamakitchen.com/","(774) 549-5345",80,"vineyard_gazette",FALSE,""
+91,"Kgs 2","Edgartown","170 Katama Rd, Edgartown, MA","Restaurant","http://katamageneral.com/","(508) 627-5071",80,"vineyard_gazette",FALSE,""
+687,"Kin MV","Edgartown","
+12A N Water St, Edgartown, MA 02539","Shopping & Retail","http://kinmv.com/","(508) 939-4291",80,"mvy_chamber",FALSE,""
+95,"L'etoile","Edgartown","22 North water Street, Edgartown, MA 02539","Restaurant","http://letoile.net/","(508) 627-5187",80,"vineyard_gazette",FALSE,""
+97,"Lucky Hank's","Edgartown","218 Upper Main St, Edgartown, MA 02539","Restaurant","http://luckyhanksmv.com/","(508) 939-4082",70,"vineyard_gazette",FALSE,""
+56,"Martha's Vineyard Seafood & Steak Restaurant","Edgartown","2 Main StREET, Edgartown, MA 02539","Restaurant","http://atlanticmv.com/","(508) 627-7001",70,"vineyard_gazette",FALSE,""
+100,"Morning Glory Farm","Edgartown",", Edgartown, MA 02539","Restaurant","http://morninggloryfarm.com/","(508) 627-9003",80,"vineyard_gazette",FALSE,""
+708,"Nomans","Edgartown","","Restaurant","","",0.7,"infatuation",TRUE,"Missing address for Edgartown assignment; Low confidence score: 0.7"
+66,"Prepared Food","Edgartown","17 Airport Road, Edgartown, MA 02539","Restaurant","http://blacksheeponmv.com/","(508) 338-7770",80,"vineyard_gazette",FALSE,""
+105,"Rockfishedgartown","Edgartown","Water Street Edgartown, MA 02557","Restaurant","http://rockfishedgartown.com/","(508) 627-9967",70,"vineyard_gazette",TRUE,"Business name appears to be scraped from domain name"
+107,"Rosewater","Edgartown","127020 South Summer St, Edgartown, MA","Restaurant","https://www.rosewatermv.com/","(508) 627-1270",70,"vineyard_gazette",FALSE,""
+112,"Soigne","Edgartown","190 Upper Main St, Edgartown, MA 02539","Restaurant","http://soignemv.com/","(508) 627-8489",80,"vineyard_gazette",FALSE,""
+114,"Squareriggerrestaurant","Edgartown","","Restaurant","http://squareriggerrestaurant.com/","",55,"vineyard_gazette",TRUE,"Missing address for Edgartown assignment; Business name appears to be scraped from domain name"
+730,"The Attic","Edgartown","944882 Main Street Floor 2, Vineyard Haven, MA 02568","Restaurant","https://www.theatticmv.com/","(508) 687-9448",80,"infatuation",FALSE,""
+117,"The Covington Restaurant and Bar","Edgartown","52 Main Street, Edgartown, MA 02539","Restaurant","http://thecovingtonrestaurant.com/","(508) 627-7678",80,"vineyard_gazette",FALSE,""
+716,"The Pelican Club","Edgartown","23 Kelly St, Edgartown, MA 02539","Restaurant","https://www.farawaymarthasvineyard.com/pelican-club","(508) 627-6336",80,"infatuation",FALSE,""
+121,"The Porthunter","Edgartown","","Restaurant","http://theporthunter.com/","",55,"vineyard_gazette",TRUE,"Missing address for Edgartown assignment"
+125,"The Wharf Pub Edgartown","Edgartown","3 Main Street, Edgartown, MA 02539","Restaurant","http://wharfpubmv.com/","(508) 627-9966",80,"vineyard_gazette",FALSE,""
+109,"Theseafoodshanty","Edgartown","","Restaurant","http://theseafoodshanty.com/","(508) 627-8622",80,"vineyard_gazette",TRUE,"Missing address for Edgartown assignment; Business name appears to be scraped from domain name"
+119,"Winnetu Oceanside Resort","Edgartown","31 Dunes Rd, Edgartown, MA 02539","Lodging","http://winnetu.com/","(866) 335-1133",80,"vineyard_gazette",FALSE,""
+127,"Wolf's Den Pizzeria","Edgartown","249 Vineyard Haven Rd, Edgartown, MA 02539","Restaurant","https://www.wolfsdenpizzeria.com/","(508) 684-2203",70,"vineyard_gazette",FALSE,""
+129,"Aalias Website 2026","Oak Bluffs","","Restaurant","http://aaliascoffee.com/","",60,"vineyard_gazette",TRUE,"Missing address for Oak Bluffs assignment"
+131,"Back Door Donuts","Oak Bluffs","","Restaurant","http://backdoordonuts.com/","(508) 693-3688",80,"vineyard_gazette",TRUE,"Missing address for Oak Bluffs assignment"
+133,"Bangkok Cuisine","Oak Bluffs","","Restaurant","http://bangkokcapecod.com/","(508) 771-1338",70,"vineyard_gazette",TRUE,"Missing address for Oak Bluffs assignment"
+135,"Benandbills","Oak Bluffs","20A Circuit Avenue, Oak Bluffs, MA 02557","Restaurant","http://benandbillsmv.com/","(508) 696-0008",80,"vineyard_gazette",FALSE,""
+710,"Biscuits","Oak Bluffs","26 Lake Ave, Oak Bluffs, MA 02557","Restaurant","https://www.mvbiscuits.com/","(508) 693-2033",80,"infatuation",FALSE,""
+709,"Black Joy Kitchen","Oak Bluffs","","Restaurant","","",0.7,"infatuation",TRUE,"Missing address for Oak Bluffs assignment; Low confidence score: 0.7"
+141,"Coopdevilleshuck Shack","Oak Bluffs","","Restaurant","http://coopdevilleshuckshack.com/","",55,"vineyard_gazette",TRUE,"Missing address for Oak Bluffs assignment"
+143,"Dos Mas MV","Oak Bluffs","50 Circuit Ave, Oak Bluffs, MA 02557","Restaurant","http://dosmasmv.com/","(508) 687-9271",70,"vineyard_gazette",FALSE,""
+145,"Eleven Circuit","Oak Bluffs","","Restaurant","http://elevencircuit.com/","(508) 687-9283",80,"vineyard_gazette",TRUE,"Missing address for Oak Bluffs assignment"
+148,"Farmneck.net/cafe","Oak Bluffs","Oak Bluffs, MA 02557","Restaurant","http://farmneck.net/cafe","(508) 693-3560",70,"vineyard_gazette",FALSE,""
+150,"Fat Ronniesburgerbar","Oak Bluffs","","Restaurant","http://fatronniesburgerbar.com/","",55,"vineyard_gazette",TRUE,"Missing address for Oak Bluffs assignment"
+152,"Fishbones Bar & Grille","Oak Bluffs","12 Circuit Avenue Extension, Oak Bluffs, MA 02557","Restaurant","http://fishbones-mv.com/","(508) 696-8227",70,"vineyard_gazette",FALSE,""
+154,"Giordano's Restaurant, INC","Oak Bluffs","Oak Bluffs, MA 02557","Restaurant","http://giosmv.com/","(508) 693-0184",80,"vineyard_gazette",FALSE,""
+690,"Handworks","Oak Bluffs","12 Circuit Avenue Extension, Oak Bluffs, MA 02557","Shopping & Retail","https://www.handworksgifts.com/","(508) 627-8402",80,"mvy_chamber",FALSE,""
+156,"Igimv.org/about-island-food-pantry","Oak Bluffs","114 Dukes County Ave, Oak Bluffs, MA 02557","Restaurant","http://igimv.org/about-island-food-pantry","(508) 296-8384",80,"vineyard_gazette",FALSE,""
+668,"Island Outfitters Oak Bluffs","Oak Bluffs","1 post office square, Oak Bluffs, MA 02557","Building & Construction","http://islandoutfittersmv.com/","(508) 693-0085",80,"mvy_chamber",FALSE,""
+158,"Jimmy Seas Loon Mountain","Oak Bluffs","25 South Mountain Drive, Lincoln, NH 03251","Restaurant","http://jimmyseaspanpastas.com/","(508) 687-9804",70,"vineyard_gazette",FALSE,""
+160,"Lobster Ville","Oak Bluffs","","Restaurant","http://lobstervillemv.com/","",55,"vineyard_gazette",TRUE,"Missing address for Oak Bluffs assignment"
+162,"Lookout Tavern","Oak Bluffs","8 Seaview Ave, Oak Bluffs, MA 02557","Restaurant","http://lookoutmv.com/","(508) 696-9844",70,"vineyard_gazette",FALSE,""
+164,"MV Chowder Co","Oak Bluffs","Marthas Vineyard Chowder Company, None, MA None","Restaurant","http://chowdermv.com/","(508) 696-3000",70,"vineyard_gazette",FALSE,""
+166,"Mikado Asian Bistro @ Oak Bluffs","Oak Bluffs","","Restaurant","http://mikadoob.com/","",60,"vineyard_gazette",TRUE,"Missing address for Oak Bluffs assignment"
+713,"Mo's Lunch","Oak Bluffs","9744137 Vineyard Ave, Oak Bluffs, MA 02557","Restaurant","https://www.moslunch.com/","(508) 687-9744",80,"infatuation",FALSE,""
+168,"Offshore Ale Company","Oak Bluffs","30 Kennebec Avenue, Oak Bluffs, MA 02557","Restaurant","http://offshoreale.com/","(508) 693-2626",70,"vineyard_gazette",FALSE,""
+711,"Red Cat Kitchen","Oak Bluffs","Oak Bluffs, MA 02557","Restaurant","https://www.redcatkitchen.com/","(508) 696-6040",70,"infatuation",FALSE,""
+172,"Sharky's Oak Bluffs","Oak Bluffs","31 Circuit Ave, Oak Bluffs, MA","Restaurant","http://sharkmenu.com/","(508) 693-7501",70,"vineyard_gazette",FALSE,""
+174,"The Barn Bowl & Bistro","Oak Bluffs","13 Uncas Avenue, Oak Bluffs, MA 02557","Restaurant","http://thebarnmv.com/","(508) 696-9800",80,"vineyard_gazette",FALSE,""
+701,"The Barn Bowl And Bistro","Oak Bluffs","","Restaurant","","",0.7,"infatuation",TRUE,"Missing address for Oak Bluffs assignment; Low confidence score: 0.7"
+714,"The Pawnee House","Oak Bluffs","277020 Kennebec Ave, HOak Bluffs, MA 02557","Restaurant","https://www.thepawneehousemv.com/","(508) 338-2770",80,"infatuation",FALSE,""
+177,"The Ritz Cafe","Oak Bluffs","4 Circuit Ave, Oak Bluffs, MA 02557","Restaurant","http://theritzmv.com/","(508) 296-8159",70,"vineyard_gazette",FALSE,""
+699,"The Sweet Life Cafe","Oak Bluffs","","Restaurant","","",0.7,"infatuation",TRUE,"Missing address for Oak Bluffs assignment; Low confidence score: 0.7"
+179,"The Sweet Life MV","Oak Bluffs","OAK BLUFFS, MA 02557","Restaurant","http://sweetlifemv.com/","(508) 696-0200",80,"vineyard_gazette",FALSE,""
+717,"Tigerhawk Sandwich Co.","Oak Bluffs","7306
+12B Circuit Ave, 
+Oak Bluffs, MA 02568","Restaurant","https://www.tigerhawkmv.com/","(508) 338-7306",80,"infatuation",FALSE,""
+181,"Tony's Market","Oak Bluffs","119 Dukes County Avenue, Oak Bluffs, MA 02557","Restaurant","http://tonysmarketmv.com/","(508) 693-4799",80,"vineyard_gazette",FALSE,""
+183,"Winston","Oak Bluffs","1 East Chop Drive, Oak Bluffs, MA 02568","Restaurant","https://www.winstonskitchen-mv.com/","(508) 687-9572",80,"vineyard_gazette",FALSE,""
+276,"51art Gallery Located at the Shoppe With the Red Door","Vineyard Haven","4 Union Street, Vineyard Haven, MA 02568","Restaurant","http://www.theshoppewiththereddoor.com/","",60,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""shop"" but category is ""Restaurant"""
+702,"9 Craft Kitchen And Bar","Vineyard Haven","","Restaurant","","",0.7,"infatuation",TRUE,"Missing address for Vineyard Haven assignment; Low confidence score: 0.7; Vineyard Haven assignment without address - may be default assignment"
+679,"A. P. Fortes Plumbing and Heating","Vineyard Haven","155 Spring St, Vineyard Haven, MA 02568","Lodging & Tourism","https://gomarthasvineyard.com/directory/p-fortes-plumbing-and-heating","(508) 693-2394",70,"mvy_chamber",FALSE,""
+208,"About Motts","Vineyard Haven","","Restaurant","http://mochamotts.com/","(508) 693-3155",80,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+485,"Account Suspended","Vineyard Haven","","Accounting","http://circuitstylesalon.com/","",70,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+351,"Airportfitness","Vineyard Haven","","Wellness","http://airportfitnessmv.com/","(508) 696-8000",75,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+229,"Allen Farm Sheep & Wool Company","Vineyard Haven","421 S Rd, Chilmark, MA 02535","Restaurant","http://allenfarm.com/","(508) 645-9064",80,"vineyard_gazette",FALSE,""
+361,"Allyson Cook Metell, Lmt & Associates","Vineyard Haven","Associates455 State RdPMB 133Vineyard Haven, MA 02568","Wellness","http://allysonlmt.com/","(508) 696-1863",70,"vineyard_gazette",FALSE,""
+459,"Altheadesigns","Vineyard Haven","","Other","http://altheadesigns.com/","",45,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Low confidence score: 45; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name"
+720,"Art Cliff Diner","Vineyard Haven","","Restaurant","http://artcliffdiner.com","",60,"infatuation",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+191,"Artcliff Diner","Vineyard Haven","","Restaurant","http://artcliffdiner.com/","(508) 693-1224",70,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+377,"Ashley Inn","Vineyard Haven","Edgartown, MA 02539","Lodging","http://ashleyinn.net/","(508) 627-9655",70,"vineyard_gazette",FALSE,""
+217,"Authentic Italian Food","Vineyard Haven","20 Union Street, Vineyard Haven, MA","Restaurant","http://salvatoresristorante.com/","(508) 687-9457",70,"vineyard_gazette",FALSE,""
+353,"B Strong","Vineyard Haven","29 Kennebec Ave., Oak Bluffs, MA","Wellness","http://b-strong.com/","(508) 685-8888",70,"vineyard_gazette",FALSE,""
+674,"Barnes Moving & Storage","Vineyard Haven","475 Edgartown Rd, Vineyard Haven, MA 02568","Professional Services","http://www.barnesmoversmv.com/","(508) 693-1937",80,"mvy_chamber",FALSE,""
+461,"Basicsandeastaway.company","Vineyard Haven","","Other","http://basicsandeastaway.company.site/","",45,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Low confidence score: 45; Vineyard Haven assignment without address - may be default assignment"
+704,"Beach Road","Vineyard Haven","","Restaurant","","",0.7,"infatuation",TRUE,"Missing address for Vineyard Haven assignment; Low confidence score: 0.7; Vineyard Haven assignment without address - may be default assignment"
+463,"Bellezzamvsalon","Vineyard Haven","","Other","http://bellezzamvsalon.com/","",45,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Low confidence score: 45; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains ""salon"" but category is ""Other""; Business name appears to be scraped from domain name"
+466,"Binks Auto.business","Vineyard Haven","","Auto","http://binks-auto.business.site/","",55,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+280,"Blanchardphoto","Vineyard Haven","","Restaurant","http://blanchardphotomv.com/","",55,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+196,"Bobbybs","Vineyard Haven","","Restaurant","http://bobbybsmv.com/","(508) 693-8266",70,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+637,"Boneyard Surf Co.","Vineyard Haven","","Other","http://boneyardmv.com/","",50,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+399,"Book a Hostel","Vineyard Haven","","Other","http://hiusa.org/","",50,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+678,"Brewer Insect & Animal Spraying","Vineyard Haven","3963 Edgartown, MA 02539","House & Garden","https://www.brewerspraying.com/","(508) 579-3963",80,"mvy_chamber",FALSE,""
+470,"Brickman","Vineyard Haven","","Other","http://brickmans.com/","(508) 693-0047",70,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+677,"Brissette Electric Inc.","Vineyard Haven","1 Lagoon Pond Rd, Vineyard Haven, MA 02568","Community & Government","http://briselectric.com/","(508) 693-0764",80,"mvy_chamber",FALSE,""
+472,"Brunos","Vineyard Haven","","Other","http://brunosmv.com/","",50,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+6,"Bunch of Grapes Bookstore","Vineyard Haven","23 Main Street, Vineyard Haven, MA 02568","Retail","https://www.bunchofgrapes.com","(508) 693-2291",75,"manual_import",TRUE,"Possible category mismatch: name contains ""store"" but category is ""Retail"""
+695,"C'est La Vie","Vineyard Haven","208, Vineyard Haven MA 02568","Shopping & Retail","https://gomarthasvineyard.com","(508) 693-6181",70,"mvy_chamber",FALSE,""
+681,"Callahan Plumbing and Heating, INC","Vineyard Haven","44 Webaqua St, Vineyard Haven, MA 02568","Lodging & Tourism","https://gomarthasvineyard.com/directory/callahan-plumbing-and-heating-inc","(508) 696-6088",70,"mvy_chamber",FALSE,""
+408,"Camp MV","Vineyard Haven","1 569, Edgartown, MA","Recreation","http://campmv.com/","(508) 693-3772",0.8,"vineyard_gazette",TRUE,"Low confidence score: 0.8"
+476,"Cape Cod 5","Vineyard Haven","","Other","http://capecodfive.com/","(888) 225-4636",60,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+425,"Captain Flanders Inn","Vineyard Haven","","Inn","http://captainflandersinn.com/","(508) 645-3123",80,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains ""inn"" but category is ""Inn"""
+675,"Carroll's Martha's Vineyard Rapid Transit, Inc.","Vineyard Haven","475 Edgartown Rd, Vineyard Haven, MA 02568","Professional Services","http://www.carrollsmv.com/?y_source=1_ODE3NjQ4LTcxNS1sb2NhdGlvbi53ZWJzaXRl","(508) 693-0348",65,"mvy_chamber",FALSE,""
+198,"Catboat Coffee Co.","Vineyard Haven","79 Beach Road, Vineyard Haven, MA","Restaurant","https://catboatcoffee.com/","(774) 563-5296",80,"vineyard_gazette",FALSE,""
+478,"Cb Stark Jewelers","Vineyard Haven","","Retail","http://cbstark.com/","(888) 227-8275",70,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+481,"Center for New Learning MV","Vineyard Haven","20 Surveyors Lane, Tisbury, MA","Other","http://cnlmv.org/","(920) 410-4577",70,"vineyard_gazette",FALSE,""
+379,"Charles & Charles","Vineyard Haven","85 Summer Street, Vineyard Haven, MA 02568","Other","http://charlesandcharlesmv.com/","(508) 338-2351",70,"vineyard_gazette",FALSE,""
+483,"Chickenalley","Vineyard Haven","","Other","http://chickenalley.org/","",50,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name"
+487,"Claudia Jewelry","Vineyard Haven","","Other","http://claudia.jewelry/","(508) 627-8306",60,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+491,"Conrado®","Vineyard Haven","2 Union Street, Vineyard Haven, MA","Retail","http://shopconrado.com/","",70,"vineyard_gazette",FALSE,""
+270,"Conroy Apothecary","Vineyard Haven","459 State Road West, Tisbury, MA","Restaurant","http://conroy-apothecary.com/","(508) 693-7070",80,"vineyard_gazette",FALSE,""
+493,"Crane Appliance","Vineyard Haven","529 State Road, Vineyard Haven, MA 02568","Other","http://craneappliance.com/","(508) 548-8179",60,"vineyard_gazette",FALSE,""
+239,"Cronigs Market","Vineyard Haven","357 State Road, Vineyard Haven, MA 02568","Restaurant","http://cronigsmarket.com/","(508) 693-4457",80,"vineyard_gazette",FALSE,""
+355,"Crossfitmarthas","Vineyard Haven","","Wellness","http://crossfitmarthasvineyard.com/","",55,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+496,"Darosa's","Vineyard Haven","","Other","http://darosasmv.com/","(508) 693-0110",70,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+497,"Debettencourt's Service Station","Vineyard Haven","83 New York Avenue, Oak Bluffs, MA 02557","Other","http://debettencourtsservicestation.weebly.com/","(508) 693-0751",60,"vineyard_gazette",FALSE,""
+200,"Delicious MV","Vineyard Haven","","Restaurant","http://deliciousmv.com/","",60,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+499,"Divine Beauty + Wellness","Vineyard Haven","AEdgartown, MA 02539","Wellness","http://divinemv.com/","(508) 905-5983",70,"vineyard_gazette",FALSE,""
+381,"Dockside Inn","Vineyard Haven","9 Circuit Avenue, Extension Oak Bluffs, MA 02557","Inn","http://vineyardinns.com/","(800) 245-5979",70,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""inn"" but category is ""Inn"""
+501,"Donaroma's Martha's Vineyard","Vineyard Haven","270 Upper Main Street, Edgartown, MA 02539","Other","http://donaromas.com/","(508) 627-3036",70,"vineyard_gazette",FALSE,""
+431,"Duckinnon","Vineyard Haven","","Inn","http://duckinnonmv.com/","(715) 386-9450",65,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains ""inn"" but category is ""Inn"""
+383,"Dunmere House","Vineyard Haven","7 Pennacook Ave, Vineyard Haven, MA 02557","Lodging","http://dunmerehouse.com/","(508) 693-3627",80,"vineyard_gazette",FALSE,""
+503,"E. C. Cottle, Inc.","Vineyard Haven","","Contractor","http://eccottle.com/","(508) 627-4381",70,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+507,"East Chop Sleep Shop","Vineyard Haven","395 State Road, Vineyard Haven, MA 02568","Shopping","http://eastchopsleepshop.com/","(508) 693-5911",0.8,"vineyard_gazette",TRUE,"Low confidence score: 0.8; Possible category mismatch: name contains ""shop"" but category is ""Shopping"""
+385,"Edgar Hotel","Vineyard Haven","Edgartown, MA 02539","Lodging","http://edgarhotelmv.com/","(508) 627-5161",80,"vineyard_gazette",FALSE,""
+510,"Edgartown Books","Vineyard Haven","44 Main Street, Edgartown, MA 02539","Other","http://edgartownbooks.com/","(508) 627-8463",70,"vineyard_gazette",FALSE,""
+284,"Edgartown Firemen's Association","Vineyard Haven","516768 Pease Point Way South PO BOX 737Edgartown, MA 02539","Restaurant","http://edgartownfiremensassociation.org/","(508) 627-5167",80,"vineyard_gazette",FALSE,""
+339,"Edgartown Golf Club Martha's Vineyard","Vineyard Haven","205 , Edgartown, MA 02539","Restaurant","https://edgartowngolfclub.com/","(508) 627-5343",80,"vineyard_gazette",FALSE,""
+515,"Edgartown Hardware","Vineyard Haven","61 West Tisbury Road, Edgartown, MA 02539","Other","http://edgartownhardware.com/","(508) 627-4338",60,"vineyard_gazette",FALSE,""
+376,"Edgartown Martha's Vineyard Hot Yoga Studio/yoga on the Vine","Vineyard Haven","Edgartown Rd, Edgartown, MA 02539","Wellness","http://yogaonthevine.com/","",70,"vineyard_gazette",FALSE,""
+251,"Edgartown Seafood Fish Market","Vineyard Haven","138 Cooke Street, Edgartown, MA 02539","Restaurant","http://edgartownseafood.com/","(508) 627-3791",80,"vineyard_gazette",FALSE,""
+518,"Edgartownpaintshoppe","Vineyard Haven","","Retail","http://edgartownpaintshoppe.com/","",60,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains ""shop"" but category is ""Retail""; Business name appears to be scraped from domain name"
+286,"Eisenhauer Gallery","Vineyard Haven","38 N WATER ST PO Box 1930, EDGARTOWN, MA 02539","Restaurant","http://eisenhauergallery.com/","",60,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""gallery"" but category is ""Restaurant"""
+282,"Entertainmentcinemas.Com/Locations/Edgartown","Vineyard Haven","","Restaurant","http://entertainmentcinemas.com/locations/edgartown","",0.6,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Low confidence score: 0.6; Vineyard Haven assignment without address - may be default assignment"
+288,"Featherstone Center for the Arts","Vineyard Haven","Oak Bluffs, MA, 02557","Restaurant","http://featherstoneart.org/","(508) 693-1850",70,"vineyard_gazette",FALSE,""
+340,"Felix Neck Wildlife Sanctuary","Vineyard Haven","494 , Vineyard Haven, MA 02568","Restaurant","http://massaudubon.org/felixneck","(508) 627-4850",70,"vineyard_gazette",FALSE,""
+290,"Field Gallery","Vineyard Haven","1050 State Road                West, Tisbury, MA 02575","Restaurant","http://fieldgallery.com/","(508) 693-5595",80,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""gallery"" but category is ""Restaurant"""
+453,"Find Your Island Ride","Vineyard Haven","4 Water Street, Vineyard Haven, MA 02568
+
+
+Edgartown
+196 Upper Main Street, Edgartown, MA 02539
+
+
+
+
+
+
+Airport Pickup Service
+71 Airport Rd,West Tisbury, MA 02575","Vacation Rental","http://mvautorental.com/","(508) 696-5300",70,"vineyard_gazette",FALSE,""
+520,"Fine Fettle","Vineyard Haven","","Medical","http://finefettle.com/","",60,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+523,"Good Dog Goods","Vineyard Haven","","Other","http://gooddoggoods.com/","(508) 696-7100",60,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+7,"Granary Gallery","Vineyard Haven","636 Old County Road, West Tisbury, MA 02575","Gallery","https://www.granarygallery.com","(508) 693-0455",0.7,"manual_import",TRUE,"Low confidence score: 0.7; Possible category mismatch: name contains ""gallery"" but category is ""Gallery"""
+525,"Granite Five & Ten","Vineyard Haven","242 Vineyard Haven Rd, Edgartown, MA 02539","Retail","http://granitestores.com/","(508) 627-3232",70,"vineyard_gazette",FALSE,""
+392,"Greenwood House","Vineyard Haven","6150
+PO Box 2734, Vineyard Haven, MA 02568","Other","http://greenwoodhouse.com/","(508) 693-6150",60,"vineyard_gazette",FALSE,""
+692,"Harbor Craft Shop","Vineyard Haven","Box 1698
+Vineyard Haven, MA 02568","Shopping & Retail","https://business.mvy.com/memberdirectory/Details/harbor-craft-shop-2286320","(508) 645-2929",80,"mvy_chamber",FALSE,""
+397,"Hob Knob","Vineyard Haven","128 Main Street, Edgartown, MA 02539","Lodging","http://hobknob.com/","(508) 627-9510",0.8,"vineyard_gazette",TRUE,"Low confidence score: 0.8"
+359,"Hot Yoga MV","Vineyard Haven","497 State Road, West Tisbury, MA","Wellness","http://hotyogamv.com/","(774) 327-1287",80,"vineyard_gazette",FALSE,""
+683,"Hutker Architects INC","Vineyard Haven","79 Beach Rd, Vineyard Haven, MA 02568","Medical","http://www.hutkerarchitects.com/","(508) 693-3344",70,"mvy_chamber",FALSE,""
+401,"Inkwell Beach House","Vineyard Haven","83 Sea View Ave, Oak Bluffs, MA 02557","Other","http://inkwellbeach.com/","(838) 245-8830",70,"vineyard_gazette",FALSE,""
+328,"Instagram","Vineyard Haven","","Restaurant","https://instagram.com","",60,"vineyard_gazette",TRUE,"Invalid name pattern: appears to be a URL or social media platform; Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name"
+387,"Instagram Icon","Vineyard Haven","Edgartown, MA 02539","Other","http://edgartowncommons.com/","(508) 627-4671",60,"vineyard_gazette",FALSE,""
+685,"Interiors Studio Martha's Vineyard","Vineyard Haven","7 Beach St, Vineyard Haven, MA 02568","Medical","http://www.interiorsstudiomv.com/","(508) 693-1955",80,"mvy_chamber",FALSE,""
+532,"Island Aesthetics","Vineyard Haven","8 Union St, Vineyard Haven, MA 02568","Other","http://islandaestheticsmv.com/","(774) 563-5708",70,"vineyard_gazette",FALSE,""
+293,"Island Folk Pottery","Vineyard Haven","s Way
+Chilmark, MA
+02535","Restaurant","http://islandfolkpottery.com/","(508) 955-9944",80,"vineyard_gazette",FALSE,""
+202,"Island Fresh Pizza","Vineyard Haven","395 State Rd, Vineyard Haven, MA 02568","Restaurant","http://islandfreshpizza.com/","(508) 338-2764",80,"vineyard_gazette",FALSE,""
+534,"Islandalpaca","Vineyard Haven","PO Box 1515, Vineyard Haven, MA 02568","Boutique","http://islandalpaca.com/","(508) 693-5554",80,"vineyard_gazette",TRUE,"Business name appears to be scraped from domain name"
+536,"Islandmusic","Vineyard Haven","","Other","http://islandmusicmv.com/","",50,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+540,"Jardin Mahoney","Vineyard Haven","","Other","http://jardinmahoneymv.com/","(508) 693-3511",70,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+260,"Jim's Package Store","Vineyard Haven","1608, 
+Oak Bluffs, 
+MA","Restaurant","http://jimspackagestore.com/","(508) 693-0236",70,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""store"" but category is ""Restaurant"""
+726,"John's Fish Market","Vineyard Haven","5 Martin Rd, Vineyard Haven, MA 02568","Restaurant","https://johnsfishmarket.com/","(508) 693-1220",80,"infatuation",FALSE,""
+542,"Johnkeene","Vineyard Haven","25 Old Stage Road, West Tisbury, MA 02568","Other","http://johnkeene.com/","(508) 693-5975",60,"vineyard_gazette",TRUE,"Business name appears to be scraped from domain name"
+544,"King's Barber Shop","Vineyard Haven","395 State Road, Tisbury, MA 02568","Health & Wellness","http://kingsbarbershopmv.com/","(508) 687-9209",70,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""shop"" but category is ""Health & Wellness"""
+546,"Kismet Outfitters","Vineyard Haven","Edgartown, MA 02539","Other","http://kismetoutfitters.com/","(774) 549-5921",70,"vineyard_gazette",FALSE,""
+403,"Kkon","Vineyard Haven","59 Naushon Ave, Oak Bluffs, MA 02557","Other","http://kkonmv.com/","(508) 863-2734",65,"vineyard_gazette",FALSE,""
+728,"La Strada","Vineyard Haven","","Restaurant","","",0.7,"infatuation",TRUE,"Missing address for Vineyard Haven assignment; Low confidence score: 0.7; Vineyard Haven assignment without address - may be default assignment"
+405,"Lambert's Cove Inn","Vineyard Haven","RESORT
+90 Manaquayak Road
+West Tisbury, MA 02568","Lodging","http://lambertscoveinn.com/","(508) 422-8051",0.8,"vineyard_gazette",TRUE,"Low confidence score: 0.8"
+671,"Lani Beach Club","Vineyard Haven","25 Main St, Vineyard Haven, MA 02568","Building & Construction","http://www.lanibeachclub.com/","(508) 687-9436",70,"mvy_chamber",FALSE,""
+433,"Lark Hotels","Vineyard Haven","","Lodging","https://www.larkhotels.com/hotels/the-edgartown-collection","",55,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+549,"Larry","Vineyard Haven","","Other","http://larrystackle.com/","(508) 627-5088",70,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+253,"Larsen","Vineyard Haven","","Restaurant","http://larsensfishmarket.com/","(508) 645-2680",80,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+551,"Lazy Frog","Vineyard Haven","42 Circuit Ave, Oak Bluffs, MA 02557","Shopping","http://lazyfrogmv.com/","(508) 696-4679",80,"vineyard_gazette",FALSE,""
+553,"Leroux Kitchen","Vineyard Haven","62 Main St, Vineyard Haven, MA 02568","Retail","http://lerouxkitchen.com/","(207) 553-7665",80,"vineyard_gazette",FALSE,""
+437,"Lightkeepers Inn","Vineyard Haven","25 Simpsons Ln, Edgartown, MA 02539","Inn","http://thelightkeepersinn.com/","(508) 627-4600",70,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""inn"" but category is ""Inn"""
+673,"Lilly Pulitzer","Vineyard Haven","33 Main St, Edgartown, MA 02539","Building & Construction","https://www.lillypulitzer.com/store/details/?storeId=80228-289&city=edgartown&utm_source=gmb&utm_medium=organic","(508) 627-1209",80,"mvy_chamber",FALSE,""
+295,"Louisa Gould Photographer","Vineyard Haven","","Restaurant","http://louisagould.com/","",60,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+390,"Luxury Boutique Hotel Edgartown","Vineyard Haven","222 Upper Main Street, Edgartown, MA","Hotel","http://franklinhotelmv.com/","(508) 379-2100",80,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""hotel"" but category is ""Hotel"""
+658,"M&b Remodeling","Vineyard Haven","454 State Road, Vineyard Haven, MA","Other","http://vineyardhomecenter.com/","(508) 693-3227",60,"vineyard_gazette",FALSE,""
+310,"MV Camp Meeting Association","Vineyard Haven","80 Trinity Park, Oak Bluffs, MA 02557","Community","http://mvcma.org/","(508) 693-0525",0.8,"vineyard_gazette",TRUE,"Low confidence score: 0.8"
+297,"MV Glassworks","Vineyard Haven","683 State Road, West Tisbury, MA 02575","Shopping","http://mvglassworks.com/","(508) 693-6026",80,"vineyard_gazette",FALSE,""
+300,"MV Museum","Vineyard Haven","SUNDAY
+151 LAGOON POND ROADVINEYARD HAVEN MA 02568","Community","http://mvmuseum.org/","(508) 627-4441",80,"vineyard_gazette",FALSE,""
+567,"MV Shipyard","Vineyard Haven","Box 1119
+Vineyard Haven, MA 02568
+
+ 
+
+Shipping Address 164 Beach Road
+Vineyard Haven, MA 02568","Professional Services","http://mvshipyard.com/","(508) 693-0400",0.8,"vineyard_gazette",TRUE,"Low confidence score: 0.8"
+406,"Madisoninn","Vineyard Haven","18 Kennebec Avenue, Oak Bluffs, MA 02557","Inn","http://madisoninnmv.com/","(508) 693-2760",80,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""inn"" but category is ""Inn"""
+557,"Maggie's Salon","Vineyard Haven","HOME   SERVICES     ARTISTS    PRODUCTS   CONTACT US    BOOK NOW
+
+
+
+
+
+
+
+ 
+ 
+
+
+ 
+    
+
+31 beach road, 
+      suite 104A, 
+      vineyard haven, ma 02568","Other","http://maggiessalon.com/","(508) 693-2875",60,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""salon"" but category is ""Other"""
+696,"Mardell's Gifts & Jewelry","Vineyard Haven","Box 1698
+Vineyard Haven, MA 02568","Shopping & Retail","https://business.mvy.com/memberdirectory/Details/mardell-s-gifts-jewelry-2286091","(508) 693-0049",80,"mvy_chamber",FALSE,""
+563,"Martha","Vineyard Haven","PO Box 610West Tisbury, MA02575","Other","http://mvbank.com/","(508) 627-4266",60,"vineyard_gazette",FALSE,""
+561,"Martha's Bike","Vineyard Haven","4 Lagoon Pond Rd, Vineyard Haven, MA","Vacation Rental","http://marthasbikerentals.com/","(833) 362-7842",80,"vineyard_gazette",FALSE,""
+8,"Martha's Vineyard Film Festival","Vineyard Haven","Vineyard Haven, MA 02568","Other","https://www.mvfilmsociety.com","",50,"manual_import",FALSE,""
+30,"Martha's Vineyard Island","Vineyard Haven","Box 66
+Edgartown, MA 02539","Other","http://mvol.com/","(508) 627-4311",60,"vineyard_gazette",FALSE,""
+565,"Martha's Vineyard Made","Vineyard Haven","","Retail","http://marthasvineyardmade.com/","(508) 338-2598",80,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+31,"Martha's Vineyard Magazine","Vineyard Haven","","Other","http://www.mvmagazine.com/","",50,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+719,"Martha's Vineyard Pizza","Vineyard Haven","","Restaurant","http://marthasvineyardpizza.com","",60,"infatuation",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+569,"Martha's Vineyard Tile Company Inc.","Vineyard Haven","s Vineyard Tile Co123 Beach RdPO Box 98Vineyard Haven Ma 02568","Other","http://mvtileco.com/","(508) 693-9707",70,"vineyard_gazette",FALSE,""
+670,"Martha's Vineyard, Ma Store Location","Vineyard Haven","65 Main St, Edgartown, MA 02539","Building & Construction","https://charlestonshoeco.com/pages/marthas-vineyard-ma","(508) 859-1511",80,"mvy_chamber",TRUE,"Possible category mismatch: name contains ""store"" but category is ""Building & Construction"""
+375,"Marthas Vineyard Yoga Barn","Vineyard Haven","1 RED BARN ROAD, WEST TISBURY, MA 02575","Bar","http://marthas-vineyard-yoga-barn.com/","",65,"vineyard_gazette",FALSE,""
+593,"Marthasvineyardescaperoom","Vineyard Haven","","Other","https://www.marthasvineyardescaperoom.com/escape-room-pirates-puzzle","",45,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Low confidence score: 45; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name"
+652,"Martha’s Vineyard Home Décor","Vineyard Haven","","Other","http://vineyarddecorators.com/","(508) 693-9197",60,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+415,"Martha’s Vineyard Hotels","Vineyard Haven","19 Pequot Avenue, Oak Bluffs, MA 02557","Hotel","http://pequothotel.com/","(508) 693-5087",80,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""hotel"" but category is ""Hotel"""
+444,"Martha’s Vineyard Surfside Hotel: Martha’s Vineyard Hotels","Vineyard Haven","7 Oak Bluffs Avenue, Oak Bluffs, MA 02557","Hotel","http://mvsurfside.com/","(508) 693-2500",80,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""hotel"" but category is ""Hotel"""
+514,"Mass.gov/locations/dukes-county-superior-court","Vineyard Haven","Box 1267, Edgartown, MA 02539","Other","http://mass.gov/locations/dukes-county-superior-court","(508) 627-4668",70,"vineyard_gazette",FALSE,""
+574,"Mccurdymotorcars","Vineyard Haven","2006-2007 McCurdy Motorcars Used cars
+Martha’s Vineyard, Vineyard Haven, MA","Other","http://mccurdymotorcars.com/","(508) 693-5532",70,"vineyard_gazette",TRUE,"Business name appears to be scraped from domain name"
+364,"Megan Grennan Yoga","Vineyard Haven","comPO Box 909West Tisbury, MA 02575","Wellness","http://meganyogamv.com/","",70,"vineyard_gazette",FALSE,""
+255,"Menemsha Fish Market","Vineyard Haven","","Restaurant","http://menemshafishmarket.com/","(508) 645-2282",80,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+410,"Menemsha Inn & Cottages: Martha's Vineyard Vacation Rentals","Vineyard Haven","457 North Road, Menemsha, MA 02552","Inn","http://menemshainn.com/","(508) 645-2521",80,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""inn"" but category is ""Inn"""
+577,"Menemshablues","Vineyard Haven","","Other","http://menemshablues.com/","",50,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name"
+227,"Menu","Vineyard Haven","Grill455 State Rd Unit 4 Vineyard Haven MA 02568","Restaurant","http://woodlandvarietyandgrill.com/","(508) 693-6795",70,"vineyard_gazette",TRUE,"Invalid name pattern: appears to be a URL or social media platform"
+304,"Merry Farm Pottery","Vineyard Haven","","Restaurant","http://merryfarmpottery.com/","(774) 836-4349",80,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+306,"Michaeljimage","Vineyard Haven","","Restaurant","http://michaeljimage.com/","(415) 238-7572",80,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name"
+206,"Mikado","Vineyard Haven","","Restaurant","http://mikadomv.com/","",55,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+342,"Mink Meadows Golf Club","Vineyard Haven","320 Golf Club Road, Vineyard Haven, MA 02568","Restaurant","https://www.minkmeadowsgc.com/","(508) 693-0600",70,"vineyard_gazette",FALSE,""
+729,"Model Deli Is a Model of Deliciousness","Vineyard Haven","","Restaurant","https://www.mvtimes.com/2024/10/16/model-deli-model-deliciousness/","",60,"infatuation",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+308,"Moore Family Gallery","Vineyard Haven","s Park Road, Oak Bluffs, MA, 02557","Restaurant","http://moorefamilygallery.com/","(508) 693-8548",70,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""gallery"" but category is ""Restaurant"""
+439,"Morgan Hotel","Vineyard Haven","Massachusetts, 02557","Lodging","http://morganhotelmv.com/","(508) 338-2804",80,"vineyard_gazette",FALSE,""
+581,"Mosher Photo","Vineyard Haven","Vineyard Haven Road, Edgartown, MA 02539","Other","http://mosherphoto.com/","(508) 693-9430",70,"vineyard_gazette",FALSE,""
+348,"Mvana","Vineyard Haven","","Restaurant","http://mvana.org/","(866) 686-2669",70,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name"
+571,"Mvcenter4Living.Org","Vineyard Haven","00AM
+
+
+
+ 
+Nomans to Jaws Bridge
+
+
+
+
+
+
+Register HEre 
+
+
+
+
+
+
+
+
+
+Thank You to Our Sponsors 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+Get in Touch 
+
+
+
+
+
+
+ 
+
+
+
+Address
+29 Breakdown Lane, PO Box 1729Vineyard Haven, MA 02568","Other","http://mvcenter4living.org/","(508) 939-9440",0.8,"vineyard_gazette",TRUE,"Invalid name pattern: appears to be a URL or social media platform; Low confidence score: 0.8; Business name appears to be scraped from domain name"
+262,"Mvwine Store","Vineyard Haven","","Restaurant","http://mvwinestore.com/","(508) 627-7557",65,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains ""store"" but category is ""Restaurant"""
+412,"Narragansett House","Vineyard Haven","46 Narragansett Ave, Oak Bluffs, MA 02557","Inn","http://narragansetthouse.com/","(518) 577-2938",80,"vineyard_gazette",FALSE,""
+231,"Native Earth Teaching Farm","Vineyard Haven","","Restaurant","http://nativeearthteachingfarm.org/","(302) 208-9250",70,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+693,"Neptune's Sea Chest","Vineyard Haven","Box 1698
+Vineyard Haven, MA 02568","Shopping & Retail","https://business.mvy.com/memberdirectory/Details/the-sea-chest-2286577","(508) 693-0316",80,"mvy_chamber",FALSE,""
+413,"Nobnocket","Vineyard Haven","The Nobnocket Boutique Inn Vineyard Haven, MA 02568","Inn","http://nobnocket.com/","(508) 696-0859",80,"vineyard_gazette",TRUE,"Business name appears to be scraped from domain name"
+210,"Nook","Vineyard Haven","238 Main St, Vineyard Haven, MA","Restaurant","http://natsnookmv.com/","(508) 338-2340",70,"vineyard_gazette",FALSE,""
+583,"North Line Shell","Vineyard Haven","3 N Line Road, Edgartown, MA 02539","Retail","http://northlineshell.com/","(508) 338-7884",70,"vineyard_gazette",FALSE,""
+233,"North Tabor Farm","Vineyard Haven","4 North Tabor Farm Road, Chilmark, MA 02535","Restaurant","http://northtaborfarm.com/","(508) 645-3311",80,"vineyard_gazette",FALSE,""
+312,"North Water Gallery","Vineyard Haven","1050 State Road                West, Tisbury, MA 02575","Restaurant","http://northwatergallery.com/","(508) 627-6002",80,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""gallery"" but category is ""Restaurant"""
+419,"Oak Bluffs Hotel","Vineyard Haven","42 Lake Avenue, Oak Bluffs, MA 02539","Inn","http://attleborohousemv.com/","(508) 693-4346",80,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""hotel"" but category is ""Inn"""
+441,"Oak Bluffs Inn","Vineyard Haven","64 Circuit Ave, Oak Bluffs, MA 02557","Inn","http://oakbluffsinn.com/","(508) 693-7171",80,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""inn"" but category is ""Inn"""
+694,"Off Main","Vineyard Haven","76 Main St, Vineyard Haven, MA 02568","Shopping & Retail","https://gomarthasvineyard.com/directory/main","(508) 696-5354",70,"mvy_chamber",FALSE,""
+691,"Olive Branch Fair Trade","Vineyard Haven","
+43a Main St, Vineyard Haven, MA 02568","Shopping & Retail","http://www.olivebranchfairtrade.org/","(774) 563-3083",80,"mvy_chamber",FALSE,""
+357,"Optometrist in Harvard Square","Vineyard Haven","s Vineyard, MA 02568","Wellness","http://harvardsquareeyecare.com/","(617) 366-1549",80,"vineyard_gazette",FALSE,""
+314,"Pathways Arts","Vineyard Haven","9 State Road, Chilmark, MA 02535","Community","http://pathwaysmv.org/","(508) 645-9098",80,"vineyard_gazette",FALSE,""
+365,"Peakedhillstudio","Vineyard Haven","Peaked Hill Studio
+Chilmark, MA 02535","Wellness","http://peakedhillstudio.com/","(774) 563-8282",80,"vineyard_gazette",TRUE,"Business name appears to be scraped from domain name"
+599,"Personal & Business Banking","Vineyard Haven","","Financial","http://rocklandtrust.com/","(508) 732-7072",70,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+324,"Peter Simon Photography","Vineyard Haven","14 Wisteria Road, Chilmark, MA 02535","Restaurant","http://petersimon.com/","",70,"vineyard_gazette",FALSE,""
+591,"Phillips Hardware Closed","Vineyard Haven","","Other","http://phillipshardwaremv.com/","",50,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+213,"Porto Pizza Martha's Vineyard","Vineyard Haven","36 Water St, Vineyard Haven, MA 02568","Restaurant","http://portopizzamv.com/","(508) 693-6200",70,"vineyard_gazette",FALSE,""
+672,"Rainy Day","Vineyard Haven","66 Main St, Vineyard Haven, MA 02568","Building & Construction","http://rainydaymv.com/","(508) 693-1830",80,"mvy_chamber",FALSE,""
+368,"Redirecting...","Vineyard Haven","","Wellness","http://vineyardgynecology.com/","",60,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+349,"Refuge Recovery World Services","Vineyard Haven","","Restaurant","http://refugerecovery.org/","(323) 592-9502",80,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+684,"Rentschler & Company Interiors on Martha's Vineyard","Vineyard Haven","39 Lake St, Vineyard Haven, MA 02568","Medical","https://www.rentschlerinteriors.com/","(508) 693-2058",70,"mvy_chamber",FALSE,""
+597,"Revive by Sarka ~ European Skincare, Boutique & Spa","Vineyard Haven","","Boutique","http://revivebysarka.com/","",60,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains ""spa"" but category is ""Boutique"""
+215,"Rocco's Pizza Menu","Vineyard Haven","s Vineyard, Massachusetts 02568","Restaurant","http://marthasvineyardpizza.com/","(508) 693-1125",70,"vineyard_gazette",FALSE,""
+723,"Rosie's Frozen Yogurt","Vineyard Haven","","Restaurant","https://rosiesfrozenyogurt.com","",60,"infatuation",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+345,"Royal Chappy Golf","Vineyard Haven","EDGARTOWN MA 02539","Restaurant","https://royalchappy.com/","(508) 939-4055",80,"vineyard_gazette",FALSE,""
+665,"Sail Surf and Paddle on Martha's Vineyard","Vineyard Haven","","Retail","http://windsupmv.com/","",70,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+588,"Salon","Vineyard Haven","5 Cournoyer Road, West Tisbury, MA","Other","http://panachesalonmv.com/","",60,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""salon"" but category is ""Other"""
+603,"Sanctuary Martha's Vineyard","Vineyard Haven","42 Circuit Avenue, Oak Bluffs, MA 02557","Retail","http://shopsanctuary.com/","",60,"vineyard_gazette",FALSE,""
+219,"Scottish Bakehouse","Vineyard Haven","","Restaurant","http://scottishbakehousemv.com/","",70,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+606,"Sea Bags","Vineyard Haven","","Retail","http://seabags.com/","(888) 210-4244",80,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+608,"Sea Legs","Vineyard Haven","","Boutique","http://sealegsmv.com/","",60,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+610,"Sea Spasalon","Vineyard Haven","","Wellness","http://seaspasalonmv.com/","(508) 627-8953",65,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains ""spa"" but category is ""Wellness"""
+316,"Seastone Papers","Vineyard Haven","s Vineyard, MA  02575","Restaurant","http://seastonepapers.com/","(508) 693-5786",80,"vineyard_gazette",FALSE,""
+489,"Secure.myvanco.com/ygss/campaign/c-yjgr","Vineyard Haven","","Camp","https://secure.myvanco.com/YGSS/campaign/C-YJGR","",60,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+614,"Shirt Tales MV","Vineyard Haven","61 Main Street, Edgartown, MA 02539","Other","http://shirttalesmv.com/","(508) 627-3766",70,"vineyard_gazette",FALSE,""
+616,"Slate","Vineyard Haven","11 North Summer Street, Edgartown, MA 02539","Boutique","http://slatemv.com/","(508) 939-1908",80,"vineyard_gazette",FALSE,""
+618,"Slip 77","Vineyard Haven","","Other","http://slip77.com/","",45,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Low confidence score: 45; Vineyard Haven assignment without address - may be default assignment"
+350,"Smart Recovery","Vineyard Haven","","Restaurant","http://smartrecovery.org/","(440) 951-5357",70,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+620,"Soft As a Grape","Vineyard Haven","","Retail","http://softasagrape.com/","(508) 295-9900",80,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+623,"Sole","Vineyard Haven","","Other","http://solemv.com/","",45,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Low confidence score: 45; Vineyard Haven assignment without address - may be default assignment"
+625,"Spa L'eau MV","Vineyard Haven","One Mariners Landing C, Edgartown, MA 02539","Wellness","http://spaleaumv.com/","(508) 292-1235",70,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""spa"" but category is ""Wellness"""
+626,"Stefanie Wolf Designs Artisan Jewelry From Martha's Vineyard","Vineyard Haven","37 Circuit Avenue, Oak Bluffs, MA","Boutique","http://stefaniewolf.com/","(774) 549-9526",70,"vineyard_gazette",FALSE,""
+318,"Strand Theatre MV","Vineyard Haven","11 Oak Bluffs Ave, Oak Bluffs, MA 02557","Restaurant","http://strandtheatre-marthasvineyard.com/","(312) 576-4890",80,"vineyard_gazette",FALSE,""
+278,"Sue","Vineyard Haven","Title
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+ 
+
+ 88 Dukes County Avenue
+PO Box 1545
+Oak Bluffs, MA 02557","Restaurant","http://alisonshaw.com/","(508) 693-4429",75,"vineyard_gazette",FALSE,""
+417,"Summercamp Hotel","Vineyard Haven","","Hotel","http://summercamphotel.com/","",55,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains ""hotel"" but category is ""Hotel"""
+629,"Summershadessunglasses","Vineyard Haven","","Other","http://summershadessunglasses.com/","",50,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name"
+221,"Sweet Bites","Vineyard Haven","32 Beach Street, Vineyard Haven, MA 02568","Restaurant","http://sweetbitesmv.com/","(598) 684-8257",80,"vineyard_gazette",FALSE,""
+631,"Talita Destefani Beauty Lounge","Vineyard Haven","7 Beach Street, Vineyard Haven, MA","Other","http://talitadestefani.com/","(508) 560-0058",70,"vineyard_gazette",FALSE,""
+633,"Tashmoo Insurance Agency","Vineyard Haven","517 State Road, Vineyard Haven, MA 02568","Insurance","http://tashmooinsurance.com/","(508) 693-4000",80,"vineyard_gazette",FALSE,""
+555,"Technical Apparel + Athletic Shoes","Vineyard Haven","1818 Cornwall Ave, Vancouver, BC V6J 1C7","Retail","http://shop.lululemon.com/","(877) 263-9300",70,"vineyard_gazette",FALSE,""
+686,"Tending Joy Artisan Shop","Vineyard Haven","21 Marion's Way, Chilmark, Ma","Shopping & Retail","https://www.tendingjoy.com/","(508) 560-1613",80,"mvy_chamber",FALSE,""
+423,"The Beach Front Inn of Martha's Vineyard","Vineyard Haven","s Vineyard Massachusetts 02557","Inn","http://beachfrontinnmv.com/","(508) 693-5148",80,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""inn"" but category is ""Inn"""
+697,"The Beach House of MV","Vineyard Haven","30 Main St, Vineyard Haven, MA 02568","Shopping & Retail","https://thebeachhouseofmv.com/","(508) 693-6091",80,"mvy_chamber",FALSE,""
+1,"The Black Dog Tavern Company","Vineyard Haven","21 Beach Street Extension, Vineyard Haven, MA 02568","Restaurant","https://www.theblackdog.com","(508) 693-9223",80,"manual_import",FALSE,""
+427,"The Charlotte Inn","Vineyard Haven","27 South Summer Street, Edgartown, MA 02539","Lodging","http://thecharlotteinn.com/","(508) 627-4751",80,"vineyard_gazette",FALSE,""
+322,"The Christina Gallery","Vineyard Haven","5 Winter Street, Edgartown, MA 02539","Restaurant","http://christina.com/","(508) 627-8794",70,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""gallery"" but category is ""Restaurant"""
+446,"The Edgartown Collection","Vineyard Haven","56 North Water Street, Edgartown, MA 02539","Other","http://theedgartowncollection.com/","(978) 992-8710",60,"vineyard_gazette",FALSE,""
+512,"The Edgartown Council on Aging","Vineyard Haven","","Wellness","http://edgartowncoa.com/","(508) 627-4368",80,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+669,"The Great Put On","Vineyard Haven","1 Dock St, Edgartown, MA 02539","Shopping","http://thegreatputonmv.com/","(508) 627-5495",80,"mvy_chamber",FALSE,""
+640,"The Green Room","Vineyard Haven","The Green Room
+71 Main Street
+Vineyard Haven, MA 02568","Shopping","http://greenroommv.com/","(508) 693-6888",65,"vineyard_gazette",FALSE,""
+395,"The Harborside Inn","Vineyard Haven","3 South Water Street, Edgartown, MA 02539","Lodging","http://theharborsideinn.com/","(508) 627-4321",70,"vineyard_gazette",FALSE,""
+204,"The La Choza Difference: Flavor Without the Fuss.","Vineyard Haven","","Restaurant","http://lachozamv.com/","",60,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+5,"The Mansion House","Vineyard Haven","9 Main Street, Vineyard Haven, MA 02568","Inn","https://www.mvmansionhouse.com","(508) 693-2200",0.5,"manual_import",TRUE,"Low confidence score: 0.5"
+347,"The Martha's Vineyard Groups of Alcoholics Anonymous","Vineyard Haven","45 South Summer Street, Edgartown, MA","Restaurant","https://aaonmv.org","(508) 627-7084",70,"vineyard_gazette",FALSE,""
+257,"The Net Result","Vineyard Haven","79 Beach Rd, Vineyard Haven, MA 02568","Restaurant","http://mvseafood.com/","(508) 693-6071",80,"vineyard_gazette",FALSE,""
+343,"The Polly Hill Arboretum","Vineyard Haven","809 State Road West, Tisbury, MA 02575","Restaurant","http://pollyhillarboretum.org/","(508) 693-9426",70,"vineyard_gazette",FALSE,""
+244,"The Reliable Market","Vineyard Haven","Oak Bluffs, MA 02557","Restaurant","http://thereliablemarket.com/","(508) 693-1102",70,"vineyard_gazette",FALSE,""
+326,"The Vineyard's Drive","Vineyard Haven","","Restaurant","http://driveinmv.com/","(508) 696-6300",80,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+329,"The Yard","Vineyard Haven","1 The Yard, Chilmark, MA","Restaurant","http://dancetheyard.org/","(508) 645-9662",80,"vineyard_gazette",FALSE,""
+644,"Third World Trading Co.","Vineyard Haven","52 Circuit Ave PO Box 1033 Oak Bluffs Marthas Vineyard, MA 02557","Other","https://www.thirdworldtrading.com/index.htm","(508) 693-5550",70,"vineyard_gazette",FALSE,""
+648,"Tisbury Toy Box","Vineyard Haven","79 Beach Road, Vineyard Haven, MA 02568","Other","http://tisburytoybox.com/","(508) 693-8182",70,"vineyard_gazette",FALSE,""
+646,"Tisburyma.Gov/Council-Aging","Vineyard Haven","","Other","http://tisburyma.gov/council-aging","",0.6,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Low confidence score: 0.6; Vineyard Haven assignment without address - may be default assignment"
+682,"Tracker Home Decor","Vineyard Haven","89 Peases Point Way S, Edgartown, MA 02539","Medical","http://www.trackerhomedecor.com/","(508) 627-8725",70,"mvy_chamber",FALSE,""
+642,"Trust","Vineyard Haven","9 Main Street, Vineyard Haven, MA 02568","Other","https://www.tanyarust.com/","(508) 693-4445",70,"vineyard_gazette",FALSE,""
+331,"Tuck & Holand Metal Sculptors","Vineyard Haven","275 State Road, Tisbury, MA","Restaurant","http://tuckandholand.com/","(508) 693-3914",80,"vineyard_gazette",FALSE,""
+435,"Vacasa.com/usa/the-island-inn","Vineyard Haven","850 NW 13th Ave, Portland, Oregon 97209","Inn","http://vacasa.com/usa/The-Island-Inn-MA","(800) 544-0300",70,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""inn"" but category is ""Inn"""
+367,"Vcmpt","Vineyard Haven","238 Edgartown-Vineyard Haven Rd, Edgartown, MA 02539","Wellness","http://vcmpt.com/","(508) 693-3800",75,"vineyard_gazette",TRUE,"Business name appears to be scraped from domain name"
+333,"Vineyard Arts Project","Vineyard Haven","215 Upper Main Street, Edgartown, MA 02539","Restaurant","http://vineyardarts.org/","(508) 413-2104",80,"vineyard_gazette",FALSE,""
+654,"Vineyard Family Tennis","Vineyard Haven","618 Barnes Road, Oak Bluffs, MA 02557","Other","http://vineyardfamilytennis.org/","(508) 693-7762",60,"vineyard_gazette",FALSE,""
+346,"Vineyard Golf Club","Vineyard Haven","Box 9 Edgartown, MA 02539","Restaurant","https://www.vineyardgolf.com/","(508) 627-8930",70,"vineyard_gazette",FALSE,""
+249,"Vineyard Grocer","Vineyard Haven","294 State Rd, Vineyard Haven, MA 02568","Shopping","http://vineyardgrocer.com/","(508) 693-2000",80,"vineyard_gazette",FALSE,""
+448,"Vineyard Harbor Motel","Vineyard Haven","60 Beach Road, Vineyard Haven, MA 02568","Other","http://vineyardharbormotel.us/","(508) 693-3334",70,"vineyard_gazette",FALSE,""
+656,"Vineyard Hearth Patio & Spa","Vineyard Haven","","Wellness","http://vineyardhearthpatioandspa.com/","(508) 693-5520",70,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment; Possible category mismatch: name contains ""spa"" but category is ""Wellness"""
+370,"Vineyard Medical Care","Vineyard Haven","364 State Road, Vineyard Haven, MA","Medical","http://vineyardmedicalcare.com/","(508) 693-4400",70,"vineyard_gazette",FALSE,""
+320,"Vineyard Preservation Trust","Vineyard Haven","Box 5277
+Edgartown, MA 02539","Restaurant","http://vineyardtrust.org/","(774) 549-9107",80,"vineyard_gazette",FALSE,""
+273,"Vineyard Scripts","Vineyard Haven","","Restaurant","http://vineyardscripts.com/","",55,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+450,"Vineyard Square Hotel & Suites","Vineyard Haven","38 North Water Street, Edgartown, MA 02539","Hotel","http://vineyardsquarehotel.com/","(508) 627-4711",80,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""hotel"" but category is ""Hotel"""
+660,"Vineyard Vines","Vineyard Haven","","Boutique","http://vineyardvines.com/","(800) 892-4982",80,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+372,"Vineyard Vinyasa","Vineyard Haven","","Wellness","http://vineyardvinyasamv.com/","",55,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Vineyard Haven assignment without address - may be default assignment"
+266,"Vintage MV Wine & Spirits","Vineyard Haven","29 Winter Street, Nevin SqaureEdgartown, MA 02539","Restaurant","http://vintagemvwine-spirits.com/","(774) 549-9287",70,"vineyard_gazette",FALSE,""
+335,"Washington Ledesma","Vineyard Haven","58 Dock Street, Edgartown, MA","Restaurant","http://washingtonledesmamv.com/","(508) 693-1823",80,"vineyard_gazette",FALSE,""
+225,"Waterside Market","Vineyard Haven","82 Main Street, Vineyard Haven, MA 02568","Restaurant","http://watersidemarket.com/","(508) 693-8899",80,"vineyard_gazette",FALSE,""
+663,"Wheelhappybicycles","Vineyard Haven","","Other","http://wheelhappybicycles.com/","",45,"vineyard_gazette",TRUE,"Missing address for Vineyard Haven assignment; Low confidence score: 45; Vineyard Haven assignment without address - may be default assignment; Business name appears to be scraped from domain name"
+337,"Winter Street Gallery","Vineyard Haven","22 Winter Street, Edgartown, MA 02539","Restaurant","http://winterstreetgallery.com/","(401) 602-1702",80,"vineyard_gazette",TRUE,"Possible category mismatch: name contains ""gallery"" but category is ""Restaurant"""
+374,"Ymca of Martha's Vineyard","Vineyard Haven","VINEYARD HAVEN, MA 02568","Wellness","http://ymcamv.org/","(508) 696-7171",70,"vineyard_gazette",FALSE,""
+185,"7a Foods Martha's Vineyard","West Tisbury","1045 State Road West, Tisbury, MA 02575","Restaurant","http://7afoods.com/","(508) 693-4636",80,"vineyard_gazette",FALSE,""
+676,"Coastal Events MV","West Tisbury","974 State Rd, West Tisbury, MA 02575","Community & Government","https://www.coastaleventsmv.com/","(774) 563-0737",80,"mvy_chamber",FALSE,""
+680,"Lowe Energy Design Inc.","West Tisbury","250 Oak Lane, West Tisbury, MA","Lodging & Tourism","https://www.loweenergydesign.com/","(508) 693-1298",80,"mvy_chamber",FALSE,""
+187,"State Road Restaurant","West Tisbury","","Restaurant","http://stateroadrestaurant.com/","(508) 693-8582",80,"vineyard_gazette",TRUE,"Missing address for West Tisbury assignment"
+189,"Vineyard Take Out","West Tisbury","479 State Rd, West Tisbury, MA 02575","Restaurant","https://www.vineyardtakeoutmenu.com/","(508) 693-6924",70,"vineyard_gazette",FALSE,""

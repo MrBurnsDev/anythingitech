@@ -1,0 +1,32 @@
+{
+  "zipCodes": {
+    "02539": "Edgartown",
+    "02557": "Oak Bluffs",
+    "02568": "Vineyard Haven",
+    "02575": "West Tisbury",
+    "02535": "Chilmark",
+    "02552": "Chilmark",
+    "02571": "Aquinnah"
+  },
+  "validTowns": [
+    "Edgartown",
+    "Oak Bluffs",
+    "Vineyard Haven",
+    "West Tisbury",
+    "Chilmark",
+    "Aquinnah",
+    "Unknown"
+  ],
+  "townAliases": {
+    "Tisbury": "Vineyard Haven",
+    "Gay Head": "Aquinnah",
+    "Menemsha": "Chilmark",
+    "OB": "Oak Bluffs",
+    "VH": "Vineyard Haven",
+    "WT": "West Tisbury"
+  },
+  "notes": {
+    "02552": "Menemsha is part of Chilmark",
+    "02571": "Aquinnah (formerly Gay Head)"
+  }
+}
