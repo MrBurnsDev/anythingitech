@@ -1,23 +1,26 @@
 {
-  "exportedAt": "2026-04-21T16:39:55.564Z",
-  "totalBusinesses": 307,
-  "byTown": {
-    "vineyard-haven": 219,
-    "edgartown": 41,
-    "oak-bluffs": 31,
-    "west-tisbury": 5,
-    "chilmark": 6,
-    "aquinnah": 5
+  "generated": "2026-04-27T12:34:26.115Z",
+  "totalPublicBusinesses": 244,
+  "excludedRecords": 94,
+  "validationErrors": 1,
+  "gatesPassed": true,
+  "townDistribution": {
+    "Vineyard Haven": 71,
+    "Edgartown": 76,
+    "West Tisbury": 18,
+    "Aquinnah": 5,
+    "Chilmark": 18,
+    "Oak Bluffs": 56
   },
-  "byType": {
-    "restaurants": 146,
-    "lodging": 35,
-    "shopping": 32,
-    "health-wellness": 23,
-    "contractors": 7,
-    "bars-nightlife": 1,
-    "professional-services": 3,
-    "community": 3
-  },
-  "skippedTypes": []
+  "categoryDistribution": {
+    "Restaurants, Food & Beverages": 109,
+    "Lodging & Tourism": 30,
+    "Shopping & Specialty Retail": 54,
+    "Arts & Entertainment": 13,
+    "Family, Community & Government": 8,
+    "Medical Services & Providers": 6,
+    "Beauty & Wellness": 14,
+    "Business & Professional Services": 4,
+    "Building & Construction": 6
+  }
 }

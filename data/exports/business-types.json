@@ -1,120 +1,331 @@
 [
   {
-    "slug": "restaurants",
-    "name": "Restaurants",
-    "pluralName": "Restaurants",
+    "slug": "restaurantsand-food-and-beverages",
+    "name": "Restaurants, Food & Beverages",
+    "pluralName": "Restaurants & Food",
     "icon": "utensils",
     "description": "From waterfront seafood shacks to fine dining establishments, Martha's Vineyard offers exceptional dining for every taste and occasion.",
-    "shortDescription": "Local restaurants and dining establishments",
+    "shortDescription": "Local restaurants, cafes, and food purveyors",
     "seoDescription": "Find restaurants on Martha's Vineyard. Browse local dining options from casual seafood to fine dining across all island towns.",
-    "businessCount": 146,
+    "businessCount": 109,
     "byTown": {
-      "vineyard-haven": 70,
-      "edgartown": 36,
-      "oak-bluffs": 29,
-      "west-tisbury": 3,
+      "vineyard-haven": 22,
+      "aquinnah": 2,
       "chilmark": 6,
-      "aquinnah": 2
-    }
+      "edgartown": 40,
+      "oak-bluffs": 31,
+      "west-tisbury": 8
+    },
+    "subcategories": [
+      {
+        "name": "Restaurants",
+        "slug": "restaurants",
+        "count": 80
+      },
+      {
+        "name": "Bars & Pubs",
+        "slug": "bars-pubs",
+        "count": 6
+      },
+      {
+        "name": "Cafes",
+        "slug": "cafes",
+        "count": 4
+      },
+      {
+        "name": "Fish Markets",
+        "slug": "fish-markets",
+        "count": 4
+      },
+      {
+        "name": "Farms",
+        "slug": "farms",
+        "count": 4
+      },
+      {
+        "name": "Coffee Shops",
+        "slug": "coffee-shops",
+        "count": 3
+      },
+      {
+        "name": "Food Trucks",
+        "slug": "food-trucks",
+        "count": 3
+      },
+      {
+        "name": "Bakeries",
+        "slug": "bakeries",
+        "count": 2
+      },
+      {
+        "name": "Grocery Stores",
+        "slug": "grocery-stores",
+        "count": 2
+      },
+      {
+        "name": "Wineries & Breweries",
+        "slug": "wineries-breweries",
+        "count": 1
+      }
+    ]
   },
   {
-    "slug": "lodging",
-    "name": "Lodging",
-    "pluralName": "Lodging",
-    "icon": "bed",
-    "description": "Historic inns, boutique hotels, and vacation rentals provide comfortable accommodations for visitors to Martha's Vineyard year-round.",
-    "shortDescription": "Hotels, inns, and vacation rentals",
-    "seoDescription": "Find lodging on Martha's Vineyard. Browse hotels, inns, bed & breakfasts, and vacation rentals across all island towns.",
-    "businessCount": 35,
-    "byTown": {
-      "vineyard-haven": 30,
-      "edgartown": 3,
-      "west-tisbury": 1,
-      "aquinnah": 1
-    }
-  },
-  {
-    "slug": "shopping",
-    "name": "Shopping",
+    "slug": "shopping-and-specialty-retail",
+    "name": "Shopping & Specialty Retail",
     "pluralName": "Shopping & Retail",
     "icon": "shopping-bag",
     "description": "Local boutiques, galleries, and specialty shops offer island-made goods, curated collections, and unique finds throughout Martha's Vineyard.",
     "shortDescription": "Boutiques, galleries, and retail shops",
     "seoDescription": "Find shopping on Martha's Vineyard. Browse local boutiques, galleries, gift shops, and retail stores across all island towns.",
-    "businessCount": 32,
+    "businessCount": 54,
     "byTown": {
-      "vineyard-haven": 28,
-      "edgartown": 1,
-      "oak-bluffs": 1,
-      "aquinnah": 2
-    }
+      "vineyard-haven": 22,
+      "aquinnah": 2,
+      "chilmark": 6,
+      "edgartown": 14,
+      "oak-bluffs": 8,
+      "west-tisbury": 2
+    },
+    "subcategories": [
+      {
+        "name": "Gift Shops",
+        "slug": "gift-shops",
+        "count": 36
+      },
+      {
+        "name": "Art Supplies",
+        "slug": "art-supplies",
+        "count": 7
+      },
+      {
+        "name": "Wine & Spirits",
+        "slug": "wine-spirits",
+        "count": 3
+      },
+      {
+        "name": "Jewelry Stores",
+        "slug": "jewelry-stores",
+        "count": 3
+      },
+      {
+        "name": "Fish Markets",
+        "slug": "fish-markets",
+        "count": 2
+      },
+      {
+        "name": "Book Stores",
+        "slug": "book-stores",
+        "count": 1
+      },
+      {
+        "name": "Specialty Foods",
+        "slug": "specialty-foods",
+        "count": 1
+      },
+      {
+        "name": "Clothing & Apparel",
+        "slug": "clothing-apparel",
+        "count": 1
+      }
+    ]
   },
   {
-    "slug": "health-wellness",
-    "name": "Health & Wellness",
-    "pluralName": "Health & Wellness",
+    "slug": "lodging-and-tourism",
+    "name": "Lodging & Tourism",
+    "pluralName": "Hotels & Lodging",
+    "icon": "bed",
+    "description": "Historic inns, boutique hotels, and vacation rentals provide comfortable accommodations for visitors to Martha's Vineyard year-round.",
+    "shortDescription": "Hotels, inns, and vacation rentals",
+    "seoDescription": "Find lodging on Martha's Vineyard. Browse hotels, inns, bed & breakfasts, and vacation rentals across all island towns.",
+    "businessCount": 30,
+    "byTown": {
+      "edgartown": 9,
+      "vineyard-haven": 8,
+      "oak-bluffs": 10,
+      "chilmark": 2,
+      "aquinnah": 1
+    },
+    "subcategories": [
+      {
+        "name": "Hotels",
+        "slug": "hotels",
+        "count": 18
+      },
+      {
+        "name": "Inns",
+        "slug": "inns",
+        "count": 12
+      }
+    ]
+  },
+  {
+    "slug": "beauty-and-wellness",
+    "name": "Beauty & Wellness",
+    "pluralName": "Beauty & Wellness",
     "icon": "heart-pulse",
-    "description": "Medical providers, wellness centers, spas, and health services supporting the Martha's Vineyard community year-round.",
-    "shortDescription": "Medical, wellness, and health services",
-    "seoDescription": "Find health and wellness services on Martha's Vineyard. Browse medical providers, spas, and wellness centers across all island towns.",
-    "businessCount": 23,
+    "description": "Spas, salons, fitness centers, and wellness services supporting health and relaxation on Martha's Vineyard.",
+    "shortDescription": "Spas, salons, and wellness services",
+    "seoDescription": "Find beauty and wellness services on Martha's Vineyard. Browse spas, salons, fitness centers, and wellness providers across all island towns.",
+    "businessCount": 14,
     "byTown": {
-      "vineyard-haven": 23
-    }
+      "oak-bluffs": 2,
+      "vineyard-haven": 4,
+      "west-tisbury": 1,
+      "chilmark": 1,
+      "edgartown": 6
+    },
+    "subcategories": [
+      {
+        "name": "Spas",
+        "slug": "spas",
+        "count": 11
+      },
+      {
+        "name": "Yoga Studios",
+        "slug": "yoga-studios",
+        "count": 3
+      }
+    ]
   },
   {
-    "slug": "contractors",
-    "name": "Contractors",
-    "pluralName": "Contractors & Construction",
-    "icon": "hammer",
-    "description": "Skilled contractors, builders, and home service professionals serving homeowners and businesses across Martha's Vineyard.",
-    "shortDescription": "Builders, contractors, and home services",
-    "seoDescription": "Find contractors on Martha's Vineyard. Browse builders, construction companies, and home service professionals across all island towns.",
-    "businessCount": 7,
+    "slug": "arts-and-entertainment",
+    "name": "Arts & Entertainment",
+    "pluralName": "Arts & Entertainment",
+    "icon": "palette",
+    "description": "Art galleries, museums, theaters, and cultural venues showcase the vibrant creative community of Martha's Vineyard.",
+    "shortDescription": "Galleries, museums, and entertainment",
+    "seoDescription": "Find arts and entertainment on Martha's Vineyard. Browse galleries, museums, theaters, and cultural venues across all island towns.",
+    "businessCount": 13,
     "byTown": {
-      "vineyard-haven": 5,
-      "edgartown": 1,
-      "oak-bluffs": 1
-    }
+      "west-tisbury": 5,
+      "vineyard-haven": 2,
+      "chilmark": 2,
+      "oak-bluffs": 3,
+      "edgartown": 1
+    },
+    "subcategories": [
+      {
+        "name": "Art Galleries",
+        "slug": "art-galleries",
+        "count": 8
+      },
+      {
+        "name": "Entertainment Services",
+        "slug": "entertainment-services",
+        "count": 3
+      },
+      {
+        "name": "Photographers",
+        "slug": "photographers",
+        "count": 2
+      }
+    ]
   },
   {
-    "slug": "bars-nightlife",
-    "name": "Bars & Nightlife",
-    "pluralName": "Bars & Nightlife",
-    "icon": "wine",
-    "description": "Bars, pubs, and nightlife venues offering drinks and entertainment on Martha's Vineyard.",
-    "shortDescription": "Bars, pubs, and nightlife",
-    "seoDescription": "Find bars and nightlife on Martha's Vineyard. Browse local bars, pubs, and entertainment venues across all island towns.",
-    "businessCount": 1,
-    "byTown": {
-      "vineyard-haven": 1
-    }
-  },
-  {
-    "slug": "professional-services",
-    "name": "Professional Services",
-    "pluralName": "Professional Services",
-    "icon": "briefcase",
-    "description": "Professional service providers including legal, financial, and business services on Martha's Vineyard.",
-    "shortDescription": "Legal, financial, and business services",
-    "seoDescription": "Find professional services on Martha's Vineyard. Browse legal, financial, and business service providers across all island towns.",
-    "businessCount": 3,
-    "byTown": {
-      "vineyard-haven": 3
-    }
-  },
-  {
-    "slug": "community",
-    "name": "Community",
+    "slug": "familyand-community-and-government",
+    "name": "Family, Community & Government",
     "pluralName": "Community & Government",
     "icon": "landmark",
     "description": "Community organizations, government services, and nonprofits serving the Martha's Vineyard community.",
     "shortDescription": "Community organizations and services",
     "seoDescription": "Find community organizations on Martha's Vineyard. Browse nonprofits, government services, and community resources across all island towns.",
-    "businessCount": 3,
+    "businessCount": 8,
     "byTown": {
-      "vineyard-haven": 2,
-      "west-tisbury": 1
-    }
+      "oak-bluffs": 1,
+      "west-tisbury": 2,
+      "edgartown": 2,
+      "chilmark": 1,
+      "vineyard-haven": 2
+    },
+    "subcategories": [
+      {
+        "name": "Community Organizations",
+        "slug": "community-organizations",
+        "count": 6
+      },
+      {
+        "name": "Town Government",
+        "slug": "town-government",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "slug": "medical-services-and-providers",
+    "name": "Medical Services & Providers",
+    "pluralName": "Medical & Health",
+    "icon": "stethoscope",
+    "description": "Medical providers, pharmacies, and healthcare services supporting the Martha's Vineyard community year-round.",
+    "shortDescription": "Medical providers and healthcare",
+    "seoDescription": "Find medical services on Martha's Vineyard. Browse doctors, pharmacies, and healthcare providers across all island towns.",
+    "businessCount": 6,
+    "byTown": {
+      "vineyard-haven": 5,
+      "edgartown": 1
+    },
+    "subcategories": [
+      {
+        "name": "Physicians",
+        "slug": "physicians",
+        "count": 4
+      },
+      {
+        "name": "Pharmacies",
+        "slug": "pharmacies",
+        "count": 1
+      },
+      {
+        "name": "Home Health Care",
+        "slug": "home-health-care",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "slug": "building-and-construction",
+    "name": "Building & Construction",
+    "pluralName": "Building & Construction",
+    "icon": "hammer",
+    "description": "Skilled contractors, builders, and construction professionals serving homeowners and businesses across Martha's Vineyard.",
+    "shortDescription": "Contractors and construction services",
+    "seoDescription": "Find contractors on Martha's Vineyard. Browse builders, construction companies, and home improvement professionals across all island towns.",
+    "businessCount": 6,
+    "byTown": {
+      "edgartown": 3,
+      "oak-bluffs": 1,
+      "vineyard-haven": 2
+    },
+    "subcategories": [
+      {
+        "name": "General Contractors",
+        "slug": "general-contractors",
+        "count": 6
+      }
+    ]
+  },
+  {
+    "slug": "business-and-professional-services",
+    "name": "Business & Professional Services",
+    "pluralName": "Professional Services",
+    "icon": "briefcase",
+    "description": "Professional service providers including legal, financial, and business services on Martha's Vineyard.",
+    "shortDescription": "Legal, financial, and business services",
+    "seoDescription": "Find professional services on Martha's Vineyard. Browse legal, financial, and business service providers across all island towns.",
+    "businessCount": 4,
+    "byTown": {
+      "vineyard-haven": 4
+    },
+    "subcategories": [
+      {
+        "name": "Attorneys",
+        "slug": "attorneys",
+        "count": 3
+      },
+      {
+        "name": "IT Services",
+        "slug": "it-services",
+        "count": 1
+      }
+    ]
   }
 ]

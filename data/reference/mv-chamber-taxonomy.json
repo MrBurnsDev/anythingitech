@@ -1,0 +1,234 @@
+{
+  "version": "1.0",
+  "source": "MV Chamber of Commerce",
+  "generated": "2026-04-27",
+  "categories": {
+    "Arts & Entertainment": {
+      "subcategories": [
+        "Art Galleries",
+        "Museums",
+        "Theaters",
+        "Music Venues",
+        "Movie Theaters",
+        "Artists",
+        "Photographers",
+        "Entertainment Services"
+      ]
+    },
+    "Automotive & Marine": {
+      "subcategories": [
+        "Auto Repair",
+        "Auto Sales",
+        "Boat Sales & Service",
+        "Marine Services",
+        "Gas Stations",
+        "Towing Services"
+      ]
+    },
+    "Banking, Finance & Insurance": {
+      "subcategories": [
+        "Banks",
+        "Credit Unions",
+        "Financial Advisors",
+        "Insurance Agents",
+        "Accountants",
+        "Tax Services"
+      ]
+    },
+    "Beauty & Wellness": {
+      "subcategories": [
+        "Hair Salons",
+        "Spas",
+        "Nail Salons",
+        "Barbershops",
+        "Massage Therapy",
+        "Skincare",
+        "Fitness Centers",
+        "Yoga Studios",
+        "Personal Training"
+      ]
+    },
+    "Building & Construction": {
+      "subcategories": [
+        "General Contractors",
+        "Carpenters",
+        "Electric Contractors",
+        "Plumbers / Plumbing Services",
+        "HVAC",
+        "Roofing",
+        "Painters",
+        "Masons",
+        "Architects",
+        "Engineers"
+      ]
+    },
+    "Business & Professional Services": {
+      "subcategories": [
+        "Attorneys",
+        "Consultants",
+        "Marketing & Advertising",
+        "Web Design",
+        "IT Services",
+        "Printing Services",
+        "Office Supplies",
+        "Staffing Agencies"
+      ]
+    },
+    "Family, Community & Government": {
+      "subcategories": [
+        "Schools",
+        "Libraries",
+        "Churches",
+        "Nonprofits",
+        "Town Government",
+        "Community Organizations",
+        "Youth Programs",
+        "Senior Services",
+        "Recovery & Support Groups"
+      ]
+    },
+    "Home Services & Trades": {
+      "subcategories": [
+        "Cleaning Services",
+        "Landscaping",
+        "Pest Control Services",
+        "Pool Services",
+        "Septic Services",
+        "Moving Services",
+        "Storage",
+        "Handyman Services"
+      ]
+    },
+    "House, Garden & Pets": {
+      "subcategories": [
+        "Furniture Stores",
+        "Home Decor",
+        "Garden Centers",
+        "Nurseries",
+        "Pet Stores",
+        "Veterinarians",
+        "Pet Grooming",
+        "Kennels"
+      ]
+    },
+    "Lodging & Tourism": {
+      "subcategories": [
+        "Hotels",
+        "Inns",
+        "Bed & Breakfasts",
+        "Vacation Rentals",
+        "Campgrounds",
+        "Tour Operators",
+        "Travel Agencies"
+      ]
+    },
+    "Medical Services & Providers": {
+      "subcategories": [
+        "Hospitals",
+        "Physicians",
+        "Dentists",
+        "Optometrists",
+        "Chiropractors",
+        "Physical Therapy",
+        "Mental Health",
+        "Pharmacies",
+        "Home Health Care"
+      ]
+    },
+    "Real Estate & Rentals": {
+      "subcategories": [
+        "Real Estate Agents",
+        "Property Management",
+        "Rental Agencies",
+        "Title Companies",
+        "Surveyors"
+      ]
+    },
+    "Restaurants, Food & Beverages": {
+      "subcategories": [
+        "Restaurants",
+        "Cafes",
+        "Coffee Shops",
+        "Bakeries",
+        "Ice Cream Shops",
+        "Bars & Pubs",
+        "Catering",
+        "Food Trucks",
+        "Grocery Stores",
+        "Fish Markets",
+        "Farms",
+        "Wineries & Breweries"
+      ]
+    },
+    "Shopping & Specialty Retail": {
+      "subcategories": [
+        "Clothing & Apparel",
+        "Boutiques",
+        "Jewelry Stores",
+        "Gift Shops",
+        "Book Stores",
+        "Hardware Stores",
+        "Thrift Stores",
+        "Antiques",
+        "Sporting Goods",
+        "Bicycles - Dealers",
+        "Art Supplies",
+        "Wine & Spirits",
+        "Specialty Foods"
+      ]
+    },
+    "Sports & Recreation": {
+      "subcategories": [
+        "Golf Courses",
+        "Tennis Clubs",
+        "Boat Rentals",
+        "Kayak & Paddleboard",
+        "Fishing Charters",
+        "Sailing",
+        "Surfing",
+        "Bike Rentals",
+        "Beach Services"
+      ]
+    },
+    "Transportation & Utilities": {
+      "subcategories": [
+        "Taxi & Rideshare",
+        "Bus Services",
+        "Ferry Services",
+        "Airlines",
+        "Car Rentals",
+        "Delivery Services",
+        "Electric Companies",
+        "Water Services"
+      ]
+    },
+    "Wedding & Event Services": {
+      "subcategories": [
+        "Wedding Planners",
+        "Event Venues",
+        "Florists",
+        "DJs & Entertainment",
+        "Party Rentals",
+        "Catering",
+        "Photography"
+      ]
+    }
+  },
+  "valid_towns": [
+    "Vineyard Haven",
+    "Oak Bluffs",
+    "Edgartown",
+    "West Tisbury",
+    "Chilmark",
+    "Aquinnah"
+  ],
+  "zip_to_town": {
+    "02568": "Vineyard Haven",
+    "02557": "Oak Bluffs",
+    "02539": "Edgartown",
+    "02575": "West Tisbury",
+    "02535": "Chilmark",
+    "02552": "Chilmark",
+    "02571": "Aquinnah"
+  }
+}

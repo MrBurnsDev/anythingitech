@@ -4,65 +4,28 @@
     "name": "Vineyard Haven",
     "region": "down-island",
     "description": "The commercial heart of Martha's Vineyard, home to the ferry terminal and a vibrant Main Street with local shops, restaurants, and services.",
-    "businessCount": 219,
+    "businessCount": 71,
     "businessTypes": {
-      "restaurants": 70,
-      "lodging": 30,
-      "shopping": 28,
-      "health-wellness": 23,
-      "contractors": 5,
-      "bars-nightlife": 1,
-      "professional-services": 3,
-      "community": 2
+      "restaurantsand-food-and-beverages": 22,
+      "lodging-and-tourism": 8,
+      "shopping-and-specialty-retail": 22,
+      "arts-and-entertainment": 2,
+      "medical-services-and-providers": 5,
+      "familyand-community-and-government": 2,
+      "beauty-and-wellness": 4,
+      "business-and-professional-services": 4,
+      "building-and-construction": 2
     },
     "categories": [
-      "Accounting",
-      "Bar",
-      "Boutique",
-      "Building & Construction",
-      "Camp",
-      "Community",
-      "Community & Government",
-      "Contractor",
-      "Financial",
-      "Gallery",
-      "Health & Wellness",
-      "Hotel",
-      "House & Garden",
-      "Inn",
-      "Insurance",
-      "Lodging",
+      "Restaurants, Food & Beverages",
       "Lodging & Tourism",
-      "Medical",
-      "Other",
-      "Professional Services",
-      "Recreation",
-      "Restaurant",
-      "Retail",
-      "Shopping",
-      "Shopping & Retail",
-      "Vacation Rental",
-      "Wellness"
-    ]
-  },
-  {
-    "slug": "edgartown",
-    "name": "Edgartown",
-    "region": "down-island",
-    "description": "Historic whaling captain homes, upscale boutiques, waterfront dining, and professional services define this elegant village.",
-    "businessCount": 41,
-    "businessTypes": {
-      "restaurants": 36,
-      "lodging": 3,
-      "shopping": 1,
-      "contractors": 1
-    },
-    "categories": [
-      "Building & Construction",
-      "Hotel",
-      "Lodging",
-      "Restaurant",
-      "Shopping & Retail"
+      "Shopping & Specialty Retail",
+      "Arts & Entertainment",
+      "Medical Services & Providers",
+      "Family, Community & Government",
+      "Beauty & Wellness",
+      "Business & Professional Services",
+      "Building & Construction"
     ]
   },
   {
@@ -70,16 +33,51 @@
     "name": "Oak Bluffs",
     "region": "down-island",
     "description": "Colorful gingerbread cottages, the Flying Horses carousel, and a lively harbor scene with diverse local businesses.",
-    "businessCount": 31,
+    "businessCount": 56,
     "businessTypes": {
-      "restaurants": 29,
-      "shopping": 1,
-      "contractors": 1
+      "restaurantsand-food-and-beverages": 31,
+      "familyand-community-and-government": 1,
+      "shopping-and-specialty-retail": 8,
+      "arts-and-entertainment": 3,
+      "beauty-and-wellness": 2,
+      "lodging-and-tourism": 10,
+      "building-and-construction": 1
     },
     "categories": [
+      "Restaurants, Food & Beverages",
+      "Family, Community & Government",
+      "Shopping & Specialty Retail",
+      "Arts & Entertainment",
+      "Beauty & Wellness",
+      "Lodging & Tourism",
+      "Building & Construction"
+    ]
+  },
+  {
+    "slug": "edgartown",
+    "name": "Edgartown",
+    "region": "down-island",
+    "description": "Historic whaling captain homes, upscale boutiques, waterfront dining, and professional services define this elegant village.",
+    "businessCount": 76,
+    "businessTypes": {
+      "lodging-and-tourism": 9,
+      "restaurantsand-food-and-beverages": 40,
+      "shopping-and-specialty-retail": 14,
+      "familyand-community-and-government": 2,
+      "arts-and-entertainment": 1,
+      "beauty-and-wellness": 6,
+      "building-and-construction": 3,
+      "medical-services-and-providers": 1
+    },
+    "categories": [
+      "Lodging & Tourism",
+      "Restaurants, Food & Beverages",
+      "Shopping & Specialty Retail",
+      "Family, Community & Government",
+      "Arts & Entertainment",
+      "Beauty & Wellness",
       "Building & Construction",
-      "Restaurant",
-      "Shopping & Retail"
+      "Medical Services & Providers"
     ]
   },
   {
@@ -87,16 +85,20 @@
     "name": "West Tisbury",
     "region": "up-island",
     "description": "Rolling farmland, the beloved Farmers Market, artisan shops, and a quintessential New England town center.",
-    "businessCount": 5,
+    "businessCount": 18,
     "businessTypes": {
-      "restaurants": 3,
-      "lodging": 1,
-      "community": 1
+      "arts-and-entertainment": 5,
+      "restaurantsand-food-and-beverages": 8,
+      "familyand-community-and-government": 2,
+      "beauty-and-wellness": 1,
+      "shopping-and-specialty-retail": 2
     },
     "categories": [
-      "Community & Government",
-      "Lodging & Tourism",
-      "Restaurant"
+      "Arts & Entertainment",
+      "Restaurants, Food & Beverages",
+      "Family, Community & Government",
+      "Beauty & Wellness",
+      "Shopping & Specialty Retail"
     ]
   },
   {
@@ -104,12 +106,22 @@
     "name": "Chilmark",
     "region": "up-island",
     "description": "Quiet country roads, Lucy Vincent Beach, farm stands, and the iconic fishing village of Menemsha.",
-    "businessCount": 6,
+    "businessCount": 18,
     "businessTypes": {
-      "restaurants": 6
+      "shopping-and-specialty-retail": 6,
+      "arts-and-entertainment": 2,
+      "restaurantsand-food-and-beverages": 6,
+      "familyand-community-and-government": 1,
+      "beauty-and-wellness": 1,
+      "lodging-and-tourism": 2
     },
     "categories": [
-      "Restaurant"
+      "Shopping & Specialty Retail",
+      "Arts & Entertainment",
+      "Restaurants, Food & Beverages",
+      "Family, Community & Government",
+      "Beauty & Wellness",
+      "Lodging & Tourism"
     ]
   },
   {
@@ -119,14 +131,14 @@
     "description": "Home to the Gay Head Cliffs, the Wampanoag Tribe, artisan shops, and dramatic ocean views.",
     "businessCount": 5,
     "businessTypes": {
-      "restaurants": 2,
-      "lodging": 1,
-      "shopping": 2
+      "shopping-and-specialty-retail": 2,
+      "restaurantsand-food-and-beverages": 2,
+      "lodging-and-tourism": 1
     },
     "categories": [
-      "Inn",
-      "Restaurant",
-      "Shopping & Retail"
+      "Shopping & Specialty Retail",
+      "Restaurants, Food & Beverages",
+      "Lodging & Tourism"
     ]
   }
 ]
