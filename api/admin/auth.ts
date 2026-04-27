@@ -106,8 +106,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
       // Handle login
       if (!username || !password) {
+        console.log("Login attempt - missing credentials:", { username: !!username, password: !!password });
         return res.status(400).json({ error: "Username and password required" });
       }
+
+      console.log("Login attempt for user:", username);
 
       // Find user
       const { data: user, error } = await supabase
@@ -117,6 +120,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         .eq("is_active", true)
         .single();
 
+      console.log("User query result:", { found: !!user, error: error?.message });
+
       if (error || !user) {
         await logAudit("user", null, "login_failed", username, {
           reason: "user_not_found",
@@ -125,7 +130,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }
 
       // Check password
+      console.log("Checking password for user:", user.username);
+      console.log("Hash preview:", user.password_hash?.substring(0, 20));
       const valid = await bcrypt.compare(password, user.password_hash);
+      console.log("Password valid:", valid);
+
       if (!valid) {
         await logAudit("user", user.id, "login_failed", username, {
           reason: "invalid_password",
