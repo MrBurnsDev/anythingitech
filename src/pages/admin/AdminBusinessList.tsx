@@ -71,8 +71,11 @@ const MV_TOWNS = [
   "Aquinnah",
   "Chilmark",
   "Edgartown",
+  "Menemsha",
   "Oak Bluffs",
   "Tisbury",
+  "Unknown",
+  "Vineyard Haven",
   "West Tisbury",
 ];
 
