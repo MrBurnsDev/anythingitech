@@ -98,9 +98,10 @@ export function AdminEditDrawer({
   const [success, setSuccess] = useState("");
 
   // Fetch full business data from admin API when drawer opens
+  // Use slug for lookup - IDs may not match between public JSON and Supabase
   useEffect(() => {
     if (open && business && isAuthenticated) {
-      fetchBusinessData(business.id);
+      fetchBusinessData(business.slug);
     }
   }, [open, business, isAuthenticated]);
 
@@ -113,13 +114,13 @@ export function AdminEditDrawer({
     }
   }, [open]);
 
-  const fetchBusinessData = async (id: number) => {
+  const fetchBusinessData = async (slug: string) => {
     setIsLoading(true);
     setError("");
 
     try {
       const token = localStorage.getItem("admin_token");
-      const response = await fetch(`/api/admin/businesses?id=${id}`, {
+      const response = await fetch(`/api/admin/businesses?slug=${encodeURIComponent(slug)}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -172,6 +173,12 @@ export function AdminEditDrawer({
     e.preventDefault();
     if (!formData) return;
 
+    // Validation: ensure we're editing the correct record
+    if (business && formData.slug !== business.slug) {
+      setError(`SAFETY CHECK FAILED: Drawer opened for "${business.slug}" but loaded "${formData.slug}". Refusing to save.`);
+      return;
+    }
+
     setError("");
     setSuccess("");
     setIsSaving(true);
@@ -179,13 +186,14 @@ export function AdminEditDrawer({
     try {
       const token = localStorage.getItem("admin_token");
 
+      // Send slug with update to ensure correct record is updated
       const response = await fetch("/api/admin/businesses", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, slug: business?.slug }),
       });
 
       const data = await response.json();
@@ -284,6 +292,14 @@ export function AdminEditDrawer({
           <SheetDescription>
             {business?.name || "Loading..."}
           </SheetDescription>
+          {/* Defensive display: verify correct record is loaded */}
+          {formData && (
+            <div className="mt-2 p-2 bg-muted/50 rounded text-xs text-muted-foreground font-mono">
+              <div>ID: {formData.id} | Slug: {formData.slug}</div>
+              <div>Name: {formData.business_name}</div>
+              <div>Town: {formData.town}</div>
+            </div>
+          )}
         </SheetHeader>
 
         {isLoading ? (

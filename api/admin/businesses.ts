@@ -108,11 +108,27 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    // GET /api/admin/businesses - List businesses or get single by ID
+    // GET /api/admin/businesses - List businesses or get single by ID or slug
     if (req.method === "GET") {
-      const { id } = req.query;
+      const { id, slug } = req.query;
 
-      // Get single business by ID
+      // Get single business by slug (preferred - consistent across data sources)
+      if (slug) {
+        const { data: business, error } = await supabase
+          .from("businesses")
+          .select("*")
+          .eq("slug", slug as string)
+          .eq("is_duplicate", false)
+          .single();
+
+        if (error || !business) {
+          return res.status(404).json({ error: "Business not found", slug });
+        }
+
+        return res.status(200).json({ business });
+      }
+
+      // Get single business by ID (legacy - may not match between systems)
       if (id) {
         const { data: business, error } = await supabase
           .from("businesses")
@@ -122,7 +138,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           .single();
 
         if (error || !business) {
-          return res.status(404).json({ error: "Business not found" });
+          return res.status(404).json({ error: "Business not found", id });
         }
 
         return res.status(200).json({ business });
@@ -280,21 +296,24 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       });
     }
 
-    // PUT /api/admin/businesses - Update business (expects id in body)
+    // PUT /api/admin/businesses - Update business (expects id or slug in body)
     if (req.method === "PUT") {
       const data = req.body;
       const id = data.id;
+      const slug = data.slug;
 
-      if (!id) {
-        return res.status(400).json({ error: "Business ID required" });
+      if (!id && !slug) {
+        return res.status(400).json({ error: "Business ID or slug required" });
       }
 
-      // Get existing business for audit
-      const { data: existing, error: fetchError } = await supabase
-        .from("businesses")
-        .select("*")
-        .eq("id", id)
-        .single();
+      // Get existing business for audit - prefer slug lookup for consistency
+      let query = supabase.from("businesses").select("*");
+      if (slug) {
+        query = query.eq("slug", slug);
+      } else {
+        query = query.eq("id", id);
+      }
+      const { data: existing, error: fetchError } = await query.single();
 
       if (fetchError || !existing) {
         return res.status(404).json({ error: "Business not found" });
@@ -343,17 +362,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(400).json({ error: "No fields to update" });
       }
 
+      // Use existing.id (Supabase ID) for the update, not the request id
       const { error: updateError } = await supabase
         .from("businesses")
         .update(updates)
-        .eq("id", id);
+        .eq("id", existing.id);
 
       if (updateError) {
         console.error("Update error:", updateError);
         return res.status(500).json({ error: "Failed to update business" });
       }
 
-      // Log changes
+      // Log changes using the actual Supabase ID
       const changes: Record<string, unknown> = {};
       const previousValues: Record<string, unknown> = {};
       for (const field of fields) {
@@ -364,7 +384,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }
 
       if (Object.keys(changes).length > 0) {
-        await logAudit("business", id, "update", user.username, changes, previousValues);
+        await logAudit("business", existing.id, "update", user.username, changes, previousValues);
       }
 
       return res.status(200).json({ success: true });

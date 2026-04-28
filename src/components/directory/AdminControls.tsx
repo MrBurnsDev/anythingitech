@@ -52,7 +52,7 @@ export function AdminControls({
           Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
-          id: business.id,
+          slug: business.slug, // Use slug - IDs may not match between public JSON and Supabase
           needs_manual_review: true,
           review_reason: "Flagged by admin while browsing public directory",
         }),
@@ -81,7 +81,7 @@ export function AdminControls({
           Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
-          id: business.id,
+          slug: business.slug, // Use slug - IDs may not match between public JSON and Supabase
           business_status: "inactive",
           needs_manual_review: true,
           review_reason: "Hidden from public directory by admin",
