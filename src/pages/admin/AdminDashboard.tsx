@@ -15,6 +15,7 @@ import {
   Loader2,
   RefreshCw,
   Download,
+  Upload,
   CheckCircle,
 } from "lucide-react";
 
@@ -32,7 +33,12 @@ export default function AdminDashboard() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
   const [isExporting, setIsExporting] = useState(false);
+  const [isSyncing, setIsSyncing] = useState(false);
   const [exportResult, setExportResult] = useState<{
+    success: boolean;
+    message: string;
+  } | null>(null);
+  const [syncResult, setSyncResult] = useState<{
     success: boolean;
     message: string;
   } | null>(null);
@@ -142,6 +148,59 @@ export default function AdminDashboard() {
     }
   };
 
+  const handleSync = async () => {
+    if (!confirm("This will sync all businesses from the public JSON to Supabase. Continue?")) {
+      return;
+    }
+
+    setIsSyncing(true);
+    setSyncResult(null);
+
+    try {
+      const token = localStorage.getItem("admin_token");
+
+      // Fetch the public businesses.json
+      const jsonResponse = await fetch("/data/exports/businesses.json");
+      if (!jsonResponse.ok) {
+        throw new Error("Failed to load businesses.json");
+      }
+      const businesses = await jsonResponse.json();
+
+      // Call the migration API
+      const response = await fetch("/api/admin/migrate-directory", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ businesses }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setSyncResult({
+          success: true,
+          message: `Synced ${data.stats.input} businesses: ${data.stats.updated} updated, ${data.stats.inserted} inserted, ${data.stats.errors?.length || 0} errors`,
+        });
+        // Refresh stats after sync
+        fetchStats();
+      } else {
+        setSyncResult({
+          success: false,
+          message: data.error || "Sync failed",
+        });
+      }
+    } catch (err) {
+      setSyncResult({
+        success: false,
+        message: err instanceof Error ? err.message : "Network error during sync",
+      });
+    } finally {
+      setIsSyncing(false);
+    }
+  };
+
   if (isLoading) {
     return (
       <AdminLayout>
@@ -186,6 +245,19 @@ export default function AdminDashboard() {
             </p>
           </div>
           <div className="flex items-center gap-2">
+            <Button variant="outline" onClick={handleSync} disabled={isSyncing}>
+              {isSyncing ? (
+                <>
+                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                  Syncing...
+                </>
+              ) : (
+                <>
+                  <Upload className="h-4 w-4 mr-2" />
+                  Sync from JSON
+                </>
+              )}
+            </Button>
             <Button variant="outline" onClick={handleExport} disabled={isExporting}>
               {isExporting ? (
                 <>
@@ -207,6 +279,24 @@ export default function AdminDashboard() {
             </Button>
           </div>
         </div>
+
+        {/* Sync Result */}
+        {syncResult && (
+          <Alert
+            className={
+              syncResult.success
+                ? "bg-green-500/10 text-green-600 border-green-500/20"
+                : "bg-destructive/10 text-destructive border-destructive/20"
+            }
+          >
+            {syncResult.success ? (
+              <CheckCircle className="h-4 w-4" />
+            ) : (
+              <AlertTriangle className="h-4 w-4" />
+            )}
+            <AlertDescription>{syncResult.message}</AlertDescription>
+          </Alert>
+        )}
 
         {/* Export Result */}
         {exportResult && (
