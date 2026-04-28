@@ -146,11 +146,39 @@ function slugToTownName(slug: string): string | null {
 
 function categoryToSlug(category: string): string {
   if (!category) return "other";
-  return category.toLowerCase()
-    .replace(/&/g, "and")
+
+  // Map to exact slugs used in business-types.json
+  const categorySlugMap: Record<string, string> = {
+    "restaurants, food & beverages": "restaurants-food-beverages",
+    "shopping & specialty retail": "shopping-and-specialty-retail",
+    "lodging & tourism": "lodging-and-tourism",
+    "beauty & wellness": "beauty-and-wellness",
+    "arts & entertainment": "arts-and-entertainment",
+    "family, community & government": "family-community-government",
+    "medical services & providers": "medical-services-and-providers",
+    "building & construction": "building-and-construction",
+    "business & professional services": "business-and-professional-services",
+    "home services & trades": "home-services-and-trades",
+    "real estate & rentals": "real-estate-and-rentals",
+    "sports & recreation": "sports-and-recreation",
+    "transportation & utilities": "transportation-and-utilities",
+    "automotive & marine": "automotive-and-marine",
+    "wedding & event services": "wedding-and-event-services",
+    "banking, finance & insurance": "banking-finance-and-insurance",
+    "house, garden & pets": "house-garden-and-pets",
+    "professional services": "professional-services",
+    "contractors": "contractors",
+    "restaurant": "restaurants-food-beverages",
+    "other": "other",
+  };
+
+  const normalized = category.toLowerCase().trim();
+  return categorySlugMap[normalized] || category.toLowerCase()
+    .replace(/&/g, "-")
     .replace(/,/g, "")
     .replace(/\s+/g, "-")
-    .replace(/[^a-z0-9-]/g, "");
+    .replace(/[^a-z0-9-]/g, "")
+    .replace(/-+/g, "-");
 }
 
 function slugToCategory(slug: string): string | null {
