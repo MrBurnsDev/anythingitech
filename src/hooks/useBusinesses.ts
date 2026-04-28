@@ -131,3 +131,19 @@ export function useBusiness(slug: string | undefined): {
 export function clearBusinessesCache(): void {
   cache.clear();
 }
+
+// Hook for featured businesses (high confidence, sorted by name)
+export function useFeaturedBusinesses(limit: number = 6): {
+  businesses: Business[];
+  isLoading: boolean;
+  error: string | null;
+} {
+  const { businesses, isLoading, error } = useBusinesses({});
+
+  // Filter for high-confidence businesses and take the first N
+  const featuredBusinesses = businesses
+    .filter(b => (b.confidence ?? 70) >= 80)
+    .slice(0, limit);
+
+  return { businesses: featuredBusinesses, isLoading, error };
+}

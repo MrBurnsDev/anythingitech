@@ -8,9 +8,9 @@ import {
   businesses,
   getTownUrl,
   getBusinessTypeUrl,
-  getFeaturedBusinesses,
 } from "@/data/directory";
 import { BusinessCard } from "@/components/directory/BusinessCard";
+import { useFeaturedBusinesses } from "@/hooks/useBusinesses";
 import {
   MapPin,
   ArrowRight,
@@ -42,7 +42,7 @@ const typeIcons: Record<string, React.ElementType> = {
 };
 
 export default function DirectoryIndex() {
-  const featuredBusinesses = getFeaturedBusinesses(6);
+  const { businesses: featuredBusinesses, isLoading: featuredLoading } = useFeaturedBusinesses(6);
   const downIslandTowns = towns.filter((t) => t.region === "down-island");
   const upIslandTowns = towns.filter((t) => t.region === "up-island");
 
@@ -208,7 +208,7 @@ export default function DirectoryIndex() {
       </section>
 
       {/* Featured Businesses */}
-      {featuredBusinesses.length > 0 && (
+      {(featuredBusinesses.length > 0 || featuredLoading) && (
         <section className="py-24 md:py-32 bg-surface">
           <div className="container-editorial">
             <div className="max-w-2xl mb-16">
@@ -219,11 +219,23 @@ export default function DirectoryIndex() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {featuredBusinesses.map((business) => (
-                <BusinessCard key={business.id} business={business} />
-              ))}
-            </div>
+            {featuredLoading ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                {[...Array(6)].map((_, i) => (
+                  <div key={i} className="bg-card border border-border rounded-xl p-6 animate-pulse">
+                    <div className="h-6 bg-secondary rounded w-3/4 mb-3" />
+                    <div className="h-4 bg-secondary rounded w-1/2 mb-2" />
+                    <div className="h-4 bg-secondary rounded w-2/3" />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                {featuredBusinesses.map((business) => (
+                  <BusinessCard key={business.id} business={business} />
+                ))}
+              </div>
+            )}
           </div>
         </section>
       )}
