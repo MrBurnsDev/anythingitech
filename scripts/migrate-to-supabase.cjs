@@ -1,168 +1,267 @@
 #!/usr/bin/env node
 /**
- * Migrate SQLite data to Supabase
+ * Migrate public directory data to Supabase
+ *
+ * This script syncs the canonical public JSON (businesses.json) into Supabase,
+ * establishing Supabase as the single source of truth.
+ *
+ * Run: node scripts/migrate-to-supabase.cjs
  */
 
+require('dotenv').config();
 const { createClient } = require('@supabase/supabase-js');
-const Database = require('better-sqlite3');
-const bcrypt = require('bcryptjs');
-const path = require('path');
 const fs = require('fs');
+const path = require('path');
 
-const SUPABASE_URL = 'https://zrrinbeyiuiydalxiwii.supabase.co';
-const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpycmluYmV5aXVpeWRhbHhpd2lpIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NzMyMjEwMCwiZXhwIjoyMDkyODk4MTAwfQ.I9mzXQyW_yPd31Nd4k_HxtVs3tY7OugJTxb5FNQFjaE';
+// Supabase config - uses service role key for full access
+const SUPABASE_URL = process.env.SUPABASE_URL || "https://zrrinbeyiuiydalxiwii.supabase.co";
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-const DB_PATH = path.join(__dirname, '..', 'data', 'mv_registry.db');
-
-const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
-
-async function runMigration() {
-  console.log('Reading migration SQL...');
-  const migrationSQL = fs.readFileSync(
-    path.join(__dirname, '..', 'supabase', 'migrations', '001-init.sql'),
-    'utf-8'
-  );
-
-  console.log('Running migration on Supabase...');
-
-  // Split by semicolons and run each statement
-  const statements = migrationSQL
-    .split(';')
-    .map(s => s.trim())
-    .filter(s => s.length > 0 && !s.startsWith('--'));
-
-  for (const statement of statements) {
-    try {
-      const { error } = await supabase.rpc('exec_sql', { sql: statement + ';' });
-      if (error && !error.message.includes('already exists')) {
-        console.log('Statement:', statement.substring(0, 50) + '...');
-        console.log('Error:', error.message);
-      }
-    } catch (e) {
-      // Ignore errors for now, we'll run via SQL editor
-    }
-  }
-
-  console.log('Migration statements prepared. Please run them in Supabase SQL Editor.');
+if (!SUPABASE_KEY) {
+  console.error('Error: SUPABASE_SERVICE_ROLE_KEY required');
+  console.error('Set it in .env or pass as environment variable');
+  process.exit(1);
 }
 
-async function migrateData() {
-  console.log('Opening SQLite database...');
-  const db = new Database(DB_PATH, { readonly: true });
+const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
-  // Get all active businesses
-  console.log('Reading businesses from SQLite...');
-  const businesses = db.prepare(`
-    SELECT
-      id, business_name, slug, town, category, subcategory,
-      short_description, full_address, street_address,
-      phone, email, website,
-      facebook_url, instagram_url, yelp_url, tripadvisor_url,
-      business_status, confidence_score, needs_manual_review, review_reason,
-      notes, latitude, longitude, is_duplicate,
-      created_at, updated_at
-    FROM businesses
-    WHERE is_duplicate = 0
-  `).all();
+const EXPORTS_DIR = path.join(__dirname, '..', 'data', 'exports');
+const BACKUP_DIR = path.join(__dirname, '..', 'data', 'backups');
 
-  console.log(`Found ${businesses.length} businesses to migrate`);
+// Stats tracking
+const stats = {
+  backed_up: 0,
+  inserted: 0,
+  updated: 0,
+  skipped: 0,
+  conflicts: [],
+  errors: [],
+};
 
-  // Transform for Supabase (convert SQLite booleans)
-  const transformedBusinesses = businesses.map(b => ({
-    business_name: b.business_name,
-    slug: b.slug,
-    town: b.town,
-    category: b.category,
-    subcategory: b.subcategory || null,
-    short_description: b.short_description || null,
-    full_address: b.full_address || null,
-    street_address: b.street_address || null,
-    phone: b.phone || null,
-    email: b.email || null,
-    website: b.website || null,
-    facebook_url: b.facebook_url || null,
-    instagram_url: b.instagram_url || null,
-    yelp_url: b.yelp_url || null,
-    tripadvisor_url: b.tripadvisor_url || null,
-    business_status: b.business_status || 'active',
-    confidence_score: Math.round(Number(b.confidence_score) || 50),
-    needs_manual_review: b.needs_manual_review === 1,
-    review_reason: b.review_reason || null,
-    notes: b.notes || null,
-    latitude: b.latitude || null,
-    longitude: b.longitude || null,
-    is_duplicate: false,
-  }));
+async function backupSupabase() {
+  console.log('📦 Backing up current Supabase businesses...');
 
-  // Insert in batches
-  const BATCH_SIZE = 50;
-  let inserted = 0;
+  const { data: businesses, error } = await supabase
+    .from('businesses')
+    .select('*')
+    .order('id');
 
-  for (let i = 0; i < transformedBusinesses.length; i += BATCH_SIZE) {
-    const batch = transformedBusinesses.slice(i, i + BATCH_SIZE);
+  if (error) {
+    console.error('Backup failed:', error);
+    process.exit(1);
+  }
 
+  fs.mkdirSync(BACKUP_DIR, { recursive: true });
+  const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
+  const backupPath = path.join(BACKUP_DIR, `supabase-businesses-${timestamp}.json`);
+
+  fs.writeFileSync(backupPath, JSON.stringify(businesses, null, 2));
+  stats.backed_up = businesses.length;
+
+  console.log(`   Backed up ${businesses.length} records to ${backupPath}`);
+  return businesses;
+}
+
+async function loadPublicJSON() {
+  console.log('📄 Loading public directory JSON...');
+
+  const jsonPath = path.join(EXPORTS_DIR, 'businesses.json');
+  const businesses = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
+
+  console.log(`   Loaded ${businesses.length} businesses from businesses.json`);
+  return businesses;
+}
+
+function normalizeForMatch(str) {
+  if (!str) return '';
+  return str.toLowerCase()
+    .replace(/['']/g, '')
+    .replace(/[^a-z0-9]/g, '')
+    .trim();
+}
+
+async function syncToSupabase(publicBusinesses, existingSupabase) {
+  console.log('\n🔄 Syncing businesses to Supabase...\n');
+
+  // Build lookup maps for existing Supabase records
+  const supabaseBySlug = new Map();
+  const supabaseByNameTown = new Map();
+
+  for (const b of existingSupabase) {
+    if (b.slug) {
+      supabaseBySlug.set(b.slug.toLowerCase(), b);
+    }
+    const key = `${normalizeForMatch(b.business_name)}|${normalizeForMatch(b.town)}`;
+    supabaseByNameTown.set(key, b);
+  }
+
+  for (const pub of publicBusinesses) {
+    try {
+      // Try to find existing record by slug first
+      let existing = supabaseBySlug.get(pub.slug?.toLowerCase());
+
+      // If not found by slug, try by name+town
+      if (!existing) {
+        const key = `${normalizeForMatch(pub.name)}|${normalizeForMatch(pub.town)}`;
+        existing = supabaseByNameTown.get(key);
+      }
+
+      // Prepare the record for Supabase
+      const record = {
+        business_name: pub.name,
+        slug: pub.slug,
+        town: pub.town,
+        category: pub.category,
+        subcategory: pub.subcategory || null,
+        short_description: pub.description || null,
+        full_address: pub.address || null,
+        phone: pub.phone || null,
+        email: pub.email || null,
+        website: pub.website || null,
+        latitude: pub.coordinates?.lat || null,
+        longitude: pub.coordinates?.lng || null,
+        facebook_url: pub.social?.facebook || null,
+        instagram_url: pub.social?.instagram || null,
+        yelp_url: pub.social?.yelp || null,
+        tripadvisor_url: pub.social?.tripadvisor || null,
+        business_status: 'active',
+        is_duplicate: false,
+        needs_manual_review: false,
+        confidence_score: pub.confidence || 70,
+      };
+
+      if (existing) {
+        // Update existing record - preserve the Supabase ID
+        const { error } = await supabase
+          .from('businesses')
+          .update(record)
+          .eq('id', existing.id);
+
+        if (error) {
+          stats.errors.push({ business: pub.name, error: error.message });
+          console.log(`   ❌ Error updating ${pub.name}: ${error.message}`);
+        } else {
+          stats.updated++;
+          console.log(`   ✓ Updated: ${pub.name} (ID: ${existing.id})`);
+        }
+      } else {
+        // Insert new record
+        const { data, error } = await supabase
+          .from('businesses')
+          .insert(record)
+          .select('id')
+          .single();
+
+        if (error) {
+          // Check if it's a duplicate slug error
+          if (error.message.includes('duplicate') || error.message.includes('unique')) {
+            stats.conflicts.push({ business: pub.name, slug: pub.slug, error: error.message });
+            console.log(`   ⚠️ Conflict: ${pub.name} (slug: ${pub.slug})`);
+          } else {
+            stats.errors.push({ business: pub.name, error: error.message });
+            console.log(`   ❌ Error inserting ${pub.name}: ${error.message}`);
+          }
+        } else {
+          stats.inserted++;
+          console.log(`   + Inserted: ${pub.name} (ID: ${data.id})`);
+        }
+      }
+    } catch (err) {
+      stats.errors.push({ business: pub.name, error: err.message });
+      console.log(`   ❌ Exception for ${pub.name}: ${err.message}`);
+    }
+  }
+}
+
+async function verifySync() {
+  console.log('\n🔍 Verifying sync...');
+
+  // Check specific businesses
+  const testCases = [
+    'la-choza-vineyard-haven',
+    'the-black-dog-tavern-company-vineyard-haven',
+    'catboat-coffee-co-vineyard-haven',
+    'artcliff-diner-vineyard-haven',
+    'mocha-motts-vineyard-haven',
+    'bunch-of-grapes-bookstore-vineyard-haven',
+  ];
+
+  console.log('\n   Test cases:');
+  for (const slug of testCases) {
     const { data, error } = await supabase
       .from('businesses')
-      .upsert(batch, { onConflict: 'slug' });
+      .select('id, business_name, slug, town')
+      .eq('slug', slug)
+      .single();
 
-    if (error) {
-      console.error(`Error inserting batch ${i / BATCH_SIZE + 1}:`, error.message);
+    if (data) {
+      console.log(`   ✓ ${data.business_name} (ID: ${data.id})`);
     } else {
-      inserted += batch.length;
-      console.log(`Inserted batch ${Math.floor(i / BATCH_SIZE) + 1} (${inserted}/${transformedBusinesses.length})`);
+      console.log(`   ❌ Not found: ${slug}`);
     }
   }
 
-  // Create admin user
-  console.log('Creating admin user...');
-  const adminPassword = process.env.ADMIN_PASSWORD || 'MV_Admin_2024!';
-  const passwordHash = bcrypt.hashSync(adminPassword, 10);
+  // Get final count
+  const { count } = await supabase
+    .from('businesses')
+    .select('*', { count: 'exact', head: true })
+    .eq('is_duplicate', false)
+    .eq('business_status', 'active');
 
-  const { error: adminError } = await supabase
-    .from('admin_users')
-    .upsert({
-      username: 'admin',
-      password_hash: passwordHash,
-      display_name: 'Administrator',
-      email: 'louis@anythingitechmv.com',
-      role: 'admin',
-      is_active: true,
-    }, { onConflict: 'username' });
-
-  if (adminError) {
-    console.error('Error creating admin user:', adminError.message);
-  } else {
-    console.log('Admin user created/updated');
-  }
-
-  db.close();
-  console.log('Migration complete!');
+  console.log(`\n   Final active business count: ${count}`);
+  return count;
 }
 
 async function main() {
-  console.log('=== Supabase Migration ===\n');
+  console.log('═══════════════════════════════════════════════════════════');
+  console.log('  Migrate Public Directory to Supabase');
+  console.log('═══════════════════════════════════════════════════════════\n');
 
-  // Check if tables exist by trying to query
-  const { data, error } = await supabase.from('businesses').select('id').limit(1);
+  // Step 1: Backup existing Supabase data
+  const existingSupabase = await backupSupabase();
 
-  if (error && error.message.includes('does not exist')) {
-    console.log('Tables do not exist. Please run the SQL migration first.');
-    console.log('\n1. Go to Supabase Dashboard → SQL Editor');
-    console.log('2. Copy the contents of supabase/migrations/001-init.sql');
-    console.log('3. Paste and run it');
-    console.log('4. Then run this script again\n');
+  // Step 2: Load public JSON
+  const publicBusinesses = await loadPublicJSON();
 
-    // Output the SQL for easy copy
-    const sql = fs.readFileSync(
-      path.join(__dirname, '..', 'supabase', 'migrations', '001-init.sql'),
-      'utf-8'
-    );
-    console.log('=== SQL to run ===\n');
-    console.log(sql);
-    return;
+  // Step 3: Sync to Supabase
+  await syncToSupabase(publicBusinesses, existingSupabase);
+
+  // Step 4: Verify
+  const finalCount = await verifySync();
+
+  // Print summary
+  console.log('\n═══════════════════════════════════════════════════════════');
+  console.log('  Migration Summary');
+  console.log('═══════════════════════════════════════════════════════════');
+  console.log(`  Backed up:  ${stats.backed_up} records`);
+  console.log(`  Inserted:   ${stats.inserted} new records`);
+  console.log(`  Updated:    ${stats.updated} existing records`);
+  console.log(`  Conflicts:  ${stats.conflicts.length}`);
+  console.log(`  Errors:     ${stats.errors.length}`);
+  console.log(`  Final count: ${finalCount} active businesses`);
+  console.log('═══════════════════════════════════════════════════════════\n');
+
+  if (stats.conflicts.length > 0) {
+    console.log('Conflicts:');
+    stats.conflicts.forEach(c => console.log(`  - ${c.business}: ${c.error}`));
   }
 
-  await migrateData();
+  if (stats.errors.length > 0) {
+    console.log('Errors:');
+    stats.errors.forEach(e => console.log(`  - ${e.business}: ${e.error}`));
+  }
+
+  // Write report
+  const reportPath = path.join(BACKUP_DIR, 'migration-report.json');
+  fs.writeFileSync(reportPath, JSON.stringify({
+    timestamp: new Date().toISOString(),
+    stats,
+    finalCount,
+  }, null, 2));
+  console.log(`\nReport saved to ${reportPath}`);
 }
 
-main().catch(console.error);
+main().catch(err => {
+  console.error('Migration failed:', err);
+  process.exit(1);
+});
