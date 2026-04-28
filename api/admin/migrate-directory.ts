@@ -115,10 +115,27 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(500).json({ error: "Server not configured - missing SUPABASE_SERVICE_ROLE_KEY" });
   }
 
-  const { businesses } = req.body as { businesses: PublicBusiness[] };
+  let businesses: PublicBusiness[] = [];
 
-  if (!businesses || !Array.isArray(businesses)) {
-    return res.status(400).json({ error: "Request body must include 'businesses' array" });
+  // Check if businesses were provided in request body
+  if (req.body?.businesses && Array.isArray(req.body.businesses)) {
+    businesses = req.body.businesses;
+  } else {
+    // Read from server filesystem
+    try {
+      const jsonPath = path.join(process.cwd(), "data", "exports", "businesses.json");
+      const jsonContent = fs.readFileSync(jsonPath, "utf-8");
+      businesses = JSON.parse(jsonContent);
+    } catch (fileError) {
+      return res.status(500).json({
+        error: "Could not load businesses.json from server",
+        details: String(fileError)
+      });
+    }
+  }
+
+  if (!businesses || businesses.length === 0) {
+    return res.status(400).json({ error: "No businesses to migrate" });
   }
 
   const stats = {

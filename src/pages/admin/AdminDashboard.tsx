@@ -159,21 +159,14 @@ export default function AdminDashboard() {
     try {
       const token = localStorage.getItem("admin_token");
 
-      // Fetch the public businesses.json
-      const jsonResponse = await fetch("/data/exports/businesses.json");
-      if (!jsonResponse.ok) {
-        throw new Error("Failed to load businesses.json");
-      }
-      const businesses = await jsonResponse.json();
-
-      // Call the migration API
+      // Call the migration API - server will read businesses.json directly
       const response = await fetch("/api/admin/migrate-directory", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({ businesses }),
+        body: JSON.stringify({}),
       });
 
       const data = await response.json();
