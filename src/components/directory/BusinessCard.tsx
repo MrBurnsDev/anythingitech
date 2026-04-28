@@ -10,47 +10,60 @@ interface BusinessCardProps {
 }
 
 export function BusinessCard({ business, showTown = true, onAdminUpdate }: BusinessCardProps) {
+  // Determine the best category label to show
+  const categoryLabel = business.category || business.businessType;
+
   return (
     <Link
       to={getBusinessUrl(business)}
-      className="group card-service p-6 flex flex-col min-h-[180px] relative"
+      className="group card-service p-6 flex flex-col min-h-[200px] relative"
     >
       {/* Admin controls - only visible when logged in as admin */}
       <AdminControls business={business} onUpdated={onAdminUpdate} />
-      <div className="flex items-start justify-between gap-4 mb-4">
-        <div className="flex-1 min-w-0">
-          <h3 className="font-display text-xl mb-1 group-hover:text-accent transition-colors truncate">
-            {business.name}
-          </h3>
-          {showTown && (
-            <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
-              <MapPin className="h-3.5 w-3.5 shrink-0" />
-              <span>{business.town}</span>
-            </div>
-          )}
-        </div>
-        <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground bg-secondary px-2.5 py-1 rounded-full shrink-0">
-          {business.category}
-        </span>
+
+      {/* Business Name - Primary element, allows wrapping */}
+      <h3 className="font-display text-xl leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">
+        {business.name}
+      </h3>
+
+      {/* Category - Subtle, below name */}
+      <div className="text-xs text-muted-foreground mb-1">
+        {categoryLabel}
       </div>
 
+      {/* Town - Clear separate line */}
+      {showTown && (
+        <div className="flex items-center gap-1.5 text-sm text-muted-foreground mb-3">
+          <MapPin className="h-3.5 w-3.5 shrink-0" />
+          <span>{business.town}</span>
+        </div>
+      )}
+
+      {/* Description - Optional, max 2 lines */}
       {business.description && (
         <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2 mb-4 flex-1">
           {business.description}
         </p>
       )}
 
-      <div className="mt-auto pt-4 border-t border-border flex flex-wrap items-center gap-4 text-sm">
-        {business.phone && (
-          <span className="flex items-center gap-1.5 text-muted-foreground">
-            <Phone className="h-3.5 w-3.5" />
-            {business.phone}
-          </span>
-        )}
+      {/* Contact Row - Website · Social · Phone */}
+      <div className="mt-auto pt-4 border-t border-border flex flex-wrap items-center gap-3 text-sm">
         {business.website && (
           <span className="flex items-center gap-1.5 text-accent">
             <Globe className="h-3.5 w-3.5" />
             Website
+          </span>
+        )}
+        {business.social?.instagram && (
+          <span className="text-muted-foreground">Instagram</span>
+        )}
+        {business.social?.facebook && !business.social?.instagram && (
+          <span className="text-muted-foreground">Facebook</span>
+        )}
+        {business.phone && (
+          <span className="flex items-center gap-1.5 text-muted-foreground">
+            <Phone className="h-3.5 w-3.5" />
+            {business.phone}
           </span>
         )}
         <span className="ml-auto flex items-center gap-1 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
