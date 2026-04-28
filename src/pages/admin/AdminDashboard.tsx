@@ -17,6 +17,7 @@ import {
   Download,
   Upload,
   CheckCircle,
+  Trash2,
 } from "lucide-react";
 
 interface Stats {
@@ -34,11 +35,16 @@ export default function AdminDashboard() {
   const [error, setError] = useState("");
   const [isExporting, setIsExporting] = useState(false);
   const [isSyncing, setIsSyncing] = useState(false);
+  const [isCleaning, setIsCleaning] = useState(false);
   const [exportResult, setExportResult] = useState<{
     success: boolean;
     message: string;
   } | null>(null);
   const [syncResult, setSyncResult] = useState<{
+    success: boolean;
+    message: string;
+  } | null>(null);
+  const [cleanupResult, setCleanupResult] = useState<{
     success: boolean;
     message: string;
   } | null>(null);
@@ -194,6 +200,49 @@ export default function AdminDashboard() {
     }
   };
 
+  const handleCleanup = async () => {
+    if (!confirm("This will find and mark duplicate businesses, creating redirects. Continue?")) {
+      return;
+    }
+
+    setIsCleaning(true);
+    setCleanupResult(null);
+
+    try {
+      const token = localStorage.getItem("admin_token");
+
+      const response = await fetch("/api/admin/cleanup-duplicates", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setCleanupResult({
+          success: true,
+          message: `Found ${data.summary.duplicateGroupsFound} duplicate groups, marked ${data.summary.businessesMarkedDuplicate} as duplicates, created ${data.summary.redirectsCreated} redirects`,
+        });
+        fetchStats();
+      } else {
+        setCleanupResult({
+          success: false,
+          message: data.error || "Cleanup failed",
+        });
+      }
+    } catch (err) {
+      setCleanupResult({
+        success: false,
+        message: err instanceof Error ? err.message : "Network error during cleanup",
+      });
+    } finally {
+      setIsCleaning(false);
+    }
+  };
+
   if (isLoading) {
     return (
       <AdminLayout>
@@ -238,6 +287,19 @@ export default function AdminDashboard() {
             </p>
           </div>
           <div className="flex items-center gap-2">
+            <Button variant="outline" onClick={handleCleanup} disabled={isCleaning}>
+              {isCleaning ? (
+                <>
+                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                  Cleaning...
+                </>
+              ) : (
+                <>
+                  <Trash2 className="h-4 w-4 mr-2" />
+                  Remove Duplicates
+                </>
+              )}
+            </Button>
             <Button variant="outline" onClick={handleSync} disabled={isSyncing}>
               {isSyncing ? (
                 <>
@@ -272,6 +334,24 @@ export default function AdminDashboard() {
             </Button>
           </div>
         </div>
+
+        {/* Cleanup Result */}
+        {cleanupResult && (
+          <Alert
+            className={
+              cleanupResult.success
+                ? "bg-green-500/10 text-green-600 border-green-500/20"
+                : "bg-destructive/10 text-destructive border-destructive/20"
+            }
+          >
+            {cleanupResult.success ? (
+              <CheckCircle className="h-4 w-4" />
+            ) : (
+              <AlertTriangle className="h-4 w-4" />
+            )}
+            <AlertDescription>{cleanupResult.message}</AlertDescription>
+          </Alert>
+        )}
 
         {/* Sync Result */}
         {syncResult && (
