@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, Link, Navigate, useNavigate } from "react-router-dom";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { SEO } from "@/components/SEO";
 import {
@@ -58,12 +58,48 @@ export default function BusinessPage() {
     typeSlug: string;
     businessSlug: string;
   }>();
+  const navigate = useNavigate();
   const { isAuthenticated } = useAdminAuth();
   const [editOpen, setEditOpen] = useState(false);
+  const [isCheckingRedirect, setIsCheckingRedirect] = useState(false);
 
   const business = getBusinessBySlug(businessSlug || "");
   const town = getTownBySlug(townSlug || "");
   const businessType = getBusinessTypeBySlug(typeSlug || "");
+
+  // Check for slug redirects if business not found in static data
+  useEffect(() => {
+    if (!business && businessSlug && !isCheckingRedirect) {
+      setIsCheckingRedirect(true);
+
+      fetch(`/api/directory/resolve-slug?slug=${encodeURIComponent(businessSlug)}`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.redirect && data.newSlug) {
+            // Redirect to the new URL
+            const newUrl = `/marthas-vineyard/${townSlug}/${typeSlug}/${data.newSlug}`;
+            navigate(newUrl, { replace: true });
+          }
+        })
+        .catch((err) => {
+          console.error("Slug resolution failed:", err);
+        })
+        .finally(() => {
+          setIsCheckingRedirect(false);
+        });
+    }
+  }, [business, businessSlug, townSlug, typeSlug, navigate, isCheckingRedirect]);
+
+  // Show loading state while checking redirect
+  if (!business && isCheckingRedirect) {
+    return (
+      <SiteLayout>
+        <div className="container-editorial py-24 text-center">
+          <div className="animate-pulse text-muted-foreground">Loading...</div>
+        </div>
+      </SiteLayout>
+    );
+  }
 
   if (!business || !town || !businessType) {
     return <Navigate to="/marthas-vineyard" replace />;

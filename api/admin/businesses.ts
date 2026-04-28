@@ -84,6 +84,59 @@ function generateSlug(name: string, town: string): string {
   );
 }
 
+// Normalize and validate slug
+function normalizeSlug(slug: string): string {
+  return slug
+    .toLowerCase()
+    .replace(/[^a-z0-9-]/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .substring(0, 200);
+}
+
+function isValidSlug(slug: string): boolean {
+  // Must be non-empty, lowercase alphanumeric with hyphens
+  return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) && slug.length >= 3 && slug.length <= 200;
+}
+
+// Create slug redirect record
+async function createSlugRedirect(
+  businessId: number,
+  oldSlug: string,
+  newSlug: string,
+  createdBy: string
+): Promise<void> {
+  // First, check if old slug was itself a redirect target - update the chain
+  // This prevents A->B, B->C (instead we want A->C, B->C)
+  await supabase
+    .from("slug_redirects")
+    .update({ new_slug: newSlug })
+    .eq("new_slug", oldSlug);
+
+  // Check if this old_slug already exists as a redirect
+  const { data: existing } = await supabase
+    .from("slug_redirects")
+    .select("id")
+    .eq("old_slug", oldSlug)
+    .single();
+
+  if (existing) {
+    // Update existing redirect
+    await supabase
+      .from("slug_redirects")
+      .update({ new_slug: newSlug, created_by: createdBy })
+      .eq("old_slug", oldSlug);
+  } else {
+    // Insert new redirect
+    await supabase.from("slug_redirects").insert({
+      business_id: businessId,
+      old_slug: oldSlug,
+      new_slug: newSlug,
+      created_by: createdBy,
+    });
+  }
+}
+
 // Sanitize input
 function sanitize(value: unknown): string | null {
   if (value === null || value === undefined || value === "") return null;
@@ -300,16 +353,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (req.method === "PUT") {
       const data = req.body;
       const id = data.id;
-      const slug = data.slug;
+      const lookupSlug = data.lookup_slug || data.slug; // lookup_slug is the current slug to find the record
+      const newSlug = data.new_slug; // new_slug is the desired new slug (if changing)
 
-      if (!id && !slug) {
+      if (!id && !lookupSlug) {
         return res.status(400).json({ error: "Business ID or slug required" });
       }
 
       // Get existing business for audit - prefer slug lookup for consistency
       let query = supabase.from("businesses").select("*");
-      if (slug) {
-        query = query.eq("slug", slug);
+      if (lookupSlug) {
+        query = query.eq("slug", lookupSlug);
       } else {
         query = query.eq("id", id);
       }
@@ -319,11 +373,61 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(404).json({ error: "Business not found" });
       }
 
+      // Handle slug change
+      let slugToSave = existing.slug;
+      let slugChanged = false;
+
+      if (newSlug !== undefined && newSlug !== null && newSlug !== existing.slug) {
+        // Normalize the new slug
+        const normalizedSlug = normalizeSlug(newSlug);
+
+        // Validate slug format
+        if (!isValidSlug(normalizedSlug)) {
+          return res.status(400).json({
+            error: "Invalid slug format. Use lowercase letters, numbers, and hyphens only. Minimum 3 characters.",
+          });
+        }
+
+        // Check for empty slug
+        if (!normalizedSlug) {
+          return res.status(400).json({ error: "Slug cannot be empty" });
+        }
+
+        // Check if new slug already exists for another business
+        const { data: duplicateSlug } = await supabase
+          .from("businesses")
+          .select("id, business_name")
+          .eq("slug", normalizedSlug)
+          .neq("id", existing.id)
+          .single();
+
+        if (duplicateSlug) {
+          return res.status(400).json({
+            error: `Slug "${normalizedSlug}" is already used by "${duplicateSlug.business_name}"`,
+          });
+        }
+
+        // Check if new slug exists as an old redirect (would create loop)
+        const { data: existingRedirect } = await supabase
+          .from("slug_redirects")
+          .select("old_slug, new_slug")
+          .eq("old_slug", normalizedSlug)
+          .single();
+
+        if (existingRedirect) {
+          return res.status(400).json({
+            error: `Slug "${normalizedSlug}" is an old slug that redirects to "${existingRedirect.new_slug}". Choose a different slug.`,
+          });
+        }
+
+        slugToSave = normalizedSlug;
+        slugChanged = true;
+      }
+
       // Build update object
       const updates: Record<string, unknown> = {};
       const fields = [
         "business_name",
-        "slug",
         "town",
         "category",
         "subcategory",
@@ -358,6 +462,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         }
       }
 
+      // Add slug to updates if changed
+      if (slugChanged) {
+        updates.slug = slugToSave;
+      }
+
       if (Object.keys(updates).length === 0) {
         return res.status(400).json({ error: "No fields to update" });
       }
@@ -373,12 +482,26 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(500).json({ error: "Failed to update business" });
       }
 
+      // Create redirect if slug changed
+      if (slugChanged) {
+        try {
+          await createSlugRedirect(existing.id, existing.slug, slugToSave, user.username);
+        } catch (redirectError) {
+          console.error("Failed to create redirect:", redirectError);
+          // Don't fail the update, just log it
+        }
+      }
+
       // Log changes using the actual Supabase ID
       const changes: Record<string, unknown> = {};
       const previousValues: Record<string, unknown> = {};
-      for (const field of fields) {
-        if (field in data && data[field] !== existing[field]) {
-          changes[field] = data[field];
+
+      // Include slug in tracking
+      const allFields = [...fields, "slug"];
+      for (const field of allFields) {
+        const newValue = field === "slug" ? slugToSave : data[field];
+        if (newValue !== undefined && newValue !== existing[field]) {
+          changes[field] = newValue;
           previousValues[field] = existing[field];
         }
       }
@@ -387,7 +510,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         await logAudit("business", existing.id, "update", user.username, changes, previousValues);
       }
 
-      return res.status(200).json({ success: true });
+      return res.status(200).json({
+        success: true,
+        slug: slugToSave,
+        slugChanged,
+        previousSlug: slugChanged ? existing.slug : undefined,
+      });
     }
 
     // DELETE /api/admin/businesses - Soft delete (archive)

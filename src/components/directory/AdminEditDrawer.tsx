@@ -52,7 +52,7 @@ interface AdminEditDrawerProps {
   business: Business | null;
   open: boolean;
   onClose: () => void;
-  onSaved?: (updatedBusiness: AdminBusinessData) => void;
+  onSaved?: (updatedBusiness: AdminBusinessData, slugChanged?: boolean, newSlug?: string) => void;
 }
 
 const MV_TOWNS = [
@@ -92,10 +92,12 @@ export function AdminEditDrawer({
 }: AdminEditDrawerProps) {
   const { isAuthenticated } = useAdminAuth();
   const [formData, setFormData] = useState<AdminBusinessData | null>(null);
+  const [originalSlug, setOriginalSlug] = useState<string>(""); // Track original slug for change detection
   const [isLoading, setIsLoading] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [slugError, setSlugError] = useState("");
 
   // Fetch full business data from admin API when drawer opens
   // Use slug for lookup - IDs may not match between public JSON and Supabase
@@ -154,6 +156,7 @@ export function AdminEditDrawer({
         review_reason: found.review_reason || "",
         notes: found.notes || "",
       });
+      setOriginalSlug(found.slug || "");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to load business");
     } finally {
@@ -161,11 +164,41 @@ export function AdminEditDrawer({
     }
   };
 
+  // Validate slug format
+  const validateSlug = (slug: string): string | null => {
+    if (!slug) return "Slug cannot be empty";
+    if (slug.length < 3) return "Slug must be at least 3 characters";
+    if (slug.length > 200) return "Slug must be less than 200 characters";
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
+      return "Use lowercase letters, numbers, and hyphens only";
+    }
+    return null;
+  };
+
+  // Normalize slug on input
+  const normalizeSlug = (input: string): string => {
+    return input
+      .toLowerCase()
+      .replace(/[^a-z0-9-]/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  };
+
   const handleChange = (
     field: keyof AdminBusinessData,
     value: string | boolean
   ) => {
     if (!formData) return;
+
+    // Special handling for slug field
+    if (field === "slug" && typeof value === "string") {
+      const normalized = normalizeSlug(value);
+      setFormData((prev) => (prev ? { ...prev, slug: normalized } : null));
+      const validationError = validateSlug(normalized);
+      setSlugError(validationError || "");
+      return;
+    }
+
     setFormData((prev) => (prev ? { ...prev, [field]: value } : null));
   };
 
@@ -173,10 +206,15 @@ export function AdminEditDrawer({
     e.preventDefault();
     if (!formData) return;
 
-    // Validation: ensure we're editing the correct record
-    if (business && formData.slug !== business.slug) {
-      setError(`SAFETY CHECK FAILED: Drawer opened for "${business.slug}" but loaded "${formData.slug}". Refusing to save.`);
-      return;
+    // Validate slug if it was changed
+    const slugIsChanging = formData.slug !== originalSlug;
+    if (slugIsChanging) {
+      const slugValidation = validateSlug(formData.slug);
+      if (slugValidation) {
+        setSlugError(slugValidation);
+        setError("Please fix the slug error before saving");
+        return;
+      }
     }
 
     setError("");
@@ -186,14 +224,27 @@ export function AdminEditDrawer({
     try {
       const token = localStorage.getItem("admin_token");
 
-      // Send slug with update to ensure correct record is updated
+      // Build the request body
+      const requestBody: Record<string, unknown> = {
+        ...formData,
+        lookup_slug: originalSlug, // Use original slug to find the record
+      };
+
+      // If slug is changing, send as new_slug
+      if (slugIsChanging) {
+        requestBody.new_slug = formData.slug;
+        delete requestBody.slug; // Remove slug from regular fields
+      } else {
+        delete requestBody.slug; // Don't send slug if unchanged
+      }
+
       const response = await fetch("/api/admin/businesses", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({ ...formData, slug: business?.slug }),
+        body: JSON.stringify(requestBody),
       });
 
       const data = await response.json();
@@ -202,13 +253,18 @@ export function AdminEditDrawer({
         throw new Error(data.error || "Failed to save business");
       }
 
-      setSuccess("Changes saved successfully!");
-      onSaved?.(formData);
+      if (data.slugChanged) {
+        setSuccess(`Saved! Slug changed from "${data.previousSlug}" to "${data.slug}". Old URL will redirect.`);
+        onSaved?.(formData, true, data.slug);
+      } else {
+        setSuccess("Changes saved successfully!");
+        onSaved?.(formData, false);
+      }
 
       // Close drawer after short delay
       setTimeout(() => {
         onClose();
-      }, 1500);
+      }, 2000);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to save");
     } finally {
@@ -408,6 +464,37 @@ export function AdminEditDrawer({
                   onChange={(e) => handleChange("subcategory", e.target.value)}
                   placeholder="Optional"
                 />
+              </div>
+
+              {/* Slug editing */}
+              <div className="space-y-2">
+                <Label htmlFor="slug" className="flex items-center gap-2">
+                  URL Slug
+                  {formData.slug !== originalSlug && (
+                    <span className="text-xs bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded">
+                      Changed
+                    </span>
+                  )}
+                </Label>
+                <Input
+                  id="slug"
+                  value={formData.slug}
+                  onChange={(e) => handleChange("slug", e.target.value)}
+                  placeholder="business-name-town"
+                  className={slugError ? "border-red-500" : ""}
+                />
+                {slugError && (
+                  <p className="text-xs text-red-500">{slugError}</p>
+                )}
+                {formData.slug !== originalSlug && !slugError && (
+                  <p className="text-xs text-amber-600">
+                    Changing the slug will create a redirect from the old URL
+                  </p>
+                )}
+                <p className="text-xs text-muted-foreground">
+                  Current: /marthas-vineyard/.../
+                  <span className="font-mono">{formData.slug}</span>
+                </p>
               </div>
 
               <div className="space-y-2">

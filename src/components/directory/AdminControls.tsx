@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useAdminAuth } from "@/contexts/AdminAuthContext";
-import { Business } from "@/data/directory";
+import { Business, getBusinessUrl } from "@/data/directory";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -34,6 +35,8 @@ export function AdminControls({
   onUpdated,
 }: AdminControlsProps) {
   const { isAuthenticated } = useAdminAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
   const [editOpen, setEditOpen] = useState(false);
   const [hideConfirmOpen, setHideConfirmOpen] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -178,8 +181,18 @@ export function AdminControls({
         business={business}
         open={editOpen}
         onClose={() => setEditOpen(false)}
-        onSaved={() => {
+        onSaved={(_, slugChanged, newSlug) => {
           onUpdated?.();
+
+          // If slug changed and we're on the business detail page, navigate to new URL
+          if (slugChanged && newSlug) {
+            const isOnBusinessPage = location.pathname.includes(`/${business.slug}`);
+            if (isOnBusinessPage) {
+              // Build new URL with the new slug
+              const newUrl = `/marthas-vineyard/${business.townSlug}/${business.businessType}/${newSlug}`;
+              navigate(newUrl, { replace: true });
+            }
+          }
         }}
       />
 
