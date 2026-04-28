@@ -1,7 +1,6 @@
-// Directory data - imported from exported JSON at build time
-// Run `npm run export-directory` to regenerate from SQLite database
+// Directory data - fetches live from Supabase via API
+// Falls back to static JSON for SSG/build time
 
-import businessesData from '../../data/exports/businesses.json';
 import townsData from '../../data/exports/towns.json';
 import businessTypesData from '../../data/exports/business-types.json';
 
@@ -53,7 +52,53 @@ export interface BusinessType {
   byTown: Record<string, number>;
 }
 
-export const businesses: Business[] = businessesData as Business[];
+// Cache for businesses fetched from API
+let businessesCache: Business[] | null = null;
+let cacheTimestamp = 0;
+const CACHE_TTL = 60000; // 1 minute cache
+
+// Fetch businesses from API
+export async function fetchBusinesses(): Promise<Business[]> {
+  // Return cache if valid
+  if (businessesCache && Date.now() - cacheTimestamp < CACHE_TTL) {
+    return businessesCache;
+  }
+
+  try {
+    const response = await fetch('/api/directory/businesses');
+    if (!response.ok) throw new Error('Failed to fetch');
+    const data = await response.json();
+    businessesCache = data.businesses;
+    cacheTimestamp = Date.now();
+    return businessesCache || [];
+  } catch {
+    // Fallback to static JSON if API fails
+    const staticData = await import('../../data/exports/businesses.json');
+    return staticData.default as Business[];
+  }
+}
+
+// Synchronous access for initial render (from cache or empty)
+export function getBusinessesSync(): Business[] {
+  return businessesCache || [];
+}
+
+// Clear cache (call after admin edits)
+export function clearBusinessCache(): void {
+  businessesCache = null;
+  cacheTimestamp = 0;
+}
+
+// For backwards compatibility - will be empty until fetchBusinesses is called
+export let businesses: Business[] = [];
+
+// Initialize from static JSON for SSR/initial load, then refresh from API
+import('../../data/exports/businesses.json').then(data => {
+  businesses = data.default as Business[];
+  businessesCache = businesses;
+  cacheTimestamp = Date.now();
+});
+
 export const towns: Town[] = townsData as Town[];
 export const businessTypes: BusinessType[] = businessTypesData as BusinessType[];
 

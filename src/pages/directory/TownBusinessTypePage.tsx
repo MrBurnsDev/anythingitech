@@ -5,12 +5,12 @@ import { BusinessList } from "@/components/directory/BusinessList";
 import {
   getTownBySlug,
   getBusinessTypeBySlug,
-  getBusinessesByTownAndType,
   getBusinessTypesForTown,
   getTownBusinessTypeUrl,
   getTownUrl,
   getBusinessTypeUrl,
 } from "@/data/directory";
+import { useBusinesses } from "@/hooks/useBusinesses";
 import {
   MapPin,
   ArrowRight,
@@ -60,13 +60,29 @@ export default function TownBusinessTypePage() {
   const town = getTownBySlug(townSlug || "");
   const businessType = getBusinessTypeBySlug(typeSlug || "");
 
+  // Fetch businesses from Supabase API
+  const { businesses: filteredBusinesses, isLoading } = useBusinesses({
+    town: townSlug,
+    type: typeSlug,
+  });
+
   if (!town || !businessType) {
     return <Navigate to="/marthas-vineyard" replace />;
   }
 
-  const filteredBusinesses = getBusinessesByTownAndType(town.slug, businessType.slug);
   const otherTypesInTown = getBusinessTypesForTown(town.slug).filter(t => t.slug !== businessType.slug);
   const Icon = typeIcons[businessType.icon] || Building2;
+
+  // Show loading state
+  if (isLoading) {
+    return (
+      <SiteLayout>
+        <div className="container-editorial py-24 text-center">
+          <div className="animate-pulse text-muted-foreground">Loading businesses...</div>
+        </div>
+      </SiteLayout>
+    );
+  }
 
   // If no businesses in this combination, redirect
   if (filteredBusinesses.length === 0) {

@@ -3,18 +3,15 @@ import { useParams, Link, Navigate, useNavigate } from "react-router-dom";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { SEO } from "@/components/SEO";
 import {
-  getBusinessBySlug,
   getTownBySlug,
   getBusinessTypeBySlug,
-  getBusinessesByTownAndType,
   getTownUrl,
   getBusinessTypeUrl,
   getTownBusinessTypeUrl,
-  getBusinessUrl,
 } from "@/data/directory";
+import { useBusiness, useBusinesses } from "@/hooks/useBusinesses";
 import { BusinessCard } from "@/components/directory/BusinessCard";
 import { AdminControls } from "@/components/directory/AdminControls";
-import { AdminEditDrawer } from "@/components/directory/AdminEditDrawer";
 import { useAdminAuth } from "@/contexts/AdminAuthContext";
 import {
   MapPin,
@@ -75,13 +72,23 @@ export default function BusinessPage() {
     return <Navigate to={`/marthas-vineyard/${townSlug}/${redirectTypeSlug}/${businessSlug}`} replace />;
   }
 
-  const business = getBusinessBySlug(businessSlug || "");
+  // Fetch business from Supabase API
+  const { business, isLoading: businessLoading, error: businessError } = useBusiness(businessSlug);
   const town = getTownBySlug(townSlug || "");
   const businessType = getBusinessTypeBySlug(typeSlug || "");
 
-  // Check for slug redirects if business not found in static data
+  // Fetch related businesses
+  const { businesses: relatedBusinessesAll } = useBusinesses({
+    town: townSlug,
+    type: typeSlug,
+  });
+  const relatedBusinesses = relatedBusinessesAll
+    .filter((b) => b.slug !== businessSlug)
+    .slice(0, 3);
+
+  // Check for slug redirects if business not found
   useEffect(() => {
-    if (!business && businessSlug && !isCheckingRedirect) {
+    if (!businessLoading && !business && businessSlug && !isCheckingRedirect) {
       setIsCheckingRedirect(true);
 
       fetch(`/api/directory/resolve-slug?slug=${encodeURIComponent(businessSlug)}`)
@@ -100,10 +107,10 @@ export default function BusinessPage() {
           setIsCheckingRedirect(false);
         });
     }
-  }, [business, businessSlug, townSlug, typeSlug, navigate, isCheckingRedirect]);
+  }, [business, businessLoading, businessSlug, townSlug, typeSlug, navigate, isCheckingRedirect]);
 
-  // Show loading state while checking redirect
-  if (!business && isCheckingRedirect) {
+  // Show loading state
+  if (businessLoading || isCheckingRedirect) {
     return (
       <SiteLayout>
         <div className="container-editorial py-24 text-center">
@@ -116,11 +123,6 @@ export default function BusinessPage() {
   if (!business || !town || !businessType) {
     return <Navigate to="/marthas-vineyard" replace />;
   }
-
-  // Get related businesses (same town and type, excluding this one)
-  const relatedBusinesses = getBusinessesByTownAndType(town.slug, businessType.slug)
-    .filter((b) => b.id !== business.id)
-    .slice(0, 3);
 
   const Icon = typeIcons[businessType.icon] || Building2;
 

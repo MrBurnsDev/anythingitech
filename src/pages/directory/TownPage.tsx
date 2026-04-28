@@ -4,11 +4,11 @@ import { SEO } from "@/components/SEO";
 import { BusinessList } from "@/components/directory/BusinessList";
 import {
   getTownBySlug,
-  getBusinessesByTown,
   getBusinessTypesForTown,
   getTownBusinessTypeUrl,
   businessTypes,
 } from "@/data/directory";
+import { useBusinesses } from "@/hooks/useBusinesses";
 import {
   MapPin,
   ArrowRight,
@@ -43,12 +43,23 @@ export default function TownPage() {
   const { slug } = useParams<{ slug: string }>();
   const town = getTownBySlug(slug || "");
 
+  // Fetch businesses from Supabase API
+  const { businesses: townBusinesses, isLoading } = useBusinesses({ town: slug });
+  const availableTypes = getBusinessTypesForTown(slug || "");
+
   if (!town) {
     return <Navigate to="/marthas-vineyard" replace />;
   }
 
-  const townBusinesses = getBusinessesByTown(town.slug);
-  const availableTypes = getBusinessTypesForTown(town.slug);
+  if (isLoading) {
+    return (
+      <SiteLayout>
+        <div className="container-editorial py-24 text-center">
+          <div className="animate-pulse text-muted-foreground">Loading businesses...</div>
+        </div>
+      </SiteLayout>
+    );
+  }
 
   return (
     <SiteLayout>
