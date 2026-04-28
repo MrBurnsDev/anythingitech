@@ -24,17 +24,22 @@ import {
   Briefcase,
   Landmark,
   Wifi,
+  Palette,
+  Stethoscope,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// Map icon names from JSON to Lucide components
 const typeIcons: Record<string, React.ElementType> = {
-  restaurants: Utensils,
-  lodging: Bed,
-  shopping: ShoppingBag,
-  "health-wellness": HeartPulse,
-  contractors: Hammer,
-  "professional-services": Briefcase,
-  community: Landmark,
+  utensils: Utensils,
+  bed: Bed,
+  "shopping-bag": ShoppingBag,
+  "heart-pulse": HeartPulse,
+  hammer: Hammer,
+  briefcase: Briefcase,
+  landmark: Landmark,
+  palette: Palette,
+  stethoscope: Stethoscope,
 };
 
 export default function TownBusinessTypePage() {
@@ -48,7 +53,7 @@ export default function TownBusinessTypePage() {
 
   const filteredBusinesses = getBusinessesByTownAndType(town.slug, businessType.slug);
   const otherTypesInTown = getBusinessTypesForTown(town.slug).filter(t => t.slug !== businessType.slug);
-  const Icon = typeIcons[businessType.slug] || Building2;
+  const Icon = typeIcons[businessType.icon] || Building2;
 
   // If no businesses in this combination, redirect
   if (filteredBusinesses.length === 0) {
@@ -56,7 +61,13 @@ export default function TownBusinessTypePage() {
   }
 
   // Check if this is a business-relevant category for IT services CTA
-  const showITCTA = ["restaurants", "lodging", "shopping", "health-wellness", "professional-services"].includes(businessType.slug);
+  const showITCTA = [
+    "restaurantsand-food-and-beverages",
+    "lodging-and-tourism",
+    "shopping-and-specialty-retail",
+    "beauty-and-wellness",
+    "business-and-professional-services",
+  ].includes(businessType.slug);
 
   return (
     <SiteLayout>
@@ -156,7 +167,7 @@ export default function TownBusinessTypePage() {
             </h2>
             <div className="flex flex-wrap gap-3">
               {otherTypesInTown.map((type) => {
-                const TypeIcon = typeIcons[type.slug] || Building2;
+                const TypeIcon = typeIcons[type.icon] || Building2;
                 const count = type.byTown[town.slug] || 0;
                 return (
                   <Link

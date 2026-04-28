@@ -6,12 +6,12 @@
     "description": "The commercial heart of Martha's Vineyard, home to the ferry terminal and a vibrant Main Street with local shops, restaurants, and services.",
     "businessCount": 71,
     "businessTypes": {
-      "restaurantsand-food-and-beverages": 22,
+      "restaurants-food-beverages": 22,
       "lodging-and-tourism": 8,
       "shopping-and-specialty-retail": 22,
       "arts-and-entertainment": 2,
       "medical-services-and-providers": 5,
-      "familyand-community-and-government": 2,
+      "family-community-government": 2,
       "beauty-and-wellness": 4,
       "business-and-professional-services": 4,
       "building-and-construction": 2
@@ -35,8 +35,8 @@
     "description": "Colorful gingerbread cottages, the Flying Horses carousel, and a lively harbor scene with diverse local businesses.",
     "businessCount": 56,
     "businessTypes": {
-      "restaurantsand-food-and-beverages": 31,
-      "familyand-community-and-government": 1,
+      "restaurants-food-beverages": 31,
+      "family-community-government": 1,
       "shopping-and-specialty-retail": 8,
       "arts-and-entertainment": 3,
       "beauty-and-wellness": 2,
@@ -61,9 +61,9 @@
     "businessCount": 76,
     "businessTypes": {
       "lodging-and-tourism": 9,
-      "restaurantsand-food-and-beverages": 40,
+      "restaurants-food-beverages": 40,
       "shopping-and-specialty-retail": 14,
-      "familyand-community-and-government": 2,
+      "family-community-government": 2,
       "arts-and-entertainment": 1,
       "beauty-and-wellness": 6,
       "building-and-construction": 3,
@@ -88,8 +88,8 @@
     "businessCount": 18,
     "businessTypes": {
       "arts-and-entertainment": 5,
-      "restaurantsand-food-and-beverages": 8,
-      "familyand-community-and-government": 2,
+      "restaurants-food-beverages": 8,
+      "family-community-government": 2,
       "beauty-and-wellness": 1,
       "shopping-and-specialty-retail": 2
     },
@@ -110,8 +110,8 @@
     "businessTypes": {
       "shopping-and-specialty-retail": 6,
       "arts-and-entertainment": 2,
-      "restaurantsand-food-and-beverages": 6,
-      "familyand-community-and-government": 1,
+      "restaurants-food-beverages": 6,
+      "family-community-government": 1,
       "beauty-and-wellness": 1,
       "lodging-and-tourism": 2
     },
@@ -132,7 +132,7 @@
     "businessCount": 5,
     "businessTypes": {
       "shopping-and-specialty-retail": 2,
-      "restaurantsand-food-and-beverages": 2,
+      "restaurants-food-beverages": 2,
       "lodging-and-tourism": 1
     },
     "categories": [

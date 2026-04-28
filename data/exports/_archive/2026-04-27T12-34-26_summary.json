@@ -1,0 +1,26 @@
+{
+  "generated": "2026-04-27T12:32:56.081Z",
+  "totalPublicBusinesses": 244,
+  "excludedRecords": 94,
+  "validationErrors": 1,
+  "gatesPassed": true,
+  "townDistribution": {
+    "Vineyard Haven": 71,
+    "Edgartown": 76,
+    "West Tisbury": 18,
+    "Aquinnah": 5,
+    "Chilmark": 18,
+    "Oak Bluffs": 56
+  },
+  "categoryDistribution": {
+    "Restaurants, Food & Beverages": 109,
+    "Lodging & Tourism": 30,
+    "Shopping & Specialty Retail": 54,
+    "Arts & Entertainment": 13,
+    "Family, Community & Government": 8,
+    "Medical Services & Providers": 6,
+    "Beauty & Wellness": 14,
+    "Business & Professional Services": 4,
+    "Building & Construction": 6
+  }
+}

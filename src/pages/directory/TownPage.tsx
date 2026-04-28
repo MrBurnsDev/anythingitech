@@ -21,21 +21,27 @@ import {
   Hammer,
   Briefcase,
   Landmark,
+  Palette,
+  Stethoscope,
 } from "lucide-react";
 
+// Map icon names from JSON to Lucide components
 const typeIcons: Record<string, React.ElementType> = {
-  restaurants: Utensils,
-  lodging: Bed,
-  shopping: ShoppingBag,
-  "health-wellness": HeartPulse,
-  contractors: Hammer,
-  "professional-services": Briefcase,
-  community: Landmark,
+  utensils: Utensils,
+  bed: Bed,
+  "shopping-bag": ShoppingBag,
+  "heart-pulse": HeartPulse,
+  hammer: Hammer,
+  briefcase: Briefcase,
+  landmark: Landmark,
+  palette: Palette,
+  stethoscope: Stethoscope,
 };
 
 export default function TownPage() {
-  const { townSlug } = useParams<{ townSlug: string }>();
-  const town = getTownBySlug(townSlug || "");
+  // Route passes 'slug' param from DirectorySlugResolver
+  const { slug } = useParams<{ slug: string }>();
+  const town = getTownBySlug(slug || "");
 
   if (!town) {
     return <Navigate to="/marthas-vineyard" replace />;
@@ -95,7 +101,7 @@ export default function TownPage() {
             </h2>
             <div className="flex flex-wrap gap-3">
               {availableTypes.map((type) => {
-                const Icon = typeIcons[type.slug] || Building2;
+                const Icon = typeIcons[type.icon] || Building2;
                 const count = type.byTown[town.slug] || 0;
                 return (
                   <Link

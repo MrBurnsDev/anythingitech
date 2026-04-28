@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "vineyard-haven",
+    "name": "Vineyard Haven",
+    "businessCount": 71,
+    "categories": {
+      "Restaurants, Food & Beverages": 22,
+      "Lodging & Tourism": 8,
+      "Shopping & Specialty Retail": 22,
+      "Arts & Entertainment": 2,
+      "Medical Services & Providers": 5,
+      "Family, Community & Government": 2,
+      "Beauty & Wellness": 4,
+      "Business & Professional Services": 4,
+      "Building & Construction": 2
+    }
+  },
+  {
+    "slug": "oak-bluffs",
+    "name": "Oak Bluffs",
+    "businessCount": 56,
+    "categories": {
+      "Restaurants, Food & Beverages": 31,
+      "Family, Community & Government": 1,
+      "Shopping & Specialty Retail": 8,
+      "Arts & Entertainment": 3,
+      "Beauty & Wellness": 2,
+      "Lodging & Tourism": 10,
+      "Building & Construction": 1
+    }
+  },
+  {
+    "slug": "edgartown",
+    "name": "Edgartown",
+    "businessCount": 76,
+    "categories": {
+      "Lodging & Tourism": 9,
+      "Restaurants, Food & Beverages": 40,
+      "Shopping & Specialty Retail": 14,
+      "Family, Community & Government": 2,
+      "Arts & Entertainment": 1,
+      "Beauty & Wellness": 6,
+      "Building & Construction": 3,
+      "Medical Services & Providers": 1
+    }
+  },
+  {
+    "slug": "west-tisbury",
+    "name": "West Tisbury",
+    "businessCount": 18,
+    "categories": {
+      "Arts & Entertainment": 5,
+      "Restaurants, Food & Beverages": 8,
+      "Family, Community & Government": 2,
+      "Beauty & Wellness": 1,
+      "Shopping & Specialty Retail": 2
+    }
+  },
+  {
+    "slug": "chilmark",
+    "name": "Chilmark",
+    "businessCount": 18,
+    "categories": {
+      "Shopping & Specialty Retail": 6,
+      "Arts & Entertainment": 2,
+      "Restaurants, Food & Beverages": 6,
+      "Family, Community & Government": 1,
+      "Beauty & Wellness": 1,
+      "Lodging & Tourism": 2
+    }
+  },
+  {
+    "slug": "aquinnah",
+    "name": "Aquinnah",
+    "businessCount": 5,
+    "categories": {
+      "Shopping & Specialty Retail": 2,
+      "Restaurants, Food & Beverages": 2,
+      "Lodging & Tourism": 1
+    }
+  }
+]

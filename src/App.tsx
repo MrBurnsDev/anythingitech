@@ -21,6 +21,7 @@ import BusinessTypePage from "./pages/directory/BusinessTypePage.tsx";
 import TownBusinessTypePage from "./pages/directory/TownBusinessTypePage.tsx";
 import BusinessPage from "./pages/directory/BusinessPage.tsx";
 import SubmitBusiness from "./pages/directory/SubmitBusiness.tsx";
+import DirectorySlugResolver from "./pages/directory/DirectorySlugResolver.tsx";
 
 // Admin pages
 import { AdminAuthProvider } from "./contexts/AdminAuthContext.tsx";
@@ -60,16 +61,8 @@ const App = () => (
           {/* Martha's Vineyard Business Directory */}
           <Route path="/marthas-vineyard" element={<DirectoryIndex />} />
           <Route path="/marthas-vineyard/submit" element={<SubmitBusiness />} />
-          {/* Island-wide business type pages */}
-          <Route path="/marthas-vineyard/restaurants" element={<BusinessTypePage />} />
-          <Route path="/marthas-vineyard/lodging" element={<BusinessTypePage />} />
-          <Route path="/marthas-vineyard/shopping" element={<BusinessTypePage />} />
-          <Route path="/marthas-vineyard/health-wellness" element={<BusinessTypePage />} />
-          <Route path="/marthas-vineyard/contractors" element={<BusinessTypePage />} />
-          <Route path="/marthas-vineyard/professional-services" element={<BusinessTypePage />} />
-          <Route path="/marthas-vineyard/community" element={<BusinessTypePage />} />
-          {/* Town pages */}
-          <Route path="/marthas-vineyard/:townSlug" element={<TownPage />} />
+          {/* Dynamic slug resolver - determines if slug is a town or business type */}
+          <Route path="/marthas-vineyard/:slug" element={<DirectorySlugResolver />} />
           <Route path="/marthas-vineyard/:townSlug/:typeSlug" element={<TownBusinessTypePage />} />
           <Route path="/marthas-vineyard/:townSlug/:typeSlug/:businessSlug" element={<BusinessPage />} />
 

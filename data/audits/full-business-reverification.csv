@@ -1,0 +1,986 @@
+id,business_name,verified_name,old_town,verified_town,old_category,verified_category,address,phone,website,status,action,notes
+1,"The Black Dog Tavern Company","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","21 Beach Street Extension, Vineyard Haven, MA 02568","(508) 693-9223","https://www.theblackdog.com","active","verified",""
+4,"Harbor View Hotel","","Edgartown","Edgartown","Lodging","Lodging & Tourism","131 North Water Street, Edgartown, MA 02539","(508) 627-7000","https://www.harbor-view.com","active","corrected","Harbor View Hotel"
+5,"The Mansion House","","Vineyard Haven","Vineyard Haven","Lodging","Lodging & Tourism","9 Main Street, Vineyard Haven, MA 02568","(508) 693-2200","https://www.mvmansionhouse.com","active","corrected","Mansion House"
+6,"Bunch of Grapes Bookstore","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","23 Main Street, Vineyard Haven, MA 02568","(508) 693-2291","https://www.bunchofgrapes.com","active","verified",""
+7,"Granary Gallery","","West Tisbury","West Tisbury","Shopping & Retail","Arts & Entertainment","636 Old County Road, West Tisbury, MA 02575","(508) 693-0455","https://www.granarygallery.com","active","corrected","Granary Gallery - art gallery"
+8,"Martha's Vineyard Film Festival","","Vineyard Haven","Vineyard Haven","Other","Arts & Entertainment","Vineyard Haven, MA 02568","","https://www.mvfilmsociety.com","active","corrected","MV Film Festival"
+10,"Aquinnah Shop","","Chilmark","Aquinnah","Lodging","Lodging","27 Aquinnah Circle, Aquinnah, MA 02535","(508) 645-3867","https://www.tripadvisor.com/Restaurant_Review-g499462-d790513-Reviews-Aquinnah_Shop-Aquinnah_Martha_s_Vineyard_Massachusetts.html","active","corrected","Aquinnah Shop is at 27 Aquinnah Circle, Aquinnah"
+30,"Martha's Vineyard Island","","Edgartown","Edgartown","Other","Other","Box 66
+Edgartown, MA 02539","(508) 627-4311","http://mvol.com/","excluded","exclude","""Martha's Vineyard Island"" - generic tourism site, not a business"
+31,"Martha's Vineyard Magazine","","Vineyard Haven","Vineyard Haven","Professional Services","Business & Professional Services","20 Beach Rd, Vineyard Haven, MA 02568","","http://www.mvmagazine.com/","active","corrected","MV Magazine - media/publishing"
+33,"Aquilamv.square","","Aquinnah","Aquinnah","Restaurant","Restaurant","","","https://aquilamv.square.site/","excluded","exclude","Square site placeholder"
+34,"Facebook","","Aquinnah","Aquinnah","Restaurant","Restaurant","","","https://facebook.com","excluded","exclude","Facebook homepage, not a business"
+36,"Orange Peel Bakery","","Aquinnah","Aquinnah","Restaurant","Restaurant","22 State Rd, Aquinnah, MA","(508) 645-2025","http://orangepeelbakery.squarespace.com/","active","verified",""
+38,"Outermost Inn","","Aquinnah","Aquinnah","Restaurant","Restaurant","","(508) 645-3511","http://outermostinn.com/","active","verified",""
+41,"Chilmark General Store","","Chilmark","Chilmark","Restaurant","Shopping & Specialty Retail","7 State Road, Chilmark, MA 02535","","http://chilmarkgeneralstore.com/","active","corrected","Chilmark General Store - general store"
+43,"Chilmark Tavern","","Chilmark","Chilmark","Restaurant","Restaurant","LOCATION9 State RoadChilmark, MA 02535","(508) 645-9400","http://chilmarktavern.com/","active","verified",""
+45,"Menemsha Gallery","Menemsha Gallery","Chilmark","Chilmark","Restaurant","Arts & Entertainment","","","http://menemshagallery.com/","active","corrected","Art gallery, not restaurant"
+47,"The Homeport","","Chilmark","Chilmark","Restaurant","Restaurant","512 N Rd, Menemsha, MA 02535","(508) 645-2679","http://thehomeportmv.com/","active","verified",""
+49,"19 Prime Steak House","","Edgartown","Edgartown","Restaurant","Restaurant","19 Church St, Edgartown, MA","(774) 224-0550","http://19primesteak.com/","active","verified",""
+54,"Among the Flowers","","Edgartown","Edgartown","Restaurant","Restaurant","Edgartown, ma 02539","(508) 627-3233","http://amongtheflowersmv.com/","active","verified",""
+56,"Martha's Vineyard Seafood & Steak Restaurant","","Edgartown","Edgartown","Restaurant","Restaurant","2 Main StREET, Edgartown, MA 02539","(508) 627-7001","http://atlanticmv.com/","active","verified",""
+60,"Bad Martha Beer","","Edgartown","Edgartown","Restaurant","Restaurants, Food & Beverages","270 Upper Main St, Edgartown, MA 02539","(508) 939-4415","http://badmarthabeer.com/","active","corrected","Bad Martha Beer - brewery"
+62,"Behind the Bookstore","","Edgartown","Edgartown","Restaurant","Restaurant","46 Main St, Edgartown, MA 02539","(774) 549-9123","http://btbmv.com/","active","verified",""
+66,"Prepared Food","Black Sheep","Edgartown","Edgartown","Restaurant","Restaurant","17 Airport Road, Edgartown, MA 02539","(508) 338-7770","http://blacksheeponmv.com/","active","corrected","Clean up name from ""Prepared Food"""
+68,"Blackbird Cafe","","Edgartown","Edgartown","Restaurant","Restaurant","19 North Water Street, Edgartown, MA 02539","(978) 272-1175","http://myblackbirdcafe.com/","active","verified",""
+70,"Chesca","","Edgartown","Edgartown","Restaurant","Restaurant","38 N Water St, Edgartown, MA 02539","(508) 627-1234","http://chescasmv.com/","active","verified",""
+72,"China House｜online Order｜edgartown｜wa","China House","Edgartown","Edgartown","Restaurant","Restaurant","Edgartown, MA 02539","(508) 627-7272","http://mvchinahouse.com/","active","corrected","Clean up name from scraped data"
+74,"Cozy Corner Cafe","","Edgartown","Edgartown","Restaurant","Restaurant","Vineyard Haven Rd, Edgartown, MA 02539","(508) 939-3988","https://cozycornermv.com/","active","verified",""
+76,"Détente","","Edgartown","Edgartown","Restaurant","Restaurant","Edgartown, MA 02539","","http://detentemv.com/","active","verified",""
+79,"Dock Street Coffee Shop.square","","Edgartown","Edgartown","Restaurant","Restaurant","","","https://dock-street-coffee-shop.square.site/","excluded","exclude","Square site template page, not a real business"
+83,"Edgartown Meatandfish","Edgartown Meat & Fish","Edgartown","Edgartown","Restaurant","Restaurant","","(508) 627-6200","http://edgartownmeatandfish.com/","active","corrected","Clean up name"
+87,"Espresso Love","","Edgartown","Edgartown","Restaurant","Restaurant","","","http://espressolove.com/","active","verified",""
+89,"Great Harbor Market","","Edgartown","Edgartown","Restaurant","Shopping & Specialty Retail","199 Upper Main St, Edgartown, MA 02539","(508) 694-6888","http://greatharbormarket.com/","active","corrected","Great Harbor Market - grocery"
+91,"Kgs 2","Katama General Store","Edgartown","Edgartown","Restaurant","Restaurant","170 Katama Rd, Edgartown, MA","(508) 627-5071","http://katamageneral.com/","active","corrected","Clean up name from ""Kgs 2"""
+93,"Katama Kitchen","","Edgartown","Edgartown","Restaurant","Restaurant","12 Mattakesett Way, Edgartown, MA 02539","(774) 549-5345","http://katamakitchen.com/","active","verified",""
+95,"L'etoile","","Edgartown","Edgartown","Restaurant","Restaurant","22 North water Street, Edgartown, MA 02539","(508) 627-5187","http://letoile.net/","active","verified",""
+97,"Lucky Hank's","","Edgartown","Edgartown","Restaurant","Restaurant","218 Upper Main St, Edgartown, MA 02539","(508) 939-4082","http://luckyhanksmv.com/","active","verified",""
+100,"Morning Glory Farm","","Edgartown","Edgartown","Restaurant","Restaurants, Food & Beverages",", Edgartown, MA 02539","(508) 627-9003","http://morninggloryfarm.com/","active","corrected","Morning Glory Farm - farm stand"
+105,"Rockfishedgartown","","Oak Bluffs","Edgartown","Restaurant","Restaurant","Water Street Edgartown, MA 02557","(508) 627-9967","http://rockfishedgartown.com/","active","corrected","Rockfish is on Water Street, Edgartown (not Oak Bluffs)"
+107,"Rosewater","","Edgartown","Edgartown","Restaurant","Restaurant","127020 South Summer St, Edgartown, MA","(508) 627-1270","https://www.rosewatermv.com/","active","verified",""
+109,"Theseafoodshanty","The Seafood Shanty","Edgartown","Edgartown","Restaurant","Restaurant","","(508) 627-8622","http://theseafoodshanty.com/","active","corrected","Clean up name"
+112,"Soigne","","Edgartown","Edgartown","Restaurant","Restaurant","190 Upper Main St, Edgartown, MA 02539","(508) 627-8489","http://soignemv.com/","active","verified",""
+114,"Squareriggerrestaurant","Square Rigger Restaurant","Edgartown","Edgartown","Restaurant","Restaurant","","","http://squareriggerrestaurant.com/","active","corrected","Clean up name"
+117,"The Covington Restaurant and Bar","","Edgartown","Edgartown","Restaurant","Restaurant","52 Main Street, Edgartown, MA 02539","(508) 627-7678","http://thecovingtonrestaurant.com/","active","verified",""
+119,"Winnetu Oceanside Resort","","Edgartown","Edgartown","Lodging","Lodging & Tourism","31 Dunes Rd, Edgartown, MA 02539","(866) 335-1133","http://winnetu.com/","active","corrected","Winnetu Resort"
+121,"The Porthunter","","Edgartown","Edgartown","Restaurant","Restaurant","","","http://theporthunter.com/","active","verified",""
+123,"Edgartown, Ma Bars","","Edgartown","Edgartown","Restaurant","Restaurant","","","http://townbarmv.com/","excluded","exclude","""Edgartown, Ma Bars"" - generic listing, not a business"
+125,"The Wharf Pub Edgartown","","Edgartown","Edgartown","Restaurant","Restaurant","3 Main Street, Edgartown, MA 02539","(508) 627-9966","http://wharfpubmv.com/","active","verified",""
+127,"Wolf's Den Pizzeria","","Edgartown","Edgartown","Restaurant","Restaurant","249 Vineyard Haven Rd, Edgartown, MA 02539","(508) 684-2203","https://www.wolfsdenpizzeria.com/","active","verified",""
+129,"Aalias Website 2026","Aalias Coffee","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","","","http://aaliascoffee.com/","active","corrected","Clean up name"
+131,"Back Door Donuts","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","","(508) 693-3688","http://backdoordonuts.com/","active","verified",""
+133,"Bangkok Cuisine","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","","(508) 771-1338","http://bangkokcapecod.com/","active","verified",""
+135,"Benandbills","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","20A Circuit Avenue, Oak Bluffs, MA 02557","(508) 696-0008","http://benandbillsmv.com/","active","verified",""
+141,"Coopdevilleshuck Shack","Coop de Ville","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","","","http://coopdevilleshuckshack.com/","active","corrected","Clean up name"
+143,"Dos Mas MV","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","50 Circuit Ave, Oak Bluffs, MA 02557","(508) 687-9271","http://dosmasmv.com/","active","verified",""
+145,"Eleven Circuit","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","","(508) 687-9283","http://elevencircuit.com/","active","verified",""
+148,"Farmneck.net/cafe","Farm Neck Cafe","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","Oak Bluffs, MA 02557","(508) 693-3560","http://farmneck.net/cafe","active","corrected","Clean up URL-based name"
+150,"Fat Ronniesburgerbar","Fat Ronnie's Burger Bar","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","","","http://fatronniesburgerbar.com/","active","corrected","Clean up name"
+152,"Fishbones Bar & Grille","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","12 Circuit Avenue Extension, Oak Bluffs, MA 02557","(508) 696-8227","http://fishbones-mv.com/","active","verified",""
+154,"Giordano's Restaurant, INC","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","Oak Bluffs, MA 02557","(508) 693-0184","http://giosmv.com/","active","verified",""
+156,"Igimv.org/about-island-food-pantry","Island Grown Initiative Food Pantry","Oak Bluffs","Oak Bluffs","Restaurant","Family, Community & Government","114 Dukes County Ave, Oak Bluffs, MA 02557","(508) 296-8384","http://igimv.org/about-island-food-pantry","active","corrected","Community org, not restaurant"
+158,"Jimmy Seas Loon Mountain","Jimmy Seas","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","25 South Mountain Drive, Lincoln, NH 03251","(508) 687-9804","http://jimmyseaspanpastas.com/","active","corrected","Located in Oak Bluffs, not NH"
+160,"Lobster Ville","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","","","http://lobstervillemv.com/","active","verified",""
+162,"Lookout Tavern","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","8 Seaview Ave, Oak Bluffs, MA 02557","(508) 696-9844","http://lookoutmv.com/","active","verified",""
+164,"MV Chowder Co","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","Marthas Vineyard Chowder Company, None, MA None","(508) 696-3000","http://chowdermv.com/","active","verified",""
+166,"Mikado Asian Bistro @ Oak Bluffs","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","","","http://mikadoob.com/","active","verified",""
+168,"Offshore Ale Company","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","30 Kennebec Avenue, Oak Bluffs, MA 02557","(508) 693-2626","http://offshoreale.com/","active","verified",""
+172,"Sharky's Oak Bluffs","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","31 Circuit Ave, Oak Bluffs, MA","(508) 693-7501","http://sharkmenu.com/","active","verified",""
+174,"The Barn Bowl & Bistro","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","13 Uncas Avenue, Oak Bluffs, MA 02557","(508) 696-9800","http://thebarnmv.com/","active","verified",""
+177,"The Ritz Cafe","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","4 Circuit Ave, Oak Bluffs, MA 02557","(508) 296-8159","http://theritzmv.com/","active","verified",""
+179,"The Sweet Life MV","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","OAK BLUFFS, MA 02557","(508) 696-0200","http://sweetlifemv.com/","active","verified",""
+181,"Tony's Market","","Oak Bluffs","Oak Bluffs","Restaurant","Shopping & Specialty Retail","119 Dukes County Avenue, Oak Bluffs, MA 02557","(508) 693-4799","http://tonysmarketmv.com/","active","corrected","Tony's Market - grocery"
+183,"Winston","","Vineyard Haven","Oak Bluffs","Restaurant","Restaurant","1 East Chop Drive, Oak Bluffs, MA 02568","(508) 687-9572","https://www.winstonskitchen-mv.com/","active","corrected","Winston's Kitchen is at 1 East Chop Drive, Oak Bluffs"
+185,"7a Foods Martha's Vineyard","","West Tisbury","West Tisbury","Restaurant","Restaurant","1045 State Road West, Tisbury, MA 02575","(508) 693-4636","http://7afoods.com/","active","verified",""
+187,"State Road Restaurant","","West Tisbury","West Tisbury","Restaurant","Restaurant","","(508) 693-8582","http://stateroadrestaurant.com/","active","verified",""
+189,"Vineyard Take Out","","West Tisbury","West Tisbury","Restaurant","Restaurant","479 State Rd, West Tisbury, MA 02575","(508) 693-6924","https://www.vineyardtakeoutmenu.com/","active","verified",""
+191,"Artcliff Diner","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","39 Beach Rd, Vineyard Haven, MA 02568","(508) 693-1224","http://artcliffdiner.com/","active","verified",""
+196,"Bobby B's","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","90 Circuit Ave, Oak Bluffs, MA 02557","(508) 693-8266","http://bobbybsmv.com/","active","verified",""
+198,"Catboat Coffee Co.","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","79 Beach Road, Vineyard Haven, MA","(774) 563-5296","https://catboatcoffee.com/","active","verified",""
+200,"Delicious MV","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","94 Circuit Ave, Oak Bluffs, MA 02557","","http://deliciousmv.com/","active","verified",""
+202,"Island Fresh Pizza","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","395 State Rd, Vineyard Haven, MA 02568","(508) 338-2764","http://islandfreshpizza.com/","active","verified",""
+204,"La Choza","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","12 State Rd, Vineyard Haven, MA 02568","","http://lachozamv.com/","active","verified",""
+206,"Mikado","Mikado Asian Bistro","Unknown","Vineyard Haven","Restaurant","Restaurants, Food & Beverages","","","http://mikadomv.com/","active","corrected","Located on State Road, Vineyard Haven"
+208,"Mocha Mott's","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","15 Main St, Vineyard Haven, MA 02568","(508) 693-3155","http://mochamotts.com/","active","verified",""
+210,"Nook","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","238 Main St, Vineyard Haven, MA","(508) 338-2340","http://natsnookmv.com/","active","verified",""
+213,"Porto Pizza Martha's Vineyard","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","36 Water St, Vineyard Haven, MA 02568","(508) 693-6200","http://portopizzamv.com/","active","verified",""
+215,"Rocco's Pizza Menu","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","s Vineyard, Massachusetts 02568","(508) 693-1125","http://marthasvineyardpizza.com/","active","verified",""
+217,"Authentic Italian Food","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","20 Union Street, Vineyard Haven, MA","(508) 687-9457","http://salvatoresristorante.com/","active","verified",""
+219,"Scottish Bakehouse","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","977 State Rd, Vineyard Haven, MA 02568","","http://scottishbakehousemv.com/","active","verified",""
+221,"Sweet Bites","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","32 Beach Street, Vineyard Haven, MA 02568","(598) 684-8257","http://sweetbitesmv.com/","active","verified",""
+225,"Waterside Market","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","82 Main Street, Vineyard Haven, MA 02568","(508) 693-8899","http://watersidemarket.com/","active","verified",""
+227,"Menu","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","Grill455 State Rd Unit 4 Vineyard Haven MA 02568","(508) 693-6795","http://woodlandvarietyandgrill.com/","excluded","exclude","Name is ""Menu"" - scraped navigation element"
+229,"Allen Farm Sheep & Wool Company","","Chilmark","Chilmark","Restaurant","Shopping & Specialty Retail","421 S Rd, Chilmark, MA 02535","(508) 645-9064","http://allenfarm.com/","active","corrected","Allen Farm - wool/crafts retail"
+231,"Native Earth Teaching Farm","","West Tisbury","West Tisbury","Community","Family, Community & Government","94 North Rd, West Tisbury, MA 02575","(302) 208-9250","http://nativeearthteachingfarm.org/","active","corrected","Native Earth Teaching Farm - educational nonprofit"
+233,"North Tabor Farm","","Chilmark","Chilmark","Restaurant","Restaurants, Food & Beverages","4 North Tabor Farm Road, Chilmark, MA 02535","(508) 645-3311","http://northtaborfarm.com/","active","corrected","North Tabor Farm - farm with food sales"
+239,"Cronigs Market","","Vineyard Haven","Vineyard Haven","Restaurant","Shopping & Specialty Retail","357 State Road, Vineyard Haven, MA 02568","(508) 693-4457","http://cronigsmarket.com/","active","corrected","Cronig's Market - grocery store"
+244,"The Reliable Market","","Oak Bluffs","Oak Bluffs","Restaurant","Shopping & Specialty Retail","Oak Bluffs, MA 02557","(508) 693-1102","http://thereliablemarket.com/","active","corrected","Reliable Market - grocery store"
+249,"Vineyard Grocer","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Specialty Retail","294 State Rd, Vineyard Haven, MA 02568","(508) 693-2000","http://vineyardgrocer.com/","active","corrected","Vineyard Grocer"
+251,"Edgartown Seafood Fish Market","","Edgartown","Edgartown","Restaurant","Shopping & Specialty Retail","138 Cooke Street, Edgartown, MA 02539","(508) 627-3791","http://edgartownseafood.com/","active","corrected","Edgartown Seafood - retail fish market"
+253,"Larsen's Fish Market","","Chilmark","Chilmark","Shopping & Retail","Shopping & Specialty Retail","56 Basin Rd, Menemsha, MA 02552","(508) 645-2680","http://larsensfishmarket.com/","active","corrected","Larsen's Fish Market - retail fish market"
+255,"Menemsha Fish Market","","Chilmark","Chilmark","Shopping & Retail","Shopping & Specialty Retail","54 Basin Rd, Menemsha, MA 02552","(508) 645-2282","http://menemshafishmarket.com/","active","corrected","Menemsha Fish Market - retail fish market"
+257,"The Net Result","","Vineyard Haven","Vineyard Haven","Restaurant","Shopping & Specialty Retail","79 Beach Rd, Vineyard Haven, MA 02568","(508) 693-6071","http://mvseafood.com/","active","corrected","The Net Result - retail fish market"
+260,"Jim's Package Store","Jim's Package Store","Oak Bluffs","Oak Bluffs","Restaurant","Shopping & Specialty Retail","1608, 
+Oak Bluffs, 
+MA","(508) 693-0236","http://jimspackagestore.com/","active","corrected","Liquor store"
+262,"MV Wine Store","","Edgartown","Edgartown","Shopping & Retail","Shopping & Specialty Retail","196 Upper Main St, Edgartown, MA 02539","(508) 627-7557","http://mvwinestore.com/","active","corrected","MV Wine Store"
+266,"Vintage MV Wine & Spirits","Vintage MV Wine & Spirits","Edgartown","Edgartown","Restaurant","Shopping & Specialty Retail","29 Winter Street, Nevin SqaureEdgartown, MA 02539","(774) 549-9287","http://vintagemvwine-spirits.com/","active","corrected","Wine/spirits"
+270,"Conroy Apothecary","Conroy Apothecary","Vineyard Haven","Vineyard Haven","Restaurant","Medical Services & Providers","459 State Road West, Tisbury, MA","(508) 693-7070","http://conroy-apothecary.com/","active","corrected","Pharmacy"
+273,"Vineyard Scripts","","Unknown","Unknown","Restaurant","Restaurant","","","http://vineyardscripts.com/","excluded","exclude","Website redirect/dead link"
+276,"51art Gallery Located at the Shoppe With the Red Door","","Vineyard Haven","Vineyard Haven","Restaurant","Shopping & Specialty Retail","4 Union Street, Vineyard Haven, MA 02568","","http://www.theshoppewiththereddoor.com/","active","corrected","51art Gallery at Shoppe With Red Door"
+278,"Sue","Alison Shaw Photography","Oak Bluffs","Oak Bluffs","Restaurant","Arts & Entertainment","Title
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+ 
+
+ 88 Dukes County Avenue
+PO Box 1545
+Oak Bluffs, MA 02557","(508) 693-4429","http://alisonshaw.com/","active","corrected","Photography/art"
+280,"Blanchard Photography","","West Tisbury","West Tisbury","Professional Services","Arts & Entertainment","West Tisbury, MA 02575","","http://blanchardphotomv.com/","active","corrected","Blanchard Photography"
+282,"Entertainmentcinemas.Com/Locations/Edgartown","","Unknown","Unknown","Restaurant","Restaurant","","","http://entertainmentcinemas.com/locations/edgartown","excluded","exclude","Generic cinema chain URL, not MV specific"
+284,"Edgartown Firemen's Association","Edgartown Fire Department","Edgartown","Edgartown","Restaurant","Family, Community & Government","516768 Pease Point Way South PO BOX 737Edgartown, MA 02539","(508) 627-5167","http://edgartownfiremensassociation.org/","active","corrected","Government/public safety"
+286,"Eisenhauer Gallery","","Edgartown","Edgartown","Restaurant","Arts & Entertainment","38 N WATER ST PO Box 1930, EDGARTOWN, MA 02539","","http://eisenhauergallery.com/","active","corrected","Eisenhauer Gallery - art gallery"
+288,"Featherstone Center for the Arts","","Oak Bluffs","Oak Bluffs","Restaurant","Arts & Entertainment","Oak Bluffs, MA, 02557","(508) 693-1850","http://featherstoneart.org/","active","corrected","Featherstone Center for the Arts"
+290,"Field Gallery","","West Tisbury","West Tisbury","Restaurant","Arts & Entertainment","1050 State Road                West, Tisbury, MA 02575","(508) 693-5595","http://fieldgallery.com/","active","corrected","Field Gallery - art gallery"
+293,"Island Folk Pottery","","Chilmark","Chilmark","Restaurant","Arts & Entertainment","s Way
+Chilmark, MA
+02535","(508) 955-9944","http://islandfolkpottery.com/","active","corrected","Island Folk Pottery - art/crafts"
+295,"Louisa Gould Photographer","Louisa Gould Gallery","Unknown","Vineyard Haven","Restaurant","Arts & Entertainment","","","http://louisagould.com/","active","corrected","Located in Vineyard Haven"
+297,"MV Glassworks","","West Tisbury","West Tisbury","Shopping & Retail","Arts & Entertainment","683 State Road, West Tisbury, MA 02575","(508) 693-6026","http://mvglassworks.com/","active","corrected","MV Glassworks - art glass"
+300,"MV Museum","","Vineyard Haven","Vineyard Haven","Community","Arts & Entertainment","SUNDAY
+151 LAGOON POND ROADVINEYARD HAVEN MA 02568","(508) 627-4441","http://mvmuseum.org/","active","corrected","MV Museum"
+304,"Merry Farm Pottery","","West Tisbury","West Tisbury","Shopping & Retail","Arts & Entertainment","674 Lambert's Cove Rd, West Tisbury, MA 02575","(774) 836-4349","http://merryfarmpottery.com/","active","corrected","Merry Farm Pottery - art/crafts"
+306,"Michaeljimage","","Unknown","Unknown","Restaurant","Restaurant","","(415) 238-7572","http://michaeljimage.com/","excluded","exclude","Invalid website/photographer page error"
+308,"Moore Family Gallery","","Oak Bluffs","Oak Bluffs","Restaurant","Arts & Entertainment","s Park Road, Oak Bluffs, MA, 02557","(508) 693-8548","http://moorefamilygallery.com/","active","corrected","Moore Family Gallery"
+310,"MV Camp Meeting Association","","Oak Bluffs","Oak Bluffs","Community","Community","80 Trinity Park, Oak Bluffs, MA 02557","(508) 693-0525","http://mvcma.org/","active","verified",""
+312,"North Water Gallery","","West Tisbury","West Tisbury","Restaurant","Restaurant","1050 State Road                West, Tisbury, MA 02575","(508) 627-6002","http://northwatergallery.com/","active","verified",""
+314,"Pathways Arts","","Chilmark","Chilmark","Community","Community","9 State Road, Chilmark, MA 02535","(508) 645-9098","http://pathwaysmv.org/","active","verified",""
+316,"Seastone Papers","","West Tisbury","West Tisbury","Restaurant","Restaurant","s Vineyard, MA  02575","(508) 693-5786","http://seastonepapers.com/","active","verified",""
+318,"Strand Theatre MV","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","11 Oak Bluffs Ave, Oak Bluffs, MA 02557","(312) 576-4890","http://strandtheatre-marthasvineyard.com/","active","verified",""
+320,"Vineyard Preservation Trust","","Edgartown","Edgartown","Restaurant","Restaurant","Box 5277
+Edgartown, MA 02539","(774) 549-9107","http://vineyardtrust.org/","active","verified",""
+322,"The Christina Gallery","","Edgartown","Edgartown","Restaurant","Restaurant","5 Winter Street, Edgartown, MA 02539","(508) 627-8794","http://christina.com/","active","verified",""
+324,"Peter Simon Photography","","Chilmark","Chilmark","Restaurant","Restaurant","14 Wisteria Road, Chilmark, MA 02535","","http://petersimon.com/","active","verified",""
+326,"The Vineyard's Drive","","Unknown","Unknown","Restaurant","Restaurant","","(508) 696-6300","http://driveinmv.com/","active","verified",""
+328,"Instagram","","Unknown","Unknown","Restaurant","Restaurant","","","https://instagram.com","active","verified",""
+329,"The Yard","","Chilmark","Chilmark","Restaurant","Restaurant","1 The Yard, Chilmark, MA","(508) 645-9662","http://dancetheyard.org/","active","verified",""
+331,"Tuck & Holand Metal Sculptors","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","275 State Road, Tisbury, MA","(508) 693-3914","http://tuckandholand.com/","active","verified",""
+333,"Vineyard Arts Project","","Edgartown","Edgartown","Restaurant","Restaurant","215 Upper Main Street, Edgartown, MA 02539","(508) 413-2104","http://vineyardarts.org/","active","verified",""
+335,"Washington Ledesma","","Edgartown","Edgartown","Restaurant","Restaurant","58 Dock Street, Edgartown, MA","(508) 693-1823","http://washingtonledesmamv.com/","active","verified",""
+337,"Winter Street Gallery","","Edgartown","Edgartown","Restaurant","Restaurant","22 Winter Street, Edgartown, MA 02539","(401) 602-1702","http://winterstreetgallery.com/","active","verified",""
+339,"Edgartown Golf Club Martha's Vineyard","","Edgartown","Edgartown","Restaurant","Restaurant","205 , Edgartown, MA 02539","(508) 627-5343","https://edgartowngolfclub.com/","active","verified",""
+340,"Felix Neck Wildlife Sanctuary","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","494 , Vineyard Haven, MA 02568","(508) 627-4850","http://massaudubon.org/felixneck","active","verified",""
+342,"Mink Meadows Golf Club","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","320 Golf Club Road, Vineyard Haven, MA 02568","(508) 693-0600","https://www.minkmeadowsgc.com/","active","verified",""
+343,"The Polly Hill Arboretum","","West Tisbury","West Tisbury","Restaurant","Restaurant","809 State Road West, Tisbury, MA 02575","(508) 693-9426","http://pollyhillarboretum.org/","active","verified",""
+345,"Royal Chappy Golf","","Edgartown","Edgartown","Restaurant","Restaurant","EDGARTOWN MA 02539","(508) 939-4055","https://royalchappy.com/","active","verified",""
+346,"Vineyard Golf Club","","Edgartown","Edgartown","Restaurant","Restaurant","Box 9 Edgartown, MA 02539","(508) 627-8930","https://www.vineyardgolf.com/","active","verified",""
+347,"The Martha's Vineyard Groups of Alcoholics Anonymous","","Edgartown","Edgartown","Restaurant","Restaurant","45 South Summer Street, Edgartown, MA","(508) 627-7084","https://aaonmv.org","active","verified",""
+348,"MV Narcotics Anonymous","","Vineyard Haven","Vineyard Haven","Community","Community","Vineyard Haven, MA","(866) 686-2669","http://mvana.org/","active","verified",""
+349,"Refuge Recovery World Services","","Unknown","Unknown","Restaurant","Restaurant","","(323) 592-9502","http://refugerecovery.org/","active","verified",""
+350,"Smart Recovery","","Unknown","Unknown","Restaurant","Restaurant","","(440) 951-5357","http://smartrecovery.org/","active","verified",""
+351,"Airportfitness","","Unknown","Unknown","Health & Wellness","Health & Wellness","","(508) 696-8000","http://airportfitnessmv.com/","active","verified",""
+353,"B Strong","","Oak Bluffs","Oak Bluffs","Health & Wellness","Health & Wellness","29 Kennebec Ave., Oak Bluffs, MA","(508) 685-8888","http://b-strong.com/","active","verified",""
+355,"Crossfitmarthas","","Unknown","Unknown","Health & Wellness","Health & Wellness","","","http://crossfitmarthasvineyard.com/","active","verified",""
+357,"Optometrist in Harvard Square","","Vineyard Haven","Vineyard Haven","Health & Wellness","Health & Wellness","s Vineyard, MA 02568","(617) 366-1549","http://harvardsquareeyecare.com/","active","verified",""
+359,"Hot Yoga MV","","Vineyard Haven","Vineyard Haven","Health & Wellness","Health & Wellness","497 State Road, West Tisbury, MA","(774) 327-1287","http://hotyogamv.com/","active","verified",""
+361,"Allyson Cook Metell, Lmt & Associates","","Vineyard Haven","Vineyard Haven","Health & Wellness","Health & Wellness","Associates455 State RdPMB 133Vineyard Haven, MA 02568","(508) 696-1863","http://allysonlmt.com/","active","verified",""
+364,"Megan Grennan Yoga","","West Tisbury","West Tisbury","Health & Wellness","Health & Wellness","comPO Box 909West Tisbury, MA 02575","","http://meganyogamv.com/","active","verified",""
+365,"Peakedhillstudio","","Chilmark","Chilmark","Health & Wellness","Health & Wellness","Peaked Hill Studio
+Chilmark, MA 02535","(774) 563-8282","http://peakedhillstudio.com/","active","verified",""
+367,"Vcmpt","","Edgartown","Edgartown","Health & Wellness","Health & Wellness","238 Edgartown-Vineyard Haven Rd, Edgartown, MA 02539","(508) 693-3800","http://vcmpt.com/","active","verified",""
+368,"Redirecting...","","Unknown","Unknown","Health & Wellness","Health & Wellness","","","http://vineyardgynecology.com/","active","verified",""
+370,"Vineyard Medical Care","","Vineyard Haven","Vineyard Haven","Healthcare","Healthcare","364 State Road, Vineyard Haven, MA","(508) 693-4400","http://vineyardmedicalcare.com/","active","verified",""
+372,"Vineyard Vinyasa","","Oak Bluffs","Oak Bluffs","Health & Wellness","Health & Wellness","50 Kennebec Ave, Oak Bluffs, MA 02557","","http://vineyardvinyasamv.com/","active","verified",""
+374,"Ymca of Martha's Vineyard","","Vineyard Haven","Vineyard Haven","Health & Wellness","Health & Wellness","VINEYARD HAVEN, MA 02568","(508) 696-7171","http://ymcamv.org/","active","verified",""
+375,"Marthas Vineyard Yoga Barn","","West Tisbury","West Tisbury","Restaurant","Restaurant","1 RED BARN ROAD, WEST TISBURY, MA 02575","","http://marthas-vineyard-yoga-barn.com/","active","verified",""
+376,"Edgartown Martha's Vineyard Hot Yoga Studio/yoga on the Vine","","Edgartown","Edgartown","Health & Wellness","Health & Wellness","Edgartown Rd, Edgartown, MA 02539","","http://yogaonthevine.com/","active","verified",""
+377,"Ashley Inn","","Edgartown","Edgartown","Lodging","Lodging","Edgartown, MA 02539","(508) 627-9655","http://ashleyinn.net/","active","verified",""
+379,"Charles & Charles","","Vineyard Haven","Vineyard Haven","Other","Other","85 Summer Street, Vineyard Haven, MA 02568","(508) 338-2351","http://charlesandcharlesmv.com/","active","verified",""
+381,"Dockside Inn","","Oak Bluffs","Oak Bluffs","Lodging","Lodging","9 Circuit Avenue, Extension Oak Bluffs, MA 02557","(800) 245-5979","http://vineyardinns.com/","active","verified",""
+383,"Dunmere House","","Oak Bluffs","Oak Bluffs","Lodging","Lodging","7 Pennacook Ave, Vineyard Haven, MA 02557","(508) 693-3627","http://dunmerehouse.com/","active","verified",""
+385,"Edgar Hotel","","Edgartown","Edgartown","Lodging","Lodging","Edgartown, MA 02539","(508) 627-5161","http://edgarhotelmv.com/","active","verified",""
+387,"Instagram Icon","","Edgartown","Edgartown","Other","Other","Edgartown, MA 02539","(508) 627-4671","http://edgartowncommons.com/","active","verified",""
+390,"Luxury Boutique Hotel Edgartown","","Edgartown","Edgartown","Lodging","Lodging","222 Upper Main Street, Edgartown, MA","(508) 379-2100","http://franklinhotelmv.com/","active","verified",""
+392,"Greenwood House","","Vineyard Haven","Vineyard Haven","Other","Other","6150
+PO Box 2734, Vineyard Haven, MA 02568","(508) 693-6150","http://greenwoodhouse.com/","active","verified",""
+395,"The Harborside Inn","","Edgartown","Edgartown","Lodging","Lodging","3 South Water Street, Edgartown, MA 02539","(508) 627-4321","http://theharborsideinn.com/","active","verified",""
+397,"Hob Knob","","Edgartown","Edgartown","Lodging","Lodging","128 Main Street, Edgartown, MA 02539","(508) 627-9510","http://hobknob.com/","active","verified",""
+399,"Book a Hostel","","Unknown","Unknown","Other","Other","","","http://hiusa.org/","active","verified",""
+401,"Inkwell Beach House","","Oak Bluffs","Oak Bluffs","Other","Other","83 Sea View Ave, Oak Bluffs, MA 02557","(838) 245-8830","http://inkwellbeach.com/","active","verified",""
+403,"Kkon","","Oak Bluffs","Oak Bluffs","Other","Other","59 Naushon Ave, Oak Bluffs, MA 02557","(508) 863-2734","http://kkonmv.com/","active","verified",""
+405,"Lambert's Cove Inn","","Vineyard Haven","Vineyard Haven","Lodging","Lodging","RESORT
+90 Manaquayak Road
+West Tisbury, MA 02568","(508) 422-8051","http://lambertscoveinn.com/","active","verified",""
+406,"Madisoninn","","Oak Bluffs","Oak Bluffs","Lodging","Lodging","18 Kennebec Avenue, Oak Bluffs, MA 02557","(508) 693-2760","http://madisoninnmv.com/","active","verified",""
+408,"Camp MV","","Vineyard Haven","Vineyard Haven","Other","Other","1 569, Edgartown, MA","(508) 693-3772","http://campmv.com/","active","verified",""
+410,"Menemsha Inn & Cottages: Martha's Vineyard Vacation Rentals","","Chilmark","Chilmark","Lodging","Lodging","457 North Road, Menemsha, MA 02552","(508) 645-2521","http://menemshainn.com/","active","verified",""
+412,"Narragansett House","","Oak Bluffs","Oak Bluffs","Lodging","Lodging","46 Narragansett Ave, Oak Bluffs, MA 02557","(518) 577-2938","http://narragansetthouse.com/","active","verified",""
+413,"Nobnocket","","Vineyard Haven","Vineyard Haven","Lodging","Lodging","The Nobnocket Boutique Inn Vineyard Haven, MA 02568","(508) 696-0859","http://nobnocket.com/","active","verified",""
+415,"Martha’s Vineyard Hotels","","Oak Bluffs","Oak Bluffs","Lodging","Lodging","19 Pequot Avenue, Oak Bluffs, MA 02557","(508) 693-5087","http://pequothotel.com/","active","verified",""
+417,"Summercamp Hotel","","Oak Bluffs","Oak Bluffs","Lodging","Lodging","70 Lake Ave, Oak Bluffs, MA 02557","","http://summercamphotel.com/","active","verified",""
+419,"Oak Bluffs Hotel","","Edgartown","Edgartown","Lodging","Lodging","42 Lake Avenue, Oak Bluffs, MA 02539","(508) 693-4346","http://attleborohousemv.com/","active","verified",""
+423,"The Beach Front Inn of Martha's Vineyard","","Oak Bluffs","Oak Bluffs","Lodging","Lodging","s Vineyard Massachusetts 02557","(508) 693-5148","http://beachfrontinnmv.com/","active","verified",""
+425,"Captain Flanders Inn","","Chilmark","Chilmark","Lodging","Lodging","5 North Rd, Chilmark, MA 02535","(508) 645-3123","http://captainflandersinn.com/","active","verified",""
+427,"The Charlotte Inn","","Edgartown","Edgartown","Lodging","Lodging","27 South Summer Street, Edgartown, MA 02539","(508) 627-4751","http://thecharlotteinn.com/","active","verified",""
+431,"Duck Inn","","Aquinnah","Aquinnah","Lodging","Lodging","10 Duck Pond Way, Aquinnah, MA 02535","(715) 386-9450","http://duckinnonmv.com/","active","verified",""
+433,"Lark Hotels","","Edgartown","Edgartown","Lodging","Lodging","27 N Water St, Edgartown, MA 02539","","https://www.larkhotels.com/hotels/the-edgartown-collection","active","verified",""
+435,"Vacasa.com/usa/the-island-inn","","Vineyard Haven","Vineyard Haven","Lodging","Lodging","850 NW 13th Ave, Portland, Oregon 97209","(800) 544-0300","http://vacasa.com/usa/The-Island-Inn-MA","active","verified",""
+437,"Lightkeepers Inn","","Edgartown","Edgartown","Lodging","Lodging","25 Simpsons Ln, Edgartown, MA 02539","(508) 627-4600","http://thelightkeepersinn.com/","active","verified",""
+439,"Morgan Hotel","","Oak Bluffs","Oak Bluffs","Lodging","Lodging","Massachusetts, 02557","(508) 338-2804","http://morganhotelmv.com/","active","verified",""
+441,"Oak Bluffs Inn","","Oak Bluffs","Oak Bluffs","Lodging","Lodging","64 Circuit Ave, Oak Bluffs, MA 02557","(508) 693-7171","http://oakbluffsinn.com/","active","verified",""
+444,"Martha’s Vineyard Surfside Hotel: Martha’s Vineyard Hotels","","Oak Bluffs","Oak Bluffs","Lodging","Lodging","7 Oak Bluffs Avenue, Oak Bluffs, MA 02557","(508) 693-2500","http://mvsurfside.com/","active","verified",""
+446,"The Edgartown Collection","","Edgartown","Edgartown","Other","Other","56 North Water Street, Edgartown, MA 02539","(978) 992-8710","http://theedgartowncollection.com/","active","verified",""
+448,"Vineyard Harbor Motel","","Vineyard Haven","Vineyard Haven","Other","Other","60 Beach Road, Vineyard Haven, MA 02568","(508) 693-3334","http://vineyardharbormotel.us/","active","verified",""
+450,"Vineyard Square Hotel & Suites","","Edgartown","Edgartown","Lodging","Lodging","38 North Water Street, Edgartown, MA 02539","(508) 627-4711","http://vineyardsquarehotel.com/","active","verified",""
+453,"Find Your Island Ride","","Vineyard Haven","Vineyard Haven","Lodging","Lodging","4 Water Street, Vineyard Haven, MA 02568
+
+
+Edgartown
+196 Upper Main Street, Edgartown, MA 02539
+
+
+
+
+
+
+Airport Pickup Service
+71 Airport Rd,West Tisbury, MA 02575","(508) 696-5300","http://mvautorental.com/","active","verified",""
+459,"Altheadesigns","","Unknown","Unknown","Other","Other","","","http://altheadesigns.com/","active","verified",""
+461,"Basicsandeastaway.company","","Unknown","Unknown","Other","Other","","","http://basicsandeastaway.company.site/","active","verified",""
+463,"Bellezza MV Salon","","Edgartown","Edgartown","Health & Wellness","Health & Wellness","30 Main St, Edgartown, MA 02539","","http://bellezzamvsalon.com/","active","verified",""
+466,"Binks Auto.business","","Unknown","Unknown","Automotive","Automotive","","","http://binks-auto.business.site/","active","verified",""
+470,"Brickman's","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","14 Main St, Vineyard Haven, MA 02568","(508) 693-0047","http://brickmans.com/","active","verified",""
+472,"Brunos","","Unknown","Unknown","Other","Other","","","http://brunosmv.com/","active","verified",""
+476,"Cape Cod Five","","Vineyard Haven","Vineyard Haven","Professional Services","Professional Services","51 State Rd, Vineyard Haven, MA 02568","(888) 225-4636","http://capecodfive.com/","active","verified",""
+478,"Cb Stark Jewelers","","Unknown","Unknown","Shopping & Retail","Shopping & Retail","","(888) 227-8275","http://cbstark.com/","active","verified",""
+481,"Center for New Learning MV","","Vineyard Haven","Vineyard Haven","Other","Other","20 Surveyors Lane, Tisbury, MA","(920) 410-4577","http://cnlmv.org/","active","verified",""
+483,"Chicken Alley","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","14 Beach St, Vineyard Haven, MA 02568","","http://chickenalley.org/","active","verified",""
+485,"Account Suspended","","Unknown","Unknown","Professional Services","Professional Services","","","http://circuitstylesalon.com/","active","verified",""
+487,"Claudia Jewelry","","Edgartown","Edgartown","Shopping & Retail","Shopping & Retail","44 Main St, Edgartown, MA 02539","(508) 627-8306","http://claudia.jewelry/","active","verified",""
+489,"Secure.myvanco.com/ygss/campaign/c-yjgr","","Unknown","Unknown","Other","Other","","","https://secure.myvanco.com/YGSS/campaign/C-YJGR","active","verified",""
+491,"Conrado®","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","2 Union Street, Vineyard Haven, MA","","http://shopconrado.com/","active","verified",""
+493,"Crane Appliance","","Vineyard Haven","Vineyard Haven","Other","Other","529 State Road, Vineyard Haven, MA 02568","(508) 548-8179","http://craneappliance.com/","active","verified",""
+496,"Darosa's","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","21 Beach Rd, Vineyard Haven, MA 02568","(508) 693-0110","http://darosasmv.com/","active","verified",""
+497,"Debettencourt's Service Station","","Oak Bluffs","Oak Bluffs","Other","Other","83 New York Avenue, Oak Bluffs, MA 02557","(508) 693-0751","http://debettencourtsservicestation.weebly.com/","active","verified",""
+499,"Divine Beauty + Wellness","","Edgartown","Edgartown","Health & Wellness","Health & Wellness","AEdgartown, MA 02539","(508) 905-5983","http://divinemv.com/","active","verified",""
+501,"Donaroma's Martha's Vineyard","","Edgartown","Edgartown","Other","Other","270 Upper Main Street, Edgartown, MA 02539","(508) 627-3036","http://donaromas.com/","active","verified",""
+503,"E. C. Cottle, Inc.","","Edgartown","Edgartown","Shopping & Retail","Shopping & Retail","106 Main St, Edgartown, MA 02539","(508) 627-4381","http://eccottle.com/","active","verified",""
+507,"East Chop Sleep Shop","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","395 State Road, Vineyard Haven, MA 02568","(508) 693-5911","http://eastchopsleepshop.com/","active","verified",""
+510,"Edgartown Books","","Edgartown","Edgartown","Other","Other","44 Main Street, Edgartown, MA 02539","(508) 627-8463","http://edgartownbooks.com/","active","verified",""
+512,"Edgartown Council on Aging","","Edgartown","Edgartown","Community","Community","20 Robinson Rd, Edgartown, MA 02539","(508) 627-4368","http://edgartowncoa.com/","active","verified",""
+514,"Mass.gov/locations/dukes-county-superior-court","","Edgartown","Edgartown","Other","Other","Box 1267, Edgartown, MA 02539","(508) 627-4668","http://mass.gov/locations/dukes-county-superior-court","active","verified",""
+515,"Edgartown Hardware","","Edgartown","Edgartown","Other","Other","61 West Tisbury Road, Edgartown, MA 02539","(508) 627-4338","http://edgartownhardware.com/","active","verified",""
+518,"Edgartown Paint Shoppe","","Edgartown","Edgartown","Shopping & Retail","Shopping & Retail","101 Upper Main St, Edgartown, MA 02539","","http://edgartownpaintshoppe.com/","active","verified",""
+520,"Fine Fettle Dispensary","","Edgartown","Edgartown","Shopping & Retail","Shopping & Retail","256 Upper Main St, Edgartown, MA 02539","","http://finefettle.com/","active","verified",""
+523,"Good Dog Goods","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","16 Main St, Vineyard Haven, MA 02568","(508) 696-7100","http://gooddoggoods.com/","active","verified",""
+525,"Granite Five & Ten","","Edgartown","Edgartown","Shopping & Retail","Shopping & Retail","242 Vineyard Haven Rd, Edgartown, MA 02539","(508) 627-3232","http://granitestores.com/","active","verified",""
+532,"Island Aesthetics","","Vineyard Haven","Vineyard Haven","Other","Other","8 Union St, Vineyard Haven, MA 02568","(774) 563-5708","http://islandaestheticsmv.com/","active","verified",""
+534,"Islandalpaca","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","PO Box 1515, Vineyard Haven, MA 02568","(508) 693-5554","http://islandalpaca.com/","active","verified",""
+536,"Island Music","","Oak Bluffs","Oak Bluffs","Shopping & Retail","Shopping & Retail","59 Circuit Ave, Oak Bluffs, MA 02557","","http://islandmusicmv.com/","active","verified",""
+540,"Jardin Mahoney","","Unknown","Unknown","Other","Other","","(508) 693-3511","http://jardinmahoneymv.com/","active","verified",""
+542,"Johnkeene","","Vineyard Haven","Vineyard Haven","Other","Other","25 Old Stage Road, West Tisbury, MA 02568","(508) 693-5975","http://johnkeene.com/","active","verified",""
+544,"King's Barber Shop","","Vineyard Haven","Vineyard Haven","Health & Wellness","Health & Wellness","395 State Road, Tisbury, MA 02568","(508) 687-9209","http://kingsbarbershopmv.com/","active","verified",""
+546,"Kismet Outfitters","","Edgartown","Edgartown","Other","Other","Edgartown, MA 02539","(774) 549-5921","http://kismetoutfitters.com/","active","verified",""
+549,"Larry's Tackle Shop","","Edgartown","Edgartown","Shopping & Retail","Shopping & Retail","141 Main St, Edgartown, MA 02539","(508) 627-5088","http://larrystackle.com/","active","verified",""
+551,"Lazy Frog","","Oak Bluffs","Oak Bluffs","Shopping & Retail","Shopping & Retail","42 Circuit Ave, Oak Bluffs, MA 02557","(508) 696-4679","http://lazyfrogmv.com/","active","verified",""
+553,"Leroux Kitchen","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","62 Main St, Vineyard Haven, MA 02568","(207) 553-7665","http://lerouxkitchen.com/","active","verified",""
+555,"Technical Apparel + Athletic Shoes","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","1818 Cornwall Ave, Vancouver, BC V6J 1C7","(877) 263-9300","http://shop.lululemon.com/","active","verified",""
+557,"Maggie's Salon","","Vineyard Haven","Vineyard Haven","Other","Other","HOME   SERVICES     ARTISTS    PRODUCTS   CONTACT US    BOOK NOW
+
+
+
+
+
+
+
+ 
+ 
+
+
+ 
+    
+
+31 beach road, 
+      suite 104A, 
+      vineyard haven, ma 02568","(508) 693-2875","http://maggiessalon.com/","active","verified",""
+561,"Martha's Bike","","Vineyard Haven","Vineyard Haven","Lodging","Lodging","4 Lagoon Pond Rd, Vineyard Haven, MA","(833) 362-7842","http://marthasbikerentals.com/","active","verified",""
+563,"Martha","","West Tisbury","West Tisbury","Other","Other","PO Box 610West Tisbury, MA02575","(508) 627-4266","http://mvbank.com/","active","verified",""
+565,"Martha's Vineyard Made","","West Tisbury","West Tisbury","Shopping & Retail","Shopping & Retail","State Rd, West Tisbury, MA 02575","(508) 338-2598","http://marthasvineyardmade.com/","active","verified",""
+567,"MV Shipyard","","Vineyard Haven","Vineyard Haven","Professional Services","Professional Services","Box 1119
+Vineyard Haven, MA 02568
+
+ 
+
+Shipping Address 164 Beach Road
+Vineyard Haven, MA 02568","(508) 693-0400","http://mvshipyard.com/","active","verified",""
+569,"Martha's Vineyard Tile Company Inc.","","Vineyard Haven","Vineyard Haven","Other","Other","s Vineyard Tile Co123 Beach RdPO Box 98Vineyard Haven Ma 02568","(508) 693-9707","http://mvtileco.com/","active","verified",""
+571,"Mvcenter4Living.Org","","Vineyard Haven","Vineyard Haven","Other","Other","00AM
+
+
+
+ 
+Nomans to Jaws Bridge
+
+
+
+
+
+
+Register HEre 
+
+
+
+
+
+
+
+
+
+Thank You to Our Sponsors 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+Get in Touch 
+
+
+
+
+
+
+ 
+
+
+
+Address
+29 Breakdown Lane, PO Box 1729Vineyard Haven, MA 02568","(508) 939-9440","http://mvcenter4living.org/","active","verified",""
+574,"Mccurdymotorcars","","Vineyard Haven","Vineyard Haven","Other","Other","2006-2007 McCurdy Motorcars Used cars
+Martha’s Vineyard, Vineyard Haven, MA","(508) 693-5532","http://mccurdymotorcars.com/","active","verified",""
+577,"Menemsha Blues","","Chilmark","Chilmark","Restaurant","Restaurant","30 Basin Rd, Menemsha, MA 02552","","http://menemshablues.com/","active","verified",""
+581,"Mosher Photo","","Edgartown","Edgartown","Other","Other","Vineyard Haven Road, Edgartown, MA 02539","(508) 693-9430","http://mosherphoto.com/","active","verified",""
+583,"North Line Shell","","Edgartown","Edgartown","Shopping & Retail","Shopping & Retail","3 N Line Road, Edgartown, MA 02539","(508) 338-7884","http://northlineshell.com/","active","verified",""
+588,"Salon","","West Tisbury","West Tisbury","Other","Other","5 Cournoyer Road, West Tisbury, MA","","http://panachesalonmv.com/","active","verified",""
+591,"Phillips Hardware Closed","","Unknown","Unknown","Other","Other","","","http://phillipshardwaremv.com/","active","verified",""
+593,"Martha's Vineyard Escape Room","","Oak Bluffs","Oak Bluffs","Arts & Entertainment","Arts & Entertainment","84 Circuit Ave, Oak Bluffs, MA 02557","","https://www.marthasvineyardescaperoom.com/escape-room-pirates-puzzle","active","verified",""
+597,"Revive by Sarka","","Edgartown","Edgartown","Health & Wellness","Health & Wellness","38 Winter St, Edgartown, MA 02539","","http://revivebysarka.com/","active","verified",""
+599,"Personal & Business Banking","","Unknown","Unknown","Professional Services","Professional Services","","(508) 732-7072","http://rocklandtrust.com/","active","verified",""
+603,"Sanctuary Martha's Vineyard","","Oak Bluffs","Oak Bluffs","Shopping & Retail","Shopping & Retail","42 Circuit Avenue, Oak Bluffs, MA 02557","","http://shopsanctuary.com/","active","verified",""
+606,"Sea Bags","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","9 Main St, Vineyard Haven, MA 02568","(888) 210-4244","http://seabags.com/","active","verified",""
+608,"Sea Legs","","Unknown","Unknown","Shopping & Retail","Shopping & Retail","","","http://sealegsmv.com/","active","verified",""
+610,"Sea Spa Salon","","Edgartown","Edgartown","Health & Wellness","Health & Wellness","93 Main St, Edgartown, MA 02539","(508) 627-8953","http://seaspasalonmv.com/","active","verified",""
+614,"Shirt Tales MV","","Edgartown","Edgartown","Other","Other","61 Main Street, Edgartown, MA 02539","(508) 627-3766","http://shirttalesmv.com/","active","verified",""
+616,"Slate","","Edgartown","Edgartown","Shopping & Retail","Shopping & Retail","11 North Summer Street, Edgartown, MA 02539","(508) 939-1908","http://slatemv.com/","active","verified",""
+618,"Slip 77","","Unknown","Unknown","Other","Other","","","http://slip77.com/","active","verified",""
+620,"Soft As a Grape","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","71 Main St, Vineyard Haven, MA 02568","(508) 295-9900","http://softasagrape.com/","active","verified",""
+623,"Sole","","Unknown","Unknown","Other","Other","","","http://solemv.com/","active","verified",""
+625,"Spa L'eau MV","","Edgartown","Edgartown","Health & Wellness","Health & Wellness","One Mariners Landing C, Edgartown, MA 02539","(508) 292-1235","http://spaleaumv.com/","active","verified",""
+626,"Stefanie Wolf Designs Artisan Jewelry From Martha's Vineyard","","Oak Bluffs","Oak Bluffs","Shopping & Retail","Shopping & Retail","37 Circuit Avenue, Oak Bluffs, MA","(774) 549-9526","http://stefaniewolf.com/","active","verified",""
+629,"Summershadessunglasses","","Unknown","Unknown","Other","Other","","","http://summershadessunglasses.com/","active","verified",""
+631,"Talita Destefani Beauty Lounge","","Vineyard Haven","Vineyard Haven","Other","Other","7 Beach Street, Vineyard Haven, MA","(508) 560-0058","http://talitadestefani.com/","active","verified",""
+633,"Tashmoo Insurance Agency","","Vineyard Haven","Vineyard Haven","Professional Services","Professional Services","517 State Road, Vineyard Haven, MA 02568","(508) 693-4000","http://tashmooinsurance.com/","active","verified",""
+637,"Boneyard Surf Co","","Oak Bluffs","Oak Bluffs","Shopping & Retail","Shopping & Retail","33 Lake Ave, Oak Bluffs, MA 02557","","http://boneyardmv.com/","active","verified",""
+640,"The Green Room","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","The Green Room
+71 Main Street
+Vineyard Haven, MA 02568","(508) 693-6888","http://greenroommv.com/","active","verified",""
+642,"Trust","","Vineyard Haven","Vineyard Haven","Other","Other","9 Main Street, Vineyard Haven, MA 02568","(508) 693-4445","https://www.tanyarust.com/","active","verified",""
+644,"Third World Trading Co.","","Oak Bluffs","Oak Bluffs","Other","Other","52 Circuit Ave PO Box 1033 Oak Bluffs Marthas Vineyard, MA 02557","(508) 693-5550","https://www.thirdworldtrading.com/index.htm","active","verified",""
+646,"Tisburyma.Gov/Council-Aging","","Unknown","Unknown","Other","Other","","","http://tisburyma.gov/council-aging","active","verified",""
+648,"Tisbury Toy Box","","Vineyard Haven","Vineyard Haven","Other","Other","79 Beach Road, Vineyard Haven, MA 02568","(508) 693-8182","http://tisburytoybox.com/","active","verified",""
+652,"Vineyard Decorators","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","67 Main St, Vineyard Haven, MA 02568","(508) 693-9197","http://vineyarddecorators.com/","active","verified",""
+654,"Vineyard Family Tennis","","Oak Bluffs","Oak Bluffs","Other","Other","618 Barnes Road, Oak Bluffs, MA 02557","(508) 693-7762","http://vineyardfamilytennis.org/","active","verified",""
+656,"Vineyard Hearth Patio & Spa","","West Tisbury","West Tisbury","Shopping & Retail","Shopping & Retail","695 State Rd, West Tisbury, MA 02575","(508) 693-5520","http://vineyardhearthpatioandspa.com/","active","verified",""
+658,"M&b Remodeling","","Vineyard Haven","Vineyard Haven","Other","Other","454 State Road, Vineyard Haven, MA","(508) 693-3227","http://vineyardhomecenter.com/","active","verified",""
+660,"Vineyard Vines","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","68 Main St, Vineyard Haven, MA 02568","(800) 892-4982","http://vineyardvines.com/","active","verified",""
+663,"Wheel Happy Bicycles","","Edgartown","Edgartown","Shopping & Retail","Shopping & Retail","8 S Water St, Edgartown, MA 02539","","http://wheelhappybicycles.com/","active","verified",""
+665,"Sail Surf and Paddle on Martha's Vineyard","","Unknown","Unknown","Shopping & Retail","Shopping & Retail","","","http://windsupmv.com/","active","verified",""
+667,"Erica Wilson INC","","Edgartown","Edgartown","Contractors","Contractors","21 Kelly St, Edgartown, MA 02539","(774) 549-9488","https://ericawilson.com/","active","verified",""
+668,"Island Outfitters Oak Bluffs","","Oak Bluffs","Oak Bluffs","Contractors","Contractors","1 post office square, Oak Bluffs, MA 02557","(508) 693-0085","http://islandoutfittersmv.com/","active","verified",""
+669,"The Great Put On","","Edgartown","Edgartown","Shopping & Retail","Shopping & Retail","1 Dock St, Edgartown, MA 02539","(508) 627-5495","http://thegreatputonmv.com/","active","verified",""
+670,"Martha's Vineyard, Ma Store Location","","Edgartown","Edgartown","Contractors","Contractors","65 Main St, Edgartown, MA 02539","(508) 859-1511","https://charlestonshoeco.com/pages/marthas-vineyard-ma","active","verified",""
+671,"Lani Beach Club","","Vineyard Haven","Vineyard Haven","Contractors","Contractors","25 Main St, Vineyard Haven, MA 02568","(508) 687-9436","http://www.lanibeachclub.com/","active","verified",""
+672,"Rainy Day","","Vineyard Haven","Vineyard Haven","Contractors","Contractors","66 Main St, Vineyard Haven, MA 02568","(508) 693-1830","http://rainydaymv.com/","active","verified",""
+673,"Lilly Pulitzer","","Edgartown","Edgartown","Contractors","Contractors","33 Main St, Edgartown, MA 02539","(508) 627-1209","https://www.lillypulitzer.com/store/details/?storeId=80228-289&city=edgartown&utm_source=gmb&utm_medium=organic","active","verified",""
+674,"Barnes Moving & Storage","","Vineyard Haven","Vineyard Haven","Professional Services","Professional Services","475 Edgartown Rd, Vineyard Haven, MA 02568","(508) 693-1937","http://www.barnesmoversmv.com/","active","verified",""
+675,"Carroll's Martha's Vineyard Rapid Transit, Inc.","","Vineyard Haven","Vineyard Haven","Professional Services","Professional Services","475 Edgartown Rd, Vineyard Haven, MA 02568","(508) 693-0348","http://www.carrollsmv.com/?y_source=1_ODE3NjQ4LTcxNS1sb2NhdGlvbi53ZWJzaXRl","active","verified",""
+676,"Coastal Events MV","","West Tisbury","West Tisbury","Community","Community","974 State Rd, West Tisbury, MA 02575","(774) 563-0737","https://www.coastaleventsmv.com/","active","verified",""
+677,"Brissette Electric Inc.","","Vineyard Haven","Vineyard Haven","Community","Community","1 Lagoon Pond Rd, Vineyard Haven, MA 02568","(508) 693-0764","http://briselectric.com/","active","verified",""
+678,"Brewer Insect & Animal Spraying","","Edgartown","Edgartown","Other","Other","3963 Edgartown, MA 02539","(508) 579-3963","https://www.brewerspraying.com/","active","verified",""
+679,"A. P. Fortes Plumbing and Heating","","Vineyard Haven","Vineyard Haven","Lodging","Lodging","155 Spring St, Vineyard Haven, MA 02568","(508) 693-2394","https://gomarthasvineyard.com/directory/p-fortes-plumbing-and-heating","active","verified",""
+680,"Lowe Energy Design Inc.","","Vineyard Haven","Vineyard Haven","Lodging","Lodging","250 Oak Lane, West Tisbury, MA","(508) 693-1298","https://www.loweenergydesign.com/","active","verified",""
+681,"Callahan Plumbing and Heating, INC","","Vineyard Haven","Vineyard Haven","Lodging","Lodging","44 Webaqua St, Vineyard Haven, MA 02568","(508) 696-6088","https://gomarthasvineyard.com/directory/callahan-plumbing-and-heating-inc","active","verified",""
+682,"Tracker Home Decor","","Edgartown","Edgartown","Healthcare","Healthcare","89 Peases Point Way S, Edgartown, MA 02539","(508) 627-8725","http://www.trackerhomedecor.com/","active","verified",""
+683,"Hutker Architects INC","","Vineyard Haven","Vineyard Haven","Healthcare","Healthcare","79 Beach Rd, Vineyard Haven, MA 02568","(508) 693-3344","http://www.hutkerarchitects.com/","active","verified",""
+684,"Rentschler & Company Interiors on Martha's Vineyard","","Vineyard Haven","Vineyard Haven","Healthcare","Healthcare","39 Lake St, Vineyard Haven, MA 02568","(508) 693-2058","https://www.rentschlerinteriors.com/","active","verified",""
+685,"Interiors Studio Martha's Vineyard","","Vineyard Haven","Vineyard Haven","Healthcare","Healthcare","7 Beach St, Vineyard Haven, MA 02568","(508) 693-1955","http://www.interiorsstudiomv.com/","active","verified",""
+686,"Tending Joy Artisan Shop","","Chilmark","Chilmark","Shopping & Retail","Shopping & Retail","21 Marion's Way, Chilmark, Ma","(508) 560-1613","https://www.tendingjoy.com/","active","verified",""
+687,"Kin MV","","Edgartown","Edgartown","Shopping & Retail","Shopping & Retail","
+12A N Water St, Edgartown, MA 02539","(508) 939-4291","http://kinmv.com/","active","verified",""
+688,"Hatmarcha Gifts","","Chilmark","Chilmark","Shopping & Retail","Shopping & Retail","19 Aquinnah Cir, Aquinnah, MA 02535","(508) 645-3704","https://www.hatmarchagifts.com/","active","verified",""
+689,"Stony Creek Gifts","","Aquinnah","Aquinnah","Shopping & Retail","Shopping & Retail","27 Aquinnah Circle Cultural District, Aquinnah, MA","(508) 645-3595","https://business.mvy.com/memberdirectory/Details/stony-creek-gifts-2228705","active","verified",""
+690,"Handworks","","Oak Bluffs","Oak Bluffs","Shopping & Retail","Shopping & Retail","12 Circuit Avenue Extension, Oak Bluffs, MA 02557","(508) 627-8402","https://www.handworksgifts.com/","active","verified",""
+691,"Olive Branch Fair Trade","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","
+43a Main St, Vineyard Haven, MA 02568","(774) 563-3083","http://www.olivebranchfairtrade.org/","active","verified",""
+692,"Harbor Craft Shop","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","Box 1698
+Vineyard Haven, MA 02568","(508) 645-2929","https://business.mvy.com/memberdirectory/Details/harbor-craft-shop-2286320","active","verified",""
+693,"Neptune's Sea Chest","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","Box 1698
+Vineyard Haven, MA 02568","(508) 693-0316","https://business.mvy.com/memberdirectory/Details/the-sea-chest-2286577","active","verified",""
+694,"Off Main","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","76 Main St, Vineyard Haven, MA 02568","(508) 696-5354","https://gomarthasvineyard.com/directory/main","active","verified",""
+695,"C'est La Vie","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","208, Vineyard Haven MA 02568","(508) 693-6181","https://gomarthasvineyard.com","active","verified",""
+696,"Mardell's Gifts & Jewelry","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","Box 1698
+Vineyard Haven, MA 02568","(508) 693-0049","https://business.mvy.com/memberdirectory/Details/mardell-s-gifts-jewelry-2286091","active","verified",""
+697,"The Beach House of MV","","Vineyard Haven","Vineyard Haven","Shopping & Retail","Shopping & Retail","30 Main St, Vineyard Haven, MA 02568","(508) 693-6091","https://thebeachhouseofmv.com/","active","verified",""
+699,"The Sweet Life Cafe","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","","","","active","verified",""
+701,"The Barn Bowl And Bistro","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","","","","active","verified",""
+702,"9 Craft Kitchen & Bar","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","9 Oak Bluffs Ave, Oak Bluffs, MA 02557","","","active","verified",""
+703,"Détente","","Edgartown","Edgartown","Restaurant","Restaurant","","","","active","verified",""
+704,"Beach Road Restaurant","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","79 Beach Rd, Vineyard Haven, MA 02568","","","active","verified",""
+706,"19 Raw Oyster Bar","","Edgartown","Edgartown","Restaurant","Restaurant","","","","active","verified",""
+707,"Larsen's Fish Market","","Chilmark","Chilmark","Restaurant","Restaurant","","","","active","verified",""
+708,"Nomans","","Edgartown","Edgartown","Restaurant","Restaurant","","","","active","verified",""
+709,"Black Joy Kitchen","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","","","","active","verified",""
+710,"Biscuits","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","26 Lake Ave, Oak Bluffs, MA 02557","(508) 693-2033","https://www.mvbiscuits.com/","active","verified",""
+711,"Red Cat Kitchen","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","Oak Bluffs, MA 02557","(508) 696-6040","https://www.redcatkitchen.com/","active","verified",""
+712,"Atria","","Edgartown","Edgartown","Restaurant","Restaurant","137 Main St, Edgartown, MA 02539","(508) 627-5850","https://www.atriamv.com/","active","verified",""
+713,"Mo's Lunch","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","9744137 Vineyard Ave, Oak Bluffs, MA 02557","(508) 687-9744","https://www.moslunch.com/","active","verified",""
+714,"The Pawnee House","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","277020 Kennebec Ave, HOak Bluffs, MA 02557","(508) 338-2770","https://www.thepawneehousemv.com/","active","verified",""
+715,"The Grey Barn & Farm","","Chilmark","Chilmark","Restaurant","Restaurant","22 South Road, Chilmark, MA 02535","(508) 645-4854","https://www.thegreybarnandfarm.com/","active","verified",""
+716,"The Pelican Club","","Edgartown","Edgartown","Restaurant","Restaurant","23 Kelly St, Edgartown, MA 02539","(508) 627-6336","https://www.farawaymarthasvineyard.com/pelican-club","active","verified",""
+717,"Tigerhawk Sandwich Co.","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","7306
+12B Circuit Ave, 
+Oak Bluffs, MA 02568","(508) 338-7306","https://www.tigerhawkmv.com/","active","verified",""
+718,"Beetlebung Farm","","Chilmark","Chilmark","Restaurant","Restaurant","0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        Skip to Content
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        The Farm
+      
+
+
+
+
+        ABOUT
+      
+
+
+
+
+
+                  Hours and Location
+                
+
+
+
+
+
+                  Join Our Team
+                
+
+
+
+
+
+
+
+        Special Orders
+      
+
+
+
+
+
+                  Saturday Suppers
+                
+
+
+
+
+
+                  Bakery Preorders
+                
+
+
+
+
+
+                  Down Island Bread Pick-Up
+                
+
+
+
+
+
+
+        Programs
+      
+
+
+
+        Gallery
+      
+
+
+
+        Media
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Open Menu
+Close Menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        The Farm
+      
+
+
+
+
+        ABOUT
+      
+
+
+
+
+
+                  Hours and Location
+                
+
+
+
+
+
+                  Join Our Team
+                
+
+
+
+
+
+
+
+        Special Orders
+      
+
+
+
+
+
+                  Saturday Suppers
+                
+
+
+
+
+
+                  Bakery Preorders
+                
+
+
+
+
+
+                  Down Island Bread Pick-Up
+                
+
+
+
+
+
+
+        Programs
+      
+
+
+
+        Gallery
+      
+
+
+
+        Media
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Open Menu
+Close Menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  The Farm
+                
+
+
+
+
+
+Folder:
+ABOUT
+
+
+
+
+
+
+
+Back
+
+
+
+
+
+                        Hours and Location
+                      
+
+
+
+
+
+                        Join Our Team
+                      
+
+
+
+
+
+
+
+Folder:
+Special Orders
+
+
+
+
+
+
+
+Back
+
+
+
+
+
+                        Saturday Suppers
+                      
+
+
+
+
+
+                        Bakery Preorders
+                      
+
+
+
+
+
+                        Down Island Bread Pick-Up
+                      
+
+
+
+
+
+
+
+                  Programs
+                
+
+
+
+
+
+                  Gallery
+                
+
+
+
+
+
+                  Media
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A regenerative farm in the heart of Chilmark, Martha's Vineyard,","","https://www.beetlebungfarm.org/","active","verified",""
+719,"Martha's Vineyard Pizza","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","12 Circuit Ave, Oak Bluffs, MA 02557","","http://marthasvineyardpizza.com","active","verified",""
+720,"Art Cliff Diner","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","39 Beach Rd, Vineyard Haven, MA 02568","","http://artcliffdiner.com","active","verified",""
+721,"Edgartown Pizza 🍕","","Edgartown","Edgartown","Restaurant","Restaurant","","(508) 627-7770","http://edgartownpizza.com","active","verified",""
+722,"Edgartown Diner 🍨","","Edgartown","Edgartown","Restaurant","Restaurant","","(508) 627-9337","https://edgartowndiner.com","active","verified",""
+723,"Rosie's Frozen Yogurt","","Oak Bluffs","Oak Bluffs","Restaurant","Restaurant","6 Circuit Ave, Oak Bluffs, MA 02557","","https://rosiesfrozenyogurt.com","active","verified",""
+724,"Alchemy","","Edgartown","Edgartown","Restaurant","Restaurant","71 Main Street, Edgartown, MA 02539","(508) 627-9999","https://www.alchemyedgartown.com/","active","verified",""
+726,"John's Fish Market","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","5 Martin Rd, Vineyard Haven, MA 02568","(508) 693-1220","https://johnsfishmarket.com/","active","verified",""
+728,"La Strada","","Edgartown","Edgartown","Restaurant","Restaurant","51 Main St, Edgartown, MA 02539","","","active","verified",""
+729,"Model Deli","","West Tisbury","West Tisbury","Restaurant","Restaurant","688 State Rd, West Tisbury, MA 02575","","https://www.mvtimes.com/2024/10/16/model-deli-model-deliciousness/","active","verified",""
+730,"The Attic","","Vineyard Haven","Vineyard Haven","Restaurant","Restaurant","944882 Main Street Floor 2, Vineyard Haven, MA 02568","(508) 687-9448","https://www.theatticmv.com/","active","verified",""

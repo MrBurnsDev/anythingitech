@@ -34,17 +34,22 @@ import {
   Landmark,
   Wifi,
   ArrowUpRight,
+  Palette,
+  Stethoscope,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// Map icon names from JSON to Lucide components
 const typeIcons: Record<string, React.ElementType> = {
-  restaurants: Utensils,
-  lodging: Bed,
-  shopping: ShoppingBag,
-  "health-wellness": HeartPulse,
-  contractors: Hammer,
-  "professional-services": Briefcase,
-  community: Landmark,
+  utensils: Utensils,
+  bed: Bed,
+  "shopping-bag": ShoppingBag,
+  "heart-pulse": HeartPulse,
+  hammer: Hammer,
+  briefcase: Briefcase,
+  landmark: Landmark,
+  palette: Palette,
+  stethoscope: Stethoscope,
 };
 
 export default function BusinessPage() {
@@ -69,10 +74,16 @@ export default function BusinessPage() {
     .filter((b) => b.id !== business.id)
     .slice(0, 3);
 
-  const Icon = typeIcons[businessType.slug] || Building2;
+  const Icon = typeIcons[businessType.icon] || Building2;
 
   // Check if this business type is relevant for IT services CTA
-  const showITCTA = ["restaurants", "lodging", "shopping", "health-wellness", "professional-services"].includes(businessType.slug);
+  const showITCTA = [
+    "restaurantsand-food-and-beverages",
+    "lodging-and-tourism",
+    "shopping-and-specialty-retail",
+    "beauty-and-wellness",
+    "business-and-professional-services",
+  ].includes(businessType.slug);
 
   const seoDescription = business.description
     ? `${business.description} Located in ${town.name}, Martha's Vineyard.`

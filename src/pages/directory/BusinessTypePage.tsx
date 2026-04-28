@@ -1,4 +1,4 @@
-import { useParams, useLocation, Link, Navigate } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { SEO } from "@/components/SEO";
 import { BusinessList } from "@/components/directory/BusinessList";
@@ -8,6 +8,7 @@ import {
   getTownsForBusinessType,
   getTownBusinessTypeUrl,
   businessTypes,
+  getBusinessTypeUrl,
 } from "@/data/directory";
 import {
   MapPin,
@@ -22,24 +23,27 @@ import {
   Briefcase,
   Landmark,
   Wifi,
+  Palette,
+  Stethoscope,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// Map icon names from JSON to Lucide components
 const typeIcons: Record<string, React.ElementType> = {
-  restaurants: Utensils,
-  lodging: Bed,
-  shopping: ShoppingBag,
-  "health-wellness": HeartPulse,
-  contractors: Hammer,
-  "professional-services": Briefcase,
-  community: Landmark,
+  utensils: Utensils,
+  bed: Bed,
+  "shopping-bag": ShoppingBag,
+  "heart-pulse": HeartPulse,
+  hammer: Hammer,
+  briefcase: Briefcase,
+  landmark: Landmark,
+  palette: Palette,
+  stethoscope: Stethoscope,
 };
 
 export default function BusinessTypePage() {
-  const location = useLocation();
-  // Extract type slug from URL path: /marthas-vineyard/{typeSlug}
-  const typeSlug = location.pathname.split("/").pop() || "";
-  const businessType = getBusinessTypeBySlug(typeSlug);
+  const { slug } = useParams<{ slug: string }>();
+  const businessType = getBusinessTypeBySlug(slug || "");
 
   if (!businessType) {
     return <Navigate to="/marthas-vineyard" replace />;
@@ -47,10 +51,18 @@ export default function BusinessTypePage() {
 
   const typeBusinesses = getBusinessesByType(businessType.slug);
   const townsWithType = getTownsForBusinessType(businessType.slug);
-  const Icon = typeIcons[businessType.slug] || Building2;
+  // Use icon field from JSON data to lookup the component
+  const Icon = typeIcons[businessType.icon] || Building2;
 
   // Check if this is a business-relevant category for IT services CTA
-  const showITCTA = ["restaurants", "lodging", "shopping", "health-wellness", "professional-services"].includes(businessType.slug);
+  // These categories typically have businesses that need tech support
+  const showITCTA = [
+    "restaurantsand-food-and-beverages",
+    "lodging-and-tourism",
+    "shopping-and-specialty-retail",
+    "beauty-and-wellness",
+    "business-and-professional-services",
+  ].includes(businessType.slug);
 
   return (
     <SiteLayout>
@@ -176,11 +188,11 @@ export default function BusinessTypePage() {
             {businessTypes
               .filter((t) => t.slug !== businessType.slug)
               .map((type) => {
-                const TypeIcon = typeIcons[type.slug] || Building2;
+                const TypeIcon = typeIcons[type.icon] || Building2;
                 return (
                   <Link
                     key={type.slug}
-                    to={`/marthas-vineyard/${type.slug}`}
+                    to={getBusinessTypeUrl(type.slug)}
                     className="flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-full hover:border-accent transition-colors"
                   >
                     <TypeIcon className="h-3.5 w-3.5 text-muted-foreground" />

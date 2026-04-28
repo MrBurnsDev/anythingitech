@@ -442,6 +442,46 @@
       "source": "/index.php",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/restaurantsand-food-and-beverages",
+      "destination": "/marthas-vineyard/restaurants-food-beverages",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/restaurantsand-food-and-beverages/",
+      "destination": "/marthas-vineyard/restaurants-food-beverages",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/familyand-community-and-government",
+      "destination": "/marthas-vineyard/family-community-government",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/familyand-community-and-government/",
+      "destination": "/marthas-vineyard/family-community-government",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/restaurantsand-food-and-beverages",
+      "destination": "/marthas-vineyard/:town/restaurants-food-beverages",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/restaurantsand-food-and-beverages/:business",
+      "destination": "/marthas-vineyard/:town/restaurants-food-beverages/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/familyand-community-and-government",
+      "destination": "/marthas-vineyard/:town/family-community-government",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/familyand-community-and-government/:business",
+      "destination": "/marthas-vineyard/:town/family-community-government/:business",
+      "permanent": true
     }
   ],
   "rewrites": [

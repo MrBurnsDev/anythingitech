@@ -24,17 +24,21 @@ import {
   Briefcase,
   Landmark,
   Wifi,
+  Palette,
+  Stethoscope,
 } from "lucide-react";
 
-// Icon mapping for business types
+// Map icon names from JSON to Lucide components
 const typeIcons: Record<string, React.ElementType> = {
-  restaurants: Utensils,
-  lodging: Bed,
-  shopping: ShoppingBag,
-  "health-wellness": HeartPulse,
-  contractors: Hammer,
-  "professional-services": Briefcase,
-  community: Landmark,
+  utensils: Utensils,
+  bed: Bed,
+  "shopping-bag": ShoppingBag,
+  "heart-pulse": HeartPulse,
+  hammer: Hammer,
+  briefcase: Briefcase,
+  landmark: Landmark,
+  palette: Palette,
+  stethoscope: Stethoscope,
 };
 
 export default function DirectoryIndex() {
@@ -173,7 +177,7 @@ export default function DirectoryIndex() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {businessTypes.map((type) => {
-              const Icon = typeIcons[type.slug] || Building2;
+              const Icon = typeIcons[type.icon] || Building2;
               return (
                 <Link
                   key={type.slug}
