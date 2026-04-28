@@ -16,28 +16,14 @@ const nav = [
 ];
 
 export const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => { setOpen(false); }, [location.pathname]);
 
   return (
     <header
-      className={cn(
-        "fixed top-0 inset-x-0 z-50 transition-all duration-500",
-        scrolled
-          ? "bg-background/85 backdrop-blur-xl border-b border-border"
-          : "bg-transparent",
-      )}
-      style={{ transitionTimingFunction: "var(--ease-out-expo)" }}
+      className="fixed top-0 inset-x-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border"
     >
       <div className="container-editorial flex h-[68px] items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5 group">
@@ -51,7 +37,8 @@ export const Header = () => {
           </div>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-7">
+        {/* Desktop nav - uses xl breakpoint to prevent crowding at medium widths */}
+        <nav className="hidden xl:flex items-center gap-6">
           {nav.map((item) => (
             <RouterNavLink
               key={item.to}
@@ -59,7 +46,7 @@ export const Header = () => {
               end={item.to === "/"}
               className={({ isActive }) =>
                 cn(
-                  "text-[13px] font-medium transition-colors link-underline",
+                  "text-[13px] font-medium transition-colors link-underline whitespace-nowrap",
                   isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground",
                 )
               }
@@ -69,8 +56,8 @@ export const Header = () => {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-4">
-          <a href="tel:+15085603510" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
+        <div className="hidden xl:flex items-center gap-4">
+          <a href="tel:+15085603510" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">
             <Phone className="h-4 w-4" />
             <span>(508) 560-3510</span>
           </a>
@@ -79,19 +66,20 @@ export const Header = () => {
           </Button>
         </div>
 
+        {/* Mobile menu toggle - shows below xl breakpoint */}
         <button
           aria-label="Toggle menu"
           onClick={() => setOpen(!open)}
-          className="lg:hidden h-10 w-10 grid place-items-center rounded-md hover:bg-secondary transition-colors"
+          className="xl:hidden h-10 w-10 grid place-items-center rounded-md hover:bg-secondary transition-colors"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu - shows below xl breakpoint */}
       <div
         className={cn(
-          "lg:hidden overflow-hidden bg-background border-t border-border transition-[max-height] duration-500",
+          "xl:hidden overflow-hidden bg-background border-t border-border transition-[max-height] duration-500",
           open ? "max-h-[600px]" : "max-h-0",
         )}
         style={{ transitionTimingFunction: "var(--ease-out-expo)" }}
