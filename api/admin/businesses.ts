@@ -167,14 +167,38 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
       // Get single business by slug (preferred - consistent across data sources)
       if (slug) {
-        const { data: business, error } = await supabase
+        let { data: business, error } = await supabase
           .from("businesses")
           .select("*")
           .eq("slug", slug as string)
           .eq("is_duplicate", false)
           .single();
 
+        // If not found, try to resolve through slug_redirects
         if (error || !business) {
+          const { data: redirect } = await supabase
+            .from("slug_redirects")
+            .select("new_slug, business_id")
+            .eq("old_slug", slug as string)
+            .single();
+
+          if (redirect) {
+            // Look up by the new slug
+            const { data: redirectedBusiness } = await supabase
+              .from("businesses")
+              .select("*")
+              .eq("slug", redirect.new_slug)
+              .eq("is_duplicate", false)
+              .single();
+
+            if (redirectedBusiness) {
+              return res.status(200).json({
+                business: redirectedBusiness,
+                redirectedFrom: slug,
+              });
+            }
+          }
+
           return res.status(404).json({ error: "Business not found", slug });
         }
 

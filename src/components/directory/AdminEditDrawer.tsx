@@ -92,6 +92,7 @@ export function AdminEditDrawer({
 }: AdminEditDrawerProps) {
   const { isAuthenticated } = useAdminAuth();
   const [formData, setFormData] = useState<AdminBusinessData | null>(null);
+  const [supabaseId, setSupabaseId] = useState<number | null>(null); // Store Supabase ID for reliable lookups
   const [originalSlug, setOriginalSlug] = useState<string>(""); // Track original slug for change detection
   const [isLoading, setIsLoading] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
@@ -100,29 +101,44 @@ export function AdminEditDrawer({
   const [slugError, setSlugError] = useState("");
 
   // Fetch full business data from admin API when drawer opens
-  // Use slug for lookup - IDs may not match between public JSON and Supabase
+  // Try ID first (reliable), then fall back to slug, then try slug_redirects
   useEffect(() => {
     if (open && business && isAuthenticated) {
-      fetchBusinessData(business.slug);
+      // If we already have the Supabase ID for this business, use it
+      if (supabaseId && formData?.business_name === business.name) {
+        fetchBusinessDataById(supabaseId);
+      } else {
+        // First time opening - try slug lookup
+        fetchBusinessDataBySlug(business.slug);
+      }
     }
   }, [open, business, isAuthenticated]);
 
-  // Reset state when closed
+  // Reset state when closed, but preserve supabaseId for same business
   useEffect(() => {
     if (!open) {
       setFormData(null);
       setError("");
       setSuccess("");
+      setSlugError("");
+      // Don't reset supabaseId - keep it for next open
     }
   }, [open]);
 
-  const fetchBusinessData = async (slug: string) => {
+  // Reset supabaseId when switching to a different business
+  useEffect(() => {
+    if (business && formData && business.name !== formData.business_name) {
+      setSupabaseId(null);
+    }
+  }, [business?.name]);
+
+  const fetchBusinessDataById = async (id: number) => {
     setIsLoading(true);
     setError("");
 
     try {
       const token = localStorage.getItem("admin_token");
-      const response = await fetch(`/api/admin/businesses?slug=${encodeURIComponent(slug)}`, {
+      const response = await fetch(`/api/admin/businesses?id=${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -139,29 +155,81 @@ export function AdminEditDrawer({
         throw new Error("Business not found");
       }
 
-      setFormData({
-        id: found.id,
-        business_name: found.business_name || "",
-        slug: found.slug || "",
-        town: found.town || "",
-        category: found.category || "",
-        subcategory: found.subcategory || "",
-        short_description: found.short_description || "",
-        full_address: found.full_address || "",
-        phone: found.phone || "",
-        email: found.email || "",
-        website: found.website || "",
-        business_status: found.business_status || "active",
-        needs_manual_review: !!found.needs_manual_review,
-        review_reason: found.review_reason || "",
-        notes: found.notes || "",
-      });
-      setOriginalSlug(found.slug || "");
+      populateFormData(found);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to load business");
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const fetchBusinessDataBySlug = async (slug: string) => {
+    setIsLoading(true);
+    setError("");
+
+    try {
+      const token = localStorage.getItem("admin_token");
+
+      // Try direct slug lookup first
+      let response = await fetch(`/api/admin/businesses?slug=${encodeURIComponent(slug)}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      let data = await response.json();
+      let found = data.business;
+
+      // If not found, try resolving through slug_redirects
+      if (!found && response.status === 404) {
+        const redirectResponse = await fetch(`/api/directory/resolve-slug?slug=${encodeURIComponent(slug)}`);
+        const redirectData = await redirectResponse.json();
+
+        if (redirectData.redirect && redirectData.newSlug) {
+          // Try the new slug
+          response = await fetch(`/api/admin/businesses?slug=${encodeURIComponent(redirectData.newSlug)}`, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+          data = await response.json();
+          found = data.business;
+        }
+      }
+
+      if (!found) {
+        throw new Error("Business not found in admin database. It may need to be synced.");
+      }
+
+      populateFormData(found);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to load business");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const populateFormData = (found: Record<string, unknown>) => {
+    const id = found.id as number;
+    setSupabaseId(id); // Store the Supabase ID for future lookups
+    setFormData({
+      id,
+      business_name: (found.business_name as string) || "",
+      slug: (found.slug as string) || "",
+      town: (found.town as string) || "",
+      category: (found.category as string) || "",
+      subcategory: (found.subcategory as string) || "",
+      short_description: (found.short_description as string) || "",
+      full_address: (found.full_address as string) || "",
+      phone: (found.phone as string) || "",
+      email: (found.email as string) || "",
+      website: (found.website as string) || "",
+      business_status: (found.business_status as string) || "active",
+      needs_manual_review: !!found.needs_manual_review,
+      review_reason: (found.review_reason as string) || "",
+      notes: (found.notes as string) || "",
+    });
+    setOriginalSlug((found.slug as string) || "");
   };
 
   // Validate slug format
