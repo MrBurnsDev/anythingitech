@@ -73,7 +73,7 @@ export default function BusinessPage() {
   }
 
   // Fetch business from Supabase API
-  const { business, isLoading: businessLoading, error: businessError } = useBusiness(businessSlug);
+  const { business, isLoading: businessLoading, error: businessError, refetch } = useBusiness(businessSlug);
   const town = getTownBySlug(townSlug || "");
   const businessType = getBusinessTypeBySlug(typeSlug || "");
 
@@ -88,25 +88,42 @@ export default function BusinessPage() {
 
   // Check for slug redirects if business not found
   useEffect(() => {
-    if (!businessLoading && !business && businessSlug && !isCheckingRedirect) {
-      setIsCheckingRedirect(true);
-
-      fetch(`/api/directory/resolve-slug?slug=${encodeURIComponent(businessSlug)}`)
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.redirect && data.newSlug) {
-            // Redirect to the new URL
-            const newUrl = `/marthas-vineyard/${townSlug}/${typeSlug}/${data.newSlug}`;
-            navigate(newUrl, { replace: true });
-          }
-        })
-        .catch((err) => {
-          console.error("Slug resolution failed:", err);
-        })
-        .finally(() => {
-          setIsCheckingRedirect(false);
-        });
+    // Only check redirect after loading is complete and we have no business
+    if (businessLoading || business || !businessSlug) {
+      return;
     }
+
+    // Avoid duplicate redirect checks
+    if (isCheckingRedirect) {
+      return;
+    }
+
+    setIsCheckingRedirect(true);
+
+    fetch(`/api/directory/resolve-slug?slug=${encodeURIComponent(businessSlug)}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.redirect && data.newSlug) {
+          // Get the correct town/type from the redirect target if available
+          const targetTown = data.business?.town
+            ? data.business.town.toLowerCase().replace(/\s+/g, '-')
+            : townSlug;
+          const targetType = typeSlug; // Keep same category
+
+          // Redirect to the new URL
+          const newUrl = `/marthas-vineyard/${targetTown}/${targetType}/${data.newSlug}`;
+          navigate(newUrl, { replace: true });
+        } else if (data.found && data.slug !== businessSlug) {
+          // The slug exists but user hit an old URL - shouldn't happen, but handle it
+          navigate(`/marthas-vineyard/${townSlug}/${typeSlug}/${data.slug}`, { replace: true });
+        }
+      })
+      .catch((err) => {
+        console.error("Slug resolution failed:", err);
+      })
+      .finally(() => {
+        setIsCheckingRedirect(false);
+      });
   }, [business, businessLoading, businessSlug, townSlug, typeSlug, navigate, isCheckingRedirect]);
 
   // Show loading state
