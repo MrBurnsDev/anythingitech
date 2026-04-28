@@ -79,7 +79,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   if (!JWT_SECRET) {
-    return res.status(500).json({ error: "Server configuration error" });
+    console.error("Missing JWT_SECRET");
+    return res.status(500).json({ error: "Server configuration error: JWT" });
+  }
+
+  if (!SUPABASE_SERVICE_KEY) {
+    console.error("Missing SUPABASE_SERVICE_ROLE_KEY");
+    return res.status(500).json({ error: "Server configuration error: DB" });
   }
 
   try {
@@ -212,6 +218,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: "Method not allowed" });
   } catch (error) {
     console.error("Auth error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    const message = error instanceof Error ? error.message : "Unknown error";
+    return res.status(500).json({ error: "Internal server error", details: message });
   }
 }
