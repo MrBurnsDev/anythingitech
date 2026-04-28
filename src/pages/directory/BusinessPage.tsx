@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { SEO } from "@/components/SEO";
@@ -12,6 +13,9 @@ import {
   getBusinessUrl,
 } from "@/data/directory";
 import { BusinessCard } from "@/components/directory/BusinessCard";
+import { AdminControls } from "@/components/directory/AdminControls";
+import { AdminEditDrawer } from "@/components/directory/AdminEditDrawer";
+import { useAdminAuth } from "@/contexts/AdminAuthContext";
 import {
   MapPin,
   Phone,
@@ -49,6 +53,8 @@ export default function BusinessPage() {
     typeSlug: string;
     businessSlug: string;
   }>();
+  const { isAuthenticated } = useAdminAuth();
+  const [editOpen, setEditOpen] = useState(false);
 
   const business = getBusinessBySlug(businessSlug || "");
   const town = getTownBySlug(townSlug || "");
@@ -125,9 +131,15 @@ export default function BusinessPage() {
                 </div>
               </div>
 
-              <h1 className="display-lg text-balance mb-6 animate-fade-up">
-                {business.name}
-              </h1>
+              <div className="flex items-start justify-between gap-4">
+                <h1 className="display-lg text-balance mb-6 animate-fade-up">
+                  {business.name}
+                </h1>
+                {/* Admin Edit Button */}
+                {isAuthenticated && (
+                  <AdminControls business={business} variant="button" />
+                )}
+              </div>
 
               {business.description && (
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl animate-fade-up-delay-1">

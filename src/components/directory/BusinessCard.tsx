@@ -1,18 +1,22 @@
 import { Link } from "react-router-dom";
 import { Business, getBusinessUrl } from "@/data/directory";
 import { MapPin, Phone, Globe, ArrowUpRight } from "lucide-react";
+import { AdminControls } from "./AdminControls";
 
 interface BusinessCardProps {
   business: Business;
   showTown?: boolean;
+  onAdminUpdate?: () => void;
 }
 
-export function BusinessCard({ business, showTown = true }: BusinessCardProps) {
+export function BusinessCard({ business, showTown = true, onAdminUpdate }: BusinessCardProps) {
   return (
     <Link
       to={getBusinessUrl(business)}
-      className="group card-service p-6 flex flex-col min-h-[180px]"
+      className="group card-service p-6 flex flex-col min-h-[180px] relative"
     >
+      {/* Admin controls - only visible when logged in as admin */}
+      <AdminControls business={business} onUpdated={onAdminUpdate} />
       <div className="flex items-start justify-between gap-4 mb-4">
         <div className="flex-1 min-w-0">
           <h3 className="font-display text-xl mb-1 group-hover:text-accent transition-colors truncate">

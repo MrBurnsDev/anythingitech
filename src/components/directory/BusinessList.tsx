@@ -9,6 +9,7 @@ interface BusinessListProps {
   showTown?: boolean;
   searchable?: boolean;
   emptyMessage?: string;
+  onAdminUpdate?: () => void;
 }
 
 export function BusinessList({
@@ -16,6 +17,7 @@ export function BusinessList({
   showTown = true,
   searchable = true,
   emptyMessage = "No businesses found.",
+  onAdminUpdate,
 }: BusinessListProps) {
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -52,6 +54,7 @@ export function BusinessList({
               key={business.id}
               business={business}
               showTown={showTown}
+              onAdminUpdate={onAdminUpdate}
             />
           ))}
         </div>
