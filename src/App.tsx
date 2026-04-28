@@ -23,6 +23,10 @@ import BusinessPage from "./pages/directory/BusinessPage.tsx";
 import SubmitBusiness from "./pages/directory/SubmitBusiness.tsx";
 import DirectorySlugResolver from "./pages/directory/DirectorySlugResolver.tsx";
 
+// Tech Tips pages
+import TechTipsIndex from "./pages/tech-tips/TechTipsIndex.tsx";
+import TechTipPost from "./pages/tech-tips/TechTipPost.tsx";
+
 // Admin pages
 import { AdminAuthProvider } from "./contexts/AdminAuthContext.tsx";
 import { ProtectedRoute } from "./components/admin/ProtectedRoute.tsx";
@@ -57,6 +61,10 @@ const App = () => (
           <Route path="/business-it" element={<BusinessIT />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+
+          {/* Tech Tips Blog */}
+          <Route path="/tech-tips" element={<TechTipsIndex />} />
+          <Route path="/tech-tips/:slug" element={<TechTipPost />} />
 
           {/* Martha's Vineyard Business Directory */}
           <Route path="/marthas-vineyard" element={<DirectoryIndex />} />
