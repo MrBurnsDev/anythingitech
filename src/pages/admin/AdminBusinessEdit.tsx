@@ -29,6 +29,7 @@ interface BusinessData {
   id?: number;
   business_name: string;
   slug: string;
+  original_slug?: string; // Track original slug for redirect creation
   town: string;
   category: string;
   subcategory: string;
@@ -152,6 +153,7 @@ export default function AdminBusinessEdit() {
         id: found.id,
         business_name: found.business_name || "",
         slug: found.slug || "",
+        original_slug: found.slug || "", // Track original for redirect creation
         town: found.town || "",
         category: found.category || "",
         subcategory: found.subcategory || "",
@@ -224,12 +226,28 @@ export default function AdminBusinessEdit() {
     try {
       const token = localStorage.getItem("admin_token");
 
-      const payload = {
+      // Check if slug is being changed
+      const slugChanged = !isNew && business.original_slug && business.slug !== business.original_slug;
+
+      const payload: Record<string, unknown> = {
         ...business,
         latitude: business.latitude ? parseFloat(business.latitude) : null,
         longitude: business.longitude ? parseFloat(business.longitude) : null,
         confidence_score: business.confidence_score || 50,
       };
+
+      // For updates, use lookup_slug (original) and new_slug (if changed)
+      if (!isNew) {
+        payload.lookup_slug = business.original_slug || business.slug;
+        if (slugChanged) {
+          payload.new_slug = business.slug;
+        }
+        // Remove the slug field to avoid confusion - API uses lookup_slug/new_slug
+        delete payload.slug;
+      }
+
+      // Remove internal tracking field
+      delete payload.original_slug;
 
       const response = await fetch("/api/admin/businesses", {
         method: isNew ? "POST" : "PUT",
@@ -246,7 +264,18 @@ export default function AdminBusinessEdit() {
         throw new Error(data.error || "Failed to save business");
       }
 
-      setSuccess(isNew ? "Business created successfully!" : "Changes saved!");
+      // Update the original_slug to the new slug after successful save
+      if (slugChanged && data.slug) {
+        setBusiness(prev => ({ ...prev, original_slug: data.slug, slug: data.slug }));
+      }
+
+      const successMsg = slugChanged
+        ? `Changes saved! Slug changed from "${business.original_slug}" to "${data.slug}". Old URLs will redirect.`
+        : isNew
+          ? "Business created successfully!"
+          : "Changes saved!";
+
+      setSuccess(successMsg);
 
       if (isNew && data.id) {
         // Navigate to edit page after creation
