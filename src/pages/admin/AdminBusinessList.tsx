@@ -1,5 +1,5 @@
-import { useEffect, useState, useCallback } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useEffect, useState, useCallback, useRef } from "react";
+import { Link, useSearchParams, useLocation } from "react-router-dom";
 import { AdminLayout } from "@/components/admin/AdminLayout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -101,12 +101,14 @@ const CATEGORIES = [
 
 export default function AdminBusinessList() {
   const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
   const [businesses, setBusinesses] = useState<Business[]>([]);
   const [pagination, setPagination] = useState<Pagination | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
   const [deleteId, setDeleteId] = useState<number | null>(null);
   const [isDeleting, setIsDeleting] = useState(false);
+  const lastFetchRef = useRef<number>(0);
 
   // Get filters from URL
   const search = searchParams.get("search") || "";
@@ -173,6 +175,16 @@ export default function AdminBusinessList() {
   useEffect(() => {
     fetchBusinesses();
   }, [fetchBusinesses]);
+
+  // Always refresh when navigating to this page (SPA navigation)
+  useEffect(() => {
+    // Skip if we just fetched in the last second (prevents double fetch on mount)
+    const now = Date.now();
+    if (now - lastFetchRef.current > 1000) {
+      lastFetchRef.current = now;
+      fetchBusinesses();
+    }
+  }, [location.key, fetchBusinesses]);
 
   const handleDelete = async () => {
     if (!deleteId) return;
