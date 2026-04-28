@@ -39,6 +39,12 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// Map old slugs to their new canonical slugs
+const SLUG_REDIRECTS: Record<string, string> = {
+  "restaurantsand-food-and-beverages": "restaurants-food-beverages",
+  "familyand-community-and-government": "family-community-government",
+};
+
 // Map icon names from JSON to Lucide components
 const typeIcons: Record<string, React.ElementType> = {
   utensils: Utensils,
@@ -62,6 +68,12 @@ export default function BusinessPage() {
   const { isAuthenticated } = useAdminAuth();
   const [editOpen, setEditOpen] = useState(false);
   const [isCheckingRedirect, setIsCheckingRedirect] = useState(false);
+
+  // Check if typeSlug needs redirect to canonical version
+  const redirectTypeSlug = typeSlug ? SLUG_REDIRECTS[typeSlug] : undefined;
+  if (redirectTypeSlug && townSlug && businessSlug) {
+    return <Navigate to={`/marthas-vineyard/${townSlug}/${redirectTypeSlug}/${businessSlug}`} replace />;
+  }
 
   const business = getBusinessBySlug(businessSlug || "");
   const town = getTownBySlug(townSlug || "");
