@@ -26,6 +26,7 @@ export default function TechTipPost() {
         title={`${post.title} - Tech Tips`}
         description={post.excerpt}
         canonical={`https://anythingitechmv.com/tech-tips/${post.slug}`}
+        image={post.image}
       />
 
       {/* Breadcrumb */}
@@ -71,8 +72,34 @@ export default function TechTipPost() {
           <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up-delay-1">
             {post.excerpt}
           </p>
+
+          {post.tags && post.tags.length > 0 && (
+            <div className="flex flex-wrap gap-2 mt-6 animate-fade-up-delay-2">
+              {post.tags.map((tag: string) => (
+                <span
+                  key={tag}
+                  className="px-3 py-1 text-xs font-medium bg-accent/10 text-accent rounded-full"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       </section>
+
+      {/* Featured Image */}
+      {post.image && (
+        <section className="py-8 md:py-12">
+          <div className="container-editorial max-w-4xl mx-auto">
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-auto rounded-xl shadow-lg"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Article Content */}
       <article className="py-12 md:py-16">

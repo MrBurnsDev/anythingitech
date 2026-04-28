@@ -46,11 +46,20 @@ export default function TechTipsIndex() {
               <Link
                 key={tip.id}
                 to={`/tech-tips/${tip.slug}`}
-                className="group block p-6 md:p-8 bg-card border border-border rounded-xl hover:shadow-[var(--shadow-card)] transition-all duration-300"
+                className="group block bg-card border border-border rounded-xl hover:shadow-[var(--shadow-card)] transition-all duration-300 overflow-hidden"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
-                  <div className="flex-1">
+                <div className="flex flex-col md:flex-row">
+                  {tip.image && (
+                    <div className="md:w-72 lg:w-80 shrink-0">
+                      <img
+                        src={tip.image}
+                        alt={tip.title}
+                        className="w-full h-48 md:h-full object-cover"
+                      />
+                    </div>
+                  )}
+                  <div className="flex-1 p-6 md:p-8">
                     <div className="flex items-center gap-3 mb-3">
                       <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
                         <CalendarDays className="h-4 w-4" />
@@ -64,13 +73,30 @@ export default function TechTipsIndex() {
                     <h2 className="font-display text-xl md:text-2xl mb-3 group-hover:text-accent transition-colors">
                       {tip.title}
                     </h2>
-                    <p className="text-muted-foreground line-clamp-2">
+                    <p className="text-muted-foreground line-clamp-2 mb-4">
                       {tip.excerpt}
                     </p>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm font-medium shrink-0 pt-2 md:pt-4">
-                    Read more
-                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    {tip.tags && tip.tags.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {tip.tags.slice(0, 3).map((tag: string) => (
+                          <span
+                            key={tag}
+                            className="px-2 py-0.5 text-xs font-medium bg-accent/10 text-accent rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                        {tip.tags.length > 3 && (
+                          <span className="px-2 py-0.5 text-xs text-muted-foreground">
+                            +{tip.tags.length - 3} more
+                          </span>
+                        )}
+                      </div>
+                    )}
+                    <div className="flex items-center gap-2 text-sm font-medium">
+                      Read more
+                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </div>
                   </div>
                 </div>
               </Link>

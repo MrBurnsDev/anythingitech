@@ -4,6 +4,7 @@ interface SEOProps {
   title: string;
   description: string;
   canonical?: string;
+  image?: string | null;
 }
 
 /**
@@ -11,7 +12,7 @@ interface SEOProps {
  * For a Vite SPA, this is sufficient for basic SEO on directory pages.
  * The meta description will be picked up by search engines on crawl.
  */
-export function SEO({ title, description, canonical }: SEOProps) {
+export function SEO({ title, description, canonical, image }: SEOProps) {
   useEffect(() => {
     // Update document title
     const fullTitle = title.includes("Anything Itech")
@@ -56,7 +57,36 @@ export function SEO({ title, description, canonical }: SEOProps) {
     }
     ogDescription.setAttribute("content", description);
 
-  }, [title, description, canonical]);
+    // Update or create Open Graph image
+    if (image) {
+      let ogImage = document.querySelector('meta[property="og:image"]');
+      if (!ogImage) {
+        ogImage = document.createElement("meta");
+        ogImage.setAttribute("property", "og:image");
+        document.head.appendChild(ogImage);
+      }
+      ogImage.setAttribute("content", image);
+
+      // Also add Twitter card image
+      let twitterImage = document.querySelector('meta[name="twitter:image"]');
+      if (!twitterImage) {
+        twitterImage = document.createElement("meta");
+        twitterImage.setAttribute("name", "twitter:image");
+        document.head.appendChild(twitterImage);
+      }
+      twitterImage.setAttribute("content", image);
+
+      // Add twitter card type
+      let twitterCard = document.querySelector('meta[name="twitter:card"]');
+      if (!twitterCard) {
+        twitterCard = document.createElement("meta");
+        twitterCard.setAttribute("name", "twitter:card");
+        document.head.appendChild(twitterCard);
+      }
+      twitterCard.setAttribute("content", "summary_large_image");
+    }
+
+  }, [title, description, canonical, image]);
 
   return null;
 }
