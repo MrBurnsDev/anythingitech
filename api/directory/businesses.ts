@@ -1,3 +1,4 @@
+// Force rebuild: 2026-04-29
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
 
