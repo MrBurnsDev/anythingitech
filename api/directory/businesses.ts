@@ -38,14 +38,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
+  const { town, type, slug, search } = req.query;
+
   // Apply rate limiting (stricter for search queries)
-  const { search } = req.query;
   const rateLimitConfig = search ? SEARCH_RATE_LIMIT : PUBLIC_API_RATE_LIMIT;
   if (rateLimit(req, res, rateLimitConfig)) {
     return; // Request was blocked by rate limiter
   }
-
-  const { town, type, slug, search } = req.query;
 
   try {
     let query = supabase
