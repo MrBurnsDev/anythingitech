@@ -43,7 +43,7 @@ const TVAudio = () => (
         { title: "Easy to use", body: "We set up remotes and apps so anyone in the house can turn it on and watch without confusion." },
       ]}
     />
-    <CTASection title="Need a TV mounted?" description="Call (508) 560-3510 or email louis@anythingitechmv.com. Service by appointment." />
+    <CTASection title="Need a TV mounted?" description="Call (508) 560-3510 or request a visit online. Service by appointment." />
   </SiteLayout>
 );
 

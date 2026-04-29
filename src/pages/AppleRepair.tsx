@@ -45,7 +45,7 @@ const AppleRepair = () => (
         { title: "Honest recommendations", body: "Sometimes the right answer is a repair. Sometimes it's a new device. We'll tell you the truth either way." },
       ]}
     />
-    <CTASection title="Need a repair?" description="Call (508) 560-3510 or email louis@anythingitechmv.com. Service by appointment." />
+    <CTASection title="Need a repair?" description="Call (508) 560-3510 or request a visit online. Service by appointment." />
   </SiteLayout>
 );
 

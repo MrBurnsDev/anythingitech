@@ -1,5 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { createClient } from "@supabase/supabase-js";
+import { rateLimit, PUBLIC_API_RATE_LIMIT, SEARCH_RATE_LIMIT } from "../lib/rate-limit";
 
 const SUPABASE_URL = process.env.SUPABASE_URL || "https://zrrinbeyiuiydalxiwii.supabase.co";
 // Use service role key for server-side API (already available in Vercel)
@@ -14,6 +15,8 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
  *
  * Public API to fetch businesses from Supabase.
  * No authentication required - this is public data.
+ * Rate limited to prevent scraping.
+ * Email addresses are NOT included (privacy protection).
  *
  * Query params:
  *   - town: filter by town slug
@@ -33,6 +36,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   if (req.method !== "GET") {
     return res.status(405).json({ error: "Method not allowed" });
+  }
+
+  // Apply rate limiting (stricter for search queries)
+  const { search } = req.query;
+  const rateLimitConfig = search ? SEARCH_RATE_LIMIT : PUBLIC_API_RATE_LIMIT;
+  if (rateLimit(req, res, rateLimitConfig)) {
+    return; // Request was blocked by rate limiter
   }
 
   const { town, type, slug, search } = req.query;
@@ -96,6 +106,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 }
 
 function transformBusiness(row: Record<string, unknown>) {
+  // NOTE: Email is intentionally excluded from public API responses
+  // for privacy/anti-scraping protection. Emails are only available
+  // through authenticated admin endpoints (/api/admin/businesses).
   return {
     id: row.id,
     name: row.business_name,
@@ -107,7 +120,7 @@ function transformBusiness(row: Record<string, unknown>) {
     townSlug: townToSlug(row.town as string),
     address: row.full_address || null,
     phone: row.phone || null,
-    email: row.email || null,
+    // email: REMOVED - not exposed in public API (privacy protection)
     website: row.website || null,
     hours: null,
     seasonal: null,

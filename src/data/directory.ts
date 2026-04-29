@@ -15,7 +15,8 @@ export interface Business {
   townSlug: string;
   address: string | null;
   phone: string | null;
-  email: string | null;
+  // email: REMOVED from public API for privacy protection
+  // Only available in admin endpoints (/api/admin/businesses)
   website: string | null;
   hours: string | null;
   seasonal: string | null;

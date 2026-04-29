@@ -56,9 +56,11 @@ export const Footer = () => {
             <div className="mt-8 space-y-1.5 text-sm text-primary-foreground/70">
               <p>Martha's Vineyard, MA</p>
               <p>By appointment · Year-round service</p>
-              <a href="tel:+15085603510" className="text-primary-foreground hover:underline">(508) 560-3510</a>
-              <span className="mx-2">·</span>
-              <a href="mailto:louis@anythingitechmv.com" className="text-primary-foreground hover:underline">louis@anythingitechmv.com</a>
+              <p>
+                <a href="tel:+15085603510" className="text-primary-foreground hover:underline">(508) 560-3510</a>
+                <span className="mx-2">·</span>
+                <Link to="/contact" className="text-primary-foreground hover:underline">Request a visit</Link>
+              </p>
             </div>
           </div>
 

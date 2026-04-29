@@ -70,6 +70,7 @@ export default function BusinessTypePage() {
         title={`${businessType.pluralName} on Martha's Vineyard`}
         description={businessType.seoDescription}
         canonical={`https://anythingitechmv.com/marthas-vineyard/${businessType.slug}`}
+        noEmailIndex
       />
       {/* Breadcrumb */}
       <div className="border-b border-border">

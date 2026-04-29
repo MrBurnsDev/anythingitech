@@ -1,5 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { createClient } from "@supabase/supabase-js";
+import { rateLimit, PUBLIC_API_RATE_LIMIT } from "../lib/rate-limit";
 
 const SUPABASE_URL = process.env.SUPABASE_URL || "https://zrrinbeyiuiydalxiwii.supabase.co";
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
@@ -15,6 +16,8 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
  * 1. If slug matches a current business, returns { found: true, slug, business }
  * 2. If slug matches a redirect, returns { found: false, redirect: true, newSlug }
  * 3. If slug doesn't exist, returns { found: false, redirect: false }
+ *
+ * Rate limited to prevent abuse.
  */
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   // CORS
@@ -28,6 +31,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   if (req.method !== "GET") {
     return res.status(405).json({ error: "Method not allowed" });
+  }
+
+  // Apply rate limiting
+  if (rateLimit(req, res, PUBLIC_API_RATE_LIMIT)) {
+    return; // Request was blocked by rate limiter
   }
 
   const { slug } = req.query;

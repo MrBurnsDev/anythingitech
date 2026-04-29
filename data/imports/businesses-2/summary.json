@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-04-29T03:18:30.026Z",
+  "source": "businesses_2_rtf",
+  "totalParsed": 320,
+  "matched": 91,
+  "newBusinesses": 202,
+  "validNewBusinesses": 189,
+  "conflicts": 82,
+  "duplicates": 27,
+  "byCategory": {
+    "ACCOMMODATIONS": 44,
+    "ACTIVITIES & RECREATION": 35,
+    "MARTHA'S VINEYARD ARTS, GALLERIES & ARTISTIC SERVICES": 25,
+    "MARTHA'S VINEYARD BEAUTY SALONS, WELLNESS & FITNESS DIRECTORY": 28,
+    "MARTHA'S VINEYARD BUSINESS, LEGAL & FINANCIAL SERVICES DIRECTORY": 19,
+    "MARTHA'S VINEYARD CONSTRUCTION, GENERAL CONTRACTORS BUILDING SERVICES & SUPPLIES": 44,
+    "MARTHA'S VINEYARD ENTERTAINMENT & EVENTS DIRECTORY": 8,
+    "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY": 117
+  },
+  "byTown": {
+    "Vineyard Haven": 112,
+    "Edgartown": 99,
+    "Oak Bluffs": 64,
+    "Aquinnah": 5,
+    "West Tisbury": 20,
+    "Chilmark": 9,
+    "Menemsha": 5
+  },
+  "safeUpdates": {
+    "phoneFills": 11,
+    "websiteFills": 0,
+    "addressFills": 9,
+    "descriptionFills": 9
+  }
+}

@@ -1,7 +1,6 @@
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { CTASection } from "@/components/site/CTASection";
 import vineyardImg from "@/assets/marthas-vineyard.jpg";
-import sonosImg from "@/assets/sonos-shelf.jpg";
 import { Award, Compass, Heart, Users } from "lucide-react";
 
 const values = [
@@ -9,6 +8,15 @@ const values = [
   { icon: Award, title: "Craft", body: "Clean cabling, level mounts, and tuned systems — the details matter." },
   { icon: Compass, title: "Clarity", body: "Plain language, transparent pricing, no jargon, no surprises." },
   { icon: Users, title: "Community", body: "We live here. Our reputation is the same year-round, summer or off-season." },
+];
+
+const services = [
+  "Apple and PC repair and support",
+  "iPhone screen repair",
+  "Wi-Fi network installation and troubleshooting",
+  "Smart home setup and configuration",
+  "TV mounting and audio/video installation",
+  "Small business IT support and maintenance",
 ];
 
 const About = () => (
@@ -25,7 +33,7 @@ const About = () => (
       </div>
     </section>
 
-    {/* Story */}
+    {/* Our Story */}
     <section className="py-24 md:py-32">
       <div className="container-editorial grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-5">
@@ -34,29 +42,61 @@ const About = () => (
           </div>
         </div>
         <div className="lg:col-span-6 lg:col-start-7 space-y-6 text-[17px] leading-relaxed text-pretty">
-          <p className="eyebrow">Our story</p>
-          <h2 className="display-lg text-balance">Martha's Vineyard technology service since 2008.</h2>
+          <p className="eyebrow">Our Story</p>
+          <h2 className="display-lg text-balance">From after-school repairs to full-service tech support.</h2>
           <p className="text-muted-foreground">
-            Anything Itech MV was started in 2008 by Louis Hall, after 7 years doing in-home
-            Apple support and repair for a national company. Louis earned his Apple Certified
-            Macintosh Technician (ACMT) certification in 2012 and has serviced corporate clients
-            with over 200 iOS devices.
+            Anything iTech Martha's Vineyard began in 2008, originally as Anything Apple Martha's Vineyard,
+            when Louis Hall first began his teaching career on the Island. At the time, teaching salaries
+            were modest, so Louis put his technical skills to work after school hours and on weekends,
+            helping friends, family, and neighbors with their computers and technology.
           </p>
           <p className="text-muted-foreground">
-            What started as "Anything Apple" expanded to "Anything Itech MV" in 2017 to cover
-            all technology services — including Wi-Fi network installation, smart home setup,
-            TV mounting, and business IT support across Martha's Vineyard.
+            As word spread and trust grew within the community, demand for reliable, local technology
+            support increased. Those early clients became the foundation of the business, and their
+            continued support remains at the heart of everything we do today.
           </p>
           <p className="text-muted-foreground">
-            Today we serve homeowners and businesses across all six island towns, year-round.
-            Service is by appointment. Call (508) 560-3510 or email louis@anythingitechmv.com.
+            In 2012, Louis earned his Apple Certified Macintosh Technician (ACMT) certification, one
+            of the highest levels of technical certification in the Apple ecosystem. This formal
+            training strengthened the company's ability to deliver professional, dependable service
+            to both residential and business clients.
+          </p>
+          <p className="text-muted-foreground">
+            In 2017, the business transitioned from Anything Apple Martha's Vineyard to Anything iTech
+            Martha's Vineyard. While the name changed, the mission stayed the same: provide honest,
+            responsive, local technology support for the Vineyard community.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* How Technology Has Changed */}
+    <section className="py-24 md:py-32 bg-surface border-y border-border">
+      <div className="container-editorial">
+        <div className="max-w-3xl mx-auto space-y-6 text-[17px] leading-relaxed text-pretty">
+          <p className="eyebrow">How Technology Has Changed</p>
+          <h2 className="display-lg text-balance">Evolving with the times.</h2>
+          <p className="text-muted-foreground">
+            When the business first started, the technology landscape looked very different. There were
+            no iPhones, no iPads, and no Apple Watches. Most service calls involved repairing desktop
+            computers, replacing hard drives, fixing printers, managing home networks, and troubleshooting
+            software issues.
+          </p>
+          <p className="text-muted-foreground">
+            Over time, technology evolved, and so did the needs of our clients. Smartphones, wireless
+            networks, smart home devices, and streaming systems became essential parts of daily life.
+            At the same time, modern devices became more complex and less serviceable than earlier models.
+          </p>
+          <p className="text-muted-foreground">
+            We have worked continuously to stay current with new technologies while maintaining the
+            same hands-on, practical approach that defined the business from the beginning.
           </p>
         </div>
       </div>
     </section>
 
     {/* Values */}
-    <section className="py-24 md:py-32 bg-surface border-y border-border">
+    <section className="py-24 md:py-32">
       <div className="container-editorial">
         <div className="max-w-2xl mb-16">
           <p className="eyebrow mb-5">Our values</p>
@@ -76,25 +116,36 @@ const About = () => (
       </div>
     </section>
 
-    {/* Numbers */}
-    <section className="py-24 md:py-32">
-      <div className="container-editorial grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
-        <div className="lg:col-span-5">
-          <p className="eyebrow mb-5">By the numbers</p>
-          <h2 className="display-lg text-balance">Trusted across the island.</h2>
-        </div>
-        <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-4 gap-px bg-border rounded-xl overflow-hidden">
-          {[
-            { k: "Since 2008", v: "On the island" },
-            { k: "1,400+", v: "Devices" },
-            { k: "350+", v: "Networks" },
-            { k: "98%", v: "Repeat clients" },
-          ].map((s) => (
-            <div key={s.v} className="bg-card p-7">
-              <div className="font-display text-3xl md:text-4xl font-light">{s.k}</div>
-              <div className="mt-1.5 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">{s.v}</div>
-            </div>
-          ))}
+    {/* Today */}
+    <section className="py-24 md:py-32 bg-surface border-y border-border">
+      <div className="container-editorial">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-5">
+            <p className="eyebrow mb-5">Today</p>
+            <h2 className="display-lg text-balance">Serving all six towns on Martha's Vineyard.</h2>
+          </div>
+          <div className="lg:col-span-6 lg:col-start-7 space-y-6 text-[17px] leading-relaxed text-pretty">
+            <p className="text-muted-foreground">
+              Today, Anything iTech Martha's Vineyard provides technology support and repair services
+              for homeowners and businesses across all six towns on Martha's Vineyard.
+            </p>
+            <p className="text-muted-foreground font-medium">Our services include:</p>
+            <ul className="space-y-2 text-muted-foreground">
+              {services.map((service) => (
+                <li key={service} className="flex items-start gap-2">
+                  <span className="text-accent mt-1.5">•</span>
+                  {service}
+                </li>
+              ))}
+            </ul>
+            <p className="text-muted-foreground">
+              We are a local, appointment-based service. This allows us to provide focused, reliable
+              support while minimizing downtime for our clients.
+            </p>
+            <p className="text-muted-foreground font-medium">
+              Service is by appointment only. Please call or text to schedule a time.
+            </p>
+          </div>
         </div>
       </div>
     </section>

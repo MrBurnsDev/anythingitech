@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export const CTASection = ({
   title = "Need help with your technology?",
-  description = "Call (508) 560-3510 or email louis@anythingitechmv.com. Service by appointment.",
+  description = "Call (508) 560-3510 or request a visit online. Service by appointment.",
 }: {
   title?: string;
   description?: string;

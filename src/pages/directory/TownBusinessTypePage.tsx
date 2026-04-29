@@ -104,6 +104,7 @@ export default function TownBusinessTypePage() {
         title={`${businessType.pluralName} in ${town.name}, Martha's Vineyard`}
         description={`Find ${businessType.name.toLowerCase()} businesses in ${town.name}. ${businessType.shortDescription} serving the Martha's Vineyard community.`}
         canonical={`https://anythingitechmv.com/marthas-vineyard/${town.slug}/${businessType.slug}`}
+        noEmailIndex
       />
       {/* Breadcrumb */}
       <div className="border-b border-border">

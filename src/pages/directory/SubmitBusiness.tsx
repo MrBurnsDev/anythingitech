@@ -103,6 +103,7 @@ export default function SubmitBusiness() {
         title="Submit Your Business - Martha's Vineyard Directory"
         description="Add your Martha's Vineyard business to our local directory. Free listing for island businesses. Submissions are reviewed before publication."
         canonical="https://anythingitechmv.com/marthas-vineyard/submit"
+        noEmailIndex
       />
       {/* Breadcrumb */}
       <div className="border-b border-border">

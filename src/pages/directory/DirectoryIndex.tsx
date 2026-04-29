@@ -52,6 +52,7 @@ export default function DirectoryIndex() {
         title="Martha's Vineyard Business Directory"
         description="Discover local businesses across all six towns of Martha's Vineyard. Find restaurants, lodging, shopping, contractors, and services throughout the island."
         canonical="https://anythingitechmv.com/marthas-vineyard"
+        noEmailIndex
       />
       {/* Hero */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden border-b border-border">

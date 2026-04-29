@@ -1,0 +1,1658 @@
+[
+  {
+    "id": 36,
+    "name": "Orange Peel Bakery",
+    "updates": {
+      "full_address": "22 State Rd, Aquinnah, MA 02535",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.477Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 22 State Rd → 22 State Rd, Aquinnah, MA 02535 (added ZIP)"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Outermost Inn",
+    "updates": {
+      "full_address": "81 Lighthouse Rd, Aquinnah, MA 02535",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: (empty) → 81 Lighthouse Rd, Aquinnah, MA 02535"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Chilmark General Store",
+    "updates": {
+      "phone": "(508) 645-3739",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 645-3739"
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Menemsha Gallery",
+    "updates": {
+      "phone": "(508) 645-9819",
+      "full_address": "515 N Rd, Chilmark, MA 02535",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 645-9819",
+      "full_address: (empty) → 515 N Rd, Chilmark, MA 02535"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "The Homeport",
+    "updates": {
+      "full_address": "512 N Rd, Chilmark, MA 02535",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 512 N Rd → 512 N Rd, Chilmark, MA 02535 (added ZIP)"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "19 Prime Steak House",
+    "updates": {
+      "full_address": "19 Church St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 19 Church St → 19 Church St, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 724,
+    "name": "Alchemy",
+    "updates": {
+      "website": "https://alchemyedgartown.com",
+      "full_address": "71 Main St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "website: https://www.alchemyedgartown.com/ → https://alchemyedgartown.com (normalized)",
+      "full_address: 71 Main Street → 71 Main St, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 712,
+    "name": "Atria",
+    "updates": {
+      "website": "https://atriamv.com",
+      "full_address": "137 Main St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "website: https://www.atriamv.com/ → https://atriamv.com (normalized)",
+      "full_address: 137 Main St → 137 Main St, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Bad Martha Beer",
+    "updates": {
+      "full_address": "270 Upper Main Street Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 270 Upper Main St → 270 Upper Main Street Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Black Sheep",
+    "updates": {
+      "full_address": "17 Airport Rd, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 17 Airport Road → 17 Airport Rd, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Chesca",
+    "updates": {
+      "full_address": "38 N Water St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 38 N Water St → 38 N Water St, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Détente",
+    "updates": {
+      "phone": "(508) 627-8810",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 627-8810"
+    ]
+  },
+  {
+    "id": 722,
+    "name": "Edgartown Diner 🍨",
+    "updates": {
+      "full_address": "65 Main St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: (empty) → 65 Main St, Edgartown, MA 02539"
+    ]
+  },
+  {
+    "id": 83,
+    "name": "Edgartown Meat & Fish",
+    "updates": {
+      "full_address": "240 Edgartown-Vineyard Haven Rd, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: (empty) → 240 Edgartown-Vineyard Haven Rd, Edgartown, MA 02539"
+    ]
+  },
+  {
+    "id": 721,
+    "name": "Edgartown Pizza 🍕",
+    "updates": {
+      "full_address": "224 Edgartown Rd, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: (empty) → 224 Edgartown Rd, Edgartown, MA 02539"
+    ]
+  },
+  {
+    "id": 87,
+    "name": "Espresso Love",
+    "updates": {
+      "phone": "(508) 627-9211",
+      "full_address": "17 Church St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 627-9211",
+      "full_address: (empty) → 17 Church St, Edgartown, MA 02539"
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Great Harbor Market",
+    "updates": {
+      "full_address": "199 Upper Main St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 199 Upper Main St → 199 Upper Main St, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 91,
+    "name": "Katama General Store",
+    "updates": {
+      "full_address": "170 Katama Rd, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 170 Katama Rd → 170 Katama Rd, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 93,
+    "name": "Katama Kitchen",
+    "updates": {
+      "full_address": "12 Mattakesett Way, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 12 Mattakesett Way → 12 Mattakesett Way, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 97,
+    "name": "Lucky Hank's",
+    "updates": {
+      "full_address": "218 Upper Main St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 218 Upper Main St → 218 Upper Main St, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 716,
+    "name": "The Pelican Club",
+    "updates": {
+      "full_address": "23 Kelly St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 23 Kelly St → 23 Kelly St, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 107,
+    "name": "Rosewater",
+    "updates": {
+      "website": "https://rosewatermv.com",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "website: https://www.rosewatermv.com/ → https://rosewatermv.com (normalized)"
+    ]
+  },
+  {
+    "id": 109,
+    "name": "The Seafood Shanty",
+    "updates": {
+      "full_address": "31 Dock St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: (empty) → 31 Dock St, Edgartown, MA 02539"
+    ]
+  },
+  {
+    "id": 112,
+    "name": "Soigne",
+    "updates": {
+      "full_address": "190 Upper Main St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 190 Upper Main St → 190 Upper Main St, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 114,
+    "name": "Square Rigger Restaurant",
+    "updates": {
+      "phone": "(508) 627-9968",
+      "full_address": "225 Edgartown-Vineyard Haven Rd, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 627-9968",
+      "full_address: (empty) → 225 Edgartown-Vineyard Haven Rd, Edgartown, MA 02539"
+    ]
+  },
+  {
+    "id": 117,
+    "name": "The Covington Restaurant and Bar",
+    "updates": {
+      "full_address": "52 Main St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 52 Main Street → 52 Main St, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 119,
+    "name": "Winnetu Oceanside Resort",
+    "updates": {
+      "full_address": "31 Dunes Rd, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 31 Dunes Rd → 31 Dunes Rd, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 121,
+    "name": "The Porthunter",
+    "updates": {
+      "phone": "(508) 627-7747",
+      "full_address": "55 Main St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 627-7747",
+      "full_address: (empty) → 55 Main St, Edgartown, MA 02539"
+    ]
+  },
+  {
+    "id": 127,
+    "name": "Wolf's Den Pizzeria",
+    "updates": {
+      "website": "https://wolfsdenpizzeria.com",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "website: https://www.wolfsdenpizzeria.com/ → https://wolfsdenpizzeria.com (normalized)"
+    ]
+  },
+  {
+    "id": 129,
+    "name": "Aalias Coffee",
+    "updates": {
+      "phone": "(508) 687-9849",
+      "full_address": "16 Kennebec Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 687-9849",
+      "full_address: (empty) → 16 Kennebec Ave, Oak Bluffs, MA 02557"
+    ]
+  },
+  {
+    "id": 131,
+    "name": "Back Door Donuts",
+    "updates": {
+      "full_address": "1-11 Kennebec Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: (empty) → 1-11 Kennebec Ave, Oak Bluffs, MA 02557"
+    ]
+  },
+  {
+    "id": 133,
+    "name": "Bangkok Cuisine",
+    "updates": {
+      "full_address": "67 Circuit Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: (empty) → 67 Circuit Ave, Oak Bluffs, MA 02557"
+    ]
+  },
+  {
+    "id": 135,
+    "name": "Benandbills",
+    "updates": {
+      "full_address": "20a Circuit Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 20A Circuit Avenue → 20a Circuit Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 710,
+    "name": "Biscuits",
+    "updates": {
+      "website": "https://mvbiscuits.com",
+      "full_address": "26 Lake Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "website: https://www.mvbiscuits.com/ → https://mvbiscuits.com (normalized)",
+      "full_address: 26 Lake Ave → 26 Lake Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 141,
+    "name": "Coop de Ville",
+    "updates": {
+      "phone": "(508) 693-3420",
+      "full_address": "12 Circuit Avenue Extension, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 693-3420",
+      "full_address: (empty) → 12 Circuit Avenue Extension, Oak Bluffs, MA 02557"
+    ]
+  },
+  {
+    "id": 143,
+    "name": "Dos Mas MV",
+    "updates": {
+      "full_address": "50 Circuit Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 50 Circuit Ave → 50 Circuit Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 145,
+    "name": "Eleven Circuit",
+    "updates": {
+      "full_address": "11 Circuit Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: (empty) → 11 Circuit Ave, Oak Bluffs, MA 02557"
+    ]
+  },
+  {
+    "id": 150,
+    "name": "Fat Ronnie's Burger Bar",
+    "updates": {
+      "phone": "(508) 593-6600",
+      "full_address": "7 Circuit Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 593-6600",
+      "full_address: (empty) → 7 Circuit Ave, Oak Bluffs, MA 02557"
+    ]
+  },
+  {
+    "id": 152,
+    "name": "Fishbones Bar & Grille",
+    "updates": {
+      "full_address": "12 Circuit Avenue Extension, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 12 Circuit Avenue Extension → 12 Circuit Avenue Extension, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 160,
+    "name": "Lobster Ville",
+    "updates": {
+      "phone": "(508) 696-0099",
+      "full_address": "8 Circuit Avenue Extension, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 696-0099",
+      "full_address: (empty) → 8 Circuit Avenue Extension, Oak Bluffs, MA 02557"
+    ]
+  },
+  {
+    "id": 162,
+    "name": "Lookout Tavern",
+    "updates": {
+      "full_address": "8 Seaview Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 8 Seaview Ave → 8 Seaview Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 166,
+    "name": "Mikado Asian Bistro @ Oak Bluffs",
+    "updates": {
+      "phone": "(508) 687-9119",
+      "full_address": "6 Circuit Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 687-9119",
+      "full_address: (empty) → 6 Circuit Ave, Oak Bluffs, MA 02557"
+    ]
+  },
+  {
+    "id": 168,
+    "name": "Offshore Ale Company",
+    "updates": {
+      "full_address": "30 Kennebec Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.478Z",
+      "updated_at": "2026-04-29T03:14:36.478Z"
+    },
+    "changes": [
+      "full_address: 30 Kennebec Avenue → 30 Kennebec Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 711,
+    "name": "Red Cat Kitchen",
+    "updates": {
+      "website": "https://redcatkitchen.com",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "website: https://www.redcatkitchen.com/ → https://redcatkitchen.com (normalized)"
+    ]
+  },
+  {
+    "id": 172,
+    "name": "Sharky's Oak Bluffs",
+    "updates": {
+      "full_address": "31 Circuit Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 31 Circuit Ave → 31 Circuit Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 174,
+    "name": "The Barn Bowl & Bistro",
+    "updates": {
+      "full_address": "13 Uncas Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 13 Uncas Avenue → 13 Uncas Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 177,
+    "name": "The Ritz Cafe",
+    "updates": {
+      "full_address": "4 Circuit Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 4 Circuit Ave → 4 Circuit Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 181,
+    "name": "Tony's Market",
+    "updates": {
+      "full_address": "119 Dukes County Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 119 Dukes County Avenue → 119 Dukes County Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 183,
+    "name": "Winston",
+    "updates": {
+      "website": "https://winstonskitchen-mv.com",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "website: https://www.winstonskitchen-mv.com/ → https://winstonskitchen-mv.com (normalized)"
+    ]
+  },
+  {
+    "id": 185,
+    "name": "7a Foods Martha's Vineyard",
+    "updates": {
+      "full_address": "1045 State Rd, West Tisbury, MA 02575",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 1045 State Road West → 1045 State Rd, West Tisbury, MA 02575 (added ZIP)"
+    ]
+  },
+  {
+    "id": 187,
+    "name": "State Road Restaurant",
+    "updates": {
+      "full_address": "688 State Rd, West Tisbury, MA 02575",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: (empty) → 688 State Rd, West Tisbury, MA 02575"
+    ]
+  },
+  {
+    "id": 189,
+    "name": "Vineyard Take Out",
+    "updates": {
+      "website": "https://vineyardtakeoutmenu.com",
+      "full_address": "479 State Rd, West Tisbury, MA 02575",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "website: https://www.vineyardtakeoutmenu.com/ → https://vineyardtakeoutmenu.com (normalized)",
+      "full_address: 479 State Rd → 479 State Rd, West Tisbury, MA 02575 (added ZIP)"
+    ]
+  },
+  {
+    "id": 1,
+    "name": "The Black Dog Tavern Company",
+    "updates": {
+      "website": "https://theblackdog.com",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "website: https://www.theblackdog.com → https://theblackdog.com (normalized)"
+    ]
+  },
+  {
+    "id": 198,
+    "name": "Catboat Coffee Co.",
+    "updates": {
+      "full_address": "79 Beach Road, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 79 Beach Road → 79 Beach Road, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 200,
+    "name": "Delicious MV",
+    "updates": {
+      "phone": "(508) 693-2223",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 693-2223"
+    ]
+  },
+  {
+    "id": 202,
+    "name": "Island Fresh Pizza",
+    "updates": {
+      "full_address": "395 State Rd, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 395 State Rd → 395 State Rd, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 204,
+    "name": "La Choza",
+    "updates": {
+      "phone": "(508) 693-9050",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 693-9050"
+    ]
+  },
+  {
+    "id": 206,
+    "name": "Mikado Asian Bistro",
+    "updates": {
+      "phone": "(508) 338-7096",
+      "full_address": "76 Main St, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 338-7096",
+      "full_address: (empty) → 76 Main St, Vineyard Haven, MA 02568"
+    ]
+  },
+  {
+    "id": 210,
+    "name": "Nook",
+    "updates": {
+      "full_address": "38 Main St, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 238 Main St → 38 Main St, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 213,
+    "name": "Porto Pizza Martha's Vineyard",
+    "updates": {
+      "full_address": "36 Water St, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 36 Water St → 36 Water St, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 217,
+    "name": "Authentic Italian Food",
+    "updates": {
+      "full_address": "20 Union St, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 20 Union Street → 20 Union St, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 219,
+    "name": "Scottish Bakehouse",
+    "updates": {
+      "phone": "(508) 693-6633",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 693-6633"
+    ]
+  },
+  {
+    "id": 221,
+    "name": "Sweet Bites",
+    "updates": {
+      "full_address": "32 Beach St, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 32 Beach Street → 32 Beach St, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 225,
+    "name": "Waterside Market",
+    "updates": {
+      "full_address": "82 Main St, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 82 Main Street → 82 Main St, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 229,
+    "name": "Allen Farm Sheep & Wool Company",
+    "updates": {
+      "full_address": "421 S Rd, Chilmark, MA 02535",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 421 S Rd → 421 S Rd, Chilmark, MA 02535 (added ZIP)"
+    ]
+  },
+  {
+    "id": 715,
+    "name": "The Grey Barn & Farm",
+    "updates": {
+      "website": "https://thegreybarnandfarm.com",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "website: https://www.thegreybarnandfarm.com/ → https://thegreybarnandfarm.com (normalized)"
+    ]
+  },
+  {
+    "id": 239,
+    "name": "Cronigs Market",
+    "updates": {
+      "full_address": "357 State Rd, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 357 State Road → 357 State Rd, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 249,
+    "name": "Vineyard Grocer",
+    "updates": {
+      "full_address": "294 State Rd, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 294 State Rd → 294 State Rd, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 251,
+    "name": "Edgartown Seafood Fish Market",
+    "updates": {
+      "full_address": "138 Cooke St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 138 Cooke Street → 138 Cooke St, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 257,
+    "name": "The Net Result",
+    "updates": {
+      "full_address": "79 Beach Road, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 79 Beach Rd → 79 Beach Road, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 266,
+    "name": "Vintage MV Wine & Spirits",
+    "updates": {
+      "full_address": "29 Winter St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 29 Winter Street → 29 Winter St, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 270,
+    "name": "Conroy Apothecary",
+    "updates": {
+      "full_address": "59 State Rd A, West Tisbury, MA 02575",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 459 State Road West → 59 State Rd A, West Tisbury, MA 02575 (added ZIP)"
+    ]
+  },
+  {
+    "id": 276,
+    "name": "51art Gallery Located at the Shoppe With the Red Door",
+    "updates": {
+      "phone": "(508) 338-7703",
+      "website": "https://theshoppewiththereddoor.com",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 338-7703",
+      "website: http://www.theshoppewiththereddoor.com/ → https://theshoppewiththereddoor.com (normalized)"
+    ]
+  },
+  {
+    "id": 280,
+    "name": "Blanchard Photography",
+    "updates": {
+      "phone": "(617) 448-3934",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (617) 448-3934"
+    ]
+  },
+  {
+    "id": 286,
+    "name": "Eisenhauer Gallery",
+    "updates": {
+      "phone": "(508) 627-7003",
+      "full_address": "38 N Water St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 627-7003",
+      "full_address: 38 N WATER ST PO Box 1930 → 38 N Water St, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 290,
+    "name": "Field Gallery",
+    "updates": {
+      "full_address": "1050 State Rd, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 1050 State Road                West → 1050 State Rd, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Granary Gallery",
+    "updates": {
+      "website": "https://granarygallery.com",
+      "full_address": "636 Old County Road, West Tisbury, MA 02575",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "website: https://www.granarygallery.com → https://granarygallery.com (normalized)",
+      "full_address: 636 Old County Road → 636 Old County Road, West Tisbury, MA 02575 (added ZIP)"
+    ]
+  },
+  {
+    "id": 295,
+    "name": "Louisa Gould Gallery",
+    "updates": {
+      "phone": "(508) 693-7373",
+      "full_address": "54 Main St, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 693-7373",
+      "full_address: (empty) → 54 Main St, Vineyard Haven, MA 02568"
+    ]
+  },
+  {
+    "id": 297,
+    "name": "MV Glassworks",
+    "updates": {
+      "full_address": "683 State Rd, West Tisbury, MA 02575",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 683 State Road → 683 State Rd, West Tisbury, MA 02575 (added ZIP)"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Martha's Vineyard Film Festival",
+    "updates": {
+      "phone": "(508) 696-9369",
+      "website": "https://mvfilmsociety.com",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 696-9369",
+      "website: https://www.mvfilmsociety.com → https://mvfilmsociety.com (normalized)"
+    ]
+  },
+  {
+    "id": 318,
+    "name": "Strand Theatre MV",
+    "updates": {
+      "full_address": "Oak Bluffs Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 11 Oak Bluffs Ave → Oak Bluffs Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 322,
+    "name": "The Christina Gallery",
+    "updates": {
+      "full_address": "5 Winter Street, Edgartown MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 5 Winter Street → 5 Winter Street, Edgartown MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 324,
+    "name": "Peter Simon Photography",
+    "updates": {
+      "phone": "(508) 325-2242",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 325-2242"
+    ]
+  },
+  {
+    "id": 329,
+    "name": "The Yard",
+    "updates": {
+      "full_address": "1 The Yard, Chilmark, MA 02535",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 1 The Yard → 1 The Yard, Chilmark, MA 02535 (added ZIP)"
+    ]
+  },
+  {
+    "id": 331,
+    "name": "Tuck & Holand Metal Sculptors",
+    "updates": {
+      "full_address": "275 State Rd, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 275 State Road → 275 State Rd, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 333,
+    "name": "Vineyard Arts Project",
+    "updates": {
+      "full_address": "215 Upper Main St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 215 Upper Main Street → 215 Upper Main St, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 342,
+    "name": "Mink Meadows Golf Club",
+    "updates": {
+      "website": "https://minkmeadowsgc.com",
+      "full_address": "320 Golf Club Rd, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "website: https://www.minkmeadowsgc.com/ → https://minkmeadowsgc.com (normalized)",
+      "full_address: 320 Golf Club Road → 320 Golf Club Rd, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 343,
+    "name": "The Polly Hill Arboretum",
+    "updates": {
+      "full_address": "809 State Rd, West Tisbury, MA 02575",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 809 State Road West → 809 State Rd, West Tisbury, MA 02575 (added ZIP)"
+    ]
+  },
+  {
+    "id": 346,
+    "name": "Vineyard Golf Club",
+    "updates": {
+      "website": "https://vineyardgolf.com",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "website: https://www.vineyardgolf.com/ → https://vineyardgolf.com (normalized)"
+    ]
+  },
+  {
+    "id": 353,
+    "name": "B Strong",
+    "updates": {
+      "full_address": "29 Kennebec Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 29 Kennebec Ave. → 29 Kennebec Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 359,
+    "name": "Hot Yoga MV",
+    "updates": {
+      "full_address": "497 State Rd, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 497 State Road → 497 State Rd, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 367,
+    "name": "Vcmpt",
+    "updates": {
+      "full_address": "238 Edgartown-Vineyard Haven Rd, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 238 Edgartown-Vineyard Haven Rd → 238 Edgartown-Vineyard Haven Rd, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 370,
+    "name": "Vineyard Medical Care",
+    "updates": {
+      "full_address": "364 State Rd, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 364 State Road → 364 State Rd, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 372,
+    "name": "Vineyard Vinyasa",
+    "updates": {
+      "phone": "(508) 560-2178",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 560-2178"
+    ]
+  },
+  {
+    "id": 375,
+    "name": "Marthas Vineyard Yoga Barn",
+    "updates": {
+      "full_address": "1 Red Barn Road, West Tisbury, MA 02575",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 1 RED BARN ROAD → 1 Red Barn Road, West Tisbury, MA 02575 (added ZIP)"
+    ]
+  },
+  {
+    "id": 381,
+    "name": "Dockside Inn",
+    "updates": {
+      "full_address": "9 Circuit Avenue Extension, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 9 Circuit Avenue → 9 Circuit Avenue Extension, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 383,
+    "name": "Dunmere House",
+    "updates": {
+      "full_address": "7 Pennacook Ave, Oak Bluffs MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 7 Pennacook Ave → 7 Pennacook Ave, Oak Bluffs MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 390,
+    "name": "Luxury Boutique Hotel Edgartown",
+    "updates": {
+      "full_address": "222 Upper Main St, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 222 Upper Main Street → 222 Upper Main St, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 412,
+    "name": "Narragansett House",
+    "updates": {
+      "full_address": "46 Narragansett Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 46 Narragansett Ave → 46 Narragansett Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 415,
+    "name": "Martha’s Vineyard Hotels",
+    "updates": {
+      "full_address": "19 Pequot Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 19 Pequot Avenue → 19 Pequot Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 417,
+    "name": "Summercamp Hotel",
+    "updates": {
+      "phone": "(508) 693-6611",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 693-6611"
+    ]
+  },
+  {
+    "id": 433,
+    "name": "Lark Hotels",
+    "updates": {
+      "phone": "(508) 939-4005",
+      "website": "https://larkhotels.com/hotels/the-edgartown-collection",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 939-4005",
+      "website: https://www.larkhotels.com/hotels/the-edgartown-collection → https://larkhotels.com/hotels/the-edgartown-collection (normalized)"
+    ]
+  },
+  {
+    "id": 435,
+    "name": "Vacasa.com/usa/the-island-inn",
+    "updates": {
+      "website": "https://vacasa.com/usa/the-island-inn-ma",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "website: http://vacasa.com/usa/The-Island-Inn-MA → https://vacasa.com/usa/the-island-inn-ma (normalized)"
+    ]
+  },
+  {
+    "id": 437,
+    "name": "Lightkeepers Inn",
+    "updates": {
+      "full_address": "25 Simpsons Ln, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 25 Simpsons Ln → 25 Simpsons Ln, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 441,
+    "name": "Oak Bluffs Inn",
+    "updates": {
+      "full_address": "64 Circuit Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 64 Circuit Ave → 64 Circuit Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 444,
+    "name": "Martha’s Vineyard Surfside Hotel: Martha’s Vineyard Hotels",
+    "updates": {
+      "full_address": "7 Oak Bluffs Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 7 Oak Bluffs Avenue → 7 Oak Bluffs Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Bunch of Grapes Bookstore",
+    "updates": {
+      "full_address": "23 Main St, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 23 Main Street → 23 Main St, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 518,
+    "name": "Edgartown Paint Shoppe",
+    "updates": {
+      "phone": "(508) 627-5112",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 627-5112"
+    ]
+  },
+  {
+    "id": 520,
+    "name": "Fine Fettle Dispensary",
+    "updates": {
+      "phone": "(508) 687-0131",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 687-0131"
+    ]
+  },
+  {
+    "id": 671,
+    "name": "Lani Beach Club",
+    "updates": {
+      "full_address": "25 Main St, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 25 Main St → 25 Main St, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 551,
+    "name": "Lazy Frog",
+    "updates": {
+      "full_address": "42 Circuit Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 42 Circuit Ave → 42 Circuit Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 553,
+    "name": "Leroux Kitchen",
+    "updates": {
+      "full_address": "62 Main St, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 62 Main St → 62 Main St, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 561,
+    "name": "Martha's Bike",
+    "updates": {
+      "full_address": "4 Lagoon Pond Rd, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 4 Lagoon Pond Rd → 4 Lagoon Pond Rd, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 583,
+    "name": "North Line Shell",
+    "updates": {
+      "full_address": "3 N Line Rd, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 3 N Line Road → 3 N Line Rd, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 694,
+    "name": "Off Main",
+    "updates": {
+      "full_address": "76 Main St, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 76 Main St → 76 Main St, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 691,
+    "name": "Olive Branch Fair Trade",
+    "updates": {
+      "website": "https://olivebranchfairtrade.org",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "website: http://www.olivebranchfairtrade.org/ → https://olivebranchfairtrade.org (normalized)"
+    ]
+  },
+  {
+    "id": 672,
+    "name": "Rainy Day",
+    "updates": {
+      "full_address": "66 Main St, Vineyard Haven, MA 02568",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 66 Main St → 66 Main St, Vineyard Haven, MA 02568 (added ZIP)"
+    ]
+  },
+  {
+    "id": 597,
+    "name": "Revive by Sarka",
+    "updates": {
+      "phone": "(774) 521-6060",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (774) 521-6060"
+    ]
+  },
+  {
+    "id": 603,
+    "name": "Sanctuary Martha's Vineyard",
+    "updates": {
+      "phone": "(508) 693-9600",
+      "full_address": "42 Circuit Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 693-9600",
+      "full_address: 42 Circuit Avenue → 42 Circuit Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 625,
+    "name": "Spa L'eau MV",
+    "updates": {
+      "full_address": "One Mariners Landing, #C, Edgartown, MA 02539",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: One Mariners Landing C → One Mariners Landing, #C, Edgartown, MA 02539 (added ZIP)"
+    ]
+  },
+  {
+    "id": 626,
+    "name": "Stefanie Wolf Designs Artisan Jewelry From Martha's Vineyard",
+    "updates": {
+      "full_address": "37 Circuit Ave, Oak Bluffs, MA 02557",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 37 Circuit Avenue → 37 Circuit Ave, Oak Bluffs, MA 02557 (added ZIP)"
+    ]
+  },
+  {
+    "id": 689,
+    "name": "Stony Creek Gifts",
+    "updates": {
+      "full_address": "27 Aquinnah Cir, Aquinnah, MA 02535",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "full_address: 27 Aquinnah Circle Cultural District → 27 Aquinnah Cir, Aquinnah, MA 02535 (added ZIP)"
+    ]
+  },
+  {
+    "id": 686,
+    "name": "Tending Joy Artisan Shop",
+    "updates": {
+      "website": "https://tendingjoy.com",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "website: https://www.tendingjoy.com/ → https://tendingjoy.com (normalized)"
+    ]
+  },
+  {
+    "id": 637,
+    "name": "Boneyard Surf Co",
+    "updates": {
+      "phone": "(508) 627-7907",
+      "verification_source": "vineyard_gazette_business_directory",
+      "last_verified_at": "2026-04-29T03:14:36.479Z",
+      "updated_at": "2026-04-29T03:14:36.479Z"
+    },
+    "changes": [
+      "phone: (empty) → (508) 627-7907"
+    ]
+  }
+]

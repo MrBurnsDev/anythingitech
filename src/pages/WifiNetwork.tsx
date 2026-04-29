@@ -43,7 +43,7 @@ const WifiNetwork = () => (
         { title: "Ongoing support", body: "We troubleshoot network issues, maintain business servers, and provide ongoing support when you need it." },
       ]}
     />
-    <CTASection title="Need a network installed or fixed?" description="Call (508) 560-3510 or email louis@anythingitechmv.com. Service by appointment." />
+    <CTASection title="Need a network installed or fixed?" description="Call (508) 560-3510 or request a visit online. Service by appointment." />
   </SiteLayout>
 );
 

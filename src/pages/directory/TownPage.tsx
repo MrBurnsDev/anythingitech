@@ -67,6 +67,7 @@ export default function TownPage() {
         title={`Businesses in ${town.name}, Martha's Vineyard`}
         description={`${town.description} Browse ${townBusinesses.length} local businesses in ${town.name}.`}
         canonical={`https://anythingitechmv.com/marthas-vineyard/${town.slug}`}
+        noEmailIndex
       />
       {/* Breadcrumb */}
       <div className="border-b border-border">

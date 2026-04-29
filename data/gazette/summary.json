@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-04-29T03:00:12.005Z",
+  "source": "Vineyard Gazette Business Directory",
+  "stats": {
+    "totalParsed": 398,
+    "matched": 238,
+    "newBusinesses": 160,
+    "conflicts": 236
+  },
+  "byCategory": {
+    "Restaurants": 110,
+    "Farm Market & Stands": 6,
+    "Grocery Stores": 14,
+    "Fish Markets": 5,
+    "Package Stores": 8,
+    "Pharmacies": 3,
+    "Arts & Culture": 33,
+    "Outdoor Activities": 9,
+    "Self Help Meetings": 7,
+    "Health & Wellness": 17,
+    "Lodging": 42,
+    "Transportation": 4,
+    "General Business Information": 140
+  },
+  "byTown": {
+    "Aquinnah": 9,
+    "Chilmark": 19,
+    "Edgartown": 131,
+    "Oak Bluffs": 84,
+    "West Tisbury": 25,
+    "Vineyard Haven": 107
+  },
+  "newByCategory": {
+    "Restaurants": 22,
+    "Farm Market & Stands": 1,
+    "Grocery Stores": 7,
+    "Package Stores": 5,
+    "Pharmacies": 2,
+    "Arts & Culture": 7,
+    "Outdoor Activities": 2,
+    "Self Help Meetings": 3,
+    "Health & Wellness": 4,
+    "Lodging": 15,
+    "Transportation": 3,
+    "General Business Information": 89
+  },
+  "conflictsByField": {
+    "website": 228,
+    "address": 223,
+    "phone": 69
+  }
+}

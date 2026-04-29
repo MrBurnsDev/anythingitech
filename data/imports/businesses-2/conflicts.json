@@ -1,0 +1,4796 @@
+[
+  {
+    "parsed": {
+      "name": "Vineyard Square Hotel & Suites",
+      "description": null,
+      "sourceCategory": "ACCOMMODATIONS",
+      "address": "If you're exploring Martha's Vineyard lodging options, consider the benefits of staying right in the heart of downtown Edgartown at Vineyard Square Hotel & Suites.",
+      "phone": "(508) 627-4711",
+      "website": "https://vineyardsquarehotel.com",
+      "source_file": "businesses_2_rtf",
+      "businessType": "lodging-and-tourism",
+      "category": "Lodging & Tourism",
+      "subcategory": "Hotels",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "vineyard-square-hotel-and-suites",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 450,
+      "name": "Vineyard Square Hotel & Suites",
+      "slug": "vineyard-square-hotel-suites-edgartown",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Hotels",
+      "description": "Our Edgartown hotel offers harbor views with a variety of Martha's Vineyard lodging options at the affordable Vineyard Square Hotel & Suites.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "38 North Water Street",
+      "phone": "(508) 627-4711",
+      "website": "http://vineyardsquarehotel.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/vineyardsquare/",
+        "instagram": "https://instagram.com/vineyardsquare/",
+        "yelp": null,
+        "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g41558-d89775-Reviews-Colonial_Inn-Edgartown_Martha_s_Vineyard_Massachusetts.html"
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "If you're exploring Martha's Vineyard lodging options, consider the benefits of staying right in the heart of downtown Edgartown at Vineyard Square Hotel & Suites.",
+        "existing": "38 North Water Street",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Summercamp Hotel",
+      "description": null,
+      "sourceCategory": "ACCOMMODATIONS",
+      "address": "Stunning harbor views, island relaxation, and cozy, refreshing accommodations await for you at Summercamp in Oak Bluffs–join us this summer!",
+      "phone": "(508) 693-6611",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "lodging-and-tourism",
+      "category": "Lodging & Tourism",
+      "subcategory": "Hotels",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "summercamp-hotel",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 417,
+      "name": "Summercamp Hotel",
+      "slug": "summercamp-hotel-oak-bluffs",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Hotels",
+      "description": "Stay at Summercamp Hotel in Vineyard Haven, Martha's Vineyard, and enjoy convenient hotel amenities during your island visit.",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "70 Lake Ave, Oak Bluffs, MA 02557",
+      "phone": null,
+      "website": "http://summercamphotel.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "unknown",
+      "confidence": 55,
+      "social": {
+        "facebook": null,
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "Stunning harbor views, island relaxation, and cozy, refreshing accommodations await for you at Summercamp in Oak Bluffs–join us this summer!",
+        "existing": "70 Lake Ave, Oak Bluffs, MA 02557",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Edgar Hotel",
+      "description": null,
+      "sourceCategory": "ACCOMMODATIONS",
+      "address": "Get together with family or friends at our Edgartown, MA hotel. We are a perfect spot for a meet-up or reunion and great for group travel.",
+      "phone": "(508) 627-5161",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "lodging-and-tourism",
+      "category": "Lodging & Tourism",
+      "subcategory": "Hotels",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "edgar-hotel",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 385,
+      "name": "Edgar Hotel",
+      "slug": "edgar-hotel-edgartown",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Hotels",
+      "description": "The Edgar Hotel is a boutique style Martha's Vineyard hotel that is located just a short walk from Edgartown Golf Club and is just minutes from the shore.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "Edgartown, MA 02539",
+      "phone": "(508) 627-5161",
+      "website": "http://edgarhotelmv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.3894198,
+        "lng": -70.5129682
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/edgarhotelmv/",
+        "instagram": "https://instagram.com/edgarhotelmv",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "Get together with family or friends at our Edgartown, MA hotel. We are a perfect spot for a meet-up or reunion and great for group travel.",
+        "existing": "Edgartown, MA 02539",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Hotel Ginger",
+      "description": "Completely renovated in 2019 this in-town historic Victorian gingerbread house hotel with 12 lavish urban hip stylish guest rooms all with marble bathrooms and Parisian townhouse decor.",
+      "sourceCategory": "ACCOMMODATIONS",
+      "address": "9 Healy Way, Oak Bluffs",
+      "phone": "(508) 338-2804",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "lodging-and-tourism",
+      "category": "Lodging & Tourism",
+      "subcategory": "Hotels",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "hotel-ginger",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 439,
+      "name": "Morgan Hotel",
+      "slug": "morgan-hotel-oak-bluffs",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Hotels",
+      "description": "Experience The Morgan Hotel, one of the finest boutique hotels in Oak Bluffs, offering modern comfort, coastal charm, and a prime location on Martha's Vineyard.",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "Massachusetts, 02557",
+      "phone": "(508) 338-2804",
+      "website": "http://morganhotelmv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4515953,
+        "lng": -70.5691119
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/morganhotelmv",
+        "instagram": "https://www.instagram.com/morganhotelmv/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.85,
+    "matchReason": "phone_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "9 Healy Way, Oak Bluffs",
+        "existing": "Massachusetts, 02557",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Surfside Hotel",
+      "description": null,
+      "sourceCategory": "ACCOMMODATIONS",
+      "address": "Overlooking Nantucket Sound, the Surfside Hotel offers a premier location in the heart of Oak Bluffs with Oak Bluffs Harbor, Circuit Avenue and the Sound in your backyard, and cafes, shopping, fine",
+      "phone": "(508) 693-2500",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "lodging-and-tourism",
+      "category": "Lodging & Tourism",
+      "subcategory": "Hotels",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "surfside-hotel",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 444,
+      "name": "Martha’s Vineyard Surfside Hotel: Martha’s Vineyard Hotels",
+      "slug": "martha-s-vineyard-surfside-hotel-martha-s-vineyard-hotels-oak-bluffs",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Hotels",
+      "description": "Top-rated seaside accommodations at Martha’s Vineyard Surfside Hotel. Plan your next family vacation at one of the premier hotels in Martha's Vineyard!",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "7 Oak Bluffs Avenue",
+      "phone": "(508) 693-2500",
+      "website": "http://mvsurfside.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4575123,
+        "lng": -70.5573393
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/MVsurfside/",
+        "instagram": "https://www.instagram.com/mvsurfside/",
+        "yelp": null,
+        "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g41750-d115135-Reviews-Martha_s_Vineyard_Surfside_Hotel-Oak_Bluffs_Martha_s_Vineyard_Massachusetts.html"
+      }
+    },
+    "score": 0.85,
+    "matchReason": "phone_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "Overlooking Nantucket Sound, the Surfside Hotel offers a premier location in the heart of Oak Bluffs with Oak Bluffs Harbor, Circuit Avenue and the Sound in your backyard, and cafes, shopping, fine",
+        "existing": "7 Oak Bluffs Avenue",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Vineyard Harbor Motel",
+      "description": "Vineyard Harbor Motel offers comfortable rooms, a private beach and an incredible location.",
+      "sourceCategory": "ACCOMMODATIONS",
+      "address": "60 Beach Rd, Vineyard Haven",
+      "phone": "(508) 693-3334",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "lodging-and-tourism",
+      "category": "Lodging & Tourism",
+      "subcategory": "Hotels",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "vineyard-harbor-motel",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "name": "Vineyard Harbor Motel",
+      "gazetteCategory": "Lodging",
+      "gazetteTown": "Vineyard Haven",
+      "address": "60 Anchor Wy, Vineyard Haven, MA 02568",
+      "website": "https://vineyardharbormotel.us",
+      "phone": "(508) 693-3334",
+      "social": {},
+      "businessType": "lodging-and-tourism",
+      "category": "Hotels",
+      "slug": "vineyard-harbor-motel",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven"
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "gazette",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "60 Beach Rd, Vineyard Haven",
+        "existing": "60 Anchor Wy, Vineyard Haven, MA 02568",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Harbor View Hotel",
+      "description": "Make yourself at home in one of the 114 individually decorated guestrooms, featuring refrigerators and flat-screen televisions.",
+      "sourceCategory": "ACCOMMODATIONS",
+      "address": "131 North Water Street, Edgartown",
+      "phone": "(508) 627-7000",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "lodging-and-tourism",
+      "category": "Lodging & Tourism",
+      "subcategory": "Hotels",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "harbor-view-hotel",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 4,
+      "name": "Harbor View Hotel",
+      "slug": "harbor-view-hotel-edgartown",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Hotels",
+      "description": "Historic grand hotel overlooking Edgartown Harbor...",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "131 North Water Street",
+      "phone": "(508) 627-7000",
+      "website": "https://www.harbor-view.com",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.391648,
+        "lng": -70.5077681
+      },
+      "status": "active",
+      "confidence": 65,
+      "social": {
+        "facebook": "https://www.facebook.com/HarborViewHotel/",
+        "instagram": "https://www.instagram.com/harborviewhotel/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "131 North Water Street, Edgartown",
+        "existing": "131 North Water Street",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "The Harborside Inn",
+      "description": null,
+      "sourceCategory": "ACCOMMODATIONS",
+      "address": "Edgartown waterfront resort boasts 90 guestrooms with luxury hotel amenities including a heated waterfront pool adjacent to Edgartown Harbor and beautifully appointed rooms some featuring balcony v",
+      "phone": "(508) 627-4321",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "lodging-and-tourism",
+      "category": "Lodging & Tourism",
+      "subcategory": "Hotels",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "the-harborside-inn",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 395,
+      "name": "The Harborside Inn",
+      "slug": "the-harborside-inn-edgartown",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Inns",
+      "description": "The Harborside Inn is the perfect getaway to Martha's Vineyard Island! This premiere waterfront hotel destination on Edgartown Harbor is your next vacation destination.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "3 South Water Street",
+      "phone": "(508) 627-4321",
+      "website": "http://theharborsideinn.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/The-Harborside-Inn-100753708202667/",
+        "instagram": "https://www.instagram.com/harborsideinn/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "Edgartown waterfront resort boasts 90 guestrooms with luxury hotel amenities including a heated waterfront pool adjacent to Edgartown Harbor and beautifully appointed rooms some featuring balcony v",
+        "existing": "3 South Water Street",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "The Lightkeepers Inn",
+      "description": null,
+      "sourceCategory": "ACCOMMODATIONS",
+      "address": "A vacation home in the heart of Edgartown, one block from the harbor. 6 suites with private entrance, each sleeps 4 guests. Living room, full kitchen, full bath.",
+      "phone": "(508) 627-4600",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "lodging-and-tourism",
+      "category": "Lodging & Tourism",
+      "subcategory": "Hotels",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "the-lightkeepers-inn",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 437,
+      "name": "Lightkeepers Inn",
+      "slug": "lightkeepers-inn-edgartown",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Inns",
+      "description": "A truly unique experience Located In The Historic Heart of Edgartown in Martha's Vineyard. The Lightkeeper's Inn is a short walk to the area's best restaurants, shops, and beautiful, scenic beaches.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "25 Simpsons Ln",
+      "phone": "(508) 627-4600",
+      "website": "http://thelightkeepersinn.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": null,
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.85,
+    "matchReason": "phone_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "A vacation home in the heart of Edgartown, one block from the harbor. 6 suites with private entrance, each sleeps 4 guests. Living room, full kitchen, full bath.",
+        "existing": "25 Simpsons Ln",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Pequot Hotel",
+      "description": "From the decorative lattice that adorns our porches, to the cozy feel of classic cottage décor, this 32-room hotel exudes the warmth and charm of Martha's Vineyard tradition.",
+      "sourceCategory": "ACCOMMODATIONS",
+      "address": "19 Pequot Ave, Oak Bluffs",
+      "phone": "(508) 693-5087",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "lodging-and-tourism",
+      "category": "Lodging & Tourism",
+      "subcategory": "Hotels",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "pequot-hotel",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 415,
+      "name": "Martha’s Vineyard Hotels",
+      "slug": "martha-s-vineyard-hotels-oak-bluffs",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Hotels",
+      "description": "The Pequot Hotel in Oak Bluffs MA on Martha’s Vineyard exudes warmth and charm of the island tradition. Situated in prime location, this classic cottage style hotel provides exceptional services and value.",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "19 Pequot Avenue",
+      "phone": "(508) 693-5087",
+      "website": "http://pequothotel.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4530676,
+        "lng": -70.5555325
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/PequotHotel/",
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g41750-d115133-Reviews-Pequot_Hotel-Oak_Bluffs_Martha_s_Vineyard_Massachusetts.html"
+      }
+    },
+    "score": 0.85,
+    "matchReason": "phone_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "19 Pequot Ave, Oak Bluffs",
+        "existing": "19 Pequot Avenue",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Captain Flanders House",
+      "description": "This renovated farmhouse, built by whaling Captain Richard Flanders in the late 1700’s is part of an original island homestead.",
+      "sourceCategory": "ACCOMMODATIONS",
+      "address": "440 North Rd, Chilmark",
+      "phone": "(508) 645-3123",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "lodging-and-tourism",
+      "category": "Lodging & Tourism",
+      "subcategory": "Hotels",
+      "town": "Chilmark",
+      "townSlug": "chilmark",
+      "zip": null,
+      "slug": "captain-flanders-house",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 425,
+      "name": "Captain Flanders Inn",
+      "slug": "captain-flanders-inn-chilmark",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Inns",
+      "description": "Located in Vineyard Haven, Captain Flanders Inn offers guests a peaceful retreat with the hospitality Martha's Vineyard is known for.",
+      "town": "Chilmark",
+      "townSlug": "chilmark",
+      "address": "5 North Rd, Chilmark, MA 02535",
+      "phone": "(508) 645-3123",
+      "website": "http://captainflandersinn.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "unknown",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/pages/Captain-Flanders-House/318681438154777",
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.85,
+    "matchReason": "phone_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "440 North Rd, Chilmark",
+        "existing": "5 North Rd, Chilmark, MA 02535",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "The Beachfront Inn",
+      "description": null,
+      "sourceCategory": "ACCOMMODATIONS",
+      "address": "We are conveniently located within the Oak Bluffs business district, a short stroll from the picturesque harbor with ferry service to and from many ports.",
+      "phone": "(508) 693-5148",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "lodging-and-tourism",
+      "category": "Lodging & Tourism",
+      "subcategory": "Hotels",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "the-beachfront-inn",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 423,
+      "name": "The Beach Front Inn of Martha's Vineyard",
+      "slug": "the-beach-front-inn-of-marthas-vineyard-oak-bluffs",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Inns",
+      "description": "The Beach Front Inn of Martha's Vineyard is a charming inn in Vineyard Haven, Martha's Vineyard, offering cozy accommodations and personalized hospitality.",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "s Vineyard Massachusetts 02557",
+      "phone": "(508) 693-5148",
+      "website": "http://beachfrontinnmv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4169469,
+        "lng": -70.5948831
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": null,
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.85,
+    "matchReason": "phone_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "We are conveniently located within the Oak Bluffs business district, a short stroll from the picturesque harbor with ferry service to and from many ports.",
+        "existing": "s Vineyard Massachusetts 02557",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Duck Inn",
+      "description": null,
+      "sourceCategory": "ACCOMMODATIONS",
+      "address": "Located in the small town of Aquinnah (also known as Gay Head), the Duck Inn is nestled on 5.5 acres of oceanview greenery.",
+      "phone": "(508) 645-9018",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "lodging-and-tourism",
+      "category": "Lodging & Tourism",
+      "subcategory": "Hotels",
+      "town": "Aquinnah",
+      "townSlug": "aquinnah",
+      "zip": null,
+      "slug": "duck-inn",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 431,
+      "name": "Duck Inn",
+      "slug": "duck-inn-aquinnah",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Inns",
+      "description": "Stay at Duckinnon in Vineyard Haven, Martha's Vineyard, and enjoy the warmth of a classic New England inn experience.",
+      "town": "Aquinnah",
+      "townSlug": "aquinnah",
+      "address": "10 Duck Pond Way, Aquinnah, MA 02535",
+      "phone": "(715) 386-9450",
+      "website": "http://duckinnonmv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "unknown",
+      "confidence": 65,
+      "social": {
+        "facebook": "https://www.facebook.com/purpletreewi/",
+        "instagram": "https://www.instagram.com/thepurpletreewi/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "phone",
+        "parsed": "(508) 645-9018",
+        "existing": "(715) 386-9450",
+        "action": "conflict"
+      },
+      {
+        "field": "address",
+        "parsed": "Located in the small town of Aquinnah (also known as Gay Head), the Duck Inn is nestled on 5.5 acres of oceanview greenery.",
+        "existing": "10 Duck Pond Way, Aquinnah, MA 02535",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Winnetu Oceanside Resort",
+      "description": null,
+      "sourceCategory": "ACCOMMODATIONS",
+      "address": "The Winnetu Oceanside Resort is located where everyone visiting Martha’s Vineyard wants to be at South Beach in Edgartown.",
+      "phone": "(508) 310-1733",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "lodging-and-tourism",
+      "category": "Lodging & Tourism",
+      "subcategory": "Hotels",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "winnetu-oceanside-resort",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 119,
+      "name": "Winnetu Oceanside Resort",
+      "slug": "winnetu-oceanside-resort-edgartown",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Inns",
+      "description": "Stay in the best Martha's Vineyard Hotel: Winnetu Oceanside Resort. our exceptional resort facilities and activities. Book today for the 2023 season!",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "31 Dunes Rd",
+      "phone": "(866) 335-1133",
+      "website": "http://winnetu.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.3886,
+        "lng": -70.5131
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/winnetuoceansideresort/",
+        "instagram": "https://www.instagram.com/thewinnetu/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "phone",
+        "parsed": "(508) 310-1733",
+        "existing": "(866) 335-1133",
+        "action": "conflict"
+      },
+      {
+        "field": "address",
+        "parsed": "The Winnetu Oceanside Resort is located where everyone visiting Martha’s Vineyard wants to be at South Beach in Edgartown.",
+        "existing": "31 Dunes Rd",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "The Charlotte Inn",
+      "description": null,
+      "sourceCategory": "ACCOMMODATIONS",
+      "address": "Captain’s house downtown Edgartown tucked away on quiet South Summer Street. Luxury inn exquisitely appointed with fine art, old-world ambiance, tranquility and gracious hospitality. A Forbes four star property.",
+      "phone": "(508) 627-4751",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "lodging-and-tourism",
+      "category": "Lodging & Tourism",
+      "subcategory": "Hotels",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "the-charlotte-inn",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 427,
+      "name": "The Charlotte Inn",
+      "slug": "the-charlotte-inn-edgartown",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Inns",
+      "description": "The Charlotte Inn offers comfortable accommodations in Vineyard Haven, Martha's Vineyard, providing a relaxing island retreat for visitors.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "27 South Summer Street",
+      "phone": "(508) 627-4751",
+      "website": "http://thecharlotteinn.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/Charlotte.Inn",
+        "instagram": "https://www.instagram.com/thecharlotteinn/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "Captain’s house downtown Edgartown tucked away on quiet South Summer Street. Luxury inn exquisitely appointed with fine art, old-world ambiance, tranquility and gracious hospitality. A Forbes four star property.",
+        "existing": "27 South Summer Street",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Ashley Inn",
+      "description": null,
+      "sourceCategory": "ACCOMMODATIONS",
+      "address": "Discover the essence of a Martha's Vineyard Bed and Breakfast at the award-winning Ashley Inn in Edgartown.",
+      "phone": "(508) 627-9655",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "lodging-and-tourism",
+      "category": "Lodging & Tourism",
+      "subcategory": "Hotels",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "ashley-inn",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "name": "Ashley Inn",
+      "gazetteCategory": "Lodging",
+      "gazetteTown": "Edgartown",
+      "address": "129 Main St, Edgartown, MA 0253",
+      "website": "https://ashleyinn.net",
+      "phone": "(508) 627-9655",
+      "social": {},
+      "businessType": "lodging-and-tourism",
+      "category": "Hotels",
+      "slug": "ashley-inn",
+      "town": "Edgartown",
+      "townSlug": "edgartown"
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "gazette",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "Discover the essence of a Martha's Vineyard Bed and Breakfast at the award-winning Ashley Inn in Edgartown.",
+        "existing": "129 Main St, Edgartown, MA 0253",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Felix Neck Wildlife Sanctuary",
+      "description": "Miles of trails through woodlands, meadows, ponds, salt marsh, and along the shorelines of Martha's Vineyard, which allow for exploration, discovery, and connection to this beautiful landscape.",
+      "sourceCategory": "ACTIVITIES & RECREATION",
+      "address": "100 Felix Neck Dr., Edgartown",
+      "phone": null,
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "arts-and-entertainment",
+      "category": "Arts & Entertainment",
+      "subcategory": "Outdoor Activities",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "felix-neck-wildlife-sanctuary",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 340,
+      "name": "Felix Neck Wildlife Sanctuary",
+      "slug": "felix-neck-wildlife-sanctuary-vineyard-haven",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "Miles of trails through woodlands, meadows, ponds, salt marsh, and along the shorelines of Martha's Vineyard, which allow for exploration, discovery, and connection to this beautiful landscape.",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "494 ",
+      "phone": "(508) 627-4850",
+      "website": "http://massaudubon.org/felixneck",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/MassAudubonFelixNeck",
+        "instagram": "https://www.instagram.com/MassAudubonFelixNeck/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "100 Felix Neck Dr., Edgartown",
+        "existing": "494 ",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Larry's Tackle Shop",
+      "description": "Established in 1947, Larry's Tackle Shop has been one of the leading outfitters for Vineyard anglers and hunters.",
+      "sourceCategory": "ACTIVITIES & RECREATION",
+      "address": "258 Upper Main, Edgartown",
+      "phone": "(508) 627-3909",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "arts-and-entertainment",
+      "category": "Arts & Entertainment",
+      "subcategory": "Outdoor Activities",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "larrys-tackle-shop",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 549,
+      "name": "Larry's Tackle Shop",
+      "slug": "larrys-tackle-shop-edgartown",
+      "category": "Shopping & Specialty Retail",
+      "businessType": "shopping-and-specialty-retail",
+      "subcategory": "Gift Shops",
+      "description": "Visit Larry in Vineyard Haven, Martha's Vineyard, for quality service and island hospitality.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "141 Main St, Edgartown, MA 02539",
+      "phone": "(508) 627-5088",
+      "website": "http://larrystackle.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "http://www.facebook.com/larrystackle.shop",
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "phone",
+        "parsed": "(508) 627-3909",
+        "existing": "(508) 627-5088",
+        "action": "conflict"
+      },
+      {
+        "field": "address",
+        "parsed": "258 Upper Main, Edgartown",
+        "existing": "141 Main St, Edgartown, MA 02539",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Polly Hill Arboretum",
+      "description": "Horticultural and botanical landmark",
+      "sourceCategory": "ACTIVITIES & RECREATION",
+      "address": "809 StateRd, West Tisbury",
+      "phone": null,
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "arts-and-entertainment",
+      "category": "Arts & Entertainment",
+      "subcategory": "Outdoor Activities",
+      "town": "West Tisbury",
+      "townSlug": "west-tisbury",
+      "zip": null,
+      "slug": "polly-hill-arboretum",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 343,
+      "name": "The Polly Hill Arboretum",
+      "slug": "the-polly-hill-arboretum-west-tisbury",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "The Polly Hill Arboretum is a restaurant in Vineyard Haven, Martha's Vineyard, known for quality cuisine and welcoming locals and visitors year-round.",
+      "town": "West Tisbury",
+      "townSlug": "west-tisbury",
+      "address": "809 State Road West",
+      "phone": "(508) 693-9426",
+      "website": "http://pollyhillarboretum.org/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": null,
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.8,
+    "matchReason": "fuzzy_name_same_town",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "809 StateRd, West Tisbury",
+        "existing": "809 State Road West",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Lil' Larry's Tackle Shop",
+      "description": "Larry's Tackle Shop is a leading outfitter for Martha's Vineyard anglers and hunters — with the latest gear, fishing reports and more.",
+      "sourceCategory": "ACTIVITIES & RECREATION",
+      "address": "13 Dock St, Edgartown",
+      "phone": "(508) 627-7117",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "arts-and-entertainment",
+      "category": "Arts & Entertainment",
+      "subcategory": "Outdoor Activities",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "lil-larrys-tackle-shop",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 549,
+      "name": "Larry's Tackle Shop",
+      "slug": "larrys-tackle-shop-edgartown",
+      "category": "Shopping & Specialty Retail",
+      "businessType": "shopping-and-specialty-retail",
+      "subcategory": "Gift Shops",
+      "description": "Visit Larry in Vineyard Haven, Martha's Vineyard, for quality service and island hospitality.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "141 Main St, Edgartown, MA 02539",
+      "phone": "(508) 627-5088",
+      "website": "http://larrystackle.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "http://www.facebook.com/larrystackle.shop",
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.8,
+    "matchReason": "fuzzy_name_same_town",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "phone",
+        "parsed": "(508) 627-7117",
+        "existing": "(508) 627-5088",
+        "action": "conflict"
+      },
+      {
+        "field": "address",
+        "parsed": "13 Dock St, Edgartown",
+        "existing": "141 Main St, Edgartown, MA 02539",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Eisenhauer Gallery",
+      "description": "The Eisenhauer Gallery specializes in contemporary art by local and international artists.",
+      "sourceCategory": "MARTHA'S VINEYARD ARTS, GALLERIES & ARTISTIC SERVICES",
+      "address": "38 N Water St, Edgartown",
+      "phone": "(508) 627-7003",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "arts-and-entertainment",
+      "category": "Arts & Entertainment",
+      "subcategory": "Art Galleries",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "eisenhauer-gallery",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 286,
+      "name": "Eisenhauer Gallery",
+      "slug": "eisenhauer-gallery-edgartown",
+      "category": "Arts & Entertainment",
+      "businessType": "arts-and-entertainment",
+      "subcategory": "Art Galleries",
+      "description": "The Eisenhauer Gallery is known for its eclectic paintings and playful but elegant showroom. Over 40 artists from places as far away as New Zealand and as local as Chilmark, MA showcase work that stimulates the soul. These artists offer talent that is certainly outside the box.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "38 N WATER ST PO Box 1930",
+      "phone": null,
+      "website": "http://eisenhauergallery.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 60,
+      "social": {
+        "facebook": "https://www.facebook.com/eisenhauergallery/",
+        "instagram": "https://www.instagram.com/eisenhauer_gallery/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "38 N Water St, Edgartown",
+        "existing": "38 N WATER ST PO Box 1930",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Martha's Vineyard Glassworks",
+      "description": "Glass blown vases, pitchers, bowls, etc.",
+      "sourceCategory": "MARTHA'S VINEYARD ARTS, GALLERIES & ARTISTIC SERVICES",
+      "address": "683 State Rd, West Tisbury",
+      "phone": "(508) 693-3591",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "arts-and-entertainment",
+      "category": "Arts & Entertainment",
+      "subcategory": "Art Galleries",
+      "town": "West Tisbury",
+      "townSlug": "west-tisbury",
+      "zip": null,
+      "slug": "marthas-vineyard-glassworks",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "name": "Martha's Vineyard Glassworks",
+      "gazetteCategory": "Arts & Culture",
+      "gazetteTown": "West Tisbury",
+      "address": "683 State Rd, West Tisbury, MA 02575",
+      "website": "https://mvglassworks.com",
+      "phone": "(508) 693-6026",
+      "social": {},
+      "businessType": "arts-and-entertainment",
+      "category": "Arts & Culture",
+      "slug": "marthas-vineyard-glassworks",
+      "town": "West Tisbury",
+      "townSlug": "west-tisbury"
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "gazette",
+    "conflictDiffs": [
+      {
+        "field": "phone",
+        "parsed": "(508) 693-3591",
+        "existing": "(508) 693-6026",
+        "action": "conflict"
+      },
+      {
+        "field": "address",
+        "parsed": "683 State Rd, West Tisbury",
+        "existing": "683 State Rd, West Tisbury, MA 02575",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Featherstone Center for the Arts",
+      "description": "The Meetinghouse is a community center for the arts. The goal is to bring the community together to support and encourage literary, visual and performing arts.",
+      "sourceCategory": "MARTHA'S VINEYARD ARTS, GALLERIES & ARTISTIC SERVICES",
+      "address": "30 Featherstone Ln, Oak Bluffs",
+      "phone": "(508) 693-1850",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "arts-and-entertainment",
+      "category": "Arts & Entertainment",
+      "subcategory": "Art Galleries",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "featherstone-center-for-the-arts",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 288,
+      "name": "Featherstone Center for the Arts",
+      "slug": "featherstone-center-for-the-arts-oak-bluffs",
+      "category": "Arts & Entertainment",
+      "businessType": "arts-and-entertainment",
+      "subcategory": "Art Galleries",
+      "description": "Featherstone Center for the Arts brings delicious dining to Vineyard Haven, Martha's Vineyard, offering a memorable meal for island visitors and residents alike.",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "Oak Bluffs, MA, 02557",
+      "phone": "(508) 693-1850",
+      "website": "http://featherstoneart.org/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4536222,
+        "lng": -70.5684337
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/Featherstone-Center-for-the-Arts-152288404793149/",
+        "instagram": "https://www.instagram.com/featherstonecenterforthearts/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "30 Featherstone Ln, Oak Bluffs",
+        "existing": "Oak Bluffs, MA, 02557",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "North Water Gallery",
+      "description": "We are committed to providing you with a large selection of local, regional, and national artists in a friendly comforting environment.",
+      "sourceCategory": "MARTHA'S VINEYARD ARTS, GALLERIES & ARTISTIC SERVICES",
+      "address": "27 N Water St, Edgartown",
+      "phone": "(508) 627-6002",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "arts-and-entertainment",
+      "category": "Arts & Entertainment",
+      "subcategory": "Art Galleries",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "north-water-gallery",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 312,
+      "name": "North Water Gallery",
+      "slug": "north-water-gallery-west-tisbury",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "North Water Gallery is a restaurant in Vineyard Haven, Martha's Vineyard, known for quality cuisine and welcoming locals and visitors year-round.",
+      "town": "West Tisbury",
+      "townSlug": "west-tisbury",
+      "address": "1050 State Road                West",
+      "phone": "(508) 627-6002",
+      "website": "http://northwatergallery.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/northwatergallery/",
+        "instagram": "https://www.instagram.com/northwatergallery/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "27 N Water St, Edgartown",
+        "existing": "1050 State Road                West",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "The Christina Gallery",
+      "description": "The Christina Gallery has as its focus traditional art, including Impressionism and Expressionism.",
+      "sourceCategory": "MARTHA'S VINEYARD ARTS, GALLERIES & ARTISTIC SERVICES",
+      "address": "32 N Water St, Edgartown",
+      "phone": "(508) 627-8794",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "arts-and-entertainment",
+      "category": "Arts & Entertainment",
+      "subcategory": "Art Galleries",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "the-christina-gallery",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 322,
+      "name": "The Christina Gallery",
+      "slug": "the-christina-gallery-edgartown",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "The Christina Gallery is a restaurant in Vineyard Haven, Martha's Vineyard, known for quality cuisine and welcoming locals and visitors year-round.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "5 Winter Street",
+      "phone": "(508) 627-8794",
+      "website": "http://christina.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/thechristinagallery/",
+        "instagram": "https://www.instagram.com/thechristinagallerymv/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "32 N Water St, Edgartown",
+        "existing": "5 Winter Street",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Alison Shaw Photography",
+      "description": "Alison Shaw has been a photographer all of her life, and has lived on Martha’s Vineyard for most of that time.",
+      "sourceCategory": "MARTHA'S VINEYARD ARTS, GALLERIES & ARTISTIC SERVICES",
+      "address": "88 Dukes County Ave, Oak Bluffs",
+      "phone": "(508) 693-4429",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "arts-and-entertainment",
+      "category": "Arts & Entertainment",
+      "subcategory": "Art Galleries",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "alison-shaw-photography",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 278,
+      "name": "Alison Shaw Photography",
+      "slug": "alison-shaw-photography-oak-bluffs",
+      "category": "Arts & Entertainment",
+      "businessType": "arts-and-entertainment",
+      "subcategory": "Photographers",
+      "description": "Fine art photography Our primary focus is on Alison’s signature photography. From color seascapes on the island of Martha’s Vineyard to b&w editorial shots for the Vineyard Gazette, Alison’s work spans 40 years. Take the guesswork out of buying...",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "Title\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n \n\n\n\n\n\n \n\n 88 Dukes County Avenue\nPO Box 1545\nOak Bluffs, MA 02557",
+      "phone": "(508) 693-4429",
+      "website": "http://alisonshaw.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 75,
+      "social": {
+        "facebook": "https://www.facebook.com/AlisonShawPhotography",
+        "instagram": "https://www.instagram.com/alisonshaw",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "88 Dukes County Ave, Oak Bluffs",
+        "existing": "Title\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n \n\n\n\n\n\n \n\n 88 Dukes County Avenue\nPO Box 1545\nOak Bluffs, MA 02557",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Bellezza Salon",
+      "description": "Bellezza Salon offers men's and women's haircuts, coloring, event, bridal and engagement hair styling, makeup, hair removal, eyebrow design, facial and body aesthetics.",
+      "sourceCategory": "MARTHA'S VINEYARD BEAUTY SALONS, WELLNESS & FITNESS DIRECTORY",
+      "address": "238 Upper Main St., Edgartown",
+      "phone": "(617) 501-6621",
+      "website": "https://bellezzamvsalon.com",
+      "source_file": "businesses_2_rtf",
+      "businessType": "beauty-and-wellness",
+      "category": "Beauty & Wellness",
+      "subcategory": "Spas",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "bellezza-salon",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "name": "Bellezza Salon",
+      "gazetteCategory": "General Business Information",
+      "gazetteTown": "Vineyard Haven",
+      "address": "457 A State Rd, Vineyard Haven, MA 02568",
+      "website": "https://bellezzamvsalon.com",
+      "phone": "(508) 338-7140",
+      "social": {},
+      "businessType": "shopping-and-specialty-retail",
+      "category": "General Business",
+      "slug": "bellezza-salon",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven"
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "gazette",
+    "conflictDiffs": [
+      {
+        "field": "phone",
+        "parsed": "(617) 501-6621",
+        "existing": "(508) 338-7140",
+        "action": "conflict"
+      },
+      {
+        "field": "address",
+        "parsed": "238 Upper Main St., Edgartown",
+        "existing": "457 A State Rd, Vineyard Haven, MA 02568",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "King's Barber Shop",
+      "description": "Stylish Haircuts, Head Art, Shaving, Beards, Line Ups.",
+      "sourceCategory": "MARTHA'S VINEYARD BEAUTY SALONS, WELLNESS & FITNESS DIRECTORY",
+      "address": "395 State Rd, Vineyard Haven",
+      "phone": "(508) 338-7853",
+      "website": "https://kingsbarbershopmv.com",
+      "source_file": "businesses_2_rtf",
+      "businessType": "beauty-and-wellness",
+      "category": "Beauty & Wellness",
+      "subcategory": "Spas",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "kings-barber-shop",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "name": "King's Barbershop",
+      "gazetteCategory": "General Business Information",
+      "gazetteTown": "Vineyard Haven",
+      "address": "395 State Rd, Vineyard Haven, MA 02568",
+      "website": "https://kingsbarbershopmv.com",
+      "phone": "(508) 338-7853",
+      "social": {},
+      "businessType": "shopping-and-specialty-retail",
+      "category": "General Business",
+      "slug": "kings-barbershop",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven"
+    },
+    "score": 0.9,
+    "matchReason": "website_match",
+    "matchSource": "gazette",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "395 State Rd, Vineyard Haven",
+        "existing": "395 State Rd, Vineyard Haven, MA 02568",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "YMCA of Martha’s Vineyard",
+      "description": "year round recreational community center offers health and wellness programs, gym, swimming pool, summer camp and after school programs for children.",
+      "sourceCategory": "MARTHA'S VINEYARD BEAUTY SALONS, WELLNESS & FITNESS DIRECTORY",
+      "address": "111R Edgartown-Vineyard Haven Rd., Oak Bluffs",
+      "phone": "(508) 696-7171",
+      "website": "https://ymcamv.org",
+      "source_file": "businesses_2_rtf",
+      "businessType": "beauty-and-wellness",
+      "category": "Beauty & Wellness",
+      "subcategory": "Spas",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "ymca-of-martha-s-vineyard",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 374,
+      "name": "Ymca of Martha's Vineyard",
+      "slug": "ymca-of-marthas-vineyard-vineyard-haven",
+      "category": "Beauty & Wellness",
+      "businessType": "beauty-and-wellness",
+      "subcategory": "Spas",
+      "description": "Experience wellness at Ymca of Martha's Vineyard in Vineyard Haven, Martha's Vineyard, dedicated to your health and wellbeing.",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "VINEYARD HAVEN, MA 02568",
+      "phone": "(508) 696-7171",
+      "website": "http://ymcamv.org/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4542914,
+        "lng": -70.6038026
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/YMCAMV/",
+        "instagram": "https://www.instagram.com/aquilamvy/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.9,
+    "matchReason": "website_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "111R Edgartown-Vineyard Haven Rd., Oak Bluffs",
+        "existing": "VINEYARD HAVEN, MA 02568",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Conroy Apothecary",
+      "description": null,
+      "sourceCategory": "MARTHA'S VINEYARD BEAUTY SALONS, WELLNESS & FITNESS DIRECTORY",
+      "address": "459 State Rd, West Tisbury",
+      "phone": "(508) 693-7070",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "beauty-and-wellness",
+      "category": "Beauty & Wellness",
+      "subcategory": "Spas",
+      "town": "West Tisbury",
+      "townSlug": "west-tisbury",
+      "zip": null,
+      "slug": "conroy-apothecary",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 270,
+      "name": "Conroy Apothecary",
+      "slug": "conroy-apothecary-vineyard-haven",
+      "category": "Medical Services & Providers",
+      "businessType": "medical-services-and-providers",
+      "subcategory": "Pharmacies",
+      "description": "Your one-stop shop in West Tisbury on Martha's Vineyard for health, wellness, and seasonal gifts.",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "459 State Road West",
+      "phone": "(508) 693-7070",
+      "website": "http://conroy-apothecary.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.41614,
+        "lng": -70.6672153
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/ConroyApothecary/",
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "459 State Rd, West Tisbury",
+        "existing": "459 State Road West",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Sea Spa Salon",
+      "description": "HAIR * NAILS * FACIALS * WAXING * BODY TREATMENTS * MASSAGE Wedding & hotel packages * Yoga & fitness retreats",
+      "sourceCategory": "MARTHA'S VINEYARD BEAUTY SALONS, WELLNESS & FITNESS DIRECTORY",
+      "address": "17 Winter St, Edgartown",
+      "phone": "(508) 627-8953",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "beauty-and-wellness",
+      "category": "Beauty & Wellness",
+      "subcategory": "Spas",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "sea-spa-salon",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 610,
+      "name": "Sea Spa Salon",
+      "slug": "sea-spa-salon-edgartown",
+      "category": "Beauty & Wellness",
+      "businessType": "beauty-and-wellness",
+      "subcategory": "Spas",
+      "description": "Sea Spasalon provides wellness services in Vineyard Haven, Martha's Vineyard, supporting health and relaxation.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "93 Main St, Edgartown, MA 02539",
+      "phone": "(508) 627-8953",
+      "website": "http://seaspasalonmv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "unknown",
+      "confidence": 65,
+      "social": {
+        "facebook": "https://www.facebook.com/seaspasalon/?ref=hl",
+        "instagram": "https://www.instagram.com/seaspasalon/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "17 Winter St, Edgartown",
+        "existing": "93 Main St, Edgartown, MA 02539",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Maggie's Salon",
+      "description": "Renowned for it's stylist's abilities and technical expertise in haircutting, color and customer care.",
+      "sourceCategory": "MARTHA'S VINEYARD BEAUTY SALONS, WELLNESS & FITNESS DIRECTORY",
+      "address": "31 Beach Rd, Vineyard Haven",
+      "phone": "(508) 693-2875",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "beauty-and-wellness",
+      "category": "Beauty & Wellness",
+      "subcategory": "Spas",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "maggies-salon",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "name": "Maggie's Salon",
+      "gazetteCategory": "General Business Information",
+      "gazetteTown": "Vineyard Haven",
+      "address": "31 Anchor Wy, Vineyard Haven, MA 02568",
+      "website": "https://maggiessalon.com",
+      "phone": "(508) 693-2875",
+      "social": {},
+      "businessType": "shopping-and-specialty-retail",
+      "category": "General Business",
+      "slug": "maggies-salon",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven"
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "gazette",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "31 Beach Rd, Vineyard Haven",
+        "existing": "31 Anchor Wy, Vineyard Haven, MA 02568",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Circuit Style Salon",
+      "description": "Cut, style, color, waxing",
+      "sourceCategory": "MARTHA'S VINEYARD BEAUTY SALONS, WELLNESS & FITNESS DIRECTORY",
+      "address": "47 Circuit Ave, Oak Bluffs",
+      "phone": "(508) 693-2002",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "beauty-and-wellness",
+      "category": "Beauty & Wellness",
+      "subcategory": "Spas",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "circuit-style-salon",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "name": "Circuit Style Salon",
+      "gazetteCategory": "General Business Information",
+      "gazetteTown": "Oak Bluffs",
+      "address": "47 Circuit Ave, Oak Bluffs, MA 02557",
+      "website": "https://circuitstylesalon.com",
+      "phone": "(508) 693-7542",
+      "social": {},
+      "businessType": "shopping-and-specialty-retail",
+      "category": "General Business",
+      "slug": "circuit-style-salon",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs"
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "gazette",
+    "conflictDiffs": [
+      {
+        "field": "phone",
+        "parsed": "(508) 693-2002",
+        "existing": "(508) 693-7542",
+        "action": "conflict"
+      },
+      {
+        "field": "address",
+        "parsed": "47 Circuit Ave, Oak Bluffs",
+        "existing": "47 Circuit Ave, Oak Bluffs, MA 02557",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "The Martha's Vineyard Times",
+      "description": "Independently owned weekly community newspaper, published by The MV Times Corp.",
+      "sourceCategory": "MARTHA'S VINEYARD BUSINESS, LEGAL & FINANCIAL SERVICES DIRECTORY",
+      "address": "30 Beach Rd, Vineyard Haven",
+      "phone": "(508) 693-6100",
+      "website": "https://mvtimes.com",
+      "source_file": "businesses_2_rtf",
+      "businessType": "business-and-professional-services",
+      "category": "Business & Professional Services",
+      "subcategory": "Professional Services",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "the-marthas-vineyard-times",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 729,
+      "name": "Model Deli",
+      "slug": "model-deli-west-tisbury",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "Sun peaking through morning clouds, slight chill creeping, bronze leaves getting closer. The smell of fall is faint, but by lunchtime it’ll be a tease of a summer day. My wife and I chose this September Saturday to run errands. Living in Aquinnah means errand days come with a lunch date. These days...",
+      "town": "West Tisbury",
+      "townSlug": "west-tisbury",
+      "address": "688 State Rd, West Tisbury, MA 02575",
+      "phone": null,
+      "website": "https://www.mvtimes.com/2024/10/16/model-deli-model-deliciousness/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 60,
+      "social": {
+        "facebook": "https://www.facebook.com/mvtimes/",
+        "instagram": "https://www.instagram.com/marthasvineyardtimes/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.9,
+    "matchReason": "website_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "30 Beach Rd, Vineyard Haven",
+        "existing": "688 State Rd, West Tisbury, MA 02575",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "UPS Store",
+      "description": "Package delivery servicr",
+      "sourceCategory": "MARTHA'S VINEYARD BUSINESS, LEGAL & FINANCIAL SERVICES DIRECTORY",
+      "address": "455 State Rd, Vineyard Haven",
+      "phone": "(508) 696-0600",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "business-and-professional-services",
+      "category": "Business & Professional Services",
+      "subcategory": "Professional Services",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "ups-store",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "name": "UPS Store",
+      "gazetteCategory": "General Business Information",
+      "gazetteTown": "Vineyard Haven",
+      "address": "455 State Rd, Vineyard Haven, MA 02568",
+      "website": null,
+      "phone": "(508) 696-0600",
+      "social": {},
+      "businessType": "shopping-and-specialty-retail",
+      "category": "General Business",
+      "slug": "ups-store",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven"
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "gazette",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "455 State Rd, Vineyard Haven",
+        "existing": "455 State Rd, Vineyard Haven, MA 02568",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Midland Plumbing and Heating",
+      "description": "Plumbing Service · Heating, Ventilating & Air Conditioning Service",
+      "sourceCategory": "MARTHA'S VINEYARD CONSTRUCTION, GENERAL CONTRACTORS BUILDING SERVICES & SUPPLIES",
+      "address": "67 Midland Ave, Vineyard Haven",
+      "phone": "(508) 693-1080",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "building-and-construction",
+      "category": "Building & Construction",
+      "subcategory": "General Contractors",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "midland-plumbing-and-heating",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 681,
+      "name": "Callahan Plumbing and Heating, INC",
+      "slug": "callahan-plumbing-and-heating-inc-vineyard-haven",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Hotels",
+      "description": "Callahan Plumbing and Heating, INC is a welcoming destination in Vineyard Haven, Martha's Vineyard, offering restful stays for island visitors.",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "44 Webaqua St",
+      "phone": "(508) 696-6088",
+      "website": "https://gomarthasvineyard.com/directory/callahan-plumbing-and-heating-inc",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/gomarthasvineyard/",
+        "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.8,
+    "matchReason": "fuzzy_name_same_town",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "phone",
+        "parsed": "(508) 693-1080",
+        "existing": "(508) 696-6088",
+        "action": "conflict"
+      },
+      {
+        "field": "address",
+        "parsed": "67 Midland Ave, Vineyard Haven",
+        "existing": "44 Webaqua St",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Callahan Plumbing and Heating, Inc",
+      "description": null,
+      "sourceCategory": "MARTHA'S VINEYARD CONSTRUCTION, GENERAL CONTRACTORS BUILDING SERVICES & SUPPLIES",
+      "address": "44 Webaqua St, Vineyard Haven",
+      "phone": "(508) 696-6088",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "building-and-construction",
+      "category": "Building & Construction",
+      "subcategory": "General Contractors",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "callahan-plumbing-and-heating-inc",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 681,
+      "name": "Callahan Plumbing and Heating, INC",
+      "slug": "callahan-plumbing-and-heating-inc-vineyard-haven",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Hotels",
+      "description": "Callahan Plumbing and Heating, INC is a welcoming destination in Vineyard Haven, Martha's Vineyard, offering restful stays for island visitors.",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "44 Webaqua St",
+      "phone": "(508) 696-6088",
+      "website": "https://gomarthasvineyard.com/directory/callahan-plumbing-and-heating-inc",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/gomarthasvineyard/",
+        "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "44 Webaqua St, Vineyard Haven",
+        "existing": "44 Webaqua St",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "A. P. Fortes Plumbing and Heating",
+      "description": "Plumbing and Heating Contractors.",
+      "sourceCategory": "MARTHA'S VINEYARD CONSTRUCTION, GENERAL CONTRACTORS BUILDING SERVICES & SUPPLIES",
+      "address": "155 Spring St, Vineyard Haven",
+      "phone": "(508) 693-2394",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "building-and-construction",
+      "category": "Building & Construction",
+      "subcategory": "General Contractors",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "a-p-fortes-plumbing-and-heating",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 679,
+      "name": "A. P. Fortes Plumbing and Heating",
+      "slug": "a-p-fortes-plumbing-and-heating-vineyard-haven",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Hotels",
+      "description": "A. P. Fortes Plumbing and Heating is a welcoming destination in Vineyard Haven, Martha's Vineyard, offering restful stays for island visitors.",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "155 Spring St",
+      "phone": "(508) 693-2394",
+      "website": "https://gomarthasvineyard.com/directory/p-fortes-plumbing-and-heating",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/gomarthasvineyard/",
+        "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "155 Spring St, Vineyard Haven",
+        "existing": "155 Spring St",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Brissette Electric Inc.",
+      "description": "Brissette Electric, Inc. is a Martha’s Vineyard based electrical contractor committed to customer service and quality.",
+      "sourceCategory": "MARTHA'S VINEYARD CONSTRUCTION, GENERAL CONTRACTORS BUILDING SERVICES & SUPPLIES",
+      "address": "1 Lagoon Pond Rd, Vineyard Haven",
+      "phone": "(508) 693-0764",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "building-and-construction",
+      "category": "Building & Construction",
+      "subcategory": "General Contractors",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "brissette-electric-inc",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 677,
+      "name": "Brissette Electric Inc.",
+      "slug": "brissette-electric-inc-vineyard-haven",
+      "category": "Family, Community & Government",
+      "businessType": "family-community-government",
+      "subcategory": "Community Organizations",
+      "description": "Brissette Electric Inc. contributes to Vineyard Haven, Martha's Vineyard, through community programs and engagement.",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "1 Lagoon Pond Rd",
+      "phone": "(508) 693-0764",
+      "website": "http://briselectric.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.453035,
+        "lng": -70.601195
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "http://www.facebook.com/sharer.php?u=https%3a%2f%2fbusiness.mvy.com%2fmemberdirectory%2fDetails%2fbrissette-electric-inc-2228522",
+        "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "1 Lagoon Pond Rd, Vineyard Haven",
+        "existing": "1 Lagoon Pond Rd",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Michael Mayrand Plumbing and Heating",
+      "description": "Plumbing and heating contractor.",
+      "sourceCategory": "MARTHA'S VINEYARD CONSTRUCTION, GENERAL CONTRACTORS BUILDING SERVICES & SUPPLIES",
+      "address": "5 Mayrand Way, Vineyard Haven",
+      "phone": "(508) 693-9583",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "building-and-construction",
+      "category": "Building & Construction",
+      "subcategory": "General Contractors",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "michael-mayrand-plumbing-and-heating",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 681,
+      "name": "Callahan Plumbing and Heating, INC",
+      "slug": "callahan-plumbing-and-heating-inc-vineyard-haven",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Hotels",
+      "description": "Callahan Plumbing and Heating, INC is a welcoming destination in Vineyard Haven, Martha's Vineyard, offering restful stays for island visitors.",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "44 Webaqua St",
+      "phone": "(508) 696-6088",
+      "website": "https://gomarthasvineyard.com/directory/callahan-plumbing-and-heating-inc",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/gomarthasvineyard/",
+        "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.8,
+    "matchReason": "fuzzy_name_same_town",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "phone",
+        "parsed": "(508) 693-9583",
+        "existing": "(508) 696-6088",
+        "action": "conflict"
+      },
+      {
+        "field": "address",
+        "parsed": "5 Mayrand Way, Vineyard Haven",
+        "existing": "44 Webaqua St",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "MV Plumbing and Heating, Inc",
+      "description": "With more than a decades worth of experience in construction, Daniel can help you with your plumbing, heating, and cooling needs.",
+      "sourceCategory": "MARTHA'S VINEYARD CONSTRUCTION, GENERAL CONTRACTORS BUILDING SERVICES & SUPPLIES",
+      "address": "50 Lagoon Ave, Vineyard Haven",
+      "phone": "(508) 693-9542",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "building-and-construction",
+      "category": "Building & Construction",
+      "subcategory": "General Contractors",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "mv-plumbing-and-heating-inc",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 681,
+      "name": "Callahan Plumbing and Heating, INC",
+      "slug": "callahan-plumbing-and-heating-inc-vineyard-haven",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Hotels",
+      "description": "Callahan Plumbing and Heating, INC is a welcoming destination in Vineyard Haven, Martha's Vineyard, offering restful stays for island visitors.",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "44 Webaqua St",
+      "phone": "(508) 696-6088",
+      "website": "https://gomarthasvineyard.com/directory/callahan-plumbing-and-heating-inc",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/gomarthasvineyard/",
+        "instagram": "https://www.instagram.com/visitmarthasvineyard/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.8,
+    "matchReason": "fuzzy_name_same_town",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "phone",
+        "parsed": "(508) 693-9542",
+        "existing": "(508) 696-6088",
+        "action": "conflict"
+      },
+      {
+        "field": "address",
+        "parsed": "50 Lagoon Ave, Vineyard Haven",
+        "existing": "44 Webaqua St",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Martha's Vineyard Film Center",
+      "description": "Founded in February 2002 by Richard Paradise, the Martha’s Vineyard Film Society, Inc.",
+      "sourceCategory": "MARTHA'S VINEYARD ENTERTAINMENT & EVENTS DIRECTORY",
+      "address": "79 Beach Rd, Vineyard Haven",
+      "phone": "(508) 696-9369",
+      "website": "https://mvfilmsociety.com",
+      "source_file": "businesses_2_rtf",
+      "businessType": "arts-and-entertainment",
+      "category": "Arts & Entertainment",
+      "subcategory": "Entertainment Services",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "marthas-vineyard-film-center",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 8,
+      "name": "Martha's Vineyard Film Festival",
+      "slug": "marthas-vineyard-film-festival-vineyard-haven",
+      "category": "Arts & Entertainment",
+      "businessType": "arts-and-entertainment",
+      "subcategory": "Art Galleries",
+      "description": "Annual film festival and year-round film programming...",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "Vineyard Haven, MA 02568",
+      "phone": null,
+      "website": "https://www.mvfilmsociety.com",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4542914,
+        "lng": -70.6038026
+      },
+      "status": "active",
+      "confidence": 50,
+      "social": {
+        "facebook": "https://www.facebook.com/pages/Marthas-Vineyard-Film-Society/136334769594?ref=ts",
+        "instagram": "https://www.instagram.com/mvfilmsociety/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.9,
+    "matchReason": "website_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "79 Beach Rd, Vineyard Haven",
+        "existing": "Vineyard Haven, MA 02568",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Strand Theatre",
+      "description": "From the big screen to classics-in-the-making, engaging documentaries to local film festival presentations, films from across the globe to the little films that could - in partnership with the non-",
+      "sourceCategory": "MARTHA'S VINEYARD ENTERTAINMENT & EVENTS DIRECTORY",
+      "address": "11 Oak Bluffs Ave, Oak Bluffs",
+      "phone": "(508) 696-9369",
+      "website": "https://mvtheaterfoundation.org",
+      "source_file": "businesses_2_rtf",
+      "businessType": "arts-and-entertainment",
+      "category": "Arts & Entertainment",
+      "subcategory": "Entertainment Services",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "strand-theatre",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 318,
+      "name": "Strand Theatre MV",
+      "slug": "strand-theatre-mv-oak-bluffs",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "Strand Theatre MV offers dining in Vineyard Haven, Martha's Vineyard, serving fresh meals in a relaxed island setting.",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "11 Oak Bluffs Ave",
+      "phone": "(312) 576-4890",
+      "website": "http://strandtheatre-marthasvineyard.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "http://facebook.com/StrandTheatreMV.com",
+        "instagram": "http://instagram.com/StrandTheatreMV",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.8,
+    "matchReason": "fuzzy_name_same_town",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "phone",
+        "parsed": "(508) 696-9369",
+        "existing": "(312) 576-4890",
+        "action": "conflict"
+      },
+      {
+        "field": "website",
+        "parsed": "https://mvtheaterfoundation.org",
+        "existing": "http://strandtheatre-marthasvineyard.com/",
+        "action": "conflict"
+      },
+      {
+        "field": "address",
+        "parsed": "11 Oak Bluffs Ave, Oak Bluffs",
+        "existing": "11 Oak Bluffs Ave",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "The Yard",
+      "description": "Dance, performances, classes, workshops",
+      "sourceCategory": "MARTHA'S VINEYARD ENTERTAINMENT & EVENTS DIRECTORY",
+      "address": "1 The Yard, Chilmark",
+      "phone": "(508) 645-9662",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "arts-and-entertainment",
+      "category": "Arts & Entertainment",
+      "subcategory": "Entertainment Services",
+      "town": "Chilmark",
+      "townSlug": "chilmark",
+      "zip": null,
+      "slug": "the-yard",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 329,
+      "name": "The Yard",
+      "slug": "the-yard-chilmark",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "The Yard is a creation and performance platform for artists from around the globe, and we offer exhilarating, wide-ranging, and educational arts experiences through performances, residencies, and community activities.",
+      "town": "Chilmark",
+      "townSlug": "chilmark",
+      "address": "1 The Yard",
+      "phone": "(508) 645-9662",
+      "website": "http://dancetheyard.org/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/TheYardMV",
+        "instagram": "http://instagram.com/dance_the_yard",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "1 The Yard, Chilmark",
+        "existing": "1 The Yard",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "The Gay Head Store",
+      "description": "Convenience Store open seasonally. We carry coffee, groceries, pies etc etc. See live webcam from our store here",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "33 Aquinnah Cir, Aquinnah",
+      "phone": "(508) 955-9142",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Aquinnah",
+      "townSlug": "aquinnah",
+      "zip": null,
+      "slug": "the-gay-head-store",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "name": "The Gay Head Store",
+      "gazetteCategory": "Restaurants",
+      "gazetteTown": "Aquinnah",
+      "address": "33 Aquinnah Cir, Aquinnah, MA 02535",
+      "website": null,
+      "phone": "(508) 955-9142",
+      "social": {},
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants",
+      "slug": "the-gay-head-store",
+      "town": "Aquinnah",
+      "townSlug": "aquinnah"
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "gazette",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "33 Aquinnah Cir, Aquinnah",
+        "existing": "33 Aquinnah Cir, Aquinnah, MA 02535",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Offshore Ale Company",
+      "description": "Martha's Vineyard premier brewery and pub.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "30 Kennebec Ave, Oak Bluffs",
+      "phone": "(508) 693-2626",
+      "website": "https://offshoreale.com",
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "offshore-ale-company",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 168,
+      "name": "Offshore Ale Company",
+      "slug": "offshore-ale-company-oak-bluffs",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "Offshore Ale Company offers dining in Oak Bluffs, Martha's Vineyard, serving fresh meals in a relaxed island setting.",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "30 Kennebec Avenue",
+      "phone": "(508) 693-2626",
+      "website": "http://offshoreale.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4561729,
+        "lng": -70.557252
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/OffshoreAle/",
+        "instagram": "https://www.instagram.com/offshoreale",
+        "yelp": "https://www.yelp.com/biz/offshore-ale-co-oak-bluffs",
+        "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g41750-d527270-Reviews-Offshore_Ale_Company-Oak_Bluffs_Martha_s_Vineyard_Massachusetts.html"
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "30 Kennebec Ave, Oak Bluffs",
+        "existing": "30 Kennebec Avenue",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "The Barn Bowl & Bistro",
+      "description": null,
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "Bar, bistro (lunch, dinner, take-out) 10 bowling lanes fun for all family downtown Oak Bluffs",
+      "phone": "(508) 696-9800",
+      "website": "https://thebarnmv.com",
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "the-barn-bowl-and-bistro",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 174,
+      "name": "The Barn Bowl & Bistro",
+      "slug": "the-barn-bowl-bistro-oak-bluffs",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Bars & Pubs",
+      "description": "Bistro ✦ Bar ✦ Bowling ✦ Events: Fresh, affordable cuisine with Vineyard ambiance; full-service bar offering a wide choice of craft beers and memorable specialty drinks; boutique, 10-lane regulation bowling alley; large private event space with plenty of parking.",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "13 Uncas Avenue",
+      "phone": "(508) 696-9800",
+      "website": "http://thebarnmv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.454,
+        "lng": -70.562
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/The-Barn-Bowl-Bistro-1424960034431794/",
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "Bar, bistro (lunch, dinner, take-out) 10 bowling lanes fun for all family downtown Oak Bluffs",
+        "existing": "13 Uncas Avenue",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Wharf Pub & Restaurant",
+      "description": "We serve Lunch & Dinner 7 days a week. Our menu features fresh Seafood, Entrees, Sandwiches, Salad & much more. Family friendly dining for any occasion.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "3 Main Street, Edgartown",
+      "phone": "(508) 627-9966",
+      "website": "https://wharfpubmv.com",
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "wharf-pub-and-restaurant",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 125,
+      "name": "The Wharf Pub Edgartown",
+      "slug": "the-wharf-pub-edgartown-edgartown",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Bars & Pubs",
+      "description": "The Wharf Pub is a top Edgartown restaurant and nightlife spot on Martha’s Vineyard, featuring live music, great food, and weekly entertainment.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "3 Main Street",
+      "phone": "(508) 627-9966",
+      "website": "http://wharfpubmv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.3886,
+        "lng": -70.5131
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": null,
+        "instagram": "https://www.instagram.com/p/DXPUt5TkiKL/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.9,
+    "matchReason": "website_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "3 Main Street, Edgartown",
+        "existing": "3 Main Street",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "The Reliable Market",
+      "description": null,
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "Oak Bluffs downtown Shurfine local supermarket - groceries, produce, meats, dairy. In-store bakery, deli.",
+      "phone": "(508) 693-1102",
+      "website": "https://thereliablemarket.com",
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "the-reliable-market",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 244,
+      "name": "The Reliable Market",
+      "slug": "the-reliable-market-oak-bluffs",
+      "category": "Shopping & Specialty Retail",
+      "businessType": "shopping-and-specialty-retail",
+      "subcategory": "Gift Shops",
+      "description": "Located in Vineyard Haven, The Reliable Market serves the Martha's Vineyard community with flavorful dishes and warm hospitality.",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "Oak Bluffs, MA 02557",
+      "phone": "(508) 693-1102",
+      "website": "http://thereliablemarket.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4536222,
+        "lng": -70.5684337
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/Reliable-Market-359211570794749/",
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "Oak Bluffs downtown Shurfine local supermarket - groceries, produce, meats, dairy. In-store bakery, deli.",
+        "existing": "Oak Bluffs, MA 02557",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Porto Pizza",
+      "description": "Martha's Vineyard pizza take-out, delivery and walk-in with outside seating. Order by slice or create your own.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "36 Water Street, Vineyard Haven",
+      "phone": "(508) 693-6200",
+      "website": "https://portopizzamv.com",
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "porto-pizza",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 213,
+      "name": "Porto Pizza Martha's Vineyard",
+      "slug": "porto-pizza-marthas-vineyard-vineyard-haven",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "Porto Pizza Martha's Vineyard offers dining in Vineyard Haven, Martha's Vineyard, serving fresh meals in a relaxed island setting.",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "36 Water St",
+      "phone": "(508) 693-6200",
+      "website": "http://portopizzamv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/portopizzamarthasvineyard/",
+        "instagram": "https://www.instagram.com/portopizza_mv/",
+        "yelp": "https://www.yelp.com/biz/porto-pizza-vineyard-haven",
+        "tripadvisor": null
+      }
+    },
+    "score": 0.9,
+    "matchReason": "website_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "36 Water Street, Vineyard Haven",
+        "existing": "36 Water St",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Bobby B’s",
+      "description": "Bobby B’s Seafood & Pizza serves delicious fried seafood, Italian-style pizza and more! Order a take-out, we are open year-round & we deliver!",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "22 Main St, Vineyard Haven",
+      "phone": "(508) 693-8266",
+      "website": "https://bobbybsmv.com",
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "bobby-b-s",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 196,
+      "name": "Bobby B's",
+      "slug": "bobby-bs-oak-bluffs",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "Located right in the heart of Vineyard Haven, Martha’s Vineyard, our restaurant is where friends and family come together to enjoy meals that are simple, fresh, and made with care. From breakfast to dinner, we’ve got something for everyone. Whether you’re craving appetizers, crisp salads, juicy burg...",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "90 Circuit Ave, Oak Bluffs, MA 02557",
+      "phone": "(508) 693-8266",
+      "website": "http://bobbybsmv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/BobbyBsMV",
+        "instagram": "https://www.instagram.com/bobbybsmv_",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.9,
+    "matchReason": "website_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "22 Main St, Vineyard Haven",
+        "existing": "90 Circuit Ave, Oak Bluffs, MA 02557",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Behind the View at Harbor View Hotel",
+      "description": null,
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "131 North Water Street, Edgartown",
+      "phone": "(508) 627-4120",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "behind-the-view-at-harbor-view-hotel",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 4,
+      "name": "Harbor View Hotel",
+      "slug": "harbor-view-hotel-edgartown",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Hotels",
+      "description": "Historic grand hotel overlooking Edgartown Harbor...",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "131 North Water Street",
+      "phone": "(508) 627-7000",
+      "website": "https://www.harbor-view.com",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.391648,
+        "lng": -70.5077681
+      },
+      "status": "active",
+      "confidence": 65,
+      "social": {
+        "facebook": "https://www.facebook.com/HarborViewHotel/",
+        "instagram": "https://www.instagram.com/harborviewhotel/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.8,
+    "matchReason": "fuzzy_name_same_town",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "phone",
+        "parsed": "(508) 627-4120",
+        "existing": "(508) 627-7000",
+        "action": "conflict"
+      },
+      {
+        "field": "address",
+        "parsed": "131 North Water Street, Edgartown",
+        "existing": "131 North Water Street",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Alchemy",
+      "description": "We take pride in serving locally sourced ingredients from land and sea, mixed with the finest products from around the world.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "71 Main Street, Edgartown",
+      "phone": "(508) 627-9999",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "alchemy",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 724,
+      "name": "Alchemy",
+      "slug": "alchemy-edgartown",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "Alchemy is a restaurant in Edgartown, Martha's Vineyard, known for quality cuisine and welcoming locals and visitors year-round.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "71 Main Street",
+      "phone": "(508) 627-9999",
+      "website": "https://www.alchemyedgartown.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.3886,
+        "lng": -70.5131
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/AlchemyMV",
+        "instagram": "https://www.instagram.com/alchemymv/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "71 Main Street, Edgartown",
+        "existing": "71 Main Street",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Homeport Restaurant",
+      "description": "Known for its world famous sunsets, lobster dinners and famed clam chowder,",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "512 North Rd, Menemsha",
+      "phone": "(508) 645-2679",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Menemsha",
+      "townSlug": "chilmark",
+      "zip": null,
+      "slug": "homeport-restaurant",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 47,
+      "name": "The Homeport",
+      "slug": "the-homeport-chilmark",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "The Homeport is known for its world-class sunsets, lobster dinners served in the “semi-rough,” clam chowder, the original fried oyster, and fresh from Menemsha seafood and shellfish. Our waterfront restaurant is an island icon and institution.",
+      "town": "Chilmark",
+      "townSlug": "chilmark",
+      "address": "512 N Rd",
+      "phone": "(508) 645-2679",
+      "website": "http://thehomeportmv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.3449,
+        "lng": -70.7455
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": null,
+        "instagram": "https://www.instagram.com/thehomeportmv/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.85,
+    "matchReason": "phone_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "512 North Rd, Menemsha",
+        "existing": "512 N Rd",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Enchanted Chocolates",
+      "description": null,
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "4 Chapman Ave., Oak Bluffs",
+      "phone": "(508) 693-8331",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "enchanted-chocolates",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "name": "Enchanted Chocolates",
+      "gazetteCategory": "Restaurants",
+      "gazetteTown": "Oak Bluffs",
+      "address": "4 Chapman Ave, Oak Bluffs, MA 02557",
+      "website": null,
+      "phone": "(508) 693-8331",
+      "social": {
+        "facebook": "https://facebook.com/enchantedchocolates"
+      },
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants",
+      "slug": "enchanted-chocolates",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs"
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "gazette",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "4 Chapman Ave., Oak Bluffs",
+        "existing": "4 Chapman Ave, Oak Bluffs, MA 02557",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "China House Restaurant",
+      "description": "Chinese food, great food and service.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "234 Upper Main St, Edgartown",
+      "phone": "(508) 627-7272",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "china-house-restaurant",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 72,
+      "name": "China House",
+      "slug": "china-house-edgartown",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "China House｜online Order｜edgartown｜wa offers dining in Edgartown, Martha's Vineyard, serving fresh meals in a relaxed island setting.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "Edgartown, MA 02539",
+      "phone": "(508) 627-7272",
+      "website": "http://mvchinahouse.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.3894198,
+        "lng": -70.5129682
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": null,
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.85,
+    "matchReason": "phone_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "234 Upper Main St, Edgartown",
+        "existing": "Edgartown, MA 02539",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "The Red Cat Kitchen at Ken N' Beck",
+      "description": "A place where you're just as likely to connect with old friends as meet new and fascinating people from all over the world, a place where you can enjoy a life changing meal to the sounds of the Rol",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "14 Kennebec Ave, Oak Bluffs",
+      "phone": "(508) 696-6040",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "the-red-cat-kitchen-at-ken-n-beck",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 711,
+      "name": "Red Cat Kitchen",
+      "slug": "red-cat-kitchen-oak-bluffs",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "Red Cat Kitchen is a restaurant in Oak Bluffs, Martha's Vineyard, known for quality cuisine and welcoming locals and visitors year-round.",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "Oak Bluffs, MA 02557",
+      "phone": "(508) 696-6040",
+      "website": "https://www.redcatkitchen.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4536222,
+        "lng": -70.5684337
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/RedCatKitchenMV/",
+        "instagram": "https://www.instagram.com/theredcatkitchenmv/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.85,
+    "matchReason": "phone_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "14 Kennebec Ave, Oak Bluffs",
+        "existing": "Oak Bluffs, MA 02557",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Chesca's Restaurant",
+      "description": "Marrying gourmet and comfort food on Martha's Vineyard",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "38 N. Water St, Edgartown",
+      "phone": "(508) 627-1234",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "chescas-restaurant",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 70,
+      "name": "Chesca",
+      "slug": "chesca-edgartown",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "Chesca brings delicious dining to Edgartown, Martha's Vineyard, offering a memorable meal for island visitors and residents alike.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "38 N Water St",
+      "phone": "(508) 627-1234",
+      "website": "http://chescasmv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.3886,
+        "lng": -70.5131
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/chescas",
+        "instagram": "https://www.instagram.com/chescasmv/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.85,
+    "matchReason": "phone_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "38 N. Water St, Edgartown",
+        "existing": "38 N Water St",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "The Black Dog Tavern",
+      "description": "Breakfast, Lunch and Dinner. On the water.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "21 Beach St Extension, Vineyard Haven",
+      "phone": "(508) 693-9223",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "the-black-dog-tavern",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 1,
+      "name": "The Black Dog Tavern Company",
+      "slug": "the-black-dog-tavern-company-vineyard-haven",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Bars & Pubs",
+      "description": "Iconic waterfront restaurant known for nautical merchandise and New England seafood...",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "21 Beach Street Extension",
+      "phone": "(508) 693-9223",
+      "website": "https://www.theblackdog.com",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4539394,
+        "lng": -70.6008234
+      },
+      "status": "unknown",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/TheBlackDogMV/",
+        "instagram": "https://www.instagram.com/TheBlackDogMV",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.85,
+    "matchReason": "phone_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "21 Beach St Extension, Vineyard Haven",
+        "existing": "21 Beach Street Extension",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Among the Flowers",
+      "description": "For over 20 seasons, visitors and locals alike have been enjoying breakfast at this charming little cafe.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "17 Mayhew Lane, Edgartown",
+      "phone": "(508) 627-3233",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "among-the-flowers",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 54,
+      "name": "Among the Flowers",
+      "slug": "among-the-flowers-edgartown",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "Among the Flowers is a restaurant in Edgartown, Martha's Vineyard, known for quality cuisine and welcoming locals and visitors year-round.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "Edgartown, ma 02539",
+      "phone": "(508) 627-3233",
+      "website": "http://amongtheflowersmv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.3894198,
+        "lng": -70.5129682
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://m.facebook.com/Among-the-Flowers-Cafe-172997226059532/.",
+        "instagram": "https://www.instagram.com/amongtheflowerscafe?igshid=13x7kiov51vuc",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "17 Mayhew Lane, Edgartown",
+        "existing": "Edgartown, ma 02539",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Rosewater Market",
+      "description": "We’re passionate about sourcing and serving the best food products & gifts possible - from fresh baked goods & prepared foods made in house to specialty homewares & hostess gifts.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "20 S. Summer Street, Edgartown",
+      "phone": "(508) 627-1270",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "rosewater-market",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 107,
+      "name": "Rosewater",
+      "slug": "rosewater-edgartown",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "Rosewater brings delicious dining to Edgartown, Martha's Vineyard, offering a memorable meal for island visitors and residents alike.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "127020 South Summer St",
+      "phone": "(508) 627-1270",
+      "website": "https://www.rosewatermv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.3886,
+        "lng": -70.5131
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/rosewatermv/",
+        "instagram": "https://www.instagram.com/rosewatermv/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.85,
+    "matchReason": "phone_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "20 S. Summer Street, Edgartown",
+        "existing": "127020 South Summer St",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Cronigs Market",
+      "description": "Through Community involvement, utilizing local suppliers, non-profit collaboration or Eco-initiatives Cronig’s Markets are thinking about the future of food + community.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "357 State Rd, Vineyard Haven",
+      "phone": "(508) 693-4457",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "cronigs-market",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 239,
+      "name": "Cronigs Market",
+      "slug": "cronigs-market-vineyard-haven",
+      "category": "Shopping & Specialty Retail",
+      "businessType": "shopping-and-specialty-retail",
+      "subcategory": "Gift Shops",
+      "description": "About our history and commitment here There’s no substitute for quality, There’s no market like Cronig’s. about our history and commitment here new ownership CONTINUING TRADITION: Th...",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "357 State Road",
+      "phone": "(508) 693-4457",
+      "website": "http://cronigsmarket.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/cronigsmarket",
+        "instagram": "https://www.instagram.com/cronigsmarkets/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "357 State Rd, Vineyard Haven",
+        "existing": "357 State Road",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "7a Foods",
+      "description": "7a foods is owned by husband and wife team Daniel Sauer and Wenonah Madison Sauer.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "1045 State Rd, West Tisbury",
+      "phone": "(508) 693-4636",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "West Tisbury",
+      "townSlug": "west-tisbury",
+      "zip": null,
+      "slug": "7a-foods",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 185,
+      "name": "7a Foods Martha's Vineyard",
+      "slug": "7a-foods-marthas-vineyard-west-tisbury",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Food Trucks",
+      "description": "7a Foods Martha's Vineyard offers dining in West Tisbury, Martha's Vineyard, serving fresh meals in a relaxed island setting.",
+      "town": "West Tisbury",
+      "townSlug": "west-tisbury",
+      "address": "1045 State Road West",
+      "phone": "(508) 693-4636",
+      "website": "http://7afoods.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.3809,
+        "lng": -70.6731
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/pages/7a-Marthas-Vineyard/126262510763582?sk=wall",
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.85,
+    "matchReason": "phone_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "1045 State Rd, West Tisbury",
+        "existing": "1045 State Road West",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "The Net Result",
+      "description": "The Net Result is an upper scale fish market that offers retail, wholesale, direct mail, take out, and delivery.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "79 Beach Rd, Vineyard Haven",
+      "phone": "(508) 693-6071",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "the-net-result",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 257,
+      "name": "The Net Result",
+      "slug": "the-net-result-vineyard-haven",
+      "category": "Shopping & Specialty Retail",
+      "businessType": "shopping-and-specialty-retail",
+      "subcategory": "Gift Shops",
+      "description": "The Net Result is a popular dining destination in Vineyard Haven, Martha's Vineyard, providing delicious food and friendly service.",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "79 Beach Rd",
+      "phone": "(508) 693-6071",
+      "website": "http://mvseafood.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/NetResult/",
+        "instagram": null,
+        "yelp": "https://www.yelp.com/biz/the-net-result-vineyard-haven",
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "79 Beach Rd, Vineyard Haven",
+        "existing": "79 Beach Rd",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Ben and Bill's Chocolate Emporium",
+      "description": "Candy, fudge, chocolates, buttercrunch, sugar free candy, ice cream, and gift boxes",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "20a Circuit Ave, Oak Bluffs",
+      "phone": "(508) 696-0008",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "ben-and-bills-chocolate-emporium",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 135,
+      "name": "Benandbills",
+      "slug": "benandbills-oak-bluffs",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "Ben & Bill’s in Martha’s Vineyard offers handmade chocolates, fudge, and homemade ice cream. A local favorite for fresh, small-batch sweets.",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "20A Circuit Avenue",
+      "phone": "(508) 696-0008",
+      "website": "http://benandbillsmv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.453262,
+        "lng": -70.5608799
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/benandbillsmv/",
+        "instagram": "https://www.instagram.com/benandbillsmv/",
+        "yelp": "https://www.yelp.com/biz/ben-and-bills-chocolate-emporium-oak-bluffs-2?osq=ben+and+bills",
+        "tripadvisor": "https://www.tripadvisor.com/Attraction_Review-g41750-d3171267-Reviews-Ben_and_Bill_s_Chocolate_Emporium-Oak_Bluffs_Martha_s_Vineyard_Massachusetts.html"
+      }
+    },
+    "score": 0.85,
+    "matchReason": "phone_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "20a Circuit Ave, Oak Bluffs",
+        "existing": "20A Circuit Avenue",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Black Sheep",
+      "description": "Prepared foods, lunch, cheese, charcuterie, baked goods, and gifts.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "18 N. Summer St, Edgartown",
+      "phone": "(774) 549-9118",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "black-sheep",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 66,
+      "name": "Black Sheep",
+      "slug": "black-sheep-edgartown",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "Prepared gourmet food, sandwiches, heat and serve dinners, cheese, charcuterie and pantry items. Beach and boat provisioning. Plus shop for gifts and tableware. Black Sheep Mercantile.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "17 Airport Road",
+      "phone": "(508) 338-7770",
+      "website": "http://blacksheeponmv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.3868794,
+        "lng": -70.609007
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/blacksheeponmv?fref=nf",
+        "instagram": "https://www.instagram.com/black_sheep_mv/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "phone",
+        "parsed": "(774) 549-9118",
+        "existing": "(508) 338-7770",
+        "action": "conflict"
+      },
+      {
+        "field": "address",
+        "parsed": "18 N. Summer St, Edgartown",
+        "existing": "17 Airport Road",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Waterside Market",
+      "description": "Serving fresh ingredients, organic and local when possible, innovative recipes made from scratch daily including soups, salads and killer sandwiches.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "82 Main Street, Vineyard Haven",
+      "phone": "(508) 693-8899",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "waterside-market",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 225,
+      "name": "Waterside Market",
+      "slug": "waterside-market-vineyard-haven",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Grocery Stores",
+      "description": "Year-round market & cafe offering all-day breakfast, salads, lobster rolls & other sandwiches.",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "82 Main Street",
+      "phone": "(508) 693-8899",
+      "website": "http://watersidemarket.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/WatersideMarketMV/",
+        "instagram": "https://www.instagram.com/waterside_market",
+        "yelp": "https://www.yelp.com/biz/waterside-market-vineyard-haven",
+        "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g41875-d1309038-Reviews-Waterside_Market-Vineyard_Haven_Martha_s_Vineyard_Massachusetts.html"
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "82 Main Street, Vineyard Haven",
+        "existing": "82 Main Street",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "John's Fish Market",
+      "description": "Full service seafood market with fresh, quality seafood.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "5 Martin Rd, Vineyard Haven",
+      "phone": "(508) 693-1220",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "johns-fish-market",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 726,
+      "name": "John's Fish Market",
+      "slug": "johns-fish-market-vineyard-haven",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Fish Markets",
+      "description": "John's Fish Market offers dining in Vineyard Haven, Martha's Vineyard, serving fresh meals in a relaxed island setting.",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "5 Martin Rd",
+      "phone": "(508) 693-1220",
+      "website": "https://johnsfishmarket.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://facebook.com/johnsfishmarketmv",
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "5 Martin Rd, Vineyard Haven",
+        "existing": "5 Martin Rd",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Sweet Life",
+      "description": "Enjoy modern seasonal fare in our homey dining room, on our airy porch, at our cocktail bar, or on our romantic candle-lit garden patio.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "63 Circuit Ave, Oak Bluffs",
+      "phone": "(508) 696-0200",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "sweet-life",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 179,
+      "name": "The Sweet Life MV",
+      "slug": "the-sweet-life-mv-oak-bluffs",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "The Sweet Life MV offers dining in Oak Bluffs, Martha's Vineyard, serving fresh meals in a relaxed island setting.",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "OAK BLUFFS, MA 02557",
+      "phone": "(508) 696-0200",
+      "website": "http://sweetlifemv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4536222,
+        "lng": -70.5684337
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": null,
+        "instagram": "https://www.instagram.com/sweet_life_mv/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.85,
+    "matchReason": "phone_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "63 Circuit Ave, Oak Bluffs",
+        "existing": "OAK BLUFFS, MA 02557",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Katama General Store",
+      "description": "Offering gourmet food, craft beer & wine, beach gear, and hostess gifts since 1995.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "170 Katama Rd, Edgartown",
+      "phone": "(508) 627-5071",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "katama-general-store",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 91,
+      "name": "Katama General Store",
+      "slug": "katama-general-store-edgartown",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Grocery Stores",
+      "description": "Kgs 2 brings delicious dining to Edgartown, Martha's Vineyard, offering a memorable meal for island visitors and residents alike.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "170 Katama Rd",
+      "phone": "(508) 627-5071",
+      "website": "http://katamageneral.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.3886,
+        "lng": -70.5131
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/KatamaGeneralStore/",
+        "instagram": "http://instagram.com/katamageneralstore",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "170 Katama Rd, Edgartown",
+        "existing": "170 Katama Rd",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Behind the Bookstore",
+      "description": "We proudly support our local farms, fisheries, and purveyors in designing our menu.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "44 Main Street, Edgartown",
+      "phone": "(774) 549-9123",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "behind-the-bookstore",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "name": "Behind the Bookstore",
+      "gazetteCategory": "Restaurants",
+      "gazetteTown": "Edgartown",
+      "address": "46 Main St, Edgartown, MA 02539",
+      "website": "https://btbmv.com",
+      "phone": "(774) 549-9123",
+      "social": {},
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants",
+      "slug": "behind-the-bookstore",
+      "town": "Edgartown",
+      "townSlug": "edgartown"
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "gazette",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "44 Main Street, Edgartown",
+        "existing": "46 Main St, Edgartown, MA 02539",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Scottish Bakehouse",
+      "description": "Scottish Bakehouse is a year-round cafe and bakery that offers signature egg sandwiches, fresh baked pastries, sandwiches, salads, soups and locally sourced main dishes.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "977 State Rd, Vineyard Haven",
+      "phone": "(508) 693-6633",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "scottish-bakehouse",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 219,
+      "name": "Scottish Bakehouse",
+      "slug": "scottish-bakehouse-vineyard-haven",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Bakeries",
+      "description": "Scottish Bakehouse brings delicious dining to Vineyard Haven, Martha's Vineyard, offering a memorable meal for island visitors and residents alike.",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "977 State Rd, Vineyard Haven, MA 02568",
+      "phone": null,
+      "website": "http://scottishbakehousemv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "unknown",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/scottishbakehousemv/",
+        "instagram": "https://www.instagram.com/blackwaterfarm/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "977 State Rd, Vineyard Haven",
+        "existing": "977 State Rd, Vineyard Haven, MA 02568",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "The Terrace at the Charlotte Inn",
+      "description": "The Terrace at The Charlotte Inn is one of Martha’s Vineyard’s best-kept secrets.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "27 S. Summer St, Edgartown",
+      "phone": "(508) 627-6227",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "the-terrace-at-the-charlotte-inn",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 427,
+      "name": "The Charlotte Inn",
+      "slug": "the-charlotte-inn-edgartown",
+      "category": "Lodging & Tourism",
+      "businessType": "lodging-and-tourism",
+      "subcategory": "Inns",
+      "description": "The Charlotte Inn offers comfortable accommodations in Vineyard Haven, Martha's Vineyard, providing a relaxing island retreat for visitors.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "27 South Summer Street",
+      "phone": "(508) 627-4751",
+      "website": "http://thecharlotteinn.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/Charlotte.Inn",
+        "instagram": "https://www.instagram.com/thecharlotteinn/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.8,
+    "matchReason": "fuzzy_name_same_town",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "phone",
+        "parsed": "(508) 627-6227",
+        "existing": "(508) 627-4751",
+        "action": "conflict"
+      },
+      {
+        "field": "address",
+        "parsed": "27 S. Summer St, Edgartown",
+        "existing": "27 South Summer Street",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Wolf's Den Pizzeria",
+      "description": "Fresh, specialty pizzas to go",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "45 Beach Road, Vineyard Haven",
+      "phone": "(508) 687-9112",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "wolfs-den-pizzeria",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 127,
+      "name": "Wolf's Den Pizzeria",
+      "slug": "wolfs-den-pizzeria-edgartown",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "View the menu, hours, address, and photos for Wolf's Den Pizzeria in Edgartown, MA. Order online for delivery or pickup on Slicelife. com...",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "249 Vineyard Haven Rd",
+      "phone": "(508) 684-2203",
+      "website": "https://www.wolfsdenpizzeria.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.3959537,
+        "lng": -70.5306211
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": null,
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "phone",
+        "parsed": "(508) 687-9112",
+        "existing": "(508) 684-2203",
+        "action": "conflict"
+      },
+      {
+        "field": "address",
+        "parsed": "45 Beach Road, Vineyard Haven",
+        "existing": "249 Vineyard Haven Rd",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Fishbones Bar & Grille",
+      "description": null,
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "Lunch, dinner, bar on Oak Bluffs Harbor",
+      "phone": "(508) 696-8227",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "fishbones-bar-and-grille",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 152,
+      "name": "Fishbones Bar & Grille",
+      "slug": "fishbones-bar-grille-oak-bluffs",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Fish Markets",
+      "description": "Fishbones Bar & Grille offers dining in Oak Bluffs, Martha's Vineyard, serving fresh meals in a relaxed island setting.",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "12 Circuit Avenue Extension",
+      "phone": "(508) 696-8227",
+      "website": "http://fishbones-mv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.454,
+        "lng": -70.562
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/fishbones-mv",
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": "http://www.tripadvisor.com/Restaurant_Review-g41750-d422509-Reviews-Fishbones-Oak_Bluffs_Martha_s_Vineyard_Massachusetts.html"
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "Lunch, dinner, bar on Oak Bluffs Harbor",
+        "existing": "12 Circuit Avenue Extension",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "La Choza Burritos",
+      "description": "La Choza Burritos is fast becoming Martha's Vineyard's favorite take-out restaurant . We offer an innovative twist on a Mexican favorite combining flavors from the Southwest and beyond.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "4 Main Stret, vineyard Haven",
+      "phone": "(508) 693-9050",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "zip": null,
+      "slug": "la-choza-burritos",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 204,
+      "name": "La Choza",
+      "slug": "la-choza-vineyard-haven",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "Great food doesn’t have to be complicated. We focus on fresh ingredients, bold flavors, and meals that make you happy.",
+      "town": "Vineyard Haven",
+      "townSlug": "vineyard-haven",
+      "address": "12 State Rd, Vineyard Haven, MA 02568",
+      "phone": null,
+      "website": "http://lachozamv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "unknown",
+      "confidence": 60,
+      "social": {
+        "facebook": null,
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.8,
+    "matchReason": "fuzzy_name_same_town",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "4 Main Stret, vineyard Haven",
+        "existing": "12 State Rd, Vineyard Haven, MA 02568",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Native Earth Teaching Farm",
+      "description": "Small up-island farm raise the best tasting and healthiest foods and garden plants, sell breeding stock both animals and poultry, tractor work, teach classes, demonstrate farm crafts, give tours, and host a thriving community garden.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "94 North Rd, Chilmark",
+      "phone": "(508) 645-3304",
+      "website": "https://nativeearthteachingfarm.org",
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Chilmark",
+      "townSlug": "chilmark",
+      "zip": null,
+      "slug": "native-earth-teaching-farm",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 231,
+      "name": "Native Earth Teaching Farm",
+      "slug": "native-earth-teaching-farm-west-tisbury",
+      "category": "Family, Community & Government",
+      "businessType": "family-community-government",
+      "subcategory": "Community Organizations",
+      "description": "Native Earth Teaching Farm is a restaurant in Vineyard Haven, Martha's Vineyard, known for quality cuisine and welcoming locals and visitors year-round.",
+      "town": "West Tisbury",
+      "townSlug": "west-tisbury",
+      "address": "94 North Rd, West Tisbury, MA 02575",
+      "phone": "(302) 208-9250",
+      "website": "http://nativeearthteachingfarm.org/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4534,
+        "lng": -70.6031
+      },
+      "status": "unknown",
+      "confidence": 70,
+      "social": {
+        "facebook": null,
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "phone",
+        "parsed": "(508) 645-3304",
+        "existing": "(302) 208-9250",
+        "action": "conflict"
+      },
+      {
+        "field": "address",
+        "parsed": "94 North Rd, Chilmark",
+        "existing": "94 North Rd, West Tisbury, MA 02575",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "The Covington Restaurant",
+      "description": null,
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "The Covington Restaurant and Bar serves seasonally driven food in downtown Edgartown, on the island of Martha's Vineyard.",
+      "phone": "(508) 627-7678",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "the-covington-restaurant",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 117,
+      "name": "The Covington Restaurant and Bar",
+      "slug": "the-covington-restaurant-and-bar-edgartown",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "The Covington Restaurant and Bar is a restaurant in Edgartown, Martha's Vineyard, known for quality cuisine and welcoming locals and visitors year-round.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "52 Main Street",
+      "phone": "(508) 627-7678",
+      "website": "http://thecovingtonrestaurant.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.3886,
+        "lng": -70.5131
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": null,
+        "instagram": null,
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.85,
+    "matchReason": "phone_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "The Covington Restaurant and Bar serves seasonally driven food in downtown Edgartown, on the island of Martha's Vineyard.",
+        "existing": "52 Main Street",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Lookout Tavern",
+      "description": "Pub food, seafood, sushi.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "8 Seaview Ave, Oak Bluffs",
+      "phone": "(508) 696-9844",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "lookout-tavern",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 162,
+      "name": "Lookout Tavern",
+      "slug": "lookout-tavern-oak-bluffs",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Bars & Pubs",
+      "description": "LOOKOUT TAVERN IS OPEN FOR THE SEASON! Hours of Operation Monday Thursday 4pm 9:30pm Friday-Saturday: 11:30am 10pm / Sunday 11:30am 9:30pm ~Bar til Late~ for our Specialty Nights *HAPPY...",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "8 Seaview Ave",
+      "phone": "(508) 696-9844",
+      "website": "http://lookoutmv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.454,
+        "lng": -70.562
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/lookouttavern/",
+        "instagram": null,
+        "yelp": "https://www.yelp.com/biz/lookout-tavern-oak-bluffs",
+        "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g41750-d2313776-Reviews-Lookout_Tavern-Oak_Bluffs_Martha_s_Vineyard_Massachusetts.html"
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "8 Seaview Ave, Oak Bluffs",
+        "existing": "8 Seaview Ave",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "L'etoile Restaurant",
+      "description": "We offer an inventive, fresh, seasonally-driven menu along with similar lighter fare in the bar.",
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "22 N. Water Street, Edgartown",
+      "phone": "(508) 627-5187",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "letoile-restaurant",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 95,
+      "name": "L'etoile",
+      "slug": "letoile-edgartown",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Restaurants",
+      "description": "Located in Edgartown, L'etoile serves the Martha's Vineyard community with flavorful dishes and warm hospitality.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "22 North water Street",
+      "phone": "(508) 627-5187",
+      "website": "http://letoile.net/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.3886,
+        "lng": -70.5131
+      },
+      "status": "active",
+      "confidence": 80,
+      "social": {
+        "facebook": "https://www.facebook.com/letoilemv/",
+        "instagram": "http://instagram.com/letoilemv",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.85,
+    "matchReason": "phone_match",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "22 N. Water Street, Edgartown",
+        "existing": "22 North water Street",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "The Ritz",
+      "description": null,
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "Classic dive bar downtown Oak Bluffs with a gasto pub menu, fun atmosphere and live music.",
+      "phone": "(508) 693-9851",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "zip": null,
+      "slug": "the-ritz",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 177,
+      "name": "The Ritz Cafe",
+      "slug": "the-ritz-cafe-oak-bluffs",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Cafes",
+      "description": "The Ritz Cafe brings delicious dining to Oak Bluffs, Martha's Vineyard, offering a memorable meal for island visitors and residents alike.",
+      "town": "Oak Bluffs",
+      "townSlug": "oak-bluffs",
+      "address": "4 Circuit Ave",
+      "phone": "(508) 296-8159",
+      "website": "http://theritzmv.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.4571363,
+        "lng": -70.5575537
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "http://www.facebook.com/theritzmv",
+        "instagram": "https://instagram.com/theritzmv",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 0.8,
+    "matchReason": "fuzzy_name_same_town",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "phone",
+        "parsed": "(508) 693-9851",
+        "existing": "(508) 296-8159",
+        "action": "conflict"
+      },
+      {
+        "field": "address",
+        "parsed": "Classic dive bar downtown Oak Bluffs with a gasto pub menu, fun atmosphere and live music.",
+        "existing": "4 Circuit Ave",
+        "action": "conflict"
+      }
+    ]
+  },
+  {
+    "parsed": {
+      "name": "Rockfish",
+      "description": null,
+      "sourceCategory": "MARTHA'S VINEYARD FOOD, EAT & DRINK DINING DIRECTORY",
+      "address": "Located in downtown Edgartown on the beautiful island of Martha’s Vineyard. Two newly renovated floors include a wood-fired pizza oven and 2 full bars in a casual upscale setting.",
+      "phone": "(508) 627-9967",
+      "website": null,
+      "source_file": "businesses_2_rtf",
+      "businessType": "restaurants-food-beverages",
+      "category": "Restaurants, Food & Beverages",
+      "subcategory": "Restaurants",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "zip": null,
+      "slug": "rockfish",
+      "verification_source": "businesses_2_rtf",
+      "last_verified_at": "2026-04-29"
+    },
+    "existing": {
+      "id": 105,
+      "name": "Rockfish",
+      "slug": "rockfish-edgartown",
+      "category": "Restaurants, Food & Beverages",
+      "businessType": "restaurants-food-beverages",
+      "subcategory": "Fish Markets",
+      "description": "American bites, wood-fired flatbreads, brick-walled environs. Located on the beautiful island of Martha's Vineyard in downtown Edgartown.",
+      "town": "Edgartown",
+      "townSlug": "edgartown",
+      "address": "Water Street Edgartown, MA 02557",
+      "phone": "(508) 627-9967",
+      "website": "http://rockfishedgartown.com/",
+      "hours": null,
+      "seasonal": null,
+      "coordinates": {
+        "lat": 41.3895474,
+        "lng": -70.5127931
+      },
+      "status": "active",
+      "confidence": 70,
+      "social": {
+        "facebook": "https://www.facebook.com/RockfishWoodFire",
+        "instagram": "https://www.instagram.com/rockfishedg/",
+        "yelp": null,
+        "tripadvisor": null
+      }
+    },
+    "score": 1,
+    "matchReason": "exact_name",
+    "matchSource": "supabase",
+    "conflictDiffs": [
+      {
+        "field": "address",
+        "parsed": "Located in downtown Edgartown on the beautiful island of Martha’s Vineyard. Two newly renovated floors include a wood-fired pizza oven and 2 full bars in a casual upscale setting.",
+        "existing": "Water Street Edgartown, MA 02557",
+        "action": "conflict"
+      }
+    ]
+  }
+]

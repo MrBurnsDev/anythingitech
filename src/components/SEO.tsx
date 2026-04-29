@@ -5,6 +5,8 @@ interface SEOProps {
   description: string;
   canonical?: string;
   image?: string | null;
+  /** Add noemailindex to prevent email scraping by bots */
+  noEmailIndex?: boolean;
 }
 
 /**
@@ -12,7 +14,7 @@ interface SEOProps {
  * For a Vite SPA, this is sufficient for basic SEO on directory pages.
  * The meta description will be picked up by search engines on crawl.
  */
-export function SEO({ title, description, canonical, image }: SEOProps) {
+export function SEO({ title, description, canonical, image, noEmailIndex }: SEOProps) {
   useEffect(() => {
     // Update document title
     const fullTitle = title.includes("Anything Itech")
@@ -86,7 +88,25 @@ export function SEO({ title, description, canonical, image }: SEOProps) {
       twitterCard.setAttribute("content", "summary_large_image");
     }
 
-  }, [title, description, canonical, image]);
+    // Add noemailindex directive for directory pages (anti-scraping protection)
+    if (noEmailIndex) {
+      let robotsMeta = document.querySelector('meta[name="robots"]');
+      if (!robotsMeta) {
+        robotsMeta = document.createElement("meta");
+        robotsMeta.setAttribute("name", "robots");
+        document.head.appendChild(robotsMeta);
+      }
+      // Preserve existing directives, add noemailindex
+      const currentContent = robotsMeta.getAttribute("content") || "";
+      if (!currentContent.includes("noemailindex")) {
+        const newContent = currentContent
+          ? `${currentContent}, noemailindex`
+          : "index, follow, noemailindex";
+        robotsMeta.setAttribute("content", newContent);
+      }
+    }
+
+  }, [title, description, canonical, image, noEmailIndex]);
 
   return null;
 }

@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-04-29T03:24:58.087Z",
+  "successful": 5,
+  "failed": 7,
+  "excluded": 5,
+  "results": [
+    {
+      "id": 417,
+      "name": "Summercamp Hotel",
+      "status": "failed",
+      "error": "Business not found"
+    },
+    {
+      "id": 286,
+      "name": "Eisenhauer Gallery",
+      "status": "success",
+      "changes": [
+        "phone: NULL → (508) 627-7003"
+      ]
+    },
+    {
+      "id": 729,
+      "name": "Model Deli",
+      "status": "failed",
+      "error": "Business not found"
+    },
+    {
+      "id": 8,
+      "name": "Martha's Vineyard Film Festival",
+      "status": "success",
+      "changes": [
+        "phone: NULL → (508) 696-9369"
+      ]
+    },
+    {
+      "id": 114,
+      "name": "Square Rigger Restaurant",
+      "status": "failed",
+      "error": "Business not found"
+    },
+    {
+      "id": 150,
+      "name": "Fat Ronnie's Burger Bar",
+      "status": "failed",
+      "error": "Business not found"
+    },
+    {
+      "id": 141,
+      "name": "Coop de Ville",
+      "status": "failed",
+      "error": "Business not found"
+    },
+    {
+      "id": 219,
+      "name": "Scottish Bakehouse",
+      "status": "success",
+      "changes": [
+        "phone: NULL → (508) 693-6633"
+      ]
+    },
+    {
+      "id": 722,
+      "name": "Edgartown Diner",
+      "status": "failed",
+      "error": "Business not found"
+    },
+    {
+      "id": 204,
+      "name": "La Choza",
+      "status": "success",
+      "changes": [
+        "phone: NULL → (508) 693-9050"
+      ]
+    },
+    {
+      "id": 121,
+      "name": "The Porthunter",
+      "status": "failed",
+      "error": "Business not found"
+    },
+    {
+      "id": 206,
+      "name": "Mikado Asian Bistro",
+      "status": "success",
+      "changes": [
+        "phone: NULL → (508) 338-7096",
+        "address: NULL → 76 Main Street, Vineyard Haven"
+      ]
+    }
+  ],
+  "excludedRecords": [
+    {
+      "name": "Vineyard Harbor Motel",
+      "reason": "ID is undefined in export"
+    },
+    {
+      "name": "Outermost Inn",
+      "reason": "Address field contains description, not address"
+    },
+    {
+      "name": "The Seafood Shanty",
+      "reason": "Address field contains description, not address"
+    },
+    {
+      "name": "Back Door Donuts",
+      "reason": "Address field contains description, not address"
+    },
+    {
+      "name": "The Porthunter",
+      "reason": "Address field contains description - only applying phone"
+    }
+  ]
+}

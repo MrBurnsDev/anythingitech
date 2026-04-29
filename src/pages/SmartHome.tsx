@@ -43,7 +43,7 @@ const SmartHome = () => (
         { title: "One call for support", body: "When something stops working, call us. We troubleshoot across your entire system." },
       ]}
     />
-    <CTASection title="Need smart home help?" description="Call (508) 560-3510 or email louis@anythingitechmv.com. Service by appointment." />
+    <CTASection title="Need smart home help?" description="Call (508) 560-3510 or request a visit online. Service by appointment." />
   </SiteLayout>
 );
 

@@ -16,7 +16,6 @@ import { useAdminAuth } from "@/contexts/AdminAuthContext";
 import {
   MapPin,
   Phone,
-  Mail,
   Globe,
   Clock,
   ChevronRight,
@@ -162,6 +161,7 @@ export default function BusinessPage() {
         title={`${business.name} - ${town.name}, Martha's Vineyard`}
         description={seoDescription}
         canonical={`https://anythingitechmv.com/marthas-vineyard/${town.slug}/${businessType.slug}/${business.slug}`}
+        noEmailIndex
       />
       {/* Breadcrumb */}
       <div className="border-b border-border">
@@ -267,22 +267,7 @@ export default function BusinessPage() {
                   </div>
                 )}
 
-                {business.email && (
-                  <div className="flex items-start gap-3">
-                    <Mail className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
-                    <div>
-                      <div className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-1">
-                        Email
-                      </div>
-                      <a
-                        href={`mailto:${business.email}`}
-                        className="text-sm hover:text-accent transition-colors break-all"
-                      >
-                        {business.email}
-                      </a>
-                    </div>
-                  </div>
-                )}
+                {/* Email removed for privacy protection - only visible in admin dashboard */}
 
                 {business.website && (
                   <div className="pt-4 border-t border-border">

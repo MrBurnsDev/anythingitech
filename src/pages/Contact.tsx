@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, MapPin, Clock, ArrowRight, Loader2, Phone } from "lucide-react";
+import { MapPin, Clock, ArrowRight, Loader2, Phone, MessageSquare } from "lucide-react";
 import { toast } from "sonner";
 
 const Contact = () => {
@@ -33,10 +33,10 @@ const Contact = () => {
         toast.success("Thanks — we'll be in touch within one business day.");
         form.reset();
       } else {
-        toast.error("Something went wrong. Please try again or email us directly.");
+        toast.error("Something went wrong. Please try again or call (508) 560-3510.");
       }
     } catch {
-      toast.error("Something went wrong. Please try again or email us directly.");
+      toast.error("Something went wrong. Please try again or call (508) 560-3510.");
     } finally {
       setIsSubmitting(false);
     }
@@ -136,10 +136,10 @@ const Contact = () => {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Mail className="h-5 w-5 text-accent mt-0.5 shrink-0" strokeWidth={1.5} />
+                    <MessageSquare className="h-5 w-5 text-accent mt-0.5 shrink-0" strokeWidth={1.5} />
                     <div>
-                      <div className="text-xs uppercase tracking-[0.18em] text-primary-foreground/50 mb-1">Email</div>
-                      <a href="mailto:louis@anythingitechmv.com" className="text-[15px] link-underline">louis@anythingitechmv.com</a>
+                      <div className="text-xs uppercase tracking-[0.18em] text-primary-foreground/50 mb-1">Message</div>
+                      <p className="text-[15px]">Use the form to request a visit</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
