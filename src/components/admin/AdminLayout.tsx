@@ -10,6 +10,7 @@ import {
   ChevronRight,
   Menu,
   X,
+  ClipboardCheck,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -21,6 +22,7 @@ interface AdminLayoutProps {
 const navigation = [
   { name: "Dashboard", href: "/admin", icon: LayoutDashboard },
   { name: "Businesses", href: "/admin/businesses", icon: Building2 },
+  { name: "Review Queue", href: "/admin/review", icon: ClipboardCheck },
   { name: "Add Business", href: "/admin/businesses/new", icon: PlusCircle },
 ];
 
@@ -169,6 +171,7 @@ function Breadcrumbs() {
     // Prettier labels
     if (path === "admin") label = "Dashboard";
     if (path === "businesses") label = "Businesses";
+    if (path === "review") label = "Review Queue";
     if (path === "new") label = "New Business";
     if (path === "edit") label = "Edit";
 

@@ -5,9 +5,13 @@ import { ArrowUpRight } from "lucide-react";
 export const CTASection = ({
   title = "Need help with your technology?",
   description = "Call (508) 560-3510 or request a visit online. Service by appointment.",
+  buttonText = "Contact Us",
+  buttonLink = "/contact",
 }: {
   title?: string;
   description?: string;
+  buttonText?: string;
+  buttonLink?: string;
 }) => {
   return (
     <section className="relative bg-primary text-primary-foreground overflow-hidden">
@@ -29,8 +33,8 @@ export const CTASection = ({
           </div>
           <div className="lg:col-span-4 flex flex-col gap-3 lg:items-end">
             <Button asChild size="xl" variant="hero-outline" className="rounded-full w-full lg:w-auto">
-              <Link to="/contact">
-                Contact Us <ArrowUpRight className="h-4 w-4" />
+              <Link to={buttonLink}>
+                {buttonText} <ArrowUpRight className="h-4 w-4" />
               </Link>
             </Button>
             <a href="tel:+15085603510" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors link-underline">

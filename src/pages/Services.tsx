@@ -2,7 +2,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHeader } from "@/components/site/PageHeader";
 import { CTASection } from "@/components/site/CTASection";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Apple, Wifi, Home, Music, Tv, Building2, Printer, MonitorSmartphone, ShieldCheck } from "lucide-react";
+import { ArrowUpRight, Apple, Wifi, Home, Music, Tv, Building2, Printer, MonitorSmartphone, ShieldCheck, Code } from "lucide-react";
 import appleImg from "@/assets/apple-desk.jpg";
 
 const all = [
@@ -15,6 +15,7 @@ const all = [
   { icon: Printer, title: "Printer & Device Setup", description: "Wireless printer setup, scanner configuration, peripheral troubleshooting.", to: "/services" },
   { icon: MonitorSmartphone, title: "Home Office Setup", description: "Home office setup with reliable Wi-Fi, video conferencing, and Apple device configuration.", to: "/services" },
   { icon: ShieldCheck, title: "General IT Support", description: "On-site tech support for homes and businesses. Troubleshooting, repairs, and setup.", to: "/services" },
+  { icon: Code, title: "MV App Design", description: "Custom software for Martha's Vineyard businesses. Scheduling, job management, customer portals, and workflow automation.", to: "/services/mv-app-design" },
 ];
 
 const Services = () => {

@@ -10,6 +10,7 @@ import WifiNetwork from "./pages/WifiNetwork.tsx";
 import SmartHome from "./pages/SmartHome.tsx";
 import TVAudio from "./pages/TVAudio.tsx";
 import BusinessIT from "./pages/BusinessIT.tsx";
+import MVAppDesign from "./pages/MVAppDesign.tsx";
 import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
@@ -34,6 +35,7 @@ import AdminLogin from "./pages/admin/AdminLogin.tsx";
 import AdminDashboard from "./pages/admin/AdminDashboard.tsx";
 import AdminBusinessList from "./pages/admin/AdminBusinessList.tsx";
 import AdminBusinessEdit from "./pages/admin/AdminBusinessEdit.tsx";
+import AdminReviewQueue from "./pages/admin/AdminReviewQueue.tsx";
 
 const queryClient = new QueryClient();
 
@@ -53,6 +55,7 @@ const App = () => (
           <Route path="/services/smart-home" element={<SmartHome />} />
           <Route path="/services/tv-audio" element={<TVAudio />} />
           <Route path="/services/business-it" element={<BusinessIT />} />
+          <Route path="/services/mv-app-design" element={<MVAppDesign />} />
           {/* Legacy routes - redirect via vercel.json */}
           <Route path="/apple-repair" element={<AppleRepair />} />
           <Route path="/wifi-network" element={<WifiNetwork />} />
@@ -105,6 +108,14 @@ const App = () => (
             element={
               <ProtectedRoute>
                 <AdminBusinessEdit />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/review"
+            element={
+              <ProtectedRoute>
+                <AdminReviewQueue />
               </ProtectedRoute>
             }
           />
