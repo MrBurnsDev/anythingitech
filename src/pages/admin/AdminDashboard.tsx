@@ -56,21 +56,39 @@ export default function AdminDashboard() {
     try {
       const token = localStorage.getItem("admin_token");
 
-      // Fetch all businesses to compute stats
-      const response = await fetch("/api/admin/businesses?limit=1000", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      // Fetch all businesses by paginating through all pages
+      let allBusinesses: Record<string, unknown>[] = [];
+      let page = 1;
+      let totalFromApi = 0;
+      const limit = 100; // API max is 100
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch businesses");
+      while (true) {
+        const response = await fetch(`/api/admin/businesses?page=${page}&limit=${limit}`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch businesses");
+        }
+
+        const data = await response.json();
+        const businesses = data.businesses || [];
+        allBusinesses = allBusinesses.concat(businesses);
+
+        // Get total from pagination info (most accurate)
+        if (data.pagination) {
+          totalFromApi = data.pagination.total;
+          if (page >= data.pagination.totalPages) break;
+        } else {
+          // No more pages if we got fewer than limit
+          if (businesses.length < limit) break;
+        }
+        page++;
       }
 
-      const data = await response.json();
-      const businesses = data.businesses || [];
-
-      // Compute stats
+      // Compute stats from all fetched businesses
       const byTown: Record<string, number> = {};
       const byCategory: Record<string, number> = {};
       let needsReview = 0;
@@ -80,7 +98,7 @@ export default function AdminDashboard() {
       weekAgo.setDate(weekAgo.getDate() - 7);
       let recentUpdates = 0;
 
-      businesses.forEach((b: Record<string, unknown>) => {
+      allBusinesses.forEach((b: Record<string, unknown>) => {
         // Town counts
         const town = (b.town as string) || "Unknown";
         byTown[town] = (byTown[town] || 0) + 1;
@@ -100,7 +118,7 @@ export default function AdminDashboard() {
       });
 
       setStats({
-        total: businesses.length,
+        total: totalFromApi || allBusinesses.length,
         active,
         needsReview,
         byTown,

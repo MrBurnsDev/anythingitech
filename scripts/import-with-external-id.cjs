@@ -255,7 +255,7 @@ async function main() {
   // Apply updates
   console.log(`\n${'─'.repeat(60)}`);
   console.log('Applying Updates...');
-  console.log('─'.repeat(60)}\n`);
+  console.log(`${'─'.repeat(60)}\n`);
 
   for (const { business, updates, changes } of pendingUpdates) {
     try {
