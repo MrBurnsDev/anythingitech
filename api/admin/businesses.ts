@@ -193,16 +193,46 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             let currentBusinessId = null;
 
             if (activity.entity_type === "business" && activity.entity_id) {
+              // First try to find the exact business by ID (non-duplicate)
               const { data: business } = await supabase
                 .from("businesses")
                 .select("id, business_name, slug")
                 .eq("id", activity.entity_id)
                 .eq("is_duplicate", false)
                 .single();
+
               if (business) {
                 currentBusinessId = business.id;
                 businessName = business.business_name;
                 businessSlug = business.slug;
+              } else {
+                // Business not found or is duplicate - try to find the canonical version
+                // First get the duplicate's name to search for the canonical version
+                const { data: duplicateBiz } = await supabase
+                  .from("businesses")
+                  .select("business_name")
+                  .eq("id", activity.entity_id)
+                  .single();
+
+                if (duplicateBiz?.business_name) {
+                  // Search for a non-duplicate with the same name
+                  const { data: canonicalBiz } = await supabase
+                    .from("businesses")
+                    .select("id, business_name, slug")
+                    .eq("business_name", duplicateBiz.business_name)
+                    .eq("is_duplicate", false)
+                    .limit(1)
+                    .single();
+
+                  if (canonicalBiz) {
+                    currentBusinessId = canonicalBiz.id;
+                    businessName = canonicalBiz.business_name;
+                    businessSlug = canonicalBiz.slug;
+                  } else {
+                    // No canonical version found, just show the name without a link
+                    businessName = duplicateBiz.business_name;
+                  }
+                }
               }
             }
 
