@@ -167,14 +167,21 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
       // GET /api/admin/businesses?action=activity - Fetch recent activity log
       if (action === "activity") {
-        const { limit = "10" } = req.query;
+        const { limit = "10", page = "1" } = req.query;
         const limitNum = Math.min(50, Math.max(1, parseInt(limit as string, 10)));
+        const pageNum = Math.max(1, parseInt(page as string, 10));
+        const offset = (pageNum - 1) * limitNum;
+
+        // Get total count first
+        const { count: totalCount } = await supabase
+          .from("audit_log")
+          .select("*", { count: "exact", head: true });
 
         const { data: activities, error: activityError } = await supabase
           .from("audit_log")
           .select("*")
           .order("created_at", { ascending: false })
-          .limit(limitNum);
+          .range(offset, offset + limitNum - 1);
 
         if (activityError) {
           console.error("Activity fetch error:", activityError);
@@ -269,7 +276,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           })
         );
 
-        return res.status(200).json({ activities: enrichedActivities });
+        return res.status(200).json({
+          activities: enrichedActivities,
+          pagination: {
+            page: pageNum,
+            limit: limitNum,
+            total: totalCount || 0,
+            totalPages: Math.ceil((totalCount || 0) / limitNum),
+          },
+        });
       }
 
       // Get single business by external_source_id (best for cross-system imports)

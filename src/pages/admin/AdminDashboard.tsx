@@ -18,6 +18,8 @@ import {
   Upload,
   CheckCircle,
   Trash2,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
 interface Stats {
@@ -80,20 +82,32 @@ export default function AdminDashboard() {
   } | null>(null);
   const [activities, setActivities] = useState<Activity[]>([]);
   const [isLoadingActivity, setIsLoadingActivity] = useState(true);
+  const [activityPage, setActivityPage] = useState(1);
+  const [activityTotalPages, setActivityTotalPages] = useState(1);
+  const [activityTotal, setActivityTotal] = useState(0);
+  const ACTIVITY_PER_PAGE = 15;
 
-  const fetchActivity = async () => {
+  const fetchActivity = async (page = 1) => {
     setIsLoadingActivity(true);
     try {
       const token = localStorage.getItem("admin_token");
-      const response = await fetch("/api/admin/businesses?action=activity&limit=10", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await fetch(
+        `/api/admin/businesses?action=activity&limit=${ACTIVITY_PER_PAGE}&page=${page}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       const data = await response.json();
       if (response.ok) {
         setActivities(data.activities || []);
+        if (data.pagination) {
+          setActivityPage(data.pagination.page);
+          setActivityTotalPages(data.pagination.totalPages);
+          setActivityTotal(data.pagination.total);
+        }
       } else {
         console.error("Activity fetch failed:", data);
       }
@@ -645,9 +659,11 @@ export default function AdminDashboard() {
           <CardHeader>
             <div className="flex items-center justify-between">
               <CardTitle className="text-lg">Recent Activity</CardTitle>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <TrendingUp className="h-4 w-4" />
-                {stats?.recentUpdates || 0} updates this week
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <TrendingUp className="h-4 w-4" />
+                  {activityTotal} total entries
+                </div>
               </div>
             </div>
           </CardHeader>
@@ -709,6 +725,35 @@ export default function AdminDashboard() {
                     </div>
                   );
                 })}
+              </div>
+            )}
+
+            {/* Pagination controls */}
+            {activityTotalPages > 1 && (
+              <div className="flex items-center justify-between pt-4 mt-4 border-t">
+                <div className="text-sm text-muted-foreground">
+                  Page {activityPage} of {activityTotalPages}
+                </div>
+                <div className="flex items-center gap-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => fetchActivity(activityPage - 1)}
+                    disabled={activityPage <= 1 || isLoadingActivity}
+                  >
+                    <ChevronLeft className="h-4 w-4" />
+                    Previous
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => fetchActivity(activityPage + 1)}
+                    disabled={activityPage >= activityTotalPages || isLoadingActivity}
+                  >
+                    Next
+                    <ChevronRight className="h-4 w-4" />
+                  </Button>
+                </div>
               </div>
             )}
           </CardContent>
