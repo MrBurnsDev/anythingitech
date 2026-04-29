@@ -134,153 +134,143 @@
       "permanent": true
     },
     {
-      "source": "/tech-tips",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/tech-tips/",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
       "source": "/why-i-built-is-the-ferry-running",
-      "destination": "/about",
+      "destination": "/tech-tips/why-i-built-is-the-ferry-running",
       "permanent": true
     },
     {
       "source": "/why-i-built-is-the-ferry-running/",
-      "destination": "/about",
+      "destination": "/tech-tips/why-i-built-is-the-ferry-running",
       "permanent": true
     },
     {
       "source": "/wi-fi-coverage-for-large-properties",
-      "destination": "/services/wifi-network",
+      "destination": "/tech-tips/wi-fi-coverage-for-large-properties",
       "permanent": true
     },
     {
       "source": "/wi-fi-coverage-for-large-properties/",
-      "destination": "/services/wifi-network",
+      "destination": "/tech-tips/wi-fi-coverage-for-large-properties",
       "permanent": true
     },
     {
       "source": "/office-wireless-network-installation",
-      "destination": "/services/business-it",
+      "destination": "/tech-tips/office-wireless-network-installation",
       "permanent": true
     },
     {
       "source": "/office-wireless-network-installation/",
-      "destination": "/services/business-it",
+      "destination": "/tech-tips/office-wireless-network-installation",
       "permanent": true
     },
     {
       "source": "/professional-wireless-network-installation",
-      "destination": "/services/wifi-network",
+      "destination": "/tech-tips/professional-wireless-network-installation",
       "permanent": true
     },
     {
       "source": "/professional-wireless-network-installation/",
-      "destination": "/services/wifi-network",
+      "destination": "/tech-tips/professional-wireless-network-installation",
       "permanent": true
     },
     {
       "source": "/future-proof-luxury-wireless-network-marthas-vineyard",
-      "destination": "/services/wifi-network",
+      "destination": "/tech-tips/future-proof-luxury-wireless-network-marthas-vineyard",
       "permanent": true
     },
     {
       "source": "/future-proof-luxury-wireless-network-marthas-vineyard/",
-      "destination": "/services/wifi-network",
+      "destination": "/tech-tips/future-proof-luxury-wireless-network-marthas-vineyard",
       "permanent": true
     },
     {
       "source": "/luxury-home-wireless-network-marthas-vineyard",
-      "destination": "/services/wifi-network",
+      "destination": "/tech-tips/luxury-home-wireless-network-marthas-vineyard",
       "permanent": true
     },
     {
       "source": "/luxury-home-wireless-network-marthas-vineyard/",
-      "destination": "/services/wifi-network",
+      "destination": "/tech-tips/luxury-home-wireless-network-marthas-vineyard",
       "permanent": true
     },
     {
       "source": "/marthas-vineyard-network-installations",
-      "destination": "/services/wifi-network",
+      "destination": "/tech-tips/marthas-vineyard-network-installations",
       "permanent": true
     },
     {
       "source": "/marthas-vineyard-network-installations/",
-      "destination": "/services/wifi-network",
+      "destination": "/tech-tips/marthas-vineyard-network-installations",
       "permanent": true
     },
     {
       "source": "/common-quick-fixes",
-      "destination": "/services/apple-repair",
+      "destination": "/tech-tips/common-quick-fixes",
       "permanent": true
     },
     {
       "source": "/common-quick-fixes/",
-      "destination": "/services/apple-repair",
+      "destination": "/tech-tips/common-quick-fixes",
       "permanent": true
     },
     {
       "source": "/something-broken-iphone-ya-gonna-call-louis-hall",
-      "destination": "/services/apple-repair",
+      "destination": "/tech-tips/something-broken-iphone-ya-gonna-call-louis-hall",
       "permanent": true
     },
     {
       "source": "/something-broken-iphone-ya-gonna-call-louis-hall/",
-      "destination": "/services/apple-repair",
+      "destination": "/tech-tips/something-broken-iphone-ya-gonna-call-louis-hall",
       "permanent": true
     },
     {
       "source": "/malicious-ios-popups",
-      "destination": "/services/apple-repair",
+      "destination": "/tech-tips/malicious-ios-popups",
       "permanent": true
     },
     {
       "source": "/malicious-ios-popups/",
-      "destination": "/services/apple-repair",
+      "destination": "/tech-tips/malicious-ios-popups",
       "permanent": true
     },
     {
       "source": "/anything-apple-jingle",
-      "destination": "/about",
+      "destination": "/tech-tips/anything-apple-jingle",
       "permanent": true
     },
     {
       "source": "/anything-apple-jingle/",
-      "destination": "/about",
+      "destination": "/tech-tips/anything-apple-jingle",
       "permanent": true
     },
     {
       "source": "/weekly-tip-start-taking-advantage-cloud",
-      "destination": "/services/apple-repair",
+      "destination": "/tech-tips/weekly-tip-start-taking-advantage-cloud",
       "permanent": true
     },
     {
       "source": "/weekly-tip-start-taking-advantage-cloud/",
-      "destination": "/services/apple-repair",
+      "destination": "/tech-tips/weekly-tip-start-taking-advantage-cloud",
       "permanent": true
     },
     {
       "source": "/year-louis-hall-anything-apple-marthas-vineyard",
-      "destination": "/about",
+      "destination": "/tech-tips/year-louis-hall-anything-apple-marthas-vineyard",
       "permanent": true
     },
     {
       "source": "/year-louis-hall-anything-apple-marthas-vineyard/",
-      "destination": "/about",
+      "destination": "/tech-tips/year-louis-hall-anything-apple-marthas-vineyard",
       "permanent": true
     },
     {
       "source": "/the-end-of-an-era",
-      "destination": "/about",
+      "destination": "/tech-tips/the-end-of-an-era",
       "permanent": true
     },
     {
       "source": "/the-end-of-an-era/",
-      "destination": "/about",
+      "destination": "/tech-tips/the-end-of-an-era",
       "permanent": true
     },
     {
@@ -431,6 +421,86 @@
     {
       "source": "/marthas-vineyard/vineyard-haven/restaurants/sandys-fish-chips-vineyard-haven",
       "destination": "/marthas-vineyard/vineyard-haven/restaurants/johns-fish-market-vineyard-haven",
+      "permanent": true
+    },
+    {
+      "source": "/networking-services",
+      "destination": "/services/wifi-network",
+      "permanent": true
+    },
+    {
+      "source": "/networking-services/",
+      "destination": "/services/wifi-network",
+      "permanent": true
+    },
+    {
+      "source": "/2026/:month",
+      "destination": "/tech-tips",
+      "permanent": true
+    },
+    {
+      "source": "/2026/:month/",
+      "destination": "/tech-tips",
+      "permanent": true
+    },
+    {
+      "source": "/2024/:month",
+      "destination": "/tech-tips",
+      "permanent": true
+    },
+    {
+      "source": "/2024/:month/",
+      "destination": "/tech-tips",
+      "permanent": true
+    },
+    {
+      "source": "/2018/:month",
+      "destination": "/tech-tips",
+      "permanent": true
+    },
+    {
+      "source": "/2018/:month/",
+      "destination": "/tech-tips",
+      "permanent": true
+    },
+    {
+      "source": "/2017/:month",
+      "destination": "/tech-tips",
+      "permanent": true
+    },
+    {
+      "source": "/2017/:month/",
+      "destination": "/tech-tips",
+      "permanent": true
+    },
+    {
+      "source": "/author/:name",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/author/:name/",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/author/:name/page/:page",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/author/:name/page/:page/",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/category/:category",
+      "destination": "/tech-tips",
+      "permanent": true
+    },
+    {
+      "source": "/category/:category/",
+      "destination": "/tech-tips",
       "permanent": true
     },
     {

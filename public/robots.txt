@@ -1,11 +1,14 @@
+# Robots.txt for anythingitechmv.com
+# Generated: 2026-04-29T20:26:35.842Z
+
 User-agent: *
 Allow: /
 
-Sitemap: https://anythingitechmv.com/sitemap.xml
+# Disallow admin and API routes
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api
+Disallow: /api/
 
-# Block duplicate/historical slugs (handled by redirects)
-Disallow: /marthas-vineyard/*/*/behind-the-bookstore-edgartown
-Disallow: /marthas-vineyard/*/*/chilmark-tavern-chilmark
-Disallow: /marthas-vineyard/*/*/edgartowndinercom-edgartown
-Disallow: /marthas-vineyard/*/*/edgartownpizzacom-edgartown
-Disallow: /marthas-vineyard/*/*/iconic-marthas-vineyard-hotel-edgartown
+# Sitemap
+Sitemap: https://anythingitechmv.com/sitemap.xml
