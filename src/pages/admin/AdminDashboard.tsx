@@ -87,12 +87,14 @@ export default function AdminDashboard() {
         },
       });
 
+      const data = await response.json();
       if (response.ok) {
-        const data = await response.json();
         setActivities(data.activities || []);
+      } else {
+        console.error("Activity fetch failed:", data);
       }
-    } catch {
-      // Silently fail - activity log is non-critical
+    } catch (err) {
+      console.error("Activity fetch error:", err);
     } finally {
       setIsLoadingActivity(false);
     }

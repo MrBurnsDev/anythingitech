@@ -177,7 +177,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           .limit(limitNum);
 
         if (activityError) {
-          return res.status(500).json({ error: "Failed to fetch activity" });
+          console.error("Activity fetch error:", activityError);
+          // If table doesn't exist, return empty array instead of error
+          if (activityError.code === "42P01" || activityError.message?.includes("does not exist")) {
+            return res.status(200).json({ activities: [], tableNotFound: true });
+          }
+          return res.status(500).json({ error: "Failed to fetch activity", details: activityError.message });
         }
 
         // Enrich with business names
