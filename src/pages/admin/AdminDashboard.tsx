@@ -34,6 +34,7 @@ interface Activity {
   action: string;
   entityType: string;
   entityId: number | null;
+  currentBusinessId: number | null;
   businessName: string | null;
   businessSlug: string | null;
   description: string;
@@ -690,10 +691,11 @@ export default function AdminDashboard() {
                     </>
                   );
 
-                  return isBusinessAction && activity.entityId ? (
+                  // Only make clickable if business still exists (currentBusinessId was found)
+                  return isBusinessAction && activity.currentBusinessId ? (
                     <Link
                       key={activity.id}
-                      to={`/admin/businesses/${activity.entityId}/edit`}
+                      to={`/admin/businesses/${activity.currentBusinessId}/edit`}
                       className="flex items-start justify-between gap-4 py-2 px-2 -mx-2 border-b last:border-0 rounded hover:bg-muted/50 transition-colors"
                     >
                       {content}

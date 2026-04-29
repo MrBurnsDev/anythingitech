@@ -190,14 +190,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           (activities || []).map(async (activity) => {
             let businessName = null;
             let businessSlug = null;
+            let currentBusinessId = null;
 
             if (activity.entity_type === "business" && activity.entity_id) {
               const { data: business } = await supabase
                 .from("businesses")
-                .select("business_name, slug")
+                .select("id, business_name, slug")
                 .eq("id", activity.entity_id)
                 .single();
               if (business) {
+                currentBusinessId = business.id;
                 businessName = business.business_name;
                 businessSlug = business.slug;
               }
@@ -224,6 +226,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
               action: activity.action,
               entityType: activity.entity_type,
               entityId: activity.entity_id,
+              currentBusinessId,
               businessName,
               businessSlug,
               description,
