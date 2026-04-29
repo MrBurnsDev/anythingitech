@@ -24,15 +24,17 @@ interface RateLimitConfig {
 // basic protection against rapid-fire scraping within a warm instance
 const requestCounts = new Map<string, { count: number; resetTime: number }>();
 
-// Clean up old entries periodically
-setInterval(() => {
+// Clean up old entries (called on each request instead of setInterval for serverless)
+function cleanupOldEntries(): void {
   const now = Date.now();
-  for (const [key, value] of requestCounts.entries()) {
+  const keysToDelete: string[] = [];
+  requestCounts.forEach((value, key) => {
     if (now > value.resetTime) {
-      requestCounts.delete(key);
+      keysToDelete.push(key);
     }
-  }
-}, 60000); // Clean every minute
+  });
+  keysToDelete.forEach(key => requestCounts.delete(key));
+}
 
 /**
  * Get client IP address from Vercel request
@@ -59,6 +61,9 @@ export function rateLimit(
   res: VercelResponse,
   config: RateLimitConfig
 ): boolean {
+  // Clean up old entries on each request (serverless-friendly)
+  cleanupOldEntries();
+
   const { maxRequests, windowSec, identifier } = config;
 
   // Get identifier (IP by default)
