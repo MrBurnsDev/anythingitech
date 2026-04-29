@@ -81,7 +81,7 @@ export default function AdminDashboard() {
     setIsLoadingActivity(true);
     try {
       const token = localStorage.getItem("admin_token");
-      const response = await fetch("/api/admin/activity?limit=10", {
+      const response = await fetch("/api/admin/businesses?action=activity&limit=10", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

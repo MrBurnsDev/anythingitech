@@ -163,7 +163,68 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     // GET /api/admin/businesses - List businesses or get single by ID, slug, or external_source_id
     if (req.method === "GET") {
-      const { id, slug, external_source_id } = req.query;
+      const { id, slug, external_source_id, action } = req.query;
+
+      // GET /api/admin/businesses?action=activity - Fetch recent activity log
+      if (action === "activity") {
+        const { limit = "10" } = req.query;
+        const limitNum = Math.min(50, Math.max(1, parseInt(limit as string, 10)));
+
+        const { data: activities, error: activityError } = await supabase
+          .from("audit_log")
+          .select("*")
+          .order("created_at", { ascending: false })
+          .limit(limitNum);
+
+        if (activityError) {
+          return res.status(500).json({ error: "Failed to fetch activity" });
+        }
+
+        // Enrich with business names
+        const enrichedActivities = await Promise.all(
+          (activities || []).map(async (activity) => {
+            let businessName = null;
+
+            if (activity.entity_type === "business" && activity.entity_id) {
+              const { data: business } = await supabase
+                .from("businesses")
+                .select("business_name")
+                .eq("id", activity.entity_id)
+                .single();
+              if (business) businessName = business.business_name;
+            }
+
+            // Format action description
+            let description = activity.action.replace(/_/g, " ");
+            const changes = activity.changes as Record<string, unknown> | null;
+            if (activity.action === "create") {
+              description = `Created "${businessName || "business"}"`;
+            } else if (activity.action === "update" && businessName) {
+              const fields = changes ? Object.keys(changes).slice(0, 3).join(", ") : "";
+              description = fields ? `Updated ${fields} for "${businessName}"` : `Updated "${businessName}"`;
+            } else if (activity.action === "archive") {
+              description = `Archived "${businessName || "business"}"`;
+            } else if (activity.action === "login") {
+              description = "Admin logged in";
+            } else if (activity.action === "export") {
+              description = `Exported data`;
+            }
+
+            return {
+              id: activity.id,
+              action: activity.action,
+              entityType: activity.entity_type,
+              entityId: activity.entity_id,
+              businessName,
+              description,
+              performedBy: activity.performed_by,
+              createdAt: activity.created_at,
+            };
+          })
+        );
+
+        return res.status(200).json({ activities: enrichedActivities });
+      }
 
       // Get single business by external_source_id (best for cross-system imports)
       if (external_source_id) {
