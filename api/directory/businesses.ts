@@ -1,6 +1,7 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { supabase } from "../lib/supabase";
-import { rateLimit, PUBLIC_API_RATE_LIMIT, SEARCH_RATE_LIMIT } from "../lib/rate-limit";
+// Rate limiting temporarily disabled for debugging
+// import { rateLimit, PUBLIC_API_RATE_LIMIT, SEARCH_RATE_LIMIT } from "../lib/rate-limit";
 
 /**
  * GET /api/directory/businesses
@@ -32,11 +33,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const { town, type, slug, search } = req.query;
 
-  // Apply rate limiting (stricter for search queries)
-  const rateLimitConfig = search ? SEARCH_RATE_LIMIT : PUBLIC_API_RATE_LIMIT;
-  if (rateLimit(req, res, rateLimitConfig)) {
-    return; // Request was blocked by rate limiter
-  }
+  // Rate limiting temporarily disabled for debugging
+  // const rateLimitConfig = search ? SEARCH_RATE_LIMIT : PUBLIC_API_RATE_LIMIT;
+  // if (rateLimit(req, res, rateLimitConfig)) {
+  //   return; // Request was blocked by rate limiter
+  // }
 
   try {
     let query = supabase
