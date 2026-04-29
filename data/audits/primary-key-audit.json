@@ -1,0 +1,2165 @@
+{
+  "timestamp": "2026-04-29T03:41:40.293Z",
+  "dataSources": {
+    "supabase": {
+      "file": "all-businesses-2026-04-29T03-29-10-424Z.json",
+      "count": 337,
+      "idRange": {
+        "min": 1,
+        "max": 389
+      }
+    },
+    "legacy": {
+      "file": "businesses.json",
+      "count": 244,
+      "idRange": {
+        "min": 1,
+        "max": 730
+      }
+    },
+    "gazette": {
+      "file": "gazette/parsed-businesses.json",
+      "count": 398
+    },
+    "businesses2": {
+      "file": "imports/businesses-2/parsed-businesses.json",
+      "count": 320
+    }
+  },
+  "idMismatches": [
+    {
+      "source": "legacy",
+      "name": "Harbor View Hotel",
+      "slug": "harbor-view-hotel-edgartown",
+      "legacyId": 4,
+      "supabaseId": 52,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "The Mansion House",
+      "slug": "the-mansion-house-vineyard-haven",
+      "legacyId": 5,
+      "supabaseId": 53,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Bunch of Grapes Bookstore",
+      "slug": "bunch-of-grapes-bookstore-vineyard-haven",
+      "legacyId": 6,
+      "supabaseId": 54,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Martha's Vineyard Film Festival",
+      "slug": "marthas-vineyard-film-festival-vineyard-haven",
+      "legacyId": 8,
+      "supabaseId": 56,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Aquinnah Shop",
+      "slug": "aquinnah-shop-aquinnah",
+      "legacyId": 10,
+      "supabaseId": 57,
+      "town": "Aquinnah"
+    },
+    {
+      "source": "legacy",
+      "name": "Orange Peel Bakery",
+      "slug": "orange-peel-bakery-aquinnah",
+      "legacyId": 36,
+      "supabaseId": 62,
+      "town": "Aquinnah"
+    },
+    {
+      "source": "legacy",
+      "name": "Chilmark General Store",
+      "slug": "chilmark-general-store-chilmark",
+      "legacyId": 41,
+      "supabaseId": 64,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "Menemsha Gallery",
+      "slug": "menemsha-gallery-chilmark",
+      "legacyId": 45,
+      "supabaseId": 66,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "Among the Flowers",
+      "slug": "among-the-flowers-edgartown",
+      "legacyId": 54,
+      "supabaseId": 69,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Martha's Vineyard Seafood & Steak Restaurant",
+      "slug": "marthas-vineyard-seafood-steak-restaurant-edgartown",
+      "legacyId": 56,
+      "supabaseId": 70,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Bad Martha Beer",
+      "slug": "bad-martha-beer-edgartown",
+      "legacyId": 60,
+      "supabaseId": 71,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Black Sheep",
+      "slug": "black-sheep-edgartown",
+      "legacyId": 66,
+      "supabaseId": 73,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Blackbird Cafe",
+      "slug": "blackbird-cafe-edgartown",
+      "legacyId": 68,
+      "supabaseId": 74,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Chesca",
+      "slug": "chesca-edgartown",
+      "legacyId": 70,
+      "supabaseId": 75,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "China House",
+      "slug": "china-house-edgartown",
+      "legacyId": 72,
+      "supabaseId": 76,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Cozy Corner Cafe",
+      "slug": "cozy-corner-cafe-edgartown",
+      "legacyId": 74,
+      "supabaseId": 77,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Edgartown Meat & Fish",
+      "slug": "edgartown-meat-fish-edgartown",
+      "legacyId": 83,
+      "supabaseId": 80,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Espresso Love",
+      "slug": "espresso-love-edgartown",
+      "legacyId": 87,
+      "supabaseId": 81,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Great Harbor Market",
+      "slug": "great-harbor-market-edgartown",
+      "legacyId": 89,
+      "supabaseId": 82,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Katama General Store",
+      "slug": "katama-general-store-edgartown",
+      "legacyId": 91,
+      "supabaseId": 83,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Katama Kitchen",
+      "slug": "katama-kitchen-edgartown",
+      "legacyId": 93,
+      "supabaseId": 84,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "L'etoile",
+      "slug": "letoile-edgartown",
+      "legacyId": 95,
+      "supabaseId": 85,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Lucky Hank's",
+      "slug": "lucky-hanks-edgartown",
+      "legacyId": 97,
+      "supabaseId": 86,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Morning Glory Farm",
+      "slug": "morning-glory-farm-edgartown",
+      "legacyId": 100,
+      "supabaseId": 87,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Rockfish",
+      "slug": "rockfish-edgartown",
+      "legacyId": 105,
+      "supabaseId": 88,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Rosewater",
+      "slug": "rosewater-edgartown",
+      "legacyId": 107,
+      "supabaseId": 89,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "The Seafood Shanty",
+      "slug": "the-seafood-shanty-edgartown",
+      "legacyId": 109,
+      "supabaseId": 90,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Soigne",
+      "slug": "soigne-edgartown",
+      "legacyId": 112,
+      "supabaseId": 91,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Square Rigger Restaurant",
+      "slug": "square-rigger-restaurant-edgartown",
+      "legacyId": 114,
+      "supabaseId": 92,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "The Covington Restaurant and Bar",
+      "slug": "the-covington-restaurant-and-bar-edgartown",
+      "legacyId": 117,
+      "supabaseId": 93,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Winnetu Oceanside Resort",
+      "slug": "winnetu-oceanside-resort-edgartown",
+      "legacyId": 119,
+      "supabaseId": 94,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "The Porthunter",
+      "slug": "the-porthunter-edgartown",
+      "legacyId": 121,
+      "supabaseId": 95,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "The Wharf Pub Edgartown",
+      "slug": "the-wharf-pub-edgartown-edgartown",
+      "legacyId": 125,
+      "supabaseId": 97,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Wolf's Den Pizzeria",
+      "slug": "wolfs-den-pizzeria-edgartown",
+      "legacyId": 127,
+      "supabaseId": 98,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Aalias Coffee",
+      "slug": "aalias-coffee-oak-bluffs",
+      "legacyId": 129,
+      "supabaseId": 99,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Back Door Donuts",
+      "slug": "back-door-donuts-oak-bluffs",
+      "legacyId": 131,
+      "supabaseId": 100,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Bangkok Cuisine",
+      "slug": "bangkok-cuisine-oak-bluffs",
+      "legacyId": 133,
+      "supabaseId": 1,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Coop de Ville",
+      "slug": "coop-de-ville-oak-bluffs",
+      "legacyId": 141,
+      "supabaseId": 3,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Dos Mas MV",
+      "slug": "dos-mas-mv-oak-bluffs",
+      "legacyId": 143,
+      "supabaseId": 4,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Eleven Circuit",
+      "slug": "eleven-circuit-oak-bluffs",
+      "legacyId": 145,
+      "supabaseId": 5,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Farm Neck Cafe",
+      "slug": "farm-neck-cafe-oak-bluffs",
+      "legacyId": 148,
+      "supabaseId": 6,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Fat Ronnie's Burger Bar",
+      "slug": "fat-ronnies-burger-bar-oak-bluffs",
+      "legacyId": 150,
+      "supabaseId": 7,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Fishbones Bar & Grille",
+      "slug": "fishbones-bar-grille-oak-bluffs",
+      "legacyId": 152,
+      "supabaseId": 8,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Giordano's Restaurant, INC",
+      "slug": "giordanos-restaurant-inc-oak-bluffs",
+      "legacyId": 154,
+      "supabaseId": 9,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Island Grown Initiative Food Pantry",
+      "slug": "island-grown-initiative-food-pantry-oak-bluffs",
+      "legacyId": 156,
+      "supabaseId": 10,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Jimmy Seas",
+      "slug": "jimmy-seas-oak-bluffs",
+      "legacyId": 158,
+      "supabaseId": 11,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Lobster Ville",
+      "slug": "lobster-ville-oak-bluffs",
+      "legacyId": 160,
+      "supabaseId": 12,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Lookout Tavern",
+      "slug": "lookout-tavern-oak-bluffs",
+      "legacyId": 162,
+      "supabaseId": 13,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "MV Chowder Co",
+      "slug": "mv-chowder-co-oak-bluffs",
+      "legacyId": 164,
+      "supabaseId": 14,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Mikado Asian Bistro @ Oak Bluffs",
+      "slug": "mikado-asian-bistro-oak-bluffs-oak-bluffs",
+      "legacyId": 166,
+      "supabaseId": 15,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Offshore Ale Company",
+      "slug": "offshore-ale-company-oak-bluffs",
+      "legacyId": 168,
+      "supabaseId": 16,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Sharky's Oak Bluffs",
+      "slug": "sharkys-oak-bluffs-oak-bluffs",
+      "legacyId": 172,
+      "supabaseId": 17,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "The Ritz Cafe",
+      "slug": "the-ritz-cafe-oak-bluffs",
+      "legacyId": 177,
+      "supabaseId": 19,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "The Sweet Life MV",
+      "slug": "the-sweet-life-mv-oak-bluffs",
+      "legacyId": 179,
+      "supabaseId": 20,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Tony's Market",
+      "slug": "tonys-market-oak-bluffs",
+      "legacyId": 181,
+      "supabaseId": 21,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Winston",
+      "slug": "winston-oak-bluffs",
+      "legacyId": 183,
+      "supabaseId": 22,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "7a Foods Martha's Vineyard",
+      "slug": "7a-foods-marthas-vineyard-west-tisbury",
+      "legacyId": 185,
+      "supabaseId": 23,
+      "town": "West Tisbury"
+    },
+    {
+      "source": "legacy",
+      "name": "State Road Restaurant",
+      "slug": "state-road-restaurant-west-tisbury",
+      "legacyId": 187,
+      "supabaseId": 24,
+      "town": "West Tisbury"
+    },
+    {
+      "source": "legacy",
+      "name": "Vineyard Take Out",
+      "slug": "vineyard-take-out-west-tisbury",
+      "legacyId": 189,
+      "supabaseId": 25,
+      "town": "West Tisbury"
+    },
+    {
+      "source": "legacy",
+      "name": "Artcliff Diner",
+      "slug": "artcliff-diner-vineyard-haven",
+      "legacyId": 191,
+      "supabaseId": 26,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Bobby B's",
+      "slug": "bobby-bs-oak-bluffs",
+      "legacyId": 196,
+      "supabaseId": 27,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Catboat Coffee Co.",
+      "slug": "catboat-coffee-co-vineyard-haven",
+      "legacyId": 198,
+      "supabaseId": 28,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Delicious MV",
+      "slug": "delicious-mv-oak-bluffs",
+      "legacyId": 200,
+      "supabaseId": 29,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Island Fresh Pizza",
+      "slug": "island-fresh-pizza-vineyard-haven",
+      "legacyId": 202,
+      "supabaseId": 30,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "La Choza",
+      "slug": "la-choza-vineyard-haven",
+      "legacyId": 204,
+      "supabaseId": 31,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Mikado Asian Bistro",
+      "slug": "mikado-asian-bistro-vineyard-haven",
+      "legacyId": 206,
+      "supabaseId": 32,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Mocha Mott's",
+      "slug": "mocha-motts-vineyard-haven",
+      "legacyId": 208,
+      "supabaseId": 33,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Nook",
+      "slug": "nook-vineyard-haven",
+      "legacyId": 210,
+      "supabaseId": 34,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Porto Pizza Martha's Vineyard",
+      "slug": "porto-pizza-marthas-vineyard-vineyard-haven",
+      "legacyId": 213,
+      "supabaseId": 35,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Rocco's Pizza Menu",
+      "slug": "roccos-pizza-menu-vineyard-haven",
+      "legacyId": 215,
+      "supabaseId": 36,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Scottish Bakehouse",
+      "slug": "scottish-bakehouse-vineyard-haven",
+      "legacyId": 219,
+      "supabaseId": 38,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Sweet Bites",
+      "slug": "sweet-bites-vineyard-haven",
+      "legacyId": 221,
+      "supabaseId": 39,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Waterside Market",
+      "slug": "waterside-market-vineyard-haven",
+      "legacyId": 225,
+      "supabaseId": 40,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Allen Farm Sheep & Wool Company",
+      "slug": "allen-farm-sheep-wool-company-chilmark",
+      "legacyId": 229,
+      "supabaseId": 42,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "Native Earth Teaching Farm",
+      "slug": "native-earth-teaching-farm-west-tisbury",
+      "legacyId": 231,
+      "supabaseId": 43,
+      "town": "West Tisbury"
+    },
+    {
+      "source": "legacy",
+      "name": "North Tabor Farm",
+      "slug": "north-tabor-farm-chilmark",
+      "legacyId": 233,
+      "supabaseId": 44,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "Cronigs Market",
+      "slug": "cronigs-market-vineyard-haven",
+      "legacyId": 239,
+      "supabaseId": 45,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "The Reliable Market",
+      "slug": "the-reliable-market-oak-bluffs",
+      "legacyId": 244,
+      "supabaseId": 46,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Vineyard Grocer",
+      "slug": "vineyard-grocer-vineyard-haven",
+      "legacyId": 249,
+      "supabaseId": 47,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Edgartown Seafood Fish Market",
+      "slug": "edgartown-seafood-fish-market-edgartown",
+      "legacyId": 251,
+      "supabaseId": 48,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Menemsha Fish Market",
+      "slug": "menemsha-fish-market-chilmark",
+      "legacyId": 255,
+      "supabaseId": 50,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "The Net Result",
+      "slug": "the-net-result-vineyard-haven",
+      "legacyId": 257,
+      "supabaseId": 151,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Jim's Package Store",
+      "slug": "jims-package-store-oak-bluffs",
+      "legacyId": 260,
+      "supabaseId": 152,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "MV Wine Store",
+      "slug": "mv-wine-store-edgartown",
+      "legacyId": 262,
+      "supabaseId": 153,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Vintage MV Wine & Spirits",
+      "slug": "vintage-mv-wine-spirits-edgartown",
+      "legacyId": 266,
+      "supabaseId": 154,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Conroy Apothecary",
+      "slug": "conroy-apothecary-vineyard-haven",
+      "legacyId": 270,
+      "supabaseId": 155,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "51art Gallery Located at the Shoppe With the Red Door",
+      "slug": "51art-gallery-located-at-the-shoppe-with-the-red-door-vineyard-haven",
+      "legacyId": 276,
+      "supabaseId": 157,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Alison Shaw Photography",
+      "slug": "alison-shaw-photography-oak-bluffs",
+      "legacyId": 278,
+      "supabaseId": 158,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Blanchard Photography",
+      "slug": "blanchard-photography-west-tisbury",
+      "legacyId": 280,
+      "supabaseId": 159,
+      "town": "West Tisbury"
+    },
+    {
+      "source": "legacy",
+      "name": "Edgartown Fire Department",
+      "slug": "edgartown-fire-department-edgartown",
+      "legacyId": 284,
+      "supabaseId": 161,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Eisenhauer Gallery",
+      "slug": "eisenhauer-gallery-edgartown",
+      "legacyId": 286,
+      "supabaseId": 162,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Featherstone Center for the Arts",
+      "slug": "featherstone-center-for-the-arts-oak-bluffs",
+      "legacyId": 288,
+      "supabaseId": 163,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Field Gallery",
+      "slug": "field-gallery-west-tisbury",
+      "legacyId": 290,
+      "supabaseId": 164,
+      "town": "West Tisbury"
+    },
+    {
+      "source": "legacy",
+      "name": "Island Folk Pottery",
+      "slug": "island-folk-pottery-chilmark",
+      "legacyId": 293,
+      "supabaseId": 165,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "Louisa Gould Gallery",
+      "slug": "louisa-gould-gallery-vineyard-haven",
+      "legacyId": 295,
+      "supabaseId": 166,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "MV Glassworks",
+      "slug": "mv-glassworks-west-tisbury",
+      "legacyId": 297,
+      "supabaseId": 167,
+      "town": "West Tisbury"
+    },
+    {
+      "source": "legacy",
+      "name": "Merry Farm Pottery",
+      "slug": "merry-farm-pottery-west-tisbury",
+      "legacyId": 304,
+      "supabaseId": 169,
+      "town": "West Tisbury"
+    },
+    {
+      "source": "legacy",
+      "name": "Moore Family Gallery",
+      "slug": "moore-family-gallery-oak-bluffs",
+      "legacyId": 308,
+      "supabaseId": 171,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "North Water Gallery",
+      "slug": "north-water-gallery-west-tisbury",
+      "legacyId": 312,
+      "supabaseId": 173,
+      "town": "West Tisbury"
+    },
+    {
+      "source": "legacy",
+      "name": "Pathways Arts",
+      "slug": "pathways-arts-chilmark",
+      "legacyId": 314,
+      "supabaseId": 174,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "Seastone Papers",
+      "slug": "seastone-papers-west-tisbury",
+      "legacyId": 316,
+      "supabaseId": 175,
+      "town": "West Tisbury"
+    },
+    {
+      "source": "legacy",
+      "name": "Strand Theatre MV",
+      "slug": "strand-theatre-mv-oak-bluffs",
+      "legacyId": 318,
+      "supabaseId": 176,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Vineyard Preservation Trust",
+      "slug": "vineyard-preservation-trust-edgartown",
+      "legacyId": 320,
+      "supabaseId": 177,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "The Christina Gallery",
+      "slug": "the-christina-gallery-edgartown",
+      "legacyId": 322,
+      "supabaseId": 178,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Peter Simon Photography",
+      "slug": "peter-simon-photography-chilmark",
+      "legacyId": 324,
+      "supabaseId": 179,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "The Yard",
+      "slug": "the-yard-chilmark",
+      "legacyId": 329,
+      "supabaseId": 182,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "Tuck & Holand Metal Sculptors",
+      "slug": "tuck-holand-metal-sculptors-vineyard-haven",
+      "legacyId": 331,
+      "supabaseId": 183,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Vineyard Arts Project",
+      "slug": "vineyard-arts-project-edgartown",
+      "legacyId": 333,
+      "supabaseId": 184,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Washington Ledesma",
+      "slug": "washington-ledesma-edgartown",
+      "legacyId": 335,
+      "supabaseId": 185,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Winter Street Gallery",
+      "slug": "winter-street-gallery-edgartown",
+      "legacyId": 337,
+      "supabaseId": 186,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Edgartown Golf Club Martha's Vineyard",
+      "slug": "edgartown-golf-club-marthas-vineyard-edgartown",
+      "legacyId": 339,
+      "supabaseId": 187,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Felix Neck Wildlife Sanctuary",
+      "slug": "felix-neck-wildlife-sanctuary-vineyard-haven",
+      "legacyId": 340,
+      "supabaseId": 188,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Mink Meadows Golf Club",
+      "slug": "mink-meadows-golf-club-vineyard-haven",
+      "legacyId": 342,
+      "supabaseId": 189,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "The Polly Hill Arboretum",
+      "slug": "the-polly-hill-arboretum-west-tisbury",
+      "legacyId": 343,
+      "supabaseId": 190,
+      "town": "West Tisbury"
+    },
+    {
+      "source": "legacy",
+      "name": "Royal Chappy Golf",
+      "slug": "royal-chappy-golf-edgartown",
+      "legacyId": 345,
+      "supabaseId": 191,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Vineyard Golf Club",
+      "slug": "vineyard-golf-club-edgartown",
+      "legacyId": 346,
+      "supabaseId": 192,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "The Martha's Vineyard Groups of Alcoholics Anonymous",
+      "slug": "the-marthas-vineyard-groups-of-alcoholics-anonymous-edgartown",
+      "legacyId": 347,
+      "supabaseId": 193,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "MV Narcotics Anonymous",
+      "slug": "mv-narcotics-anonymous-vineyard-haven",
+      "legacyId": 348,
+      "supabaseId": 194,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "B Strong",
+      "slug": "b-strong-oak-bluffs",
+      "legacyId": 353,
+      "supabaseId": 198,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Optometrist in Harvard Square",
+      "slug": "optometrist-in-harvard-square-vineyard-haven",
+      "legacyId": 357,
+      "supabaseId": 200,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Hot Yoga MV",
+      "slug": "hot-yoga-mv-vineyard-haven",
+      "legacyId": 359,
+      "supabaseId": 201,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Allyson Cook Metell, Lmt & Associates",
+      "slug": "allyson-cook-metell-lmt-associates-vineyard-haven",
+      "legacyId": 361,
+      "supabaseId": 202,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Megan Grennan Yoga",
+      "slug": "megan-grennan-yoga-west-tisbury",
+      "legacyId": 364,
+      "supabaseId": 203,
+      "town": "West Tisbury"
+    },
+    {
+      "source": "legacy",
+      "name": "Peakedhillstudio",
+      "slug": "peakedhillstudio-chilmark",
+      "legacyId": 365,
+      "supabaseId": 204,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "Vcmpt",
+      "slug": "vcmpt-edgartown",
+      "legacyId": 367,
+      "supabaseId": 205,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Vineyard Medical Care",
+      "slug": "vineyard-medical-care-vineyard-haven",
+      "legacyId": 370,
+      "supabaseId": 207,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Vineyard Vinyasa",
+      "slug": "vineyard-vinyasa-oak-bluffs",
+      "legacyId": 372,
+      "supabaseId": 208,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Ymca of Martha's Vineyard",
+      "slug": "ymca-of-marthas-vineyard-vineyard-haven",
+      "legacyId": 374,
+      "supabaseId": 209,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Marthas Vineyard Yoga Barn",
+      "slug": "marthas-vineyard-yoga-barn-west-tisbury",
+      "legacyId": 375,
+      "supabaseId": 210,
+      "town": "West Tisbury"
+    },
+    {
+      "source": "legacy",
+      "name": "Edgartown Martha's Vineyard Hot Yoga Studio/yoga on the Vine",
+      "slug": "edgartown-marthas-vineyard-hot-yoga-studio-yoga-on-the-vine-edgartown",
+      "legacyId": 376,
+      "supabaseId": 211,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Dockside Inn",
+      "slug": "dockside-inn-oak-bluffs",
+      "legacyId": 381,
+      "supabaseId": 214,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Dunmere House",
+      "slug": "dunmere-house-oak-bluffs",
+      "legacyId": 383,
+      "supabaseId": 215,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Edgar Hotel",
+      "slug": "edgar-hotel-edgartown",
+      "legacyId": 385,
+      "supabaseId": 216,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Luxury Boutique Hotel Edgartown",
+      "slug": "luxury-boutique-hotel-edgartown-edgartown",
+      "legacyId": 390,
+      "supabaseId": 218,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "The Harborside Inn",
+      "slug": "the-harborside-inn-edgartown",
+      "legacyId": 395,
+      "supabaseId": 220,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Madisoninn",
+      "slug": "madisoninn-oak-bluffs",
+      "legacyId": 406,
+      "supabaseId": 226,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Menemsha Inn & Cottages: Martha's Vineyard Vacation Rentals",
+      "slug": "menemsha-inn-cottages-marthas-vineyard-vacation-rentals-chilmark",
+      "legacyId": 410,
+      "supabaseId": 228,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "Narragansett House",
+      "slug": "narragansett-house-oak-bluffs",
+      "legacyId": 412,
+      "supabaseId": 229,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Nobnocket",
+      "slug": "nobnocket-vineyard-haven",
+      "legacyId": 413,
+      "supabaseId": 230,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Martha’s Vineyard Hotels",
+      "slug": "martha-s-vineyard-hotels-oak-bluffs",
+      "legacyId": 415,
+      "supabaseId": 231,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Summercamp Hotel",
+      "slug": "summercamp-hotel-oak-bluffs",
+      "legacyId": 417,
+      "supabaseId": 232,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "The Beach Front Inn of Martha's Vineyard",
+      "slug": "the-beach-front-inn-of-marthas-vineyard-oak-bluffs",
+      "legacyId": 423,
+      "supabaseId": 234,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Captain Flanders Inn",
+      "slug": "captain-flanders-inn-chilmark",
+      "legacyId": 425,
+      "supabaseId": 235,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "The Charlotte Inn",
+      "slug": "the-charlotte-inn-edgartown",
+      "legacyId": 427,
+      "supabaseId": 236,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Duck Inn",
+      "slug": "duck-inn-aquinnah",
+      "legacyId": 431,
+      "supabaseId": 237,
+      "town": "Aquinnah"
+    },
+    {
+      "source": "legacy",
+      "name": "Lark Hotels",
+      "slug": "lark-hotels-edgartown",
+      "legacyId": 433,
+      "supabaseId": 238,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Vacasa.com/usa/the-island-inn",
+      "slug": "vacasa-com-usa-the-island-inn-vineyard-haven",
+      "legacyId": 435,
+      "supabaseId": 239,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Lightkeepers Inn",
+      "slug": "lightkeepers-inn-edgartown",
+      "legacyId": 437,
+      "supabaseId": 240,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Morgan Hotel",
+      "slug": "morgan-hotel-oak-bluffs",
+      "legacyId": 439,
+      "supabaseId": 241,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Oak Bluffs Inn",
+      "slug": "oak-bluffs-inn-oak-bluffs",
+      "legacyId": 441,
+      "supabaseId": 242,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Martha’s Vineyard Surfside Hotel: Martha’s Vineyard Hotels",
+      "slug": "martha-s-vineyard-surfside-hotel-martha-s-vineyard-hotels-oak-bluffs",
+      "legacyId": 444,
+      "supabaseId": 243,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Vineyard Square Hotel & Suites",
+      "slug": "vineyard-square-hotel-suites-edgartown",
+      "legacyId": 450,
+      "supabaseId": 246,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Find Your Island Ride",
+      "slug": "find-your-island-ride-vineyard-haven",
+      "legacyId": 453,
+      "supabaseId": 247,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Cape Cod Five",
+      "slug": "cape-cod-five-vineyard-haven",
+      "legacyId": 476,
+      "supabaseId": 254,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Claudia Jewelry",
+      "slug": "claudia-jewelry-edgartown",
+      "legacyId": 487,
+      "supabaseId": 259,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Darosa's",
+      "slug": "darosas-vineyard-haven",
+      "legacyId": 496,
+      "supabaseId": 263,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Divine Beauty + Wellness",
+      "slug": "divine-beauty-wellness-edgartown",
+      "legacyId": 499,
+      "supabaseId": 265,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Edgartown Paint Shoppe",
+      "slug": "edgartown-paint-shoppe-edgartown",
+      "legacyId": 518,
+      "supabaseId": 273,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Fine Fettle Dispensary",
+      "slug": "fine-fettle-dispensary-edgartown",
+      "legacyId": 520,
+      "supabaseId": 274,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Good Dog Goods",
+      "slug": "good-dog-goods-vineyard-haven",
+      "legacyId": 523,
+      "supabaseId": 275,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Granite Five & Ten",
+      "slug": "granite-five-ten-edgartown",
+      "legacyId": 525,
+      "supabaseId": 276,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Islandalpaca",
+      "slug": "islandalpaca-vineyard-haven",
+      "legacyId": 534,
+      "supabaseId": 278,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Larry's Tackle Shop",
+      "slug": "larrys-tackle-shop-edgartown",
+      "legacyId": 549,
+      "supabaseId": 284,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Lazy Frog",
+      "slug": "lazy-frog-oak-bluffs",
+      "legacyId": 551,
+      "supabaseId": 285,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Leroux Kitchen",
+      "slug": "leroux-kitchen-vineyard-haven",
+      "legacyId": 553,
+      "supabaseId": 286,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Martha's Vineyard Made",
+      "slug": "marthas-vineyard-made-west-tisbury",
+      "legacyId": 565,
+      "supabaseId": 291,
+      "town": "West Tisbury"
+    },
+    {
+      "source": "legacy",
+      "name": "North Line Shell",
+      "slug": "north-line-shell-edgartown",
+      "legacyId": 583,
+      "supabaseId": 298,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Revive by Sarka",
+      "slug": "revive-by-sarka-edgartown",
+      "legacyId": 597,
+      "supabaseId": 302,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Sanctuary Martha's Vineyard",
+      "slug": "sanctuary-marthas-vineyard-oak-bluffs",
+      "legacyId": 603,
+      "supabaseId": 304,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Sea Bags",
+      "slug": "sea-bags-vineyard-haven",
+      "legacyId": 606,
+      "supabaseId": 305,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Sea Spa Salon",
+      "slug": "sea-spa-salon-edgartown",
+      "legacyId": 610,
+      "supabaseId": 307,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Slate",
+      "slug": "slate-edgartown",
+      "legacyId": 616,
+      "supabaseId": 309,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Soft As a Grape",
+      "slug": "soft-as-a-grape-vineyard-haven",
+      "legacyId": 620,
+      "supabaseId": 311,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Spa L'eau MV",
+      "slug": "spa-leau-mv-edgartown",
+      "legacyId": 625,
+      "supabaseId": 313,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Stefanie Wolf Designs Artisan Jewelry From Martha's Vineyard",
+      "slug": "stefanie-wolf-designs-artisan-jewelry-from-marthas-vineyard-oak-bluffs",
+      "legacyId": 626,
+      "supabaseId": 314,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Tashmoo Insurance Agency",
+      "slug": "tashmoo-insurance-agency-vineyard-haven",
+      "legacyId": 633,
+      "supabaseId": 317,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Boneyard Surf Co",
+      "slug": "boneyard-surf-co-oak-bluffs",
+      "legacyId": 637,
+      "supabaseId": 318,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Vineyard Decorators",
+      "slug": "vineyard-decorators-vineyard-haven",
+      "legacyId": 652,
+      "supabaseId": 324,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Vineyard Hearth Patio & Spa",
+      "slug": "vineyard-hearth-patio-spa-west-tisbury",
+      "legacyId": 656,
+      "supabaseId": 326,
+      "town": "West Tisbury"
+    },
+    {
+      "source": "legacy",
+      "name": "Vineyard Vines",
+      "slug": "vineyard-vines-vineyard-haven",
+      "legacyId": 660,
+      "supabaseId": 328,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Erica Wilson INC",
+      "slug": "erica-wilson-inc-edgartown",
+      "legacyId": 667,
+      "supabaseId": 331,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Island Outfitters Oak Bluffs",
+      "slug": "island-outfitters-oak-bluffs-oak-bluffs",
+      "legacyId": 668,
+      "supabaseId": 332,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "The Great Put On",
+      "slug": "the-great-put-on-edgartown",
+      "legacyId": 669,
+      "supabaseId": 333,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Martha's Vineyard, Ma Store Location",
+      "slug": "marthas-vineyard-ma-store-location-edgartown",
+      "legacyId": 670,
+      "supabaseId": 334,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Lani Beach Club",
+      "slug": "lani-beach-club-vineyard-haven",
+      "legacyId": 671,
+      "supabaseId": 335,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Rainy Day",
+      "slug": "rainy-day-vineyard-haven",
+      "legacyId": 672,
+      "supabaseId": 336,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Lilly Pulitzer",
+      "slug": "lilly-pulitzer-edgartown",
+      "legacyId": 673,
+      "supabaseId": 337,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Barnes Moving & Storage",
+      "slug": "barnes-moving-storage-vineyard-haven",
+      "legacyId": 674,
+      "supabaseId": 338,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Carroll's Martha's Vineyard Rapid Transit, Inc.",
+      "slug": "carrolls-marthas-vineyard-rapid-transit-inc-vineyard-haven",
+      "legacyId": 675,
+      "supabaseId": 339,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Coastal Events MV",
+      "slug": "coastal-events-mv-west-tisbury",
+      "legacyId": 676,
+      "supabaseId": 340,
+      "town": "West Tisbury"
+    },
+    {
+      "source": "legacy",
+      "name": "Brissette Electric Inc.",
+      "slug": "brissette-electric-inc-vineyard-haven",
+      "legacyId": 677,
+      "supabaseId": 341,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "A. P. Fortes Plumbing and Heating",
+      "slug": "a-p-fortes-plumbing-and-heating-vineyard-haven",
+      "legacyId": 679,
+      "supabaseId": 343,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Lowe Energy Design Inc.",
+      "slug": "lowe-energy-design-inc-vineyard-haven",
+      "legacyId": 680,
+      "supabaseId": 344,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Callahan Plumbing and Heating, INC",
+      "slug": "callahan-plumbing-and-heating-inc-vineyard-haven",
+      "legacyId": 681,
+      "supabaseId": 345,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Tracker Home Decor",
+      "slug": "tracker-home-decor-edgartown",
+      "legacyId": 682,
+      "supabaseId": 346,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Hutker Architects INC",
+      "slug": "hutker-architects-inc-vineyard-haven",
+      "legacyId": 683,
+      "supabaseId": 347,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Rentschler & Company Interiors on Martha's Vineyard",
+      "slug": "rentschler-company-interiors-on-marthas-vineyard-vineyard-haven",
+      "legacyId": 684,
+      "supabaseId": 348,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Interiors Studio Martha's Vineyard",
+      "slug": "interiors-studio-marthas-vineyard-vineyard-haven",
+      "legacyId": 685,
+      "supabaseId": 349,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Tending Joy Artisan Shop",
+      "slug": "tending-joy-artisan-shop-chilmark",
+      "legacyId": 686,
+      "supabaseId": 350,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "Kin MV",
+      "slug": "kin-mv-edgartown",
+      "legacyId": 687,
+      "supabaseId": 351,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Hatmarcha Gifts",
+      "slug": "hatmarcha-gifts-chilmark",
+      "legacyId": 688,
+      "supabaseId": 352,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "Stony Creek Gifts",
+      "slug": "stony-creek-gifts-aquinnah",
+      "legacyId": 689,
+      "supabaseId": 353,
+      "town": "Aquinnah"
+    },
+    {
+      "source": "legacy",
+      "name": "Handworks",
+      "slug": "handworks-oak-bluffs",
+      "legacyId": 690,
+      "supabaseId": 354,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Olive Branch Fair Trade",
+      "slug": "olive-branch-fair-trade-vineyard-haven",
+      "legacyId": 691,
+      "supabaseId": 355,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Harbor Craft Shop",
+      "slug": "harbor-craft-shop-vineyard-haven",
+      "legacyId": 692,
+      "supabaseId": 356,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Neptune's Sea Chest",
+      "slug": "neptunes-sea-chest-vineyard-haven",
+      "legacyId": 693,
+      "supabaseId": 357,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Off Main",
+      "slug": "off-main-vineyard-haven",
+      "legacyId": 694,
+      "supabaseId": 358,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "C'est La Vie",
+      "slug": "cest-la-vie-vineyard-haven",
+      "legacyId": 695,
+      "supabaseId": 359,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Mardell's Gifts & Jewelry",
+      "slug": "mardells-gifts-jewelry-vineyard-haven",
+      "legacyId": 696,
+      "supabaseId": 360,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "The Beach House of MV",
+      "slug": "the-beach-house-of-mv-vineyard-haven",
+      "legacyId": 697,
+      "supabaseId": 361,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Biscuits",
+      "slug": "biscuits-oak-bluffs",
+      "legacyId": 710,
+      "supabaseId": 371,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Atria",
+      "slug": "atria-edgartown",
+      "legacyId": 712,
+      "supabaseId": 373,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Mo's Lunch",
+      "slug": "mos-lunch-oak-bluffs",
+      "legacyId": 713,
+      "supabaseId": 374,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "The Pawnee House",
+      "slug": "the-pawnee-house-oak-bluffs",
+      "legacyId": 714,
+      "supabaseId": 375,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Beetlebung Farm",
+      "slug": "beetlebung-farm-chilmark",
+      "legacyId": 718,
+      "supabaseId": 379,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "Martha's Vineyard Pizza",
+      "slug": "marthas-vineyard-pizza-oak-bluffs",
+      "legacyId": 719,
+      "supabaseId": 380,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Edgartown Pizza 🍕",
+      "slug": "edgartown-pizza-edgartown",
+      "legacyId": 721,
+      "supabaseId": 382,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Edgartown Diner 🍨",
+      "slug": "edgartown-diner-edgartown",
+      "legacyId": 722,
+      "supabaseId": 383,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Rosie's Frozen Yogurt",
+      "slug": "rosies-frozen-yogurt-oak-bluffs",
+      "legacyId": 723,
+      "supabaseId": 384,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Alchemy",
+      "slug": "alchemy-edgartown",
+      "legacyId": 724,
+      "supabaseId": 385,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "John's Fish Market",
+      "slug": "johns-fish-market-vineyard-haven",
+      "legacyId": 726,
+      "supabaseId": 386,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Model Deli",
+      "slug": "model-deli-west-tisbury",
+      "legacyId": 729,
+      "supabaseId": 388,
+      "town": "West Tisbury"
+    }
+  ],
+  "missingSupabaseIds": [
+    {
+      "source": "legacy",
+      "name": "The Black Dog Tavern Company",
+      "slug": "the-black-dog-tavern-company-vineyard-haven",
+      "legacyId": 1,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Granary Gallery",
+      "slug": "granary-gallery-west-tisbury",
+      "legacyId": 7,
+      "town": "West Tisbury"
+    },
+    {
+      "source": "legacy",
+      "name": "Outermost Inn",
+      "slug": "outermost-inn-aquinnah",
+      "legacyId": 38,
+      "town": "Aquinnah"
+    },
+    {
+      "source": "legacy",
+      "name": "The Homeport",
+      "slug": "the-homeport-chilmark",
+      "legacyId": 47,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "19 Prime Steak House",
+      "slug": "19-prime-steak-house-edgartown",
+      "legacyId": 49,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Détente",
+      "slug": "d-tente-edgartown",
+      "legacyId": 76,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Benandbills",
+      "slug": "benandbills-oak-bluffs",
+      "legacyId": 135,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "The Barn Bowl & Bistro",
+      "slug": "the-barn-bowl-bistro-oak-bluffs",
+      "legacyId": 174,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "Authentic Italian Food",
+      "slug": "authentic-italian-food-vineyard-haven",
+      "legacyId": 217,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Larsen's Fish Market",
+      "slug": "larsens-fish-market-chilmark",
+      "legacyId": 253,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "Brickman's",
+      "slug": "brickmans-vineyard-haven",
+      "legacyId": 470,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Conrado®",
+      "slug": "conrado-vineyard-haven",
+      "legacyId": 491,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "E. C. Cottle, Inc.",
+      "slug": "e-c-cottle-inc-edgartown",
+      "legacyId": 503,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Edgartown Council on Aging",
+      "slug": "edgartown-council-on-aging-edgartown",
+      "legacyId": 512,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Technical Apparel + Athletic Shoes",
+      "slug": "technical-apparel-athletic-shoes-vineyard-haven",
+      "legacyId": 555,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Martha's Bike",
+      "slug": "marthas-bike-vineyard-haven",
+      "legacyId": 561,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Red Cat Kitchen",
+      "slug": "red-cat-kitchen-oak-bluffs",
+      "legacyId": 711,
+      "town": "Oak Bluffs"
+    },
+    {
+      "source": "legacy",
+      "name": "The Grey Barn & Farm",
+      "slug": "the-grey-barn-farm-chilmark",
+      "legacyId": 715,
+      "town": "Chilmark"
+    },
+    {
+      "source": "legacy",
+      "name": "The Pelican Club",
+      "slug": "the-pelican-club-edgartown",
+      "legacyId": 716,
+      "town": "Edgartown"
+    },
+    {
+      "source": "legacy",
+      "name": "Tigerhawk Sandwich Co.",
+      "slug": "tigerhawk-sandwich-co-vineyard-haven",
+      "legacyId": 717,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "Art Cliff Diner",
+      "slug": "art-cliff-diner-vineyard-haven",
+      "legacyId": 720,
+      "town": "Vineyard Haven"
+    },
+    {
+      "source": "legacy",
+      "name": "The Attic",
+      "slug": "the-attic-vineyard-haven",
+      "legacyId": 730,
+      "town": "Vineyard Haven"
+    }
+  ],
+  "duplicates": [
+    {
+      "type": "duplicate_slug",
+      "slug": "claudia-jewelry-edgartown",
+      "count": 2,
+      "ids": [
+        259,
+        259
+      ],
+      "names": [
+        "Claudia Jewelry",
+        "Claudia Jewelry"
+      ]
+    },
+    {
+      "type": "duplicate_slug",
+      "slug": "brunos-vineyard-haven",
+      "count": 2,
+      "ids": [
+        253,
+        253
+      ],
+      "names": [
+        "Brunos",
+        "Brunos"
+      ]
+    },
+    {
+      "type": "duplicate_slug",
+      "slug": "cape-cod-five-vineyard-haven",
+      "count": 2,
+      "ids": [
+        254,
+        254
+      ],
+      "names": [
+        "Cape Cod Five",
+        "Cape Cod Five"
+      ]
+    },
+    {
+      "type": "duplicate_slug",
+      "slug": "menemshablues-vineyard-haven",
+      "count": 2,
+      "ids": [
+        296,
+        296
+      ],
+      "names": [
+        "Menemsha Blues",
+        "Menemsha Blues"
+      ]
+    },
+    {
+      "type": "duplicate_slug",
+      "slug": "martha-vineyard-haven",
+      "count": 2,
+      "ids": [
+        290,
+        290
+      ],
+      "names": [
+        "Martha",
+        "Martha"
+      ]
+    },
+    {
+      "type": "duplicate_slug",
+      "slug": "maggies-salon-vineyard-haven",
+      "count": 2,
+      "ids": [
+        288,
+        288
+      ],
+      "names": [
+        "Maggie's Salon",
+        "Maggie's Salon"
+      ]
+    },
+    {
+      "type": "duplicate_name_town",
+      "key": "claudia jewelry:edgartown",
+      "count": 2,
+      "ids": [
+        259,
+        259
+      ],
+      "slugs": [
+        "claudia-jewelry-edgartown",
+        "claudia-jewelry-edgartown"
+      ]
+    },
+    {
+      "type": "duplicate_name_town",
+      "key": "brunos:unknown",
+      "count": 2,
+      "ids": [
+        253,
+        253
+      ],
+      "slugs": [
+        "brunos-vineyard-haven",
+        "brunos-vineyard-haven"
+      ]
+    },
+    {
+      "type": "duplicate_name_town",
+      "key": "cape cod five:vineyard haven",
+      "count": 2,
+      "ids": [
+        254,
+        254
+      ],
+      "slugs": [
+        "cape-cod-five-vineyard-haven",
+        "cape-cod-five-vineyard-haven"
+      ]
+    },
+    {
+      "type": "duplicate_name_town",
+      "key": "menemsha blues:chilmark",
+      "count": 2,
+      "ids": [
+        296,
+        296
+      ],
+      "slugs": [
+        "menemshablues-vineyard-haven",
+        "menemshablues-vineyard-haven"
+      ]
+    },
+    {
+      "type": "duplicate_name_town",
+      "key": "martha:west tisbury",
+      "count": 2,
+      "ids": [
+        290,
+        290
+      ],
+      "slugs": [
+        "martha-vineyard-haven",
+        "martha-vineyard-haven"
+      ]
+    },
+    {
+      "type": "duplicate_name_town",
+      "key": "maggie's salon:vineyard haven",
+      "count": 2,
+      "ids": [
+        288,
+        288
+      ],
+      "slugs": [
+        "maggies-salon-vineyard-haven",
+        "maggies-salon-vineyard-haven"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "Add external_source_id column to businesses table",
+      "sql": "ALTER TABLE businesses ADD COLUMN IF NOT EXISTS external_source_id TEXT;\nCREATE UNIQUE INDEX IF NOT EXISTS idx_businesses_external_source_id ON businesses(external_source_id) WHERE external_source_id IS NOT NULL;"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Add verification_source column to track data origin",
+      "sql": "ALTER TABLE businesses ADD COLUMN IF NOT EXISTS verification_source TEXT DEFAULT 'manual';\n-- Possible values: manual, legacy, gazette, chamber, google_places, import_batch_X"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Populate external_source_id for existing records",
+      "description": "Generate stable IDs based on slug or name+town combination"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Update import scripts to use external_source_id for matching",
+      "description": "Never rely on numeric ID for cross-system matching"
+    },
+    {
+      "priority": "LOW",
+      "action": "Clean up duplicate records",
+      "description": "Found 12 potential duplicates"
+    }
+  ],
+  "externalSourceIdExamples": [
+    {
+      "source": "supabase",
+      "record": "Handworks",
+      "external_source_id": "supabase:oak-bluffs:handworks"
+    },
+    {
+      "source": "legacy",
+      "record": "The Black Dog Tavern Company",
+      "external_source_id": "legacy:vineyard-haven:the-black-dog-tavern-company"
+    },
+    {
+      "source": "gazette",
+      "record": "Aquila",
+      "external_source_id": "gazette:aquinnah:aquila"
+    }
+  ]
+}

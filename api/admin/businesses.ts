@@ -161,9 +161,25 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    // GET /api/admin/businesses - List businesses or get single by ID or slug
+    // GET /api/admin/businesses - List businesses or get single by ID, slug, or external_source_id
     if (req.method === "GET") {
-      const { id, slug } = req.query;
+      const { id, slug, external_source_id } = req.query;
+
+      // Get single business by external_source_id (best for cross-system imports)
+      if (external_source_id) {
+        const { data: business, error } = await supabase
+          .from("businesses")
+          .select("*")
+          .eq("external_source_id", external_source_id as string)
+          .eq("is_duplicate", false)
+          .single();
+
+        if (error || !business) {
+          return res.status(404).json({ error: "Business not found", external_source_id });
+        }
+
+        return res.status(200).json({ business });
+      }
 
       // Get single business by slug (preferred - consistent across data sources)
       if (slug) {
@@ -330,6 +346,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(400).json({ error: "A business with this slug already exists" });
       }
 
+      // Generate external_source_id if not provided
+      const externalSourceId = data.external_source_id || `supabase:${slug}`;
+
       const { data: newBusiness, error } = await supabase
         .from("businesses")
         .insert({
@@ -355,6 +374,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           notes: sanitize(data.notes),
           latitude: data.latitude || null,
           longitude: data.longitude || null,
+          external_source_id: externalSourceId,
+          verification_source: sanitize(data.verification_source) || "manual",
         })
         .select("id")
         .single();
@@ -472,6 +493,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         "notes",
         "latitude",
         "longitude",
+        "external_source_id",
+        "verification_source",
       ];
 
       for (const field of fields) {
