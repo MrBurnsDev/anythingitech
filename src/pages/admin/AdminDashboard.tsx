@@ -29,6 +29,32 @@ interface Stats {
   recentUpdates: number;
 }
 
+interface Activity {
+  id: number;
+  action: string;
+  entityType: string;
+  entityId: number | null;
+  businessName: string | null;
+  description: string;
+  performedBy: string;
+  createdAt: string;
+}
+
+function formatRelativeTime(dateString: string): string {
+  const date = new Date(dateString);
+  const now = new Date();
+  const diffMs = now.getTime() - date.getTime();
+  const diffMins = Math.floor(diffMs / 60000);
+  const diffHours = Math.floor(diffMs / 3600000);
+  const diffDays = Math.floor(diffMs / 86400000);
+
+  if (diffMins < 1) return "just now";
+  if (diffMins < 60) return `${diffMins}m ago`;
+  if (diffHours < 24) return `${diffHours}h ago`;
+  if (diffDays < 7) return `${diffDays}d ago`;
+  return date.toLocaleDateString();
+}
+
 export default function AdminDashboard() {
   const [stats, setStats] = useState<Stats | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -48,6 +74,29 @@ export default function AdminDashboard() {
     success: boolean;
     message: string;
   } | null>(null);
+  const [activities, setActivities] = useState<Activity[]>([]);
+  const [isLoadingActivity, setIsLoadingActivity] = useState(true);
+
+  const fetchActivity = async () => {
+    setIsLoadingActivity(true);
+    try {
+      const token = localStorage.getItem("admin_token");
+      const response = await fetch("/api/admin/activity?limit=10", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setActivities(data.activities || []);
+      }
+    } catch {
+      // Silently fail - activity log is non-critical
+    } finally {
+      setIsLoadingActivity(false);
+    }
+  };
 
   const fetchStats = async () => {
     setIsLoading(true);
@@ -134,6 +183,7 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     fetchStats();
+    fetchActivity();
   }, []);
 
   const handleExport = async () => {
@@ -596,9 +646,45 @@ export default function AdminDashboard() {
             </div>
           </CardHeader>
           <CardContent>
-            <div className="text-center py-8 text-muted-foreground">
-              <p>Activity log coming soon</p>
-            </div>
+            {isLoadingActivity ? (
+              <div className="flex items-center justify-center py-8">
+                <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+              </div>
+            ) : activities.length === 0 ? (
+              <div className="text-center py-8 text-muted-foreground">
+                <p>No recent activity</p>
+              </div>
+            ) : (
+              <div className="space-y-3">
+                {activities.map((activity) => (
+                  <div
+                    key={activity.id}
+                    className="flex items-start justify-between gap-4 py-2 border-b last:border-0"
+                  >
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium truncate">
+                        {activity.description}
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        by {activity.performedBy} •{" "}
+                        {formatRelativeTime(activity.createdAt)}
+                      </p>
+                    </div>
+                    <span
+                      className={`text-xs px-2 py-1 rounded-full ${
+                        activity.action === "create"
+                          ? "bg-green-500/10 text-green-600"
+                          : activity.action === "archive"
+                            ? "bg-red-500/10 text-red-600"
+                            : "bg-blue-500/10 text-blue-600"
+                      }`}
+                    >
+                      {activity.action}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
           </CardContent>
         </Card>
       </div>
