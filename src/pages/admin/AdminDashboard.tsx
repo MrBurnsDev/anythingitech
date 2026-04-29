@@ -690,10 +690,10 @@ export default function AdminDashboard() {
                     </>
                   );
 
-                  return isBusinessAction ? (
+                  return isBusinessAction && activity.entityId ? (
                     <Link
                       key={activity.id}
-                      to={`/admin/businesses/${activity.businessSlug}`}
+                      to={`/admin/businesses/${activity.entityId}/edit`}
                       className="flex items-start justify-between gap-4 py-2 px-2 -mx-2 border-b last:border-0 rounded hover:bg-muted/50 transition-colors"
                     >
                       {content}
