@@ -1,12 +1,17 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { createClient } from "@supabase/supabase-js";
+import { createClient, SupabaseClient } from "@supabase/supabase-js";
 
 const SUPABASE_URL = process.env.SUPABASE_URL || "https://zrrinbeyiuiydalxiwii.supabase.co";
 const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
 
-const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY, {
-  auth: { autoRefreshToken: false, persistSession: false },
-});
+let supabase: SupabaseClient;
+try {
+  supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY, {
+    auth: { autoRefreshToken: false, persistSession: false },
+  });
+} catch (e) {
+  console.error("Failed to create Supabase client:", e);
+}
 
 /**
  * GET /api/directory/businesses
@@ -38,11 +43,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const { town, type, slug, search } = req.query;
 
-  // Rate limiting temporarily disabled for debugging
-  // const rateLimitConfig = search ? SEARCH_RATE_LIMIT : PUBLIC_API_RATE_LIMIT;
-  // if (rateLimit(req, res, rateLimitConfig)) {
-  //   return; // Request was blocked by rate limiter
-  // }
+  // Check if Supabase client was initialized
+  if (!supabase) {
+    console.error("Supabase client not initialized");
+    return res.status(500).json({ error: "Database connection not available" });
+  }
 
   try {
     let query = supabase
