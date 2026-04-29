@@ -5,6 +5,14 @@
  * First logs in to get JWT token, then calls cleanup endpoint
  */
 
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+
+if (!ADMIN_PASSWORD) {
+  console.error('ERROR: ADMIN_PASSWORD environment variable required');
+  console.error('Usage: ADMIN_PASSWORD="your-admin-password" node scripts/run-cleanup-via-api.cjs');
+  process.exit(1);
+}
+
 async function main() {
   console.log('Logging in to admin...');
 
@@ -14,7 +22,7 @@ async function main() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       username: 'admin',
-      password: 'MV_Admin_2024!'
+      password: ADMIN_PASSWORD
     })
   });
 

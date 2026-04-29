@@ -10,12 +10,19 @@ const fs = require('fs');
 const path = require('path');
 
 const API_BASE = process.env.API_BASE || 'https://anythingitech.vercel.app';
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+
+if (!ADMIN_PASSWORD) {
+  console.error('ERROR: ADMIN_PASSWORD environment variable required');
+  console.error('Usage: ADMIN_PASSWORD="your-admin-password" node scripts/export-via-api.cjs');
+  process.exit(1);
+}
 
 async function getAdminToken() {
   const response = await fetch(`${API_BASE}/api/admin/auth`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ username: 'admin', password: 'MV_Admin_2024!' })
+    body: JSON.stringify({ username: 'admin', password: ADMIN_PASSWORD })
   });
   const data = await response.json();
   if (!data.token) {
