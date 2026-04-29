@@ -35,9 +35,12 @@ interface Activity {
   entityType: string;
   entityId: number | null;
   businessName: string | null;
+  businessSlug: string | null;
   description: string;
   performedBy: string;
   createdAt: string;
+  changes: Record<string, unknown> | null;
+  previousValues: Record<string, unknown> | null;
 }
 
 function formatRelativeTime(dateString: string): string {
@@ -657,34 +660,53 @@ export default function AdminDashboard() {
                 <p>No recent activity</p>
               </div>
             ) : (
-              <div className="space-y-3">
-                {activities.map((activity) => (
-                  <div
-                    key={activity.id}
-                    className="flex items-start justify-between gap-4 py-2 border-b last:border-0"
-                  >
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium truncate">
-                        {activity.description}
-                      </p>
-                      <p className="text-xs text-muted-foreground">
-                        by {activity.performedBy} •{" "}
-                        {formatRelativeTime(activity.createdAt)}
-                      </p>
-                    </div>
-                    <span
-                      className={`text-xs px-2 py-1 rounded-full ${
-                        activity.action === "create"
-                          ? "bg-green-500/10 text-green-600"
-                          : activity.action === "archive"
-                            ? "bg-red-500/10 text-red-600"
-                            : "bg-blue-500/10 text-blue-600"
-                      }`}
+              <div className="space-y-1">
+                {activities.map((activity) => {
+                  const isBusinessAction = activity.entityType === "business" && activity.businessSlug;
+                  const content = (
+                    <>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium truncate">
+                          {activity.description}
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          by {activity.performedBy} •{" "}
+                          {formatRelativeTime(activity.createdAt)}
+                        </p>
+                      </div>
+                      <span
+                        className={`text-xs px-2 py-1 rounded-full shrink-0 ${
+                          activity.action === "create"
+                            ? "bg-green-500/10 text-green-600"
+                            : activity.action === "archive"
+                              ? "bg-red-500/10 text-red-600"
+                              : activity.action === "login" || activity.action === "logout"
+                                ? "bg-gray-500/10 text-gray-600"
+                                : "bg-blue-500/10 text-blue-600"
+                        }`}
+                      >
+                        {activity.action}
+                      </span>
+                    </>
+                  );
+
+                  return isBusinessAction ? (
+                    <Link
+                      key={activity.id}
+                      to={`/admin/businesses/${activity.businessSlug}`}
+                      className="flex items-start justify-between gap-4 py-2 px-2 -mx-2 border-b last:border-0 rounded hover:bg-muted/50 transition-colors"
                     >
-                      {activity.action}
-                    </span>
-                  </div>
-                ))}
+                      {content}
+                    </Link>
+                  ) : (
+                    <div
+                      key={activity.id}
+                      className="flex items-start justify-between gap-4 py-2 border-b last:border-0"
+                    >
+                      {content}
+                    </div>
+                  );
+                })}
               </div>
             )}
           </CardContent>

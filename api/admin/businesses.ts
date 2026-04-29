@@ -185,18 +185,22 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           return res.status(500).json({ error: "Failed to fetch activity", details: activityError.message });
         }
 
-        // Enrich with business names
+        // Enrich with business names and slugs
         const enrichedActivities = await Promise.all(
           (activities || []).map(async (activity) => {
             let businessName = null;
+            let businessSlug = null;
 
             if (activity.entity_type === "business" && activity.entity_id) {
               const { data: business } = await supabase
                 .from("businesses")
-                .select("business_name")
+                .select("business_name, slug")
                 .eq("id", activity.entity_id)
                 .single();
-              if (business) businessName = business.business_name;
+              if (business) {
+                businessName = business.business_name;
+                businessSlug = business.slug;
+              }
             }
 
             // Format action description
@@ -221,9 +225,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
               entityType: activity.entity_type,
               entityId: activity.entity_id,
               businessName,
+              businessSlug,
               description,
               performedBy: activity.performed_by,
               createdAt: activity.created_at,
+              changes: activity.changes,
+              previousValues: activity.previous_values,
             };
           })
         );
