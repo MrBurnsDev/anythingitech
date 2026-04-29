@@ -197,6 +197,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 .from("businesses")
                 .select("id, business_name, slug")
                 .eq("id", activity.entity_id)
+                .eq("is_duplicate", false)
                 .single();
               if (business) {
                 currentBusinessId = business.id;
