@@ -11,6 +11,7 @@ import {
   Menu,
   X,
   ClipboardCheck,
+  ExternalLink,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -64,12 +65,18 @@ export function AdminLayout({ children }: AdminLayoutProps) {
         <div className="flex flex-col h-full">
           {/* Logo */}
           <div className="flex items-center justify-between h-16 px-4 border-b border-border">
-            <Link to="/admin" className="flex items-center gap-2">
+            <a
+              href="https://www.anythingitechmv.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            >
               <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
                 <Building2 className="h-4 w-4 text-primary-foreground" />
               </div>
               <span className="font-display font-semibold">MV Directory</span>
-            </Link>
+              <ExternalLink className="h-3 w-3 text-muted-foreground" />
+            </a>
             <button
               className="lg:hidden p-2 hover:bg-secondary rounded-md"
               onClick={() => setSidebarOpen(false)}
