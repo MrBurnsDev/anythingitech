@@ -1,5 +1,6 @@
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { CTASection } from "@/components/site/CTASection";
+import { SEO } from "@/components/SEO";
 import vineyardImg from "@/assets/marthas-vineyard.jpg";
 import { Award, Compass, Heart, Users } from "lucide-react";
 
@@ -21,6 +22,11 @@ const services = [
 
 const About = () => (
   <SiteLayout>
+    <SEO
+      title="About | Anything IT Tech Martha's Vineyard"
+      description="Local tech support on Martha's Vineyard since 2008. iPhone repair, Wi-Fi installation, smart home setup, and business IT support."
+      canonical="https://anythingitechmv.com/about"
+    />
     {/* Hero */}
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden border-b border-border">
       <div className="absolute inset-0 grid-overlay opacity-60 pointer-events-none" />

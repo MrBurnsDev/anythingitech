@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { CTASection } from "@/components/site/CTASection";
+import { SEO } from "@/components/SEO";
 import {
   ArrowRight, ArrowUpRight, Apple, Wifi, Home as HomeIcon, Music, Tv, Building2,
   Compass, ClipboardCheck, Wrench, LifeBuoy, Quote, MapPin,
@@ -39,6 +40,11 @@ const testimonials = [
 const Index = () => {
   return (
     <SiteLayout>
+      <SEO
+        title="Anything IT Tech | Martha's Vineyard Tech Support"
+        description="iPhone repair, Wi-Fi network installation, smart home setup, and business IT support on Martha's Vineyard. Local service since 2008."
+        canonical="https://anythingitechmv.com/"
+      />
       {/* HERO */}
       <section className="relative min-h-[100svh] flex items-end overflow-hidden">
         <img src={heroImg} alt="Modern Martha's Vineyard living room" className="absolute inset-0 h-full w-full object-cover" />
@@ -70,8 +76,8 @@ const Index = () => {
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-primary-foreground/15 border border-primary-foreground/15 rounded-xl overflow-hidden backdrop-blur-sm animate-fade-up-delay-3">
             {[
               { k: "Since 2008", v: "On the island" },
-              { k: "1,400+", v: "Devices serviced" },
-              { k: "350+", v: "Networks installed" },
+              { k: "Thousands", v: "Of devices serviced" },
+              { k: "Hundreds", v: "Of networks installed" },
               { k: "(508) 560-3510", v: "By appointment" },
             ].map((s) => (
               <div key={s.v} className="bg-primary/60 px-6 py-7">

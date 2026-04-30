@@ -1,5 +1,5 @@
 # Robots.txt for anythingitechmv.com
-# Generated: 2026-04-29T20:26:35.842Z
+# Generated: 2026-04-30T03:17:36.867Z
 
 User-agent: *
 Allow: /
@@ -12,3 +12,4 @@ Disallow: /api/
 
 # Sitemap
 Sitemap: https://anythingitechmv.com/sitemap.xml
+Host: anythingitechmv.com

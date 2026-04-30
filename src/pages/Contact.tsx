@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/SiteLayout";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -44,6 +45,11 @@ const Contact = () => {
 
   return (
     <SiteLayout>
+      <SEO
+        title="Contact | Anything IT Tech Martha's Vineyard"
+        description="Contact Anything IT Tech for tech support on Martha's Vineyard. Call (508) 560-3510 or schedule an appointment."
+        canonical="https://anythingitechmv.com/contact"
+      />
       {/* Header */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden border-b border-border">
         <div className="absolute inset-0 grid-overlay opacity-60 pointer-events-none" />

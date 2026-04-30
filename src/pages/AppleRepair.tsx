@@ -1,10 +1,16 @@
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { ServicePageContent } from "@/components/site/ServicePageContent";
 import { CTASection } from "@/components/site/CTASection";
+import { SEO } from "@/components/SEO";
 import appleImg from "@/assets/apple-desk.jpg";
 
 const AppleRepair = () => (
   <SiteLayout>
+    <SEO
+      title="iPhone & Mac Repair | Apple Repair Martha's Vineyard"
+      description="Fast iPhone screen repair and Mac troubleshooting on Martha's Vineyard. 15-minute repairs, local service by appointment."
+      canonical="https://anythingitechmv.com/services/apple-repair"
+    />
     <ServicePageContent
       eyebrow="Apple Repair & Support"
       title="iPhone and Mac repair. Fast, local service."

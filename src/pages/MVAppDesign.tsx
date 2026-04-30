@@ -59,7 +59,7 @@ const MVAppDesign = () => (
     <SEO
       title="MV App Design | Custom Software for Martha's Vineyard Businesses"
       description="Custom app development and business software for Martha's Vineyard. Scheduling systems, job management, customer portals, and automation tools built for island businesses."
-      canonical="https://anythingitech.vercel.app/services/mv-app-design"
+      canonical="https://anythingitechmv.com/services/mv-app-design"
     />
 
     {/* Hero */}

@@ -1,10 +1,16 @@
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { ServicePageContent } from "@/components/site/ServicePageContent";
 import { CTASection } from "@/components/site/CTASection";
+import { SEO } from "@/components/SEO";
 import networkImg from "@/assets/network-rack.jpg";
 
 const WifiNetwork = () => (
   <SiteLayout>
+    <SEO
+      title="Wi-Fi & Network Installation | Martha's Vineyard"
+      description="Professional Wi-Fi network installation using Ubiquiti enterprise-grade equipment. Full coverage for homes and businesses on Martha's Vineyard."
+      canonical="https://anythingitechmv.com/services/wifi-network"
+    />
     <ServicePageContent
       eyebrow="Wi-Fi & Network Installation"
       title="Wi-Fi network installation and troubleshooting."

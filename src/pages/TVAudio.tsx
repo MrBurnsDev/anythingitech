@@ -1,10 +1,16 @@
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { ServicePageContent } from "@/components/site/ServicePageContent";
 import { CTASection } from "@/components/site/CTASection";
+import { SEO } from "@/components/SEO";
 import heroImg from "@/assets/hero-living-room.jpg";
 
 const TVAudio = () => (
   <SiteLayout>
+    <SEO
+      title="TV Mounting & Audio Setup | Martha's Vineyard"
+      description="TV wall mounting with concealed wiring. Soundbar and home audio setup. Professional installation on Martha's Vineyard."
+      canonical="https://anythingitechmv.com/services/tv-audio"
+    />
     <ServicePageContent
       eyebrow="TV, Audio & Home Tech"
       title="TV mounting, soundbar setup, and home audio."

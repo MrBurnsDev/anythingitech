@@ -1,10 +1,16 @@
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { ServicePageContent } from "@/components/site/ServicePageContent";
 import { CTASection } from "@/components/site/CTASection";
+import { SEO } from "@/components/SEO";
 import officeImg from "@/assets/business-office.jpg";
 
 const BusinessIT = () => (
   <SiteLayout>
+    <SEO
+      title="Business IT Support | Martha's Vineyard"
+      description="Professional IT support for Martha's Vineyard businesses. Networks, workstations, printers, and ongoing support."
+      canonical="https://anythingitechmv.com/services/business-it"
+    />
     <ServicePageContent
       eyebrow="Business IT Support"
       title="Steady, professional IT for the businesses of Martha's Vineyard."

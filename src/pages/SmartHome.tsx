@@ -1,10 +1,16 @@
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { ServicePageContent } from "@/components/site/ServicePageContent";
 import { CTASection } from "@/components/site/CTASection";
+import { SEO } from "@/components/SEO";
 import sonosImg from "@/assets/sonos-shelf.jpg";
 
 const SmartHome = () => (
   <SiteLayout>
+    <SEO
+      title="Smart Home & Sonos Setup | Martha's Vineyard"
+      description="Smart home installation and Sonos setup on Martha's Vineyard. Lighting, audio, climate, locks, and cameras configured to work reliably."
+      canonical="https://anythingitechmv.com/services/smart-home"
+    />
     <ServicePageContent
       eyebrow="Smart Home & Sonos"
       title="A smart home that feels effortless — never complicated."

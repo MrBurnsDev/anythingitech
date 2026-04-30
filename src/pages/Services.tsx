@@ -1,6 +1,7 @@
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHeader } from "@/components/site/PageHeader";
 import { CTASection } from "@/components/site/CTASection";
+import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Apple, Wifi, Home, Music, Tv, Building2, Printer, MonitorSmartphone, ShieldCheck, Code } from "lucide-react";
 import appleImg from "@/assets/apple-desk.jpg";
@@ -21,6 +22,11 @@ const all = [
 const Services = () => {
   return (
     <SiteLayout>
+      <SEO
+        title="Services | Anything IT Tech Martha's Vineyard"
+        description="iPhone and Mac repair, Wi-Fi network installation, smart home setup, TV mounting, and business IT support on Martha's Vineyard."
+        canonical="https://anythingitechmv.com/services"
+      />
       <PageHeader
         eyebrow="Services"
         title="Technology services for Martha's Vineyard."
