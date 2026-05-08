@@ -1,0 +1,46 @@
+business_id,name,town,assigned_category,inferred_category,keywords_matched,confidence,current_url
+343,A. P. Fortes Plumbing and Heating,vineyard-haven,lodging-and-tourism,home-services-and-trades,,70,https://anythingitechmv.com/marthas-vineyard/vineyard-haven/lodging-and-tourism/a-p-fortes-plumbing-and-heating-vineyard-haven
+69,Among the Flowers,edgartown,restaurants-food-beverages,shopping-and-specialty-retail,,70,https://anythingitechmv.com/marthas-vineyard/edgartown/restaurants-food-beverages/among-the-flowers-edgartown
+212,Ashley Inn,edgartown,lodging,lodging-and-tourism,,70,https://anythingitechmv.com/marthas-vineyard/edgartown/lodging/marthas-vineyard-vineyard-haven
+338,Barnes Moving & Storage,vineyard-haven,business-and-professional-services,home-services-and-trades,,80,https://anythingitechmv.com/marthas-vineyard/vineyard-haven/business-and-professional-services/barnes-moving-storage-vineyard-haven
+72,Behind the Bookstore,edgartown,restaurants-food-beverages,shopping-and-specialty-retail,,1,https://anythingitechmv.com/marthas-vineyard/edgartown/restaurants-food-beverages/btbmvcom-edgartown
+318,Boneyard Surf Co,oak-bluffs,shopping-and-specialty-retail,automotive-and-marine,,50,https://anythingitechmv.com/marthas-vineyard/oak-bluffs/shopping-and-specialty-retail/boneyard-surf-co-oak-bluffs
+342,Brewer Insect & Animal Spraying,edgartown,other,home-services-and-trades,,80,https://anythingitechmv.com/marthas-vineyard/edgartown/other/brewer-insect-animal-spraying-vineyard-haven
+341,Brissette Electric Inc.,vineyard-haven,family-community-government,home-services-and-trades,,80,https://anythingitechmv.com/marthas-vineyard/vineyard-haven/family-community-government/brissette-electric-inc-vineyard-haven
+345,"Callahan Plumbing and Heating, INC",vineyard-haven,lodging-and-tourism,home-services-and-trades,,70,https://anythingitechmv.com/marthas-vineyard/vineyard-haven/lodging-and-tourism/callahan-plumbing-and-heating-inc-vineyard-haven
+339,"Carroll's Martha's Vineyard Rapid Transit, Inc.",vineyard-haven,business-and-professional-services,transportation-and-utilities,,65,https://anythingitechmv.com/marthas-vineyard/vineyard-haven/business-and-professional-services/carrolls-marthas-vineyard-rapid-transit-inc-vineyard-haven
+340,Coastal Events MV,west-tisbury,family-community-government,wedding-and-event-services,,80,https://anythingitechmv.com/marthas-vineyard/west-tisbury/family-community-government/coastal-events-mv-west-tisbury
+262,Crane Appliance,vineyard-haven,other,home-services-and-trades,,60,https://anythingitechmv.com/marthas-vineyard/vineyard-haven/other/crane-appliance-vineyard-haven
+268,East Chop Sleep Shop,vineyard-haven,shopping-retail,shopping-and-specialty-retail,,1,https://anythingitechmv.com/marthas-vineyard/vineyard-haven/shopping-retail/eastchopsleepshopcom-vineyard-haven
+269,Edgartown Books,edgartown,other,shopping-and-specialty-retail,,70,https://anythingitechmv.com/marthas-vineyard/edgartown/other/edgartown-books-vineyard-haven
+187,Edgartown Golf Club Martha's Vineyard,edgartown,restaurants-food-beverages,sports-and-recreation,,80,https://anythingitechmv.com/marthas-vineyard/edgartown/restaurants-food-beverages/edgartown-golf-club-marthas-vineyard-edgartown
+347,Hutker Architects INC,vineyard-haven,medical-services-and-providers,building-and-construction,,70,https://anythingitechmv.com/marthas-vineyard/vineyard-haven/medical-services-and-providers/hutker-architects-inc-vineyard-haven
+332,Island Outfitters Oak Bluffs,oak-bluffs,building-and-construction,shopping-and-specialty-retail,,80,https://anythingitechmv.com/marthas-vineyard/oak-bluffs/building-and-construction/island-outfitters-oak-bluffs-oak-bluffs
+83,Katama General Store,edgartown,restaurants-food-beverages,shopping-and-specialty-retail,,80,https://anythingitechmv.com/marthas-vineyard/edgartown/restaurants-food-beverages/katama-general-store-edgartown
+282,King's Barber Shop,vineyard-haven,health-wellness,shopping-and-specialty-retail|beauty-and-wellness,,70,https://anythingitechmv.com/marthas-vineyard/vineyard-haven/health-wellness/welcome-vineyard-haven
+283,Kismet Outfitters,edgartown,other,shopping-and-specialty-retail,,70,https://anythingitechmv.com/marthas-vineyard/edgartown/other/kismet-outfitters-vineyard-haven
+225,Lambert's Cove Inn,vineyard-haven,lodging,lodging-and-tourism,,1,https://anythingitechmv.com/marthas-vineyard/vineyard-haven/lodging/lambertscoveinncom-vineyard-haven
+327,M&b Remodeling,vineyard-haven,other,building-and-construction,,60,https://anythingitechmv.com/marthas-vineyard/vineyard-haven/other/mb-remodeling-vineyard-haven
+288,Maggie's Salon,vineyard-haven,other,beauty-and-wellness,,60,https://anythingitechmv.com/marthas-vineyard/vineyard-haven/other/maggies-salon-vineyard-haven
+293,Martha's Vineyard Tile Company Inc.,vineyard-haven,other,building-and-construction,,70,https://anythingitechmv.com/marthas-vineyard/vineyard-haven/other/marthas-vineyard-tile-company-inc-vineyard-haven
+334,"Martha's Vineyard, Ma Store Location",edgartown,building-and-construction,shopping-and-specialty-retail,,80,https://anythingitechmv.com/marthas-vineyard/edgartown/building-and-construction/marthas-vineyard-ma-store-location-edgartown
+210,Marthas Vineyard Yoga Barn,west-tisbury,restaurants-food-beverages,beauty-and-wellness,,65,https://anythingitechmv.com/marthas-vineyard/west-tisbury/restaurants-food-beverages/marthas-vineyard-yoga-barn-west-tisbury
+271,Mass.gov/locations/dukes-county-superior-court,edgartown,other,family-community-government,,70,https://anythingitechmv.com/marthas-vineyard/edgartown/other/massgovlocationsdukes-county-superior-court-vineyard-haven
+189,Mink Meadows Golf Club,vineyard-haven,restaurants-food-beverages,sports-and-recreation,,70,https://anythingitechmv.com/marthas-vineyard/vineyard-haven/restaurants-food-beverages/mink-meadows-golf-club-vineyard-haven
+172,MV Camp Meeting Association,oak-bluffs,community,family-community-government,,1,https://anythingitechmv.com/marthas-vineyard/oak-bluffs/community/mvcmaorg-vineyard-haven
+173,North Water Gallery,west-tisbury,restaurants-food-beverages,arts-and-entertainment,,80,https://anythingitechmv.com/marthas-vineyard/west-tisbury/restaurants-food-beverages/north-water-gallery-west-tisbury
+233,Oak Bluffs Hotel,edgartown,lodging,lodging-and-tourism,,80,https://anythingitechmv.com/marthas-vineyard/edgartown/lodging/oak-bluffs-hotel-vineyard-haven
+63,Outermost Inn,aquinnah,restaurants-food-beverages,lodging-and-tourism,,75,https://anythingitechmv.com/marthas-vineyard/aquinnah/restaurants-food-beverages/outermost-inn
+179,Peter Simon Photography,chilmark,restaurants-food-beverages,arts-and-entertainment,,70,https://anythingitechmv.com/marthas-vineyard/chilmark/restaurants-food-beverages/peter-simon-photography-chilmark
+191,Royal Chappy Golf,edgartown,restaurants-food-beverages,sports-and-recreation,,80,https://anythingitechmv.com/marthas-vineyard/edgartown/restaurants-food-beverages/royal-chappy-golf-edgartown
+299,Salon,west-tisbury,other,beauty-and-wellness,,60,https://anythingitechmv.com/marthas-vineyard/west-tisbury/other/salon-vineyard-haven
+176,Strand Theatre MV,oak-bluffs,restaurants-food-beverages,arts-and-entertainment,,80,https://anythingitechmv.com/marthas-vineyard/oak-bluffs/restaurants-food-beverages/strand-theatre-mv-oak-bluffs
+316,Talita Destefani Beauty Lounge,vineyard-haven,other,beauty-and-wellness,,70,https://anythingitechmv.com/marthas-vineyard/vineyard-haven/other/talita-destefani-beauty-lounge-vineyard-haven
+317,Tashmoo Insurance Agency,vineyard-haven,business-and-professional-services,banking-finance-and-insurance,,80,https://anythingitechmv.com/marthas-vineyard/vineyard-haven/business-and-professional-services/tashmoo-insurance-agency-vineyard-haven
+363,The Barn Bowl And Bistro,oak-bluffs,sports-and-recreation,restaurants-food-beverages,,1,https://anythingitechmv.com/marthas-vineyard/oak-bluffs/sports-and-recreation/the-barn-bowl-and-bistro
+178,The Christina Gallery,edgartown,restaurants-food-beverages,arts-and-entertainment,,70,https://anythingitechmv.com/marthas-vineyard/edgartown/restaurants-food-beverages/the-christina-gallery-edgartown
+325,Vineyard Family Tennis,oak-bluffs,other,sports-and-recreation,,60,https://anythingitechmv.com/marthas-vineyard/oak-bluffs/other/vineyard-family-tennis-vineyard-haven
+192,Vineyard Golf Club,edgartown,restaurants-food-beverages,sports-and-recreation,,70,https://anythingitechmv.com/marthas-vineyard/edgartown/restaurants-food-beverages/vineyard-golf-club-edgartown
+326,Vineyard Hearth Patio & Spa,west-tisbury,shopping-and-specialty-retail,beauty-and-wellness,,70,https://anythingitechmv.com/marthas-vineyard/west-tisbury/shopping-and-specialty-retail/vineyard-hearth-patio-spa-west-tisbury
+40,Waterside Market,vineyard-haven,restaurants-food-beverages,shopping-and-specialty-retail,,80,https://anythingitechmv.com/marthas-vineyard/vineyard-haven/restaurants-food-beverages/waterside-market-vineyard-haven
+186,Winter Street Gallery,edgartown,restaurants-food-beverages,arts-and-entertainment,,80,https://anythingitechmv.com/marthas-vineyard/edgartown/restaurants-food-beverages/winter-street-gallery-edgartown

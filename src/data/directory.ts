@@ -103,6 +103,46 @@ import('../../data/exports/businesses.json').then(data => {
 export const towns: Town[] = townsData as Town[];
 export const businessTypes: BusinessType[] = businessTypesData as BusinessType[];
 
+// Legacy → modern category slug normalization. Lightweight transitional layer:
+// the source of truth is the business data itself. As records are corrected
+// to use modern slugs, this map's effect on each business naturally fades.
+// Mirrors LEGACY_CATEGORY_REMAP in scripts/generate-sitemap.cjs.
+const LEGACY_CATEGORY_REMAP: Record<string, string> = {
+  'lodging': 'lodging-and-tourism',
+  'lodging-tourism': 'lodging-and-tourism',
+  'shopping-retail': 'shopping-and-specialty-retail',
+  'shopping-specialty-retail': 'shopping-and-specialty-retail',
+  'health-wellness': 'medical-services-and-providers',
+  'professional-services': 'business-and-professional-services',
+  'business-professional-services': 'business-and-professional-services',
+  'community': 'family-community-government',
+  'automotive': 'automotive-and-marine',
+  'automotive-marine': 'automotive-and-marine',
+  'arts-entertainment': 'arts-and-entertainment',
+  'beauty-wellness': 'beauty-and-wellness',
+  'building-construction': 'building-and-construction',
+  'medical-services-providers': 'medical-services-and-providers',
+  'banking-finance-insurance': 'banking-finance-and-insurance',
+  'real-estate-rentals': 'real-estate-and-rentals',
+  'sports-recreation': 'sports-and-recreation',
+  'transportation-utilities': 'transportation-and-utilities',
+  'wedding-event-services': 'wedding-and-event-services',
+  'home-services-trades': 'home-services-and-trades',
+  'house-garden-pets': 'house-garden-and-pets',
+  'restaurant': 'restaurants-food-beverages',
+  'restaurants': 'restaurants-food-beverages',
+};
+
+/**
+ * Resolve any (possibly legacy) businessType slug to its canonical modern slug.
+ * Returns the input unchanged if no mapping exists. Returns null only for
+ * non-string inputs.
+ */
+export function normalizeCategorySlug(slug: string | null | undefined): string | null {
+  if (!slug) return null;
+  return LEGACY_CATEGORY_REMAP[slug] || slug;
+}
+
 // Helper functions
 export function getBusinessBySlug(slug: string): Business | undefined {
   return businesses.find(b => b.slug === slug);
@@ -158,9 +198,11 @@ export function getTownsForBusinessType(typeSlug: string): Town[] {
   return towns.filter(town => type.byTown[town.slug] && type.byTown[town.slug] > 0);
 }
 
-// Generate URL paths
+// Generate URL paths. Always emit modern slugs — legacy categories are
+// normalized so the URL we link to matches the canonical we'd render.
 export function getBusinessUrl(business: Business): string {
-  return `/marthas-vineyard/${business.townSlug}/${business.businessType}/${business.slug}`;
+  const type = normalizeCategorySlug(business.businessType) || business.businessType;
+  return `/marthas-vineyard/${business.townSlug}/${type}/${business.slug}`;
 }
 
 export function getTownUrl(townSlug: string): string {
@@ -168,9 +210,9 @@ export function getTownUrl(townSlug: string): string {
 }
 
 export function getBusinessTypeUrl(typeSlug: string): string {
-  return `/marthas-vineyard/${typeSlug}`;
+  return `/marthas-vineyard/${normalizeCategorySlug(typeSlug) || typeSlug}`;
 }
 
 export function getTownBusinessTypeUrl(townSlug: string, typeSlug: string): string {
-  return `/marthas-vineyard/${townSlug}/${typeSlug}`;
+  return `/marthas-vineyard/${townSlug}/${normalizeCategorySlug(typeSlug) || typeSlug}`;
 }

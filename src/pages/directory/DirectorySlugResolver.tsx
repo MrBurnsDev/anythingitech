@@ -1,10 +1,12 @@
 import { useParams, Navigate } from "react-router-dom";
-import { getTownBySlug, getBusinessTypeBySlug } from "@/data/directory";
+import { getTownBySlug, getBusinessTypeBySlug, normalizeCategorySlug } from "@/data/directory";
 import TownPage from "./TownPage";
 import BusinessTypePage from "./BusinessTypePage";
 
-// Map old slugs to their new canonical slugs
-// This handles SPA navigation to legacy URLs
+// Legacy slug shapes that don't fit the central LEGACY_CATEGORY_REMAP — these
+// were one-off WordPress migration artifacts. Server-side 308s in vercel.json
+// should catch these before the SPA loads; this is the SPA-side fallback for
+// in-app navigations.
 const SLUG_REDIRECTS: Record<string, string> = {
   "restaurantsand-food-and-beverages": "restaurants-food-beverages",
   "familyand-community-and-government": "family-community-government",
@@ -28,6 +30,13 @@ export default function DirectorySlugResolver() {
   const redirectSlug = SLUG_REDIRECTS[slug];
   if (redirectSlug) {
     return <Navigate to={`/marthas-vineyard/${redirectSlug}`} replace />;
+  }
+
+  // Legacy category short-form (e.g. /lodging-tourism → /lodging-and-tourism).
+  // Server-side 308 should beat us to it; this is the SPA safety net.
+  const normalized = normalizeCategorySlug(slug);
+  if (normalized && normalized !== slug && getBusinessTypeBySlug(normalized)) {
+    return <Navigate to={`/marthas-vineyard/${normalized}`} replace />;
   }
 
   // Check if it's a business type first (more specific slugs)

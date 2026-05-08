@@ -1,10 +1,23 @@
 #!/usr/bin/env node
 /**
- * Generate sitemap.xml and robots.txt for anythingitechmv.com
+ * Generate sitemap.xml and robots.txt for anythingitechmv.com.
  *
- * STRICT VALIDATION: Only includes clean, valid public URLs
+ * The sitemap is the single source of truth for what the prerender pipeline
+ * outputs. Every URL in here must:
+ *   - resolve to a 200 in the SPA (no client-side redirects)
+ *   - have a stable canonical = its own URL (no homepage-canonical leak)
+ *   - prerender successfully via scripts/prerender.cjs
  *
- * Usage: node scripts/generate-sitemap.cjs
+ * Filters applied to live business data (in this order):
+ *   1. Town slug must be recognized by the SPA (data/exports/towns.json)
+ *   2. Category slug must resolve via LEGACY_CATEGORY_REMAP to a modern slug
+ *      that the SPA recognizes (data/exports/business-types.json)
+ *   3. Business slug must not be a URL artifact (.com, http, facebook, etc.)
+ *   4. Data-completeness score >= THIN_PAGE_MIN_SCORE
+ *   5. Category not in REJECT_CATEGORIES (other, unknown, contractors)
+ *
+ * Run via `npm run sitemap` (or as part of `npm run build:prerender`).
+ * Override the API base for testing: SITEMAP_API_BASE=https://example.com
  */
 
 const fs = require('fs');
@@ -12,6 +25,22 @@ const path = require('path');
 
 const SITE_URL = 'https://anythingitechmv.com';
 const TODAY = new Date().toISOString().split('T')[0];
+
+// Static data files that the SPA bundle uses for client-side route resolution.
+// We must keep sitemap entries in sync with what these files recognize, or the
+// SPA will redirect-out and the prerendered canonical won't match the URL.
+function loadStaticExports() {
+  const dataDir = path.join(__dirname, '..', 'data', 'exports');
+  let towns = [], types = [];
+  try { towns = JSON.parse(fs.readFileSync(path.join(dataDir, 'towns.json'), 'utf8')); } catch {}
+  try { types = JSON.parse(fs.readFileSync(path.join(dataDir, 'business-types.json'), 'utf8')); } catch {}
+  return {
+    knownTowns: new Set(towns.map(t => t.slug)),
+    knownTypes: new Set(types.map(t => t.slug)),
+    typeByTownCounts: Object.fromEntries(types.map(t => [t.slug, t.byTown || {}])),
+  };
+}
+const STATIC_EXPORTS = loadStaticExports();
 
 // ============================================================
 // APPROVED TAXONOMY - Only these slugs are allowed in sitemap
@@ -50,20 +79,48 @@ const VALID_CATEGORY_SLUGS = new Set([
   'wedding-and-event-services',
 ]);
 
-// Legacy/invalid category slugs to REJECT
-const INVALID_CATEGORY_SLUGS = new Set([
-  'restaurant',
-  'restaurants',
-  'shopping-retail',
-  'health-wellness',
-  'professional-services',
-  'community',
-  'automotive',
-  'lodging',
+// Legacy category slugs that should be auto-remapped to a modern slug.
+// Source-of-truth: a business assigned to one of these is correctly classified,
+// just on a stale slug. We remap at sitemap-generation time so the canonical URL
+// always uses the modern slug. Vercel.json has matching 308 redirects so the
+// legacy URL never appears in the indexable set.
+const LEGACY_CATEGORY_REMAP = {
+  'lodging': 'lodging-and-tourism',
+  'lodging-tourism': 'lodging-and-tourism',
+  'shopping-retail': 'shopping-and-specialty-retail',
+  'shopping-specialty-retail': 'shopping-and-specialty-retail',
+  'health-wellness': 'medical-services-and-providers',
+  'professional-services': 'business-and-professional-services',
+  'business-professional-services': 'business-and-professional-services',
+  'community': 'family-community-government',
+  'automotive': 'automotive-and-marine',
+  'automotive-marine': 'automotive-and-marine',
+  'arts-entertainment': 'arts-and-entertainment',
+  'beauty-wellness': 'beauty-and-wellness',
+  'building-construction': 'building-and-construction',
+  'medical-services-providers': 'medical-services-and-providers',
+  'banking-finance-insurance': 'banking-finance-and-insurance',
+  'real-estate-rentals': 'real-estate-and-rentals',
+  'sports-recreation': 'sports-and-recreation',
+  'transportation-utilities': 'transportation-and-utilities',
+  'wedding-event-services': 'wedding-and-event-services',
+  'home-services-trades': 'home-services-and-trades',
+  'house-garden-pets': 'house-garden-and-pets',
+  'restaurant': 'restaurants-food-beverages',
+  'restaurants': 'restaurants-food-beverages',
+};
+
+// Categories that have NO modern equivalent — businesses assigned here are
+// excluded from sitemap+prerender. Their URLs 308 redirect to the town index.
+const REJECT_CATEGORIES = new Set([
   'other',
   'unknown',
   'contractors',
 ]);
+
+// Thin-page exclusion list. Set by content-quality scorer below.
+// Centrally defined so prerender.cjs can import the same logic if needed.
+const THIN_PAGE_MIN_SCORE = 2;
 
 // Invalid business slug patterns
 const INVALID_SLUG_PATTERNS = [
@@ -186,33 +243,16 @@ const CATEGORY_TO_SLUG = {
 // ============================================================
 
 async function fetchBusinesses() {
+  // Public directory endpoint — no auth required
+  const API_BASE = process.env.SITEMAP_API_BASE || 'https://anythingitechmv.com';
   try {
-    // Get auth token
-    const authRes = await fetch('https://anythingitech.vercel.app/api/admin/auth', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username: 'admin', password: 'MV_Admin_2024!' })
-    });
-    const { token } = await authRes.json();
-
-    // Fetch all businesses (paginate)
-    let allBusinesses = [];
-    let page = 1;
-
-    while (true) {
-      const res = await fetch(`https://anythingitech.vercel.app/api/admin/businesses?page=${page}&limit=100`, {
-        headers: { Authorization: `Bearer ${token}` }
-      });
-      const data = await res.json();
-      const businesses = data.businesses || [];
-
-      if (businesses.length === 0) break;
-      allBusinesses = allBusinesses.concat(businesses);
-      if (businesses.length < 100) break;
-      page++;
+    const res = await fetch(`${API_BASE}/api/directory/businesses?limit=2000`);
+    if (!res.ok) {
+      console.error(`fetchBusinesses: HTTP ${res.status} from ${API_BASE}`);
+      return [];
     }
-
-    return allBusinesses;
+    const data = await res.json();
+    return data.businesses || [];
   } catch (err) {
     console.error('Error fetching businesses:', err.message);
     return [];
@@ -237,6 +277,34 @@ function getCategorySlug(category) {
   return CATEGORY_TO_SLUG[normalized] || null;
 }
 
+// Resolve a business's effective category slug:
+//  1. Map the human-readable `category` field via CATEGORY_TO_SLUG (preferred)
+//  2. Fall back to its raw `businessType` slug, applying LEGACY_CATEGORY_REMAP
+//  3. Reject if the result is in REJECT_CATEGORIES or unmappable
+function resolveBusinessCategory(biz) {
+  let slug = getCategorySlug(biz.category);
+  if (!slug && biz.businessType) {
+    slug = LEGACY_CATEGORY_REMAP[biz.businessType] || biz.businessType;
+  }
+  if (!slug) return null;
+  if (REJECT_CATEGORIES.has(slug)) return null;
+  if (!VALID_CATEGORY_SLUGS.has(slug)) return null;
+  return slug;
+}
+
+// Score a business on data completeness. Used to exclude empty/near-empty pages.
+function scoreBusiness(biz) {
+  let score = 0;
+  if (biz.description && biz.description.length > 60) score += 2;
+  else if (biz.description) score += 1;
+  if (biz.phone) score++;
+  if (biz.website) score++;
+  if (biz.address && biz.address.length > 5) score++;
+  if (biz.social && (biz.social.facebook || biz.social.instagram || biz.social.yelp || biz.social.tripadvisor)) score++;
+  if (biz.hours) score++;
+  return score;
+}
+
 function getTownSlug(town) {
   if (!town) return null;
   const slug = slugify(town);
@@ -256,11 +324,14 @@ function isValidBusinessSlug(slug) {
 }
 
 function isValidBusiness(biz) {
-  // Must have required fields
-  if (!biz.slug || !biz.town || !biz.category) return false;
+  // Must have required fields (category may be on businessType instead)
+  if (!biz.slug) return false;
+  if (!biz.town && !biz.townSlug) return false;
+  if (!biz.category && !biz.businessType) return false;
 
   // Must be active
   if (biz.business_status === 'inactive' || biz.business_status === 'closed') return false;
+  if (biz.status === 'inactive' || biz.status === 'closed') return false;
 
   // Must not need manual review
   if (biz.needs_manual_review === 1 || biz.needs_manual_review === true) return false;
@@ -269,15 +340,24 @@ function isValidBusiness(biz) {
   if (biz.is_duplicate === 1 || biz.is_duplicate === true) return false;
 
   // Town must be valid (not unknown)
-  const townSlug = getTownSlug(biz.town);
+  const townSlug = getTownSlug(biz.town || biz.townSlug);
   if (!townSlug) return false;
 
-  // Category must be valid (not other/unknown)
-  const categorySlug = getCategorySlug(biz.category);
+  // Category must resolve to a valid modern slug (after legacy remap)
+  const categorySlug = resolveBusinessCategory(biz);
   if (!categorySlug) return false;
 
   // Business slug must be valid
   if (!isValidBusinessSlug(biz.slug)) return false;
+
+  // Reject empty/near-empty pages
+  if (scoreBusiness(biz) < THIN_PAGE_MIN_SCORE) return false;
+
+  // Reject if the SPA's static bundle doesn't recognize this town or type —
+  // those URLs will redirect client-side and the prerendered canonical won't
+  // match the URL. Manual cleanup will surface in the rejection report.
+  if (!STATIC_EXPORTS.knownTowns.has(townSlug)) return false;
+  if (!STATIC_EXPORTS.knownTypes.has(categorySlug)) return false;
 
   return true;
 }
@@ -310,8 +390,9 @@ function generateSitemap(businesses) {
     });
   });
 
-  // Add town pages
+  // Add town pages — only towns recognized by the static SPA data
   MV_TOWNS.forEach(town => {
+    if (!STATIC_EXPORTS.knownTowns.has(town.slug)) return;
     urls.push({
       loc: `${SITE_URL}/marthas-vineyard/${town.slug}`,
       lastmod: TODAY,
@@ -320,8 +401,12 @@ function generateSitemap(businesses) {
     });
   });
 
-  // Add category pages
+  // Add category pages — only categories with at least one business in the static data
   CATEGORIES.forEach(cat => {
+    if (!STATIC_EXPORTS.knownTypes.has(cat.slug)) return;
+    const byTown = STATIC_EXPORTS.typeByTownCounts[cat.slug] || {};
+    const total = Object.values(byTown).reduce((a, b) => a + b, 0);
+    if (total === 0) return;
     urls.push({
       loc: `${SITE_URL}/marthas-vineyard/${cat.slug}`,
       lastmod: TODAY,
@@ -343,8 +428,8 @@ function generateSitemap(businesses) {
       return;
     }
 
-    const townSlug = getTownSlug(biz.town);
-    const categorySlug = getCategorySlug(biz.category);
+    const townSlug = getTownSlug(biz.town || biz.townSlug);
+    const categorySlug = resolveBusinessCategory(biz);
     const lastmod = biz.updated_at ? biz.updated_at.split('T')[0] : TODAY;
 
     // Track town+category combos
@@ -384,15 +469,20 @@ ${urls.map(url => `  <url>
 
 function getRejectReason(biz) {
   if (!biz.slug) return 'missing slug';
-  if (!biz.town) return 'missing town';
-  if (!biz.category) return 'missing category';
-  if (biz.business_status === 'inactive') return 'inactive';
-  if (biz.business_status === 'closed') return 'closed';
+  if (!biz.town && !biz.townSlug) return 'missing town';
+  if (!biz.category && !biz.businessType) return 'missing category';
+  if (biz.business_status === 'inactive' || biz.status === 'inactive') return 'inactive';
+  if (biz.business_status === 'closed' || biz.status === 'closed') return 'closed';
   if (biz.needs_manual_review) return 'needs manual review';
   if (biz.is_duplicate) return 'duplicate';
-  if (!getTownSlug(biz.town)) return `invalid town: ${biz.town}`;
-  if (!getCategorySlug(biz.category)) return `invalid category: ${biz.category}`;
+  const ts = getTownSlug(biz.town || biz.townSlug);
+  if (!ts) return `invalid town: ${biz.town || biz.townSlug}`;
+  const cs = resolveBusinessCategory(biz);
+  if (!cs) return `unmappable category: ${biz.category || biz.businessType}`;
   if (!isValidBusinessSlug(biz.slug)) return `invalid slug pattern: ${biz.slug}`;
+  if (scoreBusiness(biz) < THIN_PAGE_MIN_SCORE) return `thin page (score ${scoreBusiness(biz)})`;
+  if (!STATIC_EXPORTS.knownTowns.has(ts)) return `town not in static exports: ${ts}`;
+  if (!STATIC_EXPORTS.knownTypes.has(cs)) return `type not in static exports: ${cs}`;
   return 'unknown';
 }
 

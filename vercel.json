@@ -1,6 +1,6 @@
 {
   "framework": "vite",
-  "buildCommand": "npm run build",
+  "buildCommand": "npm run build:prerender",
   "outputDirectory": "dist",
   "redirects": [
     {
@@ -284,143 +284,138 @@
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/edgartown/restaurants/atria-restaurant-edgartown",
-      "destination": "/marthas-vineyard/edgartown/restaurants/atria-edgartown",
+      "source": "/marthas-vineyard/edgartown/restaurants-food-beverages/atria-restaurant-edgartown",
+      "destination": "/marthas-vineyard/edgartown/restaurants-food-beverages/atria-edgartown",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/oak-bluffs/restaurants/the-lookout-tavern-oak-bluffs",
-      "destination": "/marthas-vineyard/oak-bluffs/restaurants/waterfront-dining-oak-bluffs",
+      "source": "/marthas-vineyard/oak-bluffs/restaurants-food-beverages/the-lookout-tavern-oak-bluffs",
+      "destination": "/marthas-vineyard/oak-bluffs/restaurants-food-beverages/waterfront-dining-oak-bluffs",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/chilmark/shopping/menemsha-fish-market-chilmark",
-      "destination": "/marthas-vineyard/vineyard-haven/restaurants/menemsha-fish-market-vineyard-haven",
+      "source": "/marthas-vineyard/vineyard-haven/shopping-and-specialty-retail/subscribe-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/shopping-and-specialty-retail/marthas-vineyard-island-massachusetts-vineyard-haven",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/vineyard-haven/shopping/subscribe-vineyard-haven",
-      "destination": "/marthas-vineyard/vineyard-haven/shopping/marthas-vineyard-island-massachusetts-vineyard-haven",
+      "source": "/marthas-vineyard/vineyard-haven/shopping-and-specialty-retail/island-weddings-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/shopping-and-specialty-retail/marthas-vineyard-island-massachusetts-vineyard-haven",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/vineyard-haven/shopping/island-weddings-vineyard-haven",
-      "destination": "/marthas-vineyard/vineyard-haven/shopping/marthas-vineyard-island-massachusetts-vineyard-haven",
+      "source": "/marthas-vineyard/edgartown/restaurants-food-beverages/19rawoysterbarcom-edgartown",
+      "destination": "/marthas-vineyard/edgartown/restaurants-food-beverages/19-prime-steak-house-edgartown",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/edgartown/restaurants/19rawoysterbarcom-edgartown",
-      "destination": "/marthas-vineyard/edgartown/restaurants/19-prime-steak-house-edgartown",
+      "source": "/marthas-vineyard/edgartown/restaurants-food-beverages/alchemyedgartowncom-edgartown",
+      "destination": "/marthas-vineyard/edgartown/restaurants-food-beverages/alchemy-edgartown",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/edgartown/restaurants/alchemyedgartowncom-edgartown",
-      "destination": "/marthas-vineyard/edgartown/restaurants/alchemy-edgartown",
+      "source": "/marthas-vineyard/edgartown/restaurants-food-beverages/atriamvcom-edgartown",
+      "destination": "/marthas-vineyard/edgartown/restaurants-food-beverages/atria-edgartown",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/edgartown/restaurants/atriamvcom-edgartown",
-      "destination": "/marthas-vineyard/edgartown/restaurants/atria-edgartown",
+      "source": "/marthas-vineyard/edgartown/lodging-and-tourism/iconic-marthas-vineyard-hotel-edgartown",
+      "destination": "/marthas-vineyard/edgartown/lodging-and-tourism/harbor-view-hotel-edgartown",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/edgartown/lodging/iconic-marthas-vineyard-hotel-edgartown",
-      "destination": "/marthas-vineyard/edgartown/lodging/harbor-view-hotel-edgartown",
+      "source": "/marthas-vineyard/edgartown/restaurants-food-beverages/edgartowndinercom-edgartown",
+      "destination": "/marthas-vineyard/edgartown/restaurants-food-beverages/edgartown-diner-edgartown",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/edgartown/restaurants/edgartowndinercom-edgartown",
-      "destination": "/marthas-vineyard/edgartown/restaurants/edgartown-diner-edgartown",
+      "source": "/marthas-vineyard/edgartown/restaurants-food-beverages/edgartownpizzacom-edgartown",
+      "destination": "/marthas-vineyard/edgartown/restaurants-food-beverages/edgartown-pizza-edgartown",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/edgartown/restaurants/edgartownpizzacom-edgartown",
-      "destination": "/marthas-vineyard/edgartown/restaurants/edgartown-pizza-edgartown",
+      "source": "/marthas-vineyard/edgartown/restaurants-food-beverages/farawaymarthas-edgartown",
+      "destination": "/marthas-vineyard/edgartown/restaurants-food-beverages/the-pelican-club-edgartown",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/edgartown/restaurants/farawaymarthas-edgartown",
-      "destination": "/marthas-vineyard/edgartown/restaurants/the-pelican-club-edgartown",
+      "source": "/marthas-vineyard/oak-bluffs/restaurants-food-beverages/mvbiscuitscom-oak-bluffs",
+      "destination": "/marthas-vineyard/oak-bluffs/restaurants-food-beverages/biscuits-oak-bluffs",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/oak-bluffs/restaurants/mvbiscuitscom-oak-bluffs",
-      "destination": "/marthas-vineyard/oak-bluffs/restaurants/biscuits-oak-bluffs",
+      "source": "/marthas-vineyard/oak-bluffs/restaurants-food-beverages/redcatkitchencom-oak-bluffs",
+      "destination": "/marthas-vineyard/oak-bluffs/restaurants-food-beverages/red-cat-kitchen-oak-bluffs",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/oak-bluffs/restaurants/redcatkitchencom-oak-bluffs",
-      "destination": "/marthas-vineyard/oak-bluffs/restaurants/red-cat-kitchen-oak-bluffs",
+      "source": "/marthas-vineyard/vineyard-haven/restaurants-food-beverages/beach-road-restaurant-vineyard-haven",
+      "destination": "/marthas-vineyard/west-tisbury/restaurants-food-beverages/state-road-restaurant-west-tisbury",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/vineyard-haven/restaurants/beach-road-restaurant-vineyard-haven",
-      "destination": "/marthas-vineyard/west-tisbury/restaurants/state-road-restaurant-west-tisbury",
+      "source": "/marthas-vineyard/vineyard-haven/restaurants-food-beverages/the-grey-barn-farm-vineyard-haven",
+      "destination": "/marthas-vineyard/chilmark/restaurants-food-beverages/the-grey-barn-farm-chilmark",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/vineyard-haven/restaurants/the-grey-barn-farm-vineyard-haven",
-      "destination": "/marthas-vineyard/chilmark/restaurants/the-grey-barn-farm-chilmark",
+      "source": "/marthas-vineyard/vineyard-haven/restaurants-food-beverages/mvplayhouseorg-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/restaurants-food-beverages/the-vineyards-drive-vineyard-haven",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/vineyard-haven/restaurants/mvplayhouseorg-vineyard-haven",
-      "destination": "/marthas-vineyard/vineyard-haven/restaurants/the-vineyards-drive-vineyard-haven",
+      "source": "/marthas-vineyard/vineyard-haven/lodging-and-tourism/beach-pluminn-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/lodging-and-tourism/menemsha-inn-cottages-marthas-vineyard-vacation-rentals-vineyard-haven",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/vineyard-haven/lodging/beach-pluminn-vineyard-haven",
-      "destination": "/marthas-vineyard/vineyard-haven/lodging/menemsha-inn-cottages-marthas-vineyard-vacation-rentals-vineyard-haven",
+      "source": "/marthas-vineyard/vineyard-haven/shopping-and-specialty-retail/the-christopher-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/shopping-and-specialty-retail/the-edgartown-collection-vineyard-haven",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/vineyard-haven/shopping/the-christopher-vineyard-haven",
-      "destination": "/marthas-vineyard/vineyard-haven/shopping/the-edgartown-collection-vineyard-haven",
+      "source": "/marthas-vineyard/vineyard-haven/shopping-and-specialty-retail/home-page-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/shopping-and-specialty-retail/bunch-of-grapes-bookstore-vineyard-haven",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/vineyard-haven/shopping/home-page-vineyard-haven",
-      "destination": "/marthas-vineyard/vineyard-haven/shopping/bunch-of-grapes-bookstore-vineyard-haven",
+      "source": "/marthas-vineyard/vineyard-haven/shopping-and-specialty-retail/olivebranchfairtradeorg-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/shopping-and-specialty-retail/olive-branch-fair-trade-vineyard-haven",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/vineyard-haven/shopping/olivebranchfairtradeorg-vineyard-haven",
-      "destination": "/marthas-vineyard/vineyard-haven/shopping/olive-branch-fair-trade-vineyard-haven",
+      "source": "/marthas-vineyard/vineyard-haven/shopping-and-specialty-retail/rainydaymvcom-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/shopping-and-specialty-retail/rainy-day-vineyard-haven",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/vineyard-haven/shopping/rainydaymvcom-vineyard-haven",
-      "destination": "/marthas-vineyard/vineyard-haven/shopping/rainy-day-vineyard-haven",
+      "source": "/marthas-vineyard/vineyard-haven/shopping-and-specialty-retail/ingrid-goff-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/shopping-and-specialty-retail/tending-joy-artisan-shop-vineyard-haven",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/vineyard-haven/shopping/ingrid-goff-vineyard-haven",
-      "destination": "/marthas-vineyard/vineyard-haven/shopping/tending-joy-artisan-shop-vineyard-haven",
+      "source": "/marthas-vineyard/vineyard-haven/lodging-and-tourism/directories-vineyard-haven",
+      "destination": "/marthas-vineyard/oak-bluffs/shopping-and-specialty-retail/island-outfitters-oak-bluffs-marthas-vineyard-oak-bluffs",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/vineyard-haven/lodging/directories-vineyard-haven",
-      "destination": "/marthas-vineyard/oak-bluffs/shopping/island-outfitters-oak-bluffs-marthas-vineyard-oak-bluffs",
+      "source": "/marthas-vineyard/chilmark/restaurants-food-beverages/chilmark-tavern-chilmark",
+      "destination": "/marthas-vineyard/chilmark/restaurants-food-beverages/chilmarktaverncom-chilmark",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/chilmark/restaurants/chilmark-tavern-chilmark",
-      "destination": "/marthas-vineyard/chilmark/restaurants/chilmarktaverncom-chilmark",
+      "source": "/marthas-vineyard/edgartown/restaurants-food-beverages/behind-the-bookstore-edgartown",
+      "destination": "/marthas-vineyard/edgartown/restaurants-food-beverages/btbmvcom-edgartown",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/edgartown/restaurants/behind-the-bookstore-edgartown",
-      "destination": "/marthas-vineyard/edgartown/restaurants/btbmvcom-edgartown",
+      "source": "/marthas-vineyard/aquinnah/restaurants-food-beverages/the-outermost-inn-aquinnah",
+      "destination": "/marthas-vineyard/aquinnah/restaurants-food-beverages/outermost-inn-aquinnah",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/aquinnah/restaurants/the-outermost-inn-aquinnah",
-      "destination": "/marthas-vineyard/aquinnah/restaurants/outermost-inn-aquinnah",
-      "permanent": true
-    },
-    {
-      "source": "/marthas-vineyard/vineyard-haven/restaurants/sandys-fish-chips-vineyard-haven",
-      "destination": "/marthas-vineyard/vineyard-haven/restaurants/johns-fish-market-vineyard-haven",
+      "source": "/marthas-vineyard/vineyard-haven/restaurants-food-beverages/sandys-fish-chips-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/restaurants-food-beverages/johns-fish-market-vineyard-haven",
       "permanent": true
     },
     {
@@ -550,6 +545,391 @@
     },
     {
       "source": "/marthas-vineyard/:town/familyand-community-and-government/:business",
+      "destination": "/marthas-vineyard/:town/family-community-government/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/arts-entertainment",
+      "destination": "/marthas-vineyard/arts-and-entertainment",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/automotive-marine",
+      "destination": "/marthas-vineyard/automotive-and-marine",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/automotive",
+      "destination": "/marthas-vineyard/automotive-and-marine",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/banking-finance-insurance",
+      "destination": "/marthas-vineyard/banking-finance-and-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/beauty-wellness",
+      "destination": "/marthas-vineyard/beauty-and-wellness",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/building-construction",
+      "destination": "/marthas-vineyard/building-and-construction",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/business-professional-services",
+      "destination": "/marthas-vineyard/business-and-professional-services",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/home-services-trades",
+      "destination": "/marthas-vineyard/home-services-and-trades",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/house-garden-pets",
+      "destination": "/marthas-vineyard/house-garden-and-pets",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/lodging-tourism",
+      "destination": "/marthas-vineyard/lodging-and-tourism",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/medical-services-providers",
+      "destination": "/marthas-vineyard/medical-services-and-providers",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/real-estate-rentals",
+      "destination": "/marthas-vineyard/real-estate-and-rentals",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/shopping-specialty-retail",
+      "destination": "/marthas-vineyard/shopping-and-specialty-retail",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/sports-recreation",
+      "destination": "/marthas-vineyard/sports-and-recreation",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/transportation-utilities",
+      "destination": "/marthas-vineyard/transportation-and-utilities",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/wedding-event-services",
+      "destination": "/marthas-vineyard/wedding-and-event-services",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/arts-entertainment",
+      "destination": "/marthas-vineyard/:town/arts-and-entertainment",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/arts-entertainment/:business",
+      "destination": "/marthas-vineyard/:town/arts-and-entertainment/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/automotive-marine",
+      "destination": "/marthas-vineyard/:town/automotive-and-marine",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/automotive-marine/:business",
+      "destination": "/marthas-vineyard/:town/automotive-and-marine/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/automotive",
+      "destination": "/marthas-vineyard/:town/automotive-and-marine",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/automotive/:business",
+      "destination": "/marthas-vineyard/:town/automotive-and-marine/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/banking-finance-insurance",
+      "destination": "/marthas-vineyard/:town/banking-finance-and-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/banking-finance-insurance/:business",
+      "destination": "/marthas-vineyard/:town/banking-finance-and-insurance/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/beauty-wellness",
+      "destination": "/marthas-vineyard/:town/beauty-and-wellness",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/beauty-wellness/:business",
+      "destination": "/marthas-vineyard/:town/beauty-and-wellness/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/building-construction",
+      "destination": "/marthas-vineyard/:town/building-and-construction",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/building-construction/:business",
+      "destination": "/marthas-vineyard/:town/building-and-construction/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/business-professional-services",
+      "destination": "/marthas-vineyard/:town/business-and-professional-services",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/business-professional-services/:business",
+      "destination": "/marthas-vineyard/:town/business-and-professional-services/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/home-services-trades",
+      "destination": "/marthas-vineyard/:town/home-services-and-trades",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/home-services-trades/:business",
+      "destination": "/marthas-vineyard/:town/home-services-and-trades/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/house-garden-pets",
+      "destination": "/marthas-vineyard/:town/house-garden-and-pets",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/house-garden-pets/:business",
+      "destination": "/marthas-vineyard/:town/house-garden-and-pets/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/lodging-tourism",
+      "destination": "/marthas-vineyard/:town/lodging-and-tourism",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/lodging-tourism/:business",
+      "destination": "/marthas-vineyard/:town/lodging-and-tourism/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/medical-services-providers",
+      "destination": "/marthas-vineyard/:town/medical-services-and-providers",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/medical-services-providers/:business",
+      "destination": "/marthas-vineyard/:town/medical-services-and-providers/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/real-estate-rentals",
+      "destination": "/marthas-vineyard/:town/real-estate-and-rentals",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/real-estate-rentals/:business",
+      "destination": "/marthas-vineyard/:town/real-estate-and-rentals/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/shopping-specialty-retail",
+      "destination": "/marthas-vineyard/:town/shopping-and-specialty-retail",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/shopping-specialty-retail/:business",
+      "destination": "/marthas-vineyard/:town/shopping-and-specialty-retail/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/sports-recreation",
+      "destination": "/marthas-vineyard/:town/sports-and-recreation",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/sports-recreation/:business",
+      "destination": "/marthas-vineyard/:town/sports-and-recreation/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/transportation-utilities",
+      "destination": "/marthas-vineyard/:town/transportation-and-utilities",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/transportation-utilities/:business",
+      "destination": "/marthas-vineyard/:town/transportation-and-utilities/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/wedding-event-services",
+      "destination": "/marthas-vineyard/:town/wedding-and-event-services",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/wedding-event-services/:business",
+      "destination": "/marthas-vineyard/:town/wedding-and-event-services/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/unknown",
+      "destination": "/marthas-vineyard",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/unknown/:rest*",
+      "destination": "/marthas-vineyard",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/other",
+      "destination": "/marthas-vineyard/:town",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/other/:business",
+      "destination": "/marthas-vineyard/:town",
+      "permanent": true
+    },
+    {
+      "source": "/archives/:id",
+      "destination": "/tech-tips",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/restaurant",
+      "destination": "/marthas-vineyard/restaurants-food-beverages",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/restaurant",
+      "destination": "/marthas-vineyard/:town/restaurants-food-beverages",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/restaurant/:business",
+      "destination": "/marthas-vineyard/:town/restaurants-food-beverages/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/restaurants",
+      "destination": "/marthas-vineyard/restaurants-food-beverages",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/restaurants",
+      "destination": "/marthas-vineyard/:town/restaurants-food-beverages",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/restaurants/:business",
+      "destination": "/marthas-vineyard/:town/restaurants-food-beverages/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/lodging",
+      "destination": "/marthas-vineyard/lodging-and-tourism",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/lodging",
+      "destination": "/marthas-vineyard/:town/lodging-and-tourism",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/lodging/:business",
+      "destination": "/marthas-vineyard/:town/lodging-and-tourism/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/shopping",
+      "destination": "/marthas-vineyard/shopping-and-specialty-retail",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/shopping",
+      "destination": "/marthas-vineyard/:town/shopping-and-specialty-retail",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/shopping/:business",
+      "destination": "/marthas-vineyard/:town/shopping-and-specialty-retail/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/shopping-retail",
+      "destination": "/marthas-vineyard/shopping-and-specialty-retail",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/shopping-retail",
+      "destination": "/marthas-vineyard/:town/shopping-and-specialty-retail",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/shopping-retail/:business",
+      "destination": "/marthas-vineyard/:town/shopping-and-specialty-retail/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/health-wellness",
+      "destination": "/marthas-vineyard/medical-services-and-providers",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/health-wellness",
+      "destination": "/marthas-vineyard/:town/medical-services-and-providers",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/health-wellness/:business",
+      "destination": "/marthas-vineyard/:town/medical-services-and-providers/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/professional-services",
+      "destination": "/marthas-vineyard/business-and-professional-services",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/professional-services",
+      "destination": "/marthas-vineyard/:town/business-and-professional-services",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/professional-services/:business",
+      "destination": "/marthas-vineyard/:town/business-and-professional-services/:business",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/community",
+      "destination": "/marthas-vineyard/family-community-government",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/community",
+      "destination": "/marthas-vineyard/:town/family-community-government",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/:town/community/:business",
       "destination": "/marthas-vineyard/:town/family-community-government/:business",
       "permanent": true
     }

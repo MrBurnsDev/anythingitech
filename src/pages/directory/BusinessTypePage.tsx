@@ -9,6 +9,7 @@ import {
   getTownBusinessTypeUrl,
   businessTypes,
   getBusinessTypeUrl,
+  normalizeCategorySlug,
 } from "@/data/directory";
 import {
   MapPin,
@@ -64,13 +65,26 @@ export default function BusinessTypePage() {
     "business-and-professional-services",
   ].includes(businessType.slug);
 
+  const canonicalType = normalizeCategorySlug(businessType.slug) || businessType.slug;
+  const canonicalUrl = `https://anythingitechmv.com/marthas-vineyard/${canonicalType}`;
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Directory", item: "https://anythingitechmv.com/marthas-vineyard" },
+      { "@type": "ListItem", position: 2, name: businessType.pluralName, item: canonicalUrl },
+    ],
+  };
+
   return (
     <SiteLayout>
       <SEO
         title={`${businessType.pluralName} on Martha's Vineyard`}
         description={businessType.seoDescription}
-        canonical={`https://anythingitechmv.com/marthas-vineyard/${businessType.slug}`}
+        canonical={canonicalUrl}
         noEmailIndex
+        jsonLd={breadcrumbJsonLd}
       />
       {/* Breadcrumb */}
       <div className="border-b border-border">

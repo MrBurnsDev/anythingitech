@@ -66,7 +66,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           {/* Logo */}
           <div className="flex items-center justify-between h-16 px-4 border-b border-border">
             <a
-              href="https://www.anythingitechmv.com"
+              href="https://anythingitechmv.com"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:opacity-80 transition-opacity"

@@ -8,6 +8,7 @@ import {
   getTownUrl,
   getBusinessTypeUrl,
   getTownBusinessTypeUrl,
+  normalizeCategorySlug,
 } from "@/data/directory";
 import { useBusiness, useBusinesses } from "@/hooks/useBusinesses";
 import { BusinessCard } from "@/components/directory/BusinessCard";
@@ -35,7 +36,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Map old slugs to their new canonical slugs
+// One-off WP-migration slug shapes not covered by the central LEGACY_CATEGORY_REMAP
 const SLUG_REDIRECTS: Record<string, string> = {
   "restaurantsand-food-and-beverages": "restaurants-food-beverages",
   "familyand-community-and-government": "family-community-government",
@@ -65,10 +66,15 @@ export default function BusinessPage() {
   const [editOpen, setEditOpen] = useState(false);
   const [isCheckingRedirect, setIsCheckingRedirect] = useState(false);
 
-  // Check if typeSlug needs redirect to canonical version
+  // Check if typeSlug needs redirect to canonical version (one-off WP shapes)
   const redirectTypeSlug = typeSlug ? SLUG_REDIRECTS[typeSlug] : undefined;
   if (redirectTypeSlug && townSlug && businessSlug) {
     return <Navigate to={`/marthas-vineyard/${townSlug}/${redirectTypeSlug}/${businessSlug}`} replace />;
+  }
+  // Legacy category short-form (server 308 should win; SPA fallback)
+  const normalizedTypeSlug = typeSlug ? normalizeCategorySlug(typeSlug) : undefined;
+  if (normalizedTypeSlug && normalizedTypeSlug !== typeSlug && townSlug && businessSlug) {
+    return <Navigate to={`/marthas-vineyard/${townSlug}/${normalizedTypeSlug}/${businessSlug}`} replace />;
   }
 
   // Fetch business from Supabase API
@@ -155,13 +161,59 @@ export default function BusinessPage() {
     ? `${business.description} Located in ${town.name}, Martha's Vineyard.`
     : `${business.name} - ${businessType.name.toLowerCase()} in ${town.name}, Martha's Vineyard.`;
 
+  // Always emit modern category slug in canonical/breadcrumb/JSON-LD,
+  // regardless of which form the URL was reached on.
+  const canonicalType = normalizeCategorySlug(businessType.slug) || businessType.slug;
+  const canonicalUrl = `https://anythingitechmv.com/marthas-vineyard/${town.slug}/${canonicalType}/${business.slug}`;
+
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": canonicalUrl,
+      name: business.name,
+      description: seoDescription,
+      url: canonicalUrl,
+      ...(business.phone ? { telephone: business.phone } : {}),
+      ...(business.website ? { sameAs: [business.website] } : {}),
+      ...(business.address ? {
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: business.address,
+          addressLocality: town.name,
+          addressRegion: "MA",
+          addressCountry: "US",
+        }
+      } : {}),
+      ...(business.coordinates ? {
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: business.coordinates.lat,
+          longitude: business.coordinates.lng,
+        }
+      } : {}),
+      areaServed: { "@type": "Place", name: "Martha's Vineyard" },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Directory", item: "https://anythingitechmv.com/marthas-vineyard" },
+        { "@type": "ListItem", position: 2, name: town.name, item: `https://anythingitechmv.com/marthas-vineyard/${town.slug}` },
+        { "@type": "ListItem", position: 3, name: businessType.pluralName, item: `https://anythingitechmv.com/marthas-vineyard/${town.slug}/${canonicalType}` },
+        { "@type": "ListItem", position: 4, name: business.name, item: canonicalUrl },
+      ],
+    },
+  ];
+
   return (
     <SiteLayout>
       <SEO
         title={`${business.name} - ${town.name}, Martha's Vineyard`}
         description={seoDescription}
-        canonical={`https://anythingitechmv.com/marthas-vineyard/${town.slug}/${businessType.slug}/${business.slug}`}
+        canonical={canonicalUrl}
         noEmailIndex
+        jsonLd={jsonLd}
       />
       {/* Breadcrumb */}
       <div className="border-b border-border">

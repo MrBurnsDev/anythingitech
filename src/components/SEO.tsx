@@ -7,6 +7,29 @@ interface SEOProps {
   image?: string | null;
   /** Add noemailindex to prevent email scraping by bots */
   noEmailIndex?: boolean;
+  /** JSON-LD structured data (any number of objects). Rendered into <script type="application/ld+json"> tags. */
+  jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>;
+}
+
+function upsertMeta(selector: string, attr: 'name' | 'property', key: string, value: string) {
+  let el = document.querySelector(selector);
+  if (!el) {
+    el = document.createElement('meta');
+    el.setAttribute(attr, key);
+    document.head.appendChild(el);
+  }
+  el.setAttribute('content', value);
+}
+
+function upsertJsonLd(items: Array<Record<string, unknown>>) {
+  document.querySelectorAll('script[type="application/ld+json"][data-managed="seo-component"]').forEach(el => el.remove());
+  for (const obj of items) {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-managed', 'seo-component');
+    script.text = JSON.stringify(obj);
+    document.head.appendChild(script);
+  }
 }
 
 /**
@@ -14,7 +37,7 @@ interface SEOProps {
  * For a Vite SPA, this is sufficient for basic SEO on directory pages.
  * The meta description will be picked up by search engines on crawl.
  */
-export function SEO({ title, description, canonical, image, noEmailIndex }: SEOProps) {
+export function SEO({ title, description, canonical, image, noEmailIndex, jsonLd }: SEOProps) {
   useEffect(() => {
     // Update document title
     const fullTitle = title.includes("Anything Itech")
@@ -31,7 +54,7 @@ export function SEO({ title, description, canonical, image, noEmailIndex }: SEOP
     }
     metaDescription.setAttribute("content", description);
 
-    // Update or create canonical link
+    // Update or create canonical link + og:url (always aligned)
     if (canonical) {
       let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {
@@ -40,6 +63,7 @@ export function SEO({ title, description, canonical, image, noEmailIndex }: SEOP
         document.head.appendChild(canonicalLink);
       }
       canonicalLink.setAttribute("href", canonical);
+      upsertMeta('meta[property="og:url"]', 'property', 'og:url', canonical);
     }
 
     // Update Open Graph tags
@@ -88,6 +112,12 @@ export function SEO({ title, description, canonical, image, noEmailIndex }: SEOP
       twitterCard.setAttribute("content", "summary_large_image");
     }
 
+    // Render JSON-LD structured data (replaces any prior managed scripts)
+    if (jsonLd) {
+      const items = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
+      upsertJsonLd(items);
+    }
+
     // Add noemailindex directive for directory pages (anti-scraping protection)
     if (noEmailIndex) {
       let robotsMeta = document.querySelector('meta[name="robots"]');
@@ -106,7 +136,7 @@ export function SEO({ title, description, canonical, image, noEmailIndex }: SEOP
       }
     }
 
-  }, [title, description, canonical, image, noEmailIndex]);
+  }, [title, description, canonical, image, noEmailIndex, jsonLd]);
 
   return null;
 }

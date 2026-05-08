@@ -68,6 +68,14 @@ export default function TownPage() {
         description={`${town.description} Browse ${townBusinesses.length} local businesses in ${town.name}.`}
         canonical={`https://anythingitechmv.com/marthas-vineyard/${town.slug}`}
         noEmailIndex
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Directory", item: "https://anythingitechmv.com/marthas-vineyard" },
+            { "@type": "ListItem", position: 2, name: town.name, item: `https://anythingitechmv.com/marthas-vineyard/${town.slug}` },
+          ],
+        }}
       />
       {/* Breadcrumb */}
       <div className="border-b border-border">

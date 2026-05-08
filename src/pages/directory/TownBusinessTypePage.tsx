@@ -9,6 +9,7 @@ import {
   getTownBusinessTypeUrl,
   getTownUrl,
   getBusinessTypeUrl,
+  normalizeCategorySlug,
 } from "@/data/directory";
 import { useBusinesses } from "@/hooks/useBusinesses";
 import {
@@ -29,7 +30,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Map old slugs to their new canonical slugs
+// One-off WP-migration slug shapes not covered by the central LEGACY_CATEGORY_REMAP
 const SLUG_REDIRECTS: Record<string, string> = {
   "restaurantsand-food-and-beverages": "restaurants-food-beverages",
   "familyand-community-and-government": "family-community-government",
@@ -51,10 +52,15 @@ const typeIcons: Record<string, React.ElementType> = {
 export default function TownBusinessTypePage() {
   const { townSlug, typeSlug } = useParams<{ townSlug: string; typeSlug: string }>();
 
-  // Check if typeSlug needs redirect to canonical version
+  // Check if typeSlug needs redirect to canonical version (one-off WP shapes)
   const redirectTypeSlug = typeSlug ? SLUG_REDIRECTS[typeSlug] : undefined;
   if (redirectTypeSlug && townSlug) {
     return <Navigate to={`/marthas-vineyard/${townSlug}/${redirectTypeSlug}`} replace />;
+  }
+  // Legacy category short-form (server 308 should win; SPA fallback)
+  const normalizedTypeSlug = typeSlug ? normalizeCategorySlug(typeSlug) : undefined;
+  if (normalizedTypeSlug && normalizedTypeSlug !== typeSlug && townSlug) {
+    return <Navigate to={`/marthas-vineyard/${townSlug}/${normalizedTypeSlug}`} replace />;
   }
 
   const town = getTownBySlug(townSlug || "");
@@ -98,13 +104,27 @@ export default function TownBusinessTypePage() {
     "business-and-professional-services",
   ].includes(businessType.slug);
 
+  const canonicalType = normalizeCategorySlug(businessType.slug) || businessType.slug;
+  const canonicalUrl = `https://anythingitechmv.com/marthas-vineyard/${town.slug}/${canonicalType}`;
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Directory", item: "https://anythingitechmv.com/marthas-vineyard" },
+      { "@type": "ListItem", position: 2, name: town.name, item: `https://anythingitechmv.com/marthas-vineyard/${town.slug}` },
+      { "@type": "ListItem", position: 3, name: businessType.pluralName, item: canonicalUrl },
+    ],
+  };
+
   return (
     <SiteLayout>
       <SEO
         title={`${businessType.pluralName} in ${town.name}, Martha's Vineyard`}
         description={`Find ${businessType.name.toLowerCase()} businesses in ${town.name}. ${businessType.shortDescription} serving the Martha's Vineyard community.`}
-        canonical={`https://anythingitechmv.com/marthas-vineyard/${town.slug}/${businessType.slug}`}
+        canonical={canonicalUrl}
         noEmailIndex
+        jsonLd={breadcrumbJsonLd}
       />
       {/* Breadcrumb */}
       <div className="border-b border-border">
