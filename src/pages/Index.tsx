@@ -159,7 +159,7 @@ const Index = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-secondary">
-              <img src={heroImg} alt="Residential" className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-[1.04]" loading="lazy" />
+              <img src={heroImg} alt="Residential" className="absolute inset-0 h-full w-full object-cover transition-transform [transition-duration:1200ms] group-hover:scale-[1.04]" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent" />
               <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end text-primary-foreground">
                 <p className="eyebrow text-primary-foreground/60 mb-4">
@@ -176,7 +176,7 @@ const Index = () => {
               </div>
             </div>
             <div className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-secondary">
-              <img src={officeImg} alt="Business" className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-[1.04]" loading="lazy" />
+              <img src={officeImg} alt="Business" className="absolute inset-0 h-full w-full object-cover transition-transform [transition-duration:1200ms] group-hover:scale-[1.04]" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent" />
               <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end text-primary-foreground">
                 <p className="eyebrow text-primary-foreground/60 mb-4">

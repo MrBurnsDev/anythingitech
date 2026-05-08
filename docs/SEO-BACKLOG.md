@@ -39,11 +39,8 @@ Everything in this file is **optional**. The core SEO infrastructure (canonical/
 
 ## Nice-to-have
 
-### 5. Bundle size / chunk splitting
-- **What:** The main JS bundle is 823 KB minified. Vite warns about chunks > 500 KB.
-- **Impact:** Page-load metric (LCP, TBT). Not directly SEO but affects Core Web Vitals which factor into ranking.
-- **Fix:** Add `manualChunks` to `vite.config.ts`. Split out: `react`, `react-dom`, `@radix-ui/*`, `lucide-react`, `recharts`, `date-fns`. Possibly route-split admin pages.
-- **Effort:** ~2 hours.
+### 5. Bundle size / chunk splitting — DONE
+- **Status:** Resolved. Main bundle is now 287 KB (was 823 KB) after vendor chunk-splitting in `vite.config.ts`. Vendor chunks: react (154 KB), radix (130 KB), misc (168 KB), icons (31 KB), query (36 KB) — each cached independently. Vite chunk-size warning is gone.
 
 ### 6. Image optimization
 - **What:** Hero images are 100-340 KB JPEGs. No `srcset`, no AVIF/WebP variants.
