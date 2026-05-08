@@ -183,6 +183,17 @@ Check `data/exports/towns.json` and `business-types.json` for the missing slug.
 ### Build: "API proxy 502"
 The prerender's static server proxies `/api/*` to production. If the live API is down or rate-limiting, the prerender hydrates with empty data and produces wrong canonicals. Wait and retry, or set `PRERENDER_API_BASE` to a working host.
 
+### Build: "No Chromium executable found"
+The prerender uses `puppeteer-core` and resolves the browser via `resolveBrowserLaunchOptions()` in `scripts/prerender.cjs`:
+- **On Vercel/Linux** — uses `@sparticuz/chromium`'s bundled binary (~66 MB devDep).
+- **On macOS** — uses the system Google Chrome at `/Applications/Google Chrome.app/...`.
+- **Override** with `PUPPETEER_EXECUTABLE_PATH=/path/to/chrome npm run prerender`.
+
+If the build fails with "No Chromium executable found":
+- On macOS: install Google Chrome.
+- On Linux without `@sparticuz/chromium`: `npm install --save-dev @sparticuz/chromium`.
+- Anywhere: set `PUPPETEER_EXECUTABLE_PATH` to a valid Chrome/Chromium binary.
+
 ### Production: 308 self-redirect on a canonical URL
 The deployed `vercel.json` has a self-redirect. Check `npm run validate:redirects` locally — if it passes, the broken redirects are NOT in the file you're about to deploy, but ARE in production from a previous broken deploy. Run `npm run deploy` to overwrite.
 

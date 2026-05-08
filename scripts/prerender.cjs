@@ -35,10 +35,59 @@
  * already populated). Tune concurrency via PRERENDER_CONCURRENCY env var.
  */
 
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-core');
 const { createServer } = require('http');
 const { readFileSync, writeFileSync, mkdirSync, existsSync } = require('fs');
 const { join, dirname } = require('path');
+
+/**
+ * Resolve a Chromium executable across environments:
+ *   - Vercel/Lambda Linux: use @sparticuz/chromium's bundled binary
+ *   - Local macOS dev:     use the system Chrome / Chrome Canary
+ *   - Local Linux dev:     use system chromium / google-chrome
+ *
+ * Override with PUPPETEER_EXECUTABLE_PATH env var if needed.
+ */
+async function resolveBrowserLaunchOptions() {
+  if (process.env.PUPPETEER_EXECUTABLE_PATH) {
+    return {
+      executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      headless: true,
+    };
+  }
+
+  // Vercel build env, Lambda, or any Linux server
+  if (process.platform === 'linux') {
+    const chromium = require('@sparticuz/chromium');
+    return {
+      args: chromium.args,
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
+      defaultViewport: chromium.defaultViewport,
+    };
+  }
+
+  // macOS local dev — try common install paths
+  const fs = require('fs');
+  const macPaths = [
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+    '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',
+    '/Applications/Chromium.app/Contents/MacOS/Chromium',
+  ];
+  for (const p of macPaths) {
+    if (fs.existsSync(p)) {
+      return {
+        executablePath: p,
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        headless: true,
+      };
+    }
+  }
+  throw new Error(
+    'No Chromium executable found. Install Google Chrome, or set PUPPETEER_EXECUTABLE_PATH.'
+  );
+}
 
 const DIST_DIR = join(__dirname, '..', 'dist');
 const SITE_URL = 'https://anythingitechmv.com';
@@ -169,10 +218,9 @@ async function prerender() {
   await new Promise(resolve => server.listen(PORT, resolve));
   console.log(`Static server running on http://localhost:${PORT}\n`);
 
-  const browser = await puppeteer.launch({
-    headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  });
+  const launchOptions = await resolveBrowserLaunchOptions();
+  console.log(`Launching browser: ${launchOptions.executablePath || '(system default)'}`);
+  const browser = await puppeteer.launch(launchOptions);
 
   let successCount = 0;
   let errorCount = 0;
