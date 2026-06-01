@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-06-01T00:04:26.043Z",
+  "apply": true,
+  "source_filter": null,
+  "summary": {
+    "chamber": {
+      "auto": 141,
+      "review": 46,
+      "noMatch": 1418,
+      "total": 1605
+    },
+    "gazette": {
+      "auto": 294,
+      "review": 2,
+      "noMatch": 93,
+      "total": 389
+    },
+    "gomv": {
+      "auto": 75,
+      "review": 8,
+      "noMatch": 394,
+      "total": 477
+    },
+    "blackOwned": {
+      "auto": 0,
+      "review": 3,
+      "noMatch": 83,
+      "total": 86
+    }
+  }
+}

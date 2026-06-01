@@ -3,6 +3,11 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { SEO } from "@/components/SEO";
 import { BusinessList } from "@/components/directory/BusinessList";
 import {
+  MembershipFilterChips,
+  useMembershipFilter,
+  applyMembershipFilter,
+} from "@/components/directory/MembershipFilterChips";
+import {
   getBusinessTypeBySlug,
   getBusinessesByType,
   getTownsForBusinessType,
@@ -52,6 +57,10 @@ export default function BusinessTypePage() {
 
   const typeBusinesses = getBusinessesByType(businessType.slug);
   const townsWithType = getTownsForBusinessType(businessType.slug);
+
+  // Optional URL-driven directory-membership filter
+  const membershipFilter = useMembershipFilter();
+  const visibleBusinesses = applyMembershipFilter(typeBusinesses, membershipFilter);
   // Use icon field from JSON data to lookup the component
   const Icon = typeIcons[businessType.icon] || Building2;
 
@@ -154,15 +163,18 @@ export default function BusinessTypePage() {
       {/* All Businesses */}
       <section className="py-16 md:py-24">
         <div className="container-editorial">
-          <div className="mb-12">
+          <div className="mb-8">
             <h2 className="font-display text-2xl mb-2">
               All {businessType.pluralName}
             </h2>
             <p className="text-muted-foreground">
-              Browse all {typeBusinesses.length} {businessType.name.toLowerCase()} businesses on Martha's Vineyard
+              {membershipFilter
+                ? `Showing ${visibleBusinesses.length} of ${typeBusinesses.length} ${businessType.name.toLowerCase()} businesses on Martha's Vineyard`
+                : `Browse all ${typeBusinesses.length} ${businessType.name.toLowerCase()} businesses on Martha's Vineyard`}
             </p>
           </div>
-          <BusinessList businesses={typeBusinesses} showTown={true} />
+          <MembershipFilterChips className="mb-8" />
+          <BusinessList businesses={visibleBusinesses} showTown={true} />
         </div>
       </section>
 

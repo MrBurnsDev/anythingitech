@@ -13,6 +13,8 @@ import {
 import { useBusiness, useBusinesses } from "@/hooks/useBusinesses";
 import { BusinessCard } from "@/components/directory/BusinessCard";
 import { AdminControls } from "@/components/directory/AdminControls";
+import { VerifiedLocalBadge } from "@/components/directory/VerifiedLocalBadge";
+import { DirectoryListings } from "@/components/directory/DirectoryListings";
 import { useAdminAuth } from "@/contexts/AdminAuthContext";
 import {
   MapPin,
@@ -166,6 +168,24 @@ export default function BusinessPage() {
   const canonicalType = normalizeCategorySlug(businessType.slug) || businessType.slug;
   const canonicalUrl = `https://anythingitechmv.com/marthas-vineyard/${town.slug}/${canonicalType}/${business.slug}`;
 
+  // sameAs is a schema.org signal that helps search engines identify the
+  // same entity across the web. We include: official website, social
+  // profiles, and external directory listing URLs. Each contributes
+  // independent corroboration of the business's identity.
+  const sameAs: string[] = [];
+  if (business.website) sameAs.push(business.website);
+  if (business.social?.facebook) sameAs.push(business.social.facebook);
+  if (business.social?.instagram) sameAs.push(business.social.instagram);
+  if (business.social?.yelp) sameAs.push(business.social.yelp);
+  if (business.social?.tripadvisor) sameAs.push(business.social.tripadvisor);
+  if (business.memberships) {
+    for (const m of Object.values(business.memberships)) {
+      if (m?.externalUrl) sameAs.push(m.externalUrl);
+    }
+  }
+  // Dedupe while preserving order
+  const uniqueSameAs = Array.from(new Set(sameAs));
+
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -175,7 +195,7 @@ export default function BusinessPage() {
       description: seoDescription,
       url: canonicalUrl,
       ...(business.phone ? { telephone: business.phone } : {}),
-      ...(business.website ? { sameAs: [business.website] } : {}),
+      ...(uniqueSameAs.length ? { sameAs: uniqueSameAs } : {}),
       ...(business.address ? {
         address: {
           "@type": "PostalAddress",
@@ -258,6 +278,7 @@ export default function BusinessPage() {
                     <MapPin className="h-3.5 w-3.5" />
                     {business.town}
                   </span>
+                  {business.verifiedLocalBusiness && <VerifiedLocalBadge />}
                 </div>
               </div>
 
@@ -282,6 +303,15 @@ export default function BusinessPage() {
                   <Clock className="h-4 w-4 text-accent" />
                   <span className="capitalize">{business.seasonal}</span>
                 </div>
+              )}
+
+              {/* Directory presence — external local directories that list this
+                  business. Neutral language; not certification or endorsement. */}
+              {business.memberships && (
+                <DirectoryListings
+                  memberships={business.memberships}
+                  className="mt-8 max-w-2xl"
+                />
               )}
             </div>
 

@@ -3,6 +3,11 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { SEO } from "@/components/SEO";
 import { BusinessList } from "@/components/directory/BusinessList";
 import {
+  MembershipFilterChips,
+  useMembershipFilter,
+  applyMembershipFilter,
+} from "@/components/directory/MembershipFilterChips";
+import {
   getTownBySlug,
   getBusinessTypeBySlug,
   getBusinessTypesForTown,
@@ -71,6 +76,10 @@ export default function TownBusinessTypePage() {
     town: townSlug,
     type: typeSlug,
   });
+
+  // Optional URL-driven directory-membership filter
+  const membershipFilter = useMembershipFilter();
+  const visibleBusinesses = applyMembershipFilter(filteredBusinesses, membershipFilter);
 
   if (!town || !businessType) {
     return <Navigate to="/marthas-vineyard" replace />;
@@ -175,7 +184,12 @@ export default function TownBusinessTypePage() {
       {/* Business List */}
       <section className="py-16 md:py-24">
         <div className="container-editorial">
-          <BusinessList businesses={filteredBusinesses} showTown={false} searchable={filteredBusinesses.length > 6} />
+          <MembershipFilterChips className="mb-8" />
+          <BusinessList
+            businesses={visibleBusinesses}
+            showTown={false}
+            searchable={visibleBusinesses.length > 6}
+          />
         </div>
       </section>
 

@@ -4,53 +4,28 @@
     "name": "Vineyard Haven",
     "region": "down-island",
     "description": "The commercial heart of Martha's Vineyard, home to the ferry terminal and a vibrant Main Street with local shops, restaurants, and services.",
-    "businessCount": 71,
+    "businessCount": 91,
     "businessTypes": {
-      "restaurants-food-beverages": 22,
-      "lodging-and-tourism": 8,
-      "shopping-and-specialty-retail": 22,
-      "arts-and-entertainment": 2,
-      "medical-services-and-providers": 5,
-      "family-community-government": 2,
-      "beauty-and-wellness": 4,
-      "business-and-professional-services": 4,
-      "building-and-construction": 2
+      "restaurants": 21,
+      "lodging": 8,
+      "shopping": 20,
+      "professional-services": 5
     },
     "categories": [
-      "Restaurants, Food & Beverages",
-      "Lodging & Tourism",
-      "Shopping & Specialty Retail",
       "Arts & Entertainment",
+      "Community",
+      "Contractors",
+      "Health & Wellness",
+      "Healthcare",
+      "Lodging",
+      "Lodging & Tourism",
       "Medical Services & Providers",
-      "Family, Community & Government",
-      "Beauty & Wellness",
-      "Business & Professional Services",
-      "Building & Construction"
-    ]
-  },
-  {
-    "slug": "oak-bluffs",
-    "name": "Oak Bluffs",
-    "region": "down-island",
-    "description": "Colorful gingerbread cottages, the Flying Horses carousel, and a lively harbor scene with diverse local businesses.",
-    "businessCount": 56,
-    "businessTypes": {
-      "restaurants-food-beverages": 31,
-      "family-community-government": 1,
-      "shopping-and-specialty-retail": 8,
-      "arts-and-entertainment": 3,
-      "beauty-and-wellness": 2,
-      "lodging-and-tourism": 10,
-      "building-and-construction": 1
-    },
-    "categories": [
+      "Other",
+      "Professional Services",
+      "Restaurant",
       "Restaurants, Food & Beverages",
-      "Family, Community & Government",
-      "Shopping & Specialty Retail",
-      "Arts & Entertainment",
-      "Beauty & Wellness",
-      "Lodging & Tourism",
-      "Building & Construction"
+      "Shopping & Retail",
+      "Shopping & Specialty Retail"
     ]
   },
   {
@@ -58,26 +33,50 @@
     "name": "Edgartown",
     "region": "down-island",
     "description": "Historic whaling captain homes, upscale boutiques, waterfront dining, and professional services define this elegant village.",
-    "businessCount": 76,
+    "businessCount": 90,
     "businessTypes": {
-      "lodging-and-tourism": 9,
-      "restaurants-food-beverages": 40,
-      "shopping-and-specialty-retail": 14,
-      "family-community-government": 2,
-      "arts-and-entertainment": 1,
-      "beauty-and-wellness": 6,
-      "building-and-construction": 3,
-      "medical-services-and-providers": 1
+      "restaurants": 39,
+      "lodging": 12,
+      "shopping": 10
     },
     "categories": [
-      "Lodging & Tourism",
-      "Restaurants, Food & Beverages",
-      "Shopping & Specialty Retail",
-      "Family, Community & Government",
       "Arts & Entertainment",
-      "Beauty & Wellness",
-      "Building & Construction",
-      "Medical Services & Providers"
+      "Community",
+      "Contractors",
+      "Family, Community & Government",
+      "Health & Wellness",
+      "Healthcare",
+      "Lodging",
+      "Lodging & Tourism",
+      "Other",
+      "Restaurant",
+      "Restaurants, Food & Beverages",
+      "Shopping & Retail",
+      "Shopping & Specialty Retail"
+    ]
+  },
+  {
+    "slug": "oak-bluffs",
+    "name": "Oak Bluffs",
+    "region": "down-island",
+    "description": "Colorful gingerbread cottages, the Flying Horses carousel, and a lively harbor scene with diverse local businesses.",
+    "businessCount": 62,
+    "businessTypes": {
+      "restaurants": 31,
+      "lodging": 10,
+      "shopping": 5
+    },
+    "categories": [
+      "Arts & Entertainment",
+      "Community",
+      "Contractors",
+      "Family, Community & Government",
+      "Health & Wellness",
+      "Lodging",
+      "Other",
+      "Restaurant",
+      "Shopping & Retail",
+      "Shopping & Specialty Retail"
     ]
   },
   {
@@ -85,20 +84,19 @@
     "name": "West Tisbury",
     "region": "up-island",
     "description": "Rolling farmland, the beloved Farmers Market, artisan shops, and a quintessential New England town center.",
-    "businessCount": 18,
+    "businessCount": 20,
     "businessTypes": {
-      "arts-and-entertainment": 5,
-      "restaurants-food-beverages": 8,
-      "family-community-government": 2,
-      "beauty-and-wellness": 1,
-      "shopping-and-specialty-retail": 2
+      "restaurants": 8,
+      "shopping": 2
     },
     "categories": [
       "Arts & Entertainment",
-      "Restaurants, Food & Beverages",
+      "Community",
       "Family, Community & Government",
-      "Beauty & Wellness",
-      "Shopping & Specialty Retail"
+      "Health & Wellness",
+      "Other",
+      "Restaurant",
+      "Shopping & Retail"
     ]
   },
   {
@@ -106,22 +104,21 @@
     "name": "Chilmark",
     "region": "up-island",
     "description": "Quiet country roads, Lucy Vincent Beach, farm stands, and the iconic fishing village of Menemsha.",
-    "businessCount": 18,
+    "businessCount": 19,
     "businessTypes": {
-      "shopping-and-specialty-retail": 6,
-      "arts-and-entertainment": 2,
-      "restaurants-food-beverages": 6,
-      "family-community-government": 1,
-      "beauty-and-wellness": 1,
-      "lodging-and-tourism": 2
+      "restaurants": 6,
+      "lodging": 2,
+      "shopping": 2
     },
     "categories": [
-      "Shopping & Specialty Retail",
       "Arts & Entertainment",
+      "Community",
+      "Health & Wellness",
+      "Lodging",
+      "Restaurant",
       "Restaurants, Food & Beverages",
-      "Family, Community & Government",
-      "Beauty & Wellness",
-      "Lodging & Tourism"
+      "Shopping & Retail",
+      "Shopping & Specialty Retail"
     ]
   },
   {
@@ -131,14 +128,15 @@
     "description": "Home to the Gay Head Cliffs, the Wampanoag Tribe, artisan shops, and dramatic ocean views.",
     "businessCount": 5,
     "businessTypes": {
-      "shopping-and-specialty-retail": 2,
-      "restaurants-food-beverages": 2,
-      "lodging-and-tourism": 1
+      "restaurants": 2,
+      "lodging": 1,
+      "shopping": 1
     },
     "categories": [
-      "Shopping & Specialty Retail",
-      "Restaurants, Food & Beverages",
-      "Lodging & Tourism"
+      "Lodging",
+      "Restaurant",
+      "Shopping & Retail",
+      "Shopping & Specialty Retail"
     ]
   }
 ]

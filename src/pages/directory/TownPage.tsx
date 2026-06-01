@@ -3,6 +3,11 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { SEO } from "@/components/SEO";
 import { BusinessList } from "@/components/directory/BusinessList";
 import {
+  MembershipFilterChips,
+  useMembershipFilter,
+  applyMembershipFilter,
+} from "@/components/directory/MembershipFilterChips";
+import {
   getTownBySlug,
   getBusinessTypesForTown,
   getTownBusinessTypeUrl,
@@ -46,6 +51,10 @@ export default function TownPage() {
   // Fetch businesses from Supabase API
   const { businesses: townBusinesses, isLoading } = useBusinesses({ town: slug });
   const availableTypes = getBusinessTypesForTown(slug || "");
+
+  // Optional URL-driven directory-membership filter (?filter=verified|chamber|…)
+  const membershipFilter = useMembershipFilter();
+  const visibleBusinesses = applyMembershipFilter(townBusinesses, membershipFilter);
 
   if (!town) {
     return <Navigate to="/marthas-vineyard" replace />;
@@ -145,13 +154,16 @@ export default function TownPage() {
       {/* All Businesses */}
       <section className="py-16 md:py-24">
         <div className="container-editorial">
-          <div className="mb-12">
+          <div className="mb-8">
             <h2 className="font-display text-2xl mb-2">All Businesses</h2>
             <p className="text-muted-foreground">
-              Browse all {townBusinesses.length} businesses in {town.name}
+              {membershipFilter
+                ? `Showing ${visibleBusinesses.length} of ${townBusinesses.length} businesses in ${town.name}`
+                : `Browse all ${townBusinesses.length} businesses in ${town.name}`}
             </p>
           </div>
-          <BusinessList businesses={townBusinesses} showTown={false} />
+          <MembershipFilterChips className="mb-8" />
+          <BusinessList businesses={visibleBusinesses} showTown={false} />
         </div>
       </section>
 

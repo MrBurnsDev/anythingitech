@@ -164,6 +164,15 @@ const STATIC_PAGES = [
   { path: '/tech-tips', changefreq: 'weekly', priority: 0.8, lastmod: TODAY },
   { path: '/marthas-vineyard', changefreq: 'daily', priority: 0.9, lastmod: TODAY },
   { path: '/marthas-vineyard/submit', changefreq: 'monthly', priority: 0.5, lastmod: TODAY },
+  // Filter-driven landing pages. These mirror the /businesses/* routes wired
+  // up in src/App.tsx via FILTERS in pages/businesses/FilteredBusinessesPage.tsx.
+  // When adding a filter, update both files together — there's no single
+  // source of truth across the Node script and the SPA bundle.
+  { path: '/businesses/verified', changefreq: 'weekly', priority: 0.8, lastmod: TODAY },
+  { path: '/businesses/chamber-listed', changefreq: 'weekly', priority: 0.7, lastmod: TODAY },
+  { path: '/businesses/gazette-listed', changefreq: 'weekly', priority: 0.7, lastmod: TODAY },
+  { path: '/businesses/gomv-listed', changefreq: 'weekly', priority: 0.7, lastmod: TODAY },
+  { path: '/businesses/black-owned', changefreq: 'weekly', priority: 0.7, lastmod: TODAY },
 ];
 
 // Tech tip blog posts (validated real articles)

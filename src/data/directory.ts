@@ -4,6 +4,20 @@
 import townsData from '../../data/exports/towns.json';
 import businessTypesData from '../../data/exports/business-types.json';
 
+// Membership record from an external local directory (Chamber, Gazette, etc.).
+// Populated by scripts/cross-reference-directories.cjs and surfaced via the
+// static export. The API does not currently round-trip memberships from
+// Supabase, so they're augmented onto API responses from the static JSON in
+// useBusiness / useBusinesses (see hooks/useBusinesses.ts).
+export interface Membership {
+  listed: true;
+  lastVerified: string;
+  externalUrl: string | null;
+  externalName: string | null;
+}
+
+export type MembershipSource = 'chamber' | 'gazette' | 'gomv' | 'blackOwned';
+
 export interface Business {
   id: number;
   name: string;
@@ -29,6 +43,10 @@ export interface Business {
     yelp: string | null;
     tripadvisor: string | null;
   };
+  // External directory cross-references. Optional because the API alone
+  // doesn't return them — they're hydrated from the static JSON.
+  memberships?: Partial<Record<MembershipSource, Membership>>;
+  verifiedLocalBusiness?: boolean;
 }
 
 export interface Town {

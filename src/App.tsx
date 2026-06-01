@@ -24,6 +24,9 @@ import BusinessPage from "./pages/directory/BusinessPage.tsx";
 import SubmitBusiness from "./pages/directory/SubmitBusiness.tsx";
 import DirectorySlugResolver from "./pages/directory/DirectorySlugResolver.tsx";
 
+// Filter-driven landing pages — one component, many routes (one per filter).
+import FilteredBusinessesPage, { FILTERS } from "./pages/businesses/FilteredBusinessesPage.tsx";
+
 // Tech Tips pages
 import TechTipsIndex from "./pages/tech-tips/TechTipsIndex.tsx";
 import TechTipPost from "./pages/tech-tips/TechTipPost.tsx";
@@ -76,6 +79,15 @@ const App = () => (
           <Route path="/marthas-vineyard/:slug" element={<DirectorySlugResolver />} />
           <Route path="/marthas-vineyard/:townSlug/:typeSlug" element={<TownBusinessTypePage />} />
           <Route path="/marthas-vineyard/:townSlug/:typeSlug/:businessSlug" element={<BusinessPage />} />
+
+          {/* Filter-driven landing pages — one per filter in FILTERS */}
+          {Object.values(FILTERS).map((f) => (
+            <Route
+              key={f.slug}
+              path={`/businesses/${f.slug}`}
+              element={<FilteredBusinessesPage filter={f} />}
+            />
+          ))}
 
           {/* Admin routes */}
           <Route path="/admin/login" element={<AdminLogin />} />

@@ -37,6 +37,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# BlackOwnedMV directory source — large PDF + extracted text
+# The crawler re-downloads on each run; no need to commit. See
+# scripts/lib/cross-ref/blackowned.cjs.
+data/imports/blackownedmv/*.pdf
+data/imports/blackownedmv/*.txt
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

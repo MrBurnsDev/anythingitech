@@ -233,6 +233,7 @@ const businessesQuery = `
     b.category,
     b.subcategory,
     b.short_description,
+    b.meta_description,
     b.town,
     b.full_address,
     b.street_address,
@@ -276,6 +277,55 @@ const businessesQuery = `
 
 const rawBusinesses = db.prepare(businessesQuery).all();
 
+// --- Memberships (external directory associations) ---
+// Load all confirmed memberships and the source catalog. We assemble the
+// per-business `memberships` map + `verifiedLocalBusiness` flag downstream
+// when shaping each business record.
+//
+// `business_memberships` and `membership_sources` are created by
+// migrations/009-business-memberships.sql.
+let MEMBERSHIPS_BY_BUSINESS = new Map();
+let SOURCE_CATALOG = new Map();
+try {
+  const sources = db.prepare(
+    `SELECT source, display_label, source_url, counts_for_local FROM membership_sources`
+  ).all();
+  for (const s of sources) SOURCE_CATALOG.set(s.source, s);
+
+  const rows = db.prepare(
+    `SELECT business_id, source, listed, last_verified_at, external_url, external_name
+       FROM business_memberships
+      WHERE listed = 1`
+  ).all();
+  for (const r of rows) {
+    if (!MEMBERSHIPS_BY_BUSINESS.has(r.business_id)) MEMBERSHIPS_BY_BUSINESS.set(r.business_id, []);
+    MEMBERSHIPS_BY_BUSINESS.get(r.business_id).push(r);
+  }
+} catch (err) {
+  // Migration may not have been applied yet — log and continue with empty memberships.
+  console.warn('memberships table not available (ok on first export):', err.message);
+}
+
+// Build the per-business memberships object in the public-facing shape:
+//   { chamber: { listed: true, lastVerified: "…", externalUrl: "…", externalName: "…" }, … }
+// Plus a derived verifiedLocalBusiness boolean.
+function buildMembershipsFor(businessId) {
+  const memberships = {};
+  let verifiedLocal = false;
+  const rows = MEMBERSHIPS_BY_BUSINESS.get(businessId) || [];
+  for (const r of rows) {
+    memberships[r.source] = {
+      listed: true,
+      lastVerified: r.last_verified_at,
+      externalUrl: r.external_url || null,
+      externalName: r.external_name || null,
+    };
+    const cat = SOURCE_CATALOG.get(r.source);
+    if (cat && cat.counts_for_local) verifiedLocal = true;
+  }
+  return { memberships, verifiedLocalBusiness: verifiedLocal };
+}
+
 // Process businesses
 const processedBusinesses = rawBusinesses
   .filter(b => {
@@ -292,7 +342,10 @@ const processedBusinesses = rawBusinesses
     slug: b.slug || toSlug(b.business_name + '-' + b.town),
     category: b.category || 'Other',
     businessType: toBusinessTypeSlug(b.category),
-    description: cleanString(b.short_description),
+    // Prefer the business's own meta description (scraped from their website)
+    // over our templated short_description. Templated descriptions are a
+    // negative quality signal to Google; real meta is authored content.
+    description: cleanString(b.meta_description) || cleanString(b.short_description),
     town: b.town,
     townSlug: toSlug(b.town),
     address: cleanAddress(b.street_address) || cleanAddress(b.full_address),
@@ -313,6 +366,9 @@ const processedBusinesses = rawBusinesses
       yelp: cleanString(b.yelp_url),
       tripadvisor: cleanString(b.tripadvisor_url),
     },
+    // External directory memberships (cross-references). See
+    // scripts/cross-reference-directories.cjs and migration 009.
+    ...buildMembershipsFor(b.id),
   }));
 
 // Generate town stats

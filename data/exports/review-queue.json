@@ -1,0 +1,1087 @@
+{
+  "generated_at": "2026-06-01T00:04:26.042Z",
+  "apply": true,
+  "total": 59,
+  "items": [
+    {
+      "source": "chamber",
+      "candidate_name": "Tending Joy Artisan Shop",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/tending-joy-artisan-shop-4625574",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 686,
+          "name": "Tending Joy Artisan Shop",
+          "town": "Chilmark",
+          "website": "https://www.tendingjoy.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Black Sheep",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/black-sheep-2285785",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 66,
+          "name": "Black Sheep",
+          "town": "Edgartown",
+          "website": "http://blacksheeponmv.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Bunch of Grapes Bookstore",
+      "candidate_town": null,
+      "candidate_website": "http://bunchofgrapes.indielite.org/",
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/bunch-of-grapes-bookstore-2285753",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 6,
+          "name": "Bunch of Grapes Bookstore",
+          "town": "Vineyard Haven",
+          "website": "https://www.bunchofgrapes.com"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Lani Beach Club",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/lani-beach-club-2351831",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 671,
+          "name": "Lani Beach Club",
+          "town": "Vineyard Haven",
+          "website": "http://www.lanibeachclub.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Off Main",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/off-main-2286847",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 694,
+          "name": "Off Main",
+          "town": "Vineyard Haven",
+          "website": "https://gomarthasvineyard.com/directory/main"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "C'est La Vie",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/c-est-la-vie-2285720",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 695,
+          "name": "C'est La Vie",
+          "town": "Vineyard Haven",
+          "website": "https://gomarthasvineyard.com"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Soigne",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/soigne-2286664",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 112,
+          "name": "Soigne",
+          "town": "Edgartown",
+          "website": "http://soignemv.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Harbor Craft Shop",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/harbor-craft-shop-2286320",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 692,
+          "name": "Harbor Craft Shop",
+          "town": "Vineyard Haven",
+          "website": "https://business.mvy.com/memberdirectory/Details/harbor-craft-shop-2286320"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Vineyard Grocer",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/vineyard-grocer-2286514",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 249,
+          "name": "Vineyard Grocer",
+          "town": "Vineyard Haven",
+          "website": "http://vineyardgrocer.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Mardell's Gifts & Jewelry",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/mardell-s-gifts-jewelry-2286091",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 696,
+          "name": "Mardell's Gifts & Jewelry",
+          "town": "Vineyard Haven",
+          "website": "https://business.mvy.com/memberdirectory/Details/mardell-s-gifts-jewelry-2286091"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Shirt Tales",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/shirt-tales-2286678",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 614,
+          "name": "Shirt Tales MV",
+          "town": "Edgartown",
+          "website": "http://shirttalesmv.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Inkwell Beach House",
+      "candidate_town": null,
+      "candidate_website": "http://inkwellbeachhouse.life/",
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/inkwell-beach-house-4732515",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 401,
+          "name": "Inkwell Beach House",
+          "town": "Oak Bluffs",
+          "website": "http://inkwellbeach.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Artcliff Diner",
+      "candidate_town": null,
+      "candidate_website": "http://artcliffdiner.com/",
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/artcliff-diner-4489882",
+      "tier": 1,
+      "confidence": 0.8,
+      "reason": "Multiple internal businesses share domain artcliffdiner.com",
+      "matched_businesses": [
+        {
+          "id": 720,
+          "name": "Art Cliff Diner",
+          "town": "Vineyard Haven",
+          "website": "http://artcliffdiner.com"
+        },
+        {
+          "id": 191,
+          "name": "Artcliff Diner",
+          "town": "Vineyard Haven",
+          "website": "http://artcliffdiner.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "La Choza",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/la-choza-2286157",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 204,
+          "name": "La Choza",
+          "town": "Vineyard Haven",
+          "website": "http://lachozamv.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Edgartown Pizza",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/edgartown-pizza-2285572",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 721,
+          "name": "Edgartown Pizza 🍕",
+          "town": "Edgartown",
+          "website": "http://edgartownpizza.com"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Mocha Mott's",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/mocha-mott-s-2286000",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 208,
+          "name": "Mocha Mott's",
+          "town": "Vineyard Haven",
+          "website": "http://mochamotts.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Bobby B's",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/bobby-b-s-2285778",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 196,
+          "name": "Bobby B's",
+          "town": "Oak Bluffs",
+          "website": "http://bobbybsmv.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Wolf's Den Pizzeria",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/wolf-s-den-pizzeria-2286440",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 127,
+          "name": "Wolf's Den Pizzeria",
+          "town": "Edgartown",
+          "website": "https://www.wolfsdenpizzeria.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "MV Chowder Company",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/mv-chowder-company-2285985",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 164,
+          "name": "MV Chowder Co",
+          "town": "Oak Bluffs",
+          "website": "http://chowdermv.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Menemsha Fish Market",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/menemsha-fish-market-2286023",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 255,
+          "name": "Menemsha Fish Market",
+          "town": "Chilmark",
+          "website": "http://menemshafishmarket.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "State Road Restaurant",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/state-road-restaurant-2286648",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 187,
+          "name": "State Road Restaurant",
+          "town": "West Tisbury",
+          "website": "http://stateroadrestaurant.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Red Cat Kitchen",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/red-cat-kitchen-2286767",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 711,
+          "name": "Red Cat Kitchen",
+          "town": "Oak Bluffs",
+          "website": "https://www.redcatkitchen.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Chilmark Tavern",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/chilmark-tavern-2285706",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 43,
+          "name": "Chilmark Tavern",
+          "town": "Chilmark",
+          "website": "http://chilmarktavern.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Atria",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/atria-2285835",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 712,
+          "name": "Atria",
+          "town": "Edgartown",
+          "website": "https://www.atriamv.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Orange Peel Bakery",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/orange-peel-bakery-2286838",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 36,
+          "name": "Orange Peel Bakery",
+          "town": "Aquinnah",
+          "website": "http://orangepeelbakery.squarespace.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Larsen's Fish Market",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/larsen-s-fish-market-2286145",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 253,
+          "name": "Larsen's Fish Market",
+          "town": "Chilmark",
+          "website": "http://larsensfishmarket.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Seastone Papers",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/seastone-papers-2286701",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 316,
+          "name": "Seastone Papers",
+          "town": "West Tisbury",
+          "website": "http://seastonepapers.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "The Christina Gallery, Inc.",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/the-christina-gallery-inc-2286600",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 322,
+          "name": "The Christina Gallery",
+          "town": "Edgartown",
+          "website": "http://christina.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "North Water Gallery",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/north-water-gallery-2286866",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 312,
+          "name": "North Water Gallery",
+          "town": "West Tisbury",
+          "website": "http://northwatergallery.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Vineyard Vinyasa",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/vineyard-vinyasa-2784881",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 372,
+          "name": "Vineyard Vinyasa",
+          "town": "Oak Bluffs",
+          "website": "http://vineyardvinyasamv.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Vineyard Vinyasa",
+      "candidate_town": "Edgartown",
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/vineyard-vinyasa-4627558",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 372,
+          "name": "Vineyard Vinyasa",
+          "town": "Oak Bluffs",
+          "website": "http://vineyardvinyasamv.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Island Aesthetics MV",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/island-aesthetics-mv-2286260",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 532,
+          "name": "Island Aesthetics",
+          "town": "Vineyard Haven",
+          "website": "http://islandaestheticsmv.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Maggie's Salon",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/maggie-s-salon-2286098",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 557,
+          "name": "Maggie's Salon",
+          "town": "Vineyard Haven",
+          "website": "http://maggiessalon.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Callahan Plumbing and Heating",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/callahan-plumbing-and-heating-2285745",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 681,
+          "name": "Callahan Plumbing and Heating, INC",
+          "town": "Vineyard Haven",
+          "website": "https://gomarthasvineyard.com/directory/callahan-plumbing-and-heating-inc"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Native Earth Teaching Farm",
+      "candidate_town": "Chilmark",
+      "candidate_website": "http://nativeearthteachingfarmmv.org/",
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/native-earth-teaching-farm-2285943",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 231,
+          "name": "Native Earth Teaching Farm",
+          "town": "West Tisbury",
+          "website": "http://nativeearthteachingfarm.org/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Edgartown Council on Aging",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/edgartown-council-on-aging-2285576",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 512,
+          "name": "Edgartown Council on Aging",
+          "town": "Edgartown",
+          "website": "http://edgartowncoa.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Vineyard Hearth, Patio & Spa, Inc.",
+      "candidate_town": "Vineyard Haven",
+      "candidate_website": "https://www.vhps.net/",
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/vineyard-hearth-patio-spa-inc-2228645",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 656,
+          "name": "Vineyard Hearth Patio & Spa",
+          "town": "West Tisbury",
+          "website": "http://vineyardhearthpatioandspa.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Tracker Home Decor",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/tracker-home-decor-2286543",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 682,
+          "name": "Tracker Home Decor",
+          "town": "Edgartown",
+          "website": "http://www.trackerhomedecor.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Good Dog Goods",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/good-dog-goods-2286355",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 523,
+          "name": "Good Dog Goods",
+          "town": "Vineyard Haven",
+          "website": "http://gooddoggoods.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Interiors Studio Martha's Vineyard",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/interiors-studio-martha-s-vineyard-2286262",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 685,
+          "name": "Interiors Studio Martha's Vineyard",
+          "town": "Vineyard Haven",
+          "website": "http://www.interiorsstudiomv.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Vineyard Decorators",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/vineyard-decorators-2286520",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 652,
+          "name": "Vineyard Decorators",
+          "town": "Vineyard Haven",
+          "website": "http://vineyarddecorators.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Martha's Vineyard Tile Company, Inc.",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/martha-s-vineyard-tile-company-inc-2286048",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 569,
+          "name": "Martha's Vineyard Tile Company Inc.",
+          "town": "Vineyard Haven",
+          "website": "http://mvtileco.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Narcotics Anonymous",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/narcotics-anonymous-2285944",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 348,
+          "name": "MV Narcotics Anonymous",
+          "town": "Vineyard Haven",
+          "website": "http://mvana.org/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Vineyard Medical Care, LLC",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/vineyard-medical-care-llc-2286503",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 370,
+          "name": "Vineyard Medical Care",
+          "town": "Vineyard Haven",
+          "website": "http://vineyardmedicalcare.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "Larry's Tackle Shop",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/larry-s-tackle-shop-2286146",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 549,
+          "name": "Larry's Tackle Shop",
+          "town": "Edgartown",
+          "website": "http://larrystackle.com/"
+        }
+      ]
+    },
+    {
+      "source": "chamber",
+      "candidate_name": "B-Strong",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://business.mvy.com/memberdirectory/Details/b-strong-2285758",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 353,
+          "name": "B Strong",
+          "town": "Oak Bluffs",
+          "website": "http://b-strong.com/"
+        }
+      ]
+    },
+    {
+      "source": "gazette",
+      "candidate_name": "Artcliff Diner",
+      "candidate_town": "Vineyard Haven",
+      "candidate_website": "http://artcliffdiner.com/",
+      "candidate_external_url": "https://vineyardgazette.com/business-directory",
+      "tier": 1,
+      "confidence": 0.8,
+      "reason": "Multiple internal businesses share domain artcliffdiner.com",
+      "matched_businesses": [
+        {
+          "id": 720,
+          "name": "Art Cliff Diner",
+          "town": "Vineyard Haven",
+          "website": "http://artcliffdiner.com"
+        },
+        {
+          "id": 191,
+          "name": "Artcliff Diner",
+          "town": "Vineyard Haven",
+          "website": "http://artcliffdiner.com/"
+        }
+      ]
+    },
+    {
+      "source": "gazette",
+      "candidate_name": "Rocco’s Pizzeria",
+      "candidate_town": "Vineyard Haven",
+      "candidate_website": "http://marthasvineyardpizza.com",
+      "candidate_external_url": "https://vineyardgazette.com/business-directory",
+      "tier": 1,
+      "confidence": 0.8,
+      "reason": "Multiple internal businesses share domain marthasvineyardpizza.com",
+      "matched_businesses": [
+        {
+          "id": 215,
+          "name": "Rocco's Pizza Menu",
+          "town": "Vineyard Haven",
+          "website": "http://marthasvineyardpizza.com/"
+        },
+        {
+          "id": 719,
+          "name": "Martha's Vineyard Pizza",
+          "town": "Oak Bluffs",
+          "website": "http://marthasvineyardpizza.com"
+        }
+      ]
+    },
+    {
+      "source": "gomv",
+      "candidate_name": "Ashley Inn",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://www.gomarthasvineyard.com/directory/ashley-inn",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 377,
+          "name": "Ashley Inn",
+          "town": "Edgartown",
+          "website": "http://ashleyinn.net/"
+        }
+      ]
+    },
+    {
+      "source": "gomv",
+      "candidate_name": "Felix Neck Wildlife Sanctuary",
+      "candidate_town": "Edgartown",
+      "candidate_website": null,
+      "candidate_external_url": "https://www.gomarthasvineyard.com/directory/felix-neck-wildlife-sanctuary",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 340,
+          "name": "Felix Neck Wildlife Sanctuary",
+          "town": "Vineyard Haven",
+          "website": "http://massaudubon.org/felixneck"
+        }
+      ]
+    },
+    {
+      "source": "gomv",
+      "candidate_name": "North Water Gallery",
+      "candidate_town": "Edgartown",
+      "candidate_website": null,
+      "candidate_external_url": "https://www.gomarthasvineyard.com/directory/north-water-gallery",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 312,
+          "name": "North Water Gallery",
+          "town": "West Tisbury",
+          "website": "http://northwatergallery.com/"
+        }
+      ]
+    },
+    {
+      "source": "gomv",
+      "candidate_name": "Conroy Apothecary",
+      "candidate_town": "West Tisbury",
+      "candidate_website": null,
+      "candidate_external_url": "https://www.gomarthasvineyard.com/directory/conroy-apothecary",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 270,
+          "name": "Conroy Apothecary",
+          "town": "Vineyard Haven",
+          "website": "http://conroy-apothecary.com/"
+        }
+      ]
+    },
+    {
+      "source": "gomv",
+      "candidate_name": "Menemsha Fish Market",
+      "candidate_town": "Menemsha",
+      "candidate_website": null,
+      "candidate_external_url": "https://www.gomarthasvineyard.com/directory/menemsha-fish-market",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 255,
+          "name": "Menemsha Fish Market",
+          "town": "Chilmark",
+          "website": "http://menemshafishmarket.com/"
+        }
+      ]
+    },
+    {
+      "source": "gomv",
+      "candidate_name": "Larsen's Fish Market",
+      "candidate_town": "Menemsha",
+      "candidate_website": null,
+      "candidate_external_url": "https://www.gomarthasvineyard.com/directory/larsens-fish-market",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 253,
+          "name": "Larsen's Fish Market",
+          "town": "Chilmark",
+          "website": "http://larsensfishmarket.com/"
+        }
+      ]
+    },
+    {
+      "source": "gomv",
+      "candidate_name": "Wolf's Den Pizzeria",
+      "candidate_town": "Vineyard Haven",
+      "candidate_website": null,
+      "candidate_external_url": "https://www.gomarthasvineyard.com/directory/wolfs-den-pizzeria",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 127,
+          "name": "Wolf's Den Pizzeria",
+          "town": "Edgartown",
+          "website": "https://www.wolfsdenpizzeria.com/"
+        }
+      ]
+    },
+    {
+      "source": "gomv",
+      "candidate_name": "C'est La Vie",
+      "candidate_town": "Oak Bluffs",
+      "candidate_website": null,
+      "candidate_external_url": "https://www.gomarthasvineyard.com/directory/cest-la-vie",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 695,
+          "name": "C'est La Vie",
+          "town": "Vineyard Haven",
+          "website": "https://gomarthasvineyard.com"
+        }
+      ]
+    },
+    {
+      "source": "blackOwned",
+      "candidate_name": "C'est La Vie",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://blackownedmv.com",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 695,
+          "name": "C'est La Vie",
+          "town": "Vineyard Haven",
+          "website": "https://gomarthasvineyard.com"
+        }
+      ]
+    },
+    {
+      "source": "blackOwned",
+      "candidate_name": "Biscuits",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://blackownedmv.com",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 710,
+          "name": "Biscuits",
+          "town": "Oak Bluffs",
+          "website": "https://www.mvbiscuits.com/"
+        }
+      ]
+    },
+    {
+      "source": "blackOwned",
+      "candidate_name": "Strand Theatre",
+      "candidate_town": null,
+      "candidate_website": null,
+      "candidate_external_url": "https://blackownedmv.com",
+      "tier": 3,
+      "confidence": 0.4,
+      "reason": "Tier 3 (name match without confirmed town)",
+      "matched_businesses": [
+        {
+          "id": 318,
+          "name": "Strand Theatre MV",
+          "town": "Oak Bluffs",
+          "website": "http://strandtheatre-marthasvineyard.com/"
+        }
+      ]
+    }
+  ]
+}

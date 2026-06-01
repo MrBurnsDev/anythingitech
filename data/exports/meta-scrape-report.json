@@ -1,0 +1,695 @@
+{
+  "generated_at": "2026-06-01T00:49:55.275Z",
+  "apply": true,
+  "refresh": false,
+  "counts": {
+    "fetch_error": 6,
+    "http_error": 9,
+    "no_meta": 87,
+    "ok": 6
+  },
+  "elapsed_seconds": 11,
+  "results": [
+    {
+      "id": 5,
+      "name": "The Mansion House",
+      "status": "fetch_error",
+      "reason": "fetch failed",
+      "url": "https://www.mvmansionhouse.com/"
+    },
+    {
+      "id": 6,
+      "name": "Bunch of Grapes Bookstore",
+      "status": "http_error",
+      "reason": "HTTP 403",
+      "url": "https://www.bunchofgrapes.com/"
+    },
+    {
+      "id": 10,
+      "name": "Aquinnah Shop",
+      "status": "http_error",
+      "reason": "HTTP 403",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g499462-d790513-Reviews-Aquinnah_Shop-Aquinnah_Martha_s_Vineyard_Massachusetts.html"
+    },
+    {
+      "id": 38,
+      "name": "Outermost Inn",
+      "status": "no_meta",
+      "url": "http://outermostinn.com/"
+    },
+    {
+      "id": 43,
+      "name": "Chilmark Tavern",
+      "status": "no_meta",
+      "url": "http://chilmarktavern.com/"
+    },
+    {
+      "id": 45,
+      "name": "Menemsha Gallery",
+      "status": "fetch_error",
+      "reason": "fetch failed",
+      "url": "http://menemshagallery.com/"
+    },
+    {
+      "id": 49,
+      "name": "19 Prime Steak House",
+      "status": "no_meta",
+      "url": "http://19primesteak.com/"
+    },
+    {
+      "id": 54,
+      "name": "Among the Flowers",
+      "status": "no_meta",
+      "url": "http://amongtheflowersmv.com/"
+    },
+    {
+      "id": 56,
+      "name": "Martha's Vineyard Seafood & Steak Restaurant",
+      "status": "no_meta",
+      "url": "http://atlanticmv.com/"
+    },
+    {
+      "id": 72,
+      "name": "China House",
+      "status": "no_meta",
+      "url": "http://mvchinahouse.com/"
+    },
+    {
+      "id": 83,
+      "name": "Edgartown Meat & Fish",
+      "status": "no_meta",
+      "url": "http://edgartownmeatandfish.com/"
+    },
+    {
+      "id": 87,
+      "name": "Espresso Love",
+      "status": "no_meta",
+      "url": "http://espressolove.com/"
+    },
+    {
+      "id": 91,
+      "name": "Katama General Store",
+      "status": "no_meta",
+      "url": "http://katamageneral.com/"
+    },
+    {
+      "id": 107,
+      "name": "Rosewater",
+      "status": "no_meta",
+      "url": "https://www.rosewatermv.com/"
+    },
+    {
+      "id": 109,
+      "name": "The Seafood Shanty",
+      "status": "no_meta",
+      "url": "http://theseafoodshanty.com/"
+    },
+    {
+      "id": 117,
+      "name": "The Covington Restaurant and Bar",
+      "status": "no_meta",
+      "url": "http://thecovingtonrestaurant.com/"
+    },
+    {
+      "id": 121,
+      "name": "The Porthunter",
+      "status": "fetch_error",
+      "reason": "fetch failed",
+      "url": "http://theporthunter.com/"
+    },
+    {
+      "id": 141,
+      "name": "Coop de Ville",
+      "status": "fetch_error",
+      "reason": "timeout",
+      "url": "http://coopdevilleshuckshack.com/"
+    },
+    {
+      "id": 145,
+      "name": "Eleven Circuit",
+      "status": "no_meta",
+      "url": "http://elevencircuit.com/"
+    },
+    {
+      "id": 150,
+      "name": "Fat Ronnie's Burger Bar",
+      "status": "http_error",
+      "reason": "HTTP 403",
+      "url": "http://fatronniesburgerbar.com/"
+    },
+    {
+      "id": 152,
+      "name": "Fishbones Bar & Grille",
+      "status": "no_meta",
+      "url": "http://fishbones-mv.com/"
+    },
+    {
+      "id": 156,
+      "name": "Island Grown Initiative Food Pantry",
+      "status": "no_meta",
+      "url": "http://igimv.org/about-island-food-pantry"
+    },
+    {
+      "id": 160,
+      "name": "Lobster Ville",
+      "status": "ok",
+      "meta": "🎁 Промокоды Вавада и бонусы за регистрацию — до 100 FS бесплатно ⚡ Бонусы Вавада активны уже сегодня!",
+      "source": "meta_description",
+      "title": "Промокоды Вавада 🎯 Лови бонусы без депозита 🎰 Только свежие коды!",
+      "url": "http://lobstervillemv.com/"
+    },
+    {
+      "id": 164,
+      "name": "MV Chowder Co",
+      "status": "ok",
+      "meta": "The Island's #1 Chowder, SEAFOOD, BURGERS & So Much More!",
+      "source": "twitter_description",
+      "title": "Home Page",
+      "url": "http://chowdermv.com/"
+    },
+    {
+      "id": 172,
+      "name": "Sharky's Oak Bluffs",
+      "status": "ok",
+      "meta": "ORDER PICKUP ONLINE!",
+      "source": "twitter_description",
+      "title": "SHARKY'S OAK BLUFFS",
+      "url": "http://sharkmenu.com/"
+    },
+    {
+      "id": 179,
+      "name": "The Sweet Life MV",
+      "status": "no_meta",
+      "url": "http://sweetlifemv.com/"
+    },
+    {
+      "id": 187,
+      "name": "State Road Restaurant",
+      "status": "no_meta",
+      "url": "http://stateroadrestaurant.com/"
+    },
+    {
+      "id": 191,
+      "name": "Artcliff Diner",
+      "status": "no_meta",
+      "url": "http://artcliffdiner.com/"
+    },
+    {
+      "id": 202,
+      "name": "Island Fresh Pizza",
+      "status": "no_meta",
+      "url": "http://islandfreshpizza.com/"
+    },
+    {
+      "id": 206,
+      "name": "Mikado Asian Bistro",
+      "status": "fetch_error",
+      "reason": "fetch failed",
+      "url": "http://mikadomv.com/"
+    },
+    {
+      "id": 210,
+      "name": "Nook",
+      "status": "no_meta",
+      "url": "http://natsnookmv.com/"
+    },
+    {
+      "id": 219,
+      "name": "Scottish Bakehouse",
+      "status": "no_meta",
+      "url": "http://scottishbakehousemv.com/"
+    },
+    {
+      "id": 221,
+      "name": "Sweet Bites",
+      "status": "no_meta",
+      "url": "http://sweetbitesmv.com/"
+    },
+    {
+      "id": 231,
+      "name": "Native Earth Teaching Farm",
+      "status": "no_meta",
+      "url": "http://nativeearthteachingfarm.org/"
+    },
+    {
+      "id": 233,
+      "name": "North Tabor Farm",
+      "status": "no_meta",
+      "url": "http://northtaborfarm.com/"
+    },
+    {
+      "id": 260,
+      "name": "Jim's Package Store",
+      "status": "no_meta",
+      "url": "http://jimspackagestore.com/"
+    },
+    {
+      "id": 262,
+      "name": "MV Wine Store",
+      "status": "no_meta",
+      "url": "http://mvwinestore.com/"
+    },
+    {
+      "id": 266,
+      "name": "Vintage MV Wine & Spirits",
+      "status": "no_meta",
+      "url": "http://vintagemvwine-spirits.com/"
+    },
+    {
+      "id": 273,
+      "name": "Vineyard Scripts",
+      "status": "http_error",
+      "reason": "HTTP 409",
+      "url": "http://vineyardscripts.com/"
+    },
+    {
+      "id": 276,
+      "name": "51art Gallery Located at the Shoppe With the Red Door",
+      "status": "no_meta",
+      "url": "http://www.theshoppewiththereddoor.com/"
+    },
+    {
+      "id": 280,
+      "name": "Blanchard Photography",
+      "status": "fetch_error",
+      "reason": "fetch failed",
+      "url": "http://blanchardphotomv.com/"
+    },
+    {
+      "id": 282,
+      "name": "Entertainmentcinemas.Com/Locations/Edgartown",
+      "status": "http_error",
+      "reason": "HTTP 404",
+      "url": "http://entertainmentcinemas.com/locations/edgartown"
+    },
+    {
+      "id": 293,
+      "name": "Island Folk Pottery",
+      "status": "no_meta",
+      "url": "http://islandfolkpottery.com/"
+    },
+    {
+      "id": 306,
+      "name": "Michaeljimage",
+      "status": "no_meta",
+      "url": "http://michaeljimage.com/"
+    },
+    {
+      "id": 308,
+      "name": "Moore Family Gallery",
+      "status": "no_meta",
+      "url": "http://moorefamilygallery.com/"
+    },
+    {
+      "id": 310,
+      "name": "MV Camp Meeting Association",
+      "status": "no_meta",
+      "url": "http://mvcma.org/"
+    },
+    {
+      "id": 320,
+      "name": "Vineyard Preservation Trust",
+      "status": "no_meta",
+      "url": "http://vineyardtrust.org/"
+    },
+    {
+      "id": 324,
+      "name": "Peter Simon Photography",
+      "status": "no_meta",
+      "url": "http://petersimon.com/"
+    },
+    {
+      "id": 333,
+      "name": "Vineyard Arts Project",
+      "status": "no_meta",
+      "url": "http://vineyardarts.org/"
+    },
+    {
+      "id": 342,
+      "name": "Mink Meadows Golf Club",
+      "status": "no_meta",
+      "url": "https://www.minkmeadowsgc.com/"
+    },
+    {
+      "id": 343,
+      "name": "The Polly Hill Arboretum",
+      "status": "no_meta",
+      "url": "http://pollyhillarboretum.org/"
+    },
+    {
+      "id": 345,
+      "name": "Royal Chappy Golf",
+      "status": "no_meta",
+      "url": "https://royalchappy.com/"
+    },
+    {
+      "id": 347,
+      "name": "The Martha's Vineyard Groups of Alcoholics Anonymous",
+      "status": "no_meta",
+      "url": "https://aaonmv.org/"
+    },
+    {
+      "id": 348,
+      "name": "MV Narcotics Anonymous",
+      "status": "no_meta",
+      "url": "http://mvana.org/"
+    },
+    {
+      "id": 355,
+      "name": "Crossfitmarthas",
+      "status": "ok",
+      "meta": "Buy crossfitmarthasvineyard.com for 195 on GoDaddy via ExpiredDomains.com. This premium expired .com domain is ideal for Crossfit projects. Secure it today!",
+      "source": "meta_description",
+      "title": "Buy crossfitmarthasvineyard.com – Premium Expired .com Domain on GoDaddy | ExpiredDomains.com",
+      "url": "http://crossfitmarthasvineyard.com/"
+    },
+    {
+      "id": 365,
+      "name": "Peakedhillstudio",
+      "status": "no_meta",
+      "url": "http://peakedhillstudio.com/"
+    },
+    {
+      "id": 370,
+      "name": "Vineyard Medical Care",
+      "status": "no_meta",
+      "url": "http://vineyardmedicalcare.com/"
+    },
+    {
+      "id": 372,
+      "name": "Vineyard Vinyasa",
+      "status": "http_error",
+      "reason": "HTTP 404",
+      "url": "http://vineyardvinyasamv.com/"
+    },
+    {
+      "id": 375,
+      "name": "Marthas Vineyard Yoga Barn",
+      "status": "no_meta",
+      "url": "http://marthas-vineyard-yoga-barn.com/"
+    },
+    {
+      "id": 379,
+      "name": "Charles & Charles",
+      "status": "no_meta",
+      "url": "http://charlesandcharlesmv.com/"
+    },
+    {
+      "id": 381,
+      "name": "Dockside Inn",
+      "status": "no_meta",
+      "url": "http://vineyardinns.com/"
+    },
+    {
+      "id": 387,
+      "name": "Instagram Icon",
+      "status": "no_meta",
+      "url": "http://edgartowncommons.com/"
+    },
+    {
+      "id": 392,
+      "name": "Greenwood House",
+      "status": "no_meta",
+      "url": "http://greenwoodhouse.com/"
+    },
+    {
+      "id": 401,
+      "name": "Inkwell Beach House",
+      "status": "ok",
+      "meta": "ocean. beach. porch. relax. Restore. connect.",
+      "source": "twitter_description",
+      "title": "Inkwell Beach House",
+      "url": "http://inkwellbeach.com/"
+    },
+    {
+      "id": 403,
+      "name": "Kkon",
+      "status": "no_meta",
+      "url": "http://kkonmv.com/"
+    },
+    {
+      "id": 408,
+      "name": "Camp MV",
+      "status": "no_meta",
+      "url": "http://campmv.com/"
+    },
+    {
+      "id": 417,
+      "name": "Summercamp Hotel",
+      "status": "http_error",
+      "reason": "HTTP 403",
+      "url": "http://summercamphotel.com/"
+    },
+    {
+      "id": 423,
+      "name": "The Beach Front Inn of Martha's Vineyard",
+      "status": "no_meta",
+      "url": "http://beachfrontinnmv.com/"
+    },
+    {
+      "id": 425,
+      "name": "Captain Flanders Inn",
+      "status": "no_meta",
+      "url": "http://captainflandersinn.com/"
+    },
+    {
+      "id": 427,
+      "name": "The Charlotte Inn",
+      "status": "no_meta",
+      "url": "http://thecharlotteinn.com/"
+    },
+    {
+      "id": 433,
+      "name": "Lark Hotels",
+      "status": "http_error",
+      "reason": "HTTP 403",
+      "url": "https://www.larkhotels.com/hotels/the-edgartown-collection"
+    },
+    {
+      "id": 446,
+      "name": "The Edgartown Collection",
+      "status": "no_meta",
+      "url": "http://theedgartowncollection.com/"
+    },
+    {
+      "id": 448,
+      "name": "Vineyard Harbor Motel",
+      "status": "no_meta",
+      "url": "http://vineyardharbormotel.us/"
+    },
+    {
+      "id": 485,
+      "name": "Account Suspended",
+      "status": "no_meta",
+      "url": "http://circuitstylesalon.com/"
+    },
+    {
+      "id": 487,
+      "name": "Claudia Jewelry",
+      "status": "no_meta",
+      "url": "http://claudia.jewelry/"
+    },
+    {
+      "id": 489,
+      "name": "Secure.myvanco.com/ygss/campaign/c-yjgr",
+      "status": "no_meta",
+      "url": "https://secure.myvanco.com/YGSS/campaign/C-YJGR"
+    },
+    {
+      "id": 496,
+      "name": "Darosa's",
+      "status": "no_meta",
+      "url": "http://darosasmv.com/"
+    },
+    {
+      "id": 507,
+      "name": "East Chop Sleep Shop",
+      "status": "no_meta",
+      "url": "http://eastchopsleepshop.com/"
+    },
+    {
+      "id": 510,
+      "name": "Edgartown Books",
+      "status": "no_meta",
+      "url": "http://edgartownbooks.com/"
+    },
+    {
+      "id": 515,
+      "name": "Edgartown Hardware",
+      "status": "no_meta",
+      "url": "http://edgartownhardware.com/"
+    },
+    {
+      "id": 518,
+      "name": "Edgartown Paint Shoppe",
+      "status": "no_meta",
+      "url": "http://edgartownpaintshoppe.com/"
+    },
+    {
+      "id": 532,
+      "name": "Island Aesthetics",
+      "status": "no_meta",
+      "url": "http://islandaestheticsmv.com/"
+    },
+    {
+      "id": 540,
+      "name": "Jardin Mahoney",
+      "status": "no_meta",
+      "url": "http://jardinmahoneymv.com/"
+    },
+    {
+      "id": 561,
+      "name": "Martha's Bike",
+      "status": "no_meta",
+      "url": "http://marthasbikerentals.com/"
+    },
+    {
+      "id": 567,
+      "name": "MV Shipyard",
+      "status": "no_meta",
+      "url": "http://mvshipyard.com/"
+    },
+    {
+      "id": 569,
+      "name": "Martha's Vineyard Tile Company Inc.",
+      "status": "no_meta",
+      "url": "http://mvtileco.com/"
+    },
+    {
+      "id": 644,
+      "name": "Third World Trading Co.",
+      "status": "no_meta",
+      "url": "https://www.thirdworldtrading.com/index.htm"
+    },
+    {
+      "id": 648,
+      "name": "Tisbury Toy Box",
+      "status": "ok",
+      "meta": "See what's in stock right now at Tisbury Toy Box on Martha's Vineyard.",
+      "source": "meta_description",
+      "title": "Tisbury Toy Box · What's in our toy box today",
+      "url": "http://tisburytoybox.com/"
+    },
+    {
+      "id": 658,
+      "name": "M&b Remodeling",
+      "status": "no_meta",
+      "url": "http://vineyardhomecenter.com/"
+    },
+    {
+      "id": 671,
+      "name": "Lani Beach Club",
+      "status": "no_meta",
+      "url": "http://www.lanibeachclub.com/"
+    },
+    {
+      "id": 674,
+      "name": "Barnes Moving & Storage",
+      "status": "no_meta",
+      "url": "http://www.barnesmoversmv.com/"
+    },
+    {
+      "id": 675,
+      "name": "Carroll's Martha's Vineyard Rapid Transit, Inc.",
+      "status": "http_error",
+      "reason": "HTTP 403",
+      "url": "http://www.carrollsmv.com/?y_source=1_ODE3NjQ4LTcxNS1sb2NhdGlvbi53ZWJzaXRl"
+    },
+    {
+      "id": 676,
+      "name": "Coastal Events MV",
+      "status": "no_meta",
+      "url": "https://www.coastaleventsmv.com/"
+    },
+    {
+      "id": 677,
+      "name": "Brissette Electric Inc.",
+      "status": "no_meta",
+      "url": "http://briselectric.com/"
+    },
+    {
+      "id": 681,
+      "name": "Callahan Plumbing and Heating, INC",
+      "status": "no_meta",
+      "url": "https://gomarthasvineyard.com/directory/callahan-plumbing-and-heating-inc"
+    },
+    {
+      "id": 685,
+      "name": "Interiors Studio Martha's Vineyard",
+      "status": "no_meta",
+      "url": "http://www.interiorsstudiomv.com/"
+    },
+    {
+      "id": 687,
+      "name": "Kin MV",
+      "status": "no_meta",
+      "url": "http://kinmv.com/"
+    },
+    {
+      "id": 689,
+      "name": "Stony Creek Gifts",
+      "status": "no_meta",
+      "url": "https://business.mvy.com/memberdirectory/Details/stony-creek-gifts-2228705"
+    },
+    {
+      "id": 692,
+      "name": "Harbor Craft Shop",
+      "status": "no_meta",
+      "url": "https://business.mvy.com/memberdirectory/Details/harbor-craft-shop-2286320"
+    },
+    {
+      "id": 693,
+      "name": "Neptune's Sea Chest",
+      "status": "no_meta",
+      "url": "https://business.mvy.com/memberdirectory/Details/the-sea-chest-2286577"
+    },
+    {
+      "id": 696,
+      "name": "Mardell's Gifts & Jewelry",
+      "status": "no_meta",
+      "url": "https://business.mvy.com/memberdirectory/Details/mardell-s-gifts-jewelry-2286091"
+    },
+    {
+      "id": 711,
+      "name": "Red Cat Kitchen",
+      "status": "no_meta",
+      "url": "https://www.redcatkitchen.com/"
+    },
+    {
+      "id": 713,
+      "name": "Mo's Lunch",
+      "status": "no_meta",
+      "url": "https://www.moslunch.com/"
+    },
+    {
+      "id": 718,
+      "name": "Beetlebung Farm",
+      "status": "no_meta",
+      "url": "https://www.beetlebungfarm.org/"
+    },
+    {
+      "id": 720,
+      "name": "Art Cliff Diner",
+      "status": "no_meta",
+      "url": "http://artcliffdiner.com/"
+    },
+    {
+      "id": 724,
+      "name": "Alchemy",
+      "status": "no_meta",
+      "url": "https://www.alchemyedgartown.com/"
+    },
+    {
+      "id": 726,
+      "name": "John's Fish Market",
+      "status": "no_meta",
+      "url": "https://johnsfishmarket.com/"
+    },
+    {
+      "id": 730,
+      "name": "The Attic",
+      "status": "no_meta",
+      "url": "https://www.theatticmv.com/"
+    }
+  ]
+}
