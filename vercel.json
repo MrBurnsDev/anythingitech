@@ -932,6 +932,41 @@
       "source": "/marthas-vineyard/:town/community/:business",
       "destination": "/marthas-vineyard/:town/family-community-government/:business",
       "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/automotive-and-marine",
+      "destination": "/marthas-vineyard",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/banking-finance-and-insurance",
+      "destination": "/marthas-vineyard",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/house-garden-and-pets",
+      "destination": "/marthas-vineyard",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/real-estate-and-rentals",
+      "destination": "/marthas-vineyard",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/sports-and-recreation",
+      "destination": "/marthas-vineyard",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/transportation-and-utilities",
+      "destination": "/marthas-vineyard",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/wedding-and-event-services",
+      "destination": "/marthas-vineyard",
+      "permanent": true
     }
   ],
   "rewrites": [

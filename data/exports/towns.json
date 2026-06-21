@@ -6,10 +6,15 @@
     "description": "The commercial heart of Martha's Vineyard, home to the ferry terminal and a vibrant Main Street with local shops, restaurants, and services.",
     "businessCount": 91,
     "businessTypes": {
-      "restaurants": 21,
-      "lodging": 8,
-      "shopping": 20,
-      "professional-services": 5
+      "arts-and-entertainment": 3,
+      "beauty-and-wellness": 5,
+      "business-and-professional-services": 5,
+      "family-community-government": 2,
+      "home-services-and-trades": 2,
+      "lodging-and-tourism": 8,
+      "medical-services-and-providers": 5,
+      "restaurants-food-beverages": 22,
+      "shopping-and-specialty-retail": 24
     },
     "categories": [
       "Arts & Entertainment",
@@ -35,9 +40,14 @@
     "description": "Historic whaling captain homes, upscale boutiques, waterfront dining, and professional services define this elegant village.",
     "businessCount": 90,
     "businessTypes": {
-      "restaurants": 39,
-      "lodging": 12,
-      "shopping": 10
+      "arts-and-entertainment": 1,
+      "beauty-and-wellness": 6,
+      "family-community-government": 2,
+      "home-services-and-trades": 3,
+      "lodging-and-tourism": 12,
+      "medical-services-and-providers": 1,
+      "restaurants-food-beverages": 41,
+      "shopping-and-specialty-retail": 14
     },
     "categories": [
       "Arts & Entertainment",
@@ -62,9 +72,13 @@
     "description": "Colorful gingerbread cottages, the Flying Horses carousel, and a lively harbor scene with diverse local businesses.",
     "businessCount": 62,
     "businessTypes": {
-      "restaurants": 31,
-      "lodging": 10,
-      "shopping": 5
+      "arts-and-entertainment": 3,
+      "beauty-and-wellness": 2,
+      "family-community-government": 2,
+      "home-services-and-trades": 1,
+      "lodging-and-tourism": 10,
+      "restaurants-food-beverages": 31,
+      "shopping-and-specialty-retail": 8
     },
     "categories": [
       "Arts & Entertainment",
@@ -86,8 +100,11 @@
     "description": "Rolling farmland, the beloved Farmers Market, artisan shops, and a quintessential New England town center.",
     "businessCount": 20,
     "businessTypes": {
-      "restaurants": 8,
-      "shopping": 2
+      "arts-and-entertainment": 5,
+      "beauty-and-wellness": 1,
+      "family-community-government": 2,
+      "restaurants-food-beverages": 8,
+      "shopping-and-specialty-retail": 2
     },
     "categories": [
       "Arts & Entertainment",
@@ -106,9 +123,12 @@
     "description": "Quiet country roads, Lucy Vincent Beach, farm stands, and the iconic fishing village of Menemsha.",
     "businessCount": 19,
     "businessTypes": {
-      "restaurants": 6,
-      "lodging": 2,
-      "shopping": 2
+      "arts-and-entertainment": 2,
+      "beauty-and-wellness": 1,
+      "family-community-government": 1,
+      "lodging-and-tourism": 2,
+      "restaurants-food-beverages": 7,
+      "shopping-and-specialty-retail": 6
     },
     "categories": [
       "Arts & Entertainment",
@@ -128,9 +148,9 @@
     "description": "Home to the Gay Head Cliffs, the Wampanoag Tribe, artisan shops, and dramatic ocean views.",
     "businessCount": 5,
     "businessTypes": {
-      "restaurants": 2,
-      "lodging": 1,
-      "shopping": 1
+      "lodging-and-tourism": 1,
+      "restaurants-food-beverages": 2,
+      "shopping-and-specialty-retail": 2
     },
     "categories": [
       "Lodging",

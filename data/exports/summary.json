@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-06-01T00:50:02.660Z",
+  "exportedAt": "2026-06-21T14:14:40.057Z",
   "totalBusinesses": 304,
   "byTown": {
     "vineyard-haven": 91,
@@ -10,15 +10,24 @@
     "aquinnah": 5
   },
   "byType": {
-    "restaurants": 113,
-    "lodging": 33,
-    "shopping": 43,
-    "professional-services": 7
+    "arts-and-entertainment": 14,
+    "beauty-and-wellness": 17,
+    "business-and-professional-services": 7,
+    "family-community-government": 9,
+    "home-services-and-trades": 6,
+    "lodging-and-tourism": 33,
+    "medical-services-and-providers": 6,
+    "restaurants-food-beverages": 117,
+    "shopping-and-specialty-retail": 59
   },
   "skippedTypes": [
-    "health-wellness",
-    "contractors",
-    "bars-nightlife",
-    "community"
+    "automotive-and-marine",
+    "banking-finance-and-insurance",
+    "building-and-construction",
+    "house-garden-and-pets",
+    "real-estate-and-rentals",
+    "sports-and-recreation",
+    "transportation-and-utilities",
+    "wedding-and-event-services"
   ]
 }

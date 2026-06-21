@@ -22,6 +22,13 @@
 
 const fs = require('fs');
 const path = require('path');
+const {
+  MV_TOWNS,
+  VALID_TOWN_SLUGS,
+  CATEGORIES,
+  VALID_CATEGORY_SLUGS,
+  CATEGORY_TO_SLUG,
+} = require('./lib/taxonomy.cjs');
 
 const SITE_URL = 'https://anythingitechmv.com';
 const TODAY = new Date().toISOString().split('T')[0];
@@ -42,42 +49,9 @@ function loadStaticExports() {
 }
 const STATIC_EXPORTS = loadStaticExports();
 
-// ============================================================
-// APPROVED TAXONOMY - Only these slugs are allowed in sitemap
-// ============================================================
-
-// Valid MV town slugs
-const VALID_TOWN_SLUGS = new Set([
-  'aquinnah',
-  'chilmark',
-  'edgartown',
-  'menemsha',
-  'oak-bluffs',
-  'tisbury',
-  'vineyard-haven',
-  'west-tisbury',
-]);
-
-// Valid category slugs (Chamber-approved taxonomy)
-const VALID_CATEGORY_SLUGS = new Set([
-  'arts-and-entertainment',
-  'automotive-and-marine',
-  'banking-finance-and-insurance',
-  'beauty-and-wellness',
-  'building-and-construction',
-  'business-and-professional-services',
-  'family-community-government',
-  'home-services-and-trades',
-  'house-garden-and-pets',
-  'lodging-and-tourism',
-  'medical-services-and-providers',
-  'real-estate-and-rentals',
-  'restaurants-food-beverages',
-  'shopping-and-specialty-retail',
-  'sports-and-recreation',
-  'transportation-and-utilities',
-  'wedding-and-event-services',
-]);
+// Taxonomy (towns + categories) is sourced from scripts/lib/taxonomy.cjs —
+// the SINGLE source of truth across all generators. Don't redefine these
+// inline; that's what caused the May-31 regression.
 
 // Legacy category slugs that should be auto-remapped to a modern slug.
 // Source-of-truth: a business assigned to one of these is correctly classified,
@@ -193,59 +167,8 @@ const TECH_TIP_SLUGS = [
   'the-end-of-an-era',
 ];
 
-// MV Towns for town pages
-const MV_TOWNS = [
-  { name: 'Aquinnah', slug: 'aquinnah' },
-  { name: 'Chilmark', slug: 'chilmark' },
-  { name: 'Edgartown', slug: 'edgartown' },
-  { name: 'Menemsha', slug: 'menemsha' },
-  { name: 'Oak Bluffs', slug: 'oak-bluffs' },
-  { name: 'Tisbury', slug: 'tisbury' },
-  { name: 'Vineyard Haven', slug: 'vineyard-haven' },
-  { name: 'West Tisbury', slug: 'west-tisbury' },
-];
-
-// Categories for category index pages
-const CATEGORIES = [
-  { name: 'Arts & Entertainment', slug: 'arts-and-entertainment' },
-  { name: 'Automotive & Marine', slug: 'automotive-and-marine' },
-  { name: 'Banking, Finance & Insurance', slug: 'banking-finance-and-insurance' },
-  { name: 'Beauty & Wellness', slug: 'beauty-and-wellness' },
-  { name: 'Building & Construction', slug: 'building-and-construction' },
-  { name: 'Business & Professional Services', slug: 'business-and-professional-services' },
-  { name: 'Family, Community & Government', slug: 'family-community-government' },
-  { name: 'Home Services & Trades', slug: 'home-services-and-trades' },
-  { name: 'House, Garden & Pets', slug: 'house-garden-and-pets' },
-  { name: 'Lodging & Tourism', slug: 'lodging-and-tourism' },
-  { name: 'Medical Services & Providers', slug: 'medical-services-and-providers' },
-  { name: 'Real Estate & Rentals', slug: 'real-estate-and-rentals' },
-  { name: 'Restaurants, Food & Beverages', slug: 'restaurants-food-beverages' },
-  { name: 'Shopping & Specialty Retail', slug: 'shopping-and-specialty-retail' },
-  { name: 'Sports & Recreation', slug: 'sports-and-recreation' },
-  { name: 'Transportation & Utilities', slug: 'transportation-and-utilities' },
-  { name: 'Wedding & Event Services', slug: 'wedding-and-event-services' },
-];
-
-// Category name to slug mapping
-const CATEGORY_TO_SLUG = {
-  'arts & entertainment': 'arts-and-entertainment',
-  'automotive & marine': 'automotive-and-marine',
-  'banking, finance & insurance': 'banking-finance-and-insurance',
-  'beauty & wellness': 'beauty-and-wellness',
-  'building & construction': 'building-and-construction',
-  'business & professional services': 'business-and-professional-services',
-  'family, community & government': 'family-community-government',
-  'home services & trades': 'home-services-and-trades',
-  'house, garden & pets': 'house-garden-and-pets',
-  'lodging & tourism': 'lodging-and-tourism',
-  'medical services & providers': 'medical-services-and-providers',
-  'real estate & rentals': 'real-estate-and-rentals',
-  'restaurants, food & beverages': 'restaurants-food-beverages',
-  'shopping & specialty retail': 'shopping-and-specialty-retail',
-  'sports & recreation': 'sports-and-recreation',
-  'transportation & utilities': 'transportation-and-utilities',
-  'wedding & event services': 'wedding-and-event-services',
-};
+// MV_TOWNS, CATEGORIES, CATEGORY_TO_SLUG are imported from
+// scripts/lib/taxonomy.cjs above.
 
 // ============================================================
 // API Functions

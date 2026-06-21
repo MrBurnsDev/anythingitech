@@ -8,6 +8,12 @@ import Database from 'better-sqlite3';
 import { writeFileSync, mkdirSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
+import {
+  CATEGORIES,
+  CATEGORY_TO_SLUG,
+  VALID_CATEGORY_SLUGS,
+  assertModernCategorySlug,
+} from './lib/taxonomy.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -28,90 +34,194 @@ const TOWNS = [
   { slug: 'aquinnah', name: 'Aquinnah', region: 'up-island', description: 'Home to the Gay Head Cliffs, the Wampanoag Tribe, artisan shops, and dramatic ocean views.' },
 ];
 
-// Normalized business type configuration
-// Maps database categories to URL-friendly slugs and SEO descriptions
-const BUSINESS_TYPES = [
-  {
-    slug: 'restaurants',
-    name: 'Restaurants',
-    pluralName: 'Restaurants',
+// SEO/UI metadata for each modern category, keyed by canonical slug from
+// scripts/lib/taxonomy.cjs. ALWAYS use the modern 17 slugs. If you find
+// yourself wanting to add a new slug, add it to taxonomy.cjs first.
+const BUSINESS_TYPE_METADATA = {
+  'arts-and-entertainment': {
+    pluralName: 'Arts & Entertainment',
+    icon: 'palette',
+    description: 'Galleries, performance venues, museums, and creative spaces across Martha\'s Vineyard.',
+    shortDescription: 'Galleries, music, theatre, and creative spaces',
+    seoDescription: 'Find arts & entertainment on Martha\'s Vineyard. Browse galleries, museums, music venues, and performance spaces across all island towns.',
+  },
+  'automotive-and-marine': {
+    pluralName: 'Automotive & Marine',
+    icon: 'truck',
+    description: 'Auto repair, marine services, boatyards, and transportation businesses serving the island.',
+    shortDescription: 'Auto repair, marinas, and boat services',
+    seoDescription: 'Find automotive and marine services on Martha\'s Vineyard. Auto repair, boatyards, and marine specialists across the island.',
+  },
+  'banking-finance-and-insurance': {
+    pluralName: 'Banking, Finance & Insurance',
+    icon: 'landmark',
+    description: 'Banks, financial advisors, and insurance providers serving residents and businesses.',
+    shortDescription: 'Banks, financial planning, and insurance',
+    seoDescription: 'Find banking, finance, and insurance services on Martha\'s Vineyard. Local banks, financial planners, and insurance providers.',
+  },
+  'beauty-and-wellness': {
+    pluralName: 'Beauty & Wellness',
+    icon: 'heart-pulse',
+    description: 'Salons, spas, yoga studios, and wellness providers serving the island community.',
+    shortDescription: 'Salons, spas, yoga, and wellness',
+    seoDescription: 'Find beauty and wellness services on Martha\'s Vineyard. Browse salons, spas, and wellness providers across all island towns.',
+  },
+  'building-and-construction': {
+    pluralName: 'Building & Construction',
+    icon: 'hammer',
+    description: 'Builders, contractors, and construction trades serving Martha\'s Vineyard homeowners and businesses.',
+    shortDescription: 'Builders, contractors, and trades',
+    seoDescription: 'Find building and construction services on Martha\'s Vineyard. Local builders, contractors, and skilled trades.',
+  },
+  'business-and-professional-services': {
+    pluralName: 'Business & Professional Services',
+    icon: 'briefcase',
+    description: 'Legal, accounting, consulting, and business support services on Martha\'s Vineyard.',
+    shortDescription: 'Legal, accounting, and business services',
+    seoDescription: 'Find professional services on Martha\'s Vineyard. Legal, accounting, and business service providers across the island.',
+  },
+  'family-community-government': {
+    pluralName: 'Family, Community & Government',
+    icon: 'landmark',
+    description: 'Community organizations, nonprofits, and government services on Martha\'s Vineyard.',
+    shortDescription: 'Community, nonprofits, and government',
+    seoDescription: 'Find community, family, and government resources on Martha\'s Vineyard. Nonprofits, civic services, and local organizations.',
+  },
+  'home-services-and-trades': {
+    pluralName: 'Home Services & Trades',
+    icon: 'hammer',
+    description: 'Home maintenance, repair, and trade services for island homeowners.',
+    shortDescription: 'Home maintenance and trade services',
+    seoDescription: 'Find home services and trades on Martha\'s Vineyard. Local handymen, painters, electricians, plumbers, and specialty trades.',
+  },
+  'house-garden-and-pets': {
+    pluralName: 'House, Garden & Pets',
+    icon: 'home',
+    description: 'Garden centers, home goods, and pet services on Martha\'s Vineyard.',
+    shortDescription: 'Garden centers, home goods, and pet services',
+    seoDescription: 'Find house, garden, and pet services on Martha\'s Vineyard. Nurseries, home goods, and pet care across the island.',
+  },
+  'lodging-and-tourism': {
+    pluralName: 'Lodging & Tourism',
+    icon: 'bed',
+    description: 'Historic inns, boutique hotels, and vacation rentals across Martha\'s Vineyard.',
+    shortDescription: 'Hotels, inns, and vacation rentals',
+    seoDescription: 'Find lodging and tourism on Martha\'s Vineyard. Browse hotels, inns, bed & breakfasts, and vacation rentals.',
+  },
+  'medical-services-and-providers': {
+    pluralName: 'Medical Services & Providers',
+    icon: 'stethoscope',
+    description: 'Doctors, dentists, physical therapy, and medical providers serving the island.',
+    shortDescription: 'Medical, dental, and health providers',
+    seoDescription: 'Find medical services and providers on Martha\'s Vineyard. Doctors, dentists, urgent care, and specialty health providers.',
+  },
+  'real-estate-and-rentals': {
+    pluralName: 'Real Estate & Rentals',
+    icon: 'home',
+    description: 'Real estate agents, brokerages, and rental services across Martha\'s Vineyard.',
+    shortDescription: 'Real estate agents and rentals',
+    seoDescription: 'Find real estate and rentals on Martha\'s Vineyard. Local real estate agents, brokerages, and property managers.',
+  },
+  'restaurants-food-beverages': {
+    pluralName: 'Restaurants, Food & Beverages',
     icon: 'utensils',
-    dbCategories: ['Restaurant'],
     description: 'From waterfront seafood shacks to fine dining establishments, Martha\'s Vineyard offers exceptional dining for every taste and occasion.',
-    shortDescription: 'Local restaurants and dining establishments',
+    shortDescription: 'Restaurants, cafes, and food purveyors',
     seoDescription: 'Find restaurants on Martha\'s Vineyard. Browse local dining options from casual seafood to fine dining across all island towns.',
   },
-  {
-    slug: 'lodging',
-    name: 'Lodging',
-    pluralName: 'Lodging',
-    icon: 'bed',
-    dbCategories: ['Inn', 'Hotel', 'Vacation Rental', 'Lodging', 'Lodging & Tourism'],
-    description: 'Historic inns, boutique hotels, and vacation rentals provide comfortable accommodations for visitors to Martha\'s Vineyard year-round.',
-    shortDescription: 'Hotels, inns, and vacation rentals',
-    seoDescription: 'Find lodging on Martha\'s Vineyard. Browse hotels, inns, bed & breakfasts, and vacation rentals across all island towns.',
-  },
-  {
-    slug: 'shopping',
-    name: 'Shopping',
-    pluralName: 'Shopping & Retail',
+  'shopping-and-specialty-retail': {
+    pluralName: 'Shopping & Specialty Retail',
     icon: 'shopping-bag',
-    dbCategories: ['Retail', 'Shopping & Retail', 'Boutique', 'Gallery'],
-    description: 'Local boutiques, galleries, and specialty shops offer island-made goods, curated collections, and unique finds throughout Martha\'s Vineyard.',
-    shortDescription: 'Boutiques, galleries, and retail shops',
-    seoDescription: 'Find shopping on Martha\'s Vineyard. Browse local boutiques, galleries, gift shops, and retail stores across all island towns.',
+    description: 'Local boutiques, galleries, and specialty shops offer island-made goods and unique finds across Martha\'s Vineyard.',
+    shortDescription: 'Boutiques, gift shops, and specialty retail',
+    seoDescription: 'Find shopping on Martha\'s Vineyard. Browse local boutiques, galleries, gift shops, and specialty retail stores.',
   },
-  {
-    slug: 'health-wellness',
-    name: 'Health & Wellness',
-    pluralName: 'Health & Wellness',
-    icon: 'heart-pulse',
-    dbCategories: ['Wellness', 'Medical'],
-    description: 'Medical providers, wellness centers, spas, and health services supporting the Martha\'s Vineyard community year-round.',
-    shortDescription: 'Medical, wellness, and health services',
-    seoDescription: 'Find health and wellness services on Martha\'s Vineyard. Browse medical providers, spas, and wellness centers across all island towns.',
+  'sports-and-recreation': {
+    pluralName: 'Sports & Recreation',
+    icon: 'palette',
+    description: 'Recreation programs, outdoor sports, and active-living businesses on Martha\'s Vineyard.',
+    shortDescription: 'Sports, fitness, and recreation',
+    seoDescription: 'Find sports and recreation on Martha\'s Vineyard. Active living, outdoor sports, fitness, and recreation programs.',
   },
-  {
-    slug: 'contractors',
-    name: 'Contractors',
-    pluralName: 'Contractors & Construction',
-    icon: 'hammer',
-    dbCategories: ['Building & Construction', 'House & Garden'],
-    description: 'Skilled contractors, builders, and home service professionals serving homeowners and businesses across Martha\'s Vineyard.',
-    shortDescription: 'Builders, contractors, and home services',
-    seoDescription: 'Find contractors on Martha\'s Vineyard. Browse builders, construction companies, and home service professionals across all island towns.',
+  'transportation-and-utilities': {
+    pluralName: 'Transportation & Utilities',
+    icon: 'truck',
+    description: 'Transportation services, ferries, and utility providers serving Martha\'s Vineyard.',
+    shortDescription: 'Transportation and utilities',
+    seoDescription: 'Find transportation and utility services on Martha\'s Vineyard. Ferries, taxis, transport, and utility providers.',
   },
-  {
-    slug: 'bars-nightlife',
-    name: 'Bars & Nightlife',
-    pluralName: 'Bars & Nightlife',
-    icon: 'wine',
-    dbCategories: ['Bar'],
-    description: 'Bars, pubs, and nightlife venues offering drinks and entertainment on Martha\'s Vineyard.',
-    shortDescription: 'Bars, pubs, and nightlife',
-    seoDescription: 'Find bars and nightlife on Martha\'s Vineyard. Browse local bars, pubs, and entertainment venues across all island towns.',
+  'wedding-and-event-services': {
+    pluralName: 'Wedding & Event Services',
+    icon: 'palette',
+    description: 'Wedding planners, florists, caterers, and event vendors across Martha\'s Vineyard.',
+    shortDescription: 'Weddings, events, and celebrations',
+    seoDescription: 'Find wedding and event services on Martha\'s Vineyard. Planners, florists, caterers, and venues for island events.',
   },
-  {
-    slug: 'professional-services',
-    name: 'Professional Services',
-    pluralName: 'Professional Services',
-    icon: 'briefcase',
-    dbCategories: ['Professional Services'],
-    description: 'Professional service providers including legal, financial, and business services on Martha\'s Vineyard.',
-    shortDescription: 'Legal, financial, and business services',
-    seoDescription: 'Find professional services on Martha\'s Vineyard. Browse legal, financial, and business service providers across all island towns.',
-  },
-  {
-    slug: 'community',
-    name: 'Community',
-    pluralName: 'Community & Government',
-    icon: 'landmark',
-    dbCategories: ['Community & Government', 'Camp', 'Nonprofit'],
-    description: 'Community organizations, government services, and nonprofits serving the Martha\'s Vineyard community.',
-    shortDescription: 'Community organizations and services',
-    seoDescription: 'Find community organizations on Martha\'s Vineyard. Browse nonprofits, government services, and community resources across all island towns.',
-  },
-];
+};
+
+// Optional historical display strings still present in some DB rows. New rows
+// should always use the canonical CATEGORIES name; this list is for backward
+// compatibility only. Anything not listed here AND not in CATEGORIES will
+// fall to 'other' and won't generate a category index page.
+//
+// One alias = one canonical slug. Don't double-map; the lookup is first-match.
+const DB_CATEGORY_ALIASES = {
+  'restaurants-food-beverages': ['Restaurant', 'Bar'],
+  'lodging-and-tourism': ['Inn', 'Hotel', 'Vacation Rental', 'Lodging'],
+  'shopping-and-specialty-retail': [
+    'Retail',
+    'Shopping & Retail',
+    'Shopping',
+    'Boutique',
+    'Gallery',
+  ],
+  'medical-services-and-providers': [
+    'Medical',
+    'Healthcare',
+  ],
+  'beauty-and-wellness': ['Health & Wellness', 'Wellness', 'Spa', 'Salon'],
+  'building-and-construction': [
+    'Building & Construction',
+    'House & Garden',
+    'Construction',
+  ],
+  'home-services-and-trades': ['Contractors', 'Home Services'],
+  'family-community-government': [
+    'Community & Government',
+    'Community',
+    'Camp',
+    'Nonprofit',
+  ],
+  'business-and-professional-services': ['Professional Services'],
+};
+
+// Build the BUSINESS_TYPES list from the canonical taxonomy. Order matches
+// CATEGORIES (from taxonomy.cjs). Each entry is assertion-checked at module
+// load time so we fail loud if metadata and taxonomy drift apart.
+const BUSINESS_TYPES = CATEGORIES.map((cat) => {
+  const meta = BUSINESS_TYPE_METADATA[cat.slug];
+  if (!meta) {
+    throw new Error(
+      `[export-directory-data] Missing metadata for category slug "${cat.slug}". ` +
+      `Either add it to BUSINESS_TYPE_METADATA above, or remove "${cat.slug}" from CATEGORIES in scripts/lib/taxonomy.cjs.`
+    );
+  }
+  assertModernCategorySlug(cat.slug, 'export-directory BUSINESS_TYPES');
+  return {
+    slug: cat.slug,
+    name: cat.name,
+    pluralName: meta.pluralName,
+    icon: meta.icon,
+    // dbCategories maps DB-side display strings to this slug. The DB stores
+    // category as a display string ("Restaurants, Food & Beverages"), so the
+    // canonical CATEGORIES entry's `name` is always one acceptable value.
+    // Aliases for additional historical display strings are layered on below.
+    dbCategories: [cat.name, ...(DB_CATEGORY_ALIASES[cat.slug] || [])],
+    description: meta.description,
+    shortDescription: meta.shortDescription,
+    seoDescription: meta.seoDescription,
+  };
+});
 
 // Clean string utility
 function cleanString(str) {
@@ -212,13 +322,17 @@ function toSlug(str) {
   return str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
-// Map database category to business type slug
+// Map database category (display string) to business type slug.
+// Lookup order:
+//   1. CATEGORY_TO_SLUG (shared taxonomy, case-insensitive)
+//   2. dbCategories alias on each BUSINESS_TYPE (back-compat for legacy rows)
+// Falls back to 'other' only when no mapping exists.
 function toBusinessTypeSlug(category) {
   if (!category) return 'other';
+  const fromShared = CATEGORY_TO_SLUG[String(category).toLowerCase().trim()];
+  if (fromShared) return fromShared;
   for (const type of BUSINESS_TYPES) {
-    if (type.dbCategories.includes(category)) {
-      return type.slug;
-    }
+    if (type.dbCategories.includes(category)) return type.slug;
   }
   return 'other';
 }
@@ -407,6 +521,30 @@ const businessTypeStats = BUSINESS_TYPES.map(type => {
     byTown,
   };
 }).filter(t => t.businessCount > 0); // Only include types with businesses
+
+// --- Stale-slug validator ------------------------------------------------
+// Fail loudly if any output references a legacy/short-form category slug.
+// This catches the class of regression we hit on 2026-05-31, where the
+// exporter's hardcoded list drifted away from the canonical taxonomy.
+{
+  const offenders = [];
+  for (const b of processedBusinesses) {
+    if (b.businessType && b.businessType !== 'other' && !VALID_CATEGORY_SLUGS.has(b.businessType)) {
+      offenders.push({ where: `businesses.json id=${b.id}`, slug: b.businessType });
+    }
+  }
+  for (const t of businessTypeStats) {
+    if (!VALID_CATEGORY_SLUGS.has(t.slug)) {
+      offenders.push({ where: `business-types.json`, slug: t.slug });
+    }
+  }
+  if (offenders.length > 0) {
+    console.error('[export-directory-data] Stale category slugs detected. Refusing to write.');
+    offenders.slice(0, 20).forEach((o) => console.error(`  ${o.where}: "${o.slug}"`));
+    if (offenders.length > 20) console.error(`  …and ${offenders.length - 20} more`);
+    process.exit(1);
+  }
+}
 
 // Write exports
 writeFileSync(
