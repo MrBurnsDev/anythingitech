@@ -151,6 +151,7 @@ const STATIC_PAGES = [
 
 // Tech tip blog posts (validated real articles)
 const TECH_TIP_SLUGS = [
+  'comcast-wifi-large-marthas-vineyard-homes',
   'why-i-built-is-the-ferry-running',
   'wi-fi-coverage-for-large-properties',
   'office-wireless-network-installation',

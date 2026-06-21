@@ -128,16 +128,39 @@ export default function TechTipPost() {
                 li: ({ children }) => (
                   <li className="text-foreground/90">{children}</li>
                 ),
-                a: ({ href, children }) => (
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-accent hover:underline"
-                  >
-                    {children}
-                  </a>
-                ),
+                a: ({ href, children }) => {
+                  // Treat root-relative URLs and same-host links as internal.
+                  // Internal links use react-router <Link> so navigation stays
+                  // SPA-fast and PageRank flows. External links open in a new
+                  // tab with noopener for safety.
+                  const isInternal =
+                    typeof href === "string" &&
+                    (href.startsWith("/") ||
+                      href.startsWith("#") ||
+                      href.startsWith("https://anythingitechmv.com") ||
+                      href.startsWith("https://www.anythingitechmv.com"));
+                  if (isInternal) {
+                    // Normalize to a root-relative path for <Link>.
+                    const path = (href || "")
+                      .replace(/^https:\/\/(www\.)?anythingitechmv\.com/, "")
+                      || "/";
+                    return (
+                      <Link to={path} className="text-accent hover:underline">
+                        {children}
+                      </Link>
+                    );
+                  }
+                  return (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent hover:underline"
+                    >
+                      {children}
+                    </a>
+                  );
+                },
                 strong: ({ children }) => (
                   <strong className="font-semibold text-foreground">{children}</strong>
                 ),
