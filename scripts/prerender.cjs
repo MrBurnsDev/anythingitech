@@ -93,22 +93,15 @@ const DIST_DIR = join(__dirname, '..', 'dist');
 const SITE_URL = 'https://anythingitechmv.com';
 
 /**
- * Routes that pull their content from /api/* at runtime. During build, that
- * API doesn't exist yet (it's deployed by the same build that's running), so
- * the page never finishes loading and Puppeteer times out. We keep these in
- * the sitemap — Google should still find them — but skip prerendering them.
- * Vercel falls back to dist/index.html (the SPA shell) at runtime, and the
- * client-side fetch then works against the deployed API normally.
+ * Routes to explicitly skip during prerender. Empty by default — the
+ * /businesses/* filter pages used to live here, but the static-stub for
+ * /api/directory/businesses (below) now lets them prerender cleanly along
+ * with the rest of the directory.
  *
- * If you add a new route that loads from /api/* on mount, add it here.
+ * Add a route here only if it depends on an /api/* endpoint we don't stub
+ * AND we don't want to fail the build over it.
  */
-const PRERENDER_SKIP_PATHS = new Set([
-  '/businesses/verified',
-  '/businesses/chamber-listed',
-  '/businesses/gazette-listed',
-  '/businesses/gomv-listed',
-  '/businesses/black-owned',
-]);
+const PRERENDER_SKIP_PATHS = new Set();
 
 /**
  * Read all URLs from sitemap.xml and convert to local paths.
@@ -142,14 +135,86 @@ const ROUTES = readSitemapPaths();
 console.log(`Loaded ${ROUTES.length} routes from sitemap.xml`);
 
 const PORT = 3456;
-// Where to proxy /api/* during prerender — use prod by default since prerender
-// runs after deploy or against the live API. Override with PRERENDER_API_BASE.
+// Where to proxy /api/* during prerender. Production was the historical
+// default, but production's /api/directory/businesses returned HTTP 500 for
+// months — which caused every business page to fail prerender (the SPA waited
+// on a request that never resolved, Puppeteer hit networkidle0 timeout, the
+// page wrote out as the SPA shell with the homepage canonical, and Google
+// indexed nothing in the directory).
+//
+// The fix is to serve /api/directory/businesses from the same static export
+// the sitemap uses (data/exports/businesses.json), making prerender entirely
+// self-contained and deterministic. Other /api/* paths fall back to the
+// upstream proxy so unrelated endpoints still work.
 const API_PROXY_BASE = process.env.PRERENDER_API_BASE || 'https://anythingitechmv.com';
+
+// Static export, used to serve /api/directory/businesses during prerender.
+// Same data the sitemap is built from, so the two stay in sync.
+const STATIC_BUSINESSES = (() => {
+  try {
+    const p = join(__dirname, '..', 'data', 'exports', 'businesses.json');
+    const parsed = JSON.parse(readFileSync(p, 'utf8'));
+    return Array.isArray(parsed) ? parsed : (parsed.businesses || []);
+  } catch (err) {
+    console.warn(`Could not load static businesses.json: ${err.message}`);
+    return [];
+  }
+})();
+console.log(`Prerender API stub loaded ${STATIC_BUSINESSES.length} businesses`);
+
+// Serve /api/directory/businesses from the static export. Matches the
+// shape the production handler returns ({ businesses: [...] } or
+// { business: {...} } for a slug lookup), and applies the same filters the
+// SPA passes (town, type, slug, search).
+function handleBusinessesStub(reqUrl, res) {
+  const url = new URL(reqUrl, 'http://localhost');
+  const slug = url.searchParams.get('slug');
+  const town = url.searchParams.get('town');
+  const type = url.searchParams.get('type');
+  const search = url.searchParams.get('search');
+
+  res.setHeader('Content-Type', 'application/json');
+  res.setHeader('X-Data-Source', 'prerender-static-stub');
+
+  if (slug) {
+    const b = STATIC_BUSINESSES.find((x) => x.slug === slug);
+    if (!b) {
+      res.writeHead(404);
+      res.end(JSON.stringify({ error: 'Business not found' }));
+      return;
+    }
+    res.writeHead(200);
+    res.end(JSON.stringify({ business: b }));
+    return;
+  }
+
+  let list = STATIC_BUSINESSES;
+  if (town) list = list.filter((b) => b.townSlug === town);
+  if (type) list = list.filter((b) => b.businessType === type);
+  if (search) {
+    const q = search.toLowerCase();
+    list = list.filter(
+      (b) =>
+        b.name.toLowerCase().includes(q) ||
+        (b.description || '').toLowerCase().includes(q)
+    );
+  }
+  res.writeHead(200);
+  res.end(JSON.stringify({ businesses: list }));
+}
 
 // Simple static file server with /api/* proxy to production for SPA data needs
 function createStaticServer() {
   return createServer(async (req, res) => {
-    // Proxy /api/* to the upstream so the React app can hydrate with real data
+    // Serve the businesses endpoint from the static export. Bypasses any
+    // production-API outage so prerender remains deterministic.
+    if (req.url.startsWith('/api/directory/businesses')) {
+      handleBusinessesStub(req.url, res);
+      return;
+    }
+
+    // Other /api/* paths still proxy to the upstream — most aren't used by
+    // any prerendered page, but keep the door open for future endpoints.
     if (req.url.startsWith('/api/')) {
       try {
         const upstream = await fetch(`${API_PROXY_BASE}${req.url}`, {
