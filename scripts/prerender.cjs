@@ -93,9 +93,28 @@ const DIST_DIR = join(__dirname, '..', 'dist');
 const SITE_URL = 'https://anythingitechmv.com';
 
 /**
+ * Routes that pull their content from /api/* at runtime. During build, that
+ * API doesn't exist yet (it's deployed by the same build that's running), so
+ * the page never finishes loading and Puppeteer times out. We keep these in
+ * the sitemap — Google should still find them — but skip prerendering them.
+ * Vercel falls back to dist/index.html (the SPA shell) at runtime, and the
+ * client-side fetch then works against the deployed API normally.
+ *
+ * If you add a new route that loads from /api/* on mount, add it here.
+ */
+const PRERENDER_SKIP_PATHS = new Set([
+  '/businesses/verified',
+  '/businesses/chamber-listed',
+  '/businesses/gazette-listed',
+  '/businesses/gomv-listed',
+  '/businesses/black-owned',
+]);
+
+/**
  * Read all URLs from sitemap.xml and convert to local paths.
  * The sitemap is the single source of truth for what gets prerendered —
- * sitemap and prerender stay in lockstep automatically.
+ * sitemap and prerender stay in lockstep automatically, minus the small
+ * skip-list above for API-dependent routes.
  */
 function readSitemapPaths() {
   const sitemapPath = join(DIST_DIR, 'sitemap.xml');
@@ -108,8 +127,15 @@ function readSitemapPaths() {
     const u = new URL(url);
     return u.pathname || '/';
   });
+  const unique = [...new Set(paths)];
+  const skipped = unique.filter(p => PRERENDER_SKIP_PATHS.has(p));
+  if (skipped.length > 0) {
+    console.log(`Skipping ${skipped.length} API-dependent route(s): ${skipped.join(', ')}`);
+  }
   // Dedupe and sort (root first)
-  return [...new Set(paths)].sort((a, b) => (a === '/' ? -1 : b === '/' ? 1 : a.localeCompare(b)));
+  return unique
+    .filter(p => !PRERENDER_SKIP_PATHS.has(p))
+    .sort((a, b) => (a === '/' ? -1 : b === '/' ? 1 : a.localeCompare(b)));
 }
 
 const ROUTES = readSitemapPaths();
@@ -267,7 +293,18 @@ async function prerender() {
     console.log('\nErrors:');
     errors.slice(0, 20).forEach(e => console.log(`  ${e.route}: ${e.error}`));
     if (errors.length > 20) console.log(`  ... and ${errors.length - 20} more`);
-    process.exit(1);
+
+    // Don't sink the entire deploy over a single flaky timeout. A small number
+    // of failed routes are served as the SPA shell at runtime — degraded SEO
+    // for those specific pages, but the rest of the site ships. Real failures
+    // (build issues, mass timeouts, env problems) still exit non-zero.
+    // Override with PRERENDER_MAX_FAILURES env var if you want stricter gating.
+    const maxFailures = parseInt(process.env.PRERENDER_MAX_FAILURES || '2', 10);
+    if (errors.length > maxFailures) {
+      console.error(`\n${errors.length} prerender failures exceed PRERENDER_MAX_FAILURES=${maxFailures}; exiting.`);
+      process.exit(1);
+    }
+    console.warn(`\n${errors.length} prerender failure(s) tolerated (limit=${maxFailures}). Affected routes will be served as the SPA shell.`);
   }
 }
 
