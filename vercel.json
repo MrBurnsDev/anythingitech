@@ -320,7 +320,7 @@
     },
     {
       "source": "/marthas-vineyard/edgartown/lodging-and-tourism/iconic-marthas-vineyard-hotel-edgartown",
-      "destination": "/marthas-vineyard/edgartown/lodging-and-tourism/harbor-view-hotel-edgartown",
+      "destination": "/marthas-vineyard/edgartown/lodging/harbor-view-hotel-edgartown",
       "permanent": true
     },
     {
@@ -365,7 +365,7 @@
     },
     {
       "source": "/marthas-vineyard/vineyard-haven/lodging-and-tourism/beach-pluminn-vineyard-haven",
-      "destination": "/marthas-vineyard/vineyard-haven/lodging-and-tourism/menemsha-inn-cottages-marthas-vineyard-vacation-rentals-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/lodging/menemsha-inn-cottages-marthas-vineyard-vacation-rentals-vineyard-haven",
       "permanent": true
     },
     {
@@ -595,7 +595,7 @@
     },
     {
       "source": "/marthas-vineyard/lodging-tourism",
-      "destination": "/marthas-vineyard/lodging-and-tourism",
+      "destination": "/marthas-vineyard/lodging",
       "permanent": true
     },
     {
@@ -720,12 +720,12 @@
     },
     {
       "source": "/marthas-vineyard/:town/lodging-tourism",
-      "destination": "/marthas-vineyard/:town/lodging-and-tourism",
+      "destination": "/marthas-vineyard/:town/lodging",
       "permanent": true
     },
     {
       "source": "/marthas-vineyard/:town/lodging-tourism/:business",
-      "destination": "/marthas-vineyard/:town/lodging-and-tourism/:business",
+      "destination": "/marthas-vineyard/:town/lodging/:business",
       "permanent": true
     },
     {
@@ -844,18 +844,18 @@
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/lodging",
-      "destination": "/marthas-vineyard/lodging-and-tourism",
+      "source": "/marthas-vineyard/lodging-and-tourism",
+      "destination": "/marthas-vineyard/lodging",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/:town/lodging",
-      "destination": "/marthas-vineyard/:town/lodging-and-tourism",
+      "source": "/marthas-vineyard/:town/lodging-and-tourism",
+      "destination": "/marthas-vineyard/:town/lodging",
       "permanent": true
     },
     {
-      "source": "/marthas-vineyard/:town/lodging/:business",
-      "destination": "/marthas-vineyard/:town/lodging-and-tourism/:business",
+      "source": "/marthas-vineyard/:town/lodging-and-tourism/:business",
+      "destination": "/marthas-vineyard/:town/lodging/:business",
       "permanent": true
     },
     {
@@ -950,11 +950,6 @@
     },
     {
       "source": "/marthas-vineyard/real-estate-and-rentals",
-      "destination": "/marthas-vineyard",
-      "permanent": true
-    },
-    {
-      "source": "/marthas-vineyard/sports-and-recreation",
       "destination": "/marthas-vineyard",
       "permanent": true
     },

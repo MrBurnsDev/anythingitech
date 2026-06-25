@@ -34,6 +34,19 @@
     }
   },
   {
+    "slug": "building-and-construction",
+    "name": "Building & Construction",
+    "pluralName": "Building & Construction",
+    "icon": "hammer",
+    "description": "Builders, contractors, and construction trades serving Martha's Vineyard homeowners and businesses.",
+    "shortDescription": "Builders, contractors, and trades",
+    "seoDescription": "Find building and construction services on Martha's Vineyard. Local builders, contractors, and skilled trades.",
+    "businessCount": 1,
+    "byTown": {
+      "vineyard-haven": 1
+    }
+  },
+  {
     "slug": "business-and-professional-services",
     "name": "Business & Professional Services",
     "pluralName": "Business & Professional Services",
@@ -71,24 +84,24 @@
     "description": "Home maintenance, repair, and trade services for island homeowners.",
     "shortDescription": "Home maintenance and trade services",
     "seoDescription": "Find home services and trades on Martha's Vineyard. Local handymen, painters, electricians, plumbers, and specialty trades.",
-    "businessCount": 6,
+    "businessCount": 8,
     "byTown": {
-      "vineyard-haven": 2,
+      "vineyard-haven": 4,
       "edgartown": 3,
       "oak-bluffs": 1
     }
   },
   {
-    "slug": "lodging-and-tourism",
-    "name": "Lodging & Tourism",
-    "pluralName": "Lodging & Tourism",
+    "slug": "lodging",
+    "name": "Lodging",
+    "pluralName": "Lodging",
     "icon": "bed",
-    "description": "Historic inns, boutique hotels, and vacation rentals across Martha's Vineyard.",
-    "shortDescription": "Hotels, inns, and vacation rentals",
-    "seoDescription": "Find lodging and tourism on Martha's Vineyard. Browse hotels, inns, bed & breakfasts, and vacation rentals.",
-    "businessCount": 33,
+    "description": "Historic inns, boutique hotels, B&Bs, and vacation rentals across Martha's Vineyard.",
+    "shortDescription": "Hotels, inns, B&Bs, and vacation rentals",
+    "seoDescription": "Find lodging on Martha's Vineyard. Browse hotels, inns, bed & breakfasts, and vacation rentals across all island towns.",
+    "businessCount": 29,
     "byTown": {
-      "vineyard-haven": 8,
+      "vineyard-haven": 4,
       "edgartown": 12,
       "oak-bluffs": 10,
       "chilmark": 2,
@@ -143,6 +156,19 @@
       "west-tisbury": 2,
       "chilmark": 6,
       "aquinnah": 2
+    }
+  },
+  {
+    "slug": "sports-and-recreation",
+    "name": "Sports & Recreation",
+    "pluralName": "Sports & Recreation",
+    "icon": "palette",
+    "description": "Recreation programs, outdoor sports, and active-living businesses on Martha's Vineyard.",
+    "shortDescription": "Sports, fitness, and recreation",
+    "seoDescription": "Find sports and recreation on Martha's Vineyard. Active living, outdoor sports, fitness, and recreation programs.",
+    "businessCount": 1,
+    "byTown": {
+      "vineyard-haven": 1
     }
   }
 ]

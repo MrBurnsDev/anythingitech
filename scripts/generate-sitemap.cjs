@@ -59,8 +59,8 @@ const STATIC_EXPORTS = loadStaticExports();
 // always uses the modern slug. Vercel.json has matching 308 redirects so the
 // legacy URL never appears in the indexable set.
 const LEGACY_CATEGORY_REMAP = {
-  'lodging': 'lodging-and-tourism',
-  'lodging-tourism': 'lodging-and-tourism',
+  'lodging-and-tourism': 'lodging',
+  'lodging-tourism': 'lodging',
   'shopping-retail': 'shopping-and-specialty-retail',
   'shopping-specialty-retail': 'shopping-and-specialty-retail',
   'health-wellness': 'medical-services-and-providers',
@@ -492,7 +492,7 @@ function validateSitemap(xml) {
     { pattern: /\/professional-services\//g, desc: '/professional-services/ (legacy)' },
     { pattern: /\/community\//g, desc: '/community/ (legacy)' },
     { pattern: /\/automotive\//g, desc: '/automotive/ (legacy)' },
-    { pattern: /\/lodging\//g, desc: '/lodging/ (legacy)' },
+    { pattern: /\/lodging-and-tourism\//g, desc: '/lodging-and-tourism/ (legacy — now /lodging/)' },
     { pattern: /http:\/\/(?!www\.sitemaps\.org)/g, desc: 'http:// (should be https)' },
     { pattern: /facebook/gi, desc: 'facebook' },
     { pattern: /instagram/gi, desc: 'instagram' },

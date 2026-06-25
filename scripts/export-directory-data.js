@@ -101,12 +101,12 @@ const BUSINESS_TYPE_METADATA = {
     shortDescription: 'Garden centers, home goods, and pet services',
     seoDescription: 'Find house, garden, and pet services on Martha\'s Vineyard. Nurseries, home goods, and pet care across the island.',
   },
-  'lodging-and-tourism': {
-    pluralName: 'Lodging & Tourism',
+  lodging: {
+    pluralName: 'Lodging',
     icon: 'bed',
-    description: 'Historic inns, boutique hotels, and vacation rentals across Martha\'s Vineyard.',
-    shortDescription: 'Hotels, inns, and vacation rentals',
-    seoDescription: 'Find lodging and tourism on Martha\'s Vineyard. Browse hotels, inns, bed & breakfasts, and vacation rentals.',
+    description: 'Historic inns, boutique hotels, B&Bs, and vacation rentals across Martha\'s Vineyard.',
+    shortDescription: 'Hotels, inns, B&Bs, and vacation rentals',
+    seoDescription: 'Find lodging on Martha\'s Vineyard. Browse hotels, inns, bed & breakfasts, and vacation rentals across all island towns.',
   },
   'medical-services-and-providers': {
     pluralName: 'Medical Services & Providers',
@@ -167,7 +167,9 @@ const BUSINESS_TYPE_METADATA = {
 // One alias = one canonical slug. Don't double-map; the lookup is first-match.
 const DB_CATEGORY_ALIASES = {
   'restaurants-food-beverages': ['Restaurant', 'Bar'],
-  'lodging-and-tourism': ['Inn', 'Hotel', 'Vacation Rental', 'Lodging'],
+  // `Lodging & Tourism` is the historical Chamber combined name and still
+  // appears on some older rows. Map both forms to the new standalone slug.
+  lodging: ['Inn', 'Hotel', 'Vacation Rental', 'B&B', 'Lodging & Tourism'],
   'shopping-and-specialty-retail': [
     'Retail',
     'Shopping & Retail',

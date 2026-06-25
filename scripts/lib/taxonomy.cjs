@@ -29,7 +29,13 @@ const MV_TOWNS = [
 
 const VALID_TOWN_SLUGS = new Set(MV_TOWNS.map((t) => t.slug));
 
-// The 17 modern category slugs. Order is the canonical display order.
+// The modern canonical category slugs. Order is the display order.
+//
+// 2026-06-25: `lodging-and-tourism` was split into standalone `lodging`
+// because hotels/inns/B&Bs are a distinct vertical from tourism attractions.
+// `lodging-and-tourism` is preserved as a LEGACY slug (vercel.json redirects
+// it to /lodging) but is not a canonical category here. Add a `tourism`
+// entry only when the directory actually contains tour/attraction businesses.
 const CATEGORIES = [
   { name: 'Arts & Entertainment', slug: 'arts-and-entertainment' },
   { name: 'Automotive & Marine', slug: 'automotive-and-marine' },
@@ -40,7 +46,7 @@ const CATEGORIES = [
   { name: 'Family, Community & Government', slug: 'family-community-government' },
   { name: 'Home Services & Trades', slug: 'home-services-and-trades' },
   { name: 'House, Garden & Pets', slug: 'house-garden-and-pets' },
-  { name: 'Lodging & Tourism', slug: 'lodging-and-tourism' },
+  { name: 'Lodging', slug: 'lodging' },
   { name: 'Medical Services & Providers', slug: 'medical-services-and-providers' },
   { name: 'Real Estate & Rentals', slug: 'real-estate-and-rentals' },
   { name: 'Restaurants, Food & Beverages', slug: 'restaurants-food-beverages' },
@@ -61,12 +67,17 @@ const CATEGORY_TO_SLUG = Object.fromEntries(
 // Sets of slugs that have shipped at some point but are NO LONGER valid. If
 // any of these appears in an output file, the build fails. This catches the
 // class of regression that motivated this module.
+//
+// NOTE: `lodging` was previously stale (the registry used `lodging-and-tourism`),
+// but as of 2026-06-25 `lodging` is the new canonical slug. The previous
+// combined slug `lodging-and-tourism` is now the legacy entry.
 const LEGACY_LEGACY_SLUGS = new Set([
-  // The 8 stale slugs that used to live in scripts/export-directory-data.js
-  'restaurants', 'lodging', 'shopping', 'health-wellness',
+  // Stale slugs that used to live in scripts/export-directory-data.js
+  'restaurants', 'shopping', 'health-wellness',
   'contractors', 'bars-nightlife', 'professional-services', 'community',
   // Other short-forms we 308-redirect away from in vercel.json
-  'lodging-tourism', 'shopping-retail', 'shopping-specialty-retail',
+  'lodging-tourism', 'lodging-and-tourism',
+  'shopping-retail', 'shopping-specialty-retail',
   'arts-entertainment', 'automotive', 'automotive-marine',
   'beauty-wellness', 'building-construction',
   'business-professional-services', 'banking-finance-insurance',
