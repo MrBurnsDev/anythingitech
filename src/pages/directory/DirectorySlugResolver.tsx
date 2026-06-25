@@ -32,7 +32,7 @@ export default function DirectorySlugResolver() {
     return <Navigate to={`/marthas-vineyard/${redirectSlug}`} replace />;
   }
 
-  // Legacy category short-form (e.g. /lodging-tourism → /lodging-and-tourism).
+  // Legacy category short-form (e.g. /lodging-tourism → /lodging).
   // Server-side 308 should beat us to it; this is the SPA safety net.
   const normalized = normalizeCategorySlug(slug);
   if (normalized && normalized !== slug && getBusinessTypeBySlug(normalized)) {

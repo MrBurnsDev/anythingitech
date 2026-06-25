@@ -126,8 +126,10 @@ export const businessTypes: BusinessType[] = businessTypesData as BusinessType[]
 // to use modern slugs, this map's effect on each business naturally fades.
 // Mirrors LEGACY_CATEGORY_REMAP in scripts/generate-sitemap.cjs.
 const LEGACY_CATEGORY_REMAP: Record<string, string> = {
-  'lodging': 'lodging-and-tourism',
-  'lodging-tourism': 'lodging-and-tourism',
+  // 2026-06-25: `lodging-and-tourism` was split into standalone `lodging`.
+  // Both legacy forms now remap forward to `lodging`.
+  'lodging-and-tourism': 'lodging',
+  'lodging-tourism': 'lodging',
   'shopping-retail': 'shopping-and-specialty-retail',
   'shopping-specialty-retail': 'shopping-and-specialty-retail',
   'health-wellness': 'medical-services-and-providers',

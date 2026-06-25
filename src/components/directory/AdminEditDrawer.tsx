@@ -74,7 +74,7 @@ const CATEGORIES = [
   "Family, Community & Government",
   "Home Services & Trades",
   "House, Garden & Pets",
-  "Lodging & Tourism",
+  "Lodging",
   "Medical Services & Providers",
   "Real Estate & Rentals",
   "Restaurants, Food & Beverages",

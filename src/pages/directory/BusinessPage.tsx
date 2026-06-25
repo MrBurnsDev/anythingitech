@@ -153,7 +153,7 @@ export default function BusinessPage() {
   // Check if this business type is relevant for IT services CTA
   const showITCTA = [
     "restaurantsand-food-and-beverages",
-    "lodging-and-tourism",
+    "lodging",
     "shopping-and-specialty-retail",
     "beauty-and-wellness",
     "business-and-professional-services",
