@@ -399,6 +399,46 @@
       "permanent": true
     },
     {
+      "source": "/marthas-vineyard/vineyard-haven/lodging-and-tourism/ap-fortes-plumbing-and-heating-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/home-services-and-trades/ap-fortes-plumbing-and-heating-vineyard-haven",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/vineyard-haven/lodging/ap-fortes-plumbing-and-heating-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/home-services-and-trades/ap-fortes-plumbing-and-heating-vineyard-haven",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/vineyard-haven/lodging-and-tourism/callahan-plumbing-and-heating-inc-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/home-services-and-trades/callahan-plumbing-and-heating-inc-vineyard-haven",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/vineyard-haven/lodging/callahan-plumbing-and-heating-inc-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/home-services-and-trades/callahan-plumbing-and-heating-inc-vineyard-haven",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/vineyard-haven/lodging-and-tourism/lowe-energy-design-inc-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/building-and-construction/lowe-energy-design-inc-vineyard-haven",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/vineyard-haven/lodging/lowe-energy-design-inc-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/building-and-construction/lowe-energy-design-inc-vineyard-haven",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/vineyard-haven/lodging-and-tourism/marthas-bike-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/sports-and-recreation/marthas-bike-vineyard-haven",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/vineyard-haven/lodging/marthas-bike-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/sports-and-recreation/marthas-bike-vineyard-haven",
+      "permanent": true
+    },
+    {
       "source": "/marthas-vineyard/chilmark/restaurants-food-beverages/chilmark-tavern-chilmark",
       "destination": "/marthas-vineyard/chilmark/restaurants-food-beverages/chilmarktaverncom-chilmark",
       "permanent": true
