@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-06-25T13:04:29.933Z",
+  "exportedAt": "2026-06-27T10:35:31.045Z",
   "totalBusinesses": 304,
   "byTown": {
     "vineyard-haven": 91,
@@ -12,13 +12,13 @@
   "byType": {
     "arts-and-entertainment": 14,
     "beauty-and-wellness": 17,
-    "building-and-construction": 1,
+    "building-and-construction": 2,
     "business-and-professional-services": 7,
-    "family-community-government": 9,
-    "home-services-and-trades": 8,
-    "lodging": 29,
-    "medical-services-and-providers": 6,
-    "restaurants-food-beverages": 117,
+    "family-community-government": 8,
+    "home-services-and-trades": 9,
+    "lodging": 32,
+    "medical-services-and-providers": 5,
+    "restaurants-food-beverages": 116,
     "shopping-and-specialty-retail": 59,
     "sports-and-recreation": 1
   },

@@ -41,9 +41,9 @@
     "description": "Builders, contractors, and construction trades serving Martha's Vineyard homeowners and businesses.",
     "shortDescription": "Builders, contractors, and trades",
     "seoDescription": "Find building and construction services on Martha's Vineyard. Local builders, contractors, and skilled trades.",
-    "businessCount": 1,
+    "businessCount": 2,
     "byTown": {
-      "vineyard-haven": 1
+      "vineyard-haven": 2
     }
   },
   {
@@ -67,9 +67,9 @@
     "description": "Community organizations, nonprofits, and government services on Martha's Vineyard.",
     "shortDescription": "Community, nonprofits, and government",
     "seoDescription": "Find community, family, and government resources on Martha's Vineyard. Nonprofits, civic services, and local organizations.",
-    "businessCount": 9,
+    "businessCount": 8,
     "byTown": {
-      "vineyard-haven": 2,
+      "vineyard-haven": 1,
       "edgartown": 2,
       "oak-bluffs": 2,
       "west-tisbury": 2,
@@ -84,9 +84,9 @@
     "description": "Home maintenance, repair, and trade services for island homeowners.",
     "shortDescription": "Home maintenance and trade services",
     "seoDescription": "Find home services and trades on Martha's Vineyard. Local handymen, painters, electricians, plumbers, and specialty trades.",
-    "businessCount": 8,
+    "businessCount": 9,
     "byTown": {
-      "vineyard-haven": 4,
+      "vineyard-haven": 5,
       "edgartown": 3,
       "oak-bluffs": 1
     }
@@ -99,13 +99,13 @@
     "description": "Historic inns, boutique hotels, B&Bs, and vacation rentals across Martha's Vineyard.",
     "shortDescription": "Hotels, inns, B&Bs, and vacation rentals",
     "seoDescription": "Find lodging on Martha's Vineyard. Browse hotels, inns, bed & breakfasts, and vacation rentals across all island towns.",
-    "businessCount": 29,
+    "businessCount": 32,
     "byTown": {
-      "vineyard-haven": 4,
+      "vineyard-haven": 5,
       "edgartown": 12,
-      "oak-bluffs": 10,
+      "oak-bluffs": 11,
       "chilmark": 2,
-      "aquinnah": 1
+      "aquinnah": 2
     }
   },
   {
@@ -116,9 +116,9 @@
     "description": "Doctors, dentists, physical therapy, and medical providers serving the island.",
     "shortDescription": "Medical, dental, and health providers",
     "seoDescription": "Find medical services and providers on Martha's Vineyard. Doctors, dentists, urgent care, and specialty health providers.",
-    "businessCount": 6,
+    "businessCount": 5,
     "byTown": {
-      "vineyard-haven": 5,
+      "vineyard-haven": 4,
       "edgartown": 1
     }
   },
@@ -130,14 +130,14 @@
     "description": "From waterfront seafood shacks to fine dining establishments, Martha's Vineyard offers exceptional dining for every taste and occasion.",
     "shortDescription": "Restaurants, cafes, and food purveyors",
     "seoDescription": "Find restaurants on Martha's Vineyard. Browse local dining options from casual seafood to fine dining across all island towns.",
-    "businessCount": 117,
+    "businessCount": 116,
     "byTown": {
       "vineyard-haven": 22,
       "edgartown": 41,
       "oak-bluffs": 31,
       "west-tisbury": 8,
       "chilmark": 7,
-      "aquinnah": 2
+      "aquinnah": 1
     }
   },
   {

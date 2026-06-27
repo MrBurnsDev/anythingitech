@@ -8,12 +8,12 @@
     "businessTypes": {
       "arts-and-entertainment": 3,
       "beauty-and-wellness": 5,
-      "building-and-construction": 1,
+      "building-and-construction": 2,
       "business-and-professional-services": 5,
-      "family-community-government": 2,
-      "home-services-and-trades": 4,
-      "lodging": 4,
-      "medical-services-and-providers": 5,
+      "family-community-government": 1,
+      "home-services-and-trades": 5,
+      "lodging": 5,
+      "medical-services-and-providers": 4,
       "restaurants-food-beverages": 22,
       "shopping-and-specialty-retail": 24,
       "sports-and-recreation": 1
@@ -27,7 +27,6 @@
       "Healthcare",
       "Home Services & Trades",
       "Lodging",
-      "Lodging & Tourism",
       "Medical Services & Providers",
       "Other",
       "Professional Services",
@@ -62,7 +61,6 @@
       "Health & Wellness",
       "Healthcare",
       "Lodging",
-      "Lodging & Tourism",
       "Other",
       "Restaurant",
       "Restaurants, Food & Beverages",
@@ -81,7 +79,7 @@
       "beauty-and-wellness": 2,
       "family-community-government": 2,
       "home-services-and-trades": 1,
-      "lodging": 10,
+      "lodging": 11,
       "restaurants-food-beverages": 31,
       "shopping-and-specialty-retail": 8
     },
@@ -153,8 +151,8 @@
     "description": "Home to the Gay Head Cliffs, the Wampanoag Tribe, artisan shops, and dramatic ocean views.",
     "businessCount": 5,
     "businessTypes": {
-      "lodging": 1,
-      "restaurants-food-beverages": 2,
+      "lodging": 2,
+      "restaurants-food-beverages": 1,
       "shopping-and-specialty-retail": 2
     },
     "categories": [

@@ -439,6 +439,21 @@
       "permanent": true
     },
     {
+      "source": "/marthas-vineyard/aquinnah/restaurants-food-beverages/outermost-inn-aquinnah",
+      "destination": "/marthas-vineyard/aquinnah/lodging/outermost-inn-aquinnah",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/vineyard-haven/family-community-government/brissette-electric-inc-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/home-services-and-trades/brissette-electric-inc-vineyard-haven",
+      "permanent": true
+    },
+    {
+      "source": "/marthas-vineyard/vineyard-haven/medical-services-and-providers/hutker-architects-inc-vineyard-haven",
+      "destination": "/marthas-vineyard/vineyard-haven/building-and-construction/hutker-architects-inc-vineyard-haven",
+      "permanent": true
+    },
+    {
       "source": "/marthas-vineyard/chilmark/restaurants-food-beverages/chilmark-tavern-chilmark",
       "destination": "/marthas-vineyard/chilmark/restaurants-food-beverages/chilmarktaverncom-chilmark",
       "permanent": true
