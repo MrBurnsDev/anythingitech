@@ -1,0 +1,10 @@
+id,name,current_category,suggested_category,tier,confidence,reasoning,website
+677,Brissette Electric Inc.,Community,home-services-and-trades,Tier 4,high,name matches property/contractor (\belectric\b),http://briselectric.com/
+4,Harbor View Hotel,Lodging & Tourism,lodging,Tier 1,high,name matches lodging (\bhotel\b),https://www.harbor-view.com
+683,Hutker Architects INC,Healthcare,building-and-construction,Tier 4,high,name matches property/contractor (\barchitect),http://www.hutkerarchitects.com/
+401,Inkwell Beach House,Other,lodging,Tier 1,high,name has 'house' + meta confirms lodging (beach house),http://inkwellbeach.com/
+38,Outermost Inn,Restaurant,lodging,Tier 1,high,name matches lodging (\binn\b),http://outermostinn.com/
+697,The Beach House of MV,Shopping & Retail,lodging,Tier 1,high,name has 'house' + meta confirms lodging (beach house),https://thebeachhouseofmv.com/
+5,The Mansion House,Lodging & Tourism,lodging,Tier 1,high,name has 'house' + meta confirms lodging (inn),https://www.mvmansionhouse.com
+448,Vineyard Harbor Motel,Other,lodging,Tier 1,high,name matches lodging (\bmotel\b),http://vineyardharbormotel.us/
+119,Winnetu Oceanside Resort,Lodging & Tourism,lodging,Tier 1,high,name matches lodging (\bresort\b),http://winnetu.com/
