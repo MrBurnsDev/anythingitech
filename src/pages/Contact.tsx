@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
@@ -8,8 +8,82 @@ import { Label } from "@/components/ui/label";
 import { MapPin, Clock, ArrowRight, Loader2, Phone, MessageSquare } from "lucide-react";
 import { toast } from "sonner";
 
+// Cloudflare Turnstile site key — public by design (safe to ship to browser).
+// Set VITE_CLOUDFLARE_TURNSTILE_SITE_KEY in .env / Vercel env.
+const TURNSTILE_SITE_KEY = import.meta.env.VITE_CLOUDFLARE_TURNSTILE_SITE_KEY as string | undefined;
+
+const TOWNS = [
+  "Aquinnah",
+  "Chilmark",
+  "Edgartown",
+  "Oak Bluffs",
+  "Vineyard Haven",
+  "West Tisbury",
+  "Other / Not sure",
+] as const;
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (
+        container: HTMLElement,
+        opts: {
+          sitekey: string;
+          callback: (token: string) => void;
+          "expired-callback"?: () => void;
+          "error-callback"?: () => void;
+          size?: "normal" | "compact" | "invisible" | "flexible";
+          appearance?: "always" | "execute" | "interaction-only";
+        }
+      ) => string;
+      reset: (widgetId?: string) => void;
+    };
+  }
+}
+
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formLoadedAtRef = useRef<number>(Date.now());
+  const turnstileTokenRef = useRef<string>("");
+  const turnstileWidgetRef = useRef<string>("");
+  const turnstileContainerRef = useRef<HTMLDivElement>(null);
+
+  // Mount Turnstile in managed mode. Renders an unobtrusive widget that
+  // self-resolves for most users; only shows a challenge when Cloudflare
+  // detects suspicious behavior.
+  useEffect(() => {
+    formLoadedAtRef.current = Date.now();
+    if (!TURNSTILE_SITE_KEY) return;
+
+    const SCRIPT_ID = "cf-turnstile-script";
+    const renderWidget = () => {
+      if (!window.turnstile || !turnstileContainerRef.current) return;
+      // Avoid double-render in StrictMode
+      if (turnstileWidgetRef.current) return;
+      turnstileWidgetRef.current = window.turnstile.render(turnstileContainerRef.current, {
+        sitekey: TURNSTILE_SITE_KEY,
+        size: "flexible",
+        appearance: "interaction-only",
+        callback: (token: string) => { turnstileTokenRef.current = token; },
+        "expired-callback": () => { turnstileTokenRef.current = ""; },
+        "error-callback": () => { turnstileTokenRef.current = ""; },
+      });
+    };
+
+    if (window.turnstile) {
+      renderWidget();
+      return;
+    }
+    if (!document.getElementById(SCRIPT_ID)) {
+      const s = document.createElement("script");
+      s.id = SCRIPT_ID;
+      s.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      s.async = true;
+      s.defer = true;
+      s.onload = renderWidget;
+      document.head.appendChild(s);
+    }
+  }, []);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -18,21 +92,31 @@ const Contact = () => {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    // Convert FormData to JSON
-    const data = Object.fromEntries(formData.entries());
+    // Build payload + spam-protection signals
+    const data: Record<string, unknown> = Object.fromEntries(formData.entries());
+    data.form_loaded_at = formLoadedAtRef.current;
+    data.turnstile_token = turnstileTokenRef.current;
 
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
       });
 
       if (response.ok) {
         toast.success("Thanks — we'll be in touch within one business day.");
         form.reset();
+        // Reset Turnstile so user can submit again
+        turnstileTokenRef.current = "";
+        if (window.turnstile && turnstileWidgetRef.current) {
+          window.turnstile.reset(turnstileWidgetRef.current);
+        }
+      } else if (response.status === 429) {
+        toast.error("You've sent a few messages recently — please wait a bit before sending another.");
+      } else if (response.status === 400) {
+        // Generic — covers turnstile_failed and validation_failed
+        toast.error("Please try submitting again, or call (508) 560-3510.");
       } else {
         toast.error("Something went wrong. Please try again or call (508) 560-3510.");
       }
@@ -87,7 +171,15 @@ const Contact = () => {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="town" className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Town</Label>
-                <Input id="town" name="town" className="h-12 rounded-md bg-background" placeholder="Edgartown" />
+                <select
+                  id="town"
+                  name="town"
+                  defaultValue=""
+                  className="h-12 w-full rounded-md border border-input bg-background px-3 text-sm"
+                >
+                  <option value="">Select a town</option>
+                  {TOWNS.map((t) => <option key={t} value={t}>{t}</option>)}
+                </select>
               </div>
             </div>
 
@@ -99,6 +191,7 @@ const Contact = () => {
                 <option>Smart Home & Sonos</option>
                 <option>TV, Audio & Home Tech</option>
                 <option>Business IT Support</option>
+                <option>3D Printing & Custom Fabrication</option>
                 <option>Something else / not sure</option>
               </select>
             </div>
@@ -107,6 +200,39 @@ const Contact = () => {
               <Label htmlFor="message" className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Tell us about your project</Label>
               <Textarea id="message" name="message" rows={6} className="rounded-md bg-background resize-none" placeholder="A few sentences about what you'd like help with..." />
             </div>
+
+            {/*
+              Honeypot field. Visually hidden, hidden from assistive tech, and
+              flagged to autofill systems as off. Real users will never touch
+              this; bots that auto-fill every input will, and the server will
+              silently drop their submission.
+            */}
+            <div
+              aria-hidden="true"
+              style={{
+                position: "absolute",
+                left: "-10000px",
+                top: "auto",
+                width: "1px",
+                height: "1px",
+                overflow: "hidden",
+              }}
+            >
+              <label htmlFor="company_website">Company website (leave blank)</label>
+              <input
+                id="company_website"
+                name="company_website"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
+
+            {/* Cloudflare Turnstile — managed mode. Renders compactly; only
+                shows interaction when Cloudflare detects suspicious behavior. */}
+            {TURNSTILE_SITE_KEY && (
+              <div ref={turnstileContainerRef} className="mt-6" />
+            )}
 
             <div className="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <p className="text-xs text-muted-foreground">We respond within one business day.</p>
