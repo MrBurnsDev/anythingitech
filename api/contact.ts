@@ -65,11 +65,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   // ---- 4. Validation -------------------------------------------------------
   const v = validateContact(body);
   if (!v.ok) {
+    // Use 'errors' in v guard for portable narrowing across TS/Vercel builds
+    const errs = 'errors' in v ? v.errors : [];
     await recordAttempt({
       ipHash,
       email: typeof body.email === 'string' ? body.email.toLowerCase() : null,
       outcome: 'validation_failed',
-      reason: v.errors.slice(0, 3).join(','),
+      reason: errs.slice(0, 3).join(','),
     });
     return res.status(400).json({ error: 'validation_failed' });
   }
@@ -78,7 +80,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   // ---- 5. Rate limits ------------------------------------------------------
   const rl = await checkRateLimits({ ipHash, email: clean.email });
   if (!rl.ok) {
-    await recordAttempt({ ipHash, email: clean.email, outcome: 'rate_limited', reason: rl.reason });
+    const reason = 'reason' in rl ? rl.reason : undefined;
+    await recordAttempt({ ipHash, email: clean.email, outcome: 'rate_limited', reason });
     // Real-but-rate-limited users get a real message
     return res.status(429).json({ error: 'rate_limited' });
   }

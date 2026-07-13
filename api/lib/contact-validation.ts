@@ -48,11 +48,11 @@ export type CleanContact = {
   message: string;
 };
 
-export function validateContact(raw: ContactInput): {
-  ok: true; clean: CleanContact;
-} | {
-  ok: false; errors: string[];
-} {
+export type ValidateResult =
+  | { ok: true; clean: CleanContact }
+  | { ok: false; errors: string[] };
+
+export function validateContact(raw: ContactInput): ValidateResult {
   const errors: string[] = [];
   const s = (v: unknown) => (typeof v === 'string' ? v.trim() : '');
 
