@@ -22,9 +22,12 @@
 
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
-import { verifyTurnstile } from './lib/turnstile.js';
-import { validateContact, spamScore, type CleanContact } from './lib/contact-validation.js';
-import { checkRateLimits, recordAttempt, hashIp, clientIp } from './lib/contact-rate-limit.js';
+// _lib rather than lib: Vercel treats underscore-prefixed dirs under api/
+// as private and doesn't create serverless functions from them. Helper
+// modules live here so they don't count against Hobby's 12-function limit.
+import { verifyTurnstile } from './_lib/turnstile.js';
+import { validateContact, spamScore, type CleanContact } from './_lib/contact-validation.js';
+import { checkRateLimits, recordAttempt, hashIp, clientIp } from './_lib/contact-rate-limit.js';
 
 const SUCCESS_RESPONSE = { success: true };
 const MIN_TIME_ON_PAGE_MS = 4000;
