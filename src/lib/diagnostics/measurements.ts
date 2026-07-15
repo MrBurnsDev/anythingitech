@@ -263,7 +263,7 @@ export async function measureReachabilityAndIp(
     out.push(make("captive_portal_suspected", res.ok && !looksLikeTrace, true));
     if (looksLikeTrace) {
       const ip = /(?:^|\n)ip=([^\n]+)/.exec(text)?.[1]?.trim();
-      if (ip) out.push(make("public_ip" as MetricKey, ip, true, { metadata: { source: "trace" } }));
+      if (ip) out.push(make("public_ip", ip, true, { metadata: { source: "trace" } }));
     }
   } catch (e) {
     out.push(

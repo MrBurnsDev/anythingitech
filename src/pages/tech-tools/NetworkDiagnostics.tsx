@@ -6,6 +6,7 @@ import {
   ArrowUp,
   CheckCircle2,
   ChevronDown,
+  FileSpreadsheet,
   Gauge,
   Info,
   Loader2,
@@ -32,8 +33,10 @@ import { cn } from "@/lib/utils";
 import {
   compareSnapshots,
   deleteSession,
+  googleSheetsConfigured,
   listSessions,
   runAssessment,
+  saveAssessmentToSheets,
   saveSession,
   summarizeComparison,
   STEP_SEQUENCE,
@@ -112,6 +115,9 @@ const NetworkDiagnostics = () => {
   const [history, setHistory] = useState<StoredSession[]>([]);
   const [baselineId, setBaselineId] = useState<string | null>(null);
   const [saved, setSaved] = useState(false);
+  const [sheetsState, setSheetsState] = useState<"idle" | "saving" | "saved" | "error">("idle");
+  const [sheetsError, setSheetsError] = useState<string | null>(null);
+  const sheetsEnabled = googleSheetsConfigured();
   const abortRef = useRef<AbortController | null>(null);
 
   useEffect(() => {
@@ -139,6 +145,19 @@ const NetworkDiagnostics = () => {
     [],
   );
 
+  const handleSheets = useCallback(async () => {
+    if (!result) return;
+    setSheetsState("saving");
+    setSheetsError(null);
+    try {
+      await saveAssessmentToSheets(result, label);
+      setSheetsState("saved");
+    } catch (e) {
+      setSheetsState("error");
+      setSheetsError(e instanceof Error ? e.message : "Could not save to Google Sheets.");
+    }
+  }, [result, label]);
+
   const baseline = useMemo(
     () => history.find((s) => s.id === baselineId) ?? null,
     [history, baselineId],
@@ -155,6 +174,8 @@ const NetworkDiagnostics = () => {
     setError(null);
     setProgress(null);
     setSaved(false);
+    setSheetsState("idle");
+    setSheetsError(null);
     const controller = new AbortController();
     abortRef.current = controller;
     try {
@@ -430,7 +451,18 @@ const NetworkDiagnostics = () => {
                   onAudience={setAudience}
                   onSave={handleSave}
                   saved={saved}
+                  sheetsEnabled={sheetsEnabled}
+                  sheetsState={sheetsState}
+                  onSheets={handleSheets}
                 />
+
+                {sheetsError && (
+                  <Alert variant="destructive" className="print:hidden">
+                    <AlertTriangle className="h-4 w-4" />
+                    <AlertTitle>Couldn't save to Google Sheets</AlertTitle>
+                    <AlertDescription>{sheetsError}</AlertDescription>
+                  </Alert>
+                )}
 
                 {comparison && baseline && (
                   <ComparisonCard deltas={comparison} baselineLabel={baseline.label} />
@@ -488,12 +520,18 @@ function ResultsHeader({
   onAudience,
   onSave,
   saved,
+  sheetsEnabled,
+  sheetsState,
+  onSheets,
 }: {
   result: AssessmentResult;
   audience: Audience;
   onAudience: (a: Audience) => void;
   onSave: () => void;
   saved: boolean;
+  sheetsEnabled: boolean;
+  sheetsState: "idle" | "saving" | "saved" | "error";
+  onSheets: () => void;
 }) {
   const snap = result.snapshot;
   const stat = (key: string): string => {
@@ -538,6 +576,28 @@ function ResultsHeader({
               {saved ? <CheckCircle2 className="h-4 w-4 text-emerald-500" /> : <Save className="h-4 w-4" />}
               {saved ? "Saved" : "Save"}
             </Button>
+            {sheetsEnabled && (
+              <Button
+                variant="outline"
+                size="sm"
+                className="rounded-full"
+                onClick={onSheets}
+                disabled={sheetsState === "saving" || sheetsState === "saved"}
+              >
+                {sheetsState === "saving" ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : sheetsState === "saved" ? (
+                  <CheckCircle2 className="h-4 w-4 text-emerald-500" />
+                ) : (
+                  <FileSpreadsheet className="h-4 w-4" />
+                )}
+                {sheetsState === "saved"
+                  ? "In Sheets"
+                  : sheetsState === "saving"
+                    ? "Saving…"
+                    : "Google Sheets"}
+              </Button>
+            )}
             <Button variant="outline" size="sm" className="rounded-full" onClick={() => window.print()}>
               <Printer className="h-4 w-4" />
               Report

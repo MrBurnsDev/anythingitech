@@ -15,5 +15,6 @@ export * from "./config";
 export * from "./rules";
 export * from "./compare";
 export * from "./history";
+export * from "./googleSheets";
 export * from "./measurements";
 export * from "./runAssessment";

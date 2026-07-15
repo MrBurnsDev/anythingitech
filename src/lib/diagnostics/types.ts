@@ -47,6 +47,7 @@ export type MetricKey =
   | "captive_portal_suspected"
   | "ipv4_available"
   | "ipv6_available"
+  | "public_ip"
   // Technician-entered context
   | "expected_download_mbps"
   | "expected_upload_mbps"
