@@ -42,26 +42,3 @@ export const diagnosticsConfig: DiagnosticsConfig = {
 
 /** Semantic version of the rules library. Stored with every session (spec §7). */
 export const RULES_VERSION = "0.1.0";
-
-/**
- * Google Sheets save target (Sheets API + Google sign-in), mirroring the
- * ClientsDesk approach: one spreadsheet for session summaries, one for
- * individual findings. All values come from env so no secrets are committed;
- * the OAuth client ID is public by design. When unset, the "Save to Google
- * Sheets" action is hidden and the tool still works fully offline.
- */
-export interface GoogleSheetsConfig {
-  clientId: string;
-  sessionsSpreadsheetId: string;
-  findingsSpreadsheetId: string;
-  sessionsSheet: string;
-  findingsSheet: string;
-}
-
-export const googleSheetsConfig: GoogleSheetsConfig = {
-  clientId: env("VITE_GOOGLE_CLIENT_ID") ?? "",
-  sessionsSpreadsheetId: env("VITE_SHEETS_SESSIONS_ID") ?? "",
-  findingsSpreadsheetId: env("VITE_SHEETS_FINDINGS_ID") ?? "",
-  sessionsSheet: env("VITE_SHEETS_SESSIONS_TAB") ?? "Sessions",
-  findingsSheet: env("VITE_SHEETS_FINDINGS_TAB") ?? "Findings",
-};
