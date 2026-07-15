@@ -132,9 +132,11 @@ export interface ThroughputOptions {
 }
 
 const DOWNLOAD_DEFAULTS: Required<ThroughputOptions> = {
-  streams: 6,
-  warmupMs: 1200,
-  measureMs: 4000,
+  // More streams + a longer steady-state window to saturate fast, high-RTT
+  // links that a handful of connections leave half-empty.
+  streams: 10,
+  warmupMs: 1500,
+  measureMs: 5000,
   // Runaway backstop only — high enough that the time window governs a normal
   // test on anything up to ~gigabit, so the cap never truncates the sample.
   maxBytes: 2_000_000_000,
@@ -154,6 +156,26 @@ const UPLOAD_DEFAULTS: Required<ThroughputOptions> = {
 export function throughputMbps(bytes: number, ms: number): number {
   return ms > 0 ? (bytes * 8) / (ms / 1000) / 1_000_000 : 0;
 }
+
+/** How much data the throughput tests may use, chosen by the technician. */
+export type DataMode = "unlimited" | "metered";
+
+/**
+ * Test intensity per connection type. `unlimited` (Wi-Fi) uses the full
+ * defaults for best accuracy; `metered` (cellular) shortens the window and
+ * hard-caps bytes so a run costs little paid data — trading some precision on
+ * fast links for a much smaller footprint.
+ */
+export const DATA_PROFILES: Record<
+  DataMode,
+  { download: ThroughputOptions; upload: ThroughputOptions }
+> = {
+  unlimited: { download: {}, upload: {} },
+  metered: {
+    download: { streams: 4, warmupMs: 700, measureMs: 2200, maxBytes: 80_000_000 },
+    upload: { streams: 3, warmupMs: 700, measureMs: 2000, maxBytes: 40_000_000 },
+  },
+};
 
 /**
  * Parallel-stream download throughput with a warm-up.

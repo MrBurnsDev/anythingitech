@@ -40,6 +40,7 @@ import {
   type AssessmentContext,
   type AssessmentResult,
   type ConfidenceLevel,
+  type DataMode,
   type Finding,
   type Measurement,
   type MetricDelta,
@@ -118,6 +119,7 @@ const NetworkDiagnostics = () => {
   const [error, setError] = useState<string | null>(null);
   const [showContext, setShowContext] = useState(false);
   const [context, setContext] = useState<AssessmentContext>({});
+  const [dataMode, setDataMode] = useState<DataMode>("unlimited");
   const [label, setLabel] = useState("");
   const [history, setHistory] = useState<StoredSession[]>([]);
   const [baselineId, setBaselineId] = useState<string | null>(null);
@@ -170,6 +172,7 @@ const NetworkDiagnostics = () => {
     try {
       const res = await runAssessment({
         context,
+        dataMode,
         signal: controller.signal,
         onProgress: (p) => setProgress(p),
       });
@@ -186,7 +189,7 @@ const NetworkDiagnostics = () => {
     } finally {
       abortRef.current = null;
     }
-  }, [context]);
+  }, [context, dataMode]);
 
   const cancel = useCallback(() => abortRef.current?.abort(), []);
 
@@ -247,6 +250,41 @@ const NetworkDiagnostics = () => {
           <div className="lg:col-span-4 space-y-4 print:hidden">
             <Card>
               <CardContent className="pt-6 space-y-4">
+                {/* Connection type → how much data the throughput test may use. */}
+                <div className="space-y-1.5">
+                  <p className="text-xs font-medium text-muted-foreground">Connection</p>
+                  <div className="grid grid-cols-2 gap-1 rounded-full border border-border p-0.5">
+                    {(
+                      [
+                        ["unlimited", "Wi-Fi", "Full test"],
+                        ["metered", "Cellular", "Saves data"],
+                      ] as const
+                    ).map(([mode, title, hint]) => (
+                      <button
+                        key={mode}
+                        type="button"
+                        onClick={() => setDataMode(mode)}
+                        disabled={runState === "running"}
+                        aria-pressed={dataMode === mode}
+                        className={cn(
+                          "rounded-full px-3 py-1.5 text-center transition-colors disabled:opacity-60",
+                          dataMode === mode
+                            ? "bg-primary text-primary-foreground"
+                            : "text-muted-foreground hover:text-foreground",
+                        )}
+                      >
+                        <span className="block text-sm font-medium leading-tight">{title}</span>
+                        <span className="block text-[10px] opacity-70">{hint}</span>
+                      </button>
+                    ))}
+                  </div>
+                  <p className="text-[11px] text-muted-foreground">
+                    {dataMode === "metered"
+                      ? "Lighter test capped at ~120 MB — protects paid data, slightly less precise on fast links."
+                      : "Full-accuracy test; data scales with your speed (up to ~700 MB)."}
+                  </p>
+                </div>
+
                 {runState !== "running" ? (
                   <Button size="lg" className="w-full rounded-full" onClick={start}>
                     <Play className="h-4 w-4" />
