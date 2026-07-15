@@ -135,7 +135,9 @@ const DOWNLOAD_DEFAULTS: Required<ThroughputOptions> = {
   streams: 6,
   warmupMs: 1200,
   measureMs: 4000,
-  maxBytes: 300_000_000,
+  // Runaway backstop only — high enough that the time window governs a normal
+  // test on anything up to ~gigabit, so the cap never truncates the sample.
+  maxBytes: 2_000_000_000,
   chunkBytes: 26_000_000,
 };
 
@@ -143,7 +145,8 @@ const UPLOAD_DEFAULTS: Required<ThroughputOptions> = {
   streams: 4,
   warmupMs: 1200,
   measureMs: 4000,
-  maxBytes: 120_000_000,
+  // Runaway backstop only (see download note).
+  maxBytes: 1_000_000_000,
   chunkBytes: 2_000_000,
 };
 
