@@ -730,7 +730,7 @@ function NetworkInfoCard({ result }: { result: AssessmentResult }) {
     ["ASN", val("asn")],
     ["Location", val("geo")],
     ["Public IPv4", val("public_ipv4")],
-    ["Public IPv6", val("public_ipv6") ?? val("public_ip")],
+    ["Public IPv6", val("public_ipv6")],
     ["Edge (Cloudflare)", val("edge")],
     ["HTTP protocol", val("http_protocol")],
   ];
