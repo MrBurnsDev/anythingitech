@@ -287,7 +287,7 @@ const NetworkDiagnostics = () => {
                   </div>
                   <p className="text-[11px] text-muted-foreground">
                     {dataMode === "metered"
-                      ? "Lighter test capped at ~120 MB — protects paid data, slightly less precise on fast links."
+                      ? "Lighter test capped at ~35 MB — protects paid data, less precise on fast links."
                       : "Full-accuracy test; data scales with your speed (up to ~700 MB)."}
                   </p>
                 </div>
