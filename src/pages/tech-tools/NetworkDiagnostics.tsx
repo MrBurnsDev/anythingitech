@@ -201,7 +201,7 @@ const NetworkDiagnostics = () => {
         canonical="https://anythingitechmv.com/tech-tools/network-diagnostics"
       />
 
-      <section className="pt-28 md:pt-32 pb-10 border-b border-border">
+      <section className="pt-28 md:pt-32 pb-10 border-b border-border print:hidden">
         <div className="container-editorial">
           <p className="text-xs text-muted-foreground mb-4">
             <Link to="/tech-tools" className="hover:text-foreground transition-colors">
@@ -234,7 +234,7 @@ const NetworkDiagnostics = () => {
       <section className="py-10">
         <div className="container-editorial grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Control column */}
-          <div className="lg:col-span-4 space-y-4">
+          <div className="lg:col-span-4 space-y-4 print:hidden">
             <Card>
               <CardContent className="pt-6 space-y-4">
                 {runState !== "running" ? (
@@ -403,6 +403,27 @@ const NetworkDiagnostics = () => {
 
             {result && (
               <>
+                {/* Branded header shown only on the printed / PDF report. */}
+                <div className="hidden print:block mb-6 print-avoid-break">
+                  <div className="flex items-center gap-3">
+                    <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary text-primary-foreground print-exact">
+                      <NodeLogo className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <p className="font-semibold leading-tight">
+                        Node Network Navigator — Network Diagnostics Report
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        Anything iTech MV · anythingitechmv.com · (508) 560-3510
+                      </p>
+                    </div>
+                  </div>
+                  <p className="mt-3 text-sm text-muted-foreground">
+                    {label ? `${label} · ` : ""}
+                    {new Date(result.completedAt).toLocaleString()}
+                  </p>
+                </div>
+
                 <ResultsHeader
                   result={result}
                   audience={audience}
@@ -483,7 +504,7 @@ function ResultsHeader({
     return `${v}${unit ? ` ${unit}` : ""}`;
   };
   return (
-    <Card>
+    <Card className="print-avoid-break">
       <CardContent className="pt-6">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
@@ -549,7 +570,7 @@ function Stat({ label, value }: { label: string; value: string }) {
 function FindingCard({ finding, audience }: { finding: Finding; audience: Audience }) {
   const sev = SEVERITY_META[finding.severity];
   return (
-    <Card>
+    <Card className="print-avoid-break">
       <CardHeader className="pb-3">
         <div className="flex flex-wrap items-center gap-2">
           <span className={cn("h-2.5 w-2.5 rounded-full", sev.dot)} aria-hidden />
@@ -646,7 +667,7 @@ function MeasurementsTable({ measurements }: { measurements: Measurement[] }) {
   for (const m of measurements) byKey.set(m.key, m);
   const rows = [...byKey.values()];
   return (
-    <Card>
+    <Card className="print-avoid-break">
       <CardHeader className="pb-2">
         <CardTitle className="text-base">Raw measurements</CardTitle>
       </CardHeader>
@@ -765,7 +786,7 @@ function HistoryPanel({
 function ComparisonCard({ deltas, baselineLabel }: { deltas: MetricDelta[]; baselineLabel: string }) {
   const rows = deltas.filter((d) => d.direction !== "na");
   return (
-    <Card className="border-primary/30">
+    <Card className="border-primary/30 print-avoid-break">
       <CardHeader className="pb-2">
         <CardTitle className="text-base">Compared to baseline</CardTitle>
         <p className="text-sm text-muted-foreground">
