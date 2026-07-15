@@ -174,8 +174,10 @@ export const DATA_PROFILES: Record<
 > = {
   unlimited: { download: {}, upload: {} },
   metered: {
-    download: { streams: 4, warmupMs: 700, measureMs: 2200, maxBytes: 80_000_000 },
-    upload: { streams: 3, warmupMs: 600, measureMs: 2600, maxBytes: 40_000_000 },
+    // Tight budget (~35 MB/run) to protect paid data — short window + hard
+    // byte cap. Less precise on fast links, but barely dents a plan.
+    download: { streams: 4, warmupMs: 300, measureMs: 1500, maxBytes: 30_000_000 },
+    upload: { streams: 3, warmupMs: 300, measureMs: 1500, maxBytes: 12_000_000 },
   },
 };
 
@@ -227,6 +229,7 @@ export async function measureDownload(
   };
 
   const loadedProbe = sampleLoadedLatency(cfg, controller.signal, warmupMs);
+  const overallStart = now();
   const workers = Array.from({ length: streams }, () => worker());
 
   // Warm-up (discard slow-start); we judge success from the window, not here.
@@ -243,18 +246,33 @@ export async function measureDownload(
   await Promise.allSettled(workers);
   const loaded = await loadedProbe;
 
-  if (windowBytes === 0) {
-    return [make("download_mbps", null, false, { errorCode: "no_data" }), ...loaded];
+  // Normal case: steady-state window. Fallback: a tight byte cap on a very fast
+  // link can fill before the window opens — use the full-transfer average
+  // rather than reporting nothing.
+  if (windowBytes > 0) {
+    return [
+      make("download_mbps", round(throughputMbps(windowBytes, windowMs)), true, {
+        unit: "Mbps",
+        target: url,
+        durationMs: Math.round(windowMs),
+        metadata: { streams, windowBytes, totalBytes },
+      }),
+      ...loaded,
+    ];
   }
-  return [
-    make("download_mbps", round(throughputMbps(windowBytes, windowMs)), true, {
-      unit: "Mbps",
-      target: url,
-      durationMs: Math.round(windowMs),
-      metadata: { streams, windowBytes, totalBytes },
-    }),
-    ...loaded,
-  ];
+  if (totalBytes > 0) {
+    const totalMs = now() - overallStart;
+    return [
+      make("download_mbps", round(throughputMbps(totalBytes, totalMs)), true, {
+        unit: "Mbps",
+        target: url,
+        durationMs: Math.round(totalMs),
+        metadata: { streams, totalBytes, fallback: true },
+      }),
+      ...loaded,
+    ];
+  }
+  return [make("download_mbps", null, false, { errorCode: "no_data" }), ...loaded];
 }
 
 /** Latency probes issued while streams saturate the link → loaded latency. */
@@ -328,6 +346,7 @@ export async function measureUpload(
     }
   };
 
+  const overallStart = now();
   const workers = Array.from({ length: streams }, () => worker());
 
   // Warm-up (discard slow-start); success is judged from the window below, not
@@ -344,17 +363,29 @@ export async function measureUpload(
   controller.abort();
   await Promise.allSettled(workers);
 
-  if (windowBytes === 0) {
-    return [make("upload_mbps", null, false, { errorCode: "no_data" })];
+  if (windowBytes > 0) {
+    return [
+      make("upload_mbps", round(throughputMbps(windowBytes, windowMs)), true, {
+        unit: "Mbps",
+        target: cfg.uploadUrl,
+        durationMs: Math.round(windowMs),
+        metadata: { streams, windowBytes },
+      }),
+    ];
   }
-  return [
-    make("upload_mbps", round(throughputMbps(windowBytes, windowMs)), true, {
-      unit: "Mbps",
-      target: cfg.uploadUrl,
-      durationMs: Math.round(windowMs),
-      metadata: { streams, windowBytes },
-    }),
-  ];
+  // Fallback: byte cap filled before the window opened → full-transfer average.
+  if (totalBytes > 0) {
+    const totalMs = now() - overallStart;
+    return [
+      make("upload_mbps", round(throughputMbps(totalBytes, totalMs)), true, {
+        unit: "Mbps",
+        target: cfg.uploadUrl,
+        durationMs: Math.round(totalMs),
+        metadata: { streams, totalBytes, fallback: true },
+      }),
+    ];
+  }
+  return [make("upload_mbps", null, false, { errorCode: "no_data" })];
 }
 
 /**
