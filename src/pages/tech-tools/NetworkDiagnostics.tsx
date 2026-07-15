@@ -1,19 +1,25 @@
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  Activity,
   AlertTriangle,
+  ArrowDown,
+  ArrowUp,
   CheckCircle2,
   ChevronDown,
   Gauge,
   Info,
   Loader2,
+  Minus,
   Play,
   Printer,
+  Save,
   Square,
+  Target,
+  Trash2,
   XCircle,
 } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
+import { NodeLogo } from "@/components/NodeLogo";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -24,16 +30,23 @@ import { Separator } from "@/components/ui/separator";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { cn } from "@/lib/utils";
 import {
+  compareSnapshots,
+  deleteSession,
+  listSessions,
   runAssessment,
+  saveSession,
+  summarizeComparison,
   STEP_SEQUENCE,
   type AssessmentContext,
   type AssessmentResult,
   type ConfidenceLevel,
   type Finding,
   type Measurement,
+  type MetricDelta,
   type Severity,
   type StepId,
   type StepProgress,
+  type StoredSession,
 } from "@/lib/diagnostics";
 
 /**
@@ -95,18 +108,53 @@ const NetworkDiagnostics = () => {
   const [error, setError] = useState<string | null>(null);
   const [showContext, setShowContext] = useState(false);
   const [context, setContext] = useState<AssessmentContext>({});
+  const [label, setLabel] = useState("");
+  const [history, setHistory] = useState<StoredSession[]>([]);
+  const [baselineId, setBaselineId] = useState<string | null>(null);
+  const [saved, setSaved] = useState(false);
   const abortRef = useRef<AbortController | null>(null);
+
+  useEffect(() => {
+    setHistory(listSessions());
+  }, []);
 
   const numeric = (v: string): number | undefined => {
     const n = Number(v);
     return v.trim() !== "" && Number.isFinite(n) && n >= 0 ? n : undefined;
   };
 
+  const handleSave = useCallback(() => {
+    if (!result) return;
+    saveSession(result, label);
+    setSaved(true);
+    setHistory(listSessions());
+  }, [result, label]);
+
+  const handleDelete = useCallback(
+    (id: string) => {
+      deleteSession(id);
+      setBaselineId((cur) => (cur === id ? null : cur));
+      setHistory(listSessions());
+    },
+    [],
+  );
+
+  const baseline = useMemo(
+    () => history.find((s) => s.id === baselineId) ?? null,
+    [history, baselineId],
+  );
+
+  const comparison = useMemo<MetricDelta[] | null>(
+    () => (result && baseline ? compareSnapshots(result.snapshot, baseline.result.snapshot) : null),
+    [result, baseline],
+  );
+
   const start = useCallback(async () => {
     setRunState("running");
     setResult(null);
     setError(null);
     setProgress(null);
+    setSaved(false);
     const controller = new AbortController();
     abortRef.current = controller;
     try {
@@ -164,7 +212,7 @@ const NetworkDiagnostics = () => {
           </p>
           <div className="flex items-start gap-4">
             <div className="hidden sm:grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-primary text-primary-foreground">
-              <Activity className="h-6 w-6" />
+              <NodeLogo className="h-7 w-7" />
             </div>
             <div>
               <h1 className="display-lg">
@@ -225,6 +273,18 @@ const NetworkDiagnostics = () => {
                       Entering the expected plan and link speed unlocks provisioning and
                       100&nbsp;Mbps-ceiling findings.
                     </p>
+                    <div className="space-y-1.5">
+                      <Label htmlFor="site-label" className="text-xs">
+                        Site / room label
+                      </Label>
+                      <Input
+                        id="site-label"
+                        type="text"
+                        placeholder="e.g. Smith — living room"
+                        value={label}
+                        onChange={(e) => setLabel(e.target.value)}
+                      />
+                    </div>
                     <div className="space-y-1.5">
                       <Label htmlFor="exp-down" className="text-xs">
                         Expected download (Mbps)
@@ -320,6 +380,13 @@ const NetworkDiagnostics = () => {
                 those live in the native app.
               </AlertDescription>
             </Alert>
+
+            <HistoryPanel
+              sessions={history}
+              baselineId={baselineId}
+              onBaseline={(id) => setBaselineId((cur) => (cur === id ? null : id))}
+              onDelete={handleDelete}
+            />
           </div>
 
           {/* Results column */}
@@ -340,7 +407,13 @@ const NetworkDiagnostics = () => {
                   result={result}
                   audience={audience}
                   onAudience={setAudience}
+                  onSave={handleSave}
+                  saved={saved}
                 />
+
+                {comparison && baseline && (
+                  <ComparisonCard deltas={comparison} baselineLabel={baseline.label} />
+                )}
 
                 {result.findings.length === 0 ? (
                   <Alert>
@@ -392,10 +465,14 @@ function ResultsHeader({
   result,
   audience,
   onAudience,
+  onSave,
+  saved,
 }: {
   result: AssessmentResult;
   audience: Audience;
   onAudience: (a: Audience) => void;
+  onSave: () => void;
+  saved: boolean;
 }) {
   const snap = result.snapshot;
   const stat = (key: string): string => {
@@ -430,6 +507,16 @@ function ResultsHeader({
                 </button>
               ))}
             </div>
+            <Button
+              variant="outline"
+              size="sm"
+              className="rounded-full"
+              onClick={onSave}
+              disabled={saved}
+            >
+              {saved ? <CheckCircle2 className="h-4 w-4 text-emerald-500" /> : <Save className="h-4 w-4" />}
+              {saved ? "Saved" : "Save"}
+            </Button>
             <Button variant="outline" size="sm" className="rounded-full" onClick={() => window.print()}>
               <Printer className="h-4 w-4" />
               Report
@@ -581,6 +668,150 @@ function MeasurementsTable({ measurements }: { measurements: Measurement[] }) {
                           {m.errorCode ?? "n/a"}
                         </span>
                       )}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+function formatWhen(ts: number): string {
+  const d = new Date(ts);
+  return `${d.toLocaleDateString([], { month: "short", day: "numeric" })}, ${d.toLocaleTimeString(
+    [],
+    { hour: "2-digit", minute: "2-digit" },
+  )}`;
+}
+
+function HistoryPanel({
+  sessions,
+  baselineId,
+  onBaseline,
+  onDelete,
+}: {
+  sessions: StoredSession[];
+  baselineId: string | null;
+  onBaseline: (id: string) => void;
+  onDelete: (id: string) => void;
+}) {
+  if (sessions.length === 0) return null;
+  return (
+    <Card>
+      <CardHeader className="pb-2">
+        <CardTitle className="text-base">Saved sessions</CardTitle>
+      </CardHeader>
+      <CardContent className="space-y-2">
+        <p className="text-xs text-muted-foreground">
+          Set one as a baseline, then run again to compare before vs. after. Stored on this
+          device only.
+        </p>
+        {sessions.map((s) => {
+          const isBaseline = s.id === baselineId;
+          const dl = s.result.snapshot.download_mbps;
+          const loss = s.result.snapshot.packet_loss_pct;
+          return (
+            <div
+              key={s.id}
+              className={cn(
+                "rounded-md border p-2.5 text-sm transition-colors",
+                isBaseline ? "border-primary bg-primary/5" : "border-border",
+              )}
+            >
+              <div className="flex items-start justify-between gap-2">
+                <div className="min-w-0">
+                  <p className="truncate font-medium">{s.label}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {formatWhen(s.savedAt)}
+                    {typeof dl === "number" && ` · ${dl} Mbps`}
+                    {typeof loss === "number" && ` · ${loss}% loss`}
+                  </p>
+                </div>
+                <div className="flex shrink-0 items-center gap-1">
+                  <button
+                    title={isBaseline ? "Unset baseline" : "Set as baseline"}
+                    aria-pressed={isBaseline}
+                    onClick={() => onBaseline(s.id)}
+                    className={cn(
+                      "grid h-7 w-7 place-items-center rounded-md transition-colors",
+                      isBaseline
+                        ? "bg-primary text-primary-foreground"
+                        : "hover:bg-secondary text-muted-foreground",
+                    )}
+                  >
+                    <Target className="h-3.5 w-3.5" />
+                  </button>
+                  <button
+                    title="Delete session"
+                    onClick={() => onDelete(s.id)}
+                    className="grid h-7 w-7 place-items-center rounded-md text-muted-foreground hover:bg-secondary hover:text-destructive transition-colors"
+                  >
+                    <Trash2 className="h-3.5 w-3.5" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </CardContent>
+    </Card>
+  );
+}
+
+function ComparisonCard({ deltas, baselineLabel }: { deltas: MetricDelta[]; baselineLabel: string }) {
+  const rows = deltas.filter((d) => d.direction !== "na");
+  return (
+    <Card className="border-primary/30">
+      <CardHeader className="pb-2">
+        <CardTitle className="text-base">Compared to baseline</CardTitle>
+        <p className="text-sm text-muted-foreground">
+          vs. <span className="font-medium text-foreground">{baselineLabel}</span> —{" "}
+          {summarizeComparison(deltas)}
+        </p>
+      </CardHeader>
+      <CardContent>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="text-xs uppercase tracking-wide text-muted-foreground">
+                <th className="pb-2 text-left font-medium">Metric</th>
+                <th className="pb-2 text-right font-medium">Baseline</th>
+                <th className="pb-2 text-right font-medium">Now</th>
+                <th className="pb-2 text-right font-medium">Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((d) => {
+                const color =
+                  d.quality === "better"
+                    ? "text-emerald-600"
+                    : d.quality === "worse"
+                      ? "text-destructive"
+                      : "text-muted-foreground";
+                const Icon =
+                  d.direction === "up" ? ArrowUp : d.direction === "down" ? ArrowDown : Minus;
+                return (
+                  <tr key={d.key} className="border-t border-border/60">
+                    <td className="py-2 pr-4 text-muted-foreground">{d.label}</td>
+                    <td className="py-2 text-right tabular-nums">
+                      {d.baseline}
+                      {d.unit ? ` ${d.unit}` : ""}
+                    </td>
+                    <td className="py-2 text-right font-medium tabular-nums">
+                      {d.current}
+                      {d.unit ? ` ${d.unit}` : ""}
+                    </td>
+                    <td className={cn("py-2 text-right tabular-nums", color)}>
+                      <span className="inline-flex items-center justify-end gap-1">
+                        <Icon className="h-3.5 w-3.5" />
+                        {d.deltaPct === undefined
+                          ? "—"
+                          : `${d.deltaPct > 0 ? "+" : ""}${Math.round(d.deltaPct)}%`}
+                      </span>
                     </td>
                   </tr>
                 );

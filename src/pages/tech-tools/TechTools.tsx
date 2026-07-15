@@ -1,6 +1,8 @@
+import type { ComponentType } from "react";
 import { Link } from "react-router-dom";
-import { Activity, ArrowUpRight, Wrench } from "lucide-react";
+import { ArrowUpRight, Wrench } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
+import { NodeLogo } from "@/components/NodeLogo";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -11,7 +13,7 @@ interface Tool {
   tagline: string;
   description: string;
   to: string;
-  icon: typeof Activity;
+  icon: ComponentType<{ className?: string }>;
   status: "live" | "soon";
 }
 
@@ -23,7 +25,7 @@ const TOOLS: Tool[] = [
     description:
       "A one-tap browser assessment of speed, latency, jitter, packet loss, DNS, and IPv4/IPv6 — with an interpreted diagnosis that points to the layer most likely at fault and the next test to run.",
     to: "/tech-tools/network-diagnostics",
-    icon: Activity,
+    icon: NodeLogo,
     status: "live",
   },
 ];

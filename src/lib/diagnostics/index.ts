@@ -13,5 +13,7 @@
 export * from "./types";
 export * from "./config";
 export * from "./rules";
+export * from "./compare";
+export * from "./history";
 export * from "./measurements";
 export * from "./runAssessment";
