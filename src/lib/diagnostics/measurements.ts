@@ -118,77 +118,138 @@ export async function measureLatencyJitterLoss(
  * Download throughput. Streams a sized payload and divides bytes by wall time.
  * Also captures loaded latency by firing latency probes during the transfer.
  */
-export async function measureDownload(
-  cfg: DiagnosticsConfig = diagnosticsConfig,
-  bytes = 25_000_000,
-  timeoutMs = 20_000,
-): Promise<Measurement[]> {
-  const url = `${cfg.downloadUrl}${cfg.downloadUrl.includes("?") ? "&" : "?"}bytes=${bytes}`;
-  const start = now();
-
-  // Fire loaded-latency probes concurrently with the download.
-  const loadedProbe = probeLoadedLatency(cfg, timeoutMs);
-
-  try {
-    const res = await fetchWithTimeout(bust(url), { method: "GET", timeoutMs });
-    if (!res.ok || !res.body) {
-      const loaded = await loadedProbe;
-      return [
-        make("download_mbps", null, false, { errorCode: `http_${res.status}` }),
-        ...loaded,
-      ];
-    }
-    const reader = res.body.getReader();
-    let received = 0;
-    for (;;) {
-      const { done, value } = await reader.read();
-      if (done) break;
-      if (value) received += value.byteLength;
-    }
-    const seconds = (now() - start) / 1000;
-    const mbps = seconds > 0 ? (received * 8) / seconds / 1_000_000 : 0;
-    const loaded = await loadedProbe;
-    return [
-      make("download_mbps", round(mbps), true, {
-        unit: "Mbps",
-        target: url,
-        durationMs: Math.round(seconds * 1000),
-        metadata: { bytes: received },
-      }),
-      ...loaded,
-    ];
-  } catch (e) {
-    const loaded = await loadedProbe;
-    return [
-      make("download_mbps", null, false, {
-        errorCode: e instanceof Error ? e.name : "download_failed",
-      }),
-      ...loaded,
-    ];
-  }
+export interface ThroughputOptions {
+  /** Concurrent connections. A single stream can't fill a fast, high-RTT link. */
+  streams?: number;
+  /** Ignore this initial period so TCP slow-start isn't measured. */
+  warmupMs?: number;
+  /** Steady-state measurement window after warm-up. */
+  measureMs?: number;
+  /** Hard cap on bytes moved, to protect metered/cellular plans. */
+  maxBytes?: number;
+  /** Bytes requested/sent per stream iteration. */
+  chunkBytes?: number;
 }
 
-/** Latency probes issued while a download is in flight → loaded latency. */
-async function probeLoadedLatency(
+const DOWNLOAD_DEFAULTS: Required<ThroughputOptions> = {
+  streams: 6,
+  warmupMs: 1200,
+  measureMs: 4000,
+  maxBytes: 300_000_000,
+  chunkBytes: 26_000_000,
+};
+
+const UPLOAD_DEFAULTS: Required<ThroughputOptions> = {
+  streams: 4,
+  warmupMs: 1200,
+  measureMs: 4000,
+  maxBytes: 120_000_000,
+  chunkBytes: 2_000_000,
+};
+
+/** Mbps from a byte count over a duration in milliseconds. */
+export function throughputMbps(bytes: number, ms: number): number {
+  return ms > 0 ? (bytes * 8) / (ms / 1000) / 1_000_000 : 0;
+}
+
+/**
+ * Parallel-stream download throughput with a warm-up.
+ *
+ * A single fetch can't saturate a fast, high-latency link (bandwidth-delay
+ * product), so it reads far below tools like Ookla that open many connections.
+ * We run N concurrent streams, discard the slow-start ramp (warm-up), and
+ * measure aggregate bytes over a steady-state window — while probing latency
+ * under that load so bufferbloat actually surfaces.
+ */
+export async function measureDownload(
+  cfg: DiagnosticsConfig = diagnosticsConfig,
+  options: ThroughputOptions = {},
+): Promise<Measurement[]> {
+  const { streams, warmupMs, measureMs, maxBytes, chunkBytes } = {
+    ...DOWNLOAD_DEFAULTS,
+    ...options,
+  };
+  const url = `${cfg.downloadUrl}${cfg.downloadUrl.includes("?") ? "&" : "?"}bytes=${chunkBytes}`;
+  const controller = new AbortController();
+  let totalBytes = 0;
+  let windowBytes = 0;
+  let measuring = false;
+
+  const worker = async () => {
+    try {
+      while (!controller.signal.aborted && totalBytes < maxBytes) {
+        const res = await fetch(bust(url), { cache: "no-store", signal: controller.signal });
+        if (!res.ok || !res.body) break;
+        const reader = res.body.getReader();
+        for (;;) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          if (value) {
+            totalBytes += value.byteLength;
+            if (measuring) windowBytes += value.byteLength;
+          }
+          if (controller.signal.aborted || totalBytes >= maxBytes) {
+            await reader.cancel().catch(() => undefined);
+            break;
+          }
+        }
+      }
+    } catch {
+      /* aborted or per-stream network error — other streams continue */
+    }
+  };
+
+  const loadedProbe = sampleLoadedLatency(cfg, controller.signal, warmupMs);
+  const workers = Array.from({ length: streams }, () => worker());
+
+  await sleep(warmupMs);
+  if (totalBytes === 0) {
+    controller.abort();
+    await Promise.allSettled(workers);
+    const loaded = await loadedProbe;
+    return [make("download_mbps", null, false, { errorCode: "no_data" }), ...loaded];
+  }
+
+  const windowStart = now();
+  measuring = true;
+  while (now() - windowStart < measureMs && totalBytes < maxBytes && !controller.signal.aborted) {
+    await sleep(100);
+  }
+  measuring = false;
+  const windowMs = now() - windowStart;
+  controller.abort();
+  await Promise.allSettled(workers);
+  const loaded = await loadedProbe;
+
+  return [
+    make("download_mbps", round(throughputMbps(windowBytes, windowMs)), windowBytes > 0, {
+      unit: "Mbps",
+      target: url,
+      durationMs: Math.round(windowMs),
+      metadata: { streams, windowBytes, totalBytes },
+    }),
+    ...loaded,
+  ];
+}
+
+/** Latency probes issued while streams saturate the link → loaded latency. */
+async function sampleLoadedLatency(
   cfg: DiagnosticsConfig,
-  timeoutMs: number,
+  signal: AbortSignal,
+  warmupMs: number,
 ): Promise<Measurement[]> {
   const rtts: number[] = [];
-  const deadline = now() + Math.min(timeoutMs, 8000);
-  // Small delay so the download ramps up before we sample.
-  await sleep(500);
-  while (now() < deadline && rtts.length < 6) {
+  await sleep(warmupMs); // sample only once the link is under load
+  while (!signal.aborted) {
     const start = now();
     try {
-      const res = await fetchWithTimeout(bust(cfg.latencyProbeUrl), {
-        method: "GET",
-        timeoutMs: 4000,
-      });
+      const res = await fetch(bust(cfg.latencyProbeUrl), { cache: "no-store", signal });
       await res.arrayBuffer();
       if (res.ok) rtts.push(now() - start);
     } catch {
-      /* ignore individual failures under load */
+      /* ignore individual failures / abort */
     }
+    if (signal.aborted) break;
     await sleep(200);
   }
   if (rtts.length === 0) return [];
@@ -200,45 +261,75 @@ async function probeLoadedLatency(
   ];
 }
 
-/** Upload throughput. POSTs a random payload and divides by wall time. */
+/**
+ * Parallel-stream upload throughput with a warm-up. Same rationale as download:
+ * one POST under-measures a fast link, and that low reading was tripping a
+ * false "asymmetric upload" finding.
+ */
 export async function measureUpload(
   cfg: DiagnosticsConfig = diagnosticsConfig,
-  bytes = 10_000_000,
-  timeoutMs = 20_000,
+  options: ThroughputOptions = {},
 ): Promise<Measurement[]> {
-  const payload = new Uint8Array(bytes);
+  const { streams, warmupMs, measureMs, maxBytes, chunkBytes } = {
+    ...UPLOAD_DEFAULTS,
+    ...options,
+  };
+  const payload = new Uint8Array(chunkBytes);
   // Non-compressible-ish content so intermediaries can't deflate our timing away.
-  for (let i = 0; i < bytes; i += 4096) payload[i] = (i * 31) & 0xff;
+  for (let i = 0; i < chunkBytes; i += 4096) payload[i] = (i * 31) & 0xff;
 
-  const start = now();
-  try {
-    const res = await fetchWithTimeout(bust(cfg.uploadUrl), {
-      method: "POST",
-      body: payload,
-      headers: { "Content-Type": "application/octet-stream" },
-      timeoutMs,
-    });
-    await res.arrayBuffer().catch(() => undefined);
-    if (!res.ok) {
-      return [make("upload_mbps", null, false, { errorCode: `http_${res.status}` })];
+  const controller = new AbortController();
+  let totalBytes = 0;
+  let windowBytes = 0;
+  let measuring = false;
+
+  const worker = async () => {
+    try {
+      while (!controller.signal.aborted && totalBytes < maxBytes) {
+        const res = await fetch(bust(cfg.uploadUrl), {
+          method: "POST",
+          body: payload,
+          headers: { "Content-Type": "application/octet-stream" },
+          cache: "no-store",
+          signal: controller.signal,
+        });
+        await res.arrayBuffer().catch(() => undefined);
+        if (!res.ok) break;
+        totalBytes += chunkBytes;
+        if (measuring) windowBytes += chunkBytes;
+      }
+    } catch {
+      /* aborted or per-stream network error */
     }
-    const seconds = (now() - start) / 1000;
-    const mbps = seconds > 0 ? (bytes * 8) / seconds / 1_000_000 : 0;
-    return [
-      make("upload_mbps", round(mbps), true, {
-        unit: "Mbps",
-        target: cfg.uploadUrl,
-        durationMs: Math.round(seconds * 1000),
-        metadata: { bytes },
-      }),
-    ];
-  } catch (e) {
-    return [
-      make("upload_mbps", null, false, {
-        errorCode: e instanceof Error ? e.name : "upload_failed",
-      }),
-    ];
+  };
+
+  const workers = Array.from({ length: streams }, () => worker());
+
+  await sleep(warmupMs);
+  if (totalBytes === 0) {
+    controller.abort();
+    await Promise.allSettled(workers);
+    return [make("upload_mbps", null, false, { errorCode: "no_data" })];
   }
+
+  const windowStart = now();
+  measuring = true;
+  while (now() - windowStart < measureMs && totalBytes < maxBytes && !controller.signal.aborted) {
+    await sleep(100);
+  }
+  measuring = false;
+  const windowMs = now() - windowStart;
+  controller.abort();
+  await Promise.allSettled(workers);
+
+  return [
+    make("upload_mbps", round(throughputMbps(windowBytes, windowMs)), windowBytes > 0, {
+      unit: "Mbps",
+      target: cfg.uploadUrl,
+      durationMs: Math.round(windowMs),
+      metadata: { streams, windowBytes },
+    }),
+  ];
 }
 
 /**

@@ -100,6 +100,16 @@ function formatValue(m: Measurement): string {
   return String(m.value);
 }
 
+// Some failures are expected browser limitations, not errors — present them
+// as a quiet "not available" rather than an alarming red error code.
+const BENIGN_ERRORS = new Set(["timing_unavailable"]);
+const ERROR_LABEL: Record<string, string> = {
+  timing_unavailable: "not available",
+  no_data: "no response",
+  unreachable: "unreachable",
+  AbortError: "cancelled",
+};
+
 const NetworkDiagnostics = () => {
   const [audience, setAudience] = useState<Audience>("technician");
   const [runState, setRunState] = useState<RunState>("idle");
@@ -375,9 +385,9 @@ const NetworkDiagnostics = () => {
               <Info className="h-4 w-4" />
               <AlertTitle className="text-sm">Runs in your browser</AlertTitle>
               <AlertDescription className="text-xs">
-                Throughput tests transfer real data (tens of MB) — avoid on a metered plan.
-                A browser can't read Wi-Fi signal, scan the LAN, or ping the gateway directly;
-                those live in the native app.
+                Throughput tests run several parallel streams and can move ~150–400&nbsp;MB on a
+                fast connection — prefer Wi-Fi or an unmetered plan. A browser can't read Wi-Fi
+                signal, scan the LAN, or ping the gateway directly; those live in the native app.
               </AlertDescription>
             </Alert>
 
@@ -683,10 +693,14 @@ function MeasurementsTable({ measurements }: { measurements: Measurement[] }) {
                     <td className="py-2 text-right font-medium tabular-nums">
                       {m.success ? (
                         formatValue(m)
+                      ) : BENIGN_ERRORS.has(m.errorCode ?? "") ? (
+                        <span className="text-muted-foreground font-normal">
+                          {ERROR_LABEL[m.errorCode ?? ""] ?? "not available"}
+                        </span>
                       ) : (
                         <span className="inline-flex items-center gap-1 text-muted-foreground">
                           <XCircle className="h-3.5 w-3.5" />
-                          {m.errorCode ?? "n/a"}
+                          {ERROR_LABEL[m.errorCode ?? ""] ?? m.errorCode ?? "n/a"}
                         </span>
                       )}
                     </td>
