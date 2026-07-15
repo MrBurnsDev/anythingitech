@@ -8,12 +8,14 @@
 
 import { diagnosticsConfig, RULES_VERSION, type DiagnosticsConfig } from "./config";
 import {
+  DATA_PROFILES,
   measureDnsTiming,
   measureDownload,
   measureIpVersions,
   measureLatencyJitterLoss,
   measureReachabilityAndIp,
   measureUpload,
+  type DataMode,
 } from "./measurements";
 import { buildSnapshot, runRules, summarize } from "./rules";
 import type { AssessmentContext, AssessmentResult, Measurement } from "./types";
@@ -50,6 +52,8 @@ export const STEP_SEQUENCE: { id: StepId; label: string }[] = [
 export interface RunOptions {
   context?: AssessmentContext;
   config?: DiagnosticsConfig;
+  /** Data budget for throughput tests: "unlimited" (Wi-Fi) or "metered" (cellular). */
+  dataMode?: DataMode;
   signal?: AbortSignal;
   onProgress?: (p: StepProgress) => void;
 }
@@ -60,7 +64,9 @@ function aborted(signal?: AbortSignal) {
 
 /** Run the full one-tap assessment. */
 export async function runAssessment(opts: RunOptions = {}): Promise<AssessmentResult> {
-  const { context = {}, config = diagnosticsConfig, signal, onProgress } = opts;
+  const { context = {}, config = diagnosticsConfig, dataMode = "unlimited", signal, onProgress } =
+    opts;
+  const profile = DATA_PROFILES[dataMode];
   const startedAt = Date.now();
   const measurements: Measurement[] = [];
   const total = STEP_SEQUENCE.length;
@@ -81,8 +87,8 @@ export async function runAssessment(opts: RunOptions = {}): Promise<AssessmentRe
   await runStep(1, () => measureIpVersions(config));
   await runStep(2, () => measureDnsTiming(config));
   await runStep(3, () => measureLatencyJitterLoss(config));
-  await runStep(4, () => measureDownload(config));
-  await runStep(5, () => measureUpload(config));
+  await runStep(4, () => measureDownload(config, profile.download));
+  await runStep(5, () => measureUpload(config, profile.upload));
 
   aborted(signal);
   const interpret = STEP_SEQUENCE[6];
