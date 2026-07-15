@@ -385,8 +385,9 @@ const NetworkDiagnostics = () => {
               <Info className="h-4 w-4" />
               <AlertTitle className="text-sm">Runs in your browser</AlertTitle>
               <AlertDescription className="text-xs">
-                Throughput tests run several parallel streams and can move ~150–400&nbsp;MB on a
-                fast connection — prefer Wi-Fi or an unmetered plan. A browser can't read Wi-Fi
+                Throughput tests run several parallel streams for a few seconds, so data used
+                scales with your speed (roughly 200–700&nbsp;MB on a fast connection) — prefer
+                Wi-Fi or an unmetered plan. A browser can't read Wi-Fi
                 signal, scan the LAN, or ping the gateway directly; those live in the native app.
               </AlertDescription>
             </Alert>
