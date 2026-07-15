@@ -145,11 +145,13 @@ const DOWNLOAD_DEFAULTS: Required<ThroughputOptions> = {
 
 const UPLOAD_DEFAULTS: Required<ThroughputOptions> = {
   streams: 4,
-  warmupMs: 1200,
+  warmupMs: 1000,
   measureMs: 4000,
   // Runaway backstop only (see download note).
   maxBytes: 1_000_000_000,
-  chunkBytes: 2_000_000,
+  // Small chunks so even a slow cellular uplink completes several within the
+  // window (a large chunk on a slow link finishes after warm-up → false "—").
+  chunkBytes: 512_000,
 };
 
 /** Mbps from a byte count over a duration in milliseconds. */
@@ -173,7 +175,7 @@ export const DATA_PROFILES: Record<
   unlimited: { download: {}, upload: {} },
   metered: {
     download: { streams: 4, warmupMs: 700, measureMs: 2200, maxBytes: 80_000_000 },
-    upload: { streams: 3, warmupMs: 700, measureMs: 2000, maxBytes: 40_000_000 },
+    upload: { streams: 3, warmupMs: 600, measureMs: 2600, maxBytes: 40_000_000 },
   },
 };
 
@@ -227,13 +229,8 @@ export async function measureDownload(
   const loadedProbe = sampleLoadedLatency(cfg, controller.signal, warmupMs);
   const workers = Array.from({ length: streams }, () => worker());
 
+  // Warm-up (discard slow-start); we judge success from the window, not here.
   await sleep(warmupMs);
-  if (totalBytes === 0) {
-    controller.abort();
-    await Promise.allSettled(workers);
-    const loaded = await loadedProbe;
-    return [make("download_mbps", null, false, { errorCode: "no_data" }), ...loaded];
-  }
 
   const windowStart = now();
   measuring = true;
@@ -246,8 +243,11 @@ export async function measureDownload(
   await Promise.allSettled(workers);
   const loaded = await loadedProbe;
 
+  if (windowBytes === 0) {
+    return [make("download_mbps", null, false, { errorCode: "no_data" }), ...loaded];
+  }
   return [
-    make("download_mbps", round(throughputMbps(windowBytes, windowMs)), windowBytes > 0, {
+    make("download_mbps", round(throughputMbps(windowBytes, windowMs)), true, {
       unit: "Mbps",
       target: url,
       durationMs: Math.round(windowMs),
@@ -330,12 +330,9 @@ export async function measureUpload(
 
   const workers = Array.from({ length: streams }, () => worker());
 
+  // Warm-up (discard slow-start); success is judged from the window below, not
+  // here — a slow uplink may not finish its first chunk within the warm-up.
   await sleep(warmupMs);
-  if (totalBytes === 0) {
-    controller.abort();
-    await Promise.allSettled(workers);
-    return [make("upload_mbps", null, false, { errorCode: "no_data" })];
-  }
 
   const windowStart = now();
   measuring = true;
@@ -347,8 +344,11 @@ export async function measureUpload(
   controller.abort();
   await Promise.allSettled(workers);
 
+  if (windowBytes === 0) {
+    return [make("upload_mbps", null, false, { errorCode: "no_data" })];
+  }
   return [
-    make("upload_mbps", round(throughputMbps(windowBytes, windowMs)), windowBytes > 0, {
+    make("upload_mbps", round(throughputMbps(windowBytes, windowMs)), true, {
       unit: "Mbps",
       target: cfg.uploadUrl,
       durationMs: Math.round(windowMs),
