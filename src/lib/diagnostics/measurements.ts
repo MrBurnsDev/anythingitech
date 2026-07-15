@@ -415,25 +415,72 @@ export async function measureDnsTiming(
   }
 }
 
-/** IPv4/IPv6 availability — a successful fetch to a version-locked host. */
+/**
+ * IPv4/IPv6 availability — a successful fetch to a version-locked host. These
+ * hosts echo the client's public address in the body, so we also capture the
+ * actual IPv4/IPv6 address for the technician's network readout.
+ */
 export async function measureIpVersions(
   cfg: DiagnosticsConfig = diagnosticsConfig,
   timeoutMs = 5000,
 ): Promise<Measurement[]> {
-  const probe = async (url: string, key: MetricKey): Promise<Measurement> => {
+  const probe = async (
+    url: string,
+    availKey: MetricKey,
+    ipKey: MetricKey,
+  ): Promise<Measurement[]> => {
     try {
       const res = await fetchWithTimeout(bust(url), { method: "GET", timeoutMs });
-      await res.text().catch(() => undefined);
-      return make(key, res.ok, true);
+      const text = (await res.text().catch(() => "")).trim();
+      const out: Measurement[] = [make(availKey, res.ok, true)];
+      // Guard against an error page sneaking into the address field.
+      if (res.ok && text && text.length < 60 && !/\s/.test(text)) {
+        out.push(make(ipKey, text, true));
+      }
+      return out;
     } catch {
       // A failure here is genuinely "not available", not a measurement error.
-      return make(key, false, true);
+      return [make(availKey, false, true)];
     }
   };
-  return Promise.all([
-    probe(cfg.ipv4ProbeUrl, "ipv4_available"),
-    probe(cfg.ipv6ProbeUrl, "ipv6_available"),
+  const [v4, v6] = await Promise.all([
+    probe(cfg.ipv4ProbeUrl, "ipv4_available", "public_ipv4"),
+    probe(cfg.ipv6ProbeUrl, "ipv6_available", "public_ipv6"),
   ]);
+  return [...v4, ...v6];
+}
+
+/**
+ * Public-side network identity (spec: give the technician an ipconfig-style
+ * readout of what a browser *can* see). Cloudflare's meta endpoint returns the
+ * client IP, ASN, ISP org, geo, and edge colo in one CORS-friendly call.
+ *
+ * Note: local IP, gateway, subnet, and MAC are NOT obtainable from a browser —
+ * those require the native app.
+ */
+export async function measureNetworkInfo(
+  cfg: DiagnosticsConfig = diagnosticsConfig,
+  timeoutMs = 6000,
+): Promise<Measurement[]> {
+  try {
+    const res = await fetchWithTimeout(bust(cfg.metaUrl), { method: "GET", timeoutMs });
+    if (!res.ok) return [];
+    const j = (await res.json()) as Record<string, unknown>;
+    const out: Measurement[] = [];
+    const push = (key: MetricKey, v: unknown) => {
+      if (v !== undefined && v !== null && v !== "") out.push(make(key, String(v), true));
+    };
+    push("public_ip", j.clientIp);
+    push("isp", j.asOrganization);
+    if (typeof j.asn === "number" || typeof j.asn === "string") push("asn", `AS${j.asn}`);
+    const geo = [j.city, j.region, j.country].filter(Boolean).join(", ");
+    if (geo) push("geo", geo);
+    push("edge", j.colo);
+    push("http_protocol", j.httpProtocol);
+    return out;
+  } catch {
+    return [];
+  }
 }
 
 function round(n: number): number {

@@ -20,6 +20,8 @@ export interface DiagnosticsConfig {
   ipv6ProbeUrl: string;
   /** IPv4-only host — a successful fetch implies working IPv4. */
   ipv4ProbeUrl: string;
+  /** JSON endpoint returning client IP, ASN, ISP org, geo, colo (Cloudflare meta). */
+  metaUrl: string;
 }
 
 function env(key: string): string | undefined {
@@ -38,6 +40,7 @@ export const diagnosticsConfig: DiagnosticsConfig = {
   tracePrimaryUrl: env("VITE_DIAG_TRACE_URL") ?? "https://speed.cloudflare.com/cdn-cgi/trace",
   ipv6ProbeUrl: env("VITE_DIAG_IPV6_URL") ?? "https://ipv6.icanhazip.com",
   ipv4ProbeUrl: env("VITE_DIAG_IPV4_URL") ?? "https://ipv4.icanhazip.com",
+  metaUrl: env("VITE_DIAG_META_URL") ?? "https://speed.cloudflare.com/meta",
 };
 
 /** Semantic version of the rules library. Stored with every session (spec §7). */

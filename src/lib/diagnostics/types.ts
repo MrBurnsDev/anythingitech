@@ -48,6 +48,13 @@ export type MetricKey =
   | "ipv4_available"
   | "ipv6_available"
   | "public_ip"
+  | "public_ipv4"
+  | "public_ipv6"
+  | "isp"
+  | "asn"
+  | "geo"
+  | "edge"
+  | "http_protocol"
   // Technician-entered context
   | "expected_download_mbps"
   | "expected_upload_mbps"

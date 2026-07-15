@@ -13,6 +13,7 @@ import {
   measureDownload,
   measureIpVersions,
   measureLatencyJitterLoss,
+  measureNetworkInfo,
   measureReachabilityAndIp,
   measureUpload,
   type DataMode,
@@ -83,7 +84,13 @@ export async function runAssessment(opts: RunOptions = {}): Promise<AssessmentRe
     onProgress?.({ ...step, index, total, status: "done", measurements: result });
   };
 
-  await runStep(0, () => measureReachabilityAndIp(config));
+  await runStep(0, async () => {
+    const [reach, info] = await Promise.all([
+      measureReachabilityAndIp(config),
+      measureNetworkInfo(config),
+    ]);
+    return [...reach, ...info];
+  });
   await runStep(1, () => measureIpVersions(config));
   await runStep(2, () => measureDnsTiming(config));
   await runStep(3, () => measureLatencyJitterLoss(config));
