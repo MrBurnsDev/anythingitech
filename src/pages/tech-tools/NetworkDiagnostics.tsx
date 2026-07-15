@@ -115,6 +115,7 @@ const ERROR_LABEL: Record<string, string> = {
   timing_unavailable: "not available",
   no_data: "no response",
   unreachable: "unreachable",
+  timeout: "timed out",
   AbortError: "cancelled",
 };
 
