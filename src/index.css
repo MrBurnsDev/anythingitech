@@ -194,3 +194,33 @@
   .animate-fade-up-delay-2 { animation: fade-up 900ms var(--ease-out-expo) 240ms both; }
   .animate-fade-up-delay-3 { animation: fade-up 900ms var(--ease-out-expo) 360ms both; }
 }
+
+/* ---------------------------------------------------------------------------
+ * Print / Save-as-PDF — strip site chrome so report pages export cleanly.
+ * Components opt individual pieces out with Tailwind's `print:hidden`; these
+ * rules handle the shared shell and page setup.
+ * ------------------------------------------------------------------------- */
+@media print {
+  header,
+  footer {
+    display: none !important;
+  }
+  main {
+    padding-top: 0 !important;
+  }
+  body {
+    background: #fff !important;
+  }
+  /* Keep report cards and table rows from splitting across pages. */
+  .print-avoid-break {
+    break-inside: avoid;
+  }
+  /* Print background fills (logo chip, badges) as authored. */
+  .print-exact {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  @page {
+    margin: 1.5cm;
+  }
+}

@@ -12,6 +12,7 @@ const nav = [
   { to: "/services/smart-home", label: "Smart Home" },
   { to: "/services/tv-audio", label: "TV & Audio" },
   { to: "/services/business-it", label: "Business IT" },
+  { to: "/tech-tools", label: "Tech Tools" },
   { to: "/about", label: "About" },
 ];
 

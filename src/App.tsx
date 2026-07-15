@@ -31,6 +31,10 @@ import FilteredBusinessesPage, { FILTERS } from "./pages/businesses/FilteredBusi
 import TechTipsIndex from "./pages/tech-tips/TechTipsIndex.tsx";
 import TechTipPost from "./pages/tech-tips/TechTipPost.tsx";
 
+// Tech Tools pages
+import TechTools from "./pages/tech-tools/TechTools.tsx";
+import NetworkDiagnostics from "./pages/tech-tools/NetworkDiagnostics.tsx";
+
 // Admin pages
 import { AdminAuthProvider } from "./contexts/AdminAuthContext.tsx";
 import { ProtectedRoute } from "./components/admin/ProtectedRoute.tsx";
@@ -71,6 +75,10 @@ const App = () => (
           {/* Tech Tips Blog */}
           <Route path="/tech-tips" element={<TechTipsIndex />} />
           <Route path="/tech-tips/:slug" element={<TechTipPost />} />
+
+          {/* Tech Tools — browser-based technician utilities */}
+          <Route path="/tech-tools" element={<TechTools />} />
+          <Route path="/tech-tools/network-diagnostics" element={<NetworkDiagnostics />} />
 
           {/* Martha's Vineyard Business Directory */}
           <Route path="/marthas-vineyard" element={<DirectoryIndex />} />
