@@ -91,6 +91,13 @@ const METRIC_LABEL: Record<string, { label: string; unit?: string }> = {
   ipv4_available: { label: "IPv4" },
   ipv6_available: { label: "IPv6" },
   public_ip: { label: "Public IP" },
+  public_ipv4: { label: "Public IPv4" },
+  public_ipv6: { label: "Public IPv6" },
+  isp: { label: "ISP" },
+  asn: { label: "ASN" },
+  geo: { label: "Location" },
+  edge: { label: "Edge (Cloudflare)" },
+  http_protocol: { label: "HTTP" },
 };
 
 function formatValue(m: Measurement): string {
@@ -481,6 +488,8 @@ const NetworkDiagnostics = () => {
                   saved={saved}
                 />
 
+                {audience === "technician" && <NetworkInfoCard result={result} />}
+
                 {comparison && baseline && (
                   <ComparisonCard deltas={comparison} baselineLabel={baseline.label} />
                 )}
@@ -705,6 +714,49 @@ function FindingCard({ finding, audience }: { finding: Finding; audience: Audien
             )}
           </div>
         )}
+      </CardContent>
+    </Card>
+  );
+}
+
+function NetworkInfoCard({ result }: { result: AssessmentResult }) {
+  const val = (k: string): string | undefined => {
+    const m = result.measurements.find((x) => x.key === k && x.success);
+    return m && m.value !== null && m.value !== undefined ? String(m.value) : undefined;
+  };
+  const rows: [string, string | undefined][] = [
+    ["ISP", val("isp")],
+    ["ASN", val("asn")],
+    ["Location", val("geo")],
+    ["Public IPv4", val("public_ipv4")],
+    ["Public IPv6", val("public_ipv6") ?? val("public_ip")],
+    ["Edge (Cloudflare)", val("edge")],
+    ["HTTP protocol", val("http_protocol")],
+  ];
+  const present = rows.filter(([, v]) => v);
+  if (present.length === 0) return null;
+  return (
+    <Card className="print-avoid-break">
+      <CardHeader className="pb-2">
+        <CardTitle className="text-base">Network info</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <tbody>
+              {present.map(([label, v]) => (
+                <tr key={label} className="border-b border-border/60 last:border-0">
+                  <td className="py-2 pr-4 text-muted-foreground whitespace-nowrap">{label}</td>
+                  <td className="py-2 text-right font-medium tabular-nums break-all">{v}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-3 text-xs text-muted-foreground">
+          Local IP, gateway, subnet, and MAC aren't available to a browser — those come from the
+          native app.
+        </p>
       </CardContent>
     </Card>
   );
