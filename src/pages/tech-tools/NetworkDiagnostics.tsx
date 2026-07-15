@@ -30,6 +30,7 @@ import { Separator } from "@/components/ui/separator";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { cn } from "@/lib/utils";
 import {
+  bufferbloatGrade,
   compareSnapshots,
   deleteSession,
   listSessions,
@@ -44,6 +45,7 @@ import {
   type Finding,
   type Measurement,
   type MetricDelta,
+  type MetricSnapshot,
   type Severity,
   type StepId,
   type StepProgress,
@@ -85,7 +87,9 @@ const METRIC_LABEL: Record<string, { label: string; unit?: string }> = {
   latency_loaded_down_ms: { label: "Latency (under load)", unit: "ms" },
   jitter_ms: { label: "Jitter", unit: "ms" },
   packet_loss_pct: { label: "Packet loss", unit: "%" },
-  dns_lookup_ms: { label: "DNS lookup", unit: "ms" },
+  dns_lookup_ms: { label: "DNS (Cloudflare)", unit: "ms" },
+  dns_google_ms: { label: "DNS (Google)", unit: "ms" },
+  dns_answer: { label: "DNS resolves to" },
   https_reachable: { label: "Internet reachable" },
   captive_portal_suspected: { label: "Captive portal" },
   ipv4_available: { label: "IPv4" },
@@ -612,8 +616,45 @@ function ResultsHeader({
           <Stat label="Latency" value={stat("latency_unloaded_ms")} />
           <Stat label="Loss" value={stat("packet_loss_pct")} />
         </div>
+
+        <BufferbloatBadge snap={snap} />
       </CardContent>
     </Card>
+  );
+}
+
+function BufferbloatBadge({ snap }: { snap: MetricSnapshot }) {
+  const inc = snap.loaded_latency_increase_ms;
+  if (typeof inc !== "number") return null;
+  const { grade, label } = bufferbloatGrade(inc);
+  const tone: Record<string, string> = {
+    A: "bg-emerald-500",
+    B: "bg-emerald-500",
+    C: "bg-amber-500",
+    D: "bg-orange-500",
+    F: "bg-destructive",
+  };
+  const idle = snap.latency_unloaded_ms;
+  const loaded = snap.latency_loaded_down_ms;
+  return (
+    <div className="mt-4 flex flex-wrap items-center gap-3 rounded-md bg-secondary/50 p-3">
+      <span
+        className={cn(
+          "grid h-9 w-9 shrink-0 place-items-center rounded-md text-lg font-bold text-white print-exact",
+          tone[grade],
+        )}
+      >
+        {grade}
+      </span>
+      <div className="min-w-0">
+        <p className="text-sm font-medium">Bufferbloat: {label}</p>
+        {typeof idle === "number" && typeof loaded === "number" && (
+          <p className="text-xs text-muted-foreground tabular-nums">
+            latency {idle} ms idle → {loaded} ms under load (+{Math.round(inc)} ms)
+          </p>
+        )}
+      </div>
+    </div>
   );
 }
 

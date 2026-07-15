@@ -426,26 +426,71 @@ export async function measureReachabilityAndIp(
 }
 
 /** DNS timing via Resource Timing (domainLookupEnd − domainLookupStart). */
+/**
+ * Real DNS resolution via DNS-over-HTTPS (JSON). Safari won't expose lookup
+ * timing through Resource Timing, so instead we resolve a hostname against two
+ * public resolvers (Cloudflare + Google) and time each round-trip — giving an
+ * actual DNS number, a resolver comparison, and the resolved address.
+ *
+ * Note: DoH bypasses the client's configured resolver, so this measures public
+ * DNS health, not the LAN's own DNS server (that needs the native app).
+ */
 export async function measureDnsTiming(
   cfg: DiagnosticsConfig = diagnosticsConfig,
   timeoutMs = 6000,
+  host = "www.cloudflare.com",
 ): Promise<Measurement[]> {
-  // Use a fresh cross-origin URL so the browser performs a real lookup.
-  const url = bust(cfg.ipv4ProbeUrl);
-  try {
-    await fetchWithTimeout(url, { method: "GET", timeoutMs, mode: "cors" }).catch(
-      () => undefined,
+  const out: Measurement[] = [];
+
+  const cf = await timedDoh(
+    `${cfg.dohCloudflareUrl}?name=${encodeURIComponent(host)}&type=A`,
+    { accept: "application/dns-json" },
+    timeoutMs,
+  );
+  if (cf.ms !== null) {
+    out.push(
+      make("dns_lookup_ms", round(cf.ms), true, {
+        unit: "ms",
+        metadata: { resolver: "cloudflare", host },
+      }),
     );
-    const entries = (typeof performance !== "undefined" &&
-      performance.getEntriesByName?.(url)) as PerformanceResourceTiming[] | undefined;
-    const entry = entries?.[0];
-    if (entry && entry.domainLookupEnd > 0 && entry.domainLookupStart >= 0) {
-      const dns = entry.domainLookupEnd - entry.domainLookupStart;
-      return [make("dns_lookup_ms", round(dns), true, { unit: "ms" })];
-    }
-    return [make("dns_lookup_ms", null, false, { errorCode: "timing_unavailable" })];
+    if (cf.answer) out.push(make("dns_answer", cf.answer, true, { metadata: { host } }));
+  } else {
+    out.push(make("dns_lookup_ms", null, false, { errorCode: "dns_failed" }));
+  }
+
+  const g = await timedDoh(
+    `${cfg.dohGoogleUrl}?name=${encodeURIComponent(host)}&type=A`,
+    {},
+    timeoutMs,
+  );
+  if (g.ms !== null) {
+    out.push(make("dns_google_ms", round(g.ms), true, { unit: "ms", metadata: { resolver: "google" } }));
+    if (!cf.answer && g.answer) out.push(make("dns_answer", g.answer, true, { metadata: { host } }));
+  }
+
+  return out;
+}
+
+/** Resolve an A record via a DoH JSON endpoint; returns round-trip ms + answer. */
+async function timedDoh(
+  url: string,
+  headers: Record<string, string>,
+  timeoutMs: number,
+): Promise<{ ms: number | null; answer?: string }> {
+  const start = now();
+  try {
+    const res = await fetchWithTimeout(url, { method: "GET", headers, timeoutMs });
+    if (!res.ok) return { ms: null };
+    const j = (await res.json()) as { Answer?: Array<{ type?: number; data?: string }> };
+    const ms = now() - start;
+    // type 1 = A record. Fall back to the first answer's data.
+    const a = Array.isArray(j.Answer)
+      ? (j.Answer.find((x) => x.type === 1) ?? j.Answer[0])?.data
+      : undefined;
+    return { ms, answer: typeof a === "string" ? a : undefined };
   } catch {
-    return [make("dns_lookup_ms", null, false, { errorCode: "dns_probe_failed" })];
+    return { ms: null };
   }
 }
 

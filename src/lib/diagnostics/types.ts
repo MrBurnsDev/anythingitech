@@ -43,6 +43,8 @@ export type MetricKey =
   | "jitter_ms"
   | "packet_loss_pct"
   | "dns_lookup_ms"
+  | "dns_google_ms"
+  | "dns_answer"
   | "https_reachable"
   | "captive_portal_suspected"
   | "ipv4_available"

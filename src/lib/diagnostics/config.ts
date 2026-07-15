@@ -22,6 +22,9 @@ export interface DiagnosticsConfig {
   ipv4ProbeUrl: string;
   /** JSON endpoint returning client IP, ASN, ISP org, geo, colo (Cloudflare meta). */
   metaUrl: string;
+  /** DNS-over-HTTPS JSON resolvers used to measure real DNS resolution. */
+  dohCloudflareUrl: string;
+  dohGoogleUrl: string;
 }
 
 function env(key: string): string | undefined {
@@ -41,6 +44,8 @@ export const diagnosticsConfig: DiagnosticsConfig = {
   ipv6ProbeUrl: env("VITE_DIAG_IPV6_URL") ?? "https://ipv6.icanhazip.com",
   ipv4ProbeUrl: env("VITE_DIAG_IPV4_URL") ?? "https://ipv4.icanhazip.com",
   metaUrl: env("VITE_DIAG_META_URL") ?? "https://speed.cloudflare.com/meta",
+  dohCloudflareUrl: env("VITE_DIAG_DOH_CF_URL") ?? "https://cloudflare-dns.com/dns-query",
+  dohGoogleUrl: env("VITE_DIAG_DOH_GOOGLE_URL") ?? "https://dns.google/resolve",
 };
 
 /** Semantic version of the rules library. Stored with every session (spec §7). */
