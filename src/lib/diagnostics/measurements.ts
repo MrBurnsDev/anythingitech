@@ -395,7 +395,7 @@ export async function measureUpload(
  */
 export async function measureReachabilityAndIp(
   cfg: DiagnosticsConfig = diagnosticsConfig,
-  timeoutMs = 6000,
+  timeoutMs = 8000,
 ): Promise<Measurement[]> {
   const out: Measurement[] = [];
   try {
@@ -409,15 +409,18 @@ export async function measureReachabilityAndIp(
     // Redirected or non-trace body on a 2xx = classic captive-portal signature.
     out.push(make("captive_portal_suspected", res.ok && !looksLikeTrace, true));
     if (looksLikeTrace) {
-      const ip = /(?:^|\n)ip=([^\n]+)/.exec(text)?.[1]?.trim();
+      const field = (name: string) =>
+        new RegExp(`(?:^|\\n)${name}=([^\\n]+)`).exec(text)?.[1]?.trim();
+      const ip = field("ip");
       if (ip) out.push(make("public_ip", ip, true, { metadata: { source: "trace" } }));
+      const colo = field("colo"); // Cloudflare edge datacenter, e.g. "EWR"
+      if (colo) out.push(make("edge", colo, true));
     }
   } catch (e) {
-    out.push(
-      make("https_reachable", false, false, {
-        errorCode: e instanceof Error ? e.name : "unreachable",
-      }),
-    );
+    // The only abort source here is our own timeout, so label it as such.
+    const code =
+      e instanceof Error ? (e.name === "AbortError" ? "timeout" : e.name) : "unreachable";
+    out.push(make("https_reachable", false, false, { errorCode: code }));
   }
   return out;
 }
@@ -491,23 +494,27 @@ export async function measureIpVersions(
  */
 export async function measureNetworkInfo(
   cfg: DiagnosticsConfig = diagnosticsConfig,
-  timeoutMs = 6000,
+  timeoutMs = 8000,
 ): Promise<Measurement[]> {
   try {
     const res = await fetchWithTimeout(bust(cfg.metaUrl), { method: "GET", timeoutMs });
     if (!res.ok) return [];
     const j = (await res.json()) as Record<string, unknown>;
     const out: Measurement[] = [];
+    // Only surface primitive values — some fields (e.g. colo) are objects and
+    // must never be blindly stringified into "[object Object]".
     const push = (key: MetricKey, v: unknown) => {
-      if (v !== undefined && v !== null && v !== "") out.push(make(key, String(v), true));
+      if (typeof v === "string" && v !== "") out.push(make(key, v, true));
+      else if (typeof v === "number" && Number.isFinite(v)) out.push(make(key, String(v), true));
     };
     push("public_ip", j.clientIp);
     push("isp", j.asOrganization);
     if (typeof j.asn === "number" || typeof j.asn === "string") push("asn", `AS${j.asn}`);
-    const geo = [j.city, j.region, j.country].filter(Boolean).join(", ");
+    const geo = [j.city, j.region, j.country].filter((s) => typeof s === "string" && s).join(", ");
     if (geo) push("geo", geo);
-    push("edge", j.colo);
     push("http_protocol", j.httpProtocol);
+    // `edge` (Cloudflare colo) comes from the trace endpoint, where it's a
+    // reliable short string.
     return out;
   } catch {
     return [];
