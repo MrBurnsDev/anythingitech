@@ -1,6 +1,6 @@
 import type { ComponentType } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Network, QrCode, Wrench } from "lucide-react";
+import { Activity, ArrowUpRight, Network, QrCode, Wrench } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { NodeLogo } from "@/components/NodeLogo";
 import { SEO } from "@/components/SEO";
@@ -44,6 +44,15 @@ const TOOLS: Tool[] = [
       "Turn a network name and password into a QR code a phone camera can scan to join — perfect for guest and client networks. Generated on-device.",
     to: "/tech-tools/wifi-qr",
     icon: QrCode,
+    status: "live",
+  },
+  {
+    name: "Latency Monitor",
+    tagline: "Live ping plot",
+    description:
+      "A live latency and jitter plot over time — leave it running to catch the intermittent spikes and drops a one-shot speed test never sees.",
+    to: "/tech-tools/latency-monitor",
+    icon: Activity,
     status: "live",
   },
 ];
