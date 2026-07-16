@@ -1,6 +1,6 @@
 import type { ComponentType } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Wrench } from "lucide-react";
+import { ArrowUpRight, Network, QrCode, Wrench } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { NodeLogo } from "@/components/NodeLogo";
 import { SEO } from "@/components/SEO";
@@ -26,6 +26,24 @@ const TOOLS: Tool[] = [
       "A one-tap browser assessment of speed, latency, jitter, packet loss, DNS, and IPv4/IPv6 — with an interpreted diagnosis that points to the layer most likely at fault and the next test to run.",
     to: "/tech-tools/network-diagnostics",
     icon: NodeLogo,
+    status: "live",
+  },
+  {
+    name: "Subnet / CIDR Calculator",
+    tagline: "IPv4 subnetting",
+    description:
+      "Enter an IP with a CIDR prefix or mask to get the network, broadcast, usable host range, and count. Runs entirely in your browser.",
+    to: "/tech-tools/subnet-calculator",
+    icon: Network,
+    status: "live",
+  },
+  {
+    name: "Wi-Fi QR Code Generator",
+    tagline: "Scan-to-join networks",
+    description:
+      "Turn a network name and password into a QR code a phone camera can scan to join — perfect for guest and client networks. Generated on-device.",
+    to: "/tech-tools/wifi-qr",
+    icon: QrCode,
     status: "live",
   },
 ];
