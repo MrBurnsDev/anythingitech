@@ -136,6 +136,16 @@ const STATIC_PAGES = [
   { path: '/about', changefreq: 'monthly', priority: 0.7, lastmod: TODAY },
   { path: '/contact', changefreq: 'monthly', priority: 0.7, lastmod: TODAY },
   { path: '/tech-tips', changefreq: 'weekly', priority: 0.8, lastmod: TODAY },
+  // Tech Tools — browser-based technician utilities. Add new tools in three
+  // places together: this list, src/App.tsx routes, and the TOOLS registry in
+  // src/pages/tech-tools/TechTools.tsx.
+  { path: '/tech-tools', changefreq: 'monthly', priority: 0.8, lastmod: TODAY },
+  { path: '/tech-tools/network-diagnostics', changefreq: 'monthly', priority: 0.8, lastmod: TODAY },
+  { path: '/tech-tools/subnet-calculator', changefreq: 'monthly', priority: 0.6, lastmod: TODAY },
+  { path: '/tech-tools/wifi-qr', changefreq: 'monthly', priority: 0.6, lastmod: TODAY },
+  { path: '/tech-tools/latency-monitor', changefreq: 'monthly', priority: 0.6, lastmod: TODAY },
+  { path: '/tech-tools/video-call-readiness', changefreq: 'monthly', priority: 0.6, lastmod: TODAY },
+  { path: '/tech-tools/service-checker', changefreq: 'monthly', priority: 0.6, lastmod: TODAY },
   { path: '/marthas-vineyard', changefreq: 'daily', priority: 0.9, lastmod: TODAY },
   { path: '/marthas-vineyard/submit', changefreq: 'monthly', priority: 0.5, lastmod: TODAY },
   // Filter-driven landing pages. These mirror the /businesses/* routes wired
