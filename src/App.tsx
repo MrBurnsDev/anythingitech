@@ -37,6 +37,7 @@ import NetworkDiagnostics from "./pages/tech-tools/NetworkDiagnostics.tsx";
 import SubnetCalculator from "./pages/tech-tools/SubnetCalculator.tsx";
 import WifiQrGenerator from "./pages/tech-tools/WifiQrGenerator.tsx";
 import LatencyMonitor from "./pages/tech-tools/LatencyMonitor.tsx";
+import VideoCallReadiness from "./pages/tech-tools/VideoCallReadiness.tsx";
 
 // Admin pages
 import { AdminAuthProvider } from "./contexts/AdminAuthContext.tsx";
@@ -85,6 +86,7 @@ const App = () => (
           <Route path="/tech-tools/subnet-calculator" element={<SubnetCalculator />} />
           <Route path="/tech-tools/wifi-qr" element={<WifiQrGenerator />} />
           <Route path="/tech-tools/latency-monitor" element={<LatencyMonitor />} />
+          <Route path="/tech-tools/video-call-readiness" element={<VideoCallReadiness />} />
 
           {/* Martha's Vineyard Business Directory */}
           <Route path="/marthas-vineyard" element={<DirectoryIndex />} />

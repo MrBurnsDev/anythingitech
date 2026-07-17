@@ -1,6 +1,6 @@
 import type { ComponentType } from "react";
 import { Link } from "react-router-dom";
-import { Activity, ArrowUpRight, Network, QrCode, Wrench } from "lucide-react";
+import { Activity, ArrowUpRight, Network, QrCode, Video, Wrench } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { NodeLogo } from "@/components/NodeLogo";
 import { SEO } from "@/components/SEO";
@@ -53,6 +53,15 @@ const TOOLS: Tool[] = [
       "A live latency and jitter plot over time — leave it running to catch the intermittent spikes and drops a one-shot speed test never sees.",
     to: "/tech-tools/latency-monitor",
     icon: Activity,
+    status: "live",
+  },
+  {
+    name: "Video Call Readiness",
+    tagline: "Zoom / Teams check",
+    description:
+      "Checks UDP reachability and NAT type over WebRTC plus live jitter and packet loss, then gives a plain Good/Fair/Poor verdict for video calls.",
+    to: "/tech-tools/video-call-readiness",
+    icon: Video,
     status: "live",
   },
 ];
