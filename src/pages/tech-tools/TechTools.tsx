@@ -1,6 +1,6 @@
 import type { ComponentType } from "react";
 import { Link } from "react-router-dom";
-import { Activity, ArrowUpRight, Network, QrCode, Video, Wrench } from "lucide-react";
+import { Activity, ArrowUpRight, Network, QrCode, ShieldCheck, Video, Wrench } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { NodeLogo } from "@/components/NodeLogo";
 import { SEO } from "@/components/SEO";
@@ -62,6 +62,15 @@ const TOOLS: Tool[] = [
       "Checks UDP reachability and NAT type over WebRTC plus live jitter and packet loss, then gives a plain Good/Fair/Poor verdict for video calls.",
     to: "/tech-tools/video-call-readiness",
     icon: Video,
+    status: "live",
+  },
+  {
+    name: "TLS & Port Checker",
+    tagline: "Cert expiry + reachability",
+    description:
+      "Check a domain's TLS certificate (issuer, expiry, days remaining) or whether a common service port (SMTP, IMAP, RDP, SSH…) is reachable.",
+    to: "/tech-tools/service-checker",
+    icon: ShieldCheck,
     status: "live",
   },
 ];
