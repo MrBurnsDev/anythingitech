@@ -3,6 +3,7 @@ import { Link, NavLink as RouterNavLink, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import mvItLogo from "@/assets/mv-it-logo.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -27,15 +28,14 @@ export const Header = () => {
       className="fixed top-0 inset-x-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border"
     >
       <div className="container-editorial flex h-[68px] items-center justify-between">
-        <Link to="/" className="flex items-center gap-2.5 group">
-          <div className="relative h-8 w-8 rounded-md bg-primary text-primary-foreground grid place-items-center font-display text-lg leading-none">
-            <span className="-mt-0.5">a</span>
-            <span className="absolute -right-0.5 -bottom-0.5 h-1.5 w-1.5 rounded-full bg-accent" />
-          </div>
-          <div className="flex flex-col leading-tight">
-            <span className="font-display text-[15px] tracking-tight">Anything Itech</span>
-            <span className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground -mt-0.5">Martha's Vineyard</span>
-          </div>
+        <Link to="/" className="flex items-center group" aria-label="Martha's Vineyard IT — Home">
+          <img
+            src={mvItLogo}
+            alt="Martha's Vineyard IT"
+            className="h-7 md:h-8 w-auto"
+            width={700}
+            height={113}
+          />
         </Link>
 
         {/* Desktop nav - uses xl breakpoint to prevent crowding at medium widths */}
