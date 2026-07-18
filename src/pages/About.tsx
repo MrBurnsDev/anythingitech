@@ -17,14 +17,16 @@ const services = [
   "Wi-Fi network installation and troubleshooting",
   "Smart home setup and configuration",
   "TV mounting and audio/video installation",
-  "Small business IT support and maintenance",
+  "Security cameras and structured cabling",
+  "Managed IT services and remote monitoring",
+  "Cybersecurity and business IT support",
 ];
 
 const About = () => (
   <SiteLayout>
     <SEO
-      title="About | Anything IT Tech Martha's Vineyard"
-      description="Local tech support on Martha's Vineyard since 2008. iPhone repair, Wi-Fi installation, smart home setup, and business IT support."
+      title="About | Martha's Vineyard IT"
+      description="Local tech support on Martha's Vineyard since 2008 — now Martha's Vineyard IT. iPhone repair, Wi-Fi installation, smart home setup, managed IT, and business IT support."
       canonical="https://anythingitechmv.com/about"
     />
     {/* Hero */}
@@ -51,10 +53,10 @@ const About = () => (
           <p className="eyebrow">Our Story</p>
           <h2 className="display-lg text-balance">From after-school repairs to full-service tech support.</h2>
           <p className="text-muted-foreground">
-            Anything iTech Martha's Vineyard began in 2008, originally as Anything Apple Martha's Vineyard,
-            when Louis Hall first began his teaching career on the Island. At the time, teaching salaries
-            were modest, so Louis put his technical skills to work after school hours and on weekends,
-            helping friends, family, and neighbors with their computers and technology.
+            The business began in 2008 as Anything Apple Martha's Vineyard, when Louis Hall first
+            began his teaching career on the Island. At the time, teaching salaries were modest, so
+            Louis put his technical skills to work after school hours and on weekends, helping
+            friends, family, and neighbors with their computers and technology.
           </p>
           <p className="text-muted-foreground">
             As word spread and trust grew within the community, demand for reliable, local technology
@@ -71,6 +73,13 @@ const About = () => (
             In 2017, the business transitioned from Anything Apple Martha's Vineyard to Anything iTech
             Martha's Vineyard. While the name changed, the mission stayed the same: provide honest,
             responsive, local technology support for the Vineyard community.
+          </p>
+          <p className="text-muted-foreground">
+            Today, that same business is Martha's Vineyard IT. Over the years the work grew well
+            beyond computer repair — into networking, enterprise Wi-Fi, cybersecurity, security
+            cameras, structured cabling, technology consulting, and ongoing managed IT services.
+            The new name simply reflects the full scope of what we do now. The people, the values,
+            and our commitment to exceptional local service remain exactly the same.
           </p>
         </div>
       </div>
@@ -96,6 +105,12 @@ const About = () => (
           <p className="text-muted-foreground">
             We have worked continuously to stay current with new technologies while maintaining the
             same hands-on, practical approach that defined the business from the beginning.
+          </p>
+          <p className="text-muted-foreground">
+            The biggest shift has been from fixing technology after it breaks to helping clients
+            proactively manage it. Through managed IT services — continuous monitoring, preventative
+            maintenance, software and security updates, and long-term planning — we now help homes
+            and businesses avoid problems before they start, not just recover from them.
           </p>
         </div>
       </div>
@@ -132,7 +147,7 @@ const About = () => (
           </div>
           <div className="lg:col-span-6 lg:col-start-7 space-y-6 text-[17px] leading-relaxed text-pretty">
             <p className="text-muted-foreground">
-              Today, Anything iTech Martha's Vineyard provides technology support and repair services
+              Today, Martha's Vineyard IT provides technology support, repair, and ongoing management
               for homeowners and businesses across all six towns on Martha's Vineyard.
             </p>
             <p className="text-muted-foreground font-medium">Our services include:</p>

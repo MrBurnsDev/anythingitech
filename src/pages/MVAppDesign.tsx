@@ -231,10 +231,10 @@ const MVAppDesign = () => (
         <div className="max-w-3xl mx-auto">
           <p className="eyebrow mb-5 text-center">Local Development with Real Support</p>
           <h2 className="display-md text-balance text-center mb-8">
-            Part of the Anything iTech MV ecosystem.
+            Part of the Martha's Vineyard IT ecosystem.
           </h2>
           <p className="text-muted-foreground leading-relaxed text-center mb-8">
-            MV App Design is part of the same technology ecosystem as Anything iTech MV. That means
+            MV App Design is part of the same technology ecosystem as Martha's Vineyard IT. That means
             the people who build your software are the same people who can support your computers,
             network, and devices.
           </p>

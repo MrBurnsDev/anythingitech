@@ -55,7 +55,7 @@ const VideoCallReadiness = () => {
   return (
     <SiteLayout>
       <SEO
-        title="Video Call Readiness Test | Anything Itech MV"
+        title="Video Call Readiness Test | Martha's Vineyard IT"
         description="Check whether your connection is ready for Zoom, Teams, and FaceTime: UDP reachability, NAT type, jitter, and packet loss — with a plain Good/Fair/Poor verdict."
         canonical="https://anythingitechmv.com/tech-tools/video-call-readiness"
       />

@@ -41,9 +41,28 @@ const Index = () => {
   return (
     <SiteLayout>
       <SEO
-        title="Anything IT Tech | Martha's Vineyard Tech Support"
-        description="iPhone repair, Wi-Fi network installation, smart home setup, and business IT support on Martha's Vineyard. Local service since 2008."
+        title="Martha's Vineyard IT | Martha's Vineyard Tech Support & Managed IT"
+        description="iPhone repair, Wi-Fi network installation, smart home setup, managed IT, and business IT support on Martha's Vineyard. Local service since 2008 — formerly Anything iTech MV."
         canonical="https://anythingitechmv.com/"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "Martha's Vineyard IT",
+          alternateName: "Anything iTech MV",
+          description:
+            "Boutique technology services on Martha's Vineyard for homes and businesses — computer repair, Wi-Fi and network design, smart home, security cameras, cybersecurity, and managed IT services.",
+          url: "https://anythingitechmv.com/",
+          telephone: "+1-508-560-3510",
+          foundingDate: "2008",
+          image: "https://anythingitechmv.com/og-image.jpg",
+          areaServed: { "@type": "Place", name: "Martha's Vineyard, Massachusetts" },
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Martha's Vineyard",
+            addressRegion: "MA",
+            addressCountry: "US",
+          },
+        }}
       />
       {/* HERO */}
       <section className="relative min-h-[100svh] flex items-end overflow-hidden">
@@ -60,8 +79,8 @@ const Index = () => {
             <span className="italic font-normal">Technology service</span> for Martha's Vineyard.
           </h1>
           <p className="mt-7 text-lg md:text-xl text-primary-foreground/80 max-w-2xl leading-relaxed text-pretty animate-fade-up-delay-2">
-            iPhone and Mac repair, Wi-Fi network installation, smart home setup, and IT support
-            for homes and businesses across Martha's Vineyard. By appointment.
+            iPhone and Mac repair, Wi-Fi network installation, smart home setup, managed IT, and
+            business IT support for homes and businesses across Martha's Vineyard. By appointment.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 animate-fade-up-delay-3">
             <Button asChild size="xl" variant="hero" className="rounded-full">
@@ -98,9 +117,10 @@ const Index = () => {
           </div>
           <div className="lg:col-span-7 lg:col-start-6 self-end">
             <p className="text-lg leading-relaxed text-pretty text-muted-foreground">
-              iPhone screen repairs, Mac troubleshooting, Wi-Fi network installation,
-              smart home setup, and ongoing IT support. We come to you, work by appointment,
-              and stay available year-round. No call centers, no waiting weeks for off-island service.
+              iPhone screen repairs, Mac troubleshooting, Wi-Fi network installation, smart home
+              setup, and proactive managed IT. A boutique service for homes and businesses alike —
+              we come to you, work by appointment, and stay available year-round. No call centers,
+              no waiting weeks for off-island service.
             </p>
             <div className="mt-10 flex flex-wrap gap-x-10 gap-y-4 text-sm">
               {["Apple Certified Technician", "By Appointment", "On-Site Service", "Year-Round Availability"].map((t) => (

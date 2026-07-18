@@ -78,8 +78,8 @@ const TOOLS: Tool[] = [
 const TechTools = () => (
   <SiteLayout>
     <SEO
-      title="Tech Tools | Anything Itech MV"
-      description="Free browser-based technology tools from Anything iTech MV, starting with Node Network Navigator — network health diagnostics that explain what your results mean."
+      title="Tech Tools | Martha's Vineyard IT"
+      description="Free browser-based technology tools from Martha's Vineyard IT, starting with Node Network Navigator — network health diagnostics that explain what your results mean."
       canonical="https://anythingitechmv.com/tech-tools"
     />
 

@@ -255,7 +255,7 @@ export default function DirectoryIndex() {
                   Need technology help for your business?
                 </h2>
                 <p className="text-primary-foreground/80 leading-relaxed max-w-lg">
-                  Anything Itech MV provides professional IT support, Wi-Fi networks,
+                  Martha's Vineyard IT provides professional IT support, Wi-Fi networks,
                   and technology services for businesses across Martha's Vineyard.
                 </p>
               </div>

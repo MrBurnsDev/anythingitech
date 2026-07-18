@@ -191,7 +191,7 @@ export default function BusinessTypePage() {
                     Need technology support for your {businessType.name.toLowerCase()}?
                   </h3>
                   <p className="text-primary-foreground/80 max-w-xl">
-                    Anything Itech MV provides Wi-Fi networks, POS system support, and reliable IT services
+                    Martha's Vineyard IT provides Wi-Fi networks, POS system support, and reliable IT services
                     for businesses across Martha's Vineyard.
                   </p>
                 </div>

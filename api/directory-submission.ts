@@ -32,7 +32,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     // Send email notification via Resend
     const { error } = await resend.emails.send({
-      from: "Anything Itech MV <directory@anythingitechmv.com>",
+      from: "Martha's Vineyard IT <directory@anythingitechmv.com>",
       to: "louis@anythingitechmv.com",
       replyTo: contact_email,
       subject: `Directory Submission: ${business_name} (${town})`,
@@ -98,7 +98,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
         <hr style="margin: 24px 0; border: none; border-top: 1px solid #ddd;">
         <p style="color: #666; font-size: 12px;">
-          This submission was received from the Anything Itech MV business directory.<br>
+          This submission was received from the Martha's Vineyard IT business directory.<br>
           To add this business to the database, manually insert it into <code>data/mv_registry.db</code>
           and run <code>npm run export-directory</code>.
         </p>
@@ -126,7 +126,7 @@ Submitter Information:
 ${notes ? `Additional Notes:\n${notes}` : ""}
 
 ---
-This submission was received from the Anything Itech MV business directory.
+This submission was received from the Martha's Vineyard IT business directory.
 To add this business to the database, manually insert it into data/mv_registry.db
 and run npm run export-directory.
       `,

@@ -40,9 +40,9 @@ function upsertJsonLd(items: Array<Record<string, unknown>>) {
 export function SEO({ title, description, canonical, image, noEmailIndex, jsonLd }: SEOProps) {
   useEffect(() => {
     // Update document title
-    const fullTitle = title.includes("Anything Itech")
+    const fullTitle = title.includes("Martha's Vineyard IT")
       ? title
-      : `${title} | Anything Itech MV`;
+      : `${title} | Martha's Vineyard IT`;
     document.title = fullTitle;
 
     // Update or create meta description
