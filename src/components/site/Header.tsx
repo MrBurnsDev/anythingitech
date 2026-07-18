@@ -33,8 +33,8 @@ export const Header = () => {
             src={mvItLogo}
             alt="Martha's Vineyard IT"
             className="h-7 md:h-8 w-auto"
-            width={700}
-            height={113}
+            width={900}
+            height={132}
           />
         </Link>
 
