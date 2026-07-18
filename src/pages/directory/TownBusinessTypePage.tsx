@@ -206,7 +206,7 @@ export default function TownBusinessTypePage() {
                     Need technology support?
                   </h3>
                   <p className="text-primary-foreground/80 max-w-xl">
-                    Anything Itech MV provides professional Wi-Fi, network, and IT services
+                    Martha's Vineyard IT provides professional Wi-Fi, network, and IT services
                     for businesses in {town.name} and across Martha's Vineyard.
                   </p>
                 </div>

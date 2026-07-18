@@ -85,7 +85,7 @@ const ServiceChecker = () => {
   return (
     <SiteLayout>
       <SEO
-        title="TLS Certificate & Port Checker | Anything Itech MV"
+        title="TLS Certificate & Port Checker | Martha's Vineyard IT"
         description="Check a domain's TLS certificate (issuer, expiry, days remaining) and whether common service ports (SMTP, IMAP, RDP, SSH…) are reachable."
         canonical="https://anythingitechmv.com/tech-tools/service-checker"
       />

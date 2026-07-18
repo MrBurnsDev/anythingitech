@@ -102,7 +102,7 @@ export const ServicePageContent = ({
             </ul>
           </div>
           <div>
-            <p className="eyebrow mb-5">Why Anything Itech MV</p>
+            <p className="eyebrow mb-5">Why Martha's Vineyard IT</p>
             <h3 className="display-md text-balance mb-8">A different standard of service.</h3>
             <div className="space-y-7">
               {whyUs.map((w) => (

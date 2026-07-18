@@ -42,7 +42,7 @@ const WifiQrGenerator = () => {
   return (
     <SiteLayout>
       <SEO
-        title="Wi-Fi QR Code Generator | Anything Itech MV"
+        title="Wi-Fi QR Code Generator | Martha's Vineyard IT"
         description="Generate a scan-to-join Wi-Fi QR code for guest networks. Enter the network name and password — the code is created in your browser and never uploaded."
         canonical="https://anythingitechmv.com/tech-tools/wifi-qr"
       />

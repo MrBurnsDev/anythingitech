@@ -74,7 +74,7 @@ const LatencyMonitor = () => {
   return (
     <SiteLayout>
       <SEO
-        title="Latency Monitor (Ping Plot) | Anything Itech MV"
+        title="Latency Monitor (Ping Plot) | Martha's Vineyard IT"
         description="Watch your connection's latency and jitter live over time to catch intermittent spikes and drops a single speed test misses. Runs in your browser."
         canonical="https://anythingitechmv.com/tech-tools/latency-monitor"
       />

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import mvItLogo from "@/assets/mv-it-logo.png";
 
 const cols = [
   {
@@ -17,6 +18,7 @@ const cols = [
       { to: "/about", label: "About" },
       { to: "/services", label: "All Services" },
       { to: "/tech-tips", label: "Tech Tips" },
+      { to: "/anything-itech-mv", label: "Formerly Anything iTech MV" },
       { to: "/contact", label: "Contact" },
     ],
   },
@@ -39,19 +41,23 @@ export const Footer = () => {
       <div className="container-editorial relative py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-2.5">
-              <div className="relative h-9 w-9 rounded-md bg-primary-foreground text-primary grid place-items-center font-display text-xl leading-none">
-                <span className="-mt-0.5">a</span>
-                <span className="absolute -right-0.5 -bottom-0.5 h-1.5 w-1.5 rounded-full bg-accent" />
-              </div>
-              <div className="flex flex-col leading-tight">
-                <span className="font-display text-base">Anything Itech</span>
-                <span className="text-[10px] uppercase tracking-[0.25em] text-primary-foreground/60 -mt-0.5">Martha's Vineyard</span>
-              </div>
-            </div>
+            <Link
+              to="/"
+              aria-label="Martha's Vineyard IT — Home"
+              className="inline-block rounded-md bg-white px-3.5 py-2.5"
+            >
+              <img
+                src={mvItLogo}
+                alt="Martha's Vineyard IT"
+                width={1257}
+                height={168}
+                className="h-8 w-auto"
+              />
+            </Link>
             <p className="mt-6 text-[15px] leading-relaxed text-primary-foreground/70 max-w-sm">
-              Technology service for the homes and businesses of Martha's Vineyard since 2008.
-              iPhone and Mac repair, Wi-Fi networks, smart home, and IT support.
+              Technology service for the homes and businesses of Martha's Vineyard since 2008 —
+              iPhone and Mac repair, Wi-Fi networks, smart home, security cameras, managed IT,
+              and business IT support.
             </p>
             <div className="mt-8 space-y-1.5 text-sm text-primary-foreground/70">
               <p>Martha's Vineyard, MA</p>
@@ -87,7 +93,7 @@ export const Footer = () => {
 
         <div className="hairline mt-16 bg-primary-foreground/10" />
         <div className="mt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs text-primary-foreground/50">
-          <p>© {new Date().getFullYear()} Anything Itech MV. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Martha's Vineyard IT. All rights reserved.</p>
           <p>Crafted on the island. Serving year-round.</p>
         </div>
       </div>

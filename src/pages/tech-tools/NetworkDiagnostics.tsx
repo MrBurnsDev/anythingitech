@@ -221,7 +221,7 @@ const NetworkDiagnostics = () => {
   return (
     <SiteLayout>
       <SEO
-        title={`${TOOL_NAME} — Network Diagnostics | Anything Itech MV`}
+        title={`${TOOL_NAME} — Network Diagnostics | Martha's Vineyard IT`}
         description="Run a one-tap network health assessment right in your browser: speed, latency, jitter, packet loss, DNS, and IPv4/IPv6 — with an interpreted diagnosis, not just numbers."
         canonical="https://anythingitechmv.com/tech-tools/network-diagnostics"
       />
@@ -475,7 +475,7 @@ const NetworkDiagnostics = () => {
                         Node Network Navigator — Network Diagnostics Report
                       </p>
                       <p className="text-xs text-muted-foreground">
-                        Anything iTech MV · anythingitechmv.com · (508) 560-3510
+                        Martha's Vineyard IT · anythingitechmv.com · (508) 560-3510
                       </p>
                     </div>
                   </div>

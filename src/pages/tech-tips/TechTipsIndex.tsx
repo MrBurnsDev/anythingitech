@@ -8,8 +8,8 @@ export default function TechTipsIndex() {
   return (
     <SiteLayout>
       <SEO
-        title="Tech Tips - Anything iTech Martha's Vineyard"
-        description="Technology tips, guides, and insights from Louis Hall at Anything iTech Martha's Vineyard. Learn about networking, Mac repair, iPhone tips, and more."
+        title="Tech Tips - Martha's Vineyard IT"
+        description="Technology tips, guides, and insights from Louis Hall at Martha's Vineyard IT. Learn about networking, Mac repair, iPhone tips, and more."
         canonical="https://anythingitechmv.com/tech-tips"
       />
 
@@ -23,7 +23,7 @@ export default function TechTipsIndex() {
               Tech Tips
             </h1>
             <p className="lg:col-span-4 text-base text-muted-foreground leading-relaxed animate-fade-up-delay-1">
-              Technology insights, guides, and tips from Louis Hall at Anything iTech Martha's Vineyard.
+              Technology insights, guides, and tips from Louis Hall at Martha's Vineyard IT.
             </p>
           </div>
 

@@ -12,6 +12,7 @@ import TVAudio from "./pages/TVAudio.tsx";
 import BusinessIT from "./pages/BusinessIT.tsx";
 import MVAppDesign from "./pages/MVAppDesign.tsx";
 import About from "./pages/About.tsx";
+import AnythingItechMV from "./pages/AnythingItechMV.tsx";
 import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -75,6 +76,7 @@ const App = () => (
           <Route path="/tv-audio" element={<TVAudio />} />
           <Route path="/business-it" element={<BusinessIT />} />
           <Route path="/about" element={<About />} />
+          <Route path="/anything-itech-mv" element={<AnythingItechMV />} />
           <Route path="/contact" element={<Contact />} />
 
           {/* Tech Tips Blog */}

@@ -134,6 +134,7 @@ const STATIC_PAGES = [
   { path: '/services/business-it', changefreq: 'monthly', priority: 0.8, lastmod: TODAY },
   { path: '/services/mv-app-design', changefreq: 'monthly', priority: 0.8, lastmod: TODAY },
   { path: '/about', changefreq: 'monthly', priority: 0.7, lastmod: TODAY },
+  { path: '/anything-itech-mv', changefreq: 'monthly', priority: 0.6, lastmod: TODAY },
   { path: '/contact', changefreq: 'monthly', priority: 0.7, lastmod: TODAY },
   { path: '/tech-tips', changefreq: 'weekly', priority: 0.8, lastmod: TODAY },
   // Tech Tools — browser-based technician utilities. Add new tools in three

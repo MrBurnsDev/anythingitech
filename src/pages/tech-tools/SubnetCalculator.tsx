@@ -34,7 +34,7 @@ const SubnetCalculator = () => {
   return (
     <SiteLayout>
       <SEO
-        title="Subnet / CIDR Calculator | Anything Itech MV"
+        title="Subnet / CIDR Calculator | Martha's Vineyard IT"
         description="Free IPv4 subnet calculator: enter an IP and CIDR or mask to get the network, broadcast, usable host range, and count. Runs entirely in your browser."
         canonical="https://anythingitechmv.com/tech-tools/subnet-calculator"
       />
