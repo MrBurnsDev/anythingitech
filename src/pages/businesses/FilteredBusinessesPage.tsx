@@ -28,6 +28,21 @@ export interface FilterConfig {
   emptyMessage: string;
   // SEO body content describing what this filter means.
   about: string;
+  /** Optional expanded editorial copy. Rendered as sequential <p> elements
+   *  under an "About this directory" H2, below the intro/about lines. */
+  bodyParagraphs?: string[];
+  /** Optional FAQ entries. Rendered as visible <details>/<summary>
+   *  disclosures under an H2, and emitted as FAQPage JSON-LD. */
+  faqs?: Array<{ q: string; a: string }>;
+  /** Optional related-service links. Rendered as an inline list under an H2. */
+  relatedServices?: Array<{ to: string; label: string }>;
+  /** When true, apply `noindex, follow` while the filtered result count is
+   *  zero. Once results exist, the page returns to a normal indexable state
+   *  automatically. Canonical URL is unaffected. */
+  noindexWhileEmpty?: boolean;
+  /** Optional replacement empty-state message. Rendered in place of the
+   *  default zero-result explanation when `filtered.length === 0`. */
+  emptyStateBody?: string;
 }
 
 const url = (slug: string) => `https://anythingitechmv.com/businesses/${slug}`;
@@ -117,7 +132,15 @@ export default function FilteredBusinessesPage({ filter }: FilteredBusinessesPag
 
   const canonical = url(filter.slug);
 
-  const jsonLd = {
+  // Apply `noindex, follow` only when the page cannot deliver on its promise
+  // (an empty directory landing whose title advertises a business list).
+  // Once results exist, this returns to the normal indexable state.
+  // Canonical URL is unaffected. See spec: black-owned page while data is nil.
+  const noIndex = Boolean(
+    filter.noindexWhileEmpty && !isLoading && filtered.length === 0
+  );
+
+  const collectionPageLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "@id": canonical,
@@ -141,12 +164,54 @@ export default function FilteredBusinessesPage({ filter }: FilteredBusinessesPag
     },
   };
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://anythingitechmv.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Directory",
+        item: "https://anythingitechmv.com/marthas-vineyard",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: filter.h1,
+        item: canonical,
+      },
+    ],
+  };
+
+  const jsonLd: Array<Record<string, unknown>> = [collectionPageLd, breadcrumbLd];
+
+  if (filter.faqs && filter.faqs.length > 0) {
+    jsonLd.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: filter.faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    });
+  }
+
+  const showEmptyState = !isLoading && filtered.length === 0;
+
   return (
     <SiteLayout>
       <SEO
         title={filter.title}
         description={filter.metaDescription}
         canonical={canonical}
+        noIndex={noIndex}
         jsonLd={jsonLd}
       />
 
@@ -177,11 +242,29 @@ export default function FilteredBusinessesPage({ filter }: FilteredBusinessesPag
         </div>
       </section>
 
+      {/* About this directory (expanded body copy) */}
+      {filter.bodyParagraphs && filter.bodyParagraphs.length > 0 && (
+        <section className="border-b border-border">
+          <div className="container-editorial py-12 md:py-16">
+            <h2 className="font-display text-2xl md:text-3xl mb-6 max-w-3xl">About this directory</h2>
+            <div className="space-y-4 max-w-2xl text-muted-foreground leading-relaxed">
+              {filter.bodyParagraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Listing */}
       <section className="py-12 md:py-16">
         <div className="container-editorial">
           {isLoading ? (
             <div className="animate-pulse text-muted-foreground">Loading businesses…</div>
+          ) : showEmptyState && filter.emptyStateBody ? (
+            <div className="max-w-2xl">
+              <p className="text-muted-foreground leading-relaxed">{filter.emptyStateBody}</p>
+            </div>
           ) : (
             <BusinessList
               businesses={filtered}
@@ -192,6 +275,49 @@ export default function FilteredBusinessesPage({ filter }: FilteredBusinessesPag
           )}
         </div>
       </section>
+
+      {/* FAQ */}
+      {filter.faqs && filter.faqs.length > 0 && (
+        <section className="border-t border-border bg-surface">
+          <div className="container-editorial py-12 md:py-16">
+            <h2 className="font-display text-2xl md:text-3xl mb-8 max-w-3xl">Frequently asked questions</h2>
+            <div className="space-y-3 max-w-3xl">
+              {filter.faqs.map((f, i) => (
+                <details
+                  key={i}
+                  className="group border border-border rounded-md bg-card"
+                >
+                  <summary className="cursor-pointer list-none flex items-start justify-between gap-4 px-5 py-4 text-[15px] font-medium">
+                    <span>{f.q}</span>
+                    <ChevronRight className="h-4 w-4 mt-0.5 flex-shrink-0 transition-transform group-open:rotate-90" />
+                  </summary>
+                  <div className="px-5 pb-5 text-[15px] text-muted-foreground leading-relaxed">
+                    {f.a}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Related services */}
+      {filter.relatedServices && filter.relatedServices.length > 0 && (
+        <section className="border-t border-border">
+          <div className="container-editorial py-12 md:py-16">
+            <h2 className="font-display text-2xl md:text-3xl mb-6 max-w-3xl">Related services</h2>
+            <ul className="flex flex-wrap gap-x-6 gap-y-3 text-[15px]">
+              {filter.relatedServices.map((s) => (
+                <li key={s.to}>
+                  <Link to={s.to} className="link-underline text-foreground hover:text-foreground">
+                    {s.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
     </SiteLayout>
   );
 }

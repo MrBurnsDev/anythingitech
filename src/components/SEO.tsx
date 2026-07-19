@@ -7,6 +7,10 @@ interface SEOProps {
   image?: string | null;
   /** Add noemailindex to prevent email scraping by bots */
   noEmailIndex?: boolean;
+  /** Emit `noindex, follow` on the robots meta. Used for pages that are
+   *  reachable and pass link equity but should not appear in search results
+   *  (e.g. an empty directory landing whose promise cannot yet be met). */
+  noIndex?: boolean;
   /** JSON-LD structured data (any number of objects). Rendered into <script type="application/ld+json"> tags. */
   jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>;
 }
@@ -37,7 +41,7 @@ function upsertJsonLd(items: Array<Record<string, unknown>>) {
  * For a Vite SPA, this is sufficient for basic SEO on directory pages.
  * The meta description will be picked up by search engines on crawl.
  */
-export function SEO({ title, description, canonical, image, noEmailIndex, jsonLd }: SEOProps) {
+export function SEO({ title, description, canonical, image, noEmailIndex, noIndex, jsonLd }: SEOProps) {
   useEffect(() => {
     // Update document title
     const fullTitle = title.includes("Martha's Vineyard IT")
@@ -118,25 +122,30 @@ export function SEO({ title, description, canonical, image, noEmailIndex, jsonLd
       upsertJsonLd(items);
     }
 
-    // Add noemailindex directive for directory pages (anti-scraping protection)
-    if (noEmailIndex) {
-      let robotsMeta = document.querySelector('meta[name="robots"]');
+    // Manage the robots meta on route change. We (re)compose the directive
+    // from the current props on every render so that navigating away from a
+    // page that set `noIndex` or `noEmailIndex` doesn't leave a stale tag
+    // behind. If neither flag is set, we remove any managed robots meta.
+    const existingRobots = document.querySelector('meta[name="robots"][data-managed="seo-component"]');
+    if (noIndex || noEmailIndex) {
+      const parts: string[] = [];
+      parts.push(noIndex ? "noindex" : "index");
+      parts.push("follow");
+      if (noEmailIndex) parts.push("noemailindex");
+      const content = parts.join(", ");
+      let robotsMeta = existingRobots;
       if (!robotsMeta) {
         robotsMeta = document.createElement("meta");
         robotsMeta.setAttribute("name", "robots");
+        robotsMeta.setAttribute("data-managed", "seo-component");
         document.head.appendChild(robotsMeta);
       }
-      // Preserve existing directives, add noemailindex
-      const currentContent = robotsMeta.getAttribute("content") || "";
-      if (!currentContent.includes("noemailindex")) {
-        const newContent = currentContent
-          ? `${currentContent}, noemailindex`
-          : "index, follow, noemailindex";
-        robotsMeta.setAttribute("content", newContent);
-      }
+      robotsMeta.setAttribute("content", content);
+    } else if (existingRobots) {
+      existingRobots.remove();
     }
 
-  }, [title, description, canonical, image, noEmailIndex, jsonLd]);
+  }, [title, description, canonical, image, noEmailIndex, noIndex, jsonLd]);
 
   return null;
 }
