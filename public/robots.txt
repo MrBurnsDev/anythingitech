@@ -1,5 +1,5 @@
 # Robots.txt for anythingitechmv.com
-# Generated: 2026-07-18T16:00:59.952Z
+# Generated: 2026-07-19T19:20:00.318Z
 
 User-agent: *
 Allow: /

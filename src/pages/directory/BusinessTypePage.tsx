@@ -77,6 +77,14 @@ export default function BusinessTypePage() {
   const canonicalType = normalizeCategorySlug(businessType.slug) || businessType.slug;
   const canonicalUrl = `https://anythingitechmv.com/marthas-vineyard/${canonicalType}`;
 
+  // Categories with fewer than 3 businesses are too thin to warrant a search
+  // slot. Emit `noindex, follow` so Google won't index them (fixes the GSC
+  // "Crawled — currently not indexed" bucket for the smallest categories);
+  // once the category grows past the threshold the page returns to indexable
+  // automatically. Canonical URL is unaffected.
+  const THIN_CATEGORY_THRESHOLD = 3;
+  const isThinCategory = typeBusinesses.length < THIN_CATEGORY_THRESHOLD;
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -93,6 +101,7 @@ export default function BusinessTypePage() {
         description={businessType.seoDescription}
         canonical={canonicalUrl}
         noEmailIndex
+        noIndex={isThinCategory}
         jsonLd={breadcrumbJsonLd}
       />
       {/* Breadcrumb */}

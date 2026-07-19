@@ -383,12 +383,16 @@ function generateSitemap(businesses) {
     });
   });
 
-  // Add category pages — only categories with at least one business in the static data
+  // Add category pages — only categories with enough businesses to warrant
+  // a search slot. Categories with fewer than the threshold are also emitted
+  // as `noindex, follow` by BusinessTypePage.tsx, so keeping them out of the
+  // sitemap keeps the two signals aligned.
+  const THIN_CATEGORY_THRESHOLD = 3;
   CATEGORIES.forEach(cat => {
     if (!STATIC_EXPORTS.knownTypes.has(cat.slug)) return;
     const byTown = STATIC_EXPORTS.typeByTownCounts[cat.slug] || {};
     const total = Object.values(byTown).reduce((a, b) => a + b, 0);
-    if (total === 0) return;
+    if (total < THIN_CATEGORY_THRESHOLD) return;
     urls.push({
       loc: `${SITE_URL}/marthas-vineyard/${cat.slug}`,
       lastmod: TODAY,
