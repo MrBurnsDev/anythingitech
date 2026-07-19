@@ -221,12 +221,12 @@ const Index = () => {
         <div className="container-editorial grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
             <p className="eyebrow mb-5">Managed IT, in plain English</p>
-            <h2 className="display-lg text-balance">Technology, looked after.</h2>
+            <h2 className="display-lg text-balance">Proactive technology support.</h2>
           </div>
           <div className="lg:col-span-7 lg:col-start-6 self-end">
             <p className="text-lg leading-relaxed text-pretty text-muted-foreground">
-              Managed IT is the difference between calling for help when something breaks and
-              having someone quietly making sure it doesn't. For our business clients, that means
+              Managed IT is the difference between waiting for something to break and having
+              someone quietly making sure it doesn't. For our business clients, that means
               we watch over your computers, keep software and security up to date, back things up,
               and step in — often before anyone notices — when something needs attention. The goal
               isn't more technology. It's less friction: fewer outages, fewer surprise repair
