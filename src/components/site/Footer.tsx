@@ -55,9 +55,10 @@ export const Footer = () => {
               />
             </Link>
             <p className="mt-6 text-[15px] leading-relaxed text-primary-foreground/70 max-w-sm">
-              Technology service for the homes and businesses of Martha's Vineyard since 2008 —
-              iPhone and Mac repair, Wi-Fi networks, smart home, security cameras, managed IT,
-              and business IT support.
+              Martha's Vineyard IT provides Managed IT services, business technology support,
+              enterprise Wi-Fi and networking, Apple expertise, smart home integration, security
+              cameras, and technology consulting for homes and businesses across Martha's Vineyard.
+              Serving Martha's Vineyard since 2008.
             </p>
             <div className="mt-8 space-y-1.5 text-sm text-primary-foreground/70">
               <p>Martha's Vineyard, MA</p>

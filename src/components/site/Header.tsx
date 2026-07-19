@@ -27,19 +27,19 @@ export const Header = () => {
     <header
       className="fixed top-0 inset-x-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border"
     >
-      <div className="container-editorial flex h-[68px] items-center justify-between">
+      <div className="container-editorial flex h-[76px] items-center justify-between gap-8">
         <Link to="/" className="flex items-center group" aria-label="Martha's Vineyard IT — Home">
           <img
             src={mvItLogo}
             alt="Martha's Vineyard IT"
-            className="h-7 md:h-8 w-auto"
+            className="h-8 md:h-9 w-auto"
             width={1257}
             height={168}
           />
         </Link>
 
         {/* Desktop nav - uses xl breakpoint to prevent crowding at medium widths */}
-        <nav className="hidden xl:flex items-center gap-6">
+        <nav className="hidden xl:flex items-center gap-7">
           {nav.map((item) => (
             <RouterNavLink
               key={item.to}
@@ -47,7 +47,7 @@ export const Header = () => {
               end={item.to === "/"}
               className={({ isActive }) =>
                 cn(
-                  "text-[13px] font-medium transition-colors link-underline whitespace-nowrap",
+                  "text-[14px] font-medium transition-colors link-underline whitespace-nowrap",
                   isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground",
                 )
               }
@@ -57,8 +57,8 @@ export const Header = () => {
           ))}
         </nav>
 
-        <div className="hidden xl:flex items-center gap-4">
-          <a href="tel:+15085603510" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">
+        <div className="hidden xl:flex items-center gap-5">
+          <a href="tel:+15085603510" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">
             <Phone className="h-4 w-4" />
             <span>(508) 560-3510</span>
           </a>

@@ -16,12 +16,12 @@ import vineyardImg from "@/assets/marthas-vineyard.jpg";
 import officeImg from "@/assets/business-office.jpg";
 
 const services = [
-  { icon: Apple, title: "Apple Repair & Support", description: "iPhone screen repair, Mac troubleshooting, system cleanup, data migration, Time Machine backup setup.", to: "/services/apple-repair" },
+  { icon: Building2, title: "Business IT Support", description: "Office networks, workstations, printers, server maintenance, and ongoing IT support.", to: "/services/business-it" },
   { icon: Wifi, title: "Wi-Fi & Network Installation", description: "Ubiquiti enterprise equipment, full-coverage wireless, structured cabling, network troubleshooting.", to: "/services/wifi-network" },
   { icon: HomeIcon, title: "Smart Home Setup", description: "Lighting, climate, locks, cameras, and smart device integration for your home.", to: "/services/smart-home" },
+  { icon: Apple, title: "Apple Repair & Support", description: "iPhone screen repair, Mac troubleshooting, system cleanup, data migration, Time Machine backup setup.", to: "/services/apple-repair" },
   { icon: Music, title: "Sonos & Audio", description: "Sonos installation, whole-home audio setup, speaker troubleshooting and configuration.", to: "/services/smart-home" },
   { icon: Tv, title: "TV Mounting & Setup", description: "TV wall mounting, concealed wiring, soundbar setup, streaming device configuration.", to: "/services/tv-audio" },
-  { icon: Building2, title: "Business IT Support", description: "Office networks, workstations, printers, server maintenance, and ongoing IT support.", to: "/services/business-it" },
 ];
 
 const process = [
@@ -42,7 +42,7 @@ const Index = () => {
     <SiteLayout>
       <SEO
         title="Martha's Vineyard IT | Martha's Vineyard Tech Support & Managed IT"
-        description="iPhone repair, Wi-Fi network installation, smart home setup, managed IT, and business IT support on Martha's Vineyard. Local service since 2008 — formerly Anything iTech MV."
+        description="Managed IT, enterprise Wi-Fi, network installation, security, smart home, and Apple support on Martha's Vineyard. Local service since 2008 — formerly Anything iTech MV."
         canonical="https://anythingitechmv.com/"
         jsonLd={{
           "@context": "https://schema.org",
@@ -79,8 +79,8 @@ const Index = () => {
             <span className="italic font-normal">Technology service</span> for Martha's Vineyard.
           </h1>
           <p className="mt-7 text-lg md:text-xl text-primary-foreground/80 max-w-2xl leading-relaxed text-pretty animate-fade-up-delay-2">
-            iPhone and Mac repair, Wi-Fi network installation, smart home setup, managed IT, and
-            business IT support for homes and businesses across Martha's Vineyard. By appointment.
+            Managed IT, enterprise Wi-Fi, network installation, security, smart home, and Apple
+            support for homes and businesses across Martha's Vineyard. By appointment.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 animate-fade-up-delay-3">
             <Button asChild size="xl" variant="hero" className="rounded-full">
@@ -117,8 +117,8 @@ const Index = () => {
           </div>
           <div className="lg:col-span-7 lg:col-start-6 self-end">
             <p className="text-lg leading-relaxed text-pretty text-muted-foreground">
-              iPhone screen repairs, Mac troubleshooting, Wi-Fi network installation, smart home
-              setup, and proactive managed IT. A boutique service for homes and businesses alike —
+              Proactive managed IT, enterprise Wi-Fi and network installation, security systems,
+              smart home, and Apple support. A boutique service for homes and businesses alike —
               we come to you, work by appointment, and stay available year-round. No call centers,
               no waiting weeks for off-island service.
             </p>
@@ -216,6 +216,33 @@ const Index = () => {
         </div>
       </section>
 
+      {/* MANAGED IT EXPLAINER */}
+      <section className="py-24 md:py-32 border-b border-border">
+        <div className="container-editorial grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-4">
+            <p className="eyebrow mb-5">Managed IT, in plain English</p>
+            <h2 className="display-lg text-balance">Technology, looked after.</h2>
+          </div>
+          <div className="lg:col-span-7 lg:col-start-6 self-end">
+            <p className="text-lg leading-relaxed text-pretty text-muted-foreground">
+              Managed IT is the difference between calling for help when something breaks and
+              having someone quietly making sure it doesn't. For our business clients, that means
+              we watch over your computers, keep software and security up to date, back things up,
+              and step in — often before anyone notices — when something needs attention. The goal
+              isn't more technology. It's less friction: fewer outages, fewer surprise repair
+              bills, and the confidence that someone who knows your setup is looking after it
+              year-round.
+            </p>
+            <p className="mt-6 text-[15px] leading-relaxed text-pretty text-muted-foreground/85">
+              Managed IT is primarily a service for businesses. For homes across the island, we
+              continue to handle Wi-Fi and networking, Apple support, smart home systems, security
+              cameras, audio/video, and technology consulting the same way we always have —
+              thoughtfully, on-site, by appointment.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* PROCESS */}
       <section className="py-24 md:py-32 bg-surface">
         <div className="container-editorial">
@@ -225,8 +252,9 @@ const Index = () => {
               <h2 className="display-lg text-balance">How we work.</h2>
             </div>
             <p className="lg:col-span-6 lg:col-start-7 self-end text-muted-foreground leading-relaxed text-pretty text-[17px]">
-              Every project — from a 15-minute iPhone screen repair to a whole-home network
-              installation — follows a straightforward process so you know what to expect.
+              Every project — from ongoing Managed IT support and business technology to
+              whole-home networking, Apple support, and smart home installations — follows the
+              same straightforward process, so you always know what to expect.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border rounded-xl overflow-hidden">
