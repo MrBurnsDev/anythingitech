@@ -1,9 +1,9 @@
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { PageHeader } from "@/components/site/PageHeader";
 import { CTASection } from "@/components/site/CTASection";
 import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Apple, Wifi, Home, Music, Tv, Building2, Printer, MonitorSmartphone, ShieldCheck, Code } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Apple, Wifi, Home, Music, Tv, Building2, Printer, MonitorSmartphone, ShieldCheck, Code } from "lucide-react";
 import appleImg from "@/assets/apple-desk.jpg";
 
 const all = [
@@ -27,12 +27,44 @@ const Services = () => {
         description="iPhone and Mac repair, Wi-Fi network installation, smart home setup, TV mounting, and business IT support on Martha's Vineyard."
         canonical="https://anythingitechmv.com/services"
       />
-      <PageHeader
-        eyebrow="Services"
-        title="Technology services for Martha's Vineyard."
-        description="iPhone and Mac repair, Wi-Fi network installation, smart home setup, TV mounting, and business IT support. Local service, by appointment."
-        image={appleImg}
-      />
+      {/* Hero — inline replacement of the shared PageHeader so the supporting
+          copy can render as two paragraphs (main body + "By appointment.").
+          Layout, spacing, buttons, image, and responsive behavior mirror the
+          shared PageHeader component exactly. */}
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden border-b border-border">
+        <div className="absolute inset-0 grid-overlay opacity-60 pointer-events-none" />
+        <div className="container-editorial relative">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+            <div className="lg:col-span-7 animate-fade-up">
+              <p className="eyebrow mb-6">Services</p>
+              <h1 className="display-xl text-balance">Technology services for Martha's Vineyard &amp; beyond.</h1>
+              <p className="mt-7 text-lg text-muted-foreground max-w-xl text-pretty leading-relaxed">
+                Based on Martha's Vineyard, we help homes and businesses across
+                Martha's Vineyard, Cape Cod, Nantucket, and the Elizabeth Islands
+                with Managed IT, enterprise networking, enterprise Wi-Fi,
+                surveillance systems, Apple support, smart home technology, and
+                custom app development.
+              </p>
+              <p className="mt-3 text-lg text-muted-foreground max-w-xl text-pretty leading-relaxed">
+                By appointment.
+              </p>
+              <div className="mt-9 flex flex-wrap gap-3">
+                <Button asChild size="lg" className="rounded-full px-7">
+                  <Link to="/contact">Request a Visit <ArrowRight className="h-4 w-4" /></Link>
+                </Button>
+                <Button asChild variant="editorial" size="lg" className="rounded-full">
+                  <Link to="/services">All Services</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="lg:col-span-5 animate-fade-up-delay-2">
+              <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-secondary">
+                <img src={appleImg} alt="" className="absolute inset-0 h-full w-full object-cover" loading="eager" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="py-24 md:py-32">
         <div className="container-editorial">
