@@ -32,8 +32,8 @@ const process = [
 ];
 
 const testimonials = [
-  { quote: "Discreet, prompt, and meticulous. Our Wi-Fi reaches every room of the house — even the boathouse.", name: "Caroline H.", location: "Edgartown · Homeowner" },
-  { quote: "They built our office network from scratch and we haven't had a single hiccup since. A real relief.", name: "Marcus L.", location: "Vineyard Haven · Founder" },
+  { quote: "Prompt, thorough, and easy to work with. Our Wi-Fi reaches every room of the house — even the boathouse.", name: "Caroline H.", location: "Edgartown · Homeowner" },
+  { quote: "The Wi-Fi they installed at home works just as well as the network in my office. No dead zones, no reboots, no thinking about it.", name: "Marcus L.", location: "Vineyard Haven · Homeowner" },
   { quote: "Finally, someone who treats Apple support like the craft it is. Fast, kind, and clearly knowledgeable.", name: "Diana R.", location: "Chilmark · Homeowner" },
 ];
 
