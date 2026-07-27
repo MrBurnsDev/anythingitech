@@ -47,6 +47,7 @@ const Index = () => {
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
+          "@id": "https://anythingitechmv.com/#business",
           name: "Martha's Vineyard IT",
           alternateName: "Anything iTech MV",
           description:
@@ -55,7 +56,12 @@ const Index = () => {
           telephone: "+1-508-560-3510",
           foundingDate: "2008",
           image: "https://anythingitechmv.com/og-image.jpg",
-          areaServed: { "@type": "Place", name: "Martha's Vineyard, Massachusetts" },
+          areaServed: [
+            { "@type": "Place", name: "Martha's Vineyard, Massachusetts" },
+            { "@type": "Place", name: "Cape Cod, Massachusetts" },
+            { "@type": "Place", name: "Nantucket, Massachusetts" },
+            { "@type": "Place", name: "Elizabeth Islands, Massachusetts" },
+          ],
           address: {
             "@type": "PostalAddress",
             addressLocality: "Martha's Vineyard",
@@ -79,8 +85,12 @@ const Index = () => {
             <span className="italic font-normal">Technology service</span> for Martha's Vineyard.
           </h1>
           <p className="mt-7 text-lg md:text-xl text-primary-foreground/80 max-w-2xl leading-relaxed text-pretty animate-fade-up-delay-2">
-            Managed IT, enterprise Wi-Fi, network installation, security, smart home, and Apple
-            support for homes and businesses across Martha's Vineyard. By appointment.
+            Based on Martha's Vineyard, we provide enterprise networking, Managed IT, Apple
+            support, and technology services for homes and businesses throughout Martha's
+            Vineyard, Cape Cod, Nantucket, and the Elizabeth Islands.
+          </p>
+          <p className="mt-3 text-lg md:text-xl text-primary-foreground/80 max-w-2xl leading-relaxed text-pretty animate-fade-up-delay-2">
+            By appointment.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 animate-fade-up-delay-3">
             <Button asChild size="xl" variant="hero" className="rounded-full">

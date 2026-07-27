@@ -14,6 +14,7 @@ import MVAppDesign from "./pages/MVAppDesign.tsx";
 import About from "./pages/About.tsx";
 import AnythingItechMV from "./pages/AnythingItechMV.tsx";
 import Contact from "./pages/Contact.tsx";
+import ServiceAreas from "./pages/service-areas/ServiceAreas.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 // Directory pages
@@ -78,6 +79,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/anything-itech-mv" element={<AnythingItechMV />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/service-areas" element={<ServiceAreas />} />
 
           {/* Tech Tips Blog */}
           <Route path="/tech-tips" element={<TechTipsIndex />} />

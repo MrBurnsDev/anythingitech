@@ -17,6 +17,7 @@ const cols = [
     links: [
       { to: "/about", label: "About" },
       { to: "/services", label: "All Services" },
+      { to: "/service-areas", label: "Areas we serve" },
       { to: "/tech-tips", label: "Tech Tips" },
       { to: "/anything-itech-mv", label: "Formerly Anything iTech MV" },
       { to: "/contact", label: "Contact" },
@@ -58,7 +59,7 @@ export const Footer = () => {
               Martha's Vineyard IT provides Managed IT services, business technology support,
               enterprise Wi-Fi and networking, Apple expertise, smart home integration, security
               cameras, and technology consulting for homes and businesses across Martha's Vineyard.
-              Serving Martha's Vineyard since 2008.
+              Based on Martha's Vineyard. Proudly serving clients since 2008.
             </p>
             <div className="mt-8 space-y-1.5 text-sm text-primary-foreground/70">
               <p>Martha's Vineyard, MA</p>

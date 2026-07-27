@@ -136,6 +136,7 @@ const STATIC_PAGES = [
   { path: '/about', changefreq: 'monthly', priority: 0.7, lastmod: TODAY },
   { path: '/anything-itech-mv', changefreq: 'monthly', priority: 0.6, lastmod: TODAY },
   { path: '/contact', changefreq: 'monthly', priority: 0.7, lastmod: TODAY },
+  { path: '/service-areas', changefreq: 'monthly', priority: 0.7, lastmod: TODAY },
   { path: '/tech-tips', changefreq: 'weekly', priority: 0.8, lastmod: TODAY },
   // Tech Tools — browser-based technician utilities. Add new tools in three
   // places together: this list, src/App.tsx routes, and the TOOLS registry in

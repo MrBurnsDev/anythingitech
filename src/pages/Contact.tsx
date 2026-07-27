@@ -154,8 +154,22 @@ const Contact = () => {
       {/* Form + info */}
       <section className="py-24 md:py-32">
         <div className="container-editorial grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-          {/* Form */}
-          <form onSubmit={onSubmit} className="lg:col-span-7 bg-card border border-border rounded-xl p-8 md:p-12">
+          {/* Form column */}
+          <div className="lg:col-span-7 space-y-6">
+            {/* Service-area callout */}
+            <div className="bg-surface border border-border rounded-xl p-6 md:p-8">
+              <p className="font-medium text-base mb-2">
+                Not sure if you're within our service area?
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Reach out anyway. We're happy to discuss projects throughout Martha's Vineyard,
+                Cape Cod, Nantucket, the Elizabeth Islands, and surrounding communities.{" "}
+                <a href="/service-areas" className="link-underline text-foreground">
+                  See where we're available for projects.
+                </a>
+              </p>
+            </div>
+            <form onSubmit={onSubmit} className="bg-card border border-border rounded-xl p-8 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Full Name</Label>
@@ -249,6 +263,7 @@ const Contact = () => {
               </Button>
             </div>
           </form>
+          </div>
 
           {/* Info */}
           <aside className="lg:col-span-5 space-y-8">
