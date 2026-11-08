@@ -133,6 +133,10 @@ const STATIC_PAGES = [
   { path: '/services/tv-audio', changefreq: 'monthly', priority: 0.8, lastmod: TODAY },
   { path: '/services/business-it', changefreq: 'monthly', priority: 0.8, lastmod: TODAY },
   { path: '/services/mv-app-design', changefreq: 'monthly', priority: 0.8, lastmod: TODAY },
+  // Migrated MV App Studio application pages
+  { path: '/services/mv-app-design/clientsdesk', changefreq: 'monthly', priority: 0.6, lastmod: TODAY },
+  { path: '/services/mv-app-design/dailymenumaker', changefreq: 'monthly', priority: 0.6, lastmod: TODAY },
+  { path: '/services/mv-app-design/nodeguardian', changefreq: 'monthly', priority: 0.6, lastmod: TODAY },
   { path: '/about', changefreq: 'monthly', priority: 0.7, lastmod: TODAY },
   { path: '/anything-itech-mv', changefreq: 'monthly', priority: 0.6, lastmod: TODAY },
   { path: '/contact', changefreq: 'monthly', priority: 0.7, lastmod: TODAY },

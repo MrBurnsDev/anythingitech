@@ -104,6 +104,22 @@ const SITE_URL = 'https://anythingitechmv.com';
 const PRERENDER_SKIP_PATHS = new Set();
 
 /**
+ * Routes to prerender that are intentionally NOT in the public sitemap.
+ * The migrated MV App Studio application privacy/terms pages are legal
+ * boilerplate — we want them pre-rendered to static HTML (so they resolve on a
+ * hard load / refresh and are crawlable if linked) without listing them as
+ * indexable sitemap entries. Kept in lockstep with the routes in src/App.tsx.
+ */
+const EXTRA_PRERENDER_ROUTES = [
+  '/services/mv-app-design/clientsdesk/privacy',
+  '/services/mv-app-design/clientsdesk/terms',
+  '/services/mv-app-design/dailymenumaker/privacy',
+  '/services/mv-app-design/dailymenumaker/terms',
+  '/services/mv-app-design/nodeguardian/privacy',
+  '/services/mv-app-design/nodeguardian/terms',
+];
+
+/**
  * Read all URLs from sitemap.xml and convert to local paths.
  * The sitemap is the single source of truth for what gets prerendered —
  * sitemap and prerender stay in lockstep automatically, minus the small
@@ -125,8 +141,10 @@ function readSitemapPaths() {
   if (skipped.length > 0) {
     console.log(`Skipping ${skipped.length} API-dependent route(s): ${skipped.join(', ')}`);
   }
-  // Dedupe and sort (root first)
-  return unique
+  // Merge in extra non-sitemap routes (e.g. migrated legal pages), dedupe,
+  // and sort (root first).
+  const merged = [...new Set([...unique, ...EXTRA_PRERENDER_ROUTES])];
+  return merged
     .filter(p => !PRERENDER_SKIP_PATHS.has(p))
     .sort((a, b) => (a === '/' ? -1 : b === '/' ? 1 : a.localeCompare(b)));
 }

@@ -1,0 +1,140 @@
+/* ===========================================================================
+ * MV App Studio — migrated portfolio styling, SCOPED to `.app-studio`.
+ *
+ * These are the original MV App Studio design tokens and typography classes,
+ * copied verbatim from the source repo's src/index.css and nested under the
+ * `.app-studio` wrapper so they reproduce the original components exactly
+ * WITHOUT leaking into (or being overridden by) the rest of the MVIT site.
+ *
+ * Per the migration brief, only the page BACKGROUND is changed to match MVIT;
+ * every other token (typography, colors used inside the mockups, gradients,
+ * shadows, glows) is preserved from the source so the showcase, device frames,
+ * and animations look identical to mvappstudio.com/island-built-apps.
+ * ========================================================================= */
+
+.app-studio {
+  /* ---- Source design tokens (verbatim from MV App Studio src/index.css) ---- */
+  --primary: 210 100% 45%;
+  --primary-dark: 215 100% 32%;
+  --primary-light: 205 100% 60%;
+  --accent: 175 65% 42%;
+  --accent-light: 175 50% 90%;
+  --surface-0: 210 25% 98%;
+  --surface-1: 210 20% 96%;
+  --surface-2: 210 15% 92%;
+  --surface-dark: 220 40% 10%;
+  --surface-darker: 220 45% 6%;
+  --text-primary: 220 35% 12%;
+  --text-secondary: 220 15% 38%;
+  --text-muted: 220 10% 52%;
+  --text-inverse: 210 25% 98%;
+  --gradient-hero: linear-gradient(145deg, hsl(220 45% 6%) 0%, hsl(215 50% 12%) 40%, hsl(210 55% 18%) 100%);
+  --gradient-card: linear-gradient(145deg, hsl(210 20% 99%) 0%, hsl(210 15% 96%) 100%);
+  --gradient-primary: linear-gradient(135deg, hsl(210 100% 45%) 0%, hsl(215 100% 35%) 100%);
+  --gradient-accent: linear-gradient(135deg, hsl(175 65% 42%) 0%, hsl(180 60% 35%) 100%);
+  --shadow-sm: 0 1px 3px hsl(220 40% 10% / 0.04), 0 1px 2px hsl(220 40% 10% / 0.06);
+  --shadow-md: 0 4px 16px hsl(220 40% 10% / 0.06), 0 2px 6px hsl(220 40% 10% / 0.04);
+  --shadow-lg: 0 12px 40px hsl(220 40% 10% / 0.1), 0 4px 12px hsl(220 40% 10% / 0.06);
+  --shadow-xl: 0 24px 60px hsl(220 40% 10% / 0.12), 0 8px 24px hsl(220 40% 10% / 0.08);
+  --shadow-glow-primary: 0 8px 40px hsl(210 100% 45% / 0.25);
+  --shadow-glow-accent: 0 8px 40px hsl(175 65% 42% / 0.25);
+
+  --foreground: var(--text-primary);
+  --card: var(--surface-1);
+  --card-foreground: var(--text-primary);
+  --muted: var(--surface-2);
+  --muted-foreground: var(--text-muted);
+  --border: 210 15% 88%;
+  --radius: 12px;
+
+  /* ---- Integration change #1: page background matches MVIT, not source ----
+     MVIT background token is `36 25% 97%` (warm off-white). We set both the
+     app-studio background var and the actual element background so the source
+     sections that read `bg-background` / `hsl(var(--background))` sit on the
+     MVIT canvas. */
+  --background: 36 25% 97%;
+  background-color: hsl(var(--background));
+  color: hsl(var(--text-primary));
+
+  /* Readability/compatibility fix (minimum necessary): the original decorative
+     glow halos (`-inset-8 … blur-3xl`) and fixed-width device mockups bleed a
+     few px past narrow mobile viewports. Contain that horizontal overflow at
+     the scope boundary so the migrated page doesn't introduce a mobile
+     side-scroll. Scoped to .app-studio — does not affect other MVIT pages. */
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* ---- Original typography classes (verbatim), scoped ---- */
+.app-studio .type-display {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: clamp(2.75rem, 6vw + 0.5rem, 4.25rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+.app-studio .type-headline {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: clamp(1.875rem, 4vw + 0.5rem, 2.75rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+.app-studio .type-title {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+}
+.app-studio .type-body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+  color: hsl(var(--text-secondary));
+}
+.app-studio .type-body-lg {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.1875rem;
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+}
+.app-studio .type-small {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+.app-studio .type-eyebrow {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ---- Card + subtle-gradient surfaces (verbatim), scoped ---- */
+.app-studio .card {
+  background: var(--gradient-card);
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.app-studio .bg-gradient-subtle {
+  /* Original used surface-0 → surface-1; we keep that subtle depth but it now
+     reads against the MVIT background set above. */
+  background: linear-gradient(180deg, hsl(var(--surface-0)) 0%, hsl(var(--surface-1)) 100%);
+}
+
+/* Heading elements inside the scope shouldn't inherit MVIT's global Fraunces
+   rule (index.css sets h1–h4 to --font-display). The migrated components style
+   their own headings via type-* classes, so neutralize the global here. */
+.app-studio h1,
+.app-studio h2,
+.app-studio h3,
+.app-studio h4 {
+  font-family: inherit;
+  letter-spacing: inherit;
+}

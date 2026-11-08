@@ -10,7 +10,17 @@ import WifiNetwork from "./pages/WifiNetwork.tsx";
 import SmartHome from "./pages/SmartHome.tsx";
 import TVAudio from "./pages/TVAudio.tsx";
 import BusinessIT from "./pages/BusinessIT.tsx";
-import MVAppDesign from "./pages/MVAppDesign.tsx";
+// Migrated MV App Studio portfolio + application pages
+import IslandApps from "./pages/app-studio/IslandApps.tsx";
+import ClientsDesk from "./pages/app-studio/ClientsDesk.tsx";
+import ClientsDeskPrivacy from "./pages/app-studio/ClientsDeskPrivacy.tsx";
+import ClientsDeskTerms from "./pages/app-studio/ClientsDeskTerms.tsx";
+import DailyMenuMaker from "./pages/app-studio/DailyMenuMaker.tsx";
+import DailyMenuMakerPrivacy from "./pages/app-studio/DailyMenuMakerPrivacy.tsx";
+import DailyMenuMakerTerms from "./pages/app-studio/DailyMenuMakerTerms.tsx";
+import NodeGuardian from "./pages/app-studio/NodeGuardian.tsx";
+import NodeGuardianPrivacy from "./pages/app-studio/NodeGuardianPrivacy.tsx";
+import NodeGuardianTerms from "./pages/app-studio/NodeGuardianTerms.tsx";
 import About from "./pages/About.tsx";
 import AnythingItechMV from "./pages/AnythingItechMV.tsx";
 import Contact from "./pages/Contact.tsx";
@@ -69,7 +79,17 @@ const App = () => (
           <Route path="/services/smart-home" element={<SmartHome />} />
           <Route path="/services/tv-audio" element={<TVAudio />} />
           <Route path="/services/business-it" element={<BusinessIT />} />
-          <Route path="/services/mv-app-design" element={<MVAppDesign />} />
+          {/* Migrated MV App Studio portfolio now lives at /services/mv-app-design */}
+          <Route path="/services/mv-app-design" element={<IslandApps />} />
+          <Route path="/services/mv-app-design/clientsdesk" element={<ClientsDesk />} />
+          <Route path="/services/mv-app-design/clientsdesk/privacy" element={<ClientsDeskPrivacy />} />
+          <Route path="/services/mv-app-design/clientsdesk/terms" element={<ClientsDeskTerms />} />
+          <Route path="/services/mv-app-design/dailymenumaker" element={<DailyMenuMaker />} />
+          <Route path="/services/mv-app-design/dailymenumaker/privacy" element={<DailyMenuMakerPrivacy />} />
+          <Route path="/services/mv-app-design/dailymenumaker/terms" element={<DailyMenuMakerTerms />} />
+          <Route path="/services/mv-app-design/nodeguardian" element={<NodeGuardian />} />
+          <Route path="/services/mv-app-design/nodeguardian/privacy" element={<NodeGuardianPrivacy />} />
+          <Route path="/services/mv-app-design/nodeguardian/terms" element={<NodeGuardianTerms />} />
           {/* Legacy routes - redirect via vercel.json */}
           <Route path="/apple-repair" element={<AppleRepair />} />
           <Route path="/wifi-network" element={<WifiNetwork />} />
