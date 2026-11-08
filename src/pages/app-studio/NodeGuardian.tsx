@@ -518,7 +518,7 @@ export default function NodeGuardian() {
                     Coming Soon on macOS
                   </button>
                   <Link
-                    to="/start-project"
+                    to="/contact"
                     className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold transition-colors border"
                     style={{
                       color: TEXT,
@@ -1000,7 +1000,7 @@ export default function NodeGuardian() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
-                  to="/start-project"
+                  to="/contact"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-black shadow-lg"
                   style={{ background: BRAND_GRADIENT }}
                 >

@@ -173,3 +173,40 @@
   font-family: inherit;
   letter-spacing: inherit;
 }
+
+/* ---- Shared portfolio CTA button — the single standardized App Studio CTA ----
+   One consistent MVIT-style button for all eight portfolio bottom CTAs:
+   graphite background, white text + icons, consistent sizing/padding/radius/
+   shadow, subtle hover lift. NOTE: this uses MVIT's graphite value explicitly
+   (220 22% 11%) rather than `var(--primary)`, because inside `.app-studio` the
+   `--primary` token is remapped to the source's ocean-blue — so we hard-set the
+   MVIT graphite here to match the rest of the MVIT site, not the source. */
+.app-studio .app-studio-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 0.875rem 1.5rem;
+  background-color: hsl(220 22% 11%);
+  color: hsl(36 25% 97%);
+  border-radius: 0.75rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+  box-shadow: 0 1px 2px hsl(220 22% 11% / 0.1), 0 12px 32px -8px hsl(220 22% 11% / 0.35);
+  transition: transform 300ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)),
+              background-color 300ms ease, box-shadow 300ms ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.app-studio .app-studio-cta:hover {
+  background-color: hsl(220 22% 16%);
+  transform: translateY(-2px);
+}
+.app-studio .app-studio-cta svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: currentColor;
+  fill: currentColor;
+}

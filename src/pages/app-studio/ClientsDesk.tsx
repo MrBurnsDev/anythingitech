@@ -563,7 +563,7 @@ export default function ClientsDesk() {
                     Coming Soon on iPhone
                   </button>
                   <Link
-                    to="/start-project"
+                    to="/contact"
                     className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white border border-white/15 bg-white/[0.04] hover:bg-white/[0.08] transition-colors"
                   >
                     Contact for Early Access
@@ -976,7 +976,7 @@ export default function ClientsDesk() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
-                  to="/start-project"
+                  to="/contact"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white shadow-lg"
                   style={{ background: BRAND_GRADIENT }}
                 >

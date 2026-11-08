@@ -506,7 +506,7 @@ export default function DailyMenuMakerTerms() {
                   </div>
                   <div className="flex flex-col sm:flex-row gap-3 pt-4">
                     <Link
-                      to="/start-project"
+                      to="/contact"
                       className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-white shadow-lg"
                       style={{ background: BRAND_GRADIENT }}
                     >
