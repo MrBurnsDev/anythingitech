@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { SEO } from "@/components/SEO";
@@ -17,6 +17,12 @@ import {
 import { toast } from "sonner";
 import { businessTypes } from "@/data/directory";
 
+// Cloudflare Turnstile site key — public by design (safe to ship to browser).
+// Set VITE_CLOUDFLARE_TURNSTILE_SITE_KEY in .env / Vercel env.
+// (The `window.turnstile` global type is already declared in Contact.tsx and is
+// visible here, so we don't redeclare it.)
+const TURNSTILE_SITE_KEY = import.meta.env.VITE_CLOUDFLARE_TURNSTILE_SITE_KEY as string | undefined;
+
 const TOWNS = [
   "Vineyard Haven",
   "Edgartown",
@@ -30,16 +36,60 @@ export default function SubmitBusiness() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  // Spam-protection refs (mirrors the Contact form).
+  const formLoadedAtRef = useRef<number>(Date.now());
+  const turnstileTokenRef = useRef<string>("");
+  const turnstileWidgetRef = useRef<string>("");
+  const turnstileContainerRef = useRef<HTMLDivElement>(null);
+
+  // Mount Turnstile in managed mode — unobtrusive; only challenges suspicious
+  // behaviour. Same integration as the Contact form.
+  useEffect(() => {
+    formLoadedAtRef.current = Date.now();
+    if (!TURNSTILE_SITE_KEY) return;
+
+    const SCRIPT_ID = "cf-turnstile-script";
+    const renderWidget = () => {
+      if (!window.turnstile || !turnstileContainerRef.current) return;
+      if (turnstileWidgetRef.current) return; // avoid double-render in StrictMode
+      turnstileWidgetRef.current = window.turnstile.render(turnstileContainerRef.current, {
+        sitekey: TURNSTILE_SITE_KEY,
+        size: "flexible",
+        appearance: "interaction-only",
+        callback: (token: string) => { turnstileTokenRef.current = token; },
+        "expired-callback": () => { turnstileTokenRef.current = ""; },
+        "error-callback": () => { turnstileTokenRef.current = ""; },
+      });
+    };
+
+    if (window.turnstile) {
+      renderWidget();
+      return;
+    }
+    if (!document.getElementById(SCRIPT_ID)) {
+      const s = document.createElement("script");
+      s.id = SCRIPT_ID;
+      s.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      s.async = true;
+      s.defer = true;
+      s.onload = renderWidget;
+      document.head.appendChild(s);
+    }
+  }, []);
+
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
+    const data: Record<string, unknown> = Object.fromEntries(formData.entries());
 
     // Add checkbox value
     data.confirms_ownership = formData.get("confirms_ownership") ? "yes" : "no";
+    // Spam-protection signals
+    data.form_loaded_at = formLoadedAtRef.current;
+    data.turnstile_token = turnstileTokenRef.current;
 
     try {
       const response = await fetch("/api/directory-submission", {
@@ -53,13 +103,24 @@ export default function SubmitBusiness() {
       if (response.ok) {
         setIsSubmitted(true);
         form.reset();
+      } else if (response.status === 429) {
+        toast.error("You've submitted a few times recently — please wait a bit before trying again.");
       } else {
-        toast.error("Something went wrong. Please try again or contact us directly.");
+        // Covers turnstile_failed and validation_failed without leaking which
+        toast.error("Something went wrong. Please check your entries and try again, or contact us directly.");
       }
     } catch {
       toast.error("Something went wrong. Please try again or contact us directly.");
     } finally {
       setIsSubmitting(false);
+      // Always reset Turnstile — the token is single-use and is consumed (or
+      // invalidated) on every submit attempt. Resetting on BOTH success and
+      // failure lets a legitimate user retry (e.g. after a validation error)
+      // without reloading the page.
+      turnstileTokenRef.current = "";
+      if (window.turnstile && turnstileWidgetRef.current) {
+        window.turnstile.reset(turnstileWidgetRef.current);
+      }
     }
   };
 
@@ -342,6 +403,22 @@ export default function SubmitBusiness() {
                   </Label>
                 </div>
               </div>
+
+              {/* Honeypot — hidden from users, tempting to bots. Must stay empty.
+                  Visually and from assistive tech hidden; not a tab stop. */}
+              <div aria-hidden="true" className="absolute left-[-9999px] top-[-9999px] h-0 w-0 overflow-hidden" style={{ position: "absolute" }}>
+                <label htmlFor="company_website">Company website (leave blank)</label>
+                <input
+                  type="text"
+                  id="company_website"
+                  name="company_website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </div>
+
+              {/* Cloudflare Turnstile — unobtrusive, mostly invisible. */}
+              <div ref={turnstileContainerRef} className="cf-turnstile" />
 
               {/* Submit */}
               <div className="pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
