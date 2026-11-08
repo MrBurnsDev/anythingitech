@@ -65,6 +65,41 @@
   max-width: 100vw;
 }
 
+/* ---- Layout: container + section spacing (verbatim from source, scoped) ----
+   ROOT CAUSE of the reported spacing collapse: the migrated pages use the
+   source's `.container`, `.section`, and `.section-tight` classes (59/33/20
+   usages), but these were not ported initially. In MVIT, `.section` therefore
+   had padding:0 (sections collapsed into each other), and `.container` was
+   silently captured by MVIT's Tailwind `container` config (max-width 1400px,
+   2rem padding) instead of the source's intended 1200px / responsive padding.
+   Restoring the source definitions here — scoped to .app-studio so they apply
+   to the migrated pages and override Tailwind's container ONLY within this
+   section, never affecting other MVIT pages. */
+.app-studio .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .app-studio .container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+/* Section vertical rhythm — the breathing room between application sections. */
+.app-studio .section {
+  padding-top: clamp(5rem, 12vh, 8rem);
+  padding-bottom: clamp(5rem, 12vh, 8rem);
+}
+.app-studio .section-tight {
+  padding-top: clamp(3rem, 8vh, 5rem);
+  padding-bottom: clamp(3rem, 8vh, 5rem);
+}
+
 /* ---- Original typography classes (verbatim), scoped ---- */
 .app-studio .type-display {
   font-family: 'Space Grotesk', system-ui, sans-serif;
