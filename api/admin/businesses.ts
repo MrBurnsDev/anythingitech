@@ -1,6 +1,7 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import jwt from "jsonwebtoken";
 import { createClient } from "@supabase/supabase-js";
+import { applyAdminCors } from "../_lib/cors.js";
 
 const SUPABASE_URL = process.env.SUPABASE_URL || "https://zrrinbeyiuiydalxiwii.supabase.co";
 const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
@@ -144,15 +145,8 @@ function sanitize(value: unknown): string | null {
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  // CORS
-  res.setHeader("Access-Control-Allow-Credentials", "true");
-  res.setHeader("Access-Control-Allow-Origin", req.headers.origin || "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-
-  if (req.method === "OPTIONS") {
-    return res.status(200).end();
-  }
+  // Explicit same-origin CORS allowlist (replaces origin reflection).
+  if (applyAdminCors(req, res, "GET,POST,PUT,DELETE,OPTIONS")) return;
 
   // Authenticate
   const user = authenticate(req);
@@ -189,7 +183,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           if (activityError.code === "42P01" || activityError.message?.includes("does not exist")) {
             return res.status(200).json({ activities: [], tableNotFound: true });
           }
-          return res.status(500).json({ error: "Failed to fetch activity", details: activityError.message });
+          console.error("Failed to fetch activity:", activityError);
+          return res.status(500).json({ error: "Failed to fetch activity" });
         }
 
         // Enrich with business names and slugs

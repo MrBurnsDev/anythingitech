@@ -1,5 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import jwt from "jsonwebtoken";
+import { applyAdminCors } from "../_lib/cors.js";
 import { createClient } from "@supabase/supabase-js";
 
 const SUPABASE_URL = process.env.SUPABASE_URL || "https://zrrinbeyiuiydalxiwii.supabase.co";
@@ -40,14 +41,8 @@ function getTokenFromRequest(req: VercelRequest): string | null {
  * Creates redirects from old slugs to the canonical slug.
  */
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  res.setHeader("Access-Control-Allow-Credentials", "true");
-  res.setHeader("Access-Control-Allow-Origin", req.headers.origin || "*");
-  res.setHeader("Access-Control-Allow-Methods", "POST,OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-
-  if (req.method === "OPTIONS") {
-    return res.status(200).end();
-  }
+  // Explicit same-origin CORS allowlist (replaces origin reflection).
+  if (applyAdminCors(req, res, "POST,OPTIONS")) return;
 
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
@@ -72,7 +67,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       .order("id");
 
     if (fetchError) {
-      return res.status(500).json({ error: "Failed to fetch businesses", details: fetchError });
+      console.error("cleanup-duplicates: failed to fetch businesses:", fetchError);
+      return res.status(500).json({ error: "Failed to fetch businesses" });
     }
 
     // Group by normalized name + town
@@ -122,7 +118,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             }, { onConflict: "old_slug" });
 
           if (redirectError) {
-            errors.push(`Redirect for ${dup.slug}: ${redirectError.message}`);
+            // Log the real DB error server-side; surface only a generic,
+            // non-sensitive marker to the admin client.
+            console.error(`cleanup-duplicates: redirect for ${dup.slug} failed:`, redirectError);
+            errors.push(`Redirect for ${dup.slug}: failed`);
           } else {
             redirectsCreated.push({ old_slug: dup.slug, new_slug: keep.slug });
           }
@@ -139,7 +138,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           .eq("id", dup.id);
 
         if (updateError) {
-          errors.push(`Mark duplicate ${dup.id}: ${updateError.message}`);
+          console.error(`cleanup-duplicates: mark duplicate ${dup.id} failed:`, updateError);
+          errors.push(`Mark duplicate ${dup.id}: failed`);
         }
       }
     }
@@ -157,7 +157,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       errors,
     });
   } catch (error) {
+    // Log details server-side only; never return internal error text to the client.
     console.error("Cleanup error:", error);
-    return res.status(500).json({ error: "Cleanup failed", details: String(error) });
+    return res.status(500).json({ error: "Cleanup failed" });
   }
 }
