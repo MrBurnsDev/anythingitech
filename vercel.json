@@ -11,7 +11,7 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "X-Frame-Options", "value": "DENY" },
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()" },
-        { "key": "Content-Security-Policy-Report-Only", "value": "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; frame-src https://challenges.cloudflare.com; worker-src 'self'; manifest-src 'self'; connect-src 'self' https://challenges.cloudflare.com https://speed.cloudflare.com https://cloudflare-dns.com https://dns.google https://ipv4.icanhazip.com https://ipv6.icanhazip.com; object-src 'none'; upgrade-insecure-requests" }
+        { "key": "Content-Security-Policy-Report-Only", "value": "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; frame-src https://challenges.cloudflare.com; worker-src 'self'; manifest-src 'self'; connect-src 'self' https://challenges.cloudflare.com https://speed.cloudflare.com https://cloudflare-dns.com https://dns.google https://ipv4.icanhazip.com https://ipv6.icanhazip.com; object-src 'none'; upgrade-insecure-requests" }
       ]
     },
     {
